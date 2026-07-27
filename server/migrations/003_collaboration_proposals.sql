@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS collaboration_proposals (
+  id CHAR(36) PRIMARY KEY,
+  proposer_user_id CHAR(36) NOT NULL,
+  entity_kind ENUM('organization','university','individual') NOT NULL,
+  organization_name VARCHAR(255) NOT NULL,
+  contact_name VARCHAR(160) NOT NULL,
+  contact_email VARCHAR(254) NOT NULL,
+  website_url VARCHAR(1000) NULL,
+  collaboration_type VARCHAR(120) NOT NULL,
+  scope_en TEXT NOT NULL,
+  scope_kn TEXT NOT NULL,
+  status ENUM('submitted','under-review','changes-requested','approved','declined','published') NOT NULL DEFAULT 'submitted',
+  reviewer_user_id CHAR(36) NULL,
+  reviewer_note TEXT NULL,
+  reviewed_at DATETIME(3) NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  KEY idx_collaboration_proposals_status (status, created_at),
+  KEY idx_collaboration_proposals_proposer (proposer_user_id, created_at),
+  CONSTRAINT fk_collaboration_proposer FOREIGN KEY (proposer_user_id) REFERENCES users(id) ON DELETE RESTRICT,
+  CONSTRAINT fk_collaboration_reviewer FOREIGN KEY (reviewer_user_id) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

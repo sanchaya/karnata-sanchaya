@@ -1,0 +1,42 @@
+services:
+  database:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: karnataka_atlas
+      MARIADB_USER: karnataka_atlas
+      MARIADB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Set DB_ROOT_PASSWORD in .env}
+    volumes:
+      - atlas_database:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  portal:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 8787
+      APP_ORIGIN: ${APP_ORIGIN:?Set the public HTTPS APP_ORIGIN in .env}
+      TRUST_PROXY: "true"
+      DB_HOST: database
+      DB_NAME: karnataka_atlas
+      DB_USER: karnataka_atlas
+      DB_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+      DOCUMENT_ENCRYPTION_KEY: ${DOCUMENT_ENCRYPTION_KEY:?Set DOCUMENT_ENCRYPTION_KEY in .env}
+      PRIVATE_UPLOAD_DIR: /app/var/private-uploads
+    volumes:
+      - atlas_private_documents:/app/var/private-uploads
+    ports:
+      - "127.0.0.1:8787:8787"
+
+volumes:
+  atlas_database:
+  atlas_private_documents:

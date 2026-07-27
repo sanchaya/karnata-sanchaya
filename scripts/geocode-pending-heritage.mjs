@@ -1,0 +1,12 @@
+import { heritageAudits } from '../src/data/research.js'
+
+const overrides={'candidate-ballari-2':'Allipur Central Jail Ballari','candidate-chamarajanagar-2':'Chamarajeshwara Temple Chamarajanagar','candidate-chikkamagaluru-2':'Ballalarayana Durga','candidate-dakshina-kannada-3':'St Aloysius Chapel Mangaluru','candidate-davanagere-1':'Harihareshwara Temple Harihar','candidate-dharwad-2':'Dharwad Fort','candidate-gadag-2':'Nargund Fort','candidate-haveri-1':'Bankapura Fort','candidate-haveri-2':'Galageshwara Temple Haveri','candidate-kalaburagi-1':'Khwaja Banda Nawaz Dargah Kalaburagi','candidate-kolar-2':'Kolaramma Temple','candidate-koppal-1':'Anegundi Fort','candidate-koppal-2':'Mahadeva Temple Itagi Koppal','candidate-mandya-1':'Srirangapatna Fort','candidate-mandya-2':"Colonel Bailey's Dungeon Srirangapatna",'candidate-mysuru-1':"St Philomena's Cathedral Mysuru",'candidate-raichur-2':'Mudgal Fort','candidate-ramanagara-1':'Magadi Fort','candidate-shivamogga-2':'Keladi Museum','candidate-udupi-2':'Chaturmukha Basadi Karkala','candidate-udupi-3':'Barkur Fort','candidate-uttara-kannada-1':'Mahabaleshwar Temple Gokarna','candidate-yadgir-2':'Sufi Dargah Yadgir'}
+const candidates=heritageAudits.flatMap(audit=>audit.prioritySites.filter(site=>site.verification.verificationStatus==='research-pending').map(site=>({district:audit.district.en,id:site.id,name:site.name.en,query:overrides[site.id]||`${site.name.en} ${audit.district.en}`})))
+const pause=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds))
+const results=[]
+for(const candidate of candidates){
+  const url=new URL('https://nominatim.openstreetmap.org/search');Object.entries({q:`${candidate.query}, Karnataka, India`,format:'jsonv2',limit:'3',addressdetails:'1'}).forEach(([key,value])=>url.searchParams.set(key,value))
+  try{const response=await fetch(url,{headers:{'User-Agent':'KarnatakaHistoricalAtlas/0.11 (heritage research; static metadata pass)'}});if(!response.ok)throw new Error(`HTTP ${response.status}`);const body=await response.json();results.push({...candidate,matches:body.map(item=>({displayName:item.display_name,latitude:Number(item.lat),longitude:Number(item.lon),type:item.type,category:item.category,osmType:item.osm_type,osmId:item.osm_id}))})}catch(error){results.push({...candidate,matches:[],error:error.message})}
+  await pause(1100)
+}
+console.log(JSON.stringify(results,null,2))

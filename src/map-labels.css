@@ -1,0 +1,38 @@
+.leaflet-tooltip.map-name-label {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(63, 55, 201, 0.26);
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(26, 26, 46, 0.12);
+  color: #20203a;
+  font-family: "Noto Sans Kannada", Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 650;
+  padding: 3px 6px;
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.map-name-label.capital {
+  background: #fff;
+  border-color: #4361ee;
+  color: #27207d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.leaflet-tooltip.map-name-label.district {
+  background: rgba(255, 255, 255, 0.72);
+  border: 0;
+  box-shadow: none;
+  color: #41415f;
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.leaflet-tooltip.map-name-label::before {
+  display: none;
+}
+
+.leaflet-tooltip.map-name-label {
+  pointer-events: none !important;
+}

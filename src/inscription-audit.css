@@ -1,0 +1,226 @@
+.inscription-audit {
+  padding: 44px 5vw;
+  border-top: 1px solid var(--sanchaya-border);
+  background: #f8f9fa;
+}
+
+.inscription-audit-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto 18px;
+}
+
+.inscription-audit-head h2 {
+  margin: 4px 0 7px;
+  font: 28px Georgia, "Noto Sans Kannada", serif;
+}
+
+.inscription-audit-head > div > p:last-child {
+  max-width: 720px;
+  color: var(--sanchaya-muted);
+  line-height: 1.6;
+}
+
+.inscription-audit-head label {
+  display: grid;
+  gap: 6px;
+  min-width: 270px;
+  color: var(--sanchaya-muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.inscription-audit-head input {
+  border: 1px solid var(--sanchaya-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: 13px Inter, "Noto Sans Kannada", sans-serif;
+}
+
+.inscription-audit-filters {
+  display: flex;
+  gap: 6px;
+  max-width: 1180px;
+  margin: 0 auto 14px;
+}
+
+.inscription-audit-filters button {
+  border: 1px solid var(--sanchaya-border);
+  border-radius: 999px;
+  background: #fff;
+  padding: 7px 11px;
+  color: var(--sanchaya-muted);
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.inscription-audit-filters button.active {
+  border-color: #d4b477;
+  background: #fff8e8;
+  color: #80561f;
+  font-weight: 700;
+}
+
+.inscription-audit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.inscription-audit-grid > article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 175px;
+  border: 1px solid var(--sanchaya-border);
+  border-radius: 11px;
+  background: #fff;
+  padding: 14px;
+}
+
+.inscription-audit-grid > article.seeded {
+  border-top: 3px solid #b18443;
+}
+
+.inscription-audit-grid > article.candidate-identified {
+  border-top: 3px solid #4361ee;
+}
+
+.inscription-audit-grid h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.inscription-audit-grid article > div:first-child small {
+  color: var(--sanchaya-muted);
+  font-size: 9px;
+}
+
+.inscription-audit-grid article > span {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 999px;
+  background: #fff8e8;
+  padding: 4px 7px;
+  color: #80561f;
+  font-size: 8px;
+}
+
+.inscription-audit-records {
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.inscription-candidate-records {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.inscription-candidate-records details {
+  border: 1px solid #dbe2fb;
+  border-radius: 8px;
+  background: #f7f9ff;
+}
+
+.inscription-candidate-records summary {
+  display: grid;
+  gap: 3px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.inscription-candidate-records summary b {
+  color: #4361ee;
+  font-size: 9px;
+}
+
+.inscription-candidate-records summary strong {
+  font-size: 11px;
+}
+
+.inscription-candidate-records summary small,
+.inscription-candidate-records details > div > small {
+  color: var(--sanchaya-muted);
+  font-size: 8px;
+}
+
+.inscription-candidate-records details > div {
+  display: grid;
+  gap: 6px;
+  border-top: 1px solid #dbe2fb;
+  padding: 8px;
+}
+
+.inscription-candidate-records p {
+  margin: 0;
+  color: var(--sanchaya-muted);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.inscription-candidate-records a {
+  color: #3559bd;
+  font-size: 9px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.inscription-candidate-records code {
+  overflow-wrap: anywhere;
+  color: #6b7280;
+  font-size: 8px;
+}
+
+.inscription-audit-records button {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 7px;
+  border: 1px solid #ece3d5;
+  border-radius: 7px;
+  background: #fffaf2;
+  padding: 7px;
+  color: var(--sanchaya-ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.inscription-audit-records b {
+  grid-row: 1 / 3;
+  color: #8a5d23;
+  font-size: 9px;
+}
+
+.inscription-audit-records strong {
+  font-size: 10px;
+}
+
+.inscription-audit-records small,
+.inscription-audit-grid article > p {
+  color: var(--sanchaya-muted);
+  font-size: 8px;
+}
+
+.inscription-audit-note {
+  margin-top: auto;
+  padding-top: 10px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .inscription-audit-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 620px) {
+  .inscription-audit-head { align-items: stretch; flex-direction: column; }
+  .inscription-audit-head label { min-width: 0; }
+  .inscription-audit-grid { grid-template-columns: 1fr; }
+}

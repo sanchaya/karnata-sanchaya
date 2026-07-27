@@ -1,0 +1,11 @@
+{
+  "name": "Karnataka Historical Atlas",
+  "short_name": "Karnataka Atlas",
+  "description": "Kannada-first, citation-led digital historical atlas of Karnataka.",
+  "lang": "kn",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4361ee",
+  "icons": [{"src":"./sanchaya-logo.png","sizes":"any","type":"image/png"}]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "karnataka-kingdoms-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node --watch server/app.js",
+    "start": "node server/app.js",
+    "db:migrate": "node server/migrate.js",
+    "admin:create": "node server/create-admin.js",
+    "export:approved": "node scripts/export-approved.mjs",
+    "privacy:cleanup": "node scripts/cleanup-private-documents.mjs",
+    "build": "node scripts/generate-seo.mjs && vite build",
+    "preview": "vite preview",
+    "validate:data": "node scripts/validate-data.mjs",
+    "check": "npm run validate:data && node --test && npm run build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "express": "^5.2.1",
+    "leaflet": "latest",
+    "mariadb": "^3.5.3",
+    "multer": "^2.2.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-leaflet": "latest",
+    "vite": "latest"
+  }
+}
