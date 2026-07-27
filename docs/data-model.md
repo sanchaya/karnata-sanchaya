@@ -46,6 +46,10 @@ The five item-located promotion records (Hirehadagalli, Kodaganur, Punisaraja, Y
 
 Every literary work now carries a `reviewWorkflow` with six evidence gates: creator identity, work date, court context, bilingual description, item-level citation, and edition/manuscript witness. A `located` gate means usable evidence has been found; only an independent reviewer may change it to `verified`. All 24 current works therefore remain in the review queue and expose their unresolved gates without implying scholarly approval.
 
+Atlas v0.19.2 turns those gates into 144 assignable `evidenceRequest` tasks. Every request declares its submission type, minimum fields and Kannada/English instruction. The packet also requires an independent reviewer, separates reviewer and contributor identities, and records source match, attribution, dating/context, bilingual fidelity, citation completeness and reviewer attestation before promotion.
+
+The relations explorer derives an eight-corridor research matrix from reviewed and provisional event records: Deccan/central India, north-India land, southern peninsula, northwest/Persian Gulf, southwest/Indian Ocean, Southeast-Asia maritime, northeast/China knowledge, and Europe/global maritime. It crosses those corridors with trade, diplomacy, travel/knowledge, war, political transition and territorial rule. A zero is explicitly a research gap, not evidence that no connection existed; provisional records remain visually distinct and retain their review state in exports.
+
 The live MariaDB service stores collaboration proposals separately from the static `collaborations` catalogue. Approved contributors submit a bilingual scope and institutional contact; appointed reviewers can approve, request changes, or decline it. An approval remains a staging decision and does not automatically publish a collaboration to the GitHub Pages dataset.
 
 Each unresolved inscription gate also emits a structured `evidenceRequest`. These specify the submission type, bilingual field instruction and minimum required fields for authority coordinates, corpus editions, line transcription, independent Kannada review, dated condition surveys, protection-register matches and reusable photo sets. The Epigraphy Explorer exports the complete 19-candidate worklist as JSON for field teams and reviewers. A dated `verificationTrail` records authoritative searches that did not yield sufficient evidence, preventing repeated searches from being mistaken for verification.
@@ -78,3 +82,7 @@ Inscriptions may additionally carry:
 - `promotionStatus` and `promotedFromCandidateId` preserving the research trail.
 
 The explorer submits these fields as moderated proposals. They enter the public dataset only after reviewer approval, validation and the static release process.
+
+## Export access policy
+
+Public atlas pages do not expose JSON dataset, worklist or relations-matrix exports. They retain human-readable citations and BibTeX/RIS citation tools for ordinary readers. Export-capable controls receive `canExport` from `/api/auth/me`; the default public value is false. Administrators grant the MariaDB `exporter` role to specific approved users. The local `#admin` workspace remains the controlled static handoff surface for static handoff files.

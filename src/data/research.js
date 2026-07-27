@@ -3,6 +3,7 @@ import { heritagePageVerification } from './heritage-page-verification.js'
 import { heritageGeocodeVerification } from './heritage-geocode-verification.js'
 import { heritageDirectVerification } from './heritage-direct-verification.js'
 import { commonsPhotoLicenses, heritageEvidenceUpdates } from './heritage-evidence-updates.js'
+import { heritageAuthorityAdditions } from './heritage-authority-additions.js'
 
 const n=(en,kn)=>({en,kn})
 const review={status:'needs-review',reviewer:null,updatedAt:'2026-07-26'}
@@ -94,4 +95,15 @@ export const heritageAudits=districtSeeds.map(([districtEn,districtKn,region,sit
     citations:[{sourceId:'src-karnataka-tourism-heritage',locator:'Statewide heritage discovery index; verify every candidate with district gazetteers, protection lists, field records, and community sources'}],
     review:{...review}
   }
+})
+
+// Append authority-led UNESCO/ASI and state-heritage components without
+// renumbering the original district seed candidates. These records deliberately
+// remain review-gated until photographs, present condition and item-level
+// protection evidence are completed.
+heritageAuthorityAdditions.forEach(addition=>{
+  const audit=heritageAudits.find(item=>item.id===addition.districtId)
+  if(!audit||audit.prioritySites.some(site=>site.id===addition.id))return
+  audit.prioritySites.push({id:addition.id,name:addition.name,category:addition.category,status:addition.verification.verificationStatus,verification:addition.verification})
+  audit.categoryCoverage[addition.category]=audit.categoryCoverage[addition.category]==='unassessed'?'seeded':audit.categoryCoverage[addition.category]
 })

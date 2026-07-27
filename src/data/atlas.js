@@ -10,7 +10,7 @@ const citation = (sourceId, locator = '') => ({ sourceId, locator })
 
 export const atlasData = {
   meta: {
-    schemaVersion: '0.19.1',
+    schemaVersion: '0.19.2',
     title: name('Karnataka Historical Atlas', 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ'),
     exportedAt: null,
   },
@@ -33,6 +33,10 @@ export const atlasData = {
     { id: 'src-unesco-srirangapatna', type: 'heritage-record', title: name('Monuments of Srirangapatna Island Town', 'ಶ್ರೀರಂಗಪಟ್ಟಣ ದ್ವೀಪನಗರದ ಸ್ಮಾರಕಗಳು'), authors: ['UNESCO World Heritage Centre'], year: 2014, url: 'https://whc.unesco.org/en/tentativelists/5895/', review: review('reviewed') },
     { id: 'src-asi-mysore-city', type: 'gazetteer', title: name('Mysore City', 'ಮೈಸೂರು ನಗರ'), authors: ['Archaeological Survey of India, Central Archaeological Library'], year: null, url: 'https://ignca.gov.in/Asi_data/4974.pdf', review: review('needs-review') },
     { id: 'src-unesco-pattadakal', type: 'heritage-record', title: name('Group of Monuments at Pattadakal', 'ಪಟ್ಟದಕಲ್ಲಿನ ಸ್ಮಾರಕಗಳ ಸಮೂಹ'), authors: ['UNESCO World Heritage Centre'], year: null, url: 'https://whc.unesco.org/en/list/239/', review: review('reviewed') },
+    { id: 'src-unesco-aihole-badami-pattadakal-tentative', type: 'heritage-geospatial-reference', title: name('Evolution of Temple Architecture: Aihole–Badami–Pattadakal', 'ದೇವಾಲಯ ವಾಸ್ತುಶಿಲ್ಪದ ವಿಕಾಸ: ಐಹೊಳೆ–ಬಾದಾಮಿ–ಪಟ್ಟದಕಲ್ಲು'), authors: ['UNESCO World Heritage Centre'], year: 2015, url: 'https://whc.unesco.org/en/tentativelists/5972/', review: review('reviewed') },
+    { id: 'src-unesco-hoysala-component-maps', type: 'heritage-geospatial-reference', title: name('Sacred Ensembles of the Hoysalas — component maps', 'ಹೊಯ್ಸಳರ ಪವಿತ್ರ ಸಮುಚ್ಚಯಗಳು — ಘಟಕ ನಕ್ಷೆಗಳು'), authors: ['UNESCO World Heritage Centre'], year: 2023, url: 'https://whc.unesco.org/en/list/1670/maps/', review: review('reviewed') },
+    { id: 'src-asi-central-protected-monuments-karnataka-pdf', type: 'official-protection-register', title: name('Centrally Protected Monuments/Sites: Karnataka entries', 'ಕೇಂದ್ರ ಸಂರಕ್ಷಿತ ಸ್ಮಾರಕಗಳು/ತಾಣಗಳು: ಕರ್ನಾಟಕ ದಾಖಲೆಗಳು'), authors: ['Archaeological Survey of India'], year: 2025, url: 'https://asi.nic.in/pdf/CPM_List.pdf', review: review('reviewed') },
+    { id: 'src-karnataka-tourism-talagunda', type: 'government-web', title: name('Talagunda and Shivamogga heritage discovery lead', 'ತಾಳಗುಂದ ಮತ್ತು ಶಿವಮೊಗ್ಗ ಪರಂಪರೆ ಪರಿಚಯ ಆಕರ'), authors: ['Karnataka Tourism, Government of Karnataka'], year: null, url: 'https://old.karnatakatourism.org/tour-item/shivamogga/', review: review('needs-review') },
     { id: 'src-unesco-ellora', type: 'heritage-record', title: name('Ellora Caves', 'ಎಲ್ಲೋರ ಗುಹೆಗಳು'), authors: ['UNESCO World Heritage Centre'], year: null, url: 'https://whc.unesco.org/en/list/243/', review: review('reviewed') },
     { id: 'src-unesco-hampi-periodic-report', type: 'heritage-report', title: name('Periodic Report: Group of Monuments at Hampi', 'ಆವರ್ತಕ ವರದಿ: ಹಂಪಿಯ ಸ್ಮಾರಕಗಳ ಸಮೂಹ'), authors: ['UNESCO World Heritage Centre', 'Archaeological Survey of India'], year: 2003, url: 'https://whc.unesco.org/document/162842', review: review('reviewed') },
     { id: 'src-karnataka-tourism-dasara', type: 'government-web', title: name('Mysuru Dasara Festival – Nada Habba', 'ಮೈಸೂರು ದಸರಾ ಹಬ್ಬ – ನಾಡಹಬ್ಬ'), authors: ['Karnataka Tourism, Government of Karnataka'], year: null, url: 'https://karnatakatourism.org/kn/events/mysuru-dasara-festival', review: review('reviewed') },
@@ -115,8 +119,68 @@ atlasData.sources.push(...literatureEpigraphySources)
 atlasData.people.push(...literaryPeople)
 atlasData.places.push(...inscriptionPlaces)
 atlasData.works.push(...additionalWorks)
+
+// Western Ganga succession leads from the Sripurusha and dynasty overview pages.
+// These are intentionally needs-review until each ruler/date is checked against
+// inscriptional editions and specialist historical studies.
+const westernGangaPeople = [
+  // Keep the pre-existing founder ID so event-person links remain stable.
+  ['kongunivarma','Kongunivarman','ಕೊಂಗಣಿವರ್ಮ',350,370],
+  ['adhava','Adhava','ಅಧವ',370,390],
+  ['harivarman','Harivarman','ಹರಿವರ್ಮ',390,410],
+  ['vishmagoppa','Vishmagoppa','ವಿಷ್ಣುಗೋಪ',410,430],
+  ['madhava-ii','Madhava II','ಮಾಧವ II',430,469],
+  ['avinita','Avinita','ಅವಿನೀತ',469,529],
+  ['durvinita','Durvinita','ದುರ್ವಿನೀತ',529,579],
+  ['mushkara','Mushkara','ಮುಷ್ಕರ',579,604],
+  ['polavira','Polavira','ಪೋಲವೀರ',604,629],
+  ['srivikrama','Srivikrama','ಶ್ರೀವಿಕ್ರಮ',629,654],
+  ['bhuvikrama','Bhuvikrama','ಭುವಿಕ್ರಮ',654,679],
+  ['shivamara-i','Shivamara I','ಶಿವಮಾರ I',679,726],
+  ['sripurusha','Sripurusha','ಶ್ರೀಪುರುಷ',726,788],
+  ['shivamara-ii','Shivamara II','ಶಿವಮಾರ II',788,816],
+  ['rachamalla-i','Rachamalla I','ರಾಚಮಲ್ಲ I',816,843],
+  ['ereganga-neetimarga','Ereganga Neetimarga','ಎರೆಗಂಗ ನೀತಿಮಾರ್ಗ',843,870],
+  ['rachamalla-ii','Rachamalla II','ರಾಚಮಲ್ಲ II',870,907],
+  ['ereganga-neetimarga-ii','Ereganga Neetimarga II','ಎರೆಗಂಗ ನೀತಿಮಾರ್ಗ II',907,921],
+  ['narasimha-ganga','Narasimha','ನರಸಿಂಹ',921,933],
+  ['rachamalla-iii','Rachamalla III','ರಾಚಮಲ್ಲ III',933,938],
+  ['butuga-ii','Butuga II','ಬುಟುಗ II',938,961],
+  ['marulaganga-neetimarga','Marulaganga Neetimarga','ಮರುಳಗಂಗ ನೀತಿಮಾರ್ಗ',961,963],
+  ['marasimha-ii','Marasimha II Satyavakya','ಮಾರಸಿಂಹ II ಸತ್ಯವಾಕ್ಯ',963,975],
+  ['rachamalla-iv','Rachamalla IV Satyavakya','ರಾಚಮಲ್ಲ IV ಸತ್ಯವಾಕ್ಯ',975,986],
+  ['rachamalla-v','Rachamalla V / Rakkasaganga','ರಾಚಮಲ್ಲ V / ರಕ್ಕಸಗಂಗ',986,999],
+  ['neetimarga-permanadi','Neetimarga Permanadi','ನೀತಿಮಾರ್ಗ ಪೆರ್ಮನಾಡಿ',999,999],
+].map(([id,en,kn,from,to])=>({
+  id:`person-${id}`, name:name(en,kn), roles:['ruler'], polityId:'polity-western-ganga',
+  date:dateRange(from,to,from===to?'year':'range'),
+  citations:[citation('src-wikipedia-sripurusha','Western Ganga succession list; discovery lead only')],
+  review:review('needs-review'),
+}))
+westernGangaPeople.forEach(person=>{
+  const existing=atlasData.people.find(item=>item.id===person.id)
+  if(existing) Object.assign(existing,person)
+  else atlasData.people.push(person)
+})
+atlasData.works.push({
+  id:'work-gajasastra', name:name('Gajasastra','ಗಜಶಾಸ್ತ್ರ'), creator:name('Sripurusha','ಶ್ರೀಪುರುಷ'), creatorIds:['person-sripurusha'],
+  creatorRole:name('Scholar-king','ವಿದ್ವಾನ್ ರಾಜ'), date:dateRange(760,760,'circa'), languages:['Sanskrit'], polityId:'polity-western-ganga',
+  description:name('Sanskrit treatise attributed to Sripurusha; an article-derived lead requiring attribution and edition review.','ಶ್ರೀಪುರುಷರಿಗೆ ಸಲ್ಲಿಸಲಾದ ಸಂಸ್ಕೃತ ಗ್ರಂಥ; ಕರ್ತೃತ್ವ ಮತ್ತು ಆವೃತ್ತಿ ಪರಿಶೀಲನೆ ಅಗತ್ಯವಿರುವ ಲೇಖನ ಆಧಾರಿತ ಸಂಶೋಧನಾ ದಾರಿ.'),
+  citations:[citation('src-wikipedia-sripurusha','Literature and legacy; verify attribution against a critical edition')],
+  review:review('needs-review'),
+})
 atlasData.inscriptions.push(...additionalInscriptions)
 atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||null})
+// Cross-border Kannada inscription leads are kept in a synthetic research audit
+// so they enter the same evidence workflow without being misassigned to a
+// Karnataka district. They are not claims of territorial control.
+atlasData.heritageAudits.push({
+  id:'audit-cross-border-kannada', name:name('Outside-Karnataka Kannada inscription audit','ಕರ್ನಾಟಕದ ಹೊರಗಿನ ಕನ್ನಡ ಶಾಸನ ಪರಿಶೀಲನೆ'),
+  district:name('Outside Karnataka / cross-border leads','ಕರ್ನಾಟಕದ ಹೊರಗೆ / ಗಡಿ-ದಾಟಿದ ದಾರಿಗಳು'), region:'cross-border', auditStatus:'in-progress',
+  categoryCoverage:{temple:'unassessed','coastal-temple':'unassessed',basadi:'unassessed',dargah:'unassessed',church:'unassessed',monastery:'unassessed',fort:'unassessed','palace-civic-architecture':'unassessed','colonial-architecture':'unassessed','archaeological-landscape':'unassessed','modern-heritage':'unassessed'}, prioritySites:[],
+  methodologyNote:name('Discovery leads for Kannada records outside Karnataka. Resolve the item, findspot, repository, political context and present authority separately; do not infer territory from an inscription alone.','ಕರ್ನಾಟಕದ ಹೊರಗಿನ ಕನ್ನಡ ದಾಖಲೆಗಳ ಹುಡುಕಾಟದ ದಾರಿಗಳು. ದಾಖಲೆ, ಪತ್ತೆಸ್ಥಳ, ಸಂಗ್ರಹಸ್ಥಳ, ರಾಜಕೀಯ ಸಂದರ್ಭ ಮತ್ತು ಪ್ರಸ್ತುತ ಪ್ರಾಧಿಕಾರವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ನಿರ್ಧರಿಸಿ; ಶಾಸನದ ಆಧಾರದಿಂದ ಮಾತ್ರ ಭೂಆಳ್ವಿಕೆಯನ್ನು ಊಹಿಸಬಾರದು.'),
+  citations:[citation('src-wikipedia-kannada-inscriptions','Sections on Kannada inscriptions found in Andhra Pradesh, Maharashtra and Tamil Nadu')], review:review('needs-review'),
+})
 atlasData.inscriptionAudits=atlasData.heritageAudits.map(audit=>{
   const inscriptionIds=atlasData.inscriptions.filter(record=>record.districtAuditId===audit.id).map(record=>record.id)
   const priorityCandidates=priorityInscriptionCandidates[audit.id]||[]
@@ -124,6 +188,15 @@ atlasData.inscriptionAudits=atlasData.heritageAudits.map(audit=>{
   const candidateCitations=priorityCandidates.flatMap(item=>item.citations)
   return {id:`inscription-${audit.id}`,name:name(`${audit.district.en} inscription audit`,`${audit.district.kn} ಶಾಸನ ಪರಿಶೀಲನೆ`),district:audit.district,districtAuditId:audit.id,auditStatus,inscriptionIds,priorityCandidates,methodologyNote:name(inscriptionIds.length?'Seed records are mapped, but each transcription, date and findspot still requires item-level verification.':priorityCandidates.length?'One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.':'No inscription has yet been seeded for this district; this is a research gap, not evidence of absence.',inscriptionIds.length?'ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು.':priorityCandidates.length?'ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ.':'ಈ ಜಿಲ್ಲೆಗೆ ಇನ್ನೂ ಶಾಸನವನ್ನು ಸೇರಿಸಿಲ್ಲ; ಇದು ಸಂಶೋಧನಾ ಕೊರತೆ, ಶಾಸನಗಳ ಅನುಪಸ್ಥಿತಿಯ ಸಾಕ್ಷ್ಯವಲ್ಲ.'),citations:inscriptionIds.length?[citation('src-ignca-epigraphia-indica-index','District audit starting point; verify against the relevant corpus volume')]:candidateCitations,review:review(auditStatus==='unassessed'?'draft':'needs-review')}
 })
+
+const literaryEvidenceTemplates={
+  creatorIdentity:{submissionType:'creator-authority',requiredFields:['creatorName','authorityId','biographicalSource','sourceLocator'],instruction:name('Match the attributed creator to an authority record and a citable biographical or literary-history source.','ಹೆಸರಿಸಲಾದ ಕರ್ತೃವನ್ನು ಪ್ರಾಧಿಕೃತ ದಾಖಲೆಗೆ ಮತ್ತು ಉಲ್ಲೇಖಿಸಬಹುದಾದ ಜೀವನಚರಿತ್ರೆ ಅಥವಾ ಸಾಹಿತ್ಯ ಇತಿಹಾಸದ ಆಕರಕ್ಕೆ ಹೊಂದಿಸಿ.')},
+  workDate:{submissionType:'work-date',requiredFields:['dateFrom','dateTo','era','precision','sourceLocator','datingRationale'],instruction:name('Verify the work date or range against an item-level edition, catalogue or specialist study and record the dating rationale.','ಕೃತಿಯ ದಿನಾಂಕ ಅಥವಾ ಅವಧಿಯನ್ನು ಕೃತಿ-ಮಟ್ಟದ ಆವೃತ್ತಿ, ಸೂಚಿ ಅಥವಾ ತಜ್ಞ ಅಧ್ಯಯನದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ ದಿನಾಂಕದ ಆಧಾರವನ್ನು ದಾಖಲಿಸಿ.')},
+  courtContext:{submissionType:'court-context',requiredFields:['polityId','courtOrPatron','relationshipType','sourceLocator'],instruction:name('Verify whether the polity link represents patronage, court presence, composition context or later association.','ರಾಜ್ಯದ ಸಂಪರ್ಕವು ಆಶ್ರಯ, ಆಸ್ಥಾನ ಹಾಜರಾತಿ, ರಚನಾ ಸಂದರ್ಭ ಅಥವಾ ನಂತರದ ಸಂಬಂಧವೇ ಎಂಬುದನ್ನು ಪರಿಶೀಲಿಸಿ.')},
+  bilingualDescription:{submissionType:'bilingual-description-review',requiredFields:['descriptionEn','descriptionKn','terminologyNotes','reviewerAttestation'],instruction:name('Review the Kannada and English descriptions for equivalent scope, names, genre terms and historical interpretation.','ಕನ್ನಡ ಮತ್ತು ಇಂಗ್ಲಿಷ್ ವಿವರಣೆಗಳಲ್ಲಿ ಸಮಾನ ವ್ಯಾಪ್ತಿ, ಹೆಸರುಗಳು, ಪ್ರಕಾರ ಪದಗಳು ಮತ್ತು ಐತಿಹಾಸಿಕ ವ್ಯಾಖ್ಯಾನವನ್ನು ಪರಿಶೀಲಿಸಿ.')},
+  itemCitation:{submissionType:'item-citation',requiredFields:['sourceId','editionTitle','volumeOrCatalogue','pageOrItem','sourceUrl'],instruction:name('Replace survey-level references with an item-specific edition, catalogue entry or dependable scholarly record.','ಸಾಮಾನ್ಯ ಸಮೀಕ್ಷಾ ಉಲ್ಲೇಖದ ಬದಲು ಕೃತಿ-ನಿರ್ದಿಷ್ಟ ಆವೃತ್ತಿ, ಸೂಚಿ ದಾಖಲೆ ಅಥವಾ ವಿಶ್ವಾಸಾರ್ಹ ಸಂಶೋಧನಾ ದಾಖಲೆಯನ್ನು ನೀಡಿ.')},
+  editionWitness:{submissionType:'edition-witness',requiredFields:['witnessType','repositoryOrPublisher','shelfmarkOrEdition','year','sourceUrl'],instruction:name('Identify at least one manuscript, critical edition, first edition or dependable digital witness for the work.','ಕೃತಿಗೆ ಕನಿಷ್ಠ ಒಂದು ಹಸ್ತಪ್ರತಿ, ವಿಮರ್ಶಾತ್ಮಕ ಆವೃತ್ತಿ, ಮೊದಲ ಆವೃತ್ತಿ ಅಥವಾ ವಿಶ್ವಾಸಾರ್ಹ ಡಿಜಿಟಲ್ ಸಾಕ್ಷ್ಯವನ್ನು ಗುರುತಿಸಿ.')},
+}
 
 atlasData.works.forEach(work => {
   if (!work.citations?.length) work.citations=[citation('src-asi-kannada-literature-survey','Work and literary-period survey; item-level citation review pending')]
@@ -136,7 +209,9 @@ atlasData.works.forEach(work => {
     editionWitness:{status:work.manuscriptWitnesses?.length?'located':'unresolved',note:name('Record a manuscript, critical edition, or dependable digital witness.','ಹಸ್ತಪ್ರತಿ, ವಿಮರ್ಶಾತ್ಮಕ ಆವೃತ್ತಿ ಅಥವಾ ವಿಶ್ವಾಸಾರ್ಹ ಡಿಜಿಟಲ್ ಸಾಕ್ಷ್ಯವನ್ನು ದಾಖಲಿಸಬೇಕು.')},
   }
   const requiredEvidence=Object.keys(gates)
-  work.reviewWorkflow={target:'reviewed-literary-record',status:'evidence-capture',requiredEvidence,completedEvidence:requiredEvidence.filter(field=>['located','verified'].includes(gates[field].status)),blockingEvidence:requiredEvidence.filter(field=>gates[field].status!=='verified'),evidence:gates,note:name('This work remains in the 24-item literature review queue until an independent reviewer confirms every evidence gate.','ಸ್ವತಂತ್ರ ಪರಿಶೀಲಕರು ಎಲ್ಲ ಸಾಕ್ಷ್ಯ ಹಂತಗಳನ್ನು ದೃಢಪಡಿಸುವವರೆಗೆ ಈ ಕೃತಿ 24-ದಾಖಲೆಗಳ ಸಾಹಿತ್ಯ ಪರಿಶೀಲನಾ ಸರದಿಯಲ್ಲೇ ಇರುತ್ತದೆ.')}
+  const completedEvidence=requiredEvidence.filter(field=>['located','verified'].includes(gates[field].status))
+  const blockingEvidence=requiredEvidence.filter(field=>gates[field].status!=='verified')
+  work.reviewWorkflow={target:'reviewed-literary-record',status:'evidence-capture',requiredEvidence,completedEvidence,blockingEvidence,evidence:gates,evidenceRequests:blockingEvidence.map(field=>({field,currentStatus:gates[field].status,...literaryEvidenceTemplates[field]})),independentReview:{status:'not-ready',reviewerRequired:true,conflictOfInterestRule:'reviewer-must-not-be-the-contributor',requiredChecks:['sourceMatch','identityAndAttribution','dateAndContext','bilingualFidelity','citationCompleteness','reviewerAttestation'],reviewer:null,reviewedAt:null,decision:null},note:name('This work remains in the 24-item literature review queue until an independent reviewer confirms every evidence gate.','ಸ್ವತಂತ್ರ ಪರಿಶೀಲಕರು ಎಲ್ಲ ಸಾಕ್ಷ್ಯ ಹಂತಗಳನ್ನು ದೃಢಪಡಿಸುವವರೆಗೆ ಈ ಕೃತಿ 24-ದಾಖಲೆಗಳ ಸಾಹಿತ್ಯ ಪರಿಶೀಲನಾ ಸರದಿಯಲ್ಲೇ ಇರುತ್ತದೆ.')}
 })
 
 const polityDescriptionsKn = {

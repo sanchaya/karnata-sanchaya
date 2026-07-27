@@ -38,4 +38,22 @@ export const collaborations=[
     contribution:name('Item-level editions, transcription review, Kannada/English translation approval and historical interpretation.','ದಾಖಲೆಮಟ್ಟದ ಆವೃತ್ತಿ, ಲಿಪ್ಯಂತರ ಪರಿಶೀಲನೆ, ಕನ್ನಡ/ಇಂಗ್ಲಿಷ್ ಅನುವಾದ ಅನುಮೋದನೆ ಮತ್ತು ಐತಿಹಾಸಿಕ ವ್ಯಾಖ್ಯಾನ.'),
     contactPath:'#community',review:review('published'),
   },
+  {
+    id:'collaboration-prospective-state-archaeology',name:name('Prospective partner: Karnataka Archaeology, Museums and Heritage','ಸಂಭಾವ್ಯ ಸಹಭಾಗಿ: ಕರ್ನಾಟಕ ಪುರಾತತ್ವ, ವಸ್ತುಸಂಗ್ರಹಾಲಯಗಳು ಮತ್ತು ಪರಂಪರೆ'),entityKind:'organization',stage:'upcoming',
+    collaborationType:'authority-register-and-field-verification',
+    contribution:name('Confirm protected-register identities, managing authorities, monument coordinates and current condition for records sourced from public discovery pages. This is a proposed outreach role, not a confirmed partnership.','ಸಾರ್ವಜನಿಕ ಹುಡುಕಾಟ ಪುಟಗಳಿಂದ ಬಂದ ದಾಖಲೆಗಳಿಗೆ ಸಂರಕ್ಷಣಾ ನೋಂದಣಿ ಗುರುತು, ನಿರ್ವಹಣಾ ಪ್ರಾಧಿಕಾರ, ಸ್ಮಾರಕ ನಿರ್ದೇಶಾಂಕ ಮತ್ತು ಪ್ರಸ್ತುತ ಸ್ಥಿತಿಯನ್ನು ದೃಢೀಕರಿಸುವುದು. ಇದು ಪ್ರಸ್ತಾವಿತ ಸಂಪರ್ಕ ಪಾತ್ರ; ದೃಢಪಟ್ಟ ಸಹಭಾಗಿತ್ವವಲ್ಲ.'),
+    contactPath:'#community',review:review('needs-review'),
+  },
+  {
+    id:'collaboration-prospective-kannada-university',name:name('Prospective partner: Kannada University, Hampi and epigraphy departments','ಸಂಭಾವ್ಯ ಸಹಭಾಗಿ: ಕನ್ನಡ ವಿಶ್ವವಿದ್ಯಾಲಯ, ಹಂಪಿ ಮತ್ತು ಶಾಸನ ಅಧ್ಯಯನ ವಿಭಾಗಗಳು'),entityKind:'university',stage:'upcoming',
+    collaborationType:'student-corpus-and-translation-review',
+    contribution:name('Supervise student teams to resolve wiki-derived candidates into corpus numbers, line transcriptions and independently reviewed Kannada translations. This is a proposed outreach role, not a confirmed partnership.','ವಿಕಿ-ಆಧಾರಿತ ಅಭ್ಯರ್ಥಿಗಳನ್ನು ಶಾಸನಸಂಪುಟ ಸಂಖ್ಯೆ, ಸಾಲು-ಸಾಲಿನ ಪಾಠ ಮತ್ತು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಿದ ಕನ್ನಡ ಅನುವಾದಗಳಾಗಿ ರೂಪಿಸಲು ವಿದ್ಯಾರ್ಥಿ ತಂಡಗಳಿಗೆ ಮಾರ್ಗದರ್ಶನ. ಇದು ಪ್ರಸ್ತಾವಿತ ಸಂಪರ್ಕ ಪಾತ್ರ; ದೃಢಪಟ್ಟ ಸಹಭಾಗಿತ್ವವಲ್ಲ.'),
+    contactPath:'#community',review:review('needs-review'),
+  },
+  {
+    id:'collaboration-prospective-bengaluru-inscription-network',name:name('Prospective partner: Inscription Stones of Bengaluru and local documentation networks','ಸಂಭಾವ್ಯ ಸಹಭಾಗಿ: ಬೆಂಗಳೂರಿನ ಶಾಸನ ಕಲ್ಲುಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ದಾಖಲೀಕರಣ ಜಾಲಗಳು'),entityKind:'organization',stage:'upcoming',
+    collaborationType:'community-geospatial-and-photography-review',url:'https://inscription-stones.mapunitygroups.com/',
+    contribution:name('Coordinate locality-by-locality photographs, KML/map corrections, aliases, rediscoveries and permission-aware media contributions for the 25 Bengaluru wiki locality candidates. This is a proposed outreach role, not a confirmed partnership.','ಬೆಂಗಳೂರು ವಿಕಿ ಸ್ಥಳೀಯ 25 ಅಭ್ಯರ್ಥಿಗಳಿಗೆ ಸ್ಥಳೀಯತೆಗನುಗುಣ ಛಾಯಾಚಿತ್ರ, KML/ನಕ್ಷೆ ತಿದ್ದುಪಡಿ, ಪರ್ಯಾಯ ಹೆಸರು, ಮರುಪತ್ತೆ ಮತ್ತು ಅನುಮತಿ-ಸಮ್ಮತ ಮಾಧ್ಯಮ ಕೊಡುಗೆಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು. ಇದು ಪ್ರಸ್ತಾವಿತ ಸಂಪರ್ಕ ಪಾತ್ರ; ದೃಢಪಟ್ಟ ಸಹಭಾಗಿತ್ವವಲ್ಲ.'),
+    contactPath:'#community',review:review('needs-review'),
+  },
 ]
