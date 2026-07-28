@@ -47,7 +47,7 @@ npm run dev
 
 The Vite server proxies `/api` to port 8787. For an all-in-one production-shaped setup, configure `.env` and use `docker compose up -d --build`. See [live deployment](docs/live-deployment.md) and [community governance](docs/community-governance.md).
 
-For a cloned Linux deployment behind an existing Nginx instance, use the guarded systemd/TLS installer: [Linux + Nginx installation](docs/linux-nginx-install.md) and `scripts/install-linux-nginx.sh`.
+For a cloned Linux deployment behind an existing Nginx instance, use the guarded systemd/TLS installer: [Linux + Nginx installation](docs/linux-nginx-install.md) and `scripts/install-linux-nginx.sh`. For later releases, run `scripts/update-live.sh` on the server to fetch, validate, migrate and restart the existing deployment without replacing its secrets or Nginx/TLS configuration.
 
 ## Build
 

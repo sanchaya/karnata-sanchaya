@@ -82,13 +82,25 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-After pulling a new revision, rebuild and restart from the clone:
+If the updater is unavailable, the manual fallback is:
 
 ```bash
 sudo -u atlas npm ci
 sudo -u atlas npm run check
 sudo systemctl restart karnataka-atlas
 ```
+
+For repeat deployments, use the guarded updater instead. It fetches the selected remote branch, refuses to deploy a dirty worktree, fast-forwards the clone, installs dependencies, runs the full check suite and MariaDB migrations, restarts the existing service, and waits for `/api/health`. It does not replace `.env`, Nginx, TLS certificates, or the systemd unit:
+
+```bash
+sudo ./scripts/update-live.sh \
+  --app-dir /srv/karnataka-kingdoms-mvp \
+  --branch main \
+  --service-name karnataka-atlas \
+  --run-user atlas
+```
+
+If migrations are managed separately, add `--skip-migrations`. The updater is intentionally fast-forward-only; resolve any local/remote divergence manually before retrying. Keep the clone clean and make sure the deployment user can authenticate to the configured Git remote.
 
 The script intentionally does not create the first administrator. After the service is live, create one with database access:
 
