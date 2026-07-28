@@ -66,6 +66,14 @@ npm run check
 
 The deployable static site is generated in `dist/`.
 
+`npm run check` also runs the reusable page-data regression suite in `test/page-data-contract.test.js`. It checks every collection for stable IDs and review states, verifies map coordinates and timeline fields, confirms explorer cards have their required bilingual/optional fields, and resolves cross-page links for events, works, inscriptions, places, people, sources and audits. Run only that suite while developing a data feature with:
+
+```bash
+node --test test/page-data-contract.test.js
+```
+
+Add a focused regression case whenever a new page, map layer, timeline story or cross-collection relationship is introduced.
+
 Open `#district-history` (ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ / District deep history) to browse the district intake layer. The older `#history` link remains a compatibility alias. Amber dashed markers are research leads, not verified sites. Researchers can edit the normalized `districtHistoryResearch` collection from the authenticated `#admin` workspace and save a permanent MariaDB revision before preparing a static release.
 
 ## Deploy to GitHub Pages

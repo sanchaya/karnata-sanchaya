@@ -3,6 +3,7 @@ import { CircleMarker, GeoJSON, MapContainer, Polygon, Polyline, Popup, TileLaye
 import { atlasData } from './data/atlas'
 import { getInitialLocale, messages, setStoredLocale } from './i18n'
 import SourceLink from './SourceLink'
+import { isIndiaPoint, isKarnatakaPoint, mapZoomForPoint, mapZoomForPositions } from './map-focus'
 
 const Admin=lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
@@ -133,18 +134,20 @@ function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,sele
   const map=useMap()
   useEffect(()=>{
     const focusPosition=position=>{
-      if(!position||map.getBounds().contains(position))return
-      map.panTo(position,{animate:true})
+      if(!position)return
+      const targetZoom=mapZoomForPoint(position)
+      const visible=map.getBounds().contains(position)
+      if(!visible||map.getZoom()<targetZoom)map.setView(position,Math.max(map.getZoom(),targetZoom),{animate:true})
     }
     const eventPositions=selectedEvent?.connectionPositions?.length?selectedEvent.connectionPositions:(selectedEvent?.coords?[selectedEvent.coords]:[])
     const hasSelection=Boolean(selectedEvent||selectedTerritory||selectedCulture||selectedWorkPosition||selectedPersonPosition||selectedInscription||selectedSearchPlace||comparisonPositions?.length)
     if(eventPositions.length>1){
       const alreadyVisible=eventPositions.every(position=>map.getBounds().contains(position))
-      if(!alreadyVisible)map.fitBounds(eventPositions,{padding:[45,45],maxZoom:6})
+      if(!alreadyVisible)map.fitBounds(eventPositions,{padding:[45,45],maxZoom:mapZoomForPositions(eventPositions)})
     }else if(eventPositions.length===1&&!map.getBounds().contains(eventPositions[0])){
       map.panTo(eventPositions[0],{animate:true})
     }
-    else if(selectedTerritory?.positions.length) map.fitBounds(selectedTerritory.positions,{padding:[45,45],maxZoom:7})
+    else if(selectedTerritory?.positions.length) map.fitBounds(selectedTerritory.positions,{padding:[45,45],maxZoom:mapZoomForPositions(selectedTerritory.positions)})
     else if(selectedCulture?.coords) focusPosition(selectedCulture.coords)
     else if(selectedWorkPosition) focusPosition(selectedWorkPosition)
     else if(selectedPersonPosition) focusPosition(selectedPersonPosition)
@@ -264,7 +267,7 @@ function InscriptionDetail({item,locale,t,onClose}){
 }
 
 function LiteratureShowcase({works,year,locale,t,onChooseWork,usesNearest}){
-  return <section className="literature-showcase"><div className="literature-heading"><h3>{t.literaryTimeline}</h3><span>{year} {t.ce}</span></div><p>{usesNearest?t.nearestLiteraryMilestones:t.activeLiteraryMilestones}</p><div className="literary-work-list">{works.map(work=><article key={work.id} className={Math.abs(work.date.from-year)<=35?'near-year':''}><button onClick={()=>onChooseWork(work)}><span>{work.date.precision==='circa'?(locale==='kn'?'ಸು.':'c.') : ''} {work.date.from}</span><strong>{primary(work.name,locale)}</strong><small>{secondary(work.name,locale)}</small><b>{primary(work.creator,locale)}</b><em>{primary(work.creatorRole,locale)} · {work.languages.join(', ')}</em></button>{work.externalLinks[0]?.url&&<a href={work.externalLinks[0].url} target="_blank" rel="noreferrer">{t.openSanchaya}</a>}</article>)}</div></section>
+  return <section className="literature-showcase"><div className="literature-heading"><h3>{t.literaryTimeline}</h3><span>{year} {t.ce}</span></div><p>{usesNearest?t.nearestLiteraryMilestones:t.activeLiteraryMilestones}</p><div className="literary-work-list">{works.map(work=><article key={work.id} className={Math.abs(work.date.from-year)<=35?'near-year':''}><button onClick={()=>onChooseWork(work)}><span>{work.date.precision==='circa'?(locale==='kn'?'ಸು.':'c.') : ''} {work.date.from}</span><strong>{primary(work.name,locale)}</strong><small>{secondary(work.name,locale)}</small><b>{primary(work.creator,locale)}</b><em>{primary(work.creatorRole,locale)} · {work.languages.join(', ')}</em></button>{work.externalLinks?.[0]?.url&&<a href={work.externalLinks[0].url} target="_blank" rel="noreferrer">{t.openSanchaya}</a>}</article>)}</div></section>
 }
 
 function InscriptionShowcase({items,year,locale,t,onChooseInscription}){
@@ -416,7 +419,7 @@ export default function App(){
   const changeLocale=()=>setLocale(current=>{const next=current==='kn'?'en':'kn';setStoredLocale(next);return next})
   const handleAuthenticated=user=>{setCommunityUser(user);window.location.hash=user.roles?.includes('administrator')?'admin':'profile'}
   const clearRecordDetails=()=>{setSelectedPerson(null);setSelectedWork(null);setSelectedInscription(null);setSelectedSearchPlace(null)}
-  const chooseEvent=event=>{setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;const [lat,lng]=event.coords||[];const isKarnataka=Number.isFinite(lat)&&Number.isFinite(lng)&&lat>=10&&lat<=20&&lng>=73&&lng<=81;const isIndia=Number.isFinite(lat)&&Number.isFinite(lng)&&lat>=5&&lat<=38&&lng>=67&&lng<=98;if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&isIndia&&!isKarnataka)setScope('india');else if(isKarnataka&&scope==='world')setScope('karnataka')}
+  const chooseEvent=event=>{setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;const isKarnataka=isKarnatakaPoint(event.coords);const isIndia=isIndiaPoint(event.coords);if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&isIndia&&!isKarnataka)setScope('india');else if(isKarnataka&&scope==='world')setScope('karnataka')}
   const chooseTerritory=territory=>{setSelectedTerritory(territory);setSelectedEvent(null);setSelectedCulture(null);clearRecordDetails();if(territory.classification!=='core-administered')setScope('india')}
   const chooseCulture=item=>{setSelectedCulture(item);setSelectedEvent(null);setSelectedTerritory(null);clearRecordDetails();if(item.coords[0]>19.5||item.coords[1]<73||item.coords[1]>81)setScope('india')}
   const chooseWork=work=>{setYear(work.date.from);setSelected(work.polityId);setSelectedWork(work);setSelectedPerson(null);setSelectedInscription(null);setSelectedSearchPlace(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null)}

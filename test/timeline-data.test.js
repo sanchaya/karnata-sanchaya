@@ -23,3 +23,9 @@ test('Vatapi capture and restoration remain local timeline map events', () => {
   assert.equal(capture.route, null)
   assert.equal(restoration.route, null)
 })
+
+test('literary timeline cards tolerate works without external links', () => {
+  const work = atlasData.works.find(item => item.id === 'work-gajasastra')
+  assert.ok(work)
+  assert.equal(work.externalLinks, undefined)
+})
