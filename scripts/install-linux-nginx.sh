@@ -50,7 +50,7 @@ Optional:
   -h, --help                Show this help
 
 DB_PASSWORD and DOCUMENT_ENCRYPTION_KEY may be supplied as environment variables;
-otherwise the script prompts for them. Node.js 22+, npm, Nginx, systemd, curl and
+otherwise the script prompts for them. Node.js 20.19+ or 22.12+, npm, Nginx, systemd, curl and
 openssl must already be installed. MariaDB and Certbot are not installed or
 configured automatically because they may be shared with other applications.
 USAGE
@@ -98,8 +98,9 @@ APP_DIR=$(cd "$APP_DIR" 2>/dev/null && pwd) || die "Cannot access app directory:
 [[ -f "$APP_DIR/package.json" && -f "$APP_DIR/server/app.js" ]] || die "This does not look like the atlas clone: $APP_DIR"
 
 for command in node npm nginx systemctl curl openssl runuser; do command -v "$command" >/dev/null 2>&1 || die "Required command is missing: $command"; done
-NODE_MAJOR=$(node -p "process.versions.node.split('.')[0]")
-[[ "$NODE_MAJOR" =~ ^[0-9]+$ && "$NODE_MAJOR" -ge 22 ]] || die "Node.js 22 or newer is required; found $(node --version)."
+if ! node -e 'const [major,minor]=process.versions.node.split(".").map(Number); const supported=(major===20&&minor>=19)||(major>=22&&(major>22||minor>=12)); process.exit(supported?0:1)'; then
+  die "Node.js 20.19+ or 22.12+ is required by the current Vite toolchain; found $(node --version)."
+fi
 if [[ -n "$LETSENCRYPT_EMAIL" ]] && ! command -v certbot >/dev/null 2>&1; then
   die 'Certbot is required for --letsencrypt-email.'
 fi
