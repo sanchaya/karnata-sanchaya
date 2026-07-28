@@ -26,6 +26,8 @@ Then run `npm run export:approved`, inspect `public/data/approved-community.json
 
 ## Recovery and audit
 
+- Run `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` from a protected maintenance host. It writes a compressed MariaDB dump, an encrypted `private-uploads` archive and `SHA256SUMS` under `/var/backups/karnataka-atlas/<UTC timestamp>/`.
+- Restore drills must use a separate MariaDB database and temporary upload directory: verify the checksum, import the dump, decrypt one test document with the production key, and record the restored dataset revision. Never test restoration by overwriting production.
 - Back up MariaDB and `var/private-uploads` independently, and test restoration before inviting contributors.
 - Keep the dataset revision number and published snapshot hash in the release log.
 - Run `npm run privacy:cleanup` daily so institution documents reach their deletion deadline.

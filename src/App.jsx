@@ -187,7 +187,10 @@ function LocalizedMapLabels({locale,capitalIds,districtGeojson,showDistricts,sup
     return inKarnataka&&(capitalSet.has(place.id)||zoom>=9)
   })
   const districtLabels=showDistricts&&zoom>=8.5?(districtGeojson?.features||[]).map(feature=>({id:feature.properties.id,name:feature.properties.districtName?.kn,center:featureCenter(feature)})).filter(item=>item.name&&item.center):[]
-  return <>{placeLabels.map(place=>{const [lng,lat]=place.location.coordinates;const isCapital=capitalSet.has(place.id);return <CircleMarker key={`label-${place.id}`} center={[lat,lng]} radius={isCapital?4:1} interactive={false} pathOptions={isCapital?{color:'#4361ee',fillColor:'#fff',opacity:1,fillOpacity:1,weight:2}:{opacity:0,fillOpacity:0}}><Tooltip permanent direction="right" offset={[5,0]} className={`map-name-label ${isCapital?'capital':''}`}>{place.name.kn}</Tooltip></CircleMarker>})}{districtLabels.map(district=><CircleMarker key={`district-label-${district.id}`} center={district.center} radius={1} interactive={false} pathOptions={{opacity:0,fillOpacity:0}}><Tooltip permanent direction="center" className="map-name-label district">{district.name}</Tooltip></CircleMarker>)}</>
+  // Labels are hover-only so they never sit over inscription, heritage or
+  // event markers while a researcher is traversing the map. The capital dot
+  // remains as a quiet orientation cue; the name appears on hover.
+  return <>{placeLabels.map(place=>{const [lng,lat]=place.location.coordinates;const isCapital=capitalSet.has(place.id);return <CircleMarker key={`label-${place.id}`} center={[lat,lng]} radius={isCapital?4:2} pathOptions={isCapital?{color:'#4361ee',fillColor:'#fff',opacity:1,fillOpacity:1,weight:2}:{opacity:0,fillOpacity:0}}><Tooltip direction="right" offset={[5,0]} className={`map-name-label ${isCapital?'capital':''}`}>{place.name.kn}</Tooltip></CircleMarker>})}{districtLabels.map(district=><CircleMarker key={`district-label-${district.id}`} center={district.center} radius={2} pathOptions={{opacity:0,fillOpacity:0}}><Tooltip direction="center" className="map-name-label district">{district.name}</Tooltip></CircleMarker>)}</>
 }
 
 function GlobalSearch({locale,t,query,setQuery,filters,setFilters,results,onSelect}){
@@ -369,7 +372,10 @@ export default function App(){
   const [mobileNavOpen,setMobileNavOpen]=useState(false)
   useEffect(()=>{document.documentElement.lang=locale},[locale])
   useEffect(()=>{localStorage.setItem('karnataka-atlas-map-theme',mapTheme)},[mapTheme])
-  useEffect(()=>{let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/auth/me`,{credentials:'include'}).then(response=>response.ok?response.json():null).then(data=>{if(active)setCommunityUser(data?.user||null)}).catch(()=>{if(active)setCommunityUser(null)});return()=>{active=false}},[view])
+  // Hydrate the parent auth state once from the live session. Do not clear a
+  // successful login because a transient API request fails during navigation;
+  // that used to make the epigraphy explorer hide Bengaluru after login.
+  useEffect(()=>{let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/auth/me`,{credentials:'include'}).then(response=>response.ok?response.json():null).then(data=>{if(active&&data?.user)setCommunityUser(data.user)}).catch(()=>{});return()=>{active=false}},[])
   useEffect(()=>{const syncHash=()=>{const rawHash=window.location.hash.slice(1);const hash=normalizeView(rawHash);setAdmin(rawHash==='admin');if(rawHash==='history')window.history.replaceState(null,'','#district-history');if(publicViews.includes(hash))setView(hash);else if(hash!=='admin')setView('atlas')};if(window.location.hash.slice(1)==='history')window.history.replaceState(null,'','#district-history');window.addEventListener('hashchange',syncHash);return()=>window.removeEventListener('hashchange',syncHash)},[])
   useEffect(()=>{setMobileNavOpen(false)},[view])
   useEffect(()=>{const [title,description]=seoPages[view]?.[locale]||seoPages.atlas[locale];document.documentElement.lang=locale;document.title=title;const descriptionMeta=document.querySelector('meta[name="description"]');if(descriptionMeta)descriptionMeta.setAttribute('content',description);const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.setAttribute('content',title);const ogDescription=document.querySelector('meta[property="og:description"]');if(ogDescription)ogDescription.setAttribute('content',description);let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.append(canonical)}canonical.href=`${window.location.origin}${window.location.pathname}`},[view,locale])
@@ -418,6 +424,7 @@ export default function App(){
   const selectedPersonPosition=selectedPerson?personStories.find(story=>story.id===selectedPerson.id)?.coords:null
   const changeLocale=()=>setLocale(current=>{const next=current==='kn'?'en':'kn';setStoredLocale(next);return next})
   const handleAuthenticated=user=>{setCommunityUser(user);window.location.hash=user.roles?.includes('administrator')?'admin':'profile'}
+  const handleLoggedOut=()=>setCommunityUser(null)
   const clearRecordDetails=()=>{setSelectedPerson(null);setSelectedWork(null);setSelectedInscription(null);setSelectedSearchPlace(null)}
   const chooseEvent=event=>{setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;const isKarnataka=isKarnatakaPoint(event.coords);const isIndia=isIndiaPoint(event.coords);if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&isIndia&&!isKarnataka)setScope('india');else if(isKarnataka&&scope==='world')setScope('karnataka')}
   const chooseTerritory=territory=>{setSelectedTerritory(territory);setSelectedEvent(null);setSelectedCulture(null);clearRecordDetails();if(territory.classification!=='core-administered')setScope('india')}
@@ -482,8 +489,8 @@ export default function App(){
     {view==='literature'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="literature" locale={locale} mapTheme={mapTheme} onOpenAtlas={item=>{chooseWork(item);navigateView('atlas')}}/></Suspense>}
     {view==='epigraphy'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="epigraphy" locale={locale} mapTheme={mapTheme} isCommunityMember={Boolean(communityUser)} onOpenAtlas={item=>{chooseInscription(inscriptionById.get(item.id)||item);navigateView('atlas')}}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
-    {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated}/></Suspense>}
-    {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} profileOnly onAuthenticated={handleAuthenticated}/></Suspense>}
+    {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
+    {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} profileOnly onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     <footer><span className="footer-brand"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/>{atlasData.meta.title.kn} · Karnataka Historical Atlas · v{atlasData.meta.schemaVersion}</span><span className="footer-partners"><a href="https://sanchaya.org/" target="_blank" rel="noreferrer"><span className="partner-icon"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/></span>Sanchaya</a></span></footer>
   </div>
 }

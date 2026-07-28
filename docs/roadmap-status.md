@@ -1,6 +1,6 @@
 # Karnataka Historical Atlas — milestone status and roadmap
 
-Updated: 2026-07-28
+Updated: 2026-07-29
 
 This is the durable project summary for the decisions and implementation work accumulated across the atlas build. It separates working software from research that still needs human evidence. A record being visible on a map or timeline does not mean that it is authority-confirmed.
 
@@ -11,7 +11,7 @@ The portal is Kannada-first with English support and has two intentionally separ
 - **Public static atlas:** read-only Vite/GitHub Pages build with maps, timeline, relations, literature, epigraphy, heritage and district research views.
 - **Live research service:** authenticated accounts, MariaDB dataset revisions, moderation, reviewer workflow and controlled static-release handoff.
 
-The district-history explorer milestone is included in the current committed snapshot.
+The district-history explorer milestone is included in the current committed snapshot. The current release candidate also includes bounded map focus, permanent admin-save safeguards and cross-page contract tests.
 
 ## Milestone assessment
 
@@ -26,7 +26,7 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.12 — district heritage audit | **Seeded, not complete** | 31 district audit coverage, map boundaries, authority labels and UNESCO/ASI/state/research filters | Resolve authority, coordinates, licences, condition and managing authority before promotion |
 | Atlas v0.15 — Literature and Epigraphy Explorer | **Software achieved; review incomplete** | Literature/epigraphy pages, maps, timeline links, Bengaluru exception and review-gated candidates | Complete the 24 literary packets and Sannati/Maski transcription and Kannada review |
 | Atlas v0.19 — Evidence and Publication Readiness | **Workflow achieved; human work pending** | 19-candidate evidence queue, 144 evidence requests, translation-review gates, reviewer separation and publication checks | Complete independent reviews, exact corpus locators, field photographs and condition evidence |
-| Atlas v0.20 — community staging and permanent administration | **Software achieved; live operations pending** | MariaDB revisions, admin dashboard, progress stats, accounts, profiles, reviewer/contributor foundations and static export boundary | Configure production MariaDB, appoint reviewers, test approvals and publish approved snapshots |
+| Atlas v0.20 — community staging and permanent administration | **Software achieved; live operations prepared** | MariaDB revisions, admin dashboard, progress stats, accounts, profiles, reviewer/contributor foundations, static export boundary, repeatable backup and approved-only static release scripts | Run the backup/restore drill on production MariaDB, appoint reviewers, test approvals and publish approved snapshots |
 | District Deep History / `#district-history` | **Initial expansion delivered, research ongoing** | 31 district scope slots, 11 needs-review leads across Bengaluru and the first priority districts, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
 ## Current data coverage snapshot
@@ -37,7 +37,9 @@ The bundled snapshot currently contains approximately:
 - 18 inscriptions, 25 literary works, 43 cultural records and 17 reign/period records;
 - 149 sources, 512 relationships and 12 collaboration records;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;
-- 36 district deep-history records: 31 district scopes plus 5 research leads.
+- 42 district deep-history records: 31 district scopes plus 11 research leads. All 11 leads remain `needs-review` until site-level evidence is collected.
+
+The literature collection contains 25 linked works, but the 24-packet review pass is not complete: packets currently have one to four of six evidence gates. The relations graph has 512 records, with primary-source gaps still open for China/northeast, western Indian Ocean and Southeast Asia corridors.
 
 Most historical entities remain `needs-review` by design. The reviewed counts in the admin dashboard measure workflow state, not completeness of Karnataka history.
 
@@ -45,10 +47,10 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 ### P0 — stabilize and publish the current milestone
 
-1. Commit the district-history route, layout fix, data collection, validation and documentation.
-2. Run `npm run check` and retain the resulting static snapshot as the next release candidate.
-3. Enable GitHub Pages → **GitHub Actions** in repository settings; the code build passes, but the Pages workflow cannot deploy until the repository Pages site is enabled.
-4. Verify `#atlas`, `#district-history`, `#districts`, `#inscriptions`, `#literature` and `#epigraphy` after a hard refresh on desktop and mobile.
+1. **Complete in code:** district-history route, layout, data collection, validation, bounded map focus and permanent admin-save safeguards are committed.
+2. **Complete locally:** `npm run check` passes (zero validation errors/warnings, all tests passing, production build successful).
+3. **Repository action remaining:** enable GitHub Pages → **GitHub Actions** in repository settings; the workflow is present and the build passes, but deployment depends on that repository setting.
+4. **Operator verification remaining:** hard-refresh `#atlas`, `#district-history`, `#districts`, `#inscriptions`, `#literature` and `#epigraphy` on desktop and mobile. The release-readiness tests now protect the route aliases and accessibility wiring in CI.
 
 ### P1 — finish the evidence work already promised
 
@@ -67,14 +69,14 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 ### P3 — operate the research community safely
 
-1. Configure and test the live MariaDB deployment, backups and revision conflict handling.
+1. Configure and test the live MariaDB deployment, run `scripts/backup-live.sh`, and complete a restore drill before inviting contributors.
 2. Appoint qualified reviewers and test contributor registration, affiliation verification, Kannada translation review, karma and certificates.
 3. Keep JSON import/export restricted to administrators and generate the public site only from an approved static snapshot.
-4. Add citation pages and researcher-friendly CSL-JSON/BibTeX/RIS outputs only where the account and admin policy permits them.
+4. Add citation pages and researcher-friendly CSL-JSON/BibTeX/RIS outputs only where the account and admin policy permits them. Use `scripts/publish-static.sh` for the approved-only export, validation and build handoff.
 
 ### P4 — release quality
 
-- Current regression coverage includes permanent admin saves across every collection and timeline/map safety checks for local events with incomplete route evidence.
+- Current regression coverage includes permanent admin saves across every collection, timeline/map safety checks for local events with incomplete route evidence, public route aliases and basic mobile/bilingual navigation accessibility wiring.
 - Run keyboard, screen-reader, contrast and mobile checks on every page.
 - Reduce large JavaScript chunks and keep Bengaluru KML loading lazy.
 - Add regression tests for route aliases, map selection, timeline filtering, bilingual labels and static export privacy.
@@ -98,6 +100,7 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 
 - Data model and evidence contract: [`docs/data-model.md`](data-model.md)
 - P1 human evidence queue: [`docs/p1-evidence-queue.md`](p1-evidence-queue.md)
+- Eight-district heritage batch: [`docs/p1-district-batch.md`](p1-district-batch.md)
 - P3 community operations and release handoff: [`docs/community-operations.md`](community-operations.md)
 - Community governance: [`docs/community-governance.md`](community-governance.md)
 - Live deployment: [`docs/live-deployment.md`](live-deployment.md)

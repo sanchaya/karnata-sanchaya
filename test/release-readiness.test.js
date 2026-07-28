@@ -1,0 +1,41 @@
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
+
+const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
+const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
+const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
+
+test('public navigation keeps the complete release route set and admin private', () => {
+  const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile']
+  const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
+  for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
+  assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
+  assert.match(appSource, /hash==='history'\?'district-history':hash/, 'legacy history links must resolve to district history')
+})
+
+test('mobile and bilingual navigation expose accessible controls', () => {
+  assert.match(appSource, /aria-expanded=\{mobileNavOpen\}/, 'mobile menu state must be exposed to assistive technology')
+  assert.match(appSource, /aria-controls="primary-navigation"/, 'mobile menu must identify its controlled navigation')
+  assert.match(appSource, /aria-label=\{t\.primaryNavigation\}/, 'primary navigation must have an accessible name')
+  assert.match(appSource, /aria-label=\{t\.languageLabel\}/, 'language switch must have an accessible name')
+  assert.match(indexSource, /React\.StrictMode/, 'release builds must keep strict-mode diagnostics enabled')
+})
+
+test('map and timeline safety guards remain wired into the public app', () => {
+  assert.match(appSource, /mapZoomForPositions/, 'candidate selections must use bounded map focus')
+  assert.match(appSource, /routePositions\.length>0/, 'empty routes must not render map polylines')
+  assert.match(appSource, /externalLinks\?\.\[0\]\?\.url/, 'optional external links must not break timeline cards')
+  const labelSource = appSource.slice(appSource.indexOf('function LocalizedMapLabels'), appSource.indexOf('function GlobalSearch'))
+  assert.doesNotMatch(labelSource, /<Tooltip permanent/, 'city and district labels must not remain permanently over map candidates')
+})
+
+test('Bengaluru epigraphy access hydrates from the live session without a public restriction banner', () => {
+  assert.match(appSource, /fetch\(`\$\{import\.meta\.env\.VITE_COMMUNITY_API_URL\|\|''\}\/api\/auth\/me`/, 'the app must restore a live session after refresh')
+  assert.match(appSource, /isCommunityMember=\{Boolean\(communityUser\)\}/, 'the authenticated parent state must reach the epigraphy explorer')
+  assert.match(appSource, /onLogout=\{handleLoggedOut\}/, 'logout must revoke the parent epigraphy access state')
+  assert.match(explorerSource, /import\('\.\/data\/bengaluru-kml\.js'\)/, 'the authenticated explorer must load the supplied Bengaluru KML candidate set')
+  assert.match(explorerSource, /bengaluruAllowed&&placeFocus\.startsWith\('bengaluru'\)/, 'Bengaluru candidates must remain scoped to the authenticated city views')
+  assert.doesNotMatch(explorerSource, /\{t\.bengaluruLoginRequired\}/, 'the public explorer must not disclose a login-only Bengaluru collection')
+  assert.doesNotMatch(explorerSource, /city-access-gate/, 'the public explorer must not render a Bengaluru access gate')
+})

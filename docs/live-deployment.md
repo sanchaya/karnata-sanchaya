@@ -7,11 +7,18 @@ The live portal is one same-origin service: Express serves the built React appli
 1. Copy `.env.example` to `.env` and set strong unique database passwords, the public HTTPS `APP_ORIGIN`, and a key generated with `openssl rand -base64 32`. Keep this file outside version control and back up the encryption key separately.
 2. Start MariaDB and the portal with `docker compose up -d --build`, or run MariaDB independently, then `npm run db:migrate`, `npm run build`, and `npm start`.
 3. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
-4. Schedule `npm run privacy:cleanup` daily. Back up MariaDB and the encrypted private-document volume separately and test restoration.
+4. Schedule `npm run privacy:cleanup` daily. Schedule `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` daily; it creates a compressed MariaDB dump, an encrypted private-upload archive and SHA-256 checksums under `/var/backups/karnataka-atlas`. Copy that directory to separate durable storage and test restoration before inviting contributors.
+
+## Reviewer and administrator operation
+
+- Administrators approve accounts and appoint `reviewer`, `verification-officer` or `exporter` roles from the live administration API.
+- Reviewers process `/api/reviews/queue`; a reviewer cannot approve their own contribution, and Kannada translations require all six scholarly checks.
+- Evidence assignments are permanent MariaDB rows at `/api/evidence/assignments`; the browser is only a view/editor for the live service and does not become the source of truth.
+- Keep at least two qualified reviewers active before accepting public submissions. Review the release-readiness panel before every publication.
 
 ## Release to the static site
 
-The live administrator workspace stores complete dataset revisions in MariaDB. After reviewers approve community proposals and an administrator has reviewed the current dataset revision, set `SNAPSHOT_PUBLISHER_ID` to the releasing administrator and run `npm run export:approved`. Review the generated JSON, run `npm run check`, and publish the resulting static build through the existing GitHub Pages workflow. The live database and private files are never deployed to Pages.
+The live administrator workspace stores complete dataset revisions in MariaDB. After reviewers approve community proposals and an administrator has reviewed the current dataset revision, set `SNAPSHOT_PUBLISHER_ID` to the releasing administrator and run `npm run publish:static`. This runs the approved-only export, validation and production build. Review `public/data/approved-community.json`, record the dataset revision and snapshot hash, then publish the resulting static build through the existing GitHub Pages workflow. The live database and private files are never deployed to Pages.
 
 ## Before public launch
 

@@ -101,3 +101,17 @@ test('cross-page links resolve before records reach maps, timelines or explorers
   }
   for (const audit of atlasData.inscriptionAudits) for (const id of audit.inscriptionIds) assert.ok(inscriptionIds.has(id), `${audit.id} has an unknown inscription`)
 })
+
+test('P1 evidence candidates remain gated until every promotion field is verified', () => {
+  const priority = atlasData.inscriptionAudits.flatMap(audit => audit.priorityCandidates || [])
+  const sannati = priority.find(candidate => candidate.id === 'epigraphy-candidate-sannati-ashokan-edicts')
+  const maski = priority.find(candidate => candidate.id === 'epigraphy-candidate-maski-minor-rock-edict')
+  assert.equal(sannati?.promotionReview?.status, 'translation-review')
+  assert.equal(maski?.promotionReview?.status, 'translation-review')
+  for (const candidate of priority) {
+    if (candidate.promotionReview?.status === 'promoted') {
+      assert.equal(candidate.readiness, 'ready-for-promotion', `${candidate.id} cannot be promoted early`)
+      for (const field of candidate.promotionReview.requiredEvidence) assert.equal(candidate.resolution?.[field]?.status, 'verified', `${candidate.id}/${field} is not verified`)
+    }
+  }
+})
