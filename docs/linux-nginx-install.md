@@ -41,6 +41,19 @@ The first run will:
 5. Request the certificate and replace the block with HTTP→HTTPS redirect plus the TLS proxy.
 6. Validate and reload Nginx.
 
+The build runs as `--run-user`, not as root. If `npm install` was previously run with `sudo`, the installer repairs ownership of `node_modules`, `dist` and `var` before running `npm ci`; this prevents `EACCES` errors such as a root-owned `node_modules/.bin` directory.
+
+If a first attempt stops after creating `.env`, rerun with `--reuse-env` so the existing database password and document-encryption key are preserved:
+
+```bash
+sudo ./scripts/install-linux-nginx.sh \\
+  --app-dir /srv/karnataka-kingdoms-mvp \\
+  --domain atlas.example.org \\
+  --letsencrypt-email ops@example.org \\
+  --run-user atlas \\
+  --reuse-env
+```
+
 MariaDB credentials must already refer to an existing database/user with permission to create the application tables. Use `--skip-migrations` only when migrations are being managed separately.
 
 ## Existing certificate

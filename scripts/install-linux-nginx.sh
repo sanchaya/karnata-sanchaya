@@ -15,6 +15,7 @@ TLS_CERT=''
 TLS_KEY=''
 HTTP_ONLY=0
 OVERWRITE=0
+REUSE_ENV=0
 SKIP_MIGRATIONS=0
 DB_HOST="${DB_HOST:-127.0.0.1}"
 DB_PORT="${DB_PORT:-3306}"
@@ -45,6 +46,7 @@ Optional:
   --db-port PORT            MariaDB port (default: 3306)
   --db-name NAME            MariaDB database (default: karnataka_atlas)
   --db-user USER            MariaDB user (default: karnataka_atlas)
+  --reuse-env               Reuse an existing installer-created .env after a failed run
   --skip-migrations         Do not run npm run db:migrate
   --overwrite               Back up and replace an existing .env/unit/site config
   -h, --help                Show this help
@@ -71,6 +73,7 @@ while (($#)); do
     --tls-key) TLS_KEY=${2:-}; shift 2 ;;
     --http-only) HTTP_ONLY=1; shift ;;
     --overwrite) OVERWRITE=1; shift ;;
+    --reuse-env) REUSE_ENV=1; shift ;;
     --skip-migrations) SKIP_MIGRATIONS=1; shift ;;
     --db-host) DB_HOST=${2:-}; shift 2 ;;
     --db-port) DB_PORT=${2:-}; shift 2 ;;
@@ -126,8 +129,30 @@ else
   NGINX_ENABLED="$NGINX_AVAILABLE"
 fi
 
+read_env_value(){
+  local key=$1 line value
+  line=$(grep -E "^${key}=" "$ENV_FILE" 2>/dev/null | tail -n 1 || true)
+  [[ -n "$line" ]] || return 0
+  value=${line#*=}
+  if [[ "$value" == \"*\" ]]; then
+    value=${value:1:${#value}-2}
+    value=${value//\\\"/\"}
+    value=${value//\\\\/\\}
+  fi
+  printf '%s' "$value"
+}
+
+if [[ -f "$ENV_FILE" && $REUSE_ENV -eq 1 ]]; then
+  [[ -n "$DB_PASSWORD" ]] || DB_PASSWORD=$(read_env_value DB_PASSWORD)
+  [[ -n "$DOCUMENT_ENCRYPTION_KEY" ]] || DOCUMENT_ENCRYPTION_KEY=$(read_env_value DOCUMENT_ENCRYPTION_KEY)
+  [[ "$DB_HOST" != '127.0.0.1' ]] || DB_HOST=$(read_env_value DB_HOST)
+  [[ "$DB_PORT" != '3306' ]] || DB_PORT=$(read_env_value DB_PORT)
+  [[ "$DB_NAME" != 'karnataka_atlas' ]] || DB_NAME=$(read_env_value DB_NAME)
+  [[ "$DB_USER" != 'karnataka_atlas' ]] || DB_USER=$(read_env_value DB_USER)
+fi
+
 for target in "$ENV_FILE" "$UNIT_FILE" "$NGINX_AVAILABLE"; do
-  if [[ -e "$target" && $OVERWRITE -ne 1 ]]; then
+  if [[ -e "$target" && $OVERWRITE -ne 1 && ! ( "$target" == "$ENV_FILE" && $REUSE_ENV -eq 1 ) ]]; then
     die "$target already exists. Re-run with --overwrite only after reviewing the backup implications."
   fi
 done
@@ -141,7 +166,7 @@ if [[ -z "$DOCUMENT_ENCRYPTION_KEY" ]]; then DOCUMENT_ENCRYPTION_KEY=$(openssl r
 
 backup_if_present(){
   local target=$1
-  if [[ -e "$target" && $OVERWRITE -eq 1 ]]; then
+  if [[ -e "$target" && ( $OVERWRITE -eq 1 || ( "$target" == "$ENV_FILE" && $REUSE_ENV -eq 1 ) ) ]]; then
     cp -a "$target" "$target.backup.$(date -u +%Y%m%d%H%M%S)"
   fi
 }
@@ -161,6 +186,13 @@ if [[ "$HTTP_ONLY" -eq 1 ]]; then APP_ORIGIN="http://$DOMAIN"; else APP_ORIGIN="
 PRIVATE_UPLOAD_DIR="$APP_DIR/var/private-uploads"
 mkdir -p "$PRIVATE_UPLOAD_DIR"
 chown -R "$RUN_USER:$RUN_GROUP" "$PRIVATE_UPLOAD_DIR"
+for app_generated_dir in "$APP_DIR/node_modules" "$APP_DIR/dist" "$APP_DIR/var"; do
+  if [[ -e "$app_generated_dir" ]]; then
+    # npm install/check and the live service must be able to replace generated files.
+    # This repairs the common case where npm install was previously run with sudo.
+    chown -R "$RUN_USER:$RUN_GROUP" "$app_generated_dir"
+  fi
+done
 umask 077
 {
   printf 'NODE_ENV=production\n'
