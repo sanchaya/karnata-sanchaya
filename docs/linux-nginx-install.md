@@ -93,14 +93,11 @@ sudo systemctl restart karnataka-atlas
 For repeat deployments, use the guarded updater instead. It fetches the selected remote branch, refuses to deploy a dirty worktree, fast-forwards the clone, installs dependencies, runs the full check suite and MariaDB migrations, restarts the existing service, and waits for `/api/health`. It does not replace `.env`, Nginx, TLS certificates, or the systemd unit:
 
 ```bash
-sudo ./scripts/update-live.sh \
-  --app-dir /srv/karnataka-kingdoms-mvp \
-  --branch main \
-  --service-name karnataka-atlas \
-  --run-user atlas
+cd /srv/karnataka-kingdoms-mvp
+sudo ./scripts/update-live.sh
 ```
 
-If migrations are managed separately, add `--skip-migrations`. The updater is intentionally fast-forward-only; resolve any local/remote divergence manually before retrying. Keep the clone clean and make sure the deployment user can authenticate to the configured Git remote.
+When run from the cloned repository, the updater infers the app directory, uses `main`, `origin`, `karnataka-atlas`, and the clone owner automatically. Use the optional flags only for a nonstandard branch, remote, service name, user or app directory. If migrations are managed separately, add `--skip-migrations`. The updater is intentionally fast-forward-only; resolve any local/remote divergence manually before retrying. Keep the clone clean and make sure the deployment user can authenticate to the configured Git remote.
 
 The script intentionally does not create the first administrator. After the service is live, create one with database access:
 

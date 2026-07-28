@@ -17,9 +17,11 @@ usage(){
 Update an existing Karnataka Historical Atlas live deployment.
 
 Required:
-  --app-dir DIR             Existing git clone used by the live service
+  None when run from the cloned repository. The script directory's parent is
+                            used automatically as the app directory.
 
 Optional:
+  --app-dir DIR             Existing git clone used by the live service
   --branch NAME             Branch to fast-forward (default: main)
   --remote NAME             Git remote (default: origin)
   --service-name NAME       systemd service (default: karnataka-atlas)
@@ -50,7 +52,9 @@ while (($#)); do
 done
 
 [[ $EUID -eq 0 ]] || die 'Run this script with sudo/root privileges.'
-[[ -n "$APP_DIR" ]] || die '--app-dir is required.'
+if [[ -z "$APP_DIR" ]]; then
+  APP_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." 2>/dev/null && pwd) || die 'Could not determine the app directory from the script location.'
+fi
 [[ "$BRANCH" =~ ^[A-Za-z0-9._/-]+$ && "$BRANCH" != -* && "$BRANCH" != */ ]] || die "Invalid branch: $BRANCH"
 [[ "$REMOTE" =~ ^[A-Za-z0-9._-]+$ ]] || die "Invalid remote: $REMOTE"
 [[ "$SERVICE_NAME" =~ ^[A-Za-z0-9_.@-]+$ ]] || die "Invalid service name: $SERVICE_NAME"
