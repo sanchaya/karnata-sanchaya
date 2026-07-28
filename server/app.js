@@ -28,7 +28,7 @@ const clean=(value,max=255)=>typeof value==='string'?value.trim().slice(0,max):'
 const email=value=>clean(value,254).toLowerCase()
 const safeJson=value=>{try{return typeof value==='string'?JSON.parse(value):value}catch{return null}}
 const rolesFor=async(db,userId)=>(await db.query('SELECT role FROM user_roles WHERE user_id=?',[userId])).map(row=>row.role)
-const publicUser=(row,roles,karma=0)=>({id:row.id,email:row.email,displayName:row.display_name,displayNameKn:row.display_name_kn,preferredLocale:row.preferred_locale,profession:row.profession,affiliationType:row.affiliation_type,institutionName:row.institution_name,institutionUrl:row.institution_url,accountStatus:row.account_status,verifiedBadge:Boolean(row.verified_badge),roles,canExport:row.account_status==='approved'&&roles.some(role=>['exporter','administrator'].includes(role)),karma:Number(karma||0)})
+const publicUser=(row,roles,karma=0)=>({id:row.id,email:row.email,displayName:row.display_name,displayNameKn:row.display_name_kn,preferredLocale:row.preferred_locale,profession:row.profession,professionDetails:row.profession_details,affiliationType:row.affiliation_type,institutionName:row.institution_name,institutionUrl:row.institution_url,publicBio:row.public_bio,accountStatus:row.account_status,verifiedBadge:Boolean(row.verified_badge),roles,canExport:row.account_status==='approved'&&roles.some(role=>['exporter','administrator'].includes(role)),karma:Number(karma||0)})
 const audit=async(db,actor,action,entityType,entityId,metadata={})=>db.query('INSERT INTO audit_log (id,actor_user_id,action,entity_type,entity_id,metadata_json) VALUES (?,?,?,?,?,?)',[randomUUID(),actor||null,action,entityType,entityId||null,JSON.stringify(metadata)])
 
 async function loadSession(req,res,next){
@@ -67,6 +67,16 @@ app.post('/api/auth/login',rateLimit('login',12,15*60*1000),async(req,res)=>{
 })
 app.post('/api/auth/logout',requireUser,async(req,res)=>{const token=cookies(req).kha_session;if(token)await pool.query('DELETE FROM sessions WHERE token_hash=?',[sha256(token)]);res.clearCookie('kha_session',{path:'/'});res.json({ok:true})})
 app.get('/api/auth/me',requireUser,async(req,res)=>{const rows=await pool.query('SELECT COALESCE(SUM(points),0) karma FROM karma_ledger WHERE user_id=?',[req.user.id]);res.json({user:publicUser(req.user,req.roles,rows[0]?.karma)})})
+app.put('/api/auth/profile',requireUser,async(req,res)=>{
+  const body=req.body||{}
+  const displayName=clean(body.displayName,160),displayNameKn=clean(body.displayNameKn,160)||null,profession=clean(body.profession,80)
+  const affiliationType=['none','school','college','university','research-institute','museum','government','nonprofit','other'].includes(body.affiliationType)?body.affiliationType:'none'
+  if(!displayName||!profession)return res.status(400).json({error:'Name and profession are required.'})
+  await pool.query('UPDATE users SET display_name=?,display_name_kn=?,preferred_locale=?,profession=?,profession_details=?,affiliation_type=?,institution_name=?,institution_url=?,public_bio=? WHERE id=?',[displayName,displayNameKn,body.preferredLocale==='en'?'en':'kn',profession,clean(body.professionDetails,255)||null,affiliationType,clean(body.institutionName,255)||null,clean(body.institutionUrl,500)||null,clean(body.publicBio,2000)||null,req.user.id])
+  await audit(pool,req.user.id,'account.profile-updated','user',req.user.id,{profession,affiliationType})
+  const rows=await pool.query('SELECT COALESCE(SUM(points),0) karma FROM karma_ledger WHERE user_id=?',[req.user.id]);const userRows=await pool.query('SELECT * FROM users WHERE id=? LIMIT 1',[req.user.id])
+  res.json({ok:true,user:publicUser(userRows[0],req.roles,rows[0]?.karma)})
+})
 
 app.get('/api/administration/dataset',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
   const rows=await pool.query('SELECT revision,schema_version,content_sha256,dataset_json,updated_by,created_at FROM dataset_snapshots ORDER BY revision DESC LIMIT 1')
