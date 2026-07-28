@@ -336,7 +336,16 @@ systemctl daemon-reload
 systemctl enable --now "$SERVICE_NAME.service"
 systemctl reload nginx
 
-curl --fail --silent --show-error "http://127.0.0.1:$PORT/" >/dev/null || die "The service did not answer on 127.0.0.1:$PORT. Check: systemctl status $SERVICE_NAME"
+notice 'Waiting for the application service to become ready'
+service_ready=0
+for attempt in $(seq 1 30); do
+  if curl --fail --silent --show-error "http://127.0.0.1:$PORT/" >/dev/null; then
+    service_ready=1
+    break
+  fi
+  sleep 1
+done
+[[ $service_ready -eq 1 ]] || die "The service did not answer on 127.0.0.1:$PORT after 30 seconds. Check: systemctl status $SERVICE_NAME"
 
 notice 'Installation complete'
 printf 'Public URL: %s\n' "$APP_ORIGIN"
