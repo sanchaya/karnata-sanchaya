@@ -3,6 +3,24 @@ const review=status=>({status,reviewer:null,updatedAt:'2026-07-27'})
 
 export const collaborations=[
   {
+    id:'collaboration-karnataka-itihasa-academy',name:name('Karnataka Itihasa Academy','ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾದೆಮಿ'),entityKind:'organization',stage:'complete',
+    collaborationType:'research-publication-and-digitisation',url:'https://karnatakaitihasaacademy.org/',
+    contribution:name('Publisher and scholarly steward of the Itihasa Darshana research-paper volumes. The volumes are treated as citable printed sources; Internet Archive scans provide digital access and OCR discovery.','ಇತಿಹಾಸ ದರ್ಶನ ಸಂಶೋಧನಾ-ಪ್ರಬಂಧ ಸಂಪುಟಗಳ ಪ್ರಕಾಶಕ ಮತ್ತು ವಿದ್ವತ್ ಪಾಲಕ. ಸಂಪುಟಗಳನ್ನು ಉಲ್ಲೇಖಿಸಬಹುದಾದ ಮುದ್ರಿತ ಆಕರಗಳಾಗಿ ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ; ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್ ಸ್ಕ್ಯಾನ್‌ಗಳು ಡಿಜಿಟಲ್ ಪ್ರವೇಶ ಮತ್ತು OCR ಶೋಧನಾ ಸಹಾಯ ಒದಗಿಸುತ್ತವೆ.'),
+    contactPath:'#research',review:review('published'),
+  },
+  {
+    id:'collaboration-servants-of-knowledge-itihasa-darshana',name:name('ServantsOfKnowledge','ಸರ್ವೆಂಟ್ಸ್ ಆಫ್ ನಾಲೆಜ್'),entityKind:'organization',stage:'complete',
+    collaborationType:'digitisation-and-public-access',url:'https://archive.org/details/ServantsOfKnowledge',
+    contribution:name('Digitisation and public-access host for the Itihasa Darshana scans, including full-text OCR and HOCR files. The scan is cited as the digital host, not as a replacement for the printed volume or page locator.','ಇತಿಹಾಸ ದರ್ಶನ ಸ್ಕ್ಯಾನ್‌ಗಳ ಡಿಜಿಟಲೀಕರಣ ಮತ್ತು ಸಾರ್ವಜನಿಕ ಪ್ರವೇಶ ಆತಿಥೇಯ; ಸಂಪೂರ್ಣ OCR ಮತ್ತು HOCR ಕಡತಗಳೂ ಲಭ್ಯ. ಸ್ಕ್ಯಾನ್ ಅನ್ನು ಮುದ್ರಿತ ಸಂಪುಟ ಅಥವಾ ಪುಟ ಸ್ಥಾನಸೂಚಿಗೆ ಪರ್ಯಾಯವಾಗಿ ಅಲ್ಲ, ಡಿಜಿಟಲ್ ಆತಿಥೇಯವಾಗಿ ಉಲ್ಲೇಖಿಸಬೇಕು.'),
+    contactPath:'#research',review:review('published'),
+  },
+  {
+    id:'collaboration-bharatrajya-research-resource',name:name('BharatRajya research resource','ಭಾರತರಾಜ್ಯ ಸಂಶೋಧನಾ ಸಂಪನ್ಮೂಲ'),entityKind:'organization',stage:'complete',
+    collaborationType:'research-discovery-resource',url:'https://www.bharatrajya.com/',
+    contribution:name('Acknowledged as a secondary discovery resource that helped identify neighbouring-state and timeline leads. Its summaries are not used as final citations; underlying primary, official or scholarly records must be located and independently verified.','ನೆರೆರಾಜ್ಯ ಮತ್ತು ಕಾಲರೇಖಾ ಸಂಶೋಧನಾ ದಾರಿಗಳನ್ನು ಗುರುತಿಸಲು ನೆರವಾದ ದ್ವಿತೀಯ ಶೋಧನಾ ಸಂಪನ್ಮೂಲವಾಗಿ ಕೃತಜ್ಞತೆ. ಇದರ ಸಾರಾಂಶಗಳನ್ನು ಅಂತಿಮ ಉಲ್ಲೇಖಗಳಾಗಿ ಬಳಸುವುದಿಲ್ಲ; ಮೂಲ ಪ್ರಾಥಮಿಕ, ಅಧಿಕೃತ ಅಥವಾ ವಿದ್ವತ್ ದಾಖಲೆಗಳನ್ನು ಹುಡುಕಿ ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು.'),
+    contactPath:'#research',review:review('published'),
+  },
+  {
     id:'collaboration-sanchaya-steward',name:name('Sanchaya','ಸಂಚಯ'),entityKind:'organization',stage:'steward',
     collaborationType:'platform-stewardship',url:'https://sanchaya.org/',
     contribution:name('Product stewardship, Kannada-first digital knowledge practice and community coordination.','ಉತ್ಪನ್ನದ ಮಾರ್ಗದರ್ಶನ, ಕನ್ನಡ-ಪ್ರಥಮ ಡಿಜಿಟಲ್ ಜ್ಞಾನ ಪದ್ಧತಿ ಮತ್ತು ಸಮುದಾಯ ಸಂಯೋಜನೆ.'),

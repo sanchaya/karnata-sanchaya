@@ -7,6 +7,14 @@ const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026
 const name = (en, kn) => ({ en, kn })
 const dateRange = (from, to, precision = 'year') => ({ from, to, era: 'CE', precision })
 const citation = (sourceId, locator = '') => ({ sourceId, locator })
+const appendUniqueById = (target, items) => {
+  const seen = new Set(target.map(item => item?.id).filter(Boolean))
+  items.forEach(item => {
+    if (!item?.id || seen.has(item.id)) return
+    target.push(item)
+    seen.add(item.id)
+  })
+}
 
 export const atlasData = {
   meta: {
@@ -15,7 +23,9 @@ export const atlasData = {
     exportedAt: null,
   },
   sources: [
-    { id: 'src-bharatrajya-methodology', type: 'digital-atlas-methodology', title: name('BharatRajya: Sources & Methodology', 'ಭಾರತರಾಜ್ಯ: ಆಕರಗಳು ಮತ್ತು ವಿಧಾನ'), authors: ['BharatRajya contributors'], year: 2026, url: 'https://www.bharatrajya.com/sources', review: review('needs-review') },
+    { id: 'src-epigraphia-indica', type: 'series', title: name('Epigraphia Indica', 'ಎಪಿಗ್ರಾಫಿಯಾ ಇಂಡಿಕಾ'), authors: ['Archaeological Survey of India and predecessor survey institutions'], year: 1892, url: 'https://onlinebooks.library.upenn.edu/webbin/serial?id=epigraphindica', scope: name('Inscription series to be searched for item-level editions, facsimiles, transliterations and translations; volume and page locators are required before promotion.', 'ವಸ್ತುಮಟ್ಟದ ಆವೃತ್ತಿ, ಪ್ರತಿಚಿತ್ರ, ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದಗಳಿಗಾಗಿ ಹುಡುಕಬೇಕಾದ ಶಾಸನ ಸರಣಿ; ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ಸಂಪುಟ ಮತ್ತು ಪುಟ ಸ್ಥಾನಸೂಚಿ ಅಗತ್ಯ.'), review: review('reviewed') },
+    { id: 'src-maharashtra-gazetteer-maratha-period', type: 'government-gazetteer', title: name('Sangli Gazetteer: Maratha period and Nargund operations', 'ಸಾಂಗ್ಲಿ ಗೆಜೆಟಿಯರ್: ಮರಾಠ ಕಾಲ ಮತ್ತು ನರಗುಂದ ಕಾರ್ಯಾಚರಣೆಗಳು'), authors: ['Gazetteers Department, Government of Maharashtra'], year: null, url: 'https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/SANGLI/his_maratha%20period.html', review: review('needs-review') },
+    { id: 'src-dharwar-district-gazetteer', type: 'government-gazetteer', title: name('Dharwar District Gazetteer: siege and frontier history', 'ಧಾರವಾಡ ಜಿಲ್ಲಾ ಗೆಜೆಟಿಯರ್: ಮುತ್ತಿಗೆ ಮತ್ತು ಗಡಿ ಇತಿಹಾಸ'), authors: ['Government of Bombay'], year: 1884, url: 'https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/26031/GIPE-076537.pdf?isAllowed=y&sequence=3', review: review('needs-review') },
     { id: 'src-majumdar-vedic-age', type: 'book', title: name('The History and Culture of the Indian People, Vol. I: The Vedic Age', 'ದಿ ಹಿಸ್ಟರಿ ಅಂಡ್ ಕಲ್ಚರ್ ಆಫ್ ದ ಇಂಡಿಯನ್ ಪೀಪಲ್, ಸಂಪುಟ I: ದಿ ವೈದಿಕ ಏಜ್'), authors: ['R. C. Majumdar (ed.)'], year: 1951, url: 'https://archive.org/details/the-history-and-culture-of-the-indian-people-11-vol.-set-by-r.-c.-majumdar-j.-n.', review: review('needs-review') },
     { id: 'src-vedic-heritage-portal', type: 'government-portal', title: name('Vedic Heritage Portal', 'ವೈದಿಕ ಪರಂಪರೆ ಪೋರ್ಟಲ್'), authors: ['Indira Gandhi National Centre for the Arts, Ministry of Culture'], year: null, url: 'https://vedicheritage.gov.in/', review: review('reviewed') },
     { id: 'src-karnataka-tourism-heritage', type: 'government-web', title: name('Karnataka heritage sites index', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ ತಾಣಗಳ ಸೂಚಿ'), authors: ['Karnataka Tourism, Government of Karnataka'], year: null, url: 'https://karnatakatourism.org/en/destinations/heritage-sites/?type%5B%5D=experience', review: review('reviewed') },
@@ -115,10 +125,10 @@ export const atlasData = {
   relationships: [],
 }
 
-atlasData.sources.push(...literatureEpigraphySources)
-atlasData.people.push(...literaryPeople)
-atlasData.places.push(...inscriptionPlaces)
-atlasData.works.push(...additionalWorks)
+appendUniqueById(atlasData.sources, literatureEpigraphySources)
+appendUniqueById(atlasData.people, literaryPeople)
+appendUniqueById(atlasData.places, inscriptionPlaces)
+appendUniqueById(atlasData.works, additionalWorks)
 
 // Western Ganga succession leads from the Sripurusha and dynasty overview pages.
 // These are intentionally needs-review until each ruler/date is checked against
@@ -162,25 +172,25 @@ westernGangaPeople.forEach(person=>{
   if(existing) Object.assign(existing,person)
   else atlasData.people.push(person)
 })
-atlasData.works.push({
+appendUniqueById(atlasData.works, [{
   id:'work-gajasastra', name:name('Gajasastra','ಗಜಶಾಸ್ತ್ರ'), creator:name('Sripurusha','ಶ್ರೀಪುರುಷ'), creatorIds:['person-sripurusha'],
   creatorRole:name('Scholar-king','ವಿದ್ವಾನ್ ರಾಜ'), date:dateRange(760,760,'circa'), languages:['Sanskrit'], polityId:'polity-western-ganga',
   description:name('Sanskrit treatise attributed to Sripurusha; an article-derived lead requiring attribution and edition review.','ಶ್ರೀಪುರುಷರಿಗೆ ಸಲ್ಲಿಸಲಾದ ಸಂಸ್ಕೃತ ಗ್ರಂಥ; ಕರ್ತೃತ್ವ ಮತ್ತು ಆವೃತ್ತಿ ಪರಿಶೀಲನೆ ಅಗತ್ಯವಿರುವ ಲೇಖನ ಆಧಾರಿತ ಸಂಶೋಧನಾ ದಾರಿ.'),
   citations:[citation('src-wikipedia-sripurusha','Literature and legacy; verify attribution against a critical edition')],
   review:review('needs-review'),
-})
-atlasData.inscriptions.push(...additionalInscriptions)
+}])
+appendUniqueById(atlasData.inscriptions, additionalInscriptions)
 atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||null})
 // Cross-border Kannada inscription leads are kept in a synthetic research audit
 // so they enter the same evidence workflow without being misassigned to a
 // Karnataka district. They are not claims of territorial control.
-atlasData.heritageAudits.push({
+appendUniqueById(atlasData.heritageAudits, [{
   id:'audit-cross-border-kannada', name:name('Outside-Karnataka Kannada inscription audit','ಕರ್ನಾಟಕದ ಹೊರಗಿನ ಕನ್ನಡ ಶಾಸನ ಪರಿಶೀಲನೆ'),
   district:name('Outside Karnataka / cross-border leads','ಕರ್ನಾಟಕದ ಹೊರಗೆ / ಗಡಿ-ದಾಟಿದ ದಾರಿಗಳು'), region:'cross-border', auditStatus:'in-progress',
   categoryCoverage:{temple:'unassessed','coastal-temple':'unassessed',basadi:'unassessed',dargah:'unassessed',church:'unassessed',monastery:'unassessed',fort:'unassessed','palace-civic-architecture':'unassessed','colonial-architecture':'unassessed','archaeological-landscape':'unassessed','modern-heritage':'unassessed'}, prioritySites:[],
   methodologyNote:name('Discovery leads for Kannada records outside Karnataka. Resolve the item, findspot, repository, political context and present authority separately; do not infer territory from an inscription alone.','ಕರ್ನಾಟಕದ ಹೊರಗಿನ ಕನ್ನಡ ದಾಖಲೆಗಳ ಹುಡುಕಾಟದ ದಾರಿಗಳು. ದಾಖಲೆ, ಪತ್ತೆಸ್ಥಳ, ಸಂಗ್ರಹಸ್ಥಳ, ರಾಜಕೀಯ ಸಂದರ್ಭ ಮತ್ತು ಪ್ರಸ್ತುತ ಪ್ರಾಧಿಕಾರವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ನಿರ್ಧರಿಸಿ; ಶಾಸನದ ಆಧಾರದಿಂದ ಮಾತ್ರ ಭೂಆಳ್ವಿಕೆಯನ್ನು ಊಹಿಸಬಾರದು.'),
   citations:[citation('src-wikipedia-kannada-inscriptions','Sections on Kannada inscriptions found in Andhra Pradesh, Maharashtra and Tamil Nadu')], review:review('needs-review'),
-})
+}])
 atlasData.inscriptionAudits=atlasData.heritageAudits.map(audit=>{
   const inscriptionIds=atlasData.inscriptions.filter(record=>record.districtAuditId===audit.id).map(record=>record.id)
   const priorityCandidates=priorityInscriptionCandidates[audit.id]||[]
@@ -371,7 +381,7 @@ atlasData.culturalHeritage = [
   },
   {
     id:'culture-kadamba-hunting-archery',name:name('Kadamba hunting and archery traditions','ಕದಂಬರ ಬೇಟೆ ಮತ್ತು ಬಿಲ್ಲುವಿದ್ಯೆ ಪರಂಪರೆ'),category:'games-sports',date:dateRange(400,600,'circa'),polityIds:['polity-kadamba'],placeIds:['place-banavasi'],peopleIds:[],relatedWorkIds:[],traditionTags:['archery','hunting','martial-training','courtly-life'],continuity:'historic',
-    description:name('Indicative timeline lead for courtly hunting and archery around Banavasi; the specific game forms, dates and evidence witnesses must be resolved from court texts, inscriptions, visual records, institutional archives and field studies.','ಬನವಾಸಿ ಸುತ್ತಲಿನ ಆಸ್ಥಾನ ಬೇಟೆ ಮತ್ತು ಬಿಲ್ಲುವಿದ್ಯೆಗೆ ಸೂಚಕ ಕಾಲರೇಖಾ ದಾರಿ; ನಿರ್ದಿಷ್ಟ ಆಟರೂಪಗಳು, ದಿನಾಂಕಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯಗಳನ್ನು ಆಸ್ಥಾನ ಪಠ್ಯಗಳು, ಶಾಸನಗಳು, ದೃಶ್ಯ ದಾಖಲೆಗಳು, ಸಂಸ್ಥಾ ಆರ್ಕೈವ್‌ಗಳು ಮತ್ತು ಕ್ಷೇತ್ರ ಅಧ್ಯಯನಗಳಿಂದ ಇನ್ನೂ ನಿರ್ಧರಿಸಬೇಕು.'),citations:[citation('src-bharatrajya-methodology','Research lead: martial and hunting culture around Banavasi; replace with specialist source')],review:review('needs-review')
+    description:name('Indicative timeline lead for courtly hunting and archery around Banavasi; the specific game forms, dates and evidence witnesses must be resolved from court texts, inscriptions, visual records, institutional archives and field studies.','ಬನವಾಸಿ ಸುತ್ತಲಿನ ಆಸ್ಥಾನ ಬೇಟೆ ಮತ್ತು ಬಿಲ್ಲುವಿದ್ಯೆಗೆ ಸೂಚಕ ಕಾಲರೇಖಾ ದಾರಿ; ನಿರ್ದಿಷ್ಟ ಆಟರೂಪಗಳು, ದಿನಾಂಕಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯಗಳನ್ನು ಆಸ್ಥಾನ ಪಠ್ಯಗಳು, ಶಾಸನಗಳು, ದೃಶ್ಯ ದಾಖಲೆಗಳು, ಸಂಸ್ಥಾ ಆರ್ಕೈವ್‌ಗಳು ಮತ್ತು ಕ್ಷೇತ್ರ ಅಧ್ಯಯನಗಳಿಂದ ಇನ್ನೂ ನಿರ್ಧರಿಸಬೇಕು.'),citations:[citation('src-asi-classical-age','Research lead only: resolve martial and hunting culture against specialist primary and art-historical studies')],review:review('needs-review')
   },
   {
     id:'culture-western-ganga-wrestling',name:name('Western Ganga wrestling and physical-training traditions','ಪಶ್ಚಿಮ ಗಂಗರ ಕುಸ್ತಿ ಮತ್ತು ದೈಹಿಕ ತರಬೇತಿ ಪರಂಪರೆ'),category:'games-sports',date:dateRange(350,1000,'range'),polityIds:['polity-western-ganga'],placeIds:['place-talakad'],peopleIds:[],relatedWorkIds:[],traditionTags:['wrestling','physical-training','Jain-court','heroic-culture'],continuity:'historic',

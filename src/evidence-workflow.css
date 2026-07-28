@@ -3,3 +3,4 @@
 .evidence-toolbar{grid-template-columns:minmax(220px,1fr) 175px 190px 175px auto}.evidence-task{border-left:3px solid #8b4a2f}.evidence-task.literature{border-left-color:var(--sanchaya-blue)}
 @media(max-width:900px){.evidence-toolbar{grid-template-columns:1fr}}
 .evidence-toolbar .export-restricted-note{display:block;padding:8px 10px;border:1px solid #e7d8bf;border-radius:7px;background:#fffaf3;color:#76501e;font-size:10px;line-height:1.35}
+.evidence-load-more{width:100%;margin-top:4px;border:1px solid var(--sanchaya-border);border-radius:7px;background:#fff;color:var(--sanchaya-blue);padding:9px;font:700 10px/1.2 inherit;cursor:pointer}.evidence-load-more:hover{background:#eef2ff}.evidence-all-shown{display:block;padding:5px;color:var(--sanchaya-muted);font-size:9px;text-align:center}.evidence-error{color:#9a4338;font-size:11px}

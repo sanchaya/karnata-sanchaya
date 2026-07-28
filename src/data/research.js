@@ -36,9 +36,8 @@ export const deepChronologies=[
     geographicScope:n('Indian subcontinent; region-level browsing source, not a territorial claim for Karnataka','ಭಾರತೀಯ ಉಪಖಂಡ; ಪ್ರದೇಶಮಟ್ಟದ ವೀಕ್ಷಣಾ ಆಕರ, ಕರ್ನಾಟಕದ ಭೂಪ್ರದೇಶದ ಹಕ್ಕುಸ್ಥಾಪನೆ ಅಲ್ಲ'),
     evidenceBasis:'secondary-synthesis',
     confidence:'interpretive',
-    description:n('BharatRajya follows Volume I of R. C. Majumdar’s History and Culture of the Indian People for this 1500–600 BCE band. It is retained as a separate attributed chronology because Vedic textual periods, archaeological phases, and traditional chronologies do not map onto one another exactly.','ಭಾರತರಾಜ್ಯವು ಕ್ರಿ.ಪೂ. 1500–600ರ ಈ ಅವಧಿಗೆ ಆರ್. ಸಿ. ಮಜುಂದಾರ್ ಅವರ History and Culture of the Indian People ಕೃತಿಯ ಮೊದಲ ಸಂಪುಟವನ್ನು ಅನುಸರಿಸುತ್ತದೆ. ವೈದಿಕ ಪಠ್ಯಕಾಲ, ಪುರಾತತ್ತ್ವ ಹಂತ ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ಕಾಲಕ್ರಮಗಳು ಒಂದಕ್ಕೊಂದು ನಿಖರವಾಗಿ ಹೊಂದುವುದಿಲ್ಲವಾದ್ದರಿಂದ ಇದನ್ನು ಪ್ರತ್ಯೇಕ, ಆಕರಸಹಿತ ಕಾಲಕ್ರಮವಾಗಿ ಉಳಿಸಲಾಗಿದೆ.'),
+    description:n('This 1500–600 BCE band follows Volume I of R. C. Majumdar’s History and Culture of the Indian People. It is retained as a separate attributed chronology because Vedic textual periods, archaeological phases, and traditional chronologies do not map onto one another exactly.','ಈ ಕ್ರಿ.ಪೂ. 1500–600ರ ಅವಧಿಯು ಆರ್. ಸಿ. ಮಜುಂದಾರ್ ಅವರ History and Culture of the Indian People ಕೃತಿಯ ಮೊದಲ ಸಂಪುಟವನ್ನು ಅನುಸರಿಸುತ್ತದೆ. ವೈದಿಕ ಪಠ್ಯಕಾಲ, ಪುರಾತತ್ತ್ವ ಹಂತ ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ಕಾಲಕ್ರಮಗಳು ಒಂದಕ್ಕೊಂದು ನಿಖರವಾಗಿ ಹೊಂದುವುದಿಲ್ಲವಾದ್ದರಿಂದ ಇದನ್ನು ಪ್ರತ್ಯೇಕ, ಆಕರಸಹಿತ ಕಾಲಕ್ರಮವಾಗಿ ಉಳಿಸಲಾಗಿದೆ.'),
     citations:[
-      {sourceId:'src-bharatrajya-methodology',locator:'Historical eras table: The Vedic Age, 1500 BCE–600 BCE, region detail, Vol. 1'},
       {sourceId:'src-majumdar-vedic-age',locator:'Volume I periodization; consult individual chapters before creating event or territory records'},
       {sourceId:'src-vedic-heritage-portal',locator:'Textual and oral Vedic heritage discovery portal; not a territorial chronology'}
     ],

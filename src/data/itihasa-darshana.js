@@ -1,0 +1,126 @@
+const name = (en, kn) => ({ en, kn })
+const review = () => ({ status: 'reviewed', reviewer: 'atlas-source-screening', updatedAt: '2026-07-28' })
+
+// Lightweight signals recorded after opening each item's _djvu.txt. These are
+// discovery pointers for the next article-level review, not quotations or
+// claims that have been promoted into the atlas.
+const ocrSignals = {
+  'kia.itihasadarshanas0000drsu': { kannada: 51, inscriptions: 445, literature: 40 },
+  'bmshri.itihasadarshanav0000drsu': { kannada: 86, inscriptions: 268, literature: 26 },
+  'kia.itihasadarsanasa0000drmgsamputa-25': { kannada: 65, inscriptions: 338, literature: 66 },
+  'kia.itihasadarsanasa0000drmgsamputa-30': { kannada: 107, inscriptions: 358, literature: 38 },
+  'kia.itihasadarshansa0000drsu1993samput8': { kannada: 48, inscriptions: 162, literature: 15 },
+  'bmshri.itihasadarsanasa0000drmgsamputa-23': { kannada: 114, inscriptions: 407, literature: 57 },
+  'kia.itihasadarshanas0000mgnasmput-13': { kannada: 96, inscriptions: 188, literature: 25 },
+  'kia.itihasadarshanas0000mgnasmput-15': { kannada: 78, inscriptions: 120, literature: 39 },
+  'kia.itihasadarshanav0000drde32': { kannada: 95, inscriptions: 215, literature: 19 },
+  'kia.itihasadarshanav0000drde_d0t6': { kannada: 103, inscriptions: 235, literature: 36 },
+  'kia.itihasadarshanav0000drmg': { kannada: 131, inscriptions: 153, literature: 21 },
+  'kia.itihasadarshansa0000drsu1986snk1': { kannada: 49, inscriptions: 447, literature: 42 },
+  'kia.itihasadrashanas0000drsu': { kannada: 65, inscriptions: 158, literature: 25 },
+  'kia.itihasadarshanas0000mgnasmput-12': { kannada: 57, inscriptions: 218, literature: 27 },
+  'bmshri.itihasadarshanav0000drmg': { kannada: 96, inscriptions: 306, literature: 68 },
+  'kia.itihasadarshanav0000raja': { kannada: 94, inscriptions: 73, literature: 35 },
+  'kia.itihasadarshanav0000drde_u3h1': { kannada: 94, inscriptions: 510, literature: 46 },
+  'kia.itihasadarshanas0000drsu1994samput9': { kannada: 67, inscriptions: 277, literature: 14 },
+  'kia.itihasadarsanasa0000drmgsamputa-24': { kannada: 79, inscriptions: 162, literature: 23 },
+  'kia.itihasadarshanas0000drsu1991smput6': { kannada: 42, inscriptions: 373, literature: 11 },
+  'kia.itihasadarsanasa0000mgnasmput-20': { kannada: 76, inscriptions: 185, literature: 31 },
+  'kia.itihasadarsanasa0000mgnasmput-17': { kannada: 102, inscriptions: 180, literature: 21 },
+  'kia.itihasadarshanav0000drde_y9v6': { kannada: 89, inscriptions: 397, literature: 18 },
+  'kia.itihasadarsanasa0000mgnasmput-19': { kannada: 101, inscriptions: 303, literature: 15 },
+  'kia.itihasadarsanasa0000mgnasmput-18': { kannada: 78, inscriptions: 134, literature: 19 },
+  'kia.itihasadarshanas0000mgnasmput-14': { kannada: 58, inscriptions: 434, literature: 20 },
+  'kia.itihasadarsanasa0000drmgsamputa-28': { kannada: 70, inscriptions: 283, literature: 18 },
+  'kia.itihasadarsanasa0000mgnasmput-16': { kannada: 69, inscriptions: 475, literature: 84 },
+  'kia.itihasadarshanav0000drde': { kannada: 84, inscriptions: 285, literature: 17 },
+  'kia.itihasadarshanas0000drsusmput-11': { kannada: 98, inscriptions: 130, literature: 14 },
+  'kia.itihasadarshanav0000drpv': { kannada: 132, inscriptions: 426, literature: 31 },
+  'kia.itihasadarshanas0000drsu1989samput4': { kannada: 53, inscriptions: 324, literature: 27 },
+  'kia.itihasadarshanas0000drsu1990smput5': { kannada: 83, inscriptions: 306, literature: 44 },
+  'kia.itihasadarshanav0000drde_x7s2': { kannada: 104, inscriptions: 57, literature: 33 },
+  'kia.itihasadarshansa0000drsu1987samut2': { kannada: 56, inscriptions: 134, literature: 34 },
+  'itihasadarshanav0000drde': { kannada: 107, inscriptions: 337, literature: 64 },
+  'kia.itihasadarshanas0000drsu1995smput10': { kannada: 74, inscriptions: 142, literature: 35 },
+}
+
+const volume = (id, label, titleKn, year = null) => {
+  const slug = id.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()
+  const base = `https://archive.org/details/${id}`
+  const text = `https://archive.org/stream/${id}/${id}_djvu.txt`
+  const hocr = `https://archive.org/download/${id}/${id}_hocr.html`
+  return {
+    id: `src-itihasa-darshana-${slug}`,
+    type: 'digitised-research-volume',
+    title: name(`Itihasa Darshana, ${label}`, titleKn),
+    authors: ['Karnataka Itihasa Academy'],
+    publisher: 'Karnataka Itihasa Academy',
+    year,
+    url: base,
+    collectionKey: 'itihasa-darshana',
+    repository: {
+      platform: 'Internet Archive',
+      collectionId: 'ServantsOfKnowledge',
+      identifier: id,
+      fullTextUrl: text,
+      hocrUrl: hocr,
+    },
+    contentReview: {
+      status: 'screened',
+      textFile: `${id}_djvu.txt`,
+      hocrFile: `${id}_hocr.html`,
+      accessedAt: '2026-07-28',
+      pass: 'full-text-and-hocr-opened',
+      ocrSignals: ocrSignals[id] || null,
+      note: name(
+        'Full-text OCR and HOCR were opened for catalogue and subject screening. Use the page image and printed locator for every quotation, transcription or translation; OCR is a discovery aid, not a substitute for the volume.',
+        'ಸೂಚಿ ಮತ್ತು ವಿಷಯ ಪರಿಶೀಲನೆಗಾಗಿ ಸಂಪೂರ್ಣ OCR ಮತ್ತು HOCR ತೆರೆಯಲಾಗಿದೆ. ಪ್ರತಿಯೊಂದು ಉಲ್ಲೇಖ, ಲಿಪ್ಯಂತರ ಅಥವಾ ಅನುವಾದಕ್ಕೆ ಪುಟದ ಚಿತ್ರ ಮತ್ತು ಮುದ್ರಿತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಬಳಸಿ; OCR ಸಂಪುಟಕ್ಕೆ ಪರ್ಯಾಯವಲ್ಲ, ಶೋಧನಾ ಸಹಾಯಕ ಮಾತ್ರ.',
+      ),
+    },
+    usageNote: name(
+      'Cite the printed volume and Karnataka Itihasa Academy as publisher; use the Internet Archive item URL as the stable digital access point and add the printed page/article locator.',
+      'ಮುದ್ರಿತ ಸಂಪುಟ ಮತ್ತು ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾದೆಮಿಯನ್ನು ಪ್ರಕಾಶಕರಾಗಿ ಉಲ್ಲೇಖಿಸಿ; ಸ್ಥಿರ ಡಿಜಿಟಲ್ ಪ್ರವೇಶಕ್ಕಾಗಿ ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್ ದಾಖಲೆ ಕೊಂಡಿಯನ್ನು ಬಳಸಿ ಮತ್ತು ಮುದ್ರಿತ ಪುಟ/ಲೇಖನ ಸ್ಥಾನಸೂಚಿ ಸೇರಿಸಿ.',
+    ),
+    review: review(),
+  }
+}
+
+export const itihasaDarshanaSources = [
+  volume('kia.itihasadarshanas0000drsu', 'Volume 1, Issue 1', 'ಇತಿಹಾಸ ದರ್ಶನ - ಸಂಪುಟ ೧/ಸಂಚಿಕೆ ೧'),
+  volume('bmshri.itihasadarshanav0000drsu', 'Volume 7 (1992)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 7/1992', 1992),
+  volume('kia.itihasadarsanasa0000drmgsamputa-25', 'Volume 25', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 25'),
+  volume('kia.itihasadarsanasa0000drmgsamputa-30', 'Volume 30', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 30'),
+  volume('kia.itihasadarshansa0000drsu1993samput8', 'Volume 8 (1993)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೮', 1993),
+  volume('bmshri.itihasadarsanasa0000drmgsamputa-23', 'Volume 23', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 23'),
+  volume('kia.itihasadarshanas0000mgnasmput-13', 'Volume 13', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೩'),
+  volume('kia.itihasadarshanas0000mgnasmput-15', 'Volume 15', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೫'),
+  volume('kia.itihasadarshanav0000drde32', 'Volume 32 (2017)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 32/2017', 2017),
+  volume('kia.itihasadarshanav0000drde_d0t6', 'Volume 34 (2019)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 34/2019', 2019),
+  volume('kia.itihasadarshanav0000drmg', 'Volume 26 (2011)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 26/2011', 2011),
+  volume('kia.itihasadarshansa0000drsu1986snk1', 'Volume 1, Issue 1 (1986)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧ ಸಂಚಿಕೆ ೧', 1986),
+  volume('kia.itihasadrashanas0000drsu', 'Volume 3', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೩'),
+  volume('kia.itihasadarshanas0000mgnasmput-12', 'Volume 12', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೨'),
+  volume('bmshri.itihasadarshanav0000drmg', 'Volume 21 (2006)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 21', 2006),
+  volume('kia.itihasadarshanav0000raja', 'Volume 37 (2022)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 37/2022', 2022),
+  volume('kia.itihasadarshanav0000drde_u3h1', 'Volume 33 (2018)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 33/2018', 2018),
+  volume('kia.itihasadarshanas0000drsu1994samput9', 'Volume 9 (1994)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೯', 1994),
+  volume('kia.itihasadarsanasa0000drmgsamputa-24', 'Volume 24', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 24'),
+  volume('kia.itihasadarshanas0000drsu1991smput6', 'Volume 6 (1991)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೬', 1991),
+  volume('kia.itihasadarsanasa0000mgnasmput-20', 'Volume 20', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೨೦'),
+  volume('kia.itihasadarsanasa0000mgnasmput-17', 'Volume 17', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೭'),
+  volume('kia.itihasadarshanav0000drde_y9v6', 'Volume 36 (2021)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 36/2021', 2021),
+  volume('kia.itihasadarsanasa0000mgnasmput-19', 'Volume 19', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೯'),
+  volume('kia.itihasadarsanasa0000mgnasmput-18', 'Volume 18', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೮'),
+  volume('kia.itihasadarshanas0000mgnasmput-14', 'Volume 14', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೪'),
+  volume('kia.itihasadarsanasa0000drmgsamputa-28', 'Volume 28', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 28'),
+  volume('kia.itihasadarsanasa0000mgnasmput-16', 'Volume 16', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೬'),
+  volume('kia.itihasadarshanav0000drde', 'Volume 30 (2015)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 30/2015', 2015),
+  volume('kia.itihasadarshanas0000drsusmput-11', 'Volume 11', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೧'),
+  volume('kia.itihasadarshanav0000drpv', 'Volume 27 (2012)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 27/2012', 2012),
+  volume('kia.itihasadarshanas0000drsu1989samput4', 'Volume 4 (1989)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೪', 1989),
+  volume('kia.itihasadarshanas0000drsu1990smput5', 'Volume 5 (1990)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೫', 1990),
+  volume('kia.itihasadarshanav0000drde_x7s2', 'Volume 35 (2020)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 35/2020', 2020),
+  volume('kia.itihasadarshansa0000drsu1987samut2', 'Volume 2 (1987)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೨, ಸಂಚಿಕೆ ೧', 1987),
+  volume('itihasadarshanav0000drde', 'Volume 31 (2016)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 31/2016', 2016),
+  volume('kia.itihasadarshanas0000drsu1995smput10', 'Volume 10 (1995)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೦', 1995),
+]

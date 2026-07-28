@@ -31,4 +31,4 @@ The collaboration records marked `upcoming` are proposals, not confirmed partner
 - Kannada University, Hampi and university epigraphy departments: supervised student corpus work and bilingual translation review.
 - Inscription Stones of Bengaluru and local documentation networks: locality photographs, KML/map corrections, aliases and rediscovery reports.
 
-Assignments are currently browser-local in the Evidence Workflow. The live MariaDB service can later add authenticated contributor IDs, reviewer roles, conflict-of-interest checks, audit history and partner-level work queues without changing the public static data contract.
+Evidence assignments are stored in the live MariaDB service through the authenticated workflow. Approved research accounts can assign, schedule and advance tasks; public and unapproved visitors receive a read-only view. The service records the updating account and audit event, while the static GitHub Pages edition continues to show the published dataset without live write access.

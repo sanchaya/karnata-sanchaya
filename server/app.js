@@ -89,6 +89,20 @@ app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('a
   res.status(201).json({ok:true,...result,contentSha256:hash})
 })
 
+app.get('/api/evidence/assignments',requireUser,requireApproved,async(req,res)=>{
+  const rows=await pool.query('SELECT task_id,status,assignee,due_date,updated_by,updated_at FROM evidence_assignments ORDER BY updated_at DESC')
+  res.json({assignments:rows.map(row=>({taskId:row.task_id,status:row.status,assignee:row.assignee||'',due:row.due_date?String(row.due_date).slice(0,10):'',updatedBy:row.updated_by,updatedAt:row.updated_at}))})
+})
+
+app.put('/api/evidence/assignments/:taskId',requireUser,requireApproved,async(req,res)=>{
+  const taskId=clean(req.params.taskId,240);const status=req.body?.status;const assignee=clean(req.body?.assignee,255)||null;const due=clean(req.body?.due,10)||null
+  if(!taskId||!/^[^/]+$/.test(taskId))return res.status(400).json({error:'A valid evidence task ID is required.'})
+  if(!['todo','in-progress','awaiting-review','blocked','complete'].includes(status))return res.status(400).json({error:'Evidence task status is invalid.'})
+  if(due&&!/^\d{4}-\d{2}-\d{2}$/.test(due))return res.status(400).json({error:'Due date must use YYYY-MM-DD.'})
+  await transaction(async db=>{await db.query(`INSERT INTO evidence_assignments (task_id,status,assignee,due_date,updated_by) VALUES (?,?,?,?,?) ON DUPLICATE KEY UPDATE status=VALUES(status),assignee=VALUES(assignee),due_date=VALUES(due_date),updated_by=VALUES(updated_by),updated_at=CURRENT_TIMESTAMP(3)`,[taskId,status,assignee,due,req.user.id]);await audit(db,req.user.id,'evidence-assignment.updated','evidence-task',taskId,{status,assignee,due})})
+  res.json({ok:true,taskId,status,assignee:assignee||'',due:due||''})
+})
+
 const upload=multer({storage:multer.memoryStorage(),limits:{fileSize:5*1024*1024,files:1,fields:5,parts:6},fileFilter:(req,file,callback)=>callback(null,['image/jpeg','image/png','application/pdf'].includes(file.mimetype))})
 app.post('/api/verification-requests',requireUser,upload.single('institutionId'),async(req,res)=>{
   if(!req.file)return res.status(400).json({error:'A JPEG, PNG or PDF institution ID is required.'})
