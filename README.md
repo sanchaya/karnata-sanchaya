@@ -15,6 +15,7 @@ A Kannada-first React/Vite atlas for exploring Karnataka's history through a tim
 - Researcher workspace for search, add/edit, validation and JSON import/export
 - Kannada-first interface with persistent Kannada/English switching and bilingual entity labels
 - Event-driven chronology through 1956 with battles, campaigns, invasions, accessions and democratic reorganisation
+- District deep-history explorer with 31 district research scopes for prehistoric places, settlement origins, foundation stones and locality histories; indicative leads remain visibly needs-review
 - Karnataka and Wider India map scopes with selectable campaign routes and event narratives
 - Sanchaya-branded light interface using the visual tokens and official mark from fonts.sanchaya.net
 - Sanchaya-approved accounts for students, researchers, teachers, historians and the public
@@ -49,6 +50,8 @@ The Vite server proxies `/api` to port 8787. For an all-in-one production-shaped
 
 For a cloned Linux deployment behind an existing Nginx instance, use the guarded systemd/TLS installer: [Linux + Nginx installation](docs/linux-nginx-install.md) and `scripts/install-linux-nginx.sh`. For later releases, run `scripts/update-live.sh` on the server to fetch, validate, migrate and restart the existing deployment without replacing its secrets or Nginx/TLS configuration.
 
+See the maintained [milestone status and roadmap](docs/roadmap-status.md) for the implementation history, current coverage and prioritized next work.
+
 ## Build
 
 ```bash
@@ -62,6 +65,8 @@ npm run check
 ```
 
 The deployable static site is generated in `dist/`.
+
+Open `#district-history` (ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ / District deep history) to browse the district intake layer. The older `#history` link remains a compatibility alias. Amber dashed markers are research leads, not verified sites. Researchers can edit the normalized `districtHistoryResearch` collection from the authenticated `#admin` workspace and save a permanent MariaDB revision before preparing a static release.
 
 ## Deploy to GitHub Pages
 

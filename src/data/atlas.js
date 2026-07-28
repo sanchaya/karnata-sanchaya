@@ -1,5 +1,5 @@
 import { events, eventSources, externalPolities } from './events.js'
-import { deepChronologies, heritageAudits } from './research.js'
+import { deepChronologies, districtHistoryResearch, heritageAudits } from './research.js'
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
 
@@ -29,6 +29,7 @@ export const atlasData = {
     { id: 'src-majumdar-vedic-age', type: 'book', title: name('The History and Culture of the Indian People, Vol. I: The Vedic Age', 'ದಿ ಹಿಸ್ಟರಿ ಅಂಡ್ ಕಲ್ಚರ್ ಆಫ್ ದ ಇಂಡಿಯನ್ ಪೀಪಲ್, ಸಂಪುಟ I: ದಿ ವೈದಿಕ ಏಜ್'), authors: ['R. C. Majumdar (ed.)'], year: 1951, url: 'https://archive.org/details/the-history-and-culture-of-the-indian-people-11-vol.-set-by-r.-c.-majumdar-j.-n.', review: review('needs-review') },
     { id: 'src-vedic-heritage-portal', type: 'government-portal', title: name('Vedic Heritage Portal', 'ವೈದಿಕ ಪರಂಪರೆ ಪೋರ್ಟಲ್'), authors: ['Indira Gandhi National Centre for the Arts, Ministry of Culture'], year: null, url: 'https://vedicheritage.gov.in/', review: review('reviewed') },
     { id: 'src-karnataka-tourism-heritage', type: 'government-web', title: name('Karnataka heritage sites index', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ ತಾಣಗಳ ಸೂಚಿ'), authors: ['Karnataka Tourism, Government of Karnataka'], year: null, url: 'https://karnatakatourism.org/en/destinations/heritage-sites/?type%5B%5D=experience', review: review('reviewed') },
+    { id: 'src-user-infographic-bengaluru-age', type: 'discovery-lead', title: name('Bengaluru in Numbers (2026) locality-age infographic — contributor-supplied discovery lead', 'ಬೆಂಗಳೂರು ಇನ್ ನಂಬರ್ಸ್ (2026) ಸ್ಥಳೀಯ ವಯಸ್ಸಿನ ಇನ್ಫೋಗ್ರಾಫಿಕ್ — ಕೊಡುಗೆದಾರ ಒದಗಿಸಿದ ಅನ್ವೇಷಣಾ ಸುಳಿವು'), authors: ['Project contributor'], year: 2026, url: '', scope: name('Not an authority source. Used only to queue locality-history questions for independent archival and archaeological verification.', 'ಇದು ಅಧಿಕಾರಿಕ ಆಕರವಲ್ಲ. ಸ್ವತಂತ್ರ ಆರ್ಕೈವ್ ಮತ್ತು ಪುರಾತತ್ತ್ವ ಪರಿಶೀಲನೆಗಾಗಿ ಸ್ಥಳೀಯ ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳನ್ನು ಸರದಿಗೆ ಸೇರಿಸಲು ಮಾತ್ರ ಬಳಕೆ.'), review: review('needs-review') },
     { id: 'src-gazetteer-karnataka-1983', type: 'book', title: name('Karnataka State Gazetteer', 'ಕರ್ನಾಟಕ ರಾಜ್ಯ ಗೆಜೆಟಿಯರ್'), authors: ['Government of Karnataka'], year: 1983, url: '', review: review('needs-review') },
     { id: 'src-epigraphia-carnatica', type: 'series', title: name('Epigraphia Carnatica', 'ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಕ'), authors: ['B. Lewis Rice et al.'], year: 1886, url: '', review: review('needs-review') },
     { id: 'src-prototype-boundaries', type: 'dataset', title: name('Atlas prototype reconstructed boundaries', 'ಭೂಪಟದ ಪ್ರಾಯೋಗಿಕ ಪುನರ್-ರಚಿತ ಗಡಿಗಳು'), authors: ['Karnataka Historical Atlas contributors'], year: 2026, url: '', review: review('draft') },
@@ -65,6 +66,7 @@ export const atlasData = {
     ...eventSources,
   ],
   collaborations,
+  districtHistoryResearch,
   externalPolities,
   events,
   places: [
@@ -642,4 +644,4 @@ atlasData.relationships = [
   ...atlasData.territorialExtents.filter(extent => extent.reignId).map(extent => ({ id:`rel-${extent.id}-period`, fromId:extent.id, type:'snapshot-for-period', toId:extent.reignId, date:extent.date, citations:extent.citations, review:extent.review })),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', collaborations:'Collaborations' }

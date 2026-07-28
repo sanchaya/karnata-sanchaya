@@ -1,6 +1,7 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','reigns','territorialExtents','deepChronologies','heritageAudits','inscriptionAudits','people','places','inscriptions','works','sources','relationships','collaborations']
+const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','collaborations']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
+const DISTRICT_HISTORY_CATEGORIES = ['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope']
 
 export function validateAtlas(data) {
   const issues = []
@@ -212,6 +213,23 @@ export function validateAtlas(data) {
         if (!record.geographicScope?.en?.trim() || !record.geographicScope?.kn?.trim()) add('error',collection,id,'geographicScope','Bilingual geographic scope is required.')
         if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Deep-history chronology requires named sources.')
       }
+      if (collection === 'districtHistoryResearch') {
+        if (!record.district?.en?.trim() || !record.district?.kn?.trim()) add('error',collection,id,'district','Bilingual district name is required.')
+        if (!DISTRICT_HISTORY_CATEGORIES.includes(record.category)) add('error',collection,id,'category','District deep-history category is invalid.')
+        if (!['district-scope','candidate'].includes(record.recordKind)) add('error',collection,id,'recordKind','Record kind must be district-scope or candidate.')
+        if (!['research-intake','contributor-discovery-lead','district-research-scope','archaeological-report','gazetteer','field-record'].includes(record.evidenceBasis)) add('error',collection,id,'evidenceBasis','Evidence basis is invalid.')
+        if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('warning',collection,id,'description','Bilingual research description is recommended.')
+        if (!record.researchNote?.en?.trim() || !record.researchNote?.kn?.trim()) add('warning',collection,id,'researchNote','A bilingual research note is recommended.')
+        if (record.recordKind==='candidate' && (!Array.isArray(record.citations) || record.citations.length===0)) add('error',collection,id,'citations','Candidate records require at least one provenance or research citation.')
+        const point=record.location
+        if (point && point.type!=='Point') add('error',collection,id,'location.type','District history locations must be GeoJSON Points.')
+        if (point) {
+          const [lng,lat]=point.coordinates||[]
+          if (!Number.isFinite(lng)||!Number.isFinite(lat)||lng < -180||lng > 180||lat < -90||lat > 90) add('error',collection,id,'location.coordinates','Location must be a valid [longitude, latitude] pair.')
+          if (!['exact','approximate','district-centroid','unknown'].includes(point.precision)) add('error',collection,id,'location.precision','Location precision is invalid.')
+        }
+        if (record.review?.status!=='needs-review' && record.recordKind==='candidate' && record.evidenceBasis==='contributor-discovery-lead') add('warning',collection,id,'review.status','Discovery leads should remain needs-review until independently verified.')
+      }
       if (collection === 'heritageAudits') {
         if (!record.district?.en?.trim() || !record.district?.kn?.trim()) add('error',collection,id,'district','Bilingual district name is required.')
         if (!['seeded','in-progress','reviewed'].includes(record.auditStatus)) add('error',collection,id,'auditStatus','Audit status is invalid.')
@@ -243,7 +261,7 @@ export function validateAtlas(data) {
       if (!sourceIds.has(item.sourceId)) add('error',collection,id,`citations.${index}.sourceId`,`Unknown source: ${item.sourceId}`)
     })
     ;['protection','presentCondition'].forEach(field=>{const sourceId=record[field]?.sourceId;if(sourceId&&!sourceIds.has(sourceId))add('error',collection,id,`${field}.sourceId`,`Unknown source: ${sourceId}`)})
-    const refs = ['capitalId','placeId','polityId','reignId','fromId','toId','originPlaceId','destinationPlaceId','districtAuditId']
+    const refs = ['capitalId','placeId','polityId','reignId','fromId','toId','originPlaceId','destinationPlaceId','districtAuditId','districtId']
     refs.forEach(field => { if (record[field] && !all.has(record[field])) add('error',collection,id,field,`Unknown related record: ${record[field]}`) })
     ;(record.participants || []).forEach((participant,index) => { if (!participant.polityId || !all.has(participant.polityId)) add('error',collection,id,`participants.${index}.polityId`,`Unknown event participant: ${participant.polityId || 'missing'}`) })
     ;(record.peopleIds || []).forEach((personId,index) => { if (!all.has(personId)) add('error',collection,id,`peopleIds.${index}`,`Unknown person: ${personId}`) })

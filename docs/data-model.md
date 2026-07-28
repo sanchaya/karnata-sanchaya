@@ -1,6 +1,6 @@
 # Atlas v0.2 data model
 
-The bundled dataset is defined in `src/data/atlas.js`. It is normalized into seven collections. Every record has a globally unique, stable, lowercase kebab-case ID.
+The bundled dataset is defined in `src/data/atlas.js`. It is normalized into linked collections. Every record has a globally unique, stable, lowercase kebab-case ID.
 
 | Collection | Purpose | Main links |
 | --- | --- | --- |
@@ -12,6 +12,8 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into sev
 | `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` |
 | `works` | Literary and scholarly works | `polityId`, external links |
 | `sources` | Bibliographic evidence | Referenced by citations |
+| `heritageAudits` | District heritage candidates and authority evidence | `prioritySites`, protection checks |
+| `districtHistoryResearch` | District deep-history intake for prehistoric, settlement, foundation-stone and locality-history leads | `districtId`, `location`, `citations` |
 | `relationships` | Explicit entity-to-entity assertions | `fromId`, `type`, `toId` |
 
 ## Research fields
@@ -23,6 +25,7 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into sev
 - Review metadata records `status`, `reviewer`, and `updatedAt`. Status progresses through `draft`, `needs-review`, `reviewed`, and `published`.
 - Relationships are records because an assertion can have its own date, citations, and review state.
 - Events carry bilingual narratives, participants with roles and outcomes, an approximate point, an optional schematic campaign route, consequences, citations, and review state.
+- District deep-history records use `recordKind` (`district-scope` or `candidate`), an explicit category, bilingual description and research note, optional GeoJSON point precision, provenance citations and a `needs-review` gate. The public `#district-history` explorer renders all 31 district scope slots and marks indicative locality leads with amber dashed markers; it does not promote the contributor-supplied Bengaluru infographic to an authority source.
 
 ## Validation and publication
 

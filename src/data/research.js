@@ -98,6 +98,80 @@ export const heritageAudits=districtSeeds.map(([districtEn,districtKn,region,sit
   }
 })
 
+// District deep-history intake is deliberately separate from the authority-
+// verified heritage audit. It provides a stable place for locality origins,
+// prehistoric landscapes and foundation-stone leads without presenting an
+// indicative claim as established history. Every starter record is therefore
+// review-gated and carries an explicit evidence basis.
+export const districtHistoryCategories=['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope']
+
+const historyScopeNote=n(
+  'Scope placeholder: collect prehistoric sites, settlement histories, foundation stones, locality names and district gazetteer evidence here. No historical claim is made until a researcher adds item-level sources.',
+  'ವ್ಯಾಪ್ತಿ ಸೂಚಕ: ಪೂರ್ವೈತಿಹಾಸಿಕ ತಾಣಗಳು, ವಸತಿ ಇತಿಹಾಸ, ಸ್ಥಾಪನಾ ಶಿಲೆಗಳು, ಸ್ಥಳನಾಮ ಇತಿಹಾಸ ಮತ್ತು ಜಿಲ್ಲಾ ಗೆಜೆಟಿಯರ್ ಸಾಕ್ಷ್ಯವನ್ನು ಇಲ್ಲಿ ಸಂಗ್ರಹಿಸಬೇಕು. ವಸ್ತುಮಟ್ಟದ ಆಕರ ಸೇರುವವರೆಗೆ ಯಾವುದೇ ಐತಿಹಾಸಿಕ ಹಕ್ಕುಸ್ಥಾಪನೆ ಇಲ್ಲ.'
+)
+
+const districtHistoryScopes=districtSeeds.map(([districtEn,districtKn,region])=>({
+  id:`district-history-scope-${slug(districtEn)}`,
+  name:n(`${districtEn} deep-history research scope`,`${districtKn} ಸಮಗ್ರ ಇತಿಹಾಸ ಸಂಶೋಧನಾ ವ್ಯಾಪ್ತಿ`),
+  recordKind:'district-scope',
+  districtId:`audit-${slug(districtEn)}`,
+  district:n(districtEn,districtKn),
+  region,
+  category:'district-scope',
+  date:{from:null,to:null,era:'CE',precision:'unknown'},
+  location:null,
+  description:historyScopeNote,
+  researchNote:historyScopeNote,
+  evidenceBasis:'research-intake',
+  review:{...review},
+  citations:[]
+}))
+
+const districtHistoryCandidates=[
+  {
+    id:'district-history-bengaluru-pete-foundation',recordKind:'candidate',districtId:'audit-bengaluru-urban',district:n('Bengaluru Urban','ಬೆಂಗಳೂರು ನಗರ'),
+    name:n('Bengaluru Pete / Kempegowda fort-town foundation lead','ಬೆಂಗಳೂರು ಪೇಟೆ / ಕೆಂಪೇಗೌಡ ಕೋಟೆ-ಪಟ್ಟಣದ ಸ್ಥಾಪನಾ ಸುಳಿವು'),category:'urban-foundation',
+    date:{from:1537,to:1537,era:'CE',precision:'year'},location:{type:'Point',coordinates:[77.5946,12.9716],precision:'approximate'},
+    description:n('A discovery lead for the commonly cited 1537 foundation of the Pete and fort-town. The date, extent and surviving material evidence require item-level verification before publication as a foundation record.','ಪೇಟೆ ಮತ್ತು ಕೋಟೆ-ಪಟ್ಟಣದ ಸಾಮಾನ್ಯವಾಗಿ ಉಲ್ಲೇಖಿಸುವ 1537ರ ಸ್ಥಾಪನೆಗೆ ಸಂಬಂಧಿಸಿದ ಅನ್ವೇಷಣಾ ಸುಳಿವು. ಸ್ಥಾಪನಾ ದಾಖಲೆಯಾಗಿ ಪ್ರಕಟಿಸುವ ಮೊದಲು ದಿನಾಂಕ, ವ್ಯಾಪ್ತಿ ಮತ್ತು ಉಳಿದಿರುವ ಭೌತಿಕ ಸಾಕ್ಷ್ಯಕ್ಕೆ ವಸ್ತುಮಟ್ಟದ ಪರಿಶೀಲನೆ ಅಗತ್ಯ.'),
+    researchNote:n('Starter lead derived from the project-supplied Bengaluru locality-age infographic; treat as indicative, not an authority-confirmed date.','ಯೋಜನೆಗೆ ಒದಗಿಸಿದ ಬೆಂಗಳೂರು ಸ್ಥಳೀಯ ವಯಸ್ಸಿನ ಇನ್ಫೋಗ್ರಾಫಿಕ್‌ನಿಂದ ಪಡೆದ ಆರಂಭಿಕ ಸುಳಿವು; ಇದನ್ನು ಸೂಚಕವೆಂದು ಮಾತ್ರ ಪರಿಗಣಿಸಿ, ಅಧಿಕಾರ-ದೃಢೀಕೃತ ದಿನಾಂಕವೆಂದು ಪರಿಗಣಿಸಬೇಡಿ.'),
+    evidenceBasis:'contributor-discovery-lead',citations:[{sourceId:'src-user-infographic-bengaluru-age',locator:'Bengaluru in Numbers (2026) infographic; claim requires primary and archival verification'}],review:{...review}
+  },
+  {
+    id:'district-history-yelahanka-pre-1537',recordKind:'candidate',districtId:'audit-bengaluru-urban',district:n('Bengaluru Urban','ಬೆಂಗಳೂರು ನಗರ'),
+    name:n('Yelahanka pre-1537 settlement lead','ಯಲಹಂಕ ಪೂರ್ವ-1537 ವಸತಿ ಸುಳಿವು'),category:'settlement-origin',
+    date:{from:1536,to:1536,era:'CE',precision:'circa'},location:{type:'Point',coordinates:[77.5963,13.1007],precision:'approximate'},
+    description:n('A locality-history lead for an earlier settlement horizon around Yelahanka. The “pre-1537” label is retained as a research question rather than a verified founding date.','ಯಲಹಂಕ ಸುತ್ತಲಿನ ಹಿಂದಿನ ವಸತಿ ಹಂತಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಸ್ಥಳೀಯ ಇತಿಹಾಸದ ಸುಳಿವು. “ಪೂರ್ವ-1537” ಎಂಬ ಗುರುತನ್ನು ಪರಿಶೀಲನಾ ಪ್ರಶ್ನೆಯಾಗಿ ಮಾತ್ರ ಉಳಿಸಲಾಗಿದೆ; ದೃಢೀಕೃತ ಸ್ಥಾಪನಾ ದಿನಾಂಕವಲ್ಲ.'),
+    researchNote:n('Compare district gazetteers, inscriptions, revenue records and archaeological reports before assigning a date or continuity claim.','ದಿನಾಂಕ ಅಥವಾ ನಿರಂತರತೆಯ ಹಕ್ಕು ನೀಡುವ ಮೊದಲು ಜಿಲ್ಲಾ ಗೆಜೆಟಿಯರ್, ಶಾಸನ, ಆದಾಯ ದಾಖಲೆ ಮತ್ತು ಪುರಾತತ್ತ್ವ ವರದಿಗಳನ್ನು ಹೋಲಿಸಿ ಪರಿಶೀಲಿಸಬೇಕು.'),
+    evidenceBasis:'contributor-discovery-lead',citations:[{sourceId:'src-user-infographic-bengaluru-age',locator:'Yelahanka marked “pre-1537”; discovery lead only'}],review:{...review}
+  },
+  {
+    id:'district-history-hoskote-seventeenth-century',recordKind:'candidate',districtId:'audit-bengaluru-urban',district:n('Bengaluru Urban','ಬೆಂಗಳೂರು ನಗರ'),
+    name:n('Hoskote seventeenth-century locality lead','ಹೊಸಕೋಟೆ ಹದಿನೇಳನೇ ಶತಮಾನದ ಸ್ಥಳೀಯ ಇತಿಹಾಸದ ಸುಳಿವು'),category:'settlement-origin',
+    date:{from:1600,to:1699,era:'CE',precision:'century'},location:{type:'Point',coordinates:[77.7728,13.0707],precision:'approximate'},
+    description:n('A research lead for Hoskote’s early-modern locality history. The century band is an intake estimate and should be replaced with a dated record or left undated after review.','ಹೊಸಕೋಟೆಯ ಆಧುನಿಕ-ಪೂರ್ವ ಸ್ಥಳೀಯ ಇತಿಹಾಸಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಸಂಶೋಧನಾ ಸುಳಿವು. ಶತಮಾನ ವ್ಯಾಪ್ತಿ ಸ್ವೀಕೃತಿ ಅಂದಾಜು ಮಾತ್ರ; ಪರಿಶೀಲನೆಯ ನಂತರ ದಿನಾಂಕಿತ ದಾಖಲೆಗಳಿಂದ ಬದಲಿಸಬೇಕು ಅಥವಾ ದಿನಾಂಕವಿಲ್ಲದೆ ಉಳಿಸಬೇಕು.'),
+    researchNote:n('Locate district gazetteer entries, fort or temple records, inscriptions and early colonial surveys.','ಜಿಲ್ಲಾ ಗೆಜೆಟಿಯರ್ ದಾಖಲಾತಿ, ಕೋಟೆ ಅಥವಾ ದೇವಾಲಯ ದಾಖಲೆ, ಶಾಸನ ಮತ್ತು ಆರಂಭಿಕ ವಸಾಹತು ಸಮೀಕ್ಷೆಗಳನ್ನು ಹುಡುಕಿ.'),
+    evidenceBasis:'contributor-discovery-lead',citations:[{sourceId:'src-user-infographic-bengaluru-age',locator:'Hoskote marked as seventeenth century; discovery lead only'}],review:{...review}
+  },
+  {
+    id:'district-history-kolar-prehistoric-landscape',recordKind:'candidate',districtId:'audit-kolar',district:n('Kolar','ಕೋಲಾರ'),
+    name:n('Kolar prehistoric-landscape research lead','ಕೋಲಾರ ಪೂರ್ವೈತಿಹಾಸಿಕ ಭೂದೃಶ್ಯ ಸಂಶೋಧನಾ ಸುಳಿವು'),category:'prehistoric-landscape',
+    date:{from:null,to:null,era:'BCE',precision:'unknown'},location:{type:'Point',coordinates:[78.1294,13.1358],precision:'district-centroid'},
+    description:n('A district-level intake record for prehistoric places and early settlement evidence. It intentionally carries no date or site attribution until archaeological and gazetteer sources are reconciled.','ಪೂರ್ವೈತಿಹಾಸಿಕ ತಾಣಗಳು ಮತ್ತು ಆರಂಭಿಕ ವಸತಿ ಸಾಕ್ಷ್ಯಕ್ಕಾಗಿ ಜಿಲ್ಲಾ ಮಟ್ಟದ ಸ್ವೀಕೃತಿ ದಾಖಲೆ. ಪುರಾತತ್ತ್ವ ಮತ್ತು ಗೆಜೆಟಿಯರ್ ಆಕರಗಳನ್ನು ಹೊಂದಿಸುವವರೆಗೆ ಇದರಲ್ಲಿ ದಿನಾಂಕ ಅಥವಾ ನಿರ್ದಿಷ್ಟ ತಾಣದ ಹಕ್ಕು ಇಲ್ಲ.'),
+    researchNote:n('Add site-level candidates only with an archaeological report, protected-site register, excavation record or published district study.','ಪುರಾತತ್ತ್ವ ವರದಿ, ಸಂರಕ್ಷಿತ ತಾಣ ನೋಂದಣಿ, ಉತ್ಖನನ ದಾಖಲೆ ಅಥವಾ ಪ್ರಕಟಿತ ಜಿಲ್ಲಾ ಅಧ್ಯಯನವಿದ್ದಾಗ ಮಾತ್ರ ತಾಣಮಟ್ಟದ ಅಭ್ಯರ್ಥಿಗಳನ್ನು ಸೇರಿಸಿ.'),
+    evidenceBasis:'district-research-scope',citations:[{sourceId:'src-gazetteer-karnataka-1983',locator:'Kolar district chapter: identify and verify prehistoric and early-settlement references'}],review:{...review}
+  },
+  {
+    id:'district-history-tumakuru-foundation-stones',recordKind:'candidate',districtId:'audit-tumakuru',district:n('Tumakuru','ತುಮಕೂರು'),
+    name:n('Tumakuru foundation-stone and locality-history intake','ತುಮಕೂರು ಸ್ಥಾಪನಾ ಶಿಲೆ ಮತ್ತು ಸ್ಥಳೀಯ ಇತಿಹಾಸ ಸ್ವೀಕೃತಿ'),category:'foundation-stone',
+    date:{from:null,to:null,era:'CE',precision:'unknown'},location:{type:'Point',coordinates:[77.1010,13.3379],precision:'district-centroid'},
+    description:n('An intake record for foundation stones, civic markers and locality-name histories across Tumakuru district. No individual stone is asserted yet.','ತುಮಕೂರು ಜಿಲ್ಲೆಯ ಸ್ಥಾಪನಾ ಶಿಲೆ, ನಾಗರಿಕ ಗುರುತು ಮತ್ತು ಸ್ಥಳನಾಮ ಇತಿಹಾಸಕ್ಕಾಗಿ ಸ್ವೀಕೃತಿ ದಾಖಲೆ. ಪ್ರಸ್ತುತ ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಶಿಲೆಯನ್ನು ಹಕ್ಕುಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ.'),
+    researchNote:n('Capture inscription text, date, exact location, custodian, photograph rights and a district or institutional source for each future item.','ಪ್ರತಿ ಭವಿಷ್ಯದ ವಸ್ತುವಿಗೆ ಶಾಸನ ಪಠ್ಯ, ದಿನಾಂಕ, ನಿಖರ ಸ್ಥಳ, ಪಾಲಕ, ಛಾಯಾಚಿತ್ರ ಹಕ್ಕು ಮತ್ತು ಜಿಲ್ಲಾ ಅಥವಾ ಸಂಸ್ಥೆಯ ಆಕರವನ್ನು ದಾಖಲಿಸಿ.'),
+    evidenceBasis:'district-research-scope',citations:[{sourceId:'src-gazetteer-karnataka-1983',locator:'Tumakuru district chapter: foundation stones and civic history to be located'}],review:{...review}
+  }
+]
+
+export const districtHistoryResearch=[...districtHistoryScopes,...districtHistoryCandidates]
+
 // Append authority-led UNESCO/ASI and state-heritage components without
 // renumbering the original district seed candidates. These records deliberately
 // remain review-gated until photographs, present condition and item-level
