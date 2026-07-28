@@ -11,7 +11,7 @@ The portal is Kannada-first with English support and has two intentionally separ
 - **Public static atlas:** read-only Vite/GitHub Pages build with maps, timeline, relations, literature, epigraphy, heritage and district research views.
 - **Live research service:** authenticated accounts, MariaDB dataset revisions, moderation, reviewer workflow and controlled static-release handoff.
 
-The current working tree also contains the new district-history explorer milestone, which is not yet committed.
+The district-history explorer milestone is included in the current committed snapshot.
 
 ## Milestone assessment
 
@@ -96,9 +96,9 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 ## Source of truth
 
 - Data model and evidence contract: [`docs/data-model.md`](data-model.md)
+- P1 human evidence queue: [`docs/p1-evidence-queue.md`](p1-evidence-queue.md)
 - Community governance: [`docs/community-governance.md`](community-governance.md)
 - Live deployment: [`docs/live-deployment.md`](live-deployment.md)
 - Linux/Nginx deployment: [`docs/linux-nginx-install.md`](linux-nginx-install.md)
 - Wiki discovery queue: [`docs/wiki-discovery-and-community-queue.md`](wiki-discovery-and-community-queue.md)
 - Overseas connections audit: [`docs/overseas-connections-audit.md`](overseas-connections-audit.md)
-
