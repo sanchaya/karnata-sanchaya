@@ -89,7 +89,11 @@ run_as_app(){
 WORKING_DIRECTORY=$(systemctl show -p WorkingDirectory --value "$SERVICE_NAME.service")
 [[ "$WORKING_DIRECTORY" == "$APP_DIR" ]] || die "The service uses WorkingDirectory=$WORKING_DIRECTORY, not $APP_DIR."
 
-if [[ -n "$(run_as_app git status --porcelain=v1)" ]]; then
+# npm/system tools can update a file's stat metadata without changing its
+# content. Refresh the index before deciding whether the worktree is dirty.
+run_as_app git update-index --refresh >/dev/null 2>&1 || true
+WORKTREE_CHANGES=$(run_as_app git status --porcelain=v1 | awk '$1 == "??" && $2 ~ /^\.env\.backup\./ { next } { print }')
+if [[ -n "$WORKTREE_CHANGES" ]]; then
   die 'The clone has uncommitted or untracked changes. Commit/stash them before deploying.'
 fi
 run_as_app git rev-parse --is-inside-work-tree >/dev/null || die 'The app directory is not a git worktree.'

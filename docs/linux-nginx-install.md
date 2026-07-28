@@ -97,7 +97,7 @@ cd /srv/karnataka-kingdoms-mvp
 sudo ./scripts/update-live.sh
 ```
 
-When run from the cloned repository, the updater infers the app directory, uses `main`, `origin`, `karnataka-atlas`, and the clone owner automatically. Use the optional flags only for a nonstandard branch, remote, service name, user or app directory. If migrations are managed separately, add `--skip-migrations`. The updater is intentionally fast-forward-only; resolve any local/remote divergence manually before retrying. Keep the clone clean and make sure the deployment user can authenticate to the configured Git remote.
+When run from the cloned repository, the updater infers the app directory, uses `main`, `origin`, `karnataka-atlas`, and the clone owner automatically. Installer-generated `.env.backup.*` files are ignored; other tracked or untracked changes still block deployment. The updater refreshes Git's stat cache before checking, so harmless `package-lock.json` timestamp drift does not block a release; real content changes still require review. Use the optional flags only for a nonstandard branch, remote, service name, user or app directory. If migrations are managed separately, add `--skip-migrations`. The updater is intentionally fast-forward-only; resolve any local/remote divergence manually before retrying. Keep the clone clean and make sure the deployment user can authenticate to the configured Git remote.
 
 The script intentionally does not create the first administrator. After the service is live, create one with database access:
 
