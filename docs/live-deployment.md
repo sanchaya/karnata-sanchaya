@@ -11,7 +11,7 @@ The live portal is one same-origin service: Express serves the built React appli
 
 ## Release to the static site
 
-After reviewers approve proposals, set `SNAPSHOT_PUBLISHER_ID` to the releasing administrator and run `npm run export:approved`. Review the generated JSON, run `npm run check`, and publish the resulting static build through the existing GitHub Pages workflow. The live database and private files are never deployed to Pages.
+The live administrator workspace stores complete dataset revisions in MariaDB. After reviewers approve community proposals and an administrator has reviewed the current dataset revision, set `SNAPSHOT_PUBLISHER_ID` to the releasing administrator and run `npm run export:approved`. Review the generated JSON, run `npm run check`, and publish the resulting static build through the existing GitHub Pages workflow. The live database and private files are never deployed to Pages.
 
 ## Before public launch
 

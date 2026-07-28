@@ -470,6 +470,86 @@ export const commonsPhotoLicenses={
     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
     "canonicalUrl": "https://commons.wikimedia.org/wiki/File:Yadgir_Fort.png",
     "checkedAt": "2026-07-26"
+  },
+  "candidate-bagalkote-unesco-virupaksha-pattadakal": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Sachin Ravikumar",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:Virupaksha_Temple-Pattadakal-Karnataka-01.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-bagalkote-unesco-mallikarjuna-pattadakal": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Ms Sarah Welch",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:8th_century_Mallikarjuna_temple,_Pattadakal_Hindu_monuments_Karnataka_2.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-vijayanagara-unesco-virupaksha-hampi": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "Vyacheslav Argenberg",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution 4.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:Virupaksha_Temple,_Hampi,_India,_Main_square_of_Virupaksha_Temple.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-vijayanagara-unesco-vittala-hampi": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Dinumarish",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:Vithala_temple,_hampi.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-hassan-unesco-chennakeshava-belur": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Naveen R Gowda",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:Chennakeshava_Temple,_Belur,_Karnataka,_India.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-hassan-unesco-hoysalesvara-halebidu": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Dineshkannambadi",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:Hoysaleshvara_Temple_at_Halebidu.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-mysuru-unesco-keshava-somanathapura": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Sanandana C M",
+    "attributionRequired": true,
+    "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_shikhara_of_the_Keshava_temple_in_Somanathapura,_Karnataka.jpg",
+    "checkedAt": "2026-07-27"
+  },
+  "candidate-kalaburagi-asi-kanaganahalli-sannati": {
+    "status": "verified-on-commons",
+    "licenseShortName": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "artist": "Ms Sarah Welch",
+    "attributionRequired": false,
+    "usageTerms": "Creative Commons Zero 1.0 Universal",
+    "canonicalUrl": "https://commons.wikimedia.org/wiki/File:3rd_century_BCE_to_7th_century_CE_Sannathi_Sannati_Sonti_ancient_city_archaeological_site,_Karnataka_India_-_97.jpg",
+    "checkedAt": "2026-07-27"
   }
 }
 

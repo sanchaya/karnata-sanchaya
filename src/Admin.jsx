@@ -1,49 +1,28 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { atlasData, collectionLabels } from './data/atlas'
 import { hasValidationErrors, validateAtlas } from './data/validate'
 
-const STORAGE_KEY = 'karnataka-atlas-research-draft-v0.9'
 const collections = Object.keys(collectionLabels)
 const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', collaborations:'collaboration' }
+const LEGACY_STORAGE_KEY = 'karnataka-atlas-research-draft-v0.9'
 const clone = value => JSON.parse(JSON.stringify(value))
 const today = () => new Date().toISOString().slice(0,10)
-
-function mergeBundledHeritage(savedAudits=[]) {
-  const savedById=new Map(savedAudits.map(audit=>[audit.id,audit]))
-  return atlasData.heritageAudits.map(bundled=>{
-    const saved=savedById.get(bundled.id)
-    if(!saved) return clone(bundled)
-    const bundledSites=new Map(bundled.prioritySites.map(site=>[site.id,site]))
-    const mergedSites=(saved.prioritySites||[]).map(site=>{
-      const current=bundledSites.get(site.id)
-      if(!current) return site
-      bundledSites.delete(site.id)
-      const savedVerification=site.verification
-      const bundledVerification=current.verification
-      const savedIsNewer=savedVerification?.lastVerified&&savedVerification.lastVerified>bundledVerification?.lastVerified
-      const verification=savedIsNewer?savedVerification:bundledVerification
-      return {...current,...site,verification,status:verification.verificationStatus}
+const readLegacyDraft = () => { try { const value=localStorage.getItem(LEGACY_STORAGE_KEY);return value?JSON.parse(value):null } catch { return null } }
+const mergeLegacyDraft = (server, legacy) => {
+  if(!legacy||typeof legacy!=='object') return clone(server)
+  const merged=clone(server)
+  collections.forEach(collection=>{
+    if(!Array.isArray(legacy[collection])||!Array.isArray(merged[collection])) return
+    const byId=new Map(merged[collection].map(record=>[record.id,record]))
+    legacy[collection].forEach(record=>{
+      if(!record?.id) return
+      const current=byId.get(record.id)
+      const legacyDate=record.review?.updatedAt||'';const currentDate=current?.review?.updatedAt||''
+      if(!current||legacyDate>currentDate) byId.set(record.id,record)
     })
-    return {...bundled,...saved,prioritySites:[...mergedSites,...bundledSites.values()]}
+    merged[collection]=[...byId.values()]
   })
-}
-
-function mergeBundledWorks(savedWorks=[]) {
-  const savedById=new Map(savedWorks.map(work=>[work.id,work]))
-  const bundledIds=new Set(atlasData.works.map(work=>work.id))
-  const merged=atlasData.works.map(bundled=>{const saved=savedById.get(bundled.id);return saved?{...bundled,...saved,creator:saved.creator||bundled.creator,creatorRole:saved.creatorRole||bundled.creatorRole}:clone(bundled)})
-  return [...merged,...savedWorks.filter(work=>!bundledIds.has(work.id))]
-}
-
-function mergeBundledRecords(savedRecords=[],bundledRecords=[]) {
-  const savedById=new Map(savedRecords.map(record=>[record.id,record]))
-  const bundledIds=new Set(bundledRecords.map(record=>record.id))
-  return [...bundledRecords.map(bundled=>savedById.has(bundled.id)?{...clone(bundled),...savedById.get(bundled.id)}:clone(bundled)),...savedRecords.filter(record=>!bundledIds.has(record.id))]
-}
-
-function loadDraft() {
-  try { const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)); return saved?{...clone(atlasData),...saved,meta:{...saved.meta,...atlasData.meta},heritageAudits:mergeBundledHeritage(saved.heritageAudits),inscriptionAudits:mergeBundledRecords(saved.inscriptionAudits,atlasData.inscriptionAudits),works:mergeBundledWorks(saved.works),inscriptions:mergeBundledRecords(saved.inscriptions,atlasData.inscriptions),people:mergeBundledRecords(saved.people,atlasData.people),places:mergeBundledRecords(saved.places,atlasData.places),sources:mergeBundledRecords(saved.sources,atlasData.sources),collaborations:mergeBundledRecords(saved.collaborations,atlasData.collaborations)}:clone(atlasData) }
-  catch { return clone(atlasData) }
+  return merged
 }
 
 const blankRecord = collection => collection === 'relationships'
@@ -70,19 +49,31 @@ function recordTitle(record, collection = '', locale = 'en') {
   return `Untitled ${collectionPrefix[collection] || 'record'}`
 }
 
+const reviewedStatuses = new Set(['reviewed','published','verified','authority-confirmed','fully-verified'])
+const recordProgress = record => {
+  const status=record?.review?.status||record?.verification?.verificationStatus||record?.auditStatus||record?.status||'draft'
+  return reviewedStatuses.has(status)?'verified':'pending'
+}
+
 const adminText = {
-  kn:{workspace:'ಸ್ಥಳೀಯ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.2',title:'ದತ್ತಾಂಶ ಸಂಪಾದಕ',subtitle:'ಪರಿಶೀಲನೆ ಮತ್ತು ಹಸ್ತಾಂತರಕ್ಕಾಗಿ ಬ್ರೌಸರ್‌ನಲ್ಲೇ ಉಳಿಯುವ ಕರಡುಗಳು',back:'← ಸಾರ್ವಜನಿಕ ಭೂಪಟಕ್ಕೆ ಹಿಂತಿರುಗಿ',warning:'ತಿದ್ದುಪಡಿಗಳು ಈ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಯುತ್ತವೆ. ಪ್ರಕಟಿಸಲು JSON ರಫ್ತು ಮಾಡಿ, ಆವೃತ್ತಿ ನಿಯಂತ್ರಣದಲ್ಲಿ ಪರಿಶೀಲಿಸಿ. ಇದು GitHubಗೆ ಬರೆಯುವುದಿಲ್ಲ ಅಥವಾ ಬಹು-ಬಳಕೆದಾರ ಸಮನ್ವಯ ನೀಡುವುದಿಲ್ಲ.',resourcesManagement:'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ ನಿರ್ವಹಣೆ',errors:'ದೋಷಗಳು',warnings:'ಎಚ್ಚರಿಕೆಗಳು',import:'JSON ಆಮದು',export:'JSON ರಫ್ತು',reset:'ಸ್ಥಳೀಯ ಕರಡು ಮರುಹೊಂದಿಸಿ',search:'ಎಲ್ಲ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹುಡುಕಿ',searchPlaceholder:'ಹೆಸರು, ID, ಸ್ಥಿತಿ…',records:'ದಾಖಲೆಗಳು',new:'+ ಹೊಸ ದಾಖಲೆ',edit:'ದಾಖಲೆ ತಿದ್ದುಪಡಿ',create:'ದಾಖಲೆ ರಚಿಸಿ',delete:'ಅಳಿಸಿ',save:'ಸ್ಥಳೀಯ ಕರಡು ಉಳಿಸಿ',stableId:'ಸ್ಥಿರ ID / Stable ID',englishName:'ಇಂಗ್ಲಿಷ್ ಹೆಸರು / English name',kannadaName:'ಕನ್ನಡ ಹೆಸರು / Kannada name',start:'ಆರಂಭ ವರ್ಷ / Start year',end:'ಅಂತ್ಯ ವರ್ಷ / End year',datePrecision:'ದಿನಾಂಕ ನಿಖರತೆ / Date precision',reviewStatus:'ಪರಿಶೀಲನಾ ಸ್ಥಿತಿ / Review status',reviewer:'ಪರಿಶೀಲಕರು / Reviewer',json:'ಸಂಪೂರ್ಣ ದಾಖಲೆ JSON',validation:'ಈ ದಾಖಲೆಯ ಪರಿಶೀಲನೆ',collections:{polities:'ರಾಜ್ಯಗಳು',people:'ವ್ಯಕ್ತಿಗಳು',places:'ಸ್ಥಳಗಳು',inscriptions:'ಶಾಸನಗಳು',works:'ಸಾಹಿತ್ಯ ಕೃತಿಗಳು',sources:'ಆಕರಗಳು',relationships:'ಸಂಬಂಧಗಳು'}},
-  en:{workspace:'Local research workspace · Atlas v0.2',title:'Dataset editor',subtitle:'Browser-only drafts for review, validation, and handoff',back:'← Return to public atlas',warning:'Edits are stored only in this browser. Export JSON and review it in version control to publish. This workspace does not write to GitHub or provide multi-user sync.',resourcesManagement:'Resources & collaborations management',errors:'errors',warnings:'warnings',import:'Import JSON',export:'Export JSON',reset:'Reset local draft',search:'Search all fields',searchPlaceholder:'Name, ID, status…',records:'records',new:'+ New record',edit:'Edit record',create:'Create record',delete:'Delete',save:'Save local draft',stableId:'Stable ID',englishName:'English name',kannadaName:'Kannada name',start:'Start year',end:'End year',datePrecision:'Date precision',reviewStatus:'Review status',reviewer:'Reviewer',json:'Complete record JSON',validation:'Validation for this record',collections:collectionLabels}
+  kn:{workspace:'ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.20',title:'ದತ್ತಾಂಶ ಸಂಪಾದಕ',subtitle:'MariaDBಯಲ್ಲಿ ಶಾಶ್ವತ ಆವೃತ್ತಿಗಳು ಮತ್ತು ಪರಿಶೀಲನಾ ಹಸ್ತಾಂತರ',back:'← ಸಾರ್ವಜನಿಕ ಭೂಪಟಕ್ಕೆ ಹಿಂತಿರುಗಿ',warning:'ಉಳಿಸುವ ಪ್ರತಿಯೊಂದು ಆವೃತ್ತಿಯೂ MariaDBಯಲ್ಲಿ ಶಾಶ್ವತವಾಗಿ ಸಂಗ್ರಹವಾಗುತ್ತದೆ. ಈ ಪುಟವು ಬ್ರೌಸರ್ ಕರಡು ಅಥವಾ localStorage ಬಳಸುವುದಿಲ್ಲ; ಸಾರ್ವಜನಿಕ GitHub Pages ಆವೃತ್ತಿಗೆ ಪ್ರಕಟಿಸುವ ಮೊದಲು ನಿರ್ವಾಹಕರು ಆವೃತ್ತಿಯನ್ನು ಪರಿಶೀಲಿಸಬೇಕು.',resourcesManagement:'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ ನಿರ್ವಹಣೆ',errors:'ದೋಷಗಳು',warnings:'ಎಚ್ಚರಿಕೆಗಳು',import:'JSON ಆಮದು',export:'JSON ರಫ್ತು',reset:'ಸರ್ವರ್ ಆವೃತ್ತಿ ಮರುಲೋಡ್',search:'ಎಲ್ಲ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹುಡುಕಿ',searchPlaceholder:'ಹೆಸರು, ID, ಸ್ಥಿತಿ…',records:'ದಾಖಲೆಗಳು',new:'+ ಹೊಸ ದಾಖಲೆ',edit:'ದಾಖಲೆ ತಿದ್ದುಪಡಿ',create:'ದಾಖಲೆ ರಚಿಸಿ',delete:'ಅಳಿಸಿ',save:'MariaDB ಆವೃತ್ತಿ ಉಳಿಸಿ',stableId:'ಸ್ಥಿರ ID / Stable ID',englishName:'ಇಂಗ್ಲಿಷ್ ಹೆಸರು / English name',kannadaName:'ಕನ್ನಡ ಹೆಸರು / Kannada name',start:'ಆರಂಭ ವರ್ಷ / Start year',end:'ಅಂತ್ಯ ವರ್ಷ / End year',datePrecision:'ದಿನಾಂಕ ನಿಖರತೆ / Date precision',reviewStatus:'ಪರಿಶೀಲನಾ ಸ್ಥಿತಿ / Review status',reviewer:'ಪರಿಶೀಲಕರು / Reviewer',json:'ಸಂಪೂರ್ಣ ದಾಖಲೆ JSON',validation:'ಈ ದಾಖಲೆಯ ಪರಿಶೀಲನೆ',collections:{polities:'ರಾಜ್ಯಗಳು',people:'ವ್ಯಕ್ತಿಗಳು',places:'ಸ್ಥಳಗಳು',inscriptions:'ಶಾಸನಗಳು',works:'ಸಾಹಿತ್ಯ ಕೃತಿಗಳು',sources:'ಆಕರಗಳು',relationships:'ಸಂಬಂಧಗಳು'}},
+  en:{workspace:'Permanent research workspace · Atlas v0.20',title:'Dataset editor',subtitle:'Versioned MariaDB records for review and publication handoff',back:'← Return to public atlas',warning:'Every save creates a permanent MariaDB dataset revision. This page does not use browser drafts or localStorage; administrators review a revision before publishing the static GitHub Pages release.',resourcesManagement:'Resources & collaborations management',errors:'errors',warnings:'warnings',import:'Import JSON',export:'Export JSON',reset:'Reload server version',search:'Search all fields',searchPlaceholder:'Name, ID, status…',records:'records',new:'+ New record',edit:'Edit record',create:'Create record',delete:'Delete',save:'Save MariaDB revision',stableId:'Stable ID',englishName:'English name',kannadaName:'Kannada name',start:'Start year',end:'End year',datePrecision:'Date precision',reviewStatus:'Review status',reviewer:'Reviewer',json:'Complete record JSON',validation:'Validation for this record',collections:collectionLabels}
 }
 Object.assign(adminText.kn.collections,{externalPolities:'ಬಾಹ್ಯ ರಾಜ್ಯಗಳು',events:'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು',culturalHeritage:'ಸ್ಮಾರಕಗಳು, ಕಲೆ ಮತ್ತು ಸಂಸ್ಕೃತಿ',reigns:'ಆಳ್ವಿಕೆ ಮತ್ತು ರಾಜಕೀಯ ಅವಧಿಗಳು',territorialExtents:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',deepChronologies:'ಪ್ರಾಚೀನ ಕಾಲಕ್ರಮಗಳು',heritageAudits:'ಜಿಲ್ಲಾ ಪರಂಪರೆ ಪರಿಶೀಲನೆಗಳು'})
 adminText.kn.collections.inscriptionAudits='ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆಗಳು'
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'
-adminText.kn.workspace='ಸ್ಥಳೀಯ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.18'
-adminText.en.workspace='Local research workspace · Atlas v0.18'
+adminText.kn.workspace='ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.20'
+adminText.en.workspace='Permanent research workspace · Atlas v0.20'
+Object.assign(adminText.kn,{progressTitle:'ದತ್ತಾಂಶ ಪ್ರಗತಿ ವರದಿ',progressIntro:'ಪರಿಶೀಲಿಸಿದ, ಬಾಕಿ ಮತ್ತು ದೋಷಗಳ ಸಂಕ್ಷಿಪ್ತ ಚಿತ್ರಣ',dataPoints:'ಒಟ್ಟು ದತ್ತಾಂಶ ಬಿಂದುಗಳು',verified:'ಪರಿಶೀಲಿಸಿದ / ಪ್ರಕಟಿತ',pending:'ಪರಿಶೀಲನೆ ಬಾಕಿ',validationErrors:'ದತ್ತಾಂಶ ದೋಷಗಳು',coverage:'ವ್ಯಾಪ್ತಿ',collectionProgress:'ಸಂಗ್ರಹವಾರು ಪ್ರಗತಿ'})
+Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntro:'A live summary of reviewed, pending and invalid records',dataPoints:'Total data points',verified:'Reviewed / published',pending:'Pending review',validationErrors:'Validation errors',coverage:'Coverage',collectionProgress:'Collection progress'})
 
 export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const t=adminText[locale]
-  const [data,setData] = useState(loadDraft)
+  const [data,setData] = useState(()=>clone(atlasData))
+  const [revision,setRevision] = useState(0)
+  const [connection,setConnection] = useState('loading')
+  const [saving,setSaving] = useState(false)
+  const [legacyPending,setLegacyPending] = useState(false)
   const [collection,setCollection] = useState('polities')
   const [query,setQuery] = useState('')
   const [selectedId,setSelectedId] = useState(data.polities[0]?.id || '')
@@ -90,6 +81,14 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const [jsonText,setJsonText] = useState(() => JSON.stringify(data.polities[0] || blankRecord('polities'),null,2))
   const [notice,setNotice] = useState('')
   const fileRef = useRef()
+  useEffect(()=>{
+    let active=true
+    fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/dataset`,{credentials:'include'})
+      .then(async response=>{const body=await response.json().catch(()=>({}));if(response.status===404&&body.revision===0)return {dataset:null,revision:0};if(!response.ok)throw new Error(body.error||`Server request failed (${response.status})`);return body})
+      .then(body=>{if(!active)return;const serverData=body.dataset||clone(atlasData);const legacy=readLegacyDraft();const merged=legacy?mergeLegacyDraft(serverData,legacy):serverData;setData(merged);setRevision(Number(body.revision||0));setCollection('polities');const first=merged.polities?.[0];setSelectedId(first?.id||'');setEditor(first||blankRecord('polities'));setLegacyPending(Boolean(legacy));setConnection('ready');setNotice(legacy?'A legacy browser draft was found and merged for one-time migration. Save it as a MariaDB revision to make it permanent.':`Loaded permanent server revision ${body.revision||0}.`)})
+      .catch(error=>{if(active){setConnection('error');setNotice(error.message)}})
+    return()=>{active=false}
+  },[])
   const issues = useMemo(()=>validateAtlas(data),[data])
   const filtered = useMemo(() => (data[collection] || []).filter(record => JSON.stringify(record).toLowerCase().includes(query.toLowerCase())),[data,collection,query])
   const recordIssues = useMemo(()=>{
@@ -97,6 +96,11 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     if(index>=0) list[index]=draft; else list.push(draft)
     return validateAtlas(candidate).filter(issue=>issue.id===(draft.id || 'row-1') || (!draft.id && issue.collection===collection))
   },[data,collection,selectedId,draft])
+  const progress = useMemo(()=>{
+    const rows=collections.map(key=>{const records=Array.isArray(data[key])?data[key]:[];const verified=records.filter(record=>recordProgress(record)==='verified').length;return {key,total:records.length,verified,pending:records.length-verified}})
+    const total=rows.reduce((sum,row)=>sum+row.total,0);const verified=rows.reduce((sum,row)=>sum+row.verified,0)
+    return {rows,total,verified,pending:total-verified,percent:total?Math.round(verified/total*100):0}
+  },[data])
   const setEditor = record => { const next=clone(record); setDraft(next); setJsonText(JSON.stringify(next,null,2)) }
 
   const selectCollection = next => {
@@ -113,21 +117,30 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     setJsonText(JSON.stringify(next,null,2))
     return next
   })
-  const save = () => {
+  const persistDataset = async (next, successMessage='Permanent revision saved.') => {
+    if (saving || connection==='error') return false
+    setSaving(true);setNotice('Saving permanent MariaDB revision…')
+    try {
+      const response=await fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/dataset`,{method:'PUT',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({dataset:next,baseRevision:revision})})
+      const body=await response.json().catch(()=>({}));if(!response.ok)throw new Error(body.error||`Server request failed (${response.status})`)
+      setData(next);setRevision(Number(body.revision||revision+1));if(legacyPending){localStorage.removeItem(LEGACY_STORAGE_KEY);setLegacyPending(false)}setNotice(`${successMessage} Revision ${body.revision}.`);return true
+    } catch(error) { setNotice(error.message);return false } finally { setSaving(false) }
+  }
+  const save = async () => {
     const next = clone(data); const index = next[collection].findIndex(record => record.id === selectedId)
     const saved = { ...draft, review:{...draft.review,updatedAt:today()} }
     if (index >= 0) next[collection][index] = saved; else next[collection].push(saved)
-    setData(next); setSelectedId(saved.id); localStorage.setItem(STORAGE_KEY,JSON.stringify(next)); setNotice('Draft saved in this browser.')
+    const didSave=await persistDataset(next);if(didSave)setSelectedId(saved.id)
   }
   const create = () => { setSelectedId(''); setEditor(blankRecord(collection)); setNotice('New unsaved record.') }
-  const remove = () => {
-    if (!selectedId || !window.confirm(`Delete ${selectedId} from this local draft?`)) return
+  const remove = async () => {
+    if (!selectedId || !window.confirm(`Delete ${selectedId} from the permanent dataset? This creates a new server revision.`)) return
     const next={...data,[collection]:data[collection].filter(record=>record.id!==selectedId)}
-    setData(next); localStorage.setItem(STORAGE_KEY,JSON.stringify(next)); const first=next[collection][0]; setSelectedId(first?.id||''); setEditor(first||blankRecord(collection))
+    const didSave=await persistDataset(next,'Record deleted in permanent revision');if(didSave){const first=next[collection][0];setSelectedId(first?.id||'');setEditor(first||blankRecord(collection))}
   }
-  const reset = () => {
-    if (!window.confirm('Discard all browser-only edits and restore the bundled dataset?')) return
-    const next=clone(atlasData); setData(next); localStorage.removeItem(STORAGE_KEY); setCollection('polities'); const first=next.polities[0]; setSelectedId(first?.id||''); setEditor(first||blankRecord('polities')); setNotice('Bundled dataset restored.')
+  const reset = async () => {
+    setNotice('Reloading permanent server version…')
+    try { const response=await fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/dataset`,{credentials:'include'});const body=await response.json().catch(()=>({}));if(!response.ok)throw new Error(body.error||`Server request failed (${response.status})`);if(!body.dataset)throw new Error('No permanent server revision exists yet.');setData(body.dataset);setRevision(Number(body.revision||0));setCollection('polities');const first=body.dataset.polities?.[0];setSelectedId(first?.id||'');setEditor(first||blankRecord('polities'));setNotice(`Loaded permanent revision ${body.revision}.`) } catch(error) { setNotice(error.message) }
   }
   const exportData = () => {
     const output={...data,meta:{...data.meta,exportedAt:new Date().toISOString()}}
@@ -135,17 +148,22 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   }
   const importData = event => {
     const file=event.target.files?.[0]; if (!file) return
-    const reader=new FileReader(); reader.onload=()=>{ try { const next=JSON.parse(reader.result); const nextIssues=validateAtlas(next); if (hasValidationErrors(nextIssues) && !window.confirm(`This file has ${nextIssues.filter(i=>i.severity==='error').length} errors. Import into the local workspace anyway?`)) return; setData(next); localStorage.setItem(STORAGE_KEY,JSON.stringify(next)); setCollection('polities'); const first=next.polities?.[0]; setSelectedId(first?.id||''); setEditor(first||blankRecord('polities')); setNotice(`Imported ${file.name}.`) } catch { setNotice('Import failed: the file is not valid JSON.') } }; reader.readAsText(file); event.target.value=''
+    const reader=new FileReader(); reader.onload=()=>{ try { const next=JSON.parse(reader.result); const nextIssues=validateAtlas(next); if (hasValidationErrors(nextIssues) && !window.confirm(`This file has ${nextIssues.filter(i=>i.severity==='error').length} errors. Import into the editor anyway and save it as a server revision?`)) return; setData(next); setCollection('polities'); const first=next.polities?.[0]; setSelectedId(first?.id||''); setEditor(first||blankRecord('polities')); setNotice(`Imported ${file.name}. Review it, then save a permanent MariaDB revision.`) } catch { setNotice('Import failed: the file is not valid JSON.') } }; reader.readAsText(file); event.target.value=''
   }
 
   return <div className="admin-shell" lang={locale}>
     <header className="admin-header"><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="https://sanchaya.org" target="_blank" rel="noreferrer" aria-label="Sanchaya"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.workspace}</p><h1>{t.title}</h1><p className="admin-subtitle">{t.subtitle}</p></div></div><div className="admin-header-actions"><button className="secondary language-switch" onClick={onLocaleChange}>{locale==='kn'?'English':'ಕನ್ನಡ'}</button><button className="secondary" onClick={onClose}>{t.back}</button></div></header>
     <div className="admin-warning"><strong>{locale==='kn'?'ಸ್ಥಿರ-ಮೊದಲ ವಿನ್ಯಾಸ:':'Static-first:'}</strong> {t.warning}</div>
     <div className="admin-toolbar">
-      <div className="health"><strong>{issues.filter(i=>i.severity==='error').length}</strong> {t.errors} <strong>{issues.filter(i=>i.severity==='warning').length}</strong> {t.warnings}</div>
+      <div className="health"><strong>{issues.filter(i=>i.severity==='error').length}</strong> {t.errors} <strong>{issues.filter(i=>i.severity==='warning').length}</strong> {t.warnings} · <span className={`dataset-connection ${connection}`}>{connection==='ready'?`MariaDB · revision ${revision}`:connection==='loading'?'Connecting to MariaDB…':'MariaDB unavailable'}</span></div>
       <div className="admin-resource-shortcuts"><span>{t.resourcesManagement}</span><button className={collection==='sources'?'active':''} onClick={()=>selectCollection('sources')}>{t.collections.sources} · {data.sources.length}</button><button className={collection==='collaborations'?'active':''} onClick={()=>selectCollection('collaborations')}>{t.collections.collaborations} · {data.collaborations.length}</button></div>
       <button onClick={()=>fileRef.current.click()}>{t.import}</button><input ref={fileRef} hidden type="file" accept="application/json,.json" onChange={importData}/><button onClick={exportData}>{t.export}</button><button className="danger-link" onClick={reset}>{t.reset}</button>
     </div>
+    <section className="admin-progress" aria-labelledby="admin-progress-title">
+      <div className="admin-progress-head"><div><p className="eyebrow">{t.progressTitle}</p><h2 id="admin-progress-title">{t.progressIntro}</h2></div><strong>{progress.percent}% {t.coverage}</strong></div>
+      <div className="admin-stat-grid"><article><b>{progress.total}</b><span>{t.dataPoints}</span></article><article className="verified"><b>{progress.verified}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>
+      <div className="admin-progress-table"><div className="admin-progress-table-title">{t.collectionProgress}</div>{progress.rows.map(row=><div className="admin-progress-row" key={row.key}><span>{t.collections[row.key]||row.key}</span><div className="admin-progress-bar"><i style={{width:`${row.total?Math.round(row.verified/row.total*100):0}%`}}></i></div><b>{row.verified}/{row.total}</b><small>{row.total?Math.round(row.verified/row.total*100):0}%</small></div>)}</div>
+    </section>
     <main className="admin-main">
       <aside className="admin-nav">
         <label className="search">{t.search}<input value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.searchPlaceholder}/></label>
@@ -202,7 +220,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
           <label className="wide">{t.json}<textarea rows="14" value={jsonText} onChange={e=>{const value=e.target.value;setJsonText(value);try{setDraft(JSON.parse(value));setNotice('')}catch{setNotice('JSON editor has a syntax error.')}}}/><small>Advanced fields include geometry, citations, external links, descriptions, and entity references.</small></label>
         </div>
         {recordIssues.length>0&&<div className="issue-box"><h3>{t.validation}</h3>{recordIssues.map((issue,index)=><p key={`${issue.path}-${index}`} className={issue.severity}><strong>{issue.severity}</strong> {issue.path}: {issue.message}</p>)}</div>}
-        <div className="editor-actions"><button className="primary" onClick={save}>{t.save}</button><span>{notice}</span></div>
+        <div className="editor-actions"><button className="primary" onClick={save} disabled={saving||connection!=='ready'}>{saving?'Saving…':t.save}</button><span>{notice}</span></div>
       </section>
     </main>
   </div>

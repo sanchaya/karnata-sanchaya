@@ -73,7 +73,7 @@ export function validateAtlas(data) {
         if (!Array.isArray(record.citations) || record.citations.length === 0) add('warning',collection,id,'citations','Reign and political-period records should cite at least one source.')
       }
       if (collection === 'culturalHeritage') {
-        if (!['architecture','visual-art','literature','performance','music','celebration','religious-tradition','craft'].includes(record.category)) add('error',collection,id,'category','Cultural category is invalid.')
+        if (!['architecture','visual-art','literature','performance','music','celebration','religious-tradition','craft','games-sports'].includes(record.category)) add('error',collection,id,'category','Cultural category is invalid.')
         if (!['historic','continuing-practice','material-survival','revived','unknown'].includes(record.continuity)) add('error',collection,id,'continuity','Continuity status is invalid.')
         if (!Array.isArray(record.polityIds) || record.polityIds.length === 0) add('error',collection,id,'polityIds','At least one related polity is required.')
         if (!Array.isArray(record.placeIds) || record.placeIds.length === 0) add('error',collection,id,'placeIds','At least one mapped place is required.')

@@ -28,9 +28,9 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into sev
 
 Run `npm run validate:data` before building. Validation checks collection structure, globally unique stable IDs, bilingual names, date order and precision, point coordinates, review states, citations, and entity references. Errors fail the command; missing Kannada labels are warnings.
 
-The admin stores drafts under a versioned key in browser local storage. Exported JSON is a handoff artifact, not automatically public data. A researcher should review the diff, run validation, and deliberately update the bundled dataset in version control. This keeps GitHub Pages read-only and avoids publishing accidental browser edits.
+The live administrator workspace stores complete, validated dataset revisions in MariaDB, with a revision number, content hash, actor and audit-log entry. It does not use browser local storage for edits. Imported JSON remains staged until an administrator explicitly saves it as a new server revision. Exported JSON is a review/handoff artifact, not automatically public data; the approved static release is still generated deliberately for GitHub Pages.
 
-For concurrent researchers, add a separate authenticated data service later. Keep the same JSON contract and treat the static repository dataset as the reviewed publication snapshot.
+The live authenticated administrator service uses the same JSON contract for permanent full-dataset revisions. Concurrent saves use revision checks and return a conflict instead of silently overwriting another administrator's work. Keep the static repository dataset as the reviewed publication snapshot.
 
 ## Literature and epigraphy explorer fields
 

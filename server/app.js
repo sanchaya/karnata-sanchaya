@@ -3,18 +3,20 @@ import multer from 'multer'
 import path from 'node:path'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
-import { randomUUID } from 'node:crypto'
+import { createHash, randomUUID } from 'node:crypto'
 import { config } from './config.js'
 import { closeDatabase, pool, transaction } from './db.js'
 import { decryptDocument, encryptDocument, hashPassword, randomToken, sha256, verifyPassword } from './security.js'
 import { normalizeTranslationAssessment, translationApprovalIssues, translationProposalIssues } from './review-policy.js'
+import { validateAtlas } from '../src/data/validate.js'
+import { atlasData } from '../src/data/atlas.js'
 
 config.assertProductionSecrets()
 const app=express()
 if(config.trustProxy)app.set('trust proxy',1)
 app.disable('x-powered-by')
 app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"});next()})
-app.use(express.json({limit:'256kb'}))
+app.use(express.json({limit:'12mb'}))
 
 const allowedOrigins=new Set([config.appOrigin])
 app.use('/api',(req,res,next)=>{if(['GET','HEAD','OPTIONS'].includes(req.method))return next();const origin=req.get('origin');if(origin&&!allowedOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});next()})
@@ -39,6 +41,8 @@ app.use('/api',loadSession)
 const requireUser=(req,res,next)=>req.user?next():res.status(401).json({error:'Sign in is required.'})
 const requireApproved=(req,res,next)=>req.user?.account_status==='approved'?next():res.status(403).json({error:'Sanchaya approval is required before contributing.'})
 const requireRole=(...roles)=>(req,res,next)=>roles.some(role=>req.roles?.includes(role))?next():res.status(403).json({error:'This action requires an appointed role.'})
+const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
+const datasetIssues=value=>validateAtlas(value).filter(issue=>issue.severity==='error')
 
 app.get('/api/health',async(req,res)=>{await pool.query('SELECT 1');res.json({ok:true,service:'Karnataka Historical Atlas community API'})})
 
@@ -63,6 +67,27 @@ app.post('/api/auth/login',rateLimit('login',12,15*60*1000),async(req,res)=>{
 })
 app.post('/api/auth/logout',requireUser,async(req,res)=>{const token=cookies(req).kha_session;if(token)await pool.query('DELETE FROM sessions WHERE token_hash=?',[sha256(token)]);res.clearCookie('kha_session',{path:'/'});res.json({ok:true})})
 app.get('/api/auth/me',requireUser,async(req,res)=>{const rows=await pool.query('SELECT COALESCE(SUM(points),0) karma FROM karma_ledger WHERE user_id=?',[req.user.id]);res.json({user:publicUser(req.user,req.roles,rows[0]?.karma)})})
+
+app.get('/api/administration/dataset',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const rows=await pool.query('SELECT revision,schema_version,content_sha256,dataset_json,updated_by,created_at FROM dataset_snapshots ORDER BY revision DESC LIMIT 1')
+  if(!rows.length){
+    const content=datasetContent(atlasData);const hash=createHash('sha256').update(content).digest('hex');const id=randomUUID()
+    await pool.query('INSERT INTO dataset_snapshots (id,schema_version,revision,content_sha256,dataset_json,updated_by) VALUES (?,?,?,?,?,?)',[id,atlasData.meta.schemaVersion,1,hash,content,req.user.id]);await audit(pool,req.user.id,'dataset.snapshot-seeded','dataset',id,{revision:1,contentSha256:hash})
+    return res.json({revision:1,schemaVersion:atlasData.meta.schemaVersion,contentSha256:hash,dataset:atlasData,updatedBy:req.user.id,updatedAt:new Date().toISOString()})
+  }
+  const row=rows[0];res.json({revision:Number(row.revision),schemaVersion:row.schema_version,contentSha256:row.content_sha256,dataset:safeJson(row.dataset_json),updatedBy:row.updated_by,updatedAt:row.created_at})
+})
+
+app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const dataset=req.body?.dataset;const baseRevision=Number(req.body?.baseRevision||0);if(!dataset||typeof dataset!=='object'||Array.isArray(dataset))return res.status(400).json({error:'A complete atlas dataset object is required.'})
+  const issues=datasetIssues(dataset);if(issues.length)return res.status(422).json({error:`Dataset has ${issues.length} validation error(s).`,issues})
+  const content=datasetContent(dataset);const hash=createHash('sha256').update(content).digest('hex')
+  const result=await transaction(async db=>{
+    const latest=(await db.query('SELECT revision FROM dataset_snapshots ORDER BY revision DESC LIMIT 1 FOR UPDATE'))[0];const currentRevision=Number(latest?.revision||0);if(currentRevision!==baseRevision)throw Object.assign(new Error(`Dataset changed on the server. Reload revision ${currentRevision} before saving.`),{status:409})
+    const revision=currentRevision+1;const id=randomUUID();await db.query('INSERT INTO dataset_snapshots (id,schema_version,revision,content_sha256,dataset_json,updated_by) VALUES (?,?,?,?,?,?)',[id,dataset.meta?.schemaVersion||'unknown',revision,hash,content,req.user.id]);await audit(db,req.user.id,'dataset.snapshot-created','dataset',id,{revision,contentSha256:hash});return {id,revision}
+  })
+  res.status(201).json({ok:true,...result,contentSha256:hash})
+})
 
 const upload=multer({storage:multer.memoryStorage(),limits:{fileSize:5*1024*1024,files:1,fields:5,parts:6},fileFilter:(req,file,callback)=>callback(null,['image/jpeg','image/png','application/pdf'].includes(file.mimetype))})
 app.post('/api/verification-requests',requireUser,upload.single('institutionId'),async(req,res)=>{

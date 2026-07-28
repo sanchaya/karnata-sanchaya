@@ -3,6 +3,7 @@ import { heritagePageVerification } from './heritage-page-verification.js'
 import { heritageGeocodeVerification } from './heritage-geocode-verification.js'
 import { heritageDirectVerification } from './heritage-direct-verification.js'
 import { commonsPhotoLicenses, heritageEvidenceUpdates } from './heritage-evidence-updates.js'
+import { heritageEvidencePassUpdates } from './heritage-evidence-pass.js'
 import { heritageAuthorityAdditions } from './heritage-authority-additions.js'
 
 const n=(en,kn)=>({en,kn})
@@ -11,15 +12,16 @@ const categories=['temple','coastal-temple','basadi','dargah','church','monaster
 const slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')
 const uniqueByUrl=items=>[...new Map(items.map(item=>[item.url||item.sourceUrl||JSON.stringify(item),item])).values()]
 const mergeVerification=(id,base)=>{
-  const update=heritageEvidenceUpdates[id]||{}
+  const update={...(heritageEvidenceUpdates[id]||{}),...(heritageEvidencePassUpdates[id]||{})}
   const license=commonsPhotoLicenses[id]
   const rawPhotos=update.photographs||base.photographs||[]
-  const photographs=rawPhotos.map(photo=>license?.status==='verified-on-commons'?{...photo,url:photo.url,sourceUrl:license.canonicalUrl||photo.sourceUrl,licenseStatus:license.licenseShortName,licenseUrl:license.licenseUrl,credit:license.artist,attributionRequired:license.attributionRequired,licenseCheckedAt:license.checkedAt}:photo)
+  const photographs=rawPhotos.map(photo=>license?.status==='verified-on-commons'?{...photo,url:photo.url,sourceUrl:license.canonicalUrl||photo.sourceUrl,licenseStatus:license.licenseShortName,licenseUrl:license.licenseUrl,credit:`${license.artist}${photo.capturedAt?` · ${photo.capturedAt}`:''}`,attributionRequired:license.attributionRequired,licenseCheckedAt:license.checkedAt}:photo)
   const merged={...base,...update,externalIds:{...(base.externalIds||{}),...(update.externalIds||{})},coordinates:update.coordinates||base.coordinates,constructionPhases:update.constructionPhases||base.constructionPhases,protectionStatus:update.protectionStatus||base.protectionStatus,managingAuthorities:update.managingAuthorities||base.managingAuthorities,administrativeAreas:update.administrativeAreas||base.administrativeAreas,photographs,siteCitations:uniqueByUrl([...(base.siteCitations||[]),...(update.siteCitations||[])])}
   const licensed=photographs.length>0&&photographs.every(photo=>photo.licenseStatus&& !photo.licenseStatus.startsWith('verify-')&&!photo.licenseStatus.startsWith('pending-'))
-  const generatedChecks={photoLicence:{status:photographs.length?licensed?'verified':'pending':'not-provided',checkedAt:licensed?'2026-07-26':null},protectionRegister:{status:merged.protectionStatus.length?'matched':'not-found-in-linked-registers',checkedAt:'2026-07-26'},managingAuthority:{status:merged.managingAuthorities.length?'identified':'unresolved',checkedAt:merged.managingAuthorities.length?'2026-07-26':null}}
+  const generatedChecks={photoLicence:{status:photographs.length?licensed?'verified':'pending':'not-provided',checkedAt:licensed?'2026-07-26':null},protectionRegister:{status:merged.protectionStatus.length?'matched':'not-found-in-linked-registers',checkedAt:'2026-07-26'},managingAuthority:{status:merged.managingAuthorities.length?'identified':'unresolved',checkedAt:merged.managingAuthorities.length?'2026-07-26':null},currentCondition:{status:merged.presentConditionEvidence?(merged.presentConditionEvidence.status==='authority-confirmed'?'verified':'pending'):'not-provided',checkedAt:merged.presentConditionEvidence?.observedAt||null}}
   merged.verificationChecks={...generatedChecks,...(update.verificationChecks||{})}
-  const fullyVerified=Boolean(merged.coordinates&&merged.siteCitations.length&&merged.verificationChecks.photoLicence.status==='verified'&&merged.verificationChecks.protectionRegister.status==='matched'&&merged.verificationChecks.managingAuthority.status==='identified')
+  const conditionReady=!merged.presentConditionEvidence||merged.presentConditionEvidence.status==='authority-confirmed'
+  const fullyVerified=Boolean(conditionReady&&merged.coordinates&&merged.siteCitations.length&&merged.verificationChecks.photoLicence.status==='verified'&&merged.verificationChecks.protectionRegister.status==='matched'&&merged.verificationChecks.managingAuthority.status==='identified')
   merged.verificationStatus=fullyVerified?'verified':merged.verificationStatus==='research-pending'?'identified':merged.verificationStatus
   merged.lastVerified='2026-07-26'
   return merged
@@ -104,6 +106,7 @@ export const heritageAudits=districtSeeds.map(([districtEn,districtKn,region,sit
 heritageAuthorityAdditions.forEach(addition=>{
   const audit=heritageAudits.find(item=>item.id===addition.districtId)
   if(!audit||audit.prioritySites.some(site=>site.id===addition.id))return
-  audit.prioritySites.push({id:addition.id,name:addition.name,category:addition.category,status:addition.verification.verificationStatus,verification:addition.verification})
+  const verification=mergeVerification(addition.id,addition.verification)
+  audit.prioritySites.push({id:addition.id,name:addition.name,category:addition.category,status:verification.verificationStatus,verification})
   audit.categoryCoverage[addition.category]=audit.categoryCoverage[addition.category]==='unassessed'?'seeded':audit.categoryCoverage[addition.category]
 })

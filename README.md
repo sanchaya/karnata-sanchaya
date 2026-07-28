@@ -83,17 +83,18 @@ The live application and GitHub Pages have intentionally different responsibilit
 
 ## Local researcher workspace
 
-Run the site locally and choose **Researcher admin** in the header, or open `#admin`. The workspace:
+Run the live service and sign in as an approved administrator, then open `#admin`. The workspace:
 
-- keeps edits in this browser's local storage;
+- loads the latest permanent MariaDB dataset revision;
 - searches every field across each record collection;
 - offers common fields plus a complete JSON editor for geometry, citations and relationships;
 - reports dataset and per-record validation problems;
-- imports and exports the complete versioned dataset.
+- imports JSON into the editor and saves complete, versioned revisions to MariaDB;
+- exports the current revision as a review artifact.
 
-Export JSON before clearing site data or moving browsers. Browser drafts never modify the public bundle. To publish, review the exported diff, update the repository dataset, run `npm run check`, and commit it through the normal review process.
+The live `#admin` workspace requires an approved administrator session and stores every saved full-dataset revision in MariaDB. It does not use browser-local drafts. JSON import is staged in the editor until an administrator explicitly saves a new server revision; JSON export remains a portable review artifact. To publish, review the permanent revision, run `npm run check`, and deliberately generate the approved static release.
 
-This browser-local workspace remains available only by opening `#admin` directly for maintainers. It is not linked from the public navigation and is not the multi-user community workflow.
+The admin workspace remains available only by opening `#admin` directly for maintainers. It is not linked from the public navigation and is protected by the live administrator role; the static GitHub Pages build remains read-only.
 
 Use the **Resources & collaborations management** shortcuts in the admin toolbar to maintain source metadata and collaboration records. Source fields include authors/organizations, publisher or repository, DOI, ISBN, URL and review state; collaboration records include entity type, public stage, scope and bilingual descriptions. Export and review the complete JSON before publishing.
 
