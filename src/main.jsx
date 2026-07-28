@@ -11,6 +11,7 @@ import './explorer.css'
 import './global-relations.css'
 import './resources.css'
 import './evidence-workflow.css'
+import './admin-readiness.css'
 import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

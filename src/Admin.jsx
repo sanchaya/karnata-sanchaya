@@ -69,12 +69,15 @@ adminText.kn.workspace='ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ
 adminText.en.workspace='Permanent research workspace · Atlas v0.20'
 Object.assign(adminText.kn,{progressTitle:'ದತ್ತಾಂಶ ಪ್ರಗತಿ ವರದಿ',progressIntro:'ಪರಿಶೀಲಿಸಿದ, ಬಾಕಿ ಮತ್ತು ದೋಷಗಳ ಸಂಕ್ಷಿಪ್ತ ಚಿತ್ರಣ',dataPoints:'ಒಟ್ಟು ದತ್ತಾಂಶ ಬಿಂದುಗಳು',verified:'ಪರಿಶೀಲಿಸಿದ / ಪ್ರಕಟಿತ',pending:'ಪರಿಶೀಲನೆ ಬಾಕಿ',validationErrors:'ದತ್ತಾಂಶ ದೋಷಗಳು',coverage:'ವ್ಯಾಪ್ತಿ',collectionProgress:'ಸಂಗ್ರಹವಾರು ಪ್ರಗತಿ'})
 Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntro:'A live summary of reviewed, pending and invalid records',dataPoints:'Total data points',verified:'Reviewed / published',pending:'Pending review',validationErrors:'Validation errors',coverage:'Coverage',collectionProgress:'Collection progress'})
+Object.assign(adminText.kn,{releaseTitle:'ಲೈವ್ ಸಮುದಾಯ ಹಸ್ತಾಂತರ',releaseIntro:'ಮಾರಿಯಾDB ಕಾರ್ಯಕ್ಷೇತ್ರ ಮತ್ತು ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆಯ ಸ್ಥಿತಿ',pendingAccounts:'ಅನುಮೋದನೆ ಬಾಕಿ ಖಾತೆಗಳು',submittedContributions:'ವಿಮರ್ಶೆ ಬಾಕಿ ಕೊಡುಗೆಗಳು',pendingVerifications:'ID ಪರಿಶೀಲನೆ ಬಾಕಿ',appointedReviewers:'ನೇಮಕಗೊಂಡ ಪರಿಶೀಲಕರು',latestRevision:'ಕೊನೆಯ MariaDB ಆವೃತ್ತಿ',lastPublished:'ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆ',notPublished:'ಇನ್ನೂ ಸ್ಥಿರ ಪ್ರಕಟಣೆ ಇಲ್ಲ'})
+Object.assign(adminText.en,{releaseTitle:'Live community handoff',releaseIntro:'MariaDB workspace and latest static-publication status',pendingAccounts:'Accounts awaiting approval',submittedContributions:'Contributions awaiting review',pendingVerifications:'ID verifications pending',appointedReviewers:'Appointed reviewers',latestRevision:'Latest MariaDB revision',lastPublished:'Latest static publication',notPublished:'No static publication yet'})
 
 export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const t=adminText[locale]
   const [data,setData] = useState(()=>clone(atlasData))
   const [revision,setRevision] = useState(0)
   const [connection,setConnection] = useState('loading')
+  const [readiness,setReadiness] = useState(null)
   const [saving,setSaving] = useState(false)
   const [legacyPending,setLegacyPending] = useState(false)
   const [collection,setCollection] = useState('polities')
@@ -92,6 +95,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       .catch(error=>{if(active){setConnection('error');setNotice(error.message)}})
     return()=>{active=false}
   },[])
+  useEffect(()=>{if(connection!=='ready')return;let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/release-readiness`,{credentials:'include'}).then(response=>response.ok?response.json():Promise.reject(new Error('Unable to load release-readiness status.'))).then(value=>{if(active)setReadiness(value)}).catch(()=>{if(active)setReadiness(null)});return()=>{active=false}},[connection])
   const issues = useMemo(()=>validateAtlas(data),[data])
   const filtered = useMemo(() => (data[collection] || []).filter(record => JSON.stringify(record).toLowerCase().includes(query.toLowerCase())),[data,collection,query])
   const recordIssues = useMemo(()=>{
@@ -167,6 +171,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       <div className="admin-stat-grid"><article><b>{progress.total}</b><span>{t.dataPoints}</span></article><article className="verified"><b>{progress.verified}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>
       <div className="admin-progress-table"><div className="admin-progress-table-title">{t.collectionProgress}</div>{progress.rows.map(row=><div className="admin-progress-row" key={row.key}><span>{t.collections[row.key]||row.key}</span><div className="admin-progress-bar"><i style={{width:`${row.total?Math.round(row.verified/row.total*100):0}%`}}></i></div><b>{row.verified}/{row.total}</b><small>{row.total?Math.round(row.verified/row.total*100):0}%</small></div>)}</div>
     </section>
+    {readiness&&<section className="admin-release-readiness" aria-labelledby="admin-release-title"><div><p className="eyebrow">{t.releaseTitle}</p><h2 id="admin-release-title">{t.releaseIntro}</h2></div><div className="admin-readiness-grid"><span><b>{readiness.community.pendingAccounts}</b>{t.pendingAccounts}</span><span><b>{readiness.community.submittedContributions}</b>{t.submittedContributions}</span><span><b>{readiness.community.pendingVerifications}</b>{t.pendingVerifications}</span><span><b>{readiness.community.appointedReviewers}</b>{t.appointedReviewers}</span><span><b>{readiness.dataset.revision}</b>{t.latestRevision}</span><span><b>{readiness.published.publishedAt?new Date(readiness.published.publishedAt).toLocaleDateString(locale==='kn'?'kn-IN':'en-IN'):t.notPublished}</b>{t.lastPublished}</span></div></section>}
     <main className="admin-main">
       <aside className="admin-nav">
         <label className="search">{t.search}<input value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.searchPlaceholder}/></label>

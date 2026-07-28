@@ -27,7 +27,7 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.15 — Literature and Epigraphy Explorer | **Software achieved; review incomplete** | Literature/epigraphy pages, maps, timeline links, Bengaluru exception and review-gated candidates | Complete the 24 literary packets and Sannati/Maski transcription and Kannada review |
 | Atlas v0.19 — Evidence and Publication Readiness | **Workflow achieved; human work pending** | 19-candidate evidence queue, 144 evidence requests, translation-review gates, reviewer separation and publication checks | Complete independent reviews, exact corpus locators, field photographs and condition evidence |
 | Atlas v0.20 — community staging and permanent administration | **Software achieved; live operations pending** | MariaDB revisions, admin dashboard, progress stats, accounts, profiles, reviewer/contributor foundations and static export boundary | Configure production MariaDB, appoint reviewers, test approvals and publish approved snapshots |
-| District Deep History / `#district-history` | **Initial scope delivered, research just started** | 31 district scope slots, five needs-review leads, map/filter/detail view, admin collection and validation | Replace scope placeholders with district-specific prehistoric, settlement, foundation-stone and locality records |
+| District Deep History / `#district-history` | **Initial expansion delivered, research ongoing** | 31 district scope slots, 11 needs-review leads across Bengaluru and the first priority districts, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
 ## Current data coverage snapshot
 
@@ -97,6 +97,7 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 
 - Data model and evidence contract: [`docs/data-model.md`](data-model.md)
 - P1 human evidence queue: [`docs/p1-evidence-queue.md`](p1-evidence-queue.md)
+- P3 community operations and release handoff: [`docs/community-operations.md`](community-operations.md)
 - Community governance: [`docs/community-governance.md`](community-governance.md)
 - Live deployment: [`docs/live-deployment.md`](live-deployment.md)
 - Linux/Nginx deployment: [`docs/linux-nginx-install.md`](linux-nginx-install.md)

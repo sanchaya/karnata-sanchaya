@@ -1,0 +1,6 @@
+.admin-release-readiness{padding:16px 30px 18px;background:var(--sanchaya-surface);border-bottom:1px solid var(--sanchaya-border)}
+.admin-release-readiness h2{margin:2px 0 12px;font:600 17px Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-ink)}
+.admin-readiness-grid{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:8px}
+.admin-readiness-grid span{display:grid;gap:4px;padding:10px;border:1px solid var(--sanchaya-border);border-radius:8px;background:#fff;color:var(--sanchaya-muted);font-size:9px}
+.admin-readiness-grid b{font-size:17px;color:var(--sanchaya-blue)}
+@media(max-width:720px){.admin-release-readiness{padding:14px}.admin-readiness-grid{grid-template-columns:repeat(2,minmax(120px,1fr))}}

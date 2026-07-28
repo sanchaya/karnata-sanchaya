@@ -99,6 +99,18 @@ app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('a
   res.status(201).json({ok:true,...result,contentSha256:hash})
 })
 
+app.get('/api/administration/release-readiness',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const [accounts,contributions,verifications,reviewers,latest,published]=await Promise.all([
+    pool.query("SELECT COUNT(*) total FROM users WHERE account_status='pending'"),
+    pool.query("SELECT COUNT(*) total FROM contributions WHERE status='submitted'"),
+    pool.query("SELECT COUNT(*) total FROM verification_requests WHERE status='pending'"),
+    pool.query("SELECT COUNT(DISTINCT ur.user_id) total FROM user_roles ur JOIN users u ON u.id=ur.user_id WHERE ur.role IN ('reviewer','verification-officer') AND u.account_status='approved'"),
+    pool.query('SELECT revision,created_at FROM dataset_snapshots ORDER BY revision DESC LIMIT 1'),
+    pool.query('SELECT contribution_count,published_at FROM published_snapshots ORDER BY published_at DESC LIMIT 1')
+  ])
+  res.json({community:{pendingAccounts:Number(accounts[0]?.total||0),submittedContributions:Number(contributions[0]?.total||0),pendingVerifications:Number(verifications[0]?.total||0),appointedReviewers:Number(reviewers[0]?.total||0)},dataset:{revision:Number(latest[0]?.revision||0),updatedAt:latest[0]?.created_at||null},published:{contributionCount:Number(published[0]?.contribution_count||0),publishedAt:published[0]?.published_at||null}})
+})
+
 app.get('/api/evidence/assignments',requireUser,requireApproved,async(req,res)=>{
   const rows=await pool.query('SELECT task_id,status,assignee,due_date,updated_by,updated_at FROM evidence_assignments ORDER BY updated_at DESC')
   res.json({assignments:rows.map(row=>({taskId:row.task_id,status:row.status,assignee:row.assignee||'',due:row.due_date?String(row.due_date).slice(0,10):'',updatedBy:row.updated_by,updatedAt:row.updated_at}))})
