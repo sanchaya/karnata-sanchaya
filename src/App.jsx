@@ -137,6 +137,7 @@ function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,sele
       map.panTo(position,{animate:true})
     }
     const eventPositions=selectedEvent?.connectionPositions?.length?selectedEvent.connectionPositions:(selectedEvent?.coords?[selectedEvent.coords]:[])
+    const hasSelection=Boolean(selectedEvent||selectedTerritory||selectedCulture||selectedWorkPosition||selectedPersonPosition||selectedInscription||selectedSearchPlace||comparisonPositions?.length)
     if(eventPositions.length>1){
       const alreadyVisible=eventPositions.every(position=>map.getBounds().contains(position))
       if(!alreadyVisible)map.fitBounds(eventPositions,{padding:[45,45],maxZoom:6})
@@ -150,8 +151,10 @@ function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,sele
     else if(selectedInscription?.coords) focusPosition(selectedInscription.coords)
     else if(selectedSearchPlace?.coords) focusPosition(selectedSearchPlace.coords)
     else if(comparisonPositions?.length) map.fitBounds(comparisonPositions,{padding:[45,45],maxZoom:6})
-    else if(scope==='world') map.setView([25,48],2.25)
-    else map.setView(scope==='india'?[20.2,78.4]:[14.7,76.2],scope==='india'?4.35:6.35)
+    // A record with incomplete coordinates must never reset a user's map to a
+    // world view. Keep the current view until a researcher supplies a location.
+    else if(!hasSelection&&scope==='world') map.setView([25,48],2.25)
+    else if(!hasSelection) map.setView(scope==='india'?[20.2,78.4]:[14.7,76.2],scope==='india'?4.35:6.35)
   },[map,scope,selectedEvent,selectedTerritory,selectedCulture,selectedWorkPosition,selectedPersonPosition,selectedInscription,selectedSearchPlace,comparisonPositions])
   return null
 }
@@ -211,10 +214,10 @@ function BceResearchContext({locale,t,year,onOpenEpigraphy}){
 }
 
 function EventDetail({event,locale,t,onClose}){
-  const citations=event.citations.map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
+  const citations=(event.citations||[]).map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
   const destination=placeById.get(event.destinationPlaceId)
   const linkedPeople=(event.peopleIds||[]).map(id=>personById.get(id)).filter(Boolean)
-  return <aside className="detail-panel event-detail"><div className="detail-accent" style={{background:eventColors[event.type]||'#785f45'}}></div><div className={`review-badge ${event.review.status}`}>{event.review.status}</div><p className="eyebrow">{eventYearLabel(event,locale)} {t.ce} · {event.type}</p><h2>{primary(event.name,locale)}</h2><p className="entity-secondary">{secondary(event.name,locale)}</p><p>{primary(event.summary,locale)}</p>{locale==='kn'&&<p className="english-support" lang="en">{event.summary.en}</p>}{event.reach&&<div className="reach-card"><strong>{t.overseasConnection}</strong><span>{t[event.reach.direction]||event.reach.direction} · {t.reachRelations?.[event.reach.relationKind]||event.reach.relationKind}</span>{destination&&<span>{t.destination}: {primary(destination.name,locale)}</span>}<span>{t.modernCountries}: {event.reach.modernCountries.join(', ')}</span><span>{t.territorialControl}: {event.reach.territorialControl?t.yes:t.no}</span><p>{primary(event.reach.note,locale)}</p></div>}{linkedPeople.length>0&&<><h3>{t.people}</h3><div className="participant-list">{linkedPeople.map(person=><div key={person.id}><strong>{primary(person.name,locale)}</strong><span>{secondary(person.name,locale)}</span></div>)}</div></>}<h3>{t.participants}</h3><div className="participant-list">{event.participants.map((participant,index)=>{const entity=entityById.get(participant.polityId);return <div key={`${participant.polityId}-${index}`}><strong>{primary(entity?.name,locale)||participant.polityId}</strong><span>{participant.role} · {participant.outcome}</span></div>})}</div><h3>{t.sources}</h3><div className="citations">{citations.map(item=><p key={item.sourceId}><a href={item.source.url} target="_blank" rel="noreferrer"><strong>{primary(item.source.title,locale)}</strong></a><span>{item.locator}</span></p>)}</div><button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
+  return <aside className="detail-panel event-detail"><div className="detail-accent" style={{background:eventColors[event.type]||'#785f45'}}></div><div className={`review-badge ${event.review?.status||'needs-review'}`}>{event.review?.status||'needs-review'}</div><p className="eyebrow">{eventYearLabel(event,locale)} {t.ce} · {event.type}</p><h2>{primary(event.name,locale)}</h2><p className="entity-secondary">{secondary(event.name,locale)}</p><p>{primary(event.summary,locale)}</p>{locale==='kn'&&event.summary?.en&&<p className="english-support" lang="en">{event.summary.en}</p>}{event.reach&&<div className="reach-card"><strong>{t.overseasConnection}</strong><span>{t[event.reach.direction]||event.reach.direction} · {t.reachRelations?.[event.reach.relationKind]||event.reach.relationKind}</span>{destination&&<span>{t.destination}: {primary(destination.name,locale)}</span>}<span>{t.modernCountries}: {(event.reach.modernCountries||[]).join(', ')||'—'}</span><span>{t.territorialControl}: {event.reach.territorialControl?t.yes:t.no}</span><p>{primary(event.reach.note,locale)}</p></div>}{linkedPeople.length>0&&<><h3>{t.people}</h3><div className="participant-list">{linkedPeople.map(person=><div key={person.id}><strong>{primary(person.name,locale)}</strong><span>{secondary(person.name,locale)}</span></div>)}</div></>}<h3>{t.participants}</h3><div className="participant-list">{(event.participants||[]).map((participant,index)=>{const entity=entityById.get(participant.polityId);return <div key={`${participant.polityId}-${index}`}><strong>{primary(entity?.name,locale)||participant.polityId}</strong><span>{participant.role} · {participant.outcome}</span></div>})}</div><h3>{t.sources}</h3><div className="citations">{citations.map(item=><p key={item.sourceId}><a href={item.source.url} target="_blank" rel="noreferrer"><strong>{primary(item.source.title,locale)}</strong></a><span>{item.locator}</span></p>)}</div><button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
 }
 
 function TerritoryDetail({territory,locale,t,onClose}){
@@ -413,7 +416,7 @@ export default function App(){
   const changeLocale=()=>setLocale(current=>{const next=current==='kn'?'en':'kn';setStoredLocale(next);return next})
   const handleAuthenticated=user=>{setCommunityUser(user);window.location.hash=user.roles?.includes('administrator')?'admin':'profile'}
   const clearRecordDetails=()=>{setSelectedPerson(null);setSelectedWork(null);setSelectedInscription(null);setSelectedSearchPlace(null)}
-  const chooseEvent=event=>{setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&event.coords?.[0]>19.5)setScope('india')}
+  const chooseEvent=event=>{setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;const [lat,lng]=event.coords||[];const isKarnataka=Number.isFinite(lat)&&Number.isFinite(lng)&&lat>=10&&lat<=20&&lng>=73&&lng<=81;const isIndia=Number.isFinite(lat)&&Number.isFinite(lng)&&lat>=5&&lat<=38&&lng>=67&&lng<=98;if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&isIndia&&!isKarnataka)setScope('india');else if(isKarnataka&&scope==='world')setScope('karnataka')}
   const chooseTerritory=territory=>{setSelectedTerritory(territory);setSelectedEvent(null);setSelectedCulture(null);clearRecordDetails();if(territory.classification!=='core-administered')setScope('india')}
   const chooseCulture=item=>{setSelectedCulture(item);setSelectedEvent(null);setSelectedTerritory(null);clearRecordDetails();if(item.coords[0]>19.5||item.coords[1]<73||item.coords[1]>81)setScope('india')}
   const chooseWork=work=>{setYear(work.date.from);setSelected(work.polityId);setSelectedWork(work);setSelectedPerson(null);setSelectedInscription(null);setSelectedSearchPlace(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null)}

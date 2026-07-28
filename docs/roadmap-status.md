@@ -74,6 +74,7 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 ### P4 — release quality
 
+- Current regression coverage includes permanent admin saves across every collection and timeline/map safety checks for local events with incomplete route evidence.
 - Run keyboard, screen-reader, contrast and mobile checks on every page.
 - Reduce large JavaScript chunks and keep Bengaluru KML loading lazy.
 - Add regression tests for route aliases, map selection, timeline filtering, bilingual labels and static export privacy.

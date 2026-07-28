@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { atlasData, collectionLabels } from './data/atlas'
 import { hasValidationErrors, validateAtlas } from './data/validate'
+import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 
 const collections = Object.keys(collectionLabels)
 const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', collaborations:'collaboration' }
@@ -101,7 +102,9 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const recordIssues = useMemo(()=>{
     const candidate=clone(data); const list=candidate[collection] || []; const index=list.findIndex(record=>record.id===selectedId)
     if(index>=0) list[index]=draft; else list.push(draft)
-    return validateAtlas(candidate).filter(issue=>issue.id===(draft.id || 'row-1') || (!draft.id && issue.collection===collection))
+    const issues=validateAtlas(candidate).filter(issue=>issue.id===(draft.id || 'row-1') || (!draft.id && issue.collection===collection))
+    if(selectedId && draft.id !== selectedId) issues.unshift({severity:'error',collection,id:draft.id||selectedId,path:'id',message:`Stable ID “${selectedId}” cannot be changed because other records reference it.`})
+    return issues
   },[data,collection,selectedId,draft])
   const progress = useMemo(()=>{
     const rows=collections.map(key=>{const records=Array.isArray(data[key])?data[key]:[];const verified=records.filter(record=>recordProgress(record)==='verified').length;return {key,total:records.length,verified,pending:records.length-verified}})
@@ -129,15 +132,16 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     setSaving(true);setNotice('Saving permanent MariaDB revision…')
     try {
       const response=await fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/dataset`,{method:'PUT',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({dataset:next,baseRevision:revision})})
-      const body=await response.json().catch(()=>({}));if(!response.ok)throw new Error(body.error||`Server request failed (${response.status})`)
+      const body=await response.json().catch(()=>({}));if(!response.ok){const details=Array.isArray(body.issues)&&body.issues.length?` ${formatValidationIssues(body.issues)}`:'';throw new Error(`${body.error||`Server request failed (${response.status})`}${details}`)}
       setData(next);setRevision(Number(body.revision||revision+1));if(legacyPending){localStorage.removeItem(LEGACY_STORAGE_KEY);setLegacyPending(false)}setNotice(`${successMessage} Revision ${body.revision}.`);return true
     } catch(error) { setNotice(error.message);return false } finally { setSaving(false) }
   }
   const save = async () => {
-    const next = clone(data); const index = next[collection].findIndex(record => record.id === selectedId)
-    const saved = { ...draft, review:{...draft.review,updatedAt:today()} }
-    if (index >= 0) next[collection][index] = saved; else next[collection].push(saved)
-    const didSave=await persistDataset(next);if(didSave)setSelectedId(saved.id)
+    const prepared=prepareDatasetSave({data,collection,selectedId,draft,updatedAt:today()})
+    if(prepared.error){setNotice(prepared.error);return}
+    const errors=validateAtlas(prepared.next).filter(issue=>issue.severity==='error')
+    if(errors.length){setNotice(`Save blocked by ${errors.length} validation error(s). ${formatValidationIssues(errors)}`);return}
+    const didSave=await persistDataset(prepared.next);if(didSave)setSelectedId(prepared.saved.id)
   }
   const create = () => { setSelectedId(''); setEditor(blankRecord(collection)); setNotice('New unsaved record.') }
   const remove = async () => {
@@ -185,7 +189,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       <section className="record-editor">
         <div className="editor-head"><div><p className="eyebrow">{selectedId?t.edit:t.create}</p><h2>{recordTitle(draft,collection,locale)}</h2>{locale==='kn'&&(draft.name?.en||draft.title?.en)&&<p className="entity-secondary">{draft.name?.en||draft.title?.en}</p>}</div>{selectedId&&<button className="danger-link" onClick={remove}>{t.delete}</button>}</div>
         <div className="form-grid">
-          <label className="wide">{t.stableId}<input value={draft.id||''} onChange={e=>update(['id'],e.target.value)} placeholder={`${collectionPrefix[collection]}-unique-name`}/><small>Lowercase kebab-case; never reuse a published ID.</small></label>
+          <label className="wide">{t.stableId}<input value={draft.id||''} readOnly={Boolean(selectedId)} onChange={e=>update(['id'],e.target.value)} placeholder={`${collectionPrefix[collection]}-unique-name`}/><small>{selectedId?'Stable IDs cannot be changed after creation because other records reference them.':'Lowercase kebab-case; never reuse a published ID.'}</small></label>
           {collection==='relationships' ? <>
             <label>From ID <input value={draft.fromId||''} onChange={e=>update(['fromId'],e.target.value)}/></label><label>Relationship type <input value={draft.type||''} onChange={e=>update(['type'],e.target.value)}/></label><label className="wide">To ID <input value={draft.toId||''} onChange={e=>update(['toId'],e.target.value)}/></label>
           </> : collection==='sources' ? <>
