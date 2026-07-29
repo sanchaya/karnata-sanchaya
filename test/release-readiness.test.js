@@ -90,7 +90,9 @@ test('guided tours cover public pages and the private admin workspace', () => {
   }
   assert.match(adminSource, /<GuidedTour tourKey="admin"/, 'admin must have its own workflow tour')
   assert.match(tourSource, /role="dialog"/, 'tour instructions must be exposed as a dialog')
-  assert.match(tourSource, /aria-modal="true"/, 'tour dialog must be modal to assistive technology')
-  assert.match(tourSource, /localStorage/, 'tour completion must persist per workspace')
+  assert.match(tourSource, /aria-modal="false"/, 'tour guidance must not present itself as a blocking modal')
+  assert.match(tourSource, /karnataka-atlas-tour:welcome-v1/, 'the automatic tour offer must be shared across the whole application')
+  assert.doesNotMatch(tourSource, /scrollIntoView/, 'the tour must not move the page away from what the user is exploring')
+  assert.doesNotMatch(tourSource, /guided-tour-backdrop/, 'the tour must not dim or block the application')
   assert.match(tourSource, /ArrowRight|ArrowLeft|Escape/, 'tour must support keyboard navigation')
 })
