@@ -36,6 +36,10 @@ npm run dev
 
 This runs the static atlas. It deliberately shows the contribution service as offline unless the API and MariaDB are also running.
 
+## Install and offline use
+
+The production build is installable as a browser app. After opening the deployed portal once while online, use the browser’s **Install app** / **Add to Home Screen** action. The service worker keeps the application shell, Karnataka district boundaries and map tiles that have already been visited in local cache, so records and boundaries remain usable during a connectivity interruption. A complete offline world tile archive is intentionally not bundled; a future full offline map package should use a licensed, self-hosted tile source rather than bulk-downloading public OpenStreetMap tiles.
+
 ## Run the live community portal
 
 Copy `.env.example` to `.env`, configure a local MariaDB database, then run:
