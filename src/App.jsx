@@ -1,10 +1,11 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { CircleMarker, GeoJSON, MapContainer, Polygon, Polyline, Popup, TileLayer, Tooltip, useMap } from 'react-leaflet'
 import { atlasData } from './data/atlas'
 import { getInitialLocale, messages, setStoredLocale } from './i18n'
 import SourceLink from './SourceLink'
 import GuidedTour from './GuidedTour'
 import { isIndiaPoint, isKarnatakaPoint, mapZoomForPoint, mapZoomForPositions } from './map-focus'
+import { readAtlasUrlState, updateAtlasUrlState } from './share-state'
 
 const Admin=lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
@@ -206,9 +207,11 @@ const territoriesForYear=year=>{
   return active.filter(item=>item.snapshotKind!=='prototype'||!item.polityIds.some(polityId=>specificCorePolities.has(polityId)))
 }
 
-function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,selectedWorkPosition,selectedPersonPosition,selectedInscription,selectedSearchPlace,comparisonPositions}){
+function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,selectedWorkPosition,selectedPersonPosition,selectedInscription,selectedSearchPlace,comparisonPositions,preserveInitialMapView=false}){
   const map=useMap()
+  const preserveInitialView=useRef(preserveInitialMapView)
   useEffect(()=>{
+    if(preserveInitialView.current){preserveInitialView.current=false;return}
     const focusPosition=position=>{
       if(!position)return
       const targetZoom=mapZoomForPoint(position)
@@ -235,6 +238,20 @@ function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,sele
     else if(!hasSelection&&scope==='world') map.setView([25,48],2.25)
     else if(!hasSelection) map.setView(scope==='india'?[20.2,78.4]:[14.7,76.2],scope==='india'?4.35:6.35)
   },[map,scope,selectedEvent,selectedTerritory,selectedCulture,selectedWorkPosition,selectedPersonPosition,selectedInscription,selectedSearchPlace,comparisonPositions])
+  return null
+}
+
+function MapShareSync({onMapMove}){
+  const map=useMap()
+  useEffect(()=>{
+    const sync=()=>{
+      const center=map.getCenter()
+      onMapMove({lat:center.lat,lng:center.lng,zoom:map.getZoom()})
+    }
+    map.on('moveend',sync)
+    map.on('zoomend',sync)
+    return()=>{map.off('moveend',sync);map.off('zoomend',sync)}
+  },[map,onMapMove])
   return null
 }
 
@@ -421,10 +438,12 @@ export default function App(){
   const publicViews=['atlas','relations','literature','epigraphy','districts','district-history','inscriptions','evidence','research','community','profile']
   const normalizeView=hash=>hash==='history'?'district-history':hash
   const initialHash=normalizeView(window.location.hash.slice(1))
+  const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
   const [admin,setAdmin]=useState(()=>window.location.hash.slice(1)==='admin')
   const [view,setView]=useState(()=>publicViews.includes(initialHash)?initialHash:'atlas')
   const [locale,setLocale]=useState(getInitialLocale)
-  const [year,setYear]=useState(975)
+  const [year,setYear]=useState(()=>initialShareState.year??975)
+  const [atlasMapView]=useState(()=>initialShareState.map||{lat:14.7,lng:76.2,zoom:6.35})
   const [compareYear,setCompareYear]=useState(null)
   const [selected,setSelected]=useState('polity-rashtrakuta')
   const [selectedEvent,setSelectedEvent]=useState(null)
@@ -448,6 +467,9 @@ export default function App(){
   const [mobileNavOpen,setMobileNavOpen]=useState(false)
   useEffect(()=>{document.documentElement.lang=locale},[locale])
   useEffect(()=>{localStorage.setItem('karnataka-atlas-map-theme',mapTheme)},[mapTheme])
+  const lastShareYear=useRef(year)
+  const replaceShareUrl=state=>{const next=updateAtlasUrlState(state);window.history.replaceState(null,'',`${next.pathname}${next.search}${next.hash}`)}
+  useEffect(()=>{if(lastShareYear.current===year)return;lastShareYear.current=year;if(view==='atlas')replaceShareUrl({year})},[year,view])
   // Hydrate the parent auth state once from the live session. Do not clear a
   // successful login because a transient API request fails during navigation;
   // that used to make the epigraphy explorer hide Bengaluru after login.
@@ -533,8 +555,9 @@ export default function App(){
     {view==='atlas'&&<main id="atlas">
       <aside className="sidebar"><GlobalSearch locale={locale} t={t} query={query} setQuery={setQuery} filters={searchFilters} setFilters={setSearchFilters} results={searchResults} onSelect={chooseSearchResult}/><div className="scope-switch"><span>{t.mapScope}</span><div><button className={scope==='karnataka'?'active':''} onClick={()=>{setScope('karnataka');setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}}>{t.karnatakaView}</button><button className={scope==='india'?'active':''} onClick={()=>{setScope('india');clearRecordDetails()}}>{t.indiaView}</button><button className={scope==='world'?'active':''} onClick={()=>{setScope('world');clearRecordDetails()}}>{t.worldView}</button></div></div><div className="section-title"><span>{t.kingdomsIn} {timelineYearLabel(year,locale)}</span><b>{visible.length}</b></div><div className="kingdom-list">{visible.map(k=><button className={selected===k.id?'selected':''} key={k.id} onClick={()=>{setSelected(k.id);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}}><i style={{background:k.color}}></i><span><strong>{primary(k.name,locale)}</strong><small>{secondary(k.name,locale)} · {k.start}–{k.end}</small></span></button>)}{!visible.length&&<p className="empty">{t.noKingdom}</p>}</div><div className="layers"><div className="section-title"><span>{t.mapLayers}</span></div>{Object.entries({boundaries:t.boundaries,territorialReach:t.territorialReach,districts:t.districtBoundaries,heritageSites:t.heritageCandidates,culture:t.culturalHeritage,temples:t.searchKinds.templeSites,inscriptions:`${t.inscriptions} · ${activeInscriptions.length}`,researchCandidates:`${t.mapResearchCandidates} · ${visibleResearchCandidates.length}`,events:t.events,modern:t.modernMap}).map(([key,label])=><label key={key}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key]}))}/><span>{label}</span></label>)}</div>{(layers.heritageSites||layers.districts)&&<div className="heritage-map-filters"><strong>{t.mapHeritageFilters}</strong><select aria-label={t.allDistricts} value={selectedDistrict} onChange={event=>setSelectedDistrict(event.target.value)}><option value="all">{t.allDistricts}</option>{atlasData.heritageAudits.map(audit=><option key={audit.id} value={audit.id}>{primary(audit.district,locale)}</option>)}</select><select aria-label={t.allHeritageCategories} value={heritageCategory} onChange={event=>setHeritageCategory(event.target.value)}><option value="all">{t.allHeritageCategories}</option>{Object.keys(t.heritageCategoryLabels).map(value=><option key={value} value={value}>{t.heritageCategoryLabels[value]}</option>)}</select><select aria-label={t.heritageAuthorityFilter} value={heritageAuthority} onChange={event=>setHeritageAuthority(event.target.value)}>{Object.entries(t.heritageAuthorityLabels).map(([value,label])=> <option key={value} value={value}>{label}</option>)}</select><label className="heritage-show-all"><input type="checkbox" checked={showAllHeritage} onChange={event=>setShowAllHeritage(event.target.checked)}/><span>{t.showAllHeritage}</span></label><small><b>{visibleHeritage.length}</b> {showAllHeritage?t.allHeritageShown:t.visibleThisYear} · <b>{futureHeritage.length}</b> {t.appearLater} · <b>{undatedHeritage.length}</b> {t.awaitingDate}</small></div>}</aside>
       <section className={`map-stage theme-${mapTheme} ${compareYear!=null?'compare-mode':''}`}>
-        <MapContainer center={[14.7,76.2]} zoom={6.35} minZoom={3} scrollWheelZoom>
-          <MapViewport scope={scope} selectedEvent={selectedEvent} selectedTerritory={selectedTerritory} selectedCulture={selectedCulture} selectedWorkPosition={selectedWorkPosition} selectedPersonPosition={selectedPersonPosition} selectedInscription={selectedInscription} selectedSearchPlace={selectedSearchPlace} comparisonPositions={comparisonPositions}/>
+        <MapContainer center={[atlasMapView.lat,atlasMapView.lng]} zoom={atlasMapView.zoom} minZoom={3} scrollWheelZoom>
+          <MapViewport scope={scope} selectedEvent={selectedEvent} selectedTerritory={selectedTerritory} selectedCulture={selectedCulture} selectedWorkPosition={selectedWorkPosition} selectedPersonPosition={selectedPersonPosition} selectedInscription={selectedInscription} selectedSearchPlace={selectedSearchPlace} comparisonPositions={comparisonPositions} preserveInitialMapView={Boolean(initialShareState.map)}/>
+          <MapShareSync onMapMove={position=>{if(view==='atlas')replaceShareUrl({map:position})}}/>
           {layers.modern&&<TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>}
           <LocalizedMapLabels locale={locale} capitalIds={activeCapitalIds} districtGeojson={districtGeojson} showDistricts={layers.districts} suppressLabels={Boolean(selectedEvent||selectedTerritory||selectedCulture||selectedPerson||selectedWork||selectedInscription||selectedSearchPlace)}/>
           {layers.districts&&districtGeojson&&<GeoJSON interactive={false} key={`${locale}-${selectedDistrict}-${districtGeojson.features.length}`} data={districtGeojson} style={feature=>({color:selectedDistrict===feature.properties.id?'#3f37c9':'#68738b',weight:selectedDistrict===feature.properties.id?3:1.2,fillColor:'#4361ee',fillOpacity:selectedDistrict===feature.properties.id ? .12 : .025,dashArray:selectedDistrict===feature.properties.id?null:'5 4'})}/>}
