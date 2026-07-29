@@ -5,6 +5,7 @@ import { bengaluruKmlCandidates } from '../src/data/bengaluru-kml.js'
 
 const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
+const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
@@ -24,6 +25,13 @@ test('mobile and bilingual navigation expose accessible controls', () => {
   assert.match(appSource, /aria-label=\{t\.primaryNavigation\}/, 'primary navigation must have an accessible name')
   assert.match(appSource, /aria-label=\{t\.languageLabel\}/, 'language switch must have an accessible name')
   assert.match(indexSource, /React\.StrictMode/, 'release builds must keep strict-mode diagnostics enabled')
+})
+
+test('the static release is installable and keeps map context available offline', () => {
+  assert.match(indexSource, /serviceWorker\.register/, 'production builds must register the offline service worker')
+  assert.match(serviceWorkerSource, /karnataka-districts\.geojson/, 'district boundaries must be cached with the app shell')
+  assert.match(serviceWorkerSource, /tile\.openstreetmap\.org/, 'visited map tiles must be cached for offline reuse')
+  assert.match(serviceWorkerSource, /caches\.match\('\.\/index\.html'\)/, 'offline navigation must fall back to the cached app shell')
 })
 
 test('map and timeline safety guards remain wired into the public app', () => {
