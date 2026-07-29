@@ -12,11 +12,20 @@ const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url),
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile']
+  const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
   assert.match(appSource, /hash==='history'\?'district-history':hash/, 'legacy history links must resolve to district history')
+})
+
+test('navigation separates historical exploration from project utilities', () => {
+  assert.match(appSource, /const primaryNavItems=/, 'historical exploration routes must remain grouped together')
+  assert.match(appSource, /const utilityNavItems=/, 'about, research and contribution routes must share a utility group')
+  assert.match(appSource, /className="header-utility-nav"/, 'utility routes must be available in the desktop header')
+  assert.match(appSource, /className="nav-utility-link"|navLink\(item,'nav-utility-link'\)/, 'utility routes must remain available in the responsive menu')
+  const publicHeader = appSource.slice(appSource.indexOf('<header><div className="sanchaya-product-brand"'), appSource.indexOf('<nav id="primary-navigation"'))
+  assert.doesNotMatch(publicHeader, /href="https:\/\/sanchaya\.org"/, 'the public header must link to the internal About page instead of leaving the atlas')
 })
 
 test('mobile and bilingual navigation expose accessible controls', () => {
@@ -75,7 +84,7 @@ test('relations explorer includes first-class bilateral political records and ba
 
 test('guided tours cover public pages and the private admin workspace', () => {
   assert.match(appSource, /<GuidedTour tourKey=\{view\}/, 'public routes must render the reusable tour')
-  for (const route of ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile']) {
+  for (const route of ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']) {
     const key = route.includes('-') ? `['"]${route}['"]` : route
     assert.match(appSource, new RegExp(`${key}:\\[`), `${route} must have page-specific tour steps`)
   }
