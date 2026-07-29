@@ -3,6 +3,12 @@ const review=status=>({status,reviewer:null,updatedAt:'2026-07-27'})
 
 export const collaborations=[
   {
+    id:'collaboration-shashidhara-hg-hoysala-temples',name:name('Shashidhara HG — Hoysala temple documentation','ಶಶಿಧರ HG — ಹೊಯ್ಸಳ ದೇವಾಲಯ ದಾಖಲೀಕರಣ'),entityKind:'individual',stage:'complete',
+    collaborationType:'heritage-dataset-contribution',url:'https://thesouthfirst.com/featured/preserving-history-bengaluru-man-documents-over-1500-hoysala-temples/',
+    contribution:name('Credited contributor of the Offbeat Hoysala Temples KML research layer. The atlas preserves his dataset attribution and newspaper evidence while keeping each placemark as needs-review until temple identity, construction phase, protection status, managing authority, condition and item-level citations are independently resolved.','ಆಫ್‌ಬೀಟ್ ಹೊಯ್ಸಳ ದೇವಾಲಯಗಳ KML ಸಂಶೋಧನಾ ಪದರದ ಕೊಡುಗೆದಾರರಿಗೆ ಕೃತಜ್ಞತೆ. ದೇವಾಲಯದ ಗುರುತು, ನಿರ್ಮಾಣ ಹಂತ, ರಕ್ಷಣಾ ಸ್ಥಿತಿ, ನಿರ್ವಹಣಾ ಪ್ರಾಧಿಕಾರ, ಸ್ಥಿತಿ ಮತ್ತು ವಸ್ತುಮಟ್ಟದ ಆಕರಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಹರಿಸುವವರೆಗೆ ಪ್ರತಿಯೊಂದು ಸ್ಥಳಚಿಹ್ನೆಯನ್ನು needs-review ಆಗಿಯೇ ಇಟ್ಟು, ಅವರ ಡೇಟಾಸೆಟ್ ಮತ್ತು ಪತ್ರಿಕಾ ಸಾಕ್ಷ್ಯವನ್ನು ದಾಖಲಿಸಲಾಗಿದೆ.'),
+    contactPath:'#research',review:review('published'),
+  },
+  {
     id:'collaboration-karnataka-itihasa-academy',name:name('Karnataka Itihasa Academy','ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾದೆಮಿ'),entityKind:'organization',stage:'complete',
     collaborationType:'research-publication-and-digitisation',url:'https://karnatakaitihasaacademy.org/',
     contribution:name('Publisher and scholarly steward of the Itihasa Darshana research-paper volumes. The volumes are treated as citable printed sources; Internet Archive scans provide digital access and OCR discovery.','ಇತಿಹಾಸ ದರ್ಶನ ಸಂಶೋಧನಾ-ಪ್ರಬಂಧ ಸಂಪುಟಗಳ ಪ್ರಕಾಶಕ ಮತ್ತು ವಿದ್ವತ್ ಪಾಲಕ. ಸಂಪುಟಗಳನ್ನು ಉಲ್ಲೇಖಿಸಬಹುದಾದ ಮುದ್ರಿತ ಆಕರಗಳಾಗಿ ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ; ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್ ಸ್ಕ್ಯಾನ್‌ಗಳು ಡಿಜಿಟಲ್ ಪ್ರವೇಶ ಮತ್ತು OCR ಶೋಧನಾ ಸಹಾಯ ಒದಗಿಸುತ್ತವೆ.'),

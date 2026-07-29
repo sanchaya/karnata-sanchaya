@@ -7,6 +7,8 @@ const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'ut
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
+const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
+const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile']
@@ -61,4 +63,17 @@ test('relations explorer includes first-class bilateral political records and ba
   assert.match(relationsSource, /atlasData\.politicalRelations/, 'the relations page must consume the bilateral relation collection')
   assert.match(relationsSource, /politicalRelationRecords/, 'bilateral records must be normalized for filters and the map')
   assert.match(relationsSource, /battleLocations/, 'battle locations must be retained in map positions')
+})
+
+test('guided tours cover public pages and the private admin workspace', () => {
+  assert.match(appSource, /<GuidedTour tourKey=\{view\}/, 'public routes must render the reusable tour')
+  for (const route of ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile']) {
+    const key = route.includes('-') ? `['"]${route}['"]` : route
+    assert.match(appSource, new RegExp(`${key}:\\[`), `${route} must have page-specific tour steps`)
+  }
+  assert.match(adminSource, /<GuidedTour tourKey="admin"/, 'admin must have its own workflow tour')
+  assert.match(tourSource, /role="dialog"/, 'tour instructions must be exposed as a dialog')
+  assert.match(tourSource, /aria-modal="true"/, 'tour dialog must be modal to assistive technology')
+  assert.match(tourSource, /localStorage/, 'tour completion must persist per workspace')
+  assert.match(tourSource, /ArrowRight|ArrowLeft|Escape/, 'tour must support keyboard navigation')
 })

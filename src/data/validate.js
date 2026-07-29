@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','templeInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
 const DISTRICT_HISTORY_CATEGORIES = ['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope']
 
@@ -100,6 +100,13 @@ export function validateAtlas(data) {
         if (!record.description?.kn?.trim()) add('warning',collection,id,'description.kn','A Kannada interpretation note is recommended.')
         if (!Array.isArray(record.citations) || record.citations.length === 0) add('warning',collection,id,'citations','Cultural records should cite at least one source.')
       }
+      if (collection === 'templeInventoryLeads') {
+        if (!record.deity?.trim() || !record.locationLabel?.trim()) add('error',collection,id,'deity/locationLabel','Inventory leads require deity and locality fields.')
+        if (!record.district?.en?.trim() || !record.district?.kn?.trim() || !record.taluk?.en?.trim() || !record.taluk?.kn?.trim()) add('error',collection,id,'district/taluk','Inventory leads require bilingual district and taluk labels.')
+        if (!['Shaiva','Vaishnava','Jaina'].includes(record.tradition)) add('error',collection,id,'tradition','Inventory tradition must be Shaiva, Vaishnava or Jaina.')
+        if (!record.sourceDataset?.trim()) add('error',collection,id,'sourceDataset','Inventory leads require the contributing dataset name.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Inventory leads require a source-row citation.')
+      }
       if (collection === 'works') {
         if (!record.creator?.en?.trim() || !record.creator?.kn?.trim()) add('error',collection,id,'creator','Works require a bilingual creator or attributed-author display.')
         if (!Array.isArray(record.languages) || record.languages.length===0) add('warning',collection,id,'languages','At least one work language is recommended.')
@@ -129,7 +136,9 @@ export function validateAtlas(data) {
       }
       if (collection === 'inscriptions') {
         if (!record.placeId || !record.polityId) add('error',collection,id,'relationships','Inscriptions require a mapped place and related polity.')
-        if (!record.districtAuditId) add('error',collection,id,'districtAuditId','Inscriptions require a district audit assignment.')
+        const isExternal = record.geographicScope?.outsideKarnataka === true
+        if (!record.districtAuditId && !isExternal) add('error',collection,id,'districtAuditId','Karnataka inscriptions require a district audit assignment.')
+        if (isExternal && (!record.geographicScope?.region?.trim() || !/^[A-Z]{2}$/.test(record.geographicScope?.countryCode || '') || !record.geographicScope?.countryName?.en?.trim() || !record.geographicScope?.countryName?.kn?.trim())) add('error',collection,id,'geographicScope','Outside-Karnataka inscriptions require a bilingual region, country code and country name.')
         if (!Array.isArray(record.languages) || record.languages.length===0) add('error',collection,id,'languages','At least one inscription language is required.')
         if (!Array.isArray(record.scripts) || record.scripts.length===0) add('error',collection,id,'scripts','At least one inscription script is required.')
         if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('warning',collection,id,'description','A bilingual inscription note is recommended.')
@@ -301,6 +310,7 @@ export function validateAtlas(data) {
     })
     ;(record.polityIds || []).forEach((polityId,index) => { if (!all.has(polityId)) add('error',collection,id,`polityIds.${index}`,`Unknown polity: ${polityId}`) })
     ;(record.relatedEventIds || []).forEach((eventId,index) => { if (!all.has(eventId)) add('error',collection,id,`relatedEventIds.${index}`,`Unknown event: ${eventId}`) })
+    ;(record.relationIds || []).forEach((relationId,index) => { if (!all.has(relationId)) add('error',collection,id,`relationIds.${index}`,`Unknown related political relation: ${relationId}`) })
   }))
   return issues
 }

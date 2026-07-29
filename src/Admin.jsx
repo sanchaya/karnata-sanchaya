@@ -2,9 +2,10 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { atlasData, collectionLabels } from './data/atlas'
 import { hasValidationErrors, validateAtlas } from './data/validate'
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
+import GuidedTour from './GuidedTour'
 
 const collections = Object.keys(collectionLabels)
-const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
+const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', templeInventoryLeads:'temple-inventory', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
 const LEGACY_STORAGE_KEY = 'karnataka-atlas-research-draft-v0.9'
 const clone = value => JSON.parse(JSON.stringify(value))
 const today = () => new Date().toISOString().slice(0,10)
@@ -66,6 +67,7 @@ const adminText = {
 }
 Object.assign(adminText.kn.collections,{externalPolities:'ಬಾಹ್ಯ ರಾಜ್ಯಗಳು',events:'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು',culturalHeritage:'ಸ್ಮಾರಕಗಳು, ಕಲೆ ಮತ್ತು ಸಂಸ್ಕೃತಿ',reigns:'ಆಳ್ವಿಕೆ ಮತ್ತು ರಾಜಕೀಯ ಅವಧಿಗಳು',territorialExtents:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',deepChronologies:'ಪ್ರಾಚೀನ ಕಾಲಕ್ರಮಗಳು',heritageAudits:'ಜಿಲ್ಲಾ ಪರಂಪರೆ ಪರಿಶೀಲನೆಗಳು'})
 adminText.kn.collections.districtHistoryResearch='ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ ಸಂಶೋಧನೆ'
+adminText.kn.collections.templeInventoryLeads='ದೇವಾಲಯ ಪಟ್ಟಿ ಸುಳಿವುಗಳು'
 adminText.kn.collections.inscriptionAudits='ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆಗಳು'
 adminText.kn.collections.politicalRelations='ದ್ವಿಪಕ್ಷೀಯ ರಾಜಕೀಯ ಸಂಬಂಧಗಳು'
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'
@@ -75,6 +77,16 @@ Object.assign(adminText.kn,{progressTitle:'ದತ್ತಾಂಶ ಪ್ರಗತ
 Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntro:'A live summary of reviewed, pending and invalid records',dataPoints:'Total data points',verified:'Reviewed / published',pending:'Pending review',validationErrors:'Validation errors',coverage:'Coverage',collectionProgress:'Collection progress'})
 Object.assign(adminText.kn,{releaseTitle:'ಲೈವ್ ಸಮುದಾಯ ಹಸ್ತಾಂತರ',releaseIntro:'ಮಾರಿಯಾDB ಕಾರ್ಯಕ್ಷೇತ್ರ ಮತ್ತು ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆಯ ಸ್ಥಿತಿ',pendingAccounts:'ಅನುಮೋದನೆ ಬಾಕಿ ಖಾತೆಗಳು',submittedContributions:'ವಿಮರ್ಶೆ ಬಾಕಿ ಕೊಡುಗೆಗಳು',pendingVerifications:'ID ಪರಿಶೀಲನೆ ಬಾಕಿ',appointedReviewers:'ನೇಮಕಗೊಂಡ ಪರಿಶೀಲಕರು',latestRevision:'ಕೊನೆಯ MariaDB ಆವೃತ್ತಿ',lastPublished:'ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆ',notPublished:'ಇನ್ನೂ ಸ್ಥಿರ ಪ್ರಕಟಣೆ ಇಲ್ಲ'})
 Object.assign(adminText.en,{releaseTitle:'Live community handoff',releaseIntro:'MariaDB workspace and latest static-publication status',pendingAccounts:'Accounts awaiting approval',submittedContributions:'Contributions awaiting review',pendingVerifications:'ID verifications pending',appointedReviewers:'Appointed reviewers',latestRevision:'Latest MariaDB revision',lastPublished:'Latest static publication',notPublished:'No static publication yet'})
+
+const adminTourSteps=(locale='kn')=>[
+  {target:'.admin-header',title:{kn:'ನಿರ್ವಾಹಕ ಕಾರ್ಯಕ್ಷೇತ್ರ · ಸ್ಥಿರ ಡೇಟಾ ನಿರ್ವಹಣೆ',en:'Admin workspace · manage the permanent dataset'},body:{kn:'ನಿಮ್ಮ ಭಾಷೆ, ಪ್ರೊಫೈಲ್ ಮತ್ತು ಸಾರ್ವಜನಿಕ ಭೂಪಟಕ್ಕೆ ಹಿಂತಿರುಗುವ ಆಯ್ಕೆಗಳು ಇಲ್ಲಿ ಇವೆ.',en:'Use the header to switch language, open your profile or return to the public atlas.'}},
+  {target:'.admin-progress',title:{kn:'ಪ್ರಗತಿ ವರದಿ · ವ್ಯಾಪ್ತಿ ಮತ್ತು ಸ್ಥಿತಿಗಳು',en:'Progress report · coverage and status'},body:{kn:'ಒಟ್ಟು ದತ್ತಾಂಶ ಬಿಂದುಗಳು, ಪರಿಶೀಲಿತ ಮತ್ತು ಬಾಕಿ ದಾಖಲೆಗಳು ಹಾಗೂ ಸಂಗ್ರಹವಾರು ವ್ಯಾಪ್ತಿಯನ್ನು ಇಲ್ಲಿ ನೋಡಿ.',en:'See total data points, reviewed and pending records, validation errors and collection coverage.'}},
+  {target:'.admin-release-readiness,.admin-progress',title:{kn:'ಪ್ರಕಟಣೆ ಸಿದ್ಧತೆ · live handoff',en:'Release readiness · live handoff'},body:{kn:'MariaDB ಕಾರ್ಯಕ್ಷೇತ್ರದಿಂದ ಸ್ಥಿರ ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ಹೋಗುವ ಮೊದಲು ಬಾಕಿ ಖಾತೆಗಳು, ಕೊಡುಗೆಗಳು ಮತ್ತು ಪರಿಶೀಲನೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.',en:'Review pending accounts, contributions and verification gates before handing a MariaDB revision to the static public release.'}},
+  {target:'.admin-nav',title:{kn:'ಸಂಗ್ರಹಗಳು · ಒಂದು ವರ್ಗ ಆಯ್ಕೆಮಾಡಿ',en:'Collections · choose a dataset'},body:{kn:'ರಾಜ್ಯಗಳು, ವ್ಯಕ್ತಿಗಳು, ಘಟನೆಗಳು, ಶಾಸನಗಳು, ಸಾಹಿತ್ಯ, ಸಂಬಂಧಗಳು ಮತ್ತು ಪರಿಶೀಲನಾ ಸಂಗ್ರಹಗಳ ನಡುವೆ ಬದಲಿಸಿ.',en:'Switch between polities, people, events, inscriptions, literature, relations and evidence collections.'}},
+  {target:'.record-list',title:{kn:'ದಾಖಲೆ ಪಟ್ಟಿ · ಹುಡುಕಿ ಮತ್ತು ಆಯ್ಕೆಮಾಡಿ',en:'Record list · search and select'},body:{kn:'ID, ಹೆಸರು ಅಥವಾ ಸ್ಥಿತಿಯಿಂದ ಹುಡುಕಿ. ಸ್ಥಿರ ID ಬದಲಾಗದಂತೆ ದಾಖಲೆ ಆಯ್ಕೆಮಾಡಿ.',en:'Search by ID, name or status, then select a record while preserving its stable identifier.'}},
+  {target:'.record-editor',title:{kn:'ದಾಖಲೆ ಸಂಪಾದಕ · ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಉಳಿಸಿ',en:'Record editor · validate and save'},body:{kn:'ಕನ್ನಡ ಮತ್ತು ಇಂಗ್ಲಿಷ್ ಕ್ಷೇತ್ರಗಳು, ದಿನಾಂಕ, ಪರಿಶೀಲನಾ ಸ್ಥಿತಿ, ಸಂಬಂಧಗಳು ಮತ್ತು ಉಲ್ಲೇಖಗಳನ್ನು ತಿದ್ದುಪಡಿ ಮಾಡಿ. ಉಳಿಸುವ ಮೊದಲು validation ಸಂದೇಶಗಳನ್ನು ಪರಿಹರಿಸಿ.',en:'Edit bilingual fields, dates, review status, relationships and citations. Resolve validation messages before saving a permanent MariaDB revision.'}},
+  {target:'.admin-toolbar',title:{kn:'ಆಮದು ಮತ್ತು ರಫ್ತು · ನಿರ್ವಾಹಕರಿಗೆ ಮಾತ್ರ',en:'Import and export · administrator-only tools'},body:{kn:'JSON ಆಮದು, ರಫ್ತು ಮತ್ತು ಸರ್ವರ್ ಆವೃತ್ತಿ ಮರುಲೋಡ್ ಕಾರ್ಯಗಳು ಇಲ್ಲಿ ಇವೆ. ಸಾರ್ವಜನಿಕ ಬಳಕೆದಾರರಿಗೆ ಇವು ಕಾಣಿಸುವುದಿಲ್ಲ.',en:'JSON import, export and server-version reload controls are kept here for administrators and are not exposed in the public portal.'}},
+]
 
 export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const t=adminText[locale]
@@ -173,6 +185,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       <div className="admin-resource-shortcuts"><span>{t.resourcesManagement}</span><button className={collection==='sources'?'active':''} onClick={()=>selectCollection('sources')}>{t.collections.sources} · {data.sources.length}</button><button className={collection==='collaborations'?'active':''} onClick={()=>selectCollection('collaborations')}>{t.collections.collaborations} · {data.collaborations.length}</button></div>
       <button onClick={()=>fileRef.current.click()}>{t.import}</button><input ref={fileRef} hidden type="file" accept="application/json,.json" onChange={importData}/><button onClick={exportData}>{t.export}</button><button className="danger-link" onClick={reset}>{t.reset}</button>
     </div>
+    <GuidedTour tourKey="admin" locale={locale} steps={adminTourSteps(locale)}/>
     <section className="admin-progress" aria-labelledby="admin-progress-title">
       <div className="admin-progress-head"><div><p className="eyebrow">{t.progressTitle}</p><h2 id="admin-progress-title">{t.progressIntro}</h2></div><strong>{progress.percent}% {t.coverage}</strong></div>
       <div className="admin-stat-grid"><article><b>{progress.total}</b><span>{t.dataPoints}</span></article><article className="verified"><b>{progress.verified}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>

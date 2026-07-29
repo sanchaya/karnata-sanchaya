@@ -95,11 +95,33 @@ test('cross-page links resolve before records reach maps, timelines or explorers
     for (const citation of work.citations || []) assert.ok(sourceIds.has(citation.sourceId), `${work.id} has an unknown source`)
   }
   for (const inscription of atlasData.inscriptions) {
-    assert.ok(districtAuditIds.has(inscription.districtAuditId), `${inscription.id} has an unknown district audit`)
+    assert.ok(inscription.geographicScope?.outsideKarnataka || districtAuditIds.has(inscription.districtAuditId), `${inscription.id} has an unknown district audit`)
     assert.ok(polityIds.has(inscription.polityId), `${inscription.id} has an unknown polity`)
     for (const citation of inscription.citations || []) assert.ok(sourceIds.has(citation.sourceId), `${inscription.id} has an unknown source`)
   }
   for (const audit of atlasData.inscriptionAudits) for (const id of audit.inscriptionIds) assert.ok(inscriptionIds.has(id), `${audit.id} has an unknown inscription`)
+})
+
+test('international inscription layer keeps geography, provenance and relation links explicit', () => {
+  const external = atlasData.inscriptions.filter(record => record.geographicScope?.outsideKarnataka)
+  assert.ok(external.length >= 8, 'the international inscription layer should retain a meaningful research set')
+  assert.ok(external.some(record => record.geographicScope?.outsideIndia), 'at least one inscription should extend beyond India')
+  const relations = new Set(atlasData.politicalRelations.map(record => record.id))
+  for (const record of external) {
+    assert.equal(record.review?.status, 'needs-review', `${record.id} must remain gated pending independent review`)
+    assert.ok(record.geographicScope?.countryCode, `${record.id} needs a country code`)
+    assert.ok(record.citations?.length, `${record.id} needs provenance citations`)
+    for (const relationId of record.relationIds || []) assert.ok(relations.has(relationId), `${record.id} has an unknown relation`)
+  }
+})
+
+test('Hoysala KML and CSV layers preserve contributor provenance without guessed coordinates', () => {
+  const kmlTemples = atlasData.culturalHeritage.filter(record => record.sourceLayer === 'offbeat-hoysala-temples')
+  assert.equal(kmlTemples.length, 12, 'the supplied KML should retain all twelve placemarks')
+  assert.ok(atlasData.templeInventoryLeads.length >= 60, 'the supplied CSV should retain its locality inventory')
+  assert.ok(atlasData.templeInventoryLeads.every(record => record.review?.status === 'needs-review'), 'CSV leads remain pending review')
+  assert.ok(atlasData.templeInventoryLeads.every(record => (record.citations || []).length > 0), 'CSV rows retain source-row citations')
+  assert.ok(kmlTemples.every(record => record.placeIds.length === 1 && record.sourceLayer === 'offbeat-hoysala-temples'), 'KML temples retain exact imported place links')
 })
 
 test('P1 evidence candidates remain gated until every promotion field is verified', () => {

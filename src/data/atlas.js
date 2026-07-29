@@ -2,7 +2,10 @@ import { events, eventSources, externalPolities } from './events.js'
 import { deepChronologies, districtHistoryResearch, heritageAudits } from './research.js'
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
-import { politicalRelations, politicalRelationPeople, politicalRelationPolities } from './political-relations.js'
+import { politicalRelations, politicalRelationPeople, politicalRelationPolities, foreignPoliticalRelations } from './political-relations.js'
+import { foreignInscriptionSources, foreignInscriptionPlaces, foreignInscriptionPolities, foreignInscriptionPeople, foreignInscriptions } from './foreign-inscriptions.js'
+import { offbeatHoysalaSources, offbeatHoysalaPlaces, offbeatHoysalaTemples } from './offbeat-hoysala-temples.js'
+import { hoysalaTempleInventorySources, hoysalaTempleInventoryLeads } from './hoysala-temple-inventory.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -121,6 +124,7 @@ export const atlasData = {
     ['kumaravyasa-bharata','Kumaravyasa Bharata','ಕುಮಾರವ್ಯಾಸ ಭಾರತ','Kumaravyasa','ಕುಮಾರವ್ಯಾಸ',1430,'polity-vijayanagara'],['torave-ramayana','Torave Ramayana','ತೊರವೆ ರಾಮಾಯಣ','Kumara Valmiki','ಕುಮಾರ ವಾಲ್ಮೀಕಿ',1500,'polity-vijayanagara']
   ].map(([id,en,kn,creatorEn,creatorKn,year,polityId,creatorId])=>({ id:`work-${id}`, name:name(en,kn), creator:name(creatorEn,creatorKn), creatorIds:creatorId?[creatorId]:[], creatorDisplay:creatorEn, creatorRole:name('Poet / author','ಕವಿ / ಲೇಖಕ'), date:dateRange(year,year,'circa'), languages:['Kannada'], polityId, externalLinks:[{label:'Sanchaya',url:'https://sanchaya.org'}], citations:[], review:review('needs-review') })),
   culturalHeritage: [],
+  templeInventoryLeads: [],
   reigns: [],
   territorialExtents: [],
   deepChronologies,
@@ -136,6 +140,18 @@ appendUniqueById(atlasData.works, additionalWorks)
 appendUniqueById(atlasData.externalPolities, politicalRelationPolities)
 appendUniqueById(atlasData.people, politicalRelationPeople)
 appendUniqueById(atlasData.politicalRelations, politicalRelations)
+appendUniqueById(atlasData.politicalRelations, foreignPoliticalRelations)
+appendUniqueById(atlasData.sources, foreignInscriptionSources)
+appendUniqueById(atlasData.places, foreignInscriptionPlaces)
+appendUniqueById(atlasData.externalPolities, foreignInscriptionPolities)
+appendUniqueById(atlasData.people, foreignInscriptionPeople)
+appendUniqueById(atlasData.inscriptions, foreignInscriptions)
+appendUniqueById(atlasData.sources, offbeatHoysalaSources)
+appendUniqueById(atlasData.sources, hoysalaTempleInventorySources)
+appendUniqueById(atlasData.places, offbeatHoysalaPlaces)
+appendUniqueById(atlasData.templeInventoryLeads, hoysalaTempleInventoryLeads)
+const lobuTuaPlace = atlasData.places.find(item => item.id === 'place-lobu-tua')
+if (lobuTuaPlace && !lobuTuaPlace.geographicScope) lobuTuaPlace.geographicScope = { region: 'international', countryCode: 'ID', countryName: name('Indonesia', 'ಇಂಡೋನೇಷ್ಯಾ'), outsideKarnataka: true, outsideIndia: true }
 
 // Western Ganga succession leads from the Sripurusha and dynasty overview pages.
 // These are intentionally needs-review until each ruler/date is checked against
@@ -625,6 +641,11 @@ atlasData.territorialExtents = [
   }
 ]
 
+// Contributor-supplied Hoysala KML layer. Keep these as independent research
+// leads so the public map can show the geography without promoting uncertain
+// temple identities or protection claims.
+appendUniqueById(atlasData.culturalHeritage, offbeatHoysalaTemples)
+
 atlasData.relationships = [
   ...atlasData.people.map(person => ({ id:`rel-${person.id}-polity`, fromId:person.id, type:person.roles.includes('ruler')?'ruled':person.roles.includes('patron')?'patron-associated-with':'literary-associated-with', toId:person.polityId, date:person.date, citations:person.citations, review:person.review })),
   ...atlasData.reigns.flatMap(period => [
@@ -649,4 +670,4 @@ atlasData.relationships = [
   ...atlasData.territorialExtents.filter(extent => extent.reignId).map(extent => ({ id:`rel-${extent.id}-period`, fromId:extent.id, type:'snapshot-for-period', toId:extent.reignId, date:extent.date, citations:extent.citations, review:extent.review })),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', templeInventoryLeads:'Temple inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
