@@ -59,6 +59,8 @@ export function validateAtlas(data) {
         ;(record.geography?.battleLocations || []).forEach((location,index)=>{const [lng,lat]=location.coordinates||[];if(!location.label?.trim()||!Number.isFinite(lng)||!Number.isFinite(lat)||lng < -180||lng > 180||lat < -90||lat > 90)add('error',collection,id,`geography.battleLocations.${index}`,'Battle locations require a label and valid longitude/latitude coordinates.')})
         if (!['attested','inferred','contested'].includes(record.evidenceLevel)) add('error',collection,id,'evidenceLevel','Relation evidence level is invalid.')
         if (!Array.isArray(record.peopleIds) || !Array.isArray(record.eventIds) || !Array.isArray(record.treatyDocuments)) add('error',collection,id,'links','Relations require people, event and treaty-document arrays.')
+        if (!Array.isArray(record.reviewChecklist) || record.reviewChecklist.length < 6) add('error',collection,id,'reviewChecklist','Relations require six explicit evidence-review checklist items.')
+        ;(record.reviewChecklist || []).forEach((item,index)=>{if(!item.field||!['unresolved','located','verified','not-applicable'].includes(item.status))add('error',collection,id,`reviewChecklist.${index}`,'Review checklist items require a field and supported status.')})
         ;(record.treatyDocuments || []).forEach((document,index)=>{if(!document.title?.en?.trim()||!document.title?.kn?.trim()||!document.sourceId||!document.locator)add('error',collection,id,`treatyDocuments.${index}`,'Treaty documents require bilingual title, source and locator.')})
         if (!record.outcome?.en?.trim() || !record.outcome?.kn?.trim()) add('warning',collection,id,'outcome','A bilingual outcome statement is recommended.')
       }

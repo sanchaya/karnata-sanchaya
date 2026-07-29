@@ -33,7 +33,7 @@ export const politicalRelationPeople=[
 
 const relation=(id,en,kn,relationKind,from,to,parties,geography,options={})=>({
   id:`political-relation-${id}`,name:n(en,kn),relationKind,date:d(from,to,options.precision||'range'),parties,geography,
-  eventIds:options.eventIds||[],peopleIds:options.peopleIds||[],outcome:options.outcome||{en:'Outcome requires independent review.',kn:'ಫಲಿತಾಂಶಕ್ಕೆ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ.'},summary:options.outcome||{en:'Bilateral relationship requires independent review.',kn:'ದ್ವಿಪಕ್ಷೀಯ ಸಂಬಂಧಕ್ಕೆ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ.'},
+  eventIds:options.eventIds||[],peopleIds:options.peopleIds||[],outcome:options.outcome||{en:'Outcome requires independent review.',kn:'ಫಲಿತಾಂಶಕ್ಕೆ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ.'},summary:options.outcome||{en:'Bilateral relationship requires independent review.',kn:'ದ್ವಿಪಕ್ಷೀಯ ಸಂಬಂಧಕ್ಕೆ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ.'},reviewChecklist:[{field:'party-identity',status:'unresolved'},{field:'date-and-sequence',status:'unresolved'},{field:'route-and-battle-locations',status:'unresolved'},{field:'outcome-and-control',status:'unresolved'},{field:'people-and-commanders',status:'unresolved'},{field:'treaty-or-document-witness',status:'unresolved'}],
   treatyDocuments:options.treatyDocuments||[],evidenceLevel:options.evidenceLevel||'inferred',citations:options.citations||[c('src-asi-early-history','Political relationship overview; replace with event- and document-level citations')],review:{...review},note:options.note||n('Bilateral research scaffold; do not read this as uniform direct rule without evidence.','ದ್ವಿಪಕ್ಷೀಯ ಸಂಶೋಧನಾ ಚೌಕಟ್ಟು; ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಇದನ್ನು ಏಕರೂಪ ನೇರ ಆಳ್ವಿಕೆ ಎಂದು ಓದಬಾರದು.')
 })
 

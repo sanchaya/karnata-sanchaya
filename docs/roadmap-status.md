@@ -109,3 +109,4 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 - Linux/Nginx deployment: [`docs/linux-nginx-install.md`](linux-nginx-install.md)
 - Wiki discovery queue: [`docs/wiki-discovery-and-community-queue.md`](wiki-discovery-and-community-queue.md)
 - Overseas connections audit: [`docs/overseas-connections-audit.md`](overseas-connections-audit.md)
+- India political-relations review queue: [`docs/political-relations-review-queue.md`](political-relations-review-queue.md)

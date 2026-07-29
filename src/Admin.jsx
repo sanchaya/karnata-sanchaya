@@ -29,7 +29,7 @@ const mergeLegacyDraft = (server, legacy) => {
 const blankRecord = collection => collection === 'relationships'
   ? { id:'rel-', fromId:'', type:'associated-with', toId:'', date:{from:null,to:null,era:'CE',precision:'unknown'}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'politicalRelations'
-    ? { id:'political-relation-', name:{en:'',kn:''}, relationKind:'war', parties:[], date:{from:null,to:null,era:'CE',precision:'range'}, geography:{region:'',corridor:'',control:'contested',route:{type:'LineString',coordinates:[],precision:'schematic'}}, eventIds:[], peopleIds:[], treatyDocuments:[], outcome:{en:'',kn:''}, evidenceLevel:'inferred', citations:[], review:{status:'needs-review',reviewer:null,updatedAt:today()} }
+    ? { id:'political-relation-', name:{en:'',kn:''}, relationKind:'war', parties:[], date:{from:null,to:null,era:'CE',precision:'range'}, geography:{region:'',corridor:'',control:'contested',route:{type:'LineString',coordinates:[],precision:'schematic'}}, eventIds:[], peopleIds:[], treatyDocuments:[], reviewChecklist:[], outcome:{en:'',kn:''}, evidenceLevel:'inferred', citations:[], review:{status:'needs-review',reviewer:null,updatedAt:today()} }
   : collection === 'territorialExtents'
     ? { id:'extent-', name:{en:'',kn:''}, classification:'core-administered', controlLevel:'direct', duration:'sustained', confidence:'low', snapshotKind:'prototype', snapshotYear:null, reignId:null, date:{from:null,to:null,era:'CE',precision:'unknown'}, polityIds:[], relatedEventIds:[], geometry:{type:'Polygon',coordinates:[],precision:'schematic'}, description:{en:'',kn:''}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'reigns'
