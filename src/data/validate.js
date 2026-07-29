@@ -48,7 +48,7 @@ export function validateAtlas(data) {
         }
       }
       if (collection === 'politicalRelations') {
-        const relationKinds=['war','invasion','campaign','trade','diplomacy','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration']
+        const relationKinds=['war','invasion','campaign','trade','diplomacy','travel-knowledge','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration']
         if (!relationKinds.includes(record.relationKind)) add('error',collection,id,'relationKind','Bilateral relation kind is invalid.')
         if (!Array.isArray(record.parties) || record.parties.length < 2) add('error',collection,id,'parties','A bilateral relation requires at least two parties.')
         ;(record.parties || []).forEach((party,index)=>{if(!party.polityId||!party.role)add('error',collection,id,`parties.${index}`,'Every party requires a polity ID and role.')})
