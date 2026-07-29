@@ -9,7 +9,7 @@ const entityById=new Map([...atlasData.polities,...atlasData.externalPolities].m
 const sourceById=new Map(atlasData.sources.map(record=>[record.id,record]))
 const localPolityIds=new Set(atlasData.polities.map(record=>record.id))
 const warTypes=new Set(['battle','war','invasion','campaign'])
-const countryNames={AF:'Afghanistan',CN:'China',EG:'Egypt',FR:'France',ID:'Indonesia',IQ:'Iraq',IR:'Iran',OM:'Oman',PT:'Portugal',TR:'Türkiye'}
+const countryNames={AF:'Afghanistan',CN:'China',EG:'Egypt',FR:'France',ID:'Indonesia',IQ:'Iraq',IR:'Iran',LK:'Sri Lanka',MY:'Malaysia',OM:'Oman',PT:'Portugal',SG:'Singapore',TH:'Thailand',TR:'Türkiye'}
 const colors={trade:'#16867a',diplomacy:'#4361ee',travel:'#8b5aa5',war:'#a83e32',political:'#657084',territory:'#c47b22'}
 const copy={
   kn:{title:'ಜಾಗತಿಕ ಸಂಬಂಧಗಳ ಅನ್ವೇಷಣೆ',subtitle:'ದಿಕ್ಕುಗಳು · ಐತಿಹಾಸಿಕ ಮಾರ್ಗಗಳು · ಭೂಪ್ರದೇಶ ನಿಯಂತ್ರಣ',intro:'ವ್ಯಾಪಾರ, ರಾಯಭಾರ, ಪ್ರವಾಸ, ಯುದ್ಧ ಮತ್ತು ವಿದೇಶಿ ಆಳ್ವಿಕೆಯ ಸಾಕ್ಷ್ಯವನ್ನು ಒಂದೇ ಭೂಪಟದಲ್ಲಿ ಹೋಲಿಸಿ. ಮಾರ್ಗವು ಸಂಪರ್ಕವನ್ನು ಸೂಚಿಸುತ್ತದೆ; ಬಣ್ಣ ತುಂಬಿದ ಪ್ರದೇಶ ಮಾತ್ರ ಭೂಪ್ರದೇಶದ ಸಾಕ್ಷ್ಯ.',search:'ದೇಶ, ವ್ಯಕ್ತಿ, ರಾಜ್ಯ ಅಥವಾ ಘಟನೆಯನ್ನು ಹುಡುಕಿ',all:'ಎಲ್ಲ',north:'ಉತ್ತರ',south:'ದಕ್ಷಿಣ',east:'ಪೂರ್ವ',west:'ಪಶ್ಚಿಮ',subcontinent:'ದಖ್ಖನ್ · ಇತರೆ ಉಪಖಂಡ',direction:'ಸರಳ ದಿಕ್ಕು',corridor:'ಐತಿಹಾಸಿಕ ಮಾರ್ಗ',relation:'ಸಂಬಂಧ',control:'ಆಳ್ವಿಕೆ / ಸಂಪರ್ಕ',polity:'ಕರ್ನಾಟಕ ರಾಜ್ಯ',century:'ಶತಮಾನ',contact:'ಸಂಪರ್ಕ ಮಾತ್ರ',territorial:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',trade:'ವ್ಯಾಪಾರ',diplomacy:'ರಾಯಭಾರ',travel:'ಪ್ರವಾಸ · ಜ್ಞಾನ',war:'ಯುದ್ಧ · ಆಕ್ರಮಣ',political:'ರಾಜಕೀಯ ಪರಿವರ್ತನೆ',territory:'ಭೂಆಳ್ವಿಕೆ',results:'ದಾಖಲೆಗಳು',openAtlas:'ಮುಖ್ಯ ಕಾಲರೇಖೆಯಲ್ಲಿ ತೆರೆಯಿರಿ',sources:'ಆಕರಗಳು',countries:'ಇಂದಿನ ದೇಶಗಳು',noControl:'ಭೂಆಳ್ವಿಕೆ ಇಲ್ಲ',hasControl:'ಭೂಪ್ರದೇಶ ನಿಯಂತ್ರಣದ ಸಾಕ್ಷ್ಯ',mapKey:'ಭೂಪಟ ಸಂಕೇತ',routes:'ಸಂಪರ್ಕ / ಯುದ್ಧ ಮಾರ್ಗ',areas:'ನಿಯಂತ್ರಿತ ಅಥವಾ ವಿವಾದಿತ ಪ್ರದೇಶ',pendingMark:'ತುಂಡು-ಗೆರೆ · ಪರಿಶೀಲನೆ ಬಾಕಿ',noResults:'ಈ ಶೋಧಕಗಳಿಗೆ ದಾಖಲೆಗಳಿಲ್ಲ.',allCenturies:'ಎಲ್ಲ ಶತಮಾನಗಳು',allPolities:'ಎಲ್ಲ ರಾಜ್ಯಗಳು',evidence:'ಸಾಕ್ಷ್ಯ ಸ್ಥಿತಿ',mapTheme:'ಭೂಪಟ ಶೈಲಿ',modernTheme:'ಆಧುನಿಕ',historicalTheme:'ಐತಿಹಾಸಿಕ ಕಾಗದ',mapThemeNote:'ಇದು ದೃಶ್ಯ ಶೈಲಿ ಮಾತ್ರ; ಐತಿಹಾಸಿಕ ದತ್ತಾಂಶ ಮತ್ತು ಗಡಿಗಳು ಬದಲಾಗುವುದಿಲ್ಲ.',matrixTitle:'ಸಂಬಂಧ ಮತ್ತು ಮಾರ್ಗಗಳ ಪರಿಶೀಲನಾ ಮ್ಯಾಟ್ರಿಕ್ಸ್',matrixIntro:'ಸಂಖ್ಯೆಯಿರುವ ಕೋಶವು ದಾಖಲೆಗಳನ್ನು ಶೋಧಿಸುತ್ತದೆ; 0 ಇರುವ ಕೋಶವು ಹೊಸ ಸಾಕ್ಷ್ಯ ಹುಡುಕಬೇಕಾದ ಸಂಶೋಧನಾ ಅಂತರ.',coverageGap:'ಸಂಶೋಧನಾ ಅಂತರ',corridors:{'deccan-central':'ದಖ್ಖನ್ · ಮಧ್ಯ ಭಾರತ','north-land':'ಉತ್ತರ ಭಾರತದ ಭೂಮಾರ್ಗ','south-peninsular':'ದಕ್ಷಿಣ ಪರ್ಯಾಯ ದ್ವೀಪ','northwest-gulf':'ವಾಯವ್ಯ · ಪರ್ಷಿಯನ್ ಕೊಲ್ಲಿ','southwest-ocean':'ನೈಋತ್ಯ · ಹಿಂದೂ ಮಹಾಸಾಗರ','southeast-asia':'ಆಗ್ನೇಯ ಏಷ್ಯಾ ಸಮುದ್ರಮಾರ್ಗ','northeast-china':'ಈಶಾನ್ಯ · ಚೀನಾ ಜ್ಞಾನಮಾರ್ಗ','europe-global':'ಯುರೋಪ್ · ಜಾಗತಿಕ ಸಮುದ್ರಮಾರ್ಗ'}},
@@ -19,6 +19,7 @@ const copy={
 
 const relationCategory=event=>{
   if(['trade'].includes(event.relationKind))return'trade'
+  if(event.relationKind==='travel-knowledge')return'travel'
   if(['diplomacy','treaty','alliance'].includes(event.relationKind))return'diplomacy'
   if(['tribute','suzerainty','administrative-integration','constitutional-integration'].includes(event.relationKind))return'political'
   if(['merchant-guild-presence','overseas-commerce'].includes(event.reach?.relationKind))return'trade'
@@ -30,7 +31,8 @@ const relationCategory=event=>{
 const regionFor=event=>{
   if(event.geography?.region)return event.geography.region
   const codes=event.reach?.modernCountries||[]
-  if(codes.some(code=>['CN','ID'].includes(code)))return'east'
+  if(codes.some(code=>['CN','ID','MY','SG','TH'].includes(code)))return'east'
+  if(codes.includes('LK'))return'south'
   if(codes.length)return'west'
   const externalIds=(event.participants||[]).map(item=>item.polityId)
   if(externalIds.some(id=>['external-polity-harsha','external-polity-delhi-sultanate'].includes(id)))return'north'
@@ -44,7 +46,7 @@ const corridorFor=event=>{
   if(event.geography?.corridor)return event.geography.corridor
   const codes=event.reach?.modernCountries||[]
   if(codes.includes('CN'))return'northeast-china'
-  if(codes.includes('ID'))return'southeast-asia'
+  if(codes.some(code=>['ID','MY','SG','TH'].includes(code)))return'southeast-asia'
   if(codes.some(code=>['IR','IQ','TR','AF'].includes(code)))return'northwest-gulf'
   if(codes.some(code=>['OM','EG'].includes(code)))return'southwest-ocean'
   if(codes.some(code=>['PT','FR'].includes(code)))return'europe-global'

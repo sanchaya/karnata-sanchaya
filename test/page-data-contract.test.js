@@ -143,11 +143,26 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
   for (const relation of atlasData.politicalRelations) {
     assert.ok(relation.parties.length >= 2, `${relation.id} needs at least two parties`)
     assert.ok(relation.parties.every(party => polityIds.has(party.polityId)), `${relation.id} has an unknown party`)
-    assert.ok(['war','invasion','campaign','trade','diplomacy','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration'].includes(relation.relationKind), `${relation.id} has an unsupported relation kind`)
+    assert.ok(['war','invasion','campaign','trade','diplomacy','travel-knowledge','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration'].includes(relation.relationKind), `${relation.id} has an unsupported relation kind`)
     assert.equal(relation.geography.route.type, 'LineString')
     assert.ok(relation.geography.route.coordinates.length >= 2, `${relation.id} needs a route`)
     assert.ok(relation.eventIds.every(id => atlasData.events.some(event => event.id === id)), `${relation.id} has an unknown event link`)
     assert.ok(relation.peopleIds.every(id => personIds.has(id)), `${relation.id} has an unknown person link`)
     assert.equal(relation.review.status, 'needs-review', `${relation.id} must remain visibly unresolved until review`)
   }
+})
+
+test('international research additions keep attested links separate from unresolved corridors', () => {
+  const xuanzang=atlasData.politicalRelations.find(record=>record.id==='political-relation-xuanzang-chalukya-travel-account')
+  const barus=atlasData.inscriptions.find(record=>record.id==='inscription-lobu-tua-barus')
+  const polonnaruwa=atlasData.inscriptions.find(record=>record.id==='inscription-polonnaruwa-ayyavole')
+  const malaysia=atlasData.politicalRelations.find(record=>record.id==='political-relation-old-kedah-maritime-research')
+  const singapore=atlasData.politicalRelations.find(record=>record.id==='political-relation-temasek-south-india-research')
+  assert.equal(xuanzang?.relationKind,'travel-knowledge')
+  assert.equal(xuanzang?.evidenceLevel,'attested')
+  assert.equal(barus?.date.from,1088)
+  assert.ok(barus?.citations.some(citation=>citation.sourceId==='src-iseas-barus-inscriptions'))
+  assert.ok(polonnaruwa?.citations.some(citation=>citation.sourceId==='src-pathmanathan-kingdom-jaffna'))
+  assert.equal(malaysia?.evidenceLevel,'inferred')
+  assert.equal(singapore?.evidenceLevel,'inferred')
 })

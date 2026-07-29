@@ -34,13 +34,13 @@ The district-history explorer milestone is included in the current committed sna
 
 The bundled snapshot currently contains approximately:
 
-- 8 Karnataka polities, 31 external polities, 55 events, 90 people and 15 bilateral political relations;
-- 18 inscriptions, 25 literary works, 43 cultural records and 17 reign/period records;
-- 149 sources, 527 generated relationships and 12 collaboration records;
+- 8 Karnataka polities, 44 external polities, 57 events, 93 people and 28 bilateral political relations;
+- 28 inscriptions, 25 literary works, 55 cultural records and 17 reign/period records;
+- 170 sources, 574 generated relationships and 13 collaboration records;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;
 - 42 district deep-history records: 31 district scopes plus 11 research leads. All 11 leads remain `needs-review` until site-level evidence is collected.
 
-The literature collection contains 25 linked works, but the 24-packet review pass is not complete: packets currently have one to four of six evidence gates. The relations graph has 512 records, with primary-source gaps still open for China/northeast, western Indian Ocean and Southeast Asia corridors.
+The literature collection contains 25 linked works, but the 24-packet review pass is not complete: packets currently have one to four of six evidence gates. The relationship graph has 574 records. Xuanzang, Barus and Polonnaruwa now strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
 
 Most historical entities remain `needs-review` by design. The reviewed counts in the admin dashboard measure workflow state, not completeness of Karnataka history.
 
