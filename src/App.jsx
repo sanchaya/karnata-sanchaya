@@ -7,6 +7,7 @@ import GuidedTour from './GuidedTour'
 import { isIndiaPoint, isKarnatakaPoint, mapZoomForPoint, mapZoomForPositions } from './map-focus'
 import { readAtlasUrlState, updateAtlasUrlState } from './share-state'
 import { inscriptionsForMap } from './map-record-visibility'
+import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from './timeline-record-visibility'
 
 const Admin=lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
@@ -39,6 +40,7 @@ function PwaControls({locale,t}){
 const MIN_YEAR=-300
 const MAX_YEAR=1973
 const placeById=new Map(atlasData.places.map(place=>[place.id,place]))
+const primaryPolityIds=new Set(atlasData.polities.map(polity=>polity.id))
 const entityById=new Map([...atlasData.polities,...atlasData.externalPolities].map(entity=>[entity.id,entity]))
 const personById=new Map(atlasData.people.map(person=>[person.id,person]))
 const sourceById=new Map(atlasData.sources.map(source=>[source.id,source]))
@@ -173,11 +175,13 @@ const kingdoms=atlasData.polities.map(polity=>({
   literature:atlasData.works.filter(work=>work.polityId===polity.id)
 }))
 const inscriptions=atlasData.inscriptions.map(item=>{const place=placeById.get(item.placeId);const [lng,lat]=place?.location.coordinates||[0,0];return {...item,year:item.date.from,placeName:place?.name||{en:'Unknown',kn:''},coords:[lat,lng],source:sourceById.get(item.citations?.[0]?.sourceId)}})
+const primaryAtlasInscriptions=inscriptionsForPrimaryAtlas(inscriptions)
 const inscriptionById=new Map(inscriptions.map(item=>[item.id,item]))
 const inscriptionCandidates=atlasData.inscriptionAudits.flatMap(audit=>(audit.priorityCandidates||[]).map(candidate=>({...candidate,district:audit.district,auditId:audit.id})))
 const bceResearchStories=inscriptionCandidates.filter(candidate=>candidate.date?.era==='BCE'&&Number.isFinite(candidate.date.from)).map(candidate=>({...candidate,year:chronologicalYear(candidate.date),storyKind:'research-candidate',storyCategory:'inscriptions',storyLabel:candidate.district,publicationState:'research-candidate',coords:null}))
 const mappedResearchCandidates=inscriptionCandidates.filter(candidate=>Number.isFinite(candidate.resolution?.coordinates?.latitude)&&Number.isFinite(candidate.resolution?.coordinates?.longitude)).map(candidate=>({...candidate,coords:[candidate.resolution.coordinates.latitude,candidate.resolution.coordinates.longitude],startYear:candidate.date.era==='BCE'?-candidate.date.from:candidate.date.from,endYear:candidate.date.era==='BCE'?-candidate.date.to:candidate.date.to}))
 const events=atlasData.events.map(event=>{const coords=[event.location.coordinates[1],event.location.coordinates[0]];const routePositions=event.route?.coordinates.map(([lng,lat])=>[lat,lng])||[];const placePosition=id=>{const [lng,lat]=placeById.get(id)?.location?.coordinates||[];return Number.isFinite(lat)&&Number.isFinite(lng)?[lat,lng]:null};const originPosition=placePosition(event.originPlaceId);const destinationPosition=placePosition(event.destinationPlaceId)||coords;const connectionPositions=event.reach?(routePositions.length?routePositions:[originPosition,destinationPosition].filter(Boolean)):routePositions;return {...event,year:event.date.from,coords,routePositions,connectionPositions,connectionCategory:connectionCategory(event),originPosition,destinationPosition}}).sort((a,b)=>a.year-b.year)
+const primaryAtlasEvents=eventsForPrimaryAtlas(events,primaryPolityIds)
 const territorialExtents=atlasData.territorialExtents.map(extent=>({...extent,positions:extent.geometry.coordinates.map(([lng,lat])=>[lat,lng])}))
 const culturalRecords=atlasData.culturalHeritage.map(item=>{const place=placeById.get(item.placeIds[0]);const [lng,lat]=place?.location.coordinates||[0,0];return {...item,coords:[lat,lng],placeNames:item.placeIds.map(id=>placeById.get(id)?.name).filter(Boolean)}})
 const templeNamePattern=/(temple|devalaya|jinalaya|keshava|channakeshava|madhukeshwara|bhutanatha|ranganathaswamy|virupaksha|vittala|krishna|durga|meguti|mahadeva|narasimha)/i
@@ -205,9 +209,9 @@ const districtHistoryStories=atlasData.districtHistoryResearch.filter(record=>re
 const warEventTypes=new Set(['battle','war','invasion','campaign'])
 const politicalEventTypes=new Set(['kingdom-foundation','regime-change','capital-relocation','accession','constitutional-transition','state-reorganisation'])
 const timelineStories=[
-  ...events.map(record=>({...record,storyKind:'event',storyCategory:record.reach?'connections':warEventTypes.has(record.type)?'wars':politicalEventTypes.has(record.type)?'political':'history',storyLabel:null})),
+  ...primaryAtlasEvents.map(record=>({...record,storyKind:'event',storyCategory:record.reach?'connections':warEventTypes.has(record.type)?'wars':politicalEventTypes.has(record.type)?'political':'history',storyLabel:null})),
   ...atlasData.works.map(record=>{const polity=entityById.get(record.polityId);const place=placeById.get(polity?.capitalId);const [lng,lat]=place?.location?.coordinates||[];return {...record,year:record.date.from,storyKind:'literature',storyCategory:'literature',storyLabel:record.creator,coords:Number.isFinite(lat)&&Number.isFinite(lng)?[lat,lng]:null}}),
-  ...inscriptions.map(record=>({...record,storyKind:'inscription',storyCategory:'inscriptions',storyLabel:record.placeName})),
+  ...primaryAtlasInscriptions.map(record=>({...record,storyKind:'inscription',storyCategory:'inscriptions',storyLabel:record.placeName})),
   ...atlasData.reigns.map(record=>{const capital=placeById.get(record.capitalIds?.[0]);const [lng,lat]=capital?.location?.coordinates||[];return {...record,year:record.date.from,storyKind:'reign',storyCategory:'reigns',storyLabel:capital?.name||null,coords:Number.isFinite(lat)&&Number.isFinite(lng)?[lat,lng]:null}}),
   ...territorialExtents.filter(record=>record.snapshotKind!=='prototype').map(record=>{const positions=record.geometry.coordinates.map(([lng,lat])=>[lat,lng]);return {...record,positions,year:record.snapshotYear||record.date.from,storyKind:'territory',storyCategory:'territory',storyLabel:entityById.get(record.polityIds?.[0])?.name||null}}),
   ...culturalRecords.map(record=>({...record,year:record.date.from,storyKind:'culture',storyCategory:'culture',storyLabel:record.placeNames[0]||null})),
@@ -510,8 +514,8 @@ export default function App(){
     ...atlasData.polities.map(record=>({kind:'polity',id:record.id,name:record.name,year:record.date.from,polityId:record.id,review:record.review?.status,record})),
     ...atlasData.people.map(record=>({kind:'person',id:record.id,name:record.name,year:record.date?.from,polityId:record.polityId,review:record.review?.status,record})),
     ...atlasData.works.map(record=>({kind:'work',id:record.id,name:record.name,year:record.date.from,polityId:record.polityId,languages:record.languages,review:record.review?.status,record})),
-    ...inscriptions.map(record=>({kind:'inscription',id:record.id,name:record.name,year:record.year,polityId:record.polityId,districtId:record.districtAuditId,languages:record.languages,scripts:record.scripts,review:record.review?.status,coords:record.coords,record})),
-    ...events.map(record=>({kind:'event',id:record.id,name:record.name,year:record.year,polityIds:record.participants.map(participant=>participant.polityId),review:record.review?.status,coords:record.coords,record})),
+    ...primaryAtlasInscriptions.map(record=>({kind:'inscription',id:record.id,name:record.name,year:record.year,polityId:record.polityId,districtId:record.districtAuditId,languages:record.languages,scripts:record.scripts,review:record.review?.status,coords:record.coords,record})),
+    ...primaryAtlasEvents.map(record=>({kind:'event',id:record.id,name:record.name,year:record.year,polityIds:record.participants.map(participant=>participant.polityId),review:record.review?.status,coords:record.coords,record})),
     ...culturalRecords.map(record=>({kind:'culture',id:record.id,name:record.name,year:record.date.from,polityIds:record.polityIds,review:record.review?.status,coords:record.coords,record})),
     ...atlasData.places.map(record=>({kind:'place',id:record.id,name:record.name,year:null,review:record.review?.status,coords:[record.location.coordinates[1],record.location.coordinates[0]],record})),
     ...heritageCandidates.map(record=>({kind:'heritage',id:record.id,name:record.name,year:record.startYear,districtId:record.auditId,review:record.verification.verificationStatus,coords:record.coords,record})),
@@ -527,7 +531,7 @@ export default function App(){
   const chosen=visible.find(k=>k.id===selected)||visible[0]||active[0]||null
   const activeLiterature=useMemo(()=>atlasData.works.filter(work=>active.some(polity=>polity.id===work.polityId)&&Math.abs(work.date.from-year)<=125).sort((a,b)=>Math.abs(a.date.from-year)-Math.abs(b.date.from-year)).slice(0,6),[active,year])
   const literatureWorks=useMemo(()=>activeLiterature.length?activeLiterature:[...atlasData.works].sort((a,b)=>Math.abs(a.date.from-year)-Math.abs(b.date.from-year)).slice(0,4),[activeLiterature,year])
-  const activeInscriptions=inscriptionsForMap(inscriptions,{year,showAll:showAllInscriptions,activePolityIds:new Set(active.map(k=>k.id))})
+  const activeInscriptions=inscriptionsForMap(primaryAtlasInscriptions,{year,showAll:showAllInscriptions,activePolityIds:new Set(active.map(k=>k.id))})
   const visibleResearchCandidates=mappedResearchCandidates.filter(item=>year>=item.startYear&&year<=item.endYear)
   const inscriptionRecords=useMemo(()=>[...activeInscriptions].sort((a,b)=>Math.abs(a.year-year)-Math.abs(b.year-year)).slice(0,6),[activeInscriptions,year])
   const activeTerritories=useMemo(()=>territoriesForYear(year),[year])
@@ -544,7 +548,7 @@ export default function App(){
   const visibleHeritage=showAllHeritage?heritageFilterPool:heritageFilterPool.filter(site=>site.startYear!=null&&site.startYear<=year)
   const futureHeritage=heritageFilterPool.filter(site=>site.startYear!=null&&site.startYear>year)
   const undatedHeritage=heritageFilterPool.filter(site=>site.startYear==null)
-  const nearbyEvents=events.filter(event=>Math.abs(event.year-year)<=18&&(scope==='world'||(scope==='india'&&event.coords[0]>=5&&event.coords[0]<=38&&event.coords[1]>=67&&event.coords[1]<=98)||(scope==='karnataka'&&event.coords[0]>=10&&event.coords[0]<=19.5&&event.coords[1]>=73&&event.coords[1]<=81)))
+  const nearbyEvents=primaryAtlasEvents.filter(event=>Math.abs(event.year-year)<=18&&(scope==='world'||(scope==='india'&&event.coords[0]>=5&&event.coords[0]<=38&&event.coords[1]>=67&&event.coords[1]<=98)||(scope==='karnataka'&&event.coords[0]>=10&&event.coords[0]<=19.5&&event.coords[1]>=73&&event.coords[1]<=81)))
   const nearbyConnections=nearbyEvents.filter(event=>event.reach&&event.connectionPositions.length>1)
   const selectedWorkPosition=selectedWork?timelineStories.find(story=>story.storyKind==='literature'&&story.id===selectedWork.id)?.coords:null
   const selectedPersonPosition=selectedPerson?personStories.find(story=>story.id===selectedPerson.id)?.coords:null

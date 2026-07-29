@@ -2,6 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { atlasData } from '../src/data/atlas.js'
 import { inscriptionsForMap } from '../src/map-record-visibility.js'
+import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from '../src/timeline-record-visibility.js'
 
 test('every historical event has the fields required by the timeline and map detail', () => {
   for (const event of atlasData.events) {
@@ -47,4 +48,21 @@ test('public inscription map visibility does not depend on review approval', () 
   const publicRecords = inscriptionsForMap(atlasData.inscriptions, { year: 1973, showAll: true })
   assert.equal(publicRecords.length, atlasData.inscriptions.length)
   assert.ok(publicRecords.some(record => record.review?.status === 'needs-review'))
+})
+
+test('primary atlas excludes unrelated external inscriptions without deleting them from research data', () => {
+  const primary = inscriptionsForPrimaryAtlas(atlasData.inscriptions)
+  const external = atlasData.inscriptions.filter(record => record.geographicScope?.outsideKarnataka === true)
+  const unrelatedExternal = external.filter(record => !(record.languages || []).some(language => /kannada/i.test(language)) && record.karnatakaRelevance !== true && record.karnatakaRelevance?.direct !== true)
+  assert.ok(external.length > 0, 'specialist research corpus should retain external inscriptions')
+  assert.ok(unrelatedExternal.every(record => !primary.includes(record)), 'unrelated external records must not enter the Karnataka timeline')
+  assert.ok(primary.some(record => record.id === 'inscription-halmidi'))
+})
+
+test('primary atlas event timeline requires a Karnataka polity or explicit Karnataka context', () => {
+  const primaryPolities = new Set(atlasData.polities.map(polity => polity.id))
+  const primary = eventsForPrimaryAtlas(atlasData.events, primaryPolities)
+  assert.ok(primary.some(record => record.id === 'event-bahmani-foundation'))
+  assert.ok(primary.some(record => record.id === 'event-independence'))
+  assert.ok(!primary.some(record => record.id === 'event-madurai-thanjavur-invasion-lead'))
 })
