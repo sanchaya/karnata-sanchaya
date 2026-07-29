@@ -115,3 +115,17 @@ test('P1 evidence candidates remain gated until every promotion field is verifie
     }
   }
 })
+
+test('Atlas v0.21 bilateral political relations retain parties, routes and review gates', () => {
+  assert.ok(atlasData.politicalRelations.length >= 15)
+  for (const relation of atlasData.politicalRelations) {
+    assert.ok(relation.parties.length >= 2, `${relation.id} needs at least two parties`)
+    assert.ok(relation.parties.every(party => polityIds.has(party.polityId)), `${relation.id} has an unknown party`)
+    assert.ok(['war','invasion','campaign','trade','diplomacy','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration'].includes(relation.relationKind), `${relation.id} has an unsupported relation kind`)
+    assert.equal(relation.geography.route.type, 'LineString')
+    assert.ok(relation.geography.route.coordinates.length >= 2, `${relation.id} needs a route`)
+    assert.ok(relation.eventIds.every(id => atlasData.events.some(event => event.id === id)), `${relation.id} has an unknown event link`)
+    assert.ok(relation.peopleIds.every(id => personIds.has(id)), `${relation.id} has an unknown person link`)
+    assert.equal(relation.review.status, 'needs-review', `${relation.id} must remain visibly unresolved until review`)
+  }
+})

@@ -6,6 +6,7 @@ import { bengaluruKmlCandidates } from '../src/data/bengaluru-kml.js'
 const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
+const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile']
@@ -54,4 +55,10 @@ test('Bengaluru explorer keeps the full KML inventory available without renderin
     assert.equal(candidate.review?.status, 'needs-review', `${candidate.id} must remain a research candidate`)
     assert.ok(candidate.citations?.length, `${candidate.id} must retain its KML source locator`)
   }
+})
+
+test('relations explorer includes first-class bilateral political records and battle locations', () => {
+  assert.match(relationsSource, /atlasData\.politicalRelations/, 'the relations page must consume the bilateral relation collection')
+  assert.match(relationsSource, /politicalRelationRecords/, 'bilateral records must be normalized for filters and the map')
+  assert.match(relationsSource, /battleLocations/, 'battle locations must be retained in map positions')
 })

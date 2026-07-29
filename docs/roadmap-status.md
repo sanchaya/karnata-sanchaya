@@ -27,15 +27,16 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.15 — Literature and Epigraphy Explorer | **Software achieved; review incomplete** | Literature/epigraphy pages, maps, timeline links, Bengaluru exception and review-gated candidates | Complete the 24 literary packets and Sannati/Maski transcription and Kannada review |
 | Atlas v0.19 — Evidence and Publication Readiness | **Workflow achieved; human work pending** | 19-candidate evidence queue, 144 evidence requests, translation-review gates, reviewer separation and publication checks | Complete independent reviews, exact corpus locators, field photographs and condition evidence |
 | Atlas v0.20 — community staging and permanent administration | **Software achieved; live operations prepared** | MariaDB revisions, admin dashboard, progress stats, accounts, profiles, reviewer/contributor foundations, static export boundary, repeatable backup and approved-only static release scripts | Run the backup/restore drill on production MariaDB, appoint reviewers, test approvals and publish approved snapshots |
+| Atlas v0.21 — India political-relations pass | **Schema and first matrix pass delivered; research incomplete** | First-class bilateral relation records with parties, relation type, dates, routes, battle locations, outcomes, people, treaty-document placeholders, citations and explicit needs-review status; Deccan–Tamil–Kakatiya–Bahmani, northern/eastern, Maratha, Nizam, British, French and Portuguese seed coverage is connected to `#relations` and admin | Resolve campaign-level sources, exact battle geography, treaty witnesses, commanders and outcomes; expand the remaining north/east/south and colonial relations |
 | District Deep History / `#district-history` | **Initial expansion delivered, research ongoing** | 31 district scope slots, 11 needs-review leads across Bengaluru and the first priority districts, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
 ## Current data coverage snapshot
 
 The bundled snapshot currently contains approximately:
 
-- 8 Karnataka polities, 27 external polities, 55 events and 75 people;
+- 8 Karnataka polities, 31 external polities, 55 events, 90 people and 15 bilateral political relations;
 - 18 inscriptions, 25 literary works, 43 cultural records and 17 reign/period records;
-- 149 sources, 512 relationships and 12 collaboration records;
+- 149 sources, 527 generated relationships and 12 collaboration records;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;
 - 42 district deep-history records: 31 district scopes plus 11 research leads. All 11 leads remain `needs-review` until site-level evidence is collected.
 
@@ -64,8 +65,9 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 1. Turn the 31 district-history scope slots into source-backed candidate records, starting with prehistoric and early-settlement evidence, foundation stones and locality-name histories.
 2. Complete the 24 literary review packets and add authors, poets, manuscripts, scholars and inscriptions as linked records.
-3. Fill the relations matrix: China and northeast knowledge routes first, then north/south/east/west, western Indian Ocean and Southeast Asia, followed by Portugal, Britain and France.
-4. Connect rulers, people, wars, capitals, literature, inscriptions, monuments and external relations into one dated timeline without collapsing contact into territorial rule.
+3. Continue the Atlas v0.21 political-relations pass: resolve the first bilateral records, then fill the north/east/south/deccan and colonial gaps with primary or authority-level citations.
+4. Add exact campaign routes, battle locations, treaty documents, commanders and outcomes; keep inferred or contested records visibly `needs-review`.
+5. Connect rulers, people, wars, capitals, literature, inscriptions, monuments and external relations into one dated timeline without collapsing contact into territorial rule.
 
 ### P3 — operate the research community safely
 

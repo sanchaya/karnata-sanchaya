@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','collaborations']
+const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
 const DISTRICT_HISTORY_CATEGORIES = ['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope']
 
@@ -46,6 +46,21 @@ export function validateAtlas(data) {
           if (!record.reach.note?.en?.trim()) add('warning',collection,id,'reach.note.en','An evidence/interpretation note is recommended.')
           if (!record.reach.note?.kn?.trim()) add('warning',collection,id,'reach.note.kn','A Kannada evidence/interpretation note is recommended.')
         }
+      }
+      if (collection === 'politicalRelations') {
+        const relationKinds=['war','invasion','campaign','trade','diplomacy','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration']
+        if (!relationKinds.includes(record.relationKind)) add('error',collection,id,'relationKind','Bilateral relation kind is invalid.')
+        if (!Array.isArray(record.parties) || record.parties.length < 2) add('error',collection,id,'parties','A bilateral relation requires at least two parties.')
+        ;(record.parties || []).forEach((party,index)=>{if(!party.polityId||!party.role)add('error',collection,id,`parties.${index}`,'Every party requires a polity ID and role.')})
+        if (!record.geography?.region?.trim() || !record.geography?.corridor?.trim()) add('error',collection,id,'geography','Relations require a region and historical corridor.')
+        const route=record.geography?.route
+        if (!route || route.type!=='LineString' || !Array.isArray(route.coordinates) || route.coordinates.length<2) add('error',collection,id,'geography.route','Relations require a mapped campaign/contact route with at least two coordinates.')
+        ;(route?.coordinates || []).forEach((point,index)=>{const [lng,lat]=point||[];if(!Number.isFinite(lng)||!Number.isFinite(lat)||lng < -180||lng > 180||lat < -90||lat > 90)add('error',collection,id,`geography.route.coordinates.${index}`,'Route coordinates must be valid [longitude, latitude] pairs.')})
+        ;(record.geography?.battleLocations || []).forEach((location,index)=>{const [lng,lat]=location.coordinates||[];if(!location.label?.trim()||!Number.isFinite(lng)||!Number.isFinite(lat)||lng < -180||lng > 180||lat < -90||lat > 90)add('error',collection,id,`geography.battleLocations.${index}`,'Battle locations require a label and valid longitude/latitude coordinates.')})
+        if (!['attested','inferred','contested'].includes(record.evidenceLevel)) add('error',collection,id,'evidenceLevel','Relation evidence level is invalid.')
+        if (!Array.isArray(record.peopleIds) || !Array.isArray(record.eventIds) || !Array.isArray(record.treatyDocuments)) add('error',collection,id,'links','Relations require people, event and treaty-document arrays.')
+        ;(record.treatyDocuments || []).forEach((document,index)=>{if(!document.title?.en?.trim()||!document.title?.kn?.trim()||!document.sourceId||!document.locator)add('error',collection,id,`treatyDocuments.${index}`,'Treaty documents require bilingual title, source and locator.')})
+        if (!record.outcome?.en?.trim() || !record.outcome?.kn?.trim()) add('warning',collection,id,'outcome','A bilingual outcome statement is recommended.')
       }
       if (collection === 'collaborations') {
         if (!['organization','university','individual'].includes(record.entityKind)) add('error',collection,id,'entityKind','Collaboration entity kind is invalid.')
@@ -264,6 +279,9 @@ export function validateAtlas(data) {
     const refs = ['capitalId','placeId','polityId','reignId','fromId','toId','originPlaceId','destinationPlaceId','districtAuditId','districtId']
     refs.forEach(field => { if (record[field] && !all.has(record[field])) add('error',collection,id,field,`Unknown related record: ${record[field]}`) })
     ;(record.participants || []).forEach((participant,index) => { if (!participant.polityId || !all.has(participant.polityId)) add('error',collection,id,`participants.${index}.polityId`,`Unknown event participant: ${participant.polityId || 'missing'}`) })
+    ;(record.parties || []).forEach((party,index) => { if (!party.polityId || !all.has(party.polityId)) add('error',collection,id,`parties.${index}.polityId`,`Unknown bilateral-relation party: ${party.polityId || 'missing'}`) })
+    ;(record.eventIds || []).forEach((eventId,index) => { if (!all.has(eventId)) add('error',collection,id,`eventIds.${index}`,`Unknown related event: ${eventId}`) })
+    ;(record.treatyDocuments || []).forEach((document,index) => { if (document.sourceId && !sourceIds.has(document.sourceId)) add('error',collection,id,`treatyDocuments.${index}.sourceId`,`Unknown treaty source: ${document.sourceId}`) })
     ;(record.peopleIds || []).forEach((personId,index) => { if (!all.has(personId)) add('error',collection,id,`peopleIds.${index}`,`Unknown person: ${personId}`) })
     ;(record.rulerIds || []).forEach((personId,index) => { if (!all.has(personId)) add('error',collection,id,`rulerIds.${index}`,`Unknown ruler: ${personId}`) })
     ;(record.capitalIds || []).forEach((placeId,index) => { if (!all.has(placeId)) add('error',collection,id,`capitalIds.${index}`,`Unknown capital: ${placeId}`) })

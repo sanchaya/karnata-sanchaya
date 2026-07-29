@@ -4,7 +4,7 @@ import { hasValidationErrors, validateAtlas } from './data/validate'
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 
 const collections = Object.keys(collectionLabels)
-const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', collaborations:'collaboration' }
+const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
 const LEGACY_STORAGE_KEY = 'karnataka-atlas-research-draft-v0.9'
 const clone = value => JSON.parse(JSON.stringify(value))
 const today = () => new Date().toISOString().slice(0,10)
@@ -28,6 +28,8 @@ const mergeLegacyDraft = (server, legacy) => {
 
 const blankRecord = collection => collection === 'relationships'
   ? { id:'rel-', fromId:'', type:'associated-with', toId:'', date:{from:null,to:null,era:'CE',precision:'unknown'}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
+  : collection === 'politicalRelations'
+    ? { id:'political-relation-', name:{en:'',kn:''}, relationKind:'war', parties:[], date:{from:null,to:null,era:'CE',precision:'range'}, geography:{region:'',corridor:'',control:'contested',route:{type:'LineString',coordinates:[],precision:'schematic'}}, eventIds:[], peopleIds:[], treatyDocuments:[], outcome:{en:'',kn:''}, evidenceLevel:'inferred', citations:[], review:{status:'needs-review',reviewer:null,updatedAt:today()} }
   : collection === 'territorialExtents'
     ? { id:'extent-', name:{en:'',kn:''}, classification:'core-administered', controlLevel:'direct', duration:'sustained', confidence:'low', snapshotKind:'prototype', snapshotYear:null, reignId:null, date:{from:null,to:null,era:'CE',precision:'unknown'}, polityIds:[], relatedEventIds:[], geometry:{type:'Polygon',coordinates:[],precision:'schematic'}, description:{en:'',kn:''}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'reigns'
@@ -65,6 +67,7 @@ const adminText = {
 Object.assign(adminText.kn.collections,{externalPolities:'ಬಾಹ್ಯ ರಾಜ್ಯಗಳು',events:'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು',culturalHeritage:'ಸ್ಮಾರಕಗಳು, ಕಲೆ ಮತ್ತು ಸಂಸ್ಕೃತಿ',reigns:'ಆಳ್ವಿಕೆ ಮತ್ತು ರಾಜಕೀಯ ಅವಧಿಗಳು',territorialExtents:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',deepChronologies:'ಪ್ರಾಚೀನ ಕಾಲಕ್ರಮಗಳು',heritageAudits:'ಜಿಲ್ಲಾ ಪರಂಪರೆ ಪರಿಶೀಲನೆಗಳು'})
 adminText.kn.collections.districtHistoryResearch='ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ ಸಂಶೋಧನೆ'
 adminText.kn.collections.inscriptionAudits='ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆಗಳು'
+adminText.kn.collections.politicalRelations='ದ್ವಿಪಕ್ಷೀಯ ರಾಜಕೀಯ ಸಂಬಂಧಗಳು'
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'
 adminText.kn.workspace='ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.20'
 adminText.en.workspace='Permanent research workspace · Atlas v0.20'
@@ -192,6 +195,13 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
           <label className="wide">{t.stableId}<input value={draft.id||''} readOnly={Boolean(selectedId)} onChange={e=>update(['id'],e.target.value)} placeholder={`${collectionPrefix[collection]}-unique-name`}/><small>{selectedId?'Stable IDs cannot be changed after creation because other records reference them.':'Lowercase kebab-case; never reuse a published ID.'}</small></label>
           {collection==='relationships' ? <>
             <label>From ID <input value={draft.fromId||''} onChange={e=>update(['fromId'],e.target.value)}/></label><label>Relationship type <input value={draft.type||''} onChange={e=>update(['type'],e.target.value)}/></label><label className="wide">To ID <input value={draft.toId||''} onChange={e=>update(['toId'],e.target.value)}/></label>
+          </> : collection==='politicalRelations' ? <>
+            <label>Relation kind / ಸಂಬಂಧದ ಪ್ರಕಾರ<select value={draft.relationKind||'war'} onChange={e=>update(['relationKind'],e.target.value)}>{['war','invasion','campaign','trade','diplomacy','treaty','alliance','tribute','suzerainty','administrative-integration','constitutional-integration'].map(value=><option key={value}>{value}</option>)}</select></label>
+            <label>Evidence level / ಸಾಕ್ಷ್ಯ ಮಟ್ಟ<select value={draft.evidenceLevel||'inferred'} onChange={e=>update(['evidenceLevel'],e.target.value)}>{['attested','inferred','contested'].map(value=><option key={value}>{value}</option>)}</select></label>
+            <label className="wide">Party IDs / ಪಕ್ಷಗಳ IDಗಳು<input value={(draft.parties||[]).map(party=>party.polityId).join(', ')} onChange={e=>update(['parties'],e.target.value.split(',').map(value=>value.trim()).filter(Boolean).map(polityId=>({polityId,role:'party'})))} placeholder="polity-mysore, external-polity-british-india"/></label>
+            <label className="wide">Event IDs / ಘಟನೆಗಳ IDಗಳು<input value={(draft.eventIds||[]).join(', ')} onChange={e=>update(['eventIds'],e.target.value.split(',').map(value=>value.trim()).filter(Boolean))}/></label>
+            <label className="wide">People / rulers IDs<input value={(draft.peopleIds||[]).join(', ')} onChange={e=>update(['peopleIds'],e.target.value.split(',').map(value=>value.trim()).filter(Boolean))}/></label>
+            <label className="wide">Outcome / ಫಲಿತಾಂಶ<textarea rows="3" value={draft.outcome?.en||''} onChange={e=>update(['outcome','en'],e.target.value)}/></label><label className="wide">ಫಲಿತಾಂಶ / Kannada outcome<textarea lang="kn" rows="3" value={draft.outcome?.kn||''} onChange={e=>update(['outcome','kn'],e.target.value)}/></label>
           </> : collection==='sources' ? <>
             <label>English title <input value={draft.title?.en||''} onChange={e=>update(['title','en'],e.target.value)}/></label><label>Kannada title <input lang="kn" value={draft.title?.kn||''} onChange={e=>update(['title','kn'],e.target.value)}/></label><label className="wide">Authors / organizations<input value={(draft.authors||[]).join('; ')} onChange={e=>update(['authors'],e.target.value.split(';').map(value=>value.trim()).filter(Boolean))} placeholder="Author One; Institution Two"/></label><label>Source type <input value={draft.type||''} onChange={e=>update(['type'],e.target.value)}/></label><label>Publication year <input type="number" value={draft.year??''} onChange={e=>update(['year'],e.target.value===''?null:Number(e.target.value))}/></label><label className="wide">Publisher / repository<input value={draft.publisher||''} onChange={e=>update(['publisher'],e.target.value)}/></label><label>DOI<input value={draft.doi||''} onChange={e=>update(['doi'],e.target.value)}/></label><label>ISBN<input value={draft.isbn||''} onChange={e=>update(['isbn'],e.target.value)}/></label><label className="wide">URL <input type="url" value={draft.url||''} onChange={e=>update(['url'],e.target.value)}/></label>
           </> : collection==='districtHistoryResearch' ? <>

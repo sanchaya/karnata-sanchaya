@@ -15,6 +15,7 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into lin
 | `heritageAudits` | District heritage candidates and authority evidence | `prioritySites`, protection checks |
 | `districtHistoryResearch` | District deep-history intake for prehistoric, settlement, foundation-stone and locality-history leads | `districtId`, `location`, `citations` |
 | `relationships` | Explicit entity-to-entity assertions | `fromId`, `type`, `toId` |
+| `politicalRelations` | Bilateral or coalition-level political relationships | `parties`, `relationKind`, `geography`, `eventIds`, `peopleIds`, `treatyDocuments`, `citations` |
 
 ## Research fields
 
@@ -24,6 +25,7 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into lin
 - Citations point to stable source IDs and may include a page, inscription number, folio, URL fragment, or other locator.
 - Review metadata records `status`, `reviewer`, and `updatedAt`. Status progresses through `draft`, `needs-review`, `reviewed`, and `published`.
 - Relationships are records because an assertion can have its own date, citations, and review state.
+- Political relations are deliberately separate from generated relationships. Each record names two or more parties, distinguishes war/invasion/campaign/trade/diplomacy/treaty/alliance/tribute/suzerainty/administrative or constitutional integration, carries a dated route and battle-location set, records an outcome, and links commanders/rulers, underlying events and treaty-document witnesses. Seed records remain `needs-review` until the relationship is independently resolved.
 - Events carry bilingual narratives, participants with roles and outcomes, an approximate point, an optional schematic campaign route, consequences, citations, and review state.
 - District deep-history records use `recordKind` (`district-scope` or `candidate`), an explicit category, bilingual description and research note, optional GeoJSON point precision, provenance citations and a `needs-review` gate. The public `#district-history` explorer renders all 31 district scope slots and marks indicative locality leads with amber dashed markers; it does not promote the contributor-supplied Bengaluru infographic to an authority source.
 
@@ -52,6 +54,8 @@ Every literary work now carries a `reviewWorkflow` with six evidence gates: crea
 Atlas v0.19.2 turns those gates into 144 assignable `evidenceRequest` tasks. Every request declares its submission type, minimum fields and Kannada/English instruction. The packet also requires an independent reviewer, separates reviewer and contributor identities, and records source match, attribution, dating/context, bilingual fidelity, citation completeness and reviewer attestation before promotion.
 
 The relations explorer derives an eight-corridor research matrix from reviewed and provisional event records: Deccan/central India, north-India land, southern peninsula, northwest/Persian Gulf, southwest/Indian Ocean, Southeast-Asia maritime, northeast/China knowledge, and Europe/global maritime. It crosses those corridors with trade, diplomacy, travel/knowledge, war, political transition and territorial rule. A zero is explicitly a research gap, not evidence that no connection existed; provisional records remain visually distinct and retain their review state in exports.
+
+Atlas v0.21 adds a first bilateral political-relations pass to that matrix. The initial 15 records cover the Harsha frontier, Rashtrakuta–Pratihara–Pala Kannauj contest, Chola Gangavadi administration, Kakatiya and Delhi campaigns, Bahmani/Vijayanagara/Adil Shahi Deccan conflicts, Gajapati and Portuguese connections, Maratha and Hyderabad frontiers, British paramountcy, French diplomacy and Mysore’s constitutional integration. These are structured research queues, not claims that every route or outcome is settled.
 
 The live MariaDB service stores collaboration proposals separately from the static `collaborations` catalogue. Approved contributors submit a bilingual scope and institutional contact; appointed reviewers can approve, request changes, or decline it. An approval remains a staging decision and does not automatically publish a collaboration to the GitHub Pages dataset.
 

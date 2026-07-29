@@ -2,6 +2,7 @@ import { events, eventSources, externalPolities } from './events.js'
 import { deepChronologies, districtHistoryResearch, heritageAudits } from './research.js'
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
+import { politicalRelations, politicalRelationPeople, politicalRelationPolities } from './political-relations.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -125,12 +126,16 @@ export const atlasData = {
   deepChronologies,
   heritageAudits,
   relationships: [],
+  politicalRelations: [],
 }
 
 appendUniqueById(atlasData.sources, literatureEpigraphySources)
 appendUniqueById(atlasData.people, literaryPeople)
 appendUniqueById(atlasData.places, inscriptionPlaces)
 appendUniqueById(atlasData.works, additionalWorks)
+appendUniqueById(atlasData.externalPolities, politicalRelationPolities)
+appendUniqueById(atlasData.people, politicalRelationPeople)
+appendUniqueById(atlasData.politicalRelations, politicalRelations)
 
 // Western Ganga succession leads from the Sripurusha and dynasty overview pages.
 // These are intentionally needs-review until each ruler/date is checked against
@@ -644,4 +649,4 @@ atlasData.relationships = [
   ...atlasData.territorialExtents.filter(extent => extent.reignId).map(extent => ({ id:`rel-${extent.id}-period`, fromId:extent.id, type:'snapshot-for-period', toId:extent.reignId, date:extent.date, citations:extent.citations, review:extent.review })),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
