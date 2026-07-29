@@ -4,6 +4,8 @@
   "description": "Kannada-first, citation-led digital historical atlas of Karnataka.",
   "lang": "kn",
   "start_url": "./",
+  "scope": "./",
+  "orientation": "any",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4361ee",
