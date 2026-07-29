@@ -6,6 +6,7 @@ import SourceLink from './SourceLink'
 import GuidedTour from './GuidedTour'
 import { isIndiaPoint, isKarnatakaPoint, mapZoomForPoint, mapZoomForPositions } from './map-focus'
 import { readAtlasUrlState, updateAtlasUrlState } from './share-state'
+import { inscriptionsForMap } from './map-record-visibility'
 
 const Admin=lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
@@ -17,7 +18,7 @@ const DistrictHistoryExplorer=lazy(()=>import('./DistrictHistoryExplorer'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 
 const MIN_YEAR=-300
-const MAX_YEAR=1956
+const MAX_YEAR=1973
 const placeById=new Map(atlasData.places.map(place=>[place.id,place]))
 const entityById=new Map([...atlasData.polities,...atlasData.externalPolities].map(entity=>[entity.id,entity]))
 const personById=new Map(atlasData.people.map(person=>[person.id,person]))
@@ -292,7 +293,7 @@ function GlobalSearch({locale,t,query,setQuery,filters,setFilters,results,onSele
 }
 
 function Timeline({year,setYear,compareYear,setCompareYear,onPreset,t,locale}){
-  const milestones=[-269,1,345,543,753,973,1088,1336,1443,1520,1565,1770,1787,1799,1947,1956]
+  const milestones=[-269,1,345,543,753,973,1088,1336,1443,1520,1565,1770,1787,1799,1947,1956,1973]
   const comparing=compareYear!=null
   return <section className={`timeline-panel ${comparing?'compare':''}`}><div className="timeline-head"><span>{comparing?t.yearA:t.historicalYear}</span><strong>{timelineYearLabel(year,locale)}</strong><button className="compare-toggle" onClick={()=>setCompareYear(comparing?null:normalizeTimelineYear(Math.min(MAX_YEAR,year+50)))}>{comparing?t.closeComparison:t.compareYears}</button></div><input aria-label={comparing?t.yearA:t.historicalYear} type="range" min={MIN_YEAR} max={MAX_YEAR} value={year} onChange={e=>setYear(normalizeTimelineYear(Number(e.target.value)))}/>{comparing&&<div className="compare-row"><div className="timeline-head"><span>{t.yearB}</span><strong>{timelineYearLabel(compareYear,locale)}</strong></div><input aria-label={t.yearB} type="range" min={MIN_YEAR} max={MAX_YEAR} value={compareYear} onChange={e=>setCompareYear(normalizeTimelineYear(Number(e.target.value)))}/><div className="preset-list" aria-label={t.comparisonStories}>{comparisonPresets.map(preset=><button className="comparison-preset" key={preset.key} onClick={()=>onPreset(preset)}>{t[preset.key]}</button>)}</div></div>}{!comparing&&<div className="ticks">{milestones.map(y=><button key={y} onClick={()=>setYear(y)} className={Math.abs(year-y)<20?'active':''}>{timelineYearLabel(y,locale)}</button>)}</div>}</section>
 }
@@ -462,6 +463,7 @@ export default function App(){
   const [heritageCategory,setHeritageCategory]=useState('all')
   const [heritageAuthority,setHeritageAuthority]=useState('all')
   const [showAllHeritage,setShowAllHeritage]=useState(false)
+  const [showAllInscriptions,setShowAllInscriptions]=useState(true)
   const [mapTheme,setMapTheme]=useState(()=>localStorage.getItem('karnataka-atlas-map-theme')||'modern')
   const [communityUser,setCommunityUser]=useState(null)
   const [mobileNavOpen,setMobileNavOpen]=useState(false)
@@ -500,7 +502,7 @@ export default function App(){
   const chosen=visible.find(k=>k.id===selected)||visible[0]||active[0]||null
   const activeLiterature=useMemo(()=>atlasData.works.filter(work=>active.some(polity=>polity.id===work.polityId)&&Math.abs(work.date.from-year)<=125).sort((a,b)=>Math.abs(a.date.from-year)-Math.abs(b.date.from-year)).slice(0,6),[active,year])
   const literatureWorks=useMemo(()=>activeLiterature.length?activeLiterature:[...atlasData.works].sort((a,b)=>Math.abs(a.date.from-year)-Math.abs(b.date.from-year)).slice(0,4),[activeLiterature,year])
-  const activeInscriptions=inscriptions.filter(item=>Math.abs(item.year-year)<=250&&(active.some(k=>k.id===item.polityId)||year>=item.year))
+  const activeInscriptions=inscriptionsForMap(inscriptions,{year,showAll:showAllInscriptions,activePolityIds:new Set(active.map(k=>k.id))})
   const visibleResearchCandidates=mappedResearchCandidates.filter(item=>year>=item.startYear&&year<=item.endYear)
   const inscriptionRecords=useMemo(()=>[...activeInscriptions].sort((a,b)=>Math.abs(a.year-year)-Math.abs(b.year-year)).slice(0,6),[activeInscriptions,year])
   const activeTerritories=useMemo(()=>territoriesForYear(year),[year])
@@ -555,6 +557,7 @@ export default function App(){
     {view==='atlas'&&<main id="atlas">
       <aside className="sidebar"><GlobalSearch locale={locale} t={t} query={query} setQuery={setQuery} filters={searchFilters} setFilters={setSearchFilters} results={searchResults} onSelect={chooseSearchResult}/><div className="scope-switch"><span>{t.mapScope}</span><div><button className={scope==='karnataka'?'active':''} onClick={()=>{setScope('karnataka');setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}}>{t.karnatakaView}</button><button className={scope==='india'?'active':''} onClick={()=>{setScope('india');clearRecordDetails()}}>{t.indiaView}</button><button className={scope==='world'?'active':''} onClick={()=>{setScope('world');clearRecordDetails()}}>{t.worldView}</button></div></div><div className="section-title"><span>{t.kingdomsIn} {timelineYearLabel(year,locale)}</span><b>{visible.length}</b></div><div className="kingdom-list">{visible.map(k=><button className={selected===k.id?'selected':''} key={k.id} onClick={()=>{setSelected(k.id);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}}><i style={{background:k.color}}></i><span><strong>{primary(k.name,locale)}</strong><small>{secondary(k.name,locale)} · {k.start}–{k.end}</small></span></button>)}{!visible.length&&<p className="empty">{t.noKingdom}</p>}</div><div className="layers"><div className="section-title"><span>{t.mapLayers}</span></div>{Object.entries({boundaries:t.boundaries,territorialReach:t.territorialReach,districts:t.districtBoundaries,heritageSites:t.heritageCandidates,culture:t.culturalHeritage,temples:t.searchKinds.templeSites,inscriptions:`${t.inscriptions} · ${activeInscriptions.length}`,researchCandidates:`${t.mapResearchCandidates} · ${visibleResearchCandidates.length}`,events:t.events,modern:t.modernMap}).map(([key,label])=><label key={key}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key]}))}/><span>{label}</span></label>)}</div>{(layers.heritageSites||layers.districts)&&<div className="heritage-map-filters"><strong>{t.mapHeritageFilters}</strong><select aria-label={t.allDistricts} value={selectedDistrict} onChange={event=>setSelectedDistrict(event.target.value)}><option value="all">{t.allDistricts}</option>{atlasData.heritageAudits.map(audit=><option key={audit.id} value={audit.id}>{primary(audit.district,locale)}</option>)}</select><select aria-label={t.allHeritageCategories} value={heritageCategory} onChange={event=>setHeritageCategory(event.target.value)}><option value="all">{t.allHeritageCategories}</option>{Object.keys(t.heritageCategoryLabels).map(value=><option key={value} value={value}>{t.heritageCategoryLabels[value]}</option>)}</select><select aria-label={t.heritageAuthorityFilter} value={heritageAuthority} onChange={event=>setHeritageAuthority(event.target.value)}>{Object.entries(t.heritageAuthorityLabels).map(([value,label])=> <option key={value} value={value}>{label}</option>)}</select><label className="heritage-show-all"><input type="checkbox" checked={showAllHeritage} onChange={event=>setShowAllHeritage(event.target.checked)}/><span>{t.showAllHeritage}</span></label><small><b>{visibleHeritage.length}</b> {showAllHeritage?t.allHeritageShown:t.visibleThisYear} · <b>{futureHeritage.length}</b> {t.appearLater} · <b>{undatedHeritage.length}</b> {t.awaitingDate}</small></div>}</aside>
       <section className={`map-stage theme-${mapTheme} ${compareYear!=null?'compare-mode':''}`}>
+        {layers.inscriptions&&<div className="public-map-notice"><label><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label><small>{t.publicReviewNote}</small></div>}
         <MapContainer center={[atlasMapView.lat,atlasMapView.lng]} zoom={atlasMapView.zoom} minZoom={3} scrollWheelZoom>
           <MapViewport scope={scope} selectedEvent={selectedEvent} selectedTerritory={selectedTerritory} selectedCulture={selectedCulture} selectedWorkPosition={selectedWorkPosition} selectedPersonPosition={selectedPersonPosition} selectedInscription={selectedInscription} selectedSearchPlace={selectedSearchPlace} comparisonPositions={comparisonPositions} preserveInitialMapView={Boolean(initialShareState.map)}/>
           <MapShareSync onMapMove={position=>{if(view==='atlas')replaceShareUrl({map:position})}}/>
