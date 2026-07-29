@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
+import { bengaluruKmlCandidates } from '../src/data/bengaluru-kml.js'
 
 const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
@@ -38,4 +39,19 @@ test('Bengaluru epigraphy access hydrates from the live session without a public
   assert.match(explorerSource, /bengaluruAllowed&&placeFocus\.startsWith\('bengaluru'\)/, 'Bengaluru candidates must remain scoped to the authenticated city views')
   assert.doesNotMatch(explorerSource, /\{t\.bengaluruLoginRequired\}/, 'the public explorer must not disclose a login-only Bengaluru collection')
   assert.doesNotMatch(explorerSource, /city-access-gate/, 'the public explorer must not render a Bengaluru access gate')
+})
+
+test('Bengaluru explorer keeps the full KML inventory available without rendering every card at once', () => {
+  assert.match(explorerSource, /visibleCount/, 'the explorer must cap the initial card batch')
+  assert.match(explorerSource, /displayedRecords=filtered\.slice\(0,visibleCount\)/, 'cards must render from the visible slice')
+  assert.match(explorerSource, /IntersectionObserver/, 'the explorer must load another batch as the list approaches the viewport')
+  assert.match(explorerSource, /Load more records|ಇನ್ನಷ್ಟು ದಾಖಲೆಗಳನ್ನು ತೋರಿಸಿ/, 'a keyboard-accessible load-more fallback must remain available')
+  assert.match(explorerSource, /classificationOptions/, 'Bengaluru classification filters must remain discoverable')
+  assert.ok(bengaluruKmlCandidates.length > 1000, 'the full supplied KML inventory must remain bundled for the authenticated explorer')
+  for (const candidate of bengaluruKmlCandidates.slice(0, 10)) {
+    assert.match(candidate.id, /^bengaluru-kml-/)
+    assert.ok(Number.isFinite(candidate.coordinates?.latitude) && Number.isFinite(candidate.coordinates?.longitude), `${candidate.id} must retain coordinates`)
+    assert.equal(candidate.review?.status, 'needs-review', `${candidate.id} must remain a research candidate`)
+    assert.ok(candidate.citations?.length, `${candidate.id} must retain its KML source locator`)
+  }
 })
