@@ -29,9 +29,12 @@ export default function GuidedTour({ tourKey, locale = 'kn', steps = [] }) {
   const [open, setOpen] = useState(false)
   const [stepIndex, setStepIndex] = useState(0)
   const [highlight, setHighlight] = useState(null)
-  const firstActionRef = useRef(null)
+  const previousTourKey = useRef(tourKey)
   const t = copy[locale] || copy.kn
-  const storageKey = `karnataka-atlas-tour:${tourKey}`
+  // Offer guidance automatically only once for the whole application. Page-
+  // specific tours remain available through the launcher without repeatedly
+  // interrupting people as they explore new sections.
+  const storageKey = 'karnataka-atlas-tour:welcome-v1'
   const current = steps[stepIndex]
 
   const updateHighlight = () => {
@@ -51,19 +54,29 @@ export default function GuidedTour({ tourKey, locale = 'kn', steps = [] }) {
   useEffect(() => {
     if (!steps.length) return
     try {
-      if (!localStorage.getItem(storageKey)) setOpen(true)
+      if (!localStorage.getItem(storageKey)) {
+        localStorage.setItem(storageKey, 'offered')
+        setOpen(true)
+      }
     } catch {
-      setOpen(true)
+      // When storage is unavailable, avoid showing the tour again on every
+      // navigation or reload. It can still be launched manually.
     }
   }, [storageKey, steps.length])
+
+  useEffect(() => {
+    if (previousTourKey.current === tourKey) return
+    previousTourKey.current = tourKey
+    setOpen(false)
+    setHighlight(null)
+    setStepIndex(0)
+  }, [tourKey])
 
   useEffect(() => {
     if (!open) return undefined
     setStepIndex(index => Math.min(index, Math.max(0, steps.length - 1)))
     window.setTimeout(() => {
-      if (current?.target) document.querySelector(current.target)?.scrollIntoView({ block: 'center', behavior: 'smooth' })
       updateHighlight()
-      firstActionRef.current?.focus()
     }, 80)
     const refresh = () => updateHighlight()
     window.addEventListener('resize', refresh)
@@ -98,15 +111,14 @@ export default function GuidedTour({ tourKey, locale = 'kn', steps = [] }) {
       <span aria-hidden="true">?</span>{t.launch}
     </button>
     {open&&<div className="guided-tour-layer" onKeyDown={onKeyDown}>
-      <div className="guided-tour-backdrop" aria-hidden="true"></div>
       {highlight&&<div className="guided-tour-highlight" style={highlight} aria-hidden="true"></div>}
-      <section className="guided-tour-popover" role="dialog" aria-modal="true" aria-labelledby="guided-tour-title" aria-describedby="guided-tour-description">
+      <section className="guided-tour-popover" role="dialog" aria-modal="false" aria-labelledby="guided-tour-title" aria-describedby="guided-tour-description">
         <div className="guided-tour-head"><span>{t.stepOf} {stepIndex + 1} / {steps.length}</span><button type="button" onClick={() => close(false)} aria-label={t.close}>×</button></div>
         <h2 id="guided-tour-title">{text(current?.title, locale)}</h2>
         <p id="guided-tour-description">{text(current?.body, locale)}</p>
         <div className="guided-tour-actions">
           <button type="button" className="guided-tour-skip" onClick={() => close()}>{t.skip}</button>
-          <div><button type="button" disabled={stepIndex === 0} onClick={() => setStepIndex(index => index - 1)}>{t.previous}</button><button ref={firstActionRef} type="button" className="guided-tour-primary" onClick={next}>{stepIndex >= steps.length - 1 ? t.finish : t.next}</button></div>
+          <div><button type="button" disabled={stepIndex === 0} onClick={() => setStepIndex(index => index - 1)}>{t.previous}</button><button type="button" className="guided-tour-primary" onClick={next}>{stepIndex >= steps.length - 1 ? t.finish : t.next}</button></div>
         </div>
       </section>
     </div>}
