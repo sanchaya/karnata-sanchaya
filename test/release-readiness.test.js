@@ -10,6 +10,8 @@ const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplore
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
+const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
+const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
@@ -40,6 +42,15 @@ test('mobile and bilingual navigation expose accessible controls', () => {
   assert.match(appSource, /aria-label=\{t\.primaryNavigation\}/, 'primary navigation must have an accessible name')
   assert.match(appSource, /aria-label=\{t\.languageLabel\}/, 'language switch must have an accessible name')
   assert.match(indexSource, /React\.StrictMode/, 'release builds must keep strict-mode diagnostics enabled')
+})
+
+test('tablet layouts preserve maps, readable cards and non-obstructing controls', () => {
+  assert.match(indexSource, /import '\.\/tablet\.css'/, 'tablet overrides must load after the component styles')
+  assert.match(stylesSource, /@media\(max-width:1024px\)[\s\S]*\.mobile-overlay-toggle\{display:flex/, 'tablet maps must use compact overlay controls')
+  assert.match(tabletStylesSource, /\.explorer-grid \{ grid-template-columns: repeat\(2/, 'tablet literature and epigraphy cards must use two readable columns')
+  assert.match(tabletStylesSource, /\.relations-detail \{ position: static/, 'tablet relation details must not cover the map')
+  assert.match(tabletStylesSource, /\.evidence-procedure ol \{ grid-template-columns: repeat\(2/, 'tablet evidence steps must avoid a needlessly long single column')
+  assert.match(tabletStylesSource, /pointer: coarse/, 'touch-first tablets need larger interaction targets')
 })
 
 test('mobile timeline categories and kingdom boundaries remain unambiguous', () => {
