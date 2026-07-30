@@ -152,6 +152,53 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
   }
 })
 
+test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated', () => {
+  assert.equal(atlasData.meta.schemaVersion, '0.22.0')
+  assert.ok(atlasData.polities.some(item => item.id === 'polity-alupa'))
+  assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-keladi-ikkeri-nayaka'))
+  assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-chitradurga-nayaka'))
+  for (const id of ['reign-mayurasharma-kadamba','reign-durvinita-western-ganga','reign-vikramaditya-vi-kalyani-chalukya']) {
+    assert.equal(atlasData.reigns.find(item => item.id === id)?.review.status, 'needs-review')
+  }
+  assert.equal(atlasData.people.filter(item => !(item.citations || []).length).length, 0)
+  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 33)
+  for (const id of ['extent-kadamba-core-prototype','extent-western-ganga-core-prototype','extent-hoysala-ballala-ii-1187','extent-vijayanagara-krishnadevaraya-core-1520']) {
+    const extent = atlasData.territorialExtents.find(item => item.id === id)
+    assert.equal(extent?.confidence, 'medium')
+    assert.ok(extent?.citations.some(item => item.sourceId !== 'src-prototype-boundaries'))
+    assert.equal(extent?.geometry.precision, 'schematic')
+  }
+  for (const id of ['work-kavirajamarga','work-vikramarjuna-vijaya','work-adipurana','work-gadayuddha','work-vaddaradhane']) {
+    const work = atlasData.works.find(item => item.id === id)
+    assert.equal(work?.reviewWorkflow.evidence.editionWitness.status, 'located')
+    assert.equal(work?.review.status, 'needs-review')
+  }
+})
+
+test('statewide heritage pass distinguishes authority registers from discovery leads', () => {
+  const protectionLevels=new Set(['unesco','national','state','local','institutional','research-lead','unknown'])
+  const mysuru=atlasData.heritageInventoryLeads.filter(item=>item.sourceId==='src-wikipedia-mysuru-heritage-buildings')
+  assert.equal(mysuru.length,25,'all previously missing Mysuru-list buildings should be retained')
+  assert.ok(mysuru.every(item=>item.protectionLevel==='research-lead'&&item.designationStatus==='unverified'),'Mysuru discovery records must not imply legal protection')
+  for(const item of atlasData.heritageInventoryLeads){
+    assert.ok(protectionLevels.has(item.protectionLevel),`${item.id} has an unsupported protection level`)
+    if(['national','state'].includes(item.protectionLevel))assert.ok(item.registryId?.trim(),`${item.id} needs an authority register ID`)
+  }
+})
+
+test('every district-history research packet exposes safe contextual graph links', () => {
+  const linkedDistricts=new Set(atlasData.districtHistoryResearch.filter(item=>['placeIds','polityIds','peopleIds','eventIds'].some(field=>item[field]?.length)).map(item=>item.districtId))
+  assert.equal(linkedDistricts.size,31)
+  for(const item of atlasData.districtHistoryResearch){
+    for(const id of item.placeIds||[])assert.ok(placeById.has(id),`${item.id} has an unknown place context`)
+    for(const id of item.polityIds||[])assert.ok(polityIds.has(id),`${item.id} has an unknown polity context`)
+    for(const id of item.peopleIds||[])assert.ok(personIds.has(id),`${item.id} has an unknown person context`)
+    for(const id of item.eventIds||[])assert.ok(atlasData.events.some(event=>event.id===id),`${item.id} has an unknown event context`)
+  }
+  assert.ok(atlasData.relationships.some(item=>item.type==='district-history-polity-context'))
+  assert.ok(atlasData.relationships.some(item=>item.type==='heritage-place-context'))
+})
+
 test('international research additions keep attested links separate from unresolved corridors', () => {
   const xuanzang=atlasData.politicalRelations.find(record=>record.id==='political-relation-xuanzang-chalukya-travel-account')
   const barus=atlasData.inscriptions.find(record=>record.id==='inscription-lobu-tua-barus')

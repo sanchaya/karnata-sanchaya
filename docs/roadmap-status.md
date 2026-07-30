@@ -1,6 +1,6 @@
 # Karnataka Historical Atlas — milestone status and roadmap
 
-Updated: 2026-07-29
+Updated: 2026-07-30
 
 This is the durable project summary for the decisions and implementation work accumulated across the atlas build. It separates working software from research that still needs human evidence. A record being visible on a map or timeline does not mean that it is authority-confirmed.
 
@@ -23,24 +23,26 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.5 — territorial reach and external connections | **Achieved / partial data** | India/world scopes, schematic extents, campaign reach and relation categories | Replace low-confidence prototypes with source-backed snapshots |
 | Atlas v0.6 — reign snapshots and comparisons | **Achieved** | Badami Chalukya, Rashtrakuta, Hoysala, Vijayanagara and Mysore comparison presets | Expand accession, victory, invasion and capital-relocation evidence |
 | Atlas v0.9 — art, culture, religion, celebrations, monuments and games/sports | **Achieved / partial data** | Cultural collection, monument categories, living traditions and games/sports layer | Add district-level records and citations systematically |
-| Atlas v0.12 — district heritage audit | **Seeded, not complete** | 31 district audit coverage, map boundaries, authority labels and UNESCO/ASI/state/research filters | Resolve authority, coordinates, licences, condition and managing authority before promotion |
+| Atlas v0.12 — district heritage audit | **Statewide inventory and connections delivered; verification incomplete** | 31 district audit coverage, map boundaries, public UNESCO/national/state/local/research filters, register IDs, 1,531 inventory leads and contextual history links across every district | Resolve authority, coordinates, licences, condition and managing authority before promotion |
 | Atlas v0.15 — Literature and Epigraphy Explorer | **Software achieved; review incomplete** | Literature/epigraphy pages, maps, timeline links, Bengaluru exception and review-gated candidates | Complete the 24 literary packets and Sannati/Maski transcription and Kannada review |
 | Atlas v0.19 — Evidence and Publication Readiness | **Workflow achieved; human work pending** | 19-candidate evidence queue, 144 evidence requests, translation-review gates, reviewer separation and publication checks | Complete independent reviews, exact corpus locators, field photographs and condition evidence |
 | Atlas v0.20 — community staging and permanent administration | **Software achieved; live operations prepared** | MariaDB revisions, admin dashboard, progress stats, accounts, profiles, reviewer/contributor foundations, static export boundary, repeatable backup and approved-only static release scripts | Run the backup/restore drill on production MariaDB, appoint reviewers, test approvals and publish approved snapshots |
 | Atlas v0.21 — India political-relations pass | **Schema and first matrix pass delivered; research incomplete** | First-class bilateral relation records with parties, relation type, dates, routes, battle locations, outcomes, people, treaty-document placeholders, citations and explicit needs-review status; Deccan–Tamil–Kakatiya–Bahmani, northern/eastern, Maratha, Nizam, British, French and Portuguese seed coverage is connected to `#relations` and admin | Resolve campaign-level sources, exact battle geography, treaty witnesses, commanders and outcomes; expand the remaining north/east/south and colonial relations |
-| District Deep History / `#district-history` | **Initial expansion delivered, research ongoing** | 31 district scope slots, 11 needs-review leads across Bengaluru and the first priority districts, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
+| Atlas v0.22 — early Karnataka and regional-polity research wave | **Structured first pass delivered; human review open** | Pre-Kadamba archaeological and Mauryan epigraphic narrative; Alupa polity/inscription packet; Keladi–Ikkeri and Chitradurga governance modules; seven Kadamba/Ganga/Kalyani Chalukya reigns; citations for all previously uncited major rulers; four source-backed schematic territorial records; candidate packets for all 22 previously empty districts; five literary edition/manuscript witnesses | Resolve primary edition locators, individual reign dates, coastal inscriptions, district authority evidence and exact territorial reconstruction before promoting records |
+| District Deep History / `#district-history` | **All districts seeded; research ongoing** | 31 district scope slots, 33 needs-review leads covering every district, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
 ## Current data coverage snapshot
 
 The bundled snapshot currently contains approximately:
 
-- 8 Karnataka polities, 44 external polities, 57 events, 93 people and 28 bilateral political relations;
-- 28 inscriptions, 25 literary works, 55 cultural records and 17 reign/period records;
-- 170 sources, 574 generated relationships and 13 collaboration records;
+- 9 Karnataka polities, 46 external polities, 62 events, 93 people and 28 bilateral political relations;
+- 29 inscriptions, 25 literary works, 55 cultural records and 24 reign/period records;
+- 202 sources, 927 generated relationships and 13 collaboration records;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;
-- 42 district deep-history records: 31 district scopes plus 11 research leads. All 11 leads remain `needs-review` until site-level evidence is collected.
+- 1,531 heritage inventory leads with explicit protection/register levels. Twenty-five newly covered Mysuru buildings remain unverified discovery leads rather than claimed protected monuments;
+- 64 district deep-history records: 31 district scopes plus 33 research leads. The 22 districts that previously had no candidate now each have one explicit intake packet; all remain `needs-review` until site-level authority evidence is collected.
 
-The literature collection contains 25 linked works, but the 24-packet review pass is not complete: packets currently have one to four of six evidence gates. The relationship graph has 574 records. Xuanzang, Barus and Polonnaruwa now strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
+The literature collection contains 25 linked works, but the 24-packet review pass is not complete. Five strong works now have a named edition or manuscript witness; their remaining attribution, dating, bilingual interpretation and independent-review gates stay open. The relationship graph has 927 records, including clearly labeled district/heritage context links. Xuanzang, Barus and Polonnaruwa strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
 
 Most historical entities remain `needs-review` by design. The reviewed counts in the admin dashboard measure workflow state, not completeness of Karnataka history.
 
