@@ -8,6 +8,7 @@ const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 
 const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
+const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
@@ -46,7 +47,9 @@ test('mobile and bilingual navigation expose accessible controls', () => {
 
 test('tablet layouts preserve maps, readable cards and non-obstructing controls', () => {
   assert.match(indexSource, /import '\.\/tablet\.css'/, 'tablet overrides must load after the component styles')
-  assert.match(stylesSource, /@media\(max-width:1024px\)[\s\S]*\.mobile-overlay-toggle\{display:flex/, 'tablet maps must use compact overlay controls')
+  assert.match(stylesSource, /@media\(max-width:1366px\), \(any-pointer:coarse\)[\s\S]*\.mobile-overlay-toggle\{display:flex/, 'tablet maps must use compact overlay controls at tablet widths and on touch-first devices')
+  assert.match(tabletStylesSource, /@media \(max-width: 1366px\), \(any-pointer: coarse\)/, 'large landscape tablets must receive compact overlay controls')
+  for (const source of [explorerSource,relationsSource,districtHistorySource]) assert.match(source,/map-overlay-disclosure-toggle/, 'each tablet map explorer must expose a collapsible legend')
   assert.match(tabletStylesSource, /\.explorer-grid \{ grid-template-columns: repeat\(2/, 'tablet literature and epigraphy cards must use two readable columns')
   assert.match(tabletStylesSource, /\.relations-detail \{ position: static/, 'tablet relation details must not cover the map')
   assert.match(tabletStylesSource, /\.evidence-procedure ol \{ grid-template-columns: repeat\(2/, 'tablet evidence steps must avoid a needlessly long single column')
