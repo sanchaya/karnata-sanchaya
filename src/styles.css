@@ -112,7 +112,7 @@
 
 /* Map-first mobile controls: detailed keys remain available without covering the map. */
 .mobile-overlay-toggle{display:none}.map-legend-content,.public-map-notice-content{display:contents}.mobile-object-icon-key{display:none}
-@media(max-width:720px){
+@media(max-width:1024px){
   .object-icon-key{display:none}
   .map-legend,.public-map-notice{display:block;width:auto;max-width:none;padding:0;border:0;background:transparent;box-shadow:none}
   .map-legend{top:10px;right:10px}
@@ -130,4 +130,15 @@
   .public-map-notice.mobile-open small{display:block;font-size:8px}
   .mobile-object-icon-key{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding-bottom:7px;border-bottom:1px solid var(--sanchaya-border)}
   .mobile-object-icon-key span{display:flex!important;align-items:center;gap:5px}
+}
+
+/* Tablet layout: preserve the map-first experience without phone-sized stacking. */
+@media(min-width:721px) and (max-width:1024px){
+  header,.admin-header{padding-inline:18px}.sanchaya-product-brand h1{font-size:22px}.portal-nav{padding-inline:10px}.portal-nav a{padding-inline:11px}
+  .app-shell main{grid-template-columns:210px minmax(0,1fr)}.sidebar{padding:16px}.timeline-panel,.event-rail{left:14px;right:14px}.event-rail-title input{width:132px}.ticks button:nth-child(even){display:none}
+  .map-legend.mobile-open{width:min(280px,calc(100vw - 250px))}.public-map-notice.mobile-open{width:min(270px,calc(100vw - 260px))}
+  .district-history-intro{padding-top:34px}.district-history-workspace{grid-template-columns:190px minmax(0,1fr);padding-inline:24px}.district-history-list{padding-inline:24px}.district-history-map-wrap,.district-history-map-wrap .leaflet-container{min-height:540px;height:540px}
+  .heritage-inventory-section{margin-inline:24px;padding:22px}.heritage-inventory-preview{grid-template-columns:repeat(2,minmax(0,1fr))}
+  footer{flex-wrap:wrap;gap:10px;padding-inline:24px}
+  .admin-main{grid-template-columns:260px minmax(0,1fr)}.admin-nav{grid-column:1/-1;padding:14px 18px}.admin-nav nav{display:flex;gap:4px;overflow-x:auto;margin-top:10px}.admin-nav nav button{flex:0 0 auto;min-width:145px}.record-list,.record-editor{max-height:calc(100vh - 330px)}.record-editor{padding:22px}.admin-stat-grid{grid-template-columns:repeat(2,minmax(130px,1fr))}
 }
