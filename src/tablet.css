@@ -1,5 +1,54 @@
 /* iPad and tablet layouts: 721px–1024px keeps desktop information density
    while preventing map overlays and multi-column tools from becoming cramped. */
+.map-overlay-disclosure-toggle { display: none; }
+.map-overlay-disclosure-content { display: contents; }
+
+@media (max-width: 1366px), (any-pointer: coarse) {
+  .map-overlay-disclosure {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .map-overlay-disclosure-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 7px 10px;
+    border: 1px solid var(--sanchaya-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .97);
+    box-shadow: var(--sanchaya-shadow);
+    color: var(--sanchaya-blue);
+    font: 750 10px/1.15 Inter, "Noto Sans Kannada", sans-serif;
+    cursor: pointer;
+  }
+  .map-overlay-disclosure-toggle::after { content: '▾'; font-size: 9px; }
+  .map-overlay-disclosure-content { display: none; }
+  .map-overlay-disclosure.open {
+    max-width: min(260px, calc(100% - 24px));
+    padding: 7px;
+    border: 1px solid var(--sanchaya-border);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .97);
+    box-shadow: var(--sanchaya-shadow);
+  }
+  .map-overlay-disclosure.open .map-overlay-disclosure-toggle {
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: none;
+  }
+  .map-overlay-disclosure.open .map-overlay-disclosure-toggle::after { transform: rotate(180deg); }
+  .map-overlay-disclosure.open .map-overlay-disclosure-content {
+    display: grid;
+    gap: 6px;
+    padding: 8px 3px 2px;
+  }
+}
+
 @media (min-width: 721px) and (max-width: 1024px) {
   .explorer-page { width: calc(100% - 32px); padding: 34px 0 48px; }
   .explorer-hero { display: block; }

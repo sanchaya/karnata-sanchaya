@@ -112,7 +112,7 @@
 
 /* Map-first mobile controls: detailed keys remain available without covering the map. */
 .mobile-overlay-toggle{display:none}.map-legend-content,.public-map-notice-content{display:contents}.mobile-object-icon-key{display:none}
-@media(max-width:1024px){
+@media(max-width:1366px), (any-pointer:coarse){
   .object-icon-key{display:none}
   .map-legend,.public-map-notice{display:block;width:auto;max-width:none;padding:0;border:0;background:transparent;box-shadow:none}
   .map-legend{top:10px;right:10px}
