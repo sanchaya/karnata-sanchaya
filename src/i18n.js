@@ -69,6 +69,8 @@ Object.assign(messages.en,{bce:'BCE',researchCandidate:'Research candidate · no
 
 Object.assign(messages.kn,{dataDepth:'ದತ್ತಾಂಶ ವ್ಯಾಪ್ತಿ',publicRecords:'ದಾಖಲೆಗಳು',publicResearchLeads:'ಸಂಶೋಧನಾ ಸುಳಿವುಗಳು',publicSources:'ಆಕರಗಳು',publicRelationships:'ಸಂಬಂಧಗಳು'})
 Object.assign(messages.en,{dataDepth:'Dataset depth',publicRecords:'records',publicResearchLeads:'research leads',publicSources:'sources',publicRelationships:'relationships'})
+Object.assign(messages.kn,{mapLegend:'ಸೂಚಿ',reviewMapOptions:'ಪರಿಶೀಲನಾ ಪದರಗಳು'})
+Object.assign(messages.en,{mapLegend:'Legend',reviewMapOptions:'Review layers'})
 
 export const getInitialLocale = () => localStorage.getItem('karnataka-atlas-locale') || 'kn'
 export const setStoredLocale = locale => localStorage.setItem('karnataka-atlas-locale',locale)

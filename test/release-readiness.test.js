@@ -65,6 +65,9 @@ test('public map exposes review-pending information across mapped categories', (
   assert.match(appSource, /useState\(true\).*showAllReviewCandidates|showAllReviewCandidates.*useState\(true\)/s, 'pending information must be visible by default')
   assert.match(appSource, /href="#community"/, 'review candidates must link to the contribution workflow')
   assert.match(appSource, /pending:true/, 'review candidates must retain a visibly pending marker style')
+  assert.match(appSource, /className="mobile-overlay-toggle"/, 'dense map overlays must expose compact mobile toggles')
+  assert.match(appSource, /aria-expanded=\{mapLegendOpen\}/, 'the mobile map legend must expose its open state')
+  assert.match(appSource, /aria-expanded=\{reviewOptionsOpen\}/, 'the mobile review options must expose their open state')
 })
 
 test('Bengaluru epigraphy access hydrates from the live session without a public restriction banner', () => {
