@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','events','culturalHeritage','templeInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
 const DISTRICT_HISTORY_CATEGORIES = ['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope']
 
@@ -63,6 +63,17 @@ export function validateAtlas(data) {
         ;(record.reviewChecklist || []).forEach((item,index)=>{if(!item.field||!['unresolved','located','verified','not-applicable'].includes(item.status))add('error',collection,id,`reviewChecklist.${index}`,'Review checklist items require a field and supported status.')})
         ;(record.treatyDocuments || []).forEach((document,index)=>{if(!document.title?.en?.trim()||!document.title?.kn?.trim()||!document.sourceId||!document.locator)add('error',collection,id,`treatyDocuments.${index}`,'Treaty documents require bilingual title, source and locator.')})
         if (!record.outcome?.en?.trim() || !record.outcome?.kn?.trim()) add('warning',collection,id,'outcome','A bilingual outcome statement is recommended.')
+      }
+      if (collection === 'externalGovernancePhases') {
+        const governanceKinds=['temporary-occupation','direct-administration','imperial-province','mixed-administration-and-tribute','direct-colonial-administration','paramountcy']
+        if (!governanceKinds.includes(record.governanceType)) add('error',collection,id,'governanceType','External governance type is invalid.')
+        if (!record.governingPolityId) add('error',collection,id,'governingPolityId','A governing external polity is required.')
+        if (!record.date || record.date.from == null || record.date.to == null) add('error',collection,id,'date','A bounded governance date range is required.')
+        const geometry=record.geography?.geometry
+        if (geometry?.type!=='Polygon'||!Array.isArray(geometry.coordinates)||geometry.coordinates.length<3) add('error',collection,id,'geography.geometry','A schematic governance polygon with at least three points is required.')
+        ;(geometry?.coordinates||[]).forEach((point,index)=>{const [lng,lat]=point||[];if(!Number.isFinite(lng)||!Number.isFinite(lat)||lng < -180||lng > 180||lat < -90||lat > 90)add('error',collection,id,`geography.geometry.coordinates.${index}`,'Governance geometry requires valid longitude/latitude pairs.')})
+        if (!record.description?.en?.trim()||!record.description?.kn?.trim()||!record.interpretation?.en?.trim()||!record.interpretation?.kn?.trim()) add('error',collection,id,'description','Governance phases require bilingual description and interpretation fields.')
+        if (!Array.isArray(record.citations)||record.citations.length===0) add('error',collection,id,'citations','Governance phases require citations.')
       }
       if (collection === 'collaborations') {
         if (!['organization','university','individual'].includes(record.entityKind)) add('error',collection,id,'entityKind','Collaboration entity kind is invalid.')

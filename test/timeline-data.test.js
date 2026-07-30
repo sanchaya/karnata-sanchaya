@@ -40,6 +40,29 @@ test('Karnataka naming is represented as a dated modern state milestone', () => 
   assert.ok(naming.citations.some(citation => citation.sourceId === 'src-mysore-state-alteration-name-act-1973'))
 })
 
+test('Chola administration in Karnataka has a dated relation and territorial record', () => {
+  const relation=atlasData.politicalRelations.find(item=>item.id==='political-relation-chola-gangavadi-administration')
+  const extent=atlasData.territorialExtents.find(item=>item.id==='extent-chola-gangavadi-control-1004-1116')
+  assert.deepEqual([relation.date.from,relation.date.to],[1004,1116])
+  assert.ok(relation.parties.some(party=>party.polityId==='external-polity-chola'))
+  assert.equal(extent.geometry.type,'Polygon')
+})
+
+test('external governance phases distinguish administration from foreign relations', () => {
+  assert.ok(atlasData.externalGovernancePhases.length >= 9)
+  const ids=new Set(atlasData.externalGovernancePhases.map(record=>record.id))
+  assert.ok(ids.has('external-governance-chola-gangavadi'))
+  assert.ok(ids.has('external-governance-bahmani-northern-karnataka'))
+  assert.ok(ids.has('external-governance-adil-shahi-bijapur'))
+  assert.ok(ids.has('external-governance-mughal-bijapur-province'))
+  assert.ok(ids.has('external-governance-hyderabad-kalyana-karnataka'))
+  assert.ok(ids.has('external-governance-british-mysore-commission'))
+  assert.ok(atlasData.externalGovernancePhases.every(record=>record.review.status==='needs-review'))
+  assert.ok(atlasData.externalGovernancePhases.every(record=>record.citations.length>0))
+  assert.ok(!atlasData.externalGovernancePhases.some(record=>record.governingPolityId==='external-polity-kingdom-france'))
+  assert.ok(!atlasData.externalGovernancePhases.some(record=>record.governingPolityId==='external-polity-portuguese-india'))
+})
+
 test('public inscription map visibility does not depend on review approval', () => {
   const pending = { id: 'pending', year: 450, polityId: 'polity-kadamba', review: { status: 'needs-review' } }
   const visible = inscriptionsForMap([pending], { year: 1973, showAll: true })
