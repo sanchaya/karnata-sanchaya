@@ -9,6 +9,7 @@ const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.met
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
+const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
@@ -104,6 +105,14 @@ test('public map exposes review-pending information across mapped categories', (
   assert.match(appSource, /className="mobile-overlay-toggle"/, 'dense map overlays must expose compact mobile toggles')
   assert.match(appSource, /aria-expanded=\{mapLegendOpen\}/, 'the mobile map legend must expose its open state')
   assert.match(appSource, /aria-expanded=\{reviewOptionsOpen\}/, 'the mobile review options must expose their open state')
+})
+
+test('Atlas v0.23 exposes a focused seven-record promotion sprint without bypassing review', () => {
+  assert.match(evidenceSource,/const p1PromotionCandidates=candidates\.filter/, 'the promotion sprint must derive records from the durable evidence candidates')
+  assert.match(evidenceSource,/review\.requiredEvidence\.map/, 'every promotion card must show the complete seven-gate checklist')
+  assert.match(evidenceSource,/review\.blockingEvidence\.length/, 'the card must report the current blocking-task count')
+  assert.match(evidenceSource,/focusPromotionPacket/, 'researchers must be able to narrow the permanent task board to one promotion packet')
+  assert.doesNotMatch(evidenceSource,/status=['"]promoted['"]/, 'the workflow UI must not promote a record merely by completing an assignment')
 })
 
 test('the first atlas view starts at the earliest story and reveals objects progressively', () => {

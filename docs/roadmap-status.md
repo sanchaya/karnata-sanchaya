@@ -29,6 +29,7 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.20 — community staging and permanent administration | **Software achieved; live operations prepared** | MariaDB revisions, admin dashboard, progress stats, accounts, profiles, reviewer/contributor foundations, static export boundary, repeatable backup and approved-only static release scripts | Run the backup/restore drill on production MariaDB, appoint reviewers, test approvals and publish approved snapshots |
 | Atlas v0.21 — India political-relations pass | **Schema and first matrix pass delivered; research incomplete** | First-class bilateral relation records with parties, relation type, dates, routes, battle locations, outcomes, people, treaty-document placeholders, citations and explicit needs-review status; Deccan–Tamil–Kakatiya–Bahmani, northern/eastern, Maratha, Nizam, British, French and Portuguese seed coverage is connected to `#relations` and admin | Resolve campaign-level sources, exact battle geography, treaty witnesses, commanders and outcomes; expand the remaining north/east/south and colonial relations |
 | Atlas v0.22 — early Karnataka and regional-polity research wave | **Structured first pass delivered; human review open** | Pre-Kadamba archaeological and Mauryan epigraphic narrative; Alupa polity/inscription packet; Keladi–Ikkeri and Chitradurga governance modules; seven Kadamba/Ganga/Kalyani Chalukya reigns; citations for all previously uncited major rulers; four source-backed schematic territorial records; candidate packets for all 22 previously empty districts; five literary edition/manuscript witnesses | Resolve primary edition locators, individual reign dates, coastal inscriptions, district authority evidence and exact territorial reconstruction before promoting records |
+| Atlas v0.23 — evidence promotion sprint | **Focused workflow delivered; human evidence open** | Seven-record promotion dashboard derived from the normalized evidence packets; seven-gate readiness, blockers and direct filtering into the permanent assignment board | Complete independent Kannada reviews, signed/authority coordinates, present-condition surveys and licensed photographs; promote only after every gate is independently verified |
 | District Deep History / `#district-history` | **All districts seeded; research ongoing** | 31 district scope slots, 33 needs-review leads covering every district, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
 ## Current data coverage snapshot
@@ -57,8 +58,8 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 ### P1 — finish the evidence work already promised
 
-1. Resolve Sannati’s independent Kannada translation review.
-2. Resolve Maski transcription, translation and present-condition evidence.
+1. Use the v0.23 promotion dashboard to resolve Sannati’s independent Kannada translation review and authority/signed-survey coordinate.
+2. Resolve Maski’s independent Kannada review, authority/signed-survey coordinate and dated whole-site condition evidence. Its transcription is already verified.
 3. Complete the five item-level candidates already closest to promotion; promote only records with exact coordinates, item-level edition, protection status, managing authority, present condition and dated licensed photographs.
 4. Continue the remaining 19 inscription candidates through the human evidence queue rather than treating metadata or OCR as final evidence.
 5. Complete the first district heritage batch: Kolar, Tumakuru, Chikkamagaluru, Ballari, Raichur, Dharwad, Haveri and Davanagere.
@@ -104,6 +105,7 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 
 - Data model and evidence contract: [`docs/data-model.md`](data-model.md)
 - P1 human evidence queue: [`docs/p1-evidence-queue.md`](p1-evidence-queue.md)
+- v0.23 promotion sprint: [`docs/v023-evidence-promotion.md`](v023-evidence-promotion.md)
 - Eight-district heritage batch: [`docs/p1-district-batch.md`](p1-district-batch.md)
 - P3 community operations and release handoff: [`docs/community-operations.md`](community-operations.md)
 - Community governance: [`docs/community-governance.md`](community-governance.md)
