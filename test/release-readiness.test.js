@@ -42,6 +42,27 @@ test('mobile and bilingual navigation expose accessible controls', () => {
   assert.match(indexSource, /React\.StrictMode/, 'release builds must keep strict-mode diagnostics enabled')
 })
 
+test('mobile timeline categories and kingdom boundaries remain unambiguous', () => {
+  assert.match(appSource, /className="timeline-category-select"/, 'mobile timeline must expose a touch-native category selector')
+  assert.match(appSource, /aria-label=\{t\.timelineCategoryLabel\}/, 'the mobile timeline selector must have a bilingual accessible name')
+  assert.match(appSource, /data-story-category=\{story\.storyCategory\}/, 'filtered timeline cards must expose their category for regression checks')
+  assert.match(appSource, /const highlightedKingdom=chosen/, 'one active kingdom must drive the boundary highlight')
+  assert.match(appSource, /const highlightedCoreTerritories=coreTerritories\.filter/, 'core boundaries must be restricted to the chosen kingdom')
+  assert.match(appSource, /const highlightedReachTerritories=reachTerritories\.filter/, 'territorial reach must be restricted to the chosen kingdom')
+  assert.match(appSource, /highlightedKingdom\?\.type==='external-governance'/, 'external governance boundaries must render only when chosen')
+  assert.doesNotMatch(appSource, /layers\.boundaries&&coreTerritories\.map/, 'the map must not render every active kingdom boundary together')
+  assert.doesNotMatch(appSource, /layers\.territorialReach&&reachTerritories\.map/, 'the map must not render every active kingdom reach overlay together')
+})
+
+test('timeline categories coordinate with their required map layers', () => {
+  assert.match(appSource, /onCategoryChange\?\.\(value\)/, 'category changes must notify the atlas map')
+  assert.match(appSource, /inscriptions:'inscriptions'/, 'the inscription category must enable its map layer')
+  assert.match(appSource, /onCategoryChange=\{coordinateTimelineCategory\}/, 'the timeline rail must be connected to map-layer coordination')
+  assert.match(appSource, /chooseInscription=item=>\{enableMapLayer\('inscriptions'\)/, 'opening an inscription must recover a disabled inscription layer')
+  assert.match(appSource, /story\.storyKind==='research-candidate'\)\{enableMapLayer\('researchCandidates'\)/, 'opening a review candidate must recover its public map layer')
+  assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords\}\)/, 'opening a review candidate must focus its mapped location')
+})
+
 test('the static release is installable and keeps map context available offline', () => {
   assert.match(indexSource, /serviceWorker\.register/, 'production builds must register the offline service worker')
   assert.match(serviceWorkerSource, /karnataka-districts\.geojson/, 'district boundaries must be cached with the app shell')
