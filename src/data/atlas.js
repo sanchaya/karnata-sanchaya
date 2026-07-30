@@ -6,6 +6,8 @@ import { politicalRelations, politicalRelationPeople, politicalRelationPolities,
 import { foreignInscriptionSources, foreignInscriptionPlaces, foreignInscriptionPolities, foreignInscriptionPeople, foreignInscriptions } from './foreign-inscriptions.js'
 import { offbeatHoysalaSources, offbeatHoysalaPlaces, offbeatHoysalaTemples } from './offbeat-hoysala-temples.js'
 import { hoysalaTempleInventorySources, hoysalaTempleInventoryLeads } from './hoysala-temple-inventory.js'
+import { wikipediaHeritageInventoryLeads, wikipediaHeritageSources, wikipediaTempleIndexSources, wikipediaTempleInventoryLeads } from './wikipedia-temple-indexes.js'
+import { externalGovernancePhases } from './external-governance.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -125,12 +127,14 @@ export const atlasData = {
   ].map(([id,en,kn,creatorEn,creatorKn,year,polityId,creatorId])=>({ id:`work-${id}`, name:name(en,kn), creator:name(creatorEn,creatorKn), creatorIds:creatorId?[creatorId]:[], creatorDisplay:creatorEn, creatorRole:name('Poet / author','ಕವಿ / ಲೇಖಕ'), date:dateRange(year,year,'circa'), languages:['Kannada'], polityId, externalLinks:[{label:'Sanchaya',url:'https://sanchaya.org'}], citations:[], review:review('needs-review') })),
   culturalHeritage: [],
   templeInventoryLeads: [],
+  heritageInventoryLeads: [],
   reigns: [],
   territorialExtents: [],
   deepChronologies,
   heritageAudits,
   relationships: [],
   politicalRelations: [],
+  externalGovernancePhases,
 }
 
 appendUniqueById(atlasData.sources, literatureEpigraphySources)
@@ -148,8 +152,12 @@ appendUniqueById(atlasData.people, foreignInscriptionPeople)
 appendUniqueById(atlasData.inscriptions, foreignInscriptions)
 appendUniqueById(atlasData.sources, offbeatHoysalaSources)
 appendUniqueById(atlasData.sources, hoysalaTempleInventorySources)
+appendUniqueById(atlasData.sources, wikipediaTempleIndexSources)
+appendUniqueById(atlasData.sources, wikipediaHeritageSources)
 appendUniqueById(atlasData.places, offbeatHoysalaPlaces)
 appendUniqueById(atlasData.templeInventoryLeads, hoysalaTempleInventoryLeads)
+appendUniqueById(atlasData.templeInventoryLeads, wikipediaTempleInventoryLeads)
+appendUniqueById(atlasData.heritageInventoryLeads, wikipediaHeritageInventoryLeads)
 const lobuTuaPlace = atlasData.places.find(item => item.id === 'place-lobu-tua')
 if (lobuTuaPlace && !lobuTuaPlace.geographicScope) lobuTuaPlace.geographicScope = { region: 'international', countryCode: 'ID', countryName: name('Indonesia', 'ಇಂಡೋನೇಷ್ಯಾ'), outsideKarnataka: true, outsideIndia: true }
 
@@ -670,4 +678,4 @@ atlasData.relationships = [
   ...atlasData.territorialExtents.filter(extent => extent.reignId).map(extent => ({ id:`rel-${extent.id}-period`, fromId:extent.id, type:'snapshot-for-period', toId:extent.reignId, date:extent.date, citations:extent.citations, review:extent.review })),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', events:'Historical events', culturalHeritage:'Art, culture & traditions', templeInventoryLeads:'Temple inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }

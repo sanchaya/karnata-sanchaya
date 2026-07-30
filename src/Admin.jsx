@@ -5,7 +5,7 @@ import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
 
 const collections = Object.keys(collectionLabels)
-const collectionPrefix = { polities:'polity', externalPolities:'external-polity', events:'event', culturalHeritage:'culture', templeInventoryLeads:'temple-inventory', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
+const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
 const LEGACY_STORAGE_KEY = 'karnataka-atlas-research-draft-v0.9'
 const clone = value => JSON.parse(JSON.stringify(value))
 const today = () => new Date().toISOString().slice(0,10)
@@ -31,12 +31,16 @@ const blankRecord = collection => collection === 'relationships'
   ? { id:'rel-', fromId:'', type:'associated-with', toId:'', date:{from:null,to:null,era:'CE',precision:'unknown'}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'politicalRelations'
     ? { id:'political-relation-', name:{en:'',kn:''}, relationKind:'war', parties:[], date:{from:null,to:null,era:'CE',precision:'range'}, geography:{region:'',corridor:'',control:'contested',route:{type:'LineString',coordinates:[],precision:'schematic'}}, eventIds:[], peopleIds:[], treatyDocuments:[], reviewChecklist:[], outcome:{en:'',kn:''}, evidenceLevel:'inferred', citations:[], review:{status:'needs-review',reviewer:null,updatedAt:today()} }
+  : collection === 'externalGovernancePhases'
+    ? { id:'external-governance-', name:{en:'',kn:''}, type:'external-governance', governanceKind:'external-administering-power', governingPolityId:'', governanceType:'direct-administration', date:{from:null,to:null,era:'CE',precision:'range'}, capitalName:{en:'',kn:''}, color:'#596780', geography:{scope:{en:'',kn:''},geometry:{type:'Polygon',coordinates:[],precision:'schematic'},confidence:'low'}, description:{en:'',kn:''}, interpretation:{en:'',kn:''}, relatedEventIds:[], relatedRelationIds:[], relatedExtentIds:[], citations:[], review:{status:'needs-review',reviewer:null,updatedAt:today()} }
   : collection === 'territorialExtents'
     ? { id:'extent-', name:{en:'',kn:''}, classification:'core-administered', controlLevel:'direct', duration:'sustained', confidence:'low', snapshotKind:'prototype', snapshotYear:null, reignId:null, date:{from:null,to:null,era:'CE',precision:'unknown'}, polityIds:[], relatedEventIds:[], geometry:{type:'Polygon',coordinates:[],precision:'schematic'}, description:{en:'',kn:''}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'reigns'
     ? { id:'reign-', name:{en:'',kn:''}, periodType:'reign', polityId:'', rulerIds:[], capitalIds:[], date:{from:null,to:null,era:'CE',precision:'range'}, description:{en:'',kn:''}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'culturalHeritage'
     ? { id:'culture-', name:{en:'',kn:''}, category:'architecture', date:{from:null,to:null,era:'CE',precision:'unknown'}, polityIds:[], placeIds:[], peopleIds:[], relatedWorkIds:[], traditionTags:[], continuity:'unknown', description:{en:'',kn:''}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
+  : collection === 'heritageInventoryLeads'
+    ? { id:'heritage-inventory-', name:{en:'',kn:''}, translationStatus:'pending', recordKind:'inventory-lead', category:'monument', district:{en:'',kn:''}, locationLabel:'', date:null, coordinates:null, registryId:'', protectionLevel:'research-lead', description:{en:'',kn:''}, citations:[], review:{status:'needs-review',reviewer:null,updatedAt:today()} }
   : collection === 'deepChronologies'
     ? { id:'chronology-', name:{en:'',kn:''}, date:{from:null,to:null,era:'BCE',precision:'range'}, chronologyKind:'historiographic-periodization', geographicScope:{en:'',kn:''}, evidenceBasis:'secondary-synthesis', confidence:'provisional', description:{en:'',kn:''}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'heritageAudits'
@@ -66,8 +70,10 @@ const adminText = {
   en:{workspace:'Permanent research workspace · Atlas v0.20',title:'Dataset editor',subtitle:'Versioned MariaDB records for review and publication handoff',back:'← Return to public atlas',profile:'My profile',warning:'Every save creates a permanent MariaDB dataset revision. This page does not use browser drafts or localStorage; administrators review a revision before publishing the static GitHub Pages release.',resourcesManagement:'Resources & collaborations management',errors:'errors',warnings:'warnings',import:'Import JSON',export:'Export JSON',reset:'Reload server version',search:'Search all fields',searchPlaceholder:'Name, ID, status…',records:'records',new:'+ New record',edit:'Edit record',create:'Create record',delete:'Delete',save:'Save MariaDB revision',stableId:'Stable ID',englishName:'English name',kannadaName:'Kannada name',start:'Start year',end:'End year',datePrecision:'Date precision',reviewStatus:'Review status',reviewer:'Reviewer',json:'Complete record JSON',validation:'Validation for this record',collections:collectionLabels}
 }
 Object.assign(adminText.kn.collections,{externalPolities:'ಬಾಹ್ಯ ರಾಜ್ಯಗಳು',events:'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು',culturalHeritage:'ಸ್ಮಾರಕಗಳು, ಕಲೆ ಮತ್ತು ಸಂಸ್ಕೃತಿ',reigns:'ಆಳ್ವಿಕೆ ಮತ್ತು ರಾಜಕೀಯ ಅವಧಿಗಳು',territorialExtents:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',deepChronologies:'ಪ್ರಾಚೀನ ಕಾಲಕ್ರಮಗಳು',heritageAudits:'ಜಿಲ್ಲಾ ಪರಂಪರೆ ಪರಿಶೀಲನೆಗಳು'})
+adminText.kn.collections.externalGovernancePhases='ಬಾಹ್ಯ ಆಡಳಿತ ಹಂತಗಳು'
 adminText.kn.collections.districtHistoryResearch='ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ ಸಂಶೋಧನೆ'
 adminText.kn.collections.templeInventoryLeads='ದೇವಾಲಯ ಪಟ್ಟಿ ಸುಳಿವುಗಳು'
+adminText.kn.collections.heritageInventoryLeads='ಪರಂಪರೆ ಸಮಗ್ರ ಪಟ್ಟಿ ಸುಳಿವುಗಳು'
 adminText.kn.collections.inscriptionAudits='ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆಗಳು'
 adminText.kn.collections.politicalRelations='ದ್ವಿಪಕ್ಷೀಯ ರಾಜಕೀಯ ಸಂಬಂಧಗಳು'
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'
