@@ -136,6 +136,14 @@ test('relations explorer includes first-class bilateral political records and ba
   assert.match(relationsSource, /battleLocations/, 'battle locations must be retained in map positions')
 })
 
+test('relations map separates polity identity, relationship type and review status', () => {
+  assert.match(relationsSource,/const routeColorFor=item=>primaryPolityId\(item\)\?colorForPolity/, 'route colour must identify the participating polity')
+  assert.match(relationsSource,/const relationDashes=\{trade:/, 'relationship types must use stable, distinct route patterns')
+  assert.match(relationsSource,/color:routeColorFor\(item\)[\s\S]*dashArray:relationDashes\[item\.category\]/, 'pending review must not replace the route identity colour')
+  assert.match(relationsSource,/relations-polity-legend/, 'the map legend must explain polity colours')
+  assert.match(relationsSource,/relations-type-legend/, 'the map legend must explain relationship styles')
+})
+
 test('guided tours cover public pages and the private admin workspace', () => {
   assert.match(appSource, /<GuidedTour tourKey=\{view\}/, 'public routes must render the reusable tour')
   for (const route of ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']) {
