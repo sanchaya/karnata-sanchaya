@@ -8,6 +8,9 @@ import { offbeatHoysalaSources, offbeatHoysalaPlaces, offbeatHoysalaTemples } fr
 import { hoysalaTempleInventorySources, hoysalaTempleInventoryLeads } from './hoysala-temple-inventory.js'
 import { wikipediaHeritageInventoryLeads, wikipediaHeritageSources, wikipediaTempleIndexSources, wikipediaTempleInventoryLeads } from './wikipedia-temple-indexes.js'
 import { externalGovernancePhases } from './external-governance.js'
+import { applyResearchWaveV022 } from './research-wave-v022.js'
+import { mysuruHeritageBuildingLeads, mysuruHeritageBuildingSources } from './mysuru-heritage-buildings.js'
+import { applyDistrictHeritageConnections } from './district-heritage-connections.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -24,7 +27,7 @@ const appendUniqueById = (target, items) => {
 
 export const atlasData = {
   meta: {
-    schemaVersion: '0.19.2',
+    schemaVersion: '0.22.0',
     title: name('Karnataka Historical Atlas', 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ'),
     exportedAt: null,
   },
@@ -158,6 +161,8 @@ appendUniqueById(atlasData.places, offbeatHoysalaPlaces)
 appendUniqueById(atlasData.templeInventoryLeads, hoysalaTempleInventoryLeads)
 appendUniqueById(atlasData.templeInventoryLeads, wikipediaTempleInventoryLeads)
 appendUniqueById(atlasData.heritageInventoryLeads, wikipediaHeritageInventoryLeads)
+appendUniqueById(atlasData.sources, mysuruHeritageBuildingSources)
+appendUniqueById(atlasData.heritageInventoryLeads, mysuruHeritageBuildingLeads)
 const lobuTuaPlace = atlasData.places.find(item => item.id === 'place-lobu-tua')
 if (lobuTuaPlace && !lobuTuaPlace.geographicScope) lobuTuaPlace.geographicScope = { region: 'international', countryCode: 'ID', countryName: name('Indonesia', 'ಇಂಡೋನೇಷ್ಯಾ'), outsideKarnataka: true, outsideIndia: true }
 
@@ -652,6 +657,8 @@ atlasData.territorialExtents = [
 // Contributor-supplied Hoysala KML layer. Keep these as independent research
 // leads so the public map can show the geography without promoting uncertain
 // temple identities or protection claims.
+applyResearchWaveV022(atlasData,appendUniqueById)
+applyDistrictHeritageConnections(atlasData.districtHistoryResearch)
 appendUniqueById(atlasData.culturalHeritage, offbeatHoysalaTemples)
 
 atlasData.relationships = [
@@ -676,6 +683,18 @@ atlasData.relationships = [
   ...atlasData.territorialExtents.flatMap(extent => extent.polityIds.map((polityId,index) => ({ id:`rel-${extent.id}-polity-${index + 1}`, fromId:extent.id, type:`territorial-evidence-${extent.classification}`, toId:polityId, date:extent.date, citations:extent.citations, review:extent.review }))),
   ...atlasData.territorialExtents.flatMap(extent => extent.relatedEventIds.map((eventId,index) => ({ id:`rel-${extent.id}-event-${index + 1}`, fromId:extent.id, type:'supported-by-event', toId:eventId, date:extent.date, citations:extent.citations, review:extent.review }))),
   ...atlasData.territorialExtents.filter(extent => extent.reignId).map(extent => ({ id:`rel-${extent.id}-period`, fromId:extent.id, type:'snapshot-for-period', toId:extent.reignId, date:extent.date, citations:extent.citations, review:extent.review })),
+  ...atlasData.districtHistoryResearch.flatMap(item => [
+    ...(item.placeIds||[]).map((toId,index)=>({id:`rel-${item.id}-place-${index+1}`,fromId:item.id,type:'district-history-place-context',toId,citations:item.citations||[],review:item.review})),
+    ...(item.polityIds||[]).map((toId,index)=>({id:`rel-${item.id}-polity-${index+1}`,fromId:item.id,type:'district-history-polity-context',toId,citations:item.citations||[],review:item.review})),
+    ...(item.peopleIds||[]).map((toId,index)=>({id:`rel-${item.id}-person-${index+1}`,fromId:item.id,type:'district-history-person-context',toId,citations:item.citations||[],review:item.review})),
+    ...(item.eventIds||[]).map((toId,index)=>({id:`rel-${item.id}-event-${index+1}`,fromId:item.id,type:'district-history-event-context',toId,citations:item.citations||[],review:item.review}))
+  ]),
+  ...atlasData.heritageInventoryLeads.flatMap(item => [
+    ...(item.placeIds||[]).map((toId,index)=>({id:`rel-${item.id}-place-${index+1}`,fromId:item.id,type:'heritage-place-context',toId,citations:item.citations||[],review:item.review})),
+    ...(item.polityIds||[]).map((toId,index)=>({id:`rel-${item.id}-polity-${index+1}`,fromId:item.id,type:'heritage-polity-context',toId,citations:item.citations||[],review:item.review})),
+    ...(item.peopleIds||[]).map((toId,index)=>({id:`rel-${item.id}-person-${index+1}`,fromId:item.id,type:'heritage-person-context',toId,citations:item.citations||[],review:item.review})),
+    ...(item.eventIds||[]).map((toId,index)=>({id:`rel-${item.id}-event-${index+1}`,fromId:item.id,type:'heritage-event-context',toId,citations:item.citations||[],review:item.review}))
+  ]),
 ]
 
 export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'People', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
