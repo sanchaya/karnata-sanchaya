@@ -267,6 +267,22 @@ export function validateAtlas(data) {
         }
         if (record.review?.status!=='needs-review' && record.recordKind==='candidate' && record.evidenceBasis==='contributor-discovery-lead') add('warning',collection,id,'review.status','Discovery leads should remain needs-review until independently verified.')
       }
+      if (collection === 'heritageInventoryLeads') {
+        const protectionLevels=['unesco','national','state','local','institutional','research-lead','unknown']
+        if (!record.name?.en?.trim() || !record.name?.kn?.trim()) add('error',collection,id,'name','Bilingual heritage name is required.')
+        if (!record.district?.en?.trim() || !record.district?.kn?.trim()) add('error',collection,id,'district','Bilingual district name is required.')
+        if (record.recordKind!=='inventory-lead') add('error',collection,id,'recordKind','Heritage inventory records must remain inventory leads until promoted through authority review.')
+        if (!record.category?.trim()) add('error',collection,id,'category','Heritage category is required.')
+        if (!protectionLevels.includes(record.protectionLevel)) add('error',collection,id,'protectionLevel','Protection level is missing or invalid.')
+        if (['national','state'].includes(record.protectionLevel) && !record.registryId?.trim()) add('error',collection,id,'registryId','National and state register records require an authority registry ID.')
+        if (!record.sourceId || !record.sourceUrl || !Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Heritage inventory leads require a source ID, source URL and citation locator.')
+        if (record.coordinates) {
+          const {latitude,longitude}=record.coordinates
+          if (!Number.isFinite(latitude)||!Number.isFinite(longitude)||longitude < -180||longitude > 180||latitude < -90||latitude > 90) add('error',collection,id,'coordinates','Coordinates must be valid longitude/latitude values.')
+        }
+        ;['placeIds','polityIds','peopleIds','eventIds'].forEach(field=>{if(record[field]!=null&&!Array.isArray(record[field]))add('error',collection,id,field,`${field} must be an array.`)})
+        if (record.designationStatus==='unverified' && record.protectionLevel!=='research-lead') add('warning',collection,id,'protectionLevel','An unverified designation should remain a research lead.')
+      }
       if (collection === 'heritageAudits') {
         if (!record.district?.en?.trim() || !record.district?.kn?.trim()) add('error',collection,id,'district','Bilingual district name is required.')
         if (!['seeded','in-progress','reviewed'].includes(record.auditStatus)) add('error',collection,id,'auditStatus','Audit status is invalid.')
