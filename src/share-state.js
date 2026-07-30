@@ -2,7 +2,9 @@ const YEAR_MIN = -300
 const YEAR_MAX = 1973
 
 const numberParam = (params, key, min, max) => {
-  const value = Number(params.get(key))
+  const raw = params.get(key)
+  if (raw == null || raw.trim() === '') return null
+  const value = Number(raw)
   return Number.isFinite(value) && value >= min && value <= max ? value : null
 }
 

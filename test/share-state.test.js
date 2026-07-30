@@ -9,6 +9,10 @@ test('atlas share state reads a year and map position from query parameters', ()
   })
 })
 
+test('missing share parameters do not invent year one or a map position', () => {
+  assert.deepEqual(readAtlasUrlState(''), { year: null, map: null })
+})
+
 test('atlas share state normalizes year zero and rejects unsafe coordinates', () => {
   assert.deepEqual(readAtlasUrlState('?year=0&lat=999&lng=75.86'), { year: 1, map: null })
   assert.equal(readAtlasUrlState('?year=-4000').year, null)
