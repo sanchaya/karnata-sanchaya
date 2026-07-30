@@ -9,6 +9,14 @@ The live portal is one same-origin service: Express serves the built React appli
 3. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
 4. Schedule `npm run privacy:cleanup` daily. Schedule `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` daily; it creates a compressed MariaDB dump, an encrypted private-upload archive and SHA-256 checksums under `/var/backups/karnataka-atlas`. Copy that directory to separate durable storage and test restoration before inviting contributors.
 
+## Updating an existing installation
+
+Run `sudo ./scripts/update-live.sh` from the cloned repository. It fast-forwards `origin/main`, installs the locked dependencies, validates and builds the public application, applies every pending MariaDB migration idempotently, restarts the service and checks `/api/health`.
+
+Public interface changes and bundled research-data changes become available on the live portal after that deployment. A release that does not add a file under `server/migrations/` needs no separate manual database command; the update script is still safe to run normally.
+
+Existing administrator dataset snapshots are not overwritten during deployment. That separation protects edits already made on the live server: the public application uses the reviewed bundled release, while MariaDB keeps its own permanent revision history until an administrator deliberately imports, reconciles and saves a newer complete dataset revision.
+
 ## Reviewer and administrator operation
 
 - Administrators approve accounts and appoint `reviewer`, `verification-officer` or `exporter` roles from the live administration API.
