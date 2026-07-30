@@ -28,6 +28,12 @@ test('navigation separates historical exploration from project utilities', () =>
   assert.doesNotMatch(publicHeader, /href="https:\/\/sanchaya\.org"/, 'the public header must link to the internal About page instead of leaving the atlas')
 })
 
+test('public navigation reports the depth of the published research dataset', () => {
+  assert.match(appSource, /const publicDataDepth=/, 'public dataset counts must be derived from the bundled release data')
+  assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
+  for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
+})
+
 test('mobile and bilingual navigation expose accessible controls', () => {
   assert.match(appSource, /aria-expanded=\{mobileNavOpen\}/, 'mobile menu state must be exposed to assistive technology')
   assert.match(appSource, /aria-controls="primary-navigation"/, 'mobile menu must identify its controlled navigation')
@@ -49,6 +55,16 @@ test('map and timeline safety guards remain wired into the public app', () => {
   assert.match(appSource, /externalLinks\?\.\[0\]\?\.url/, 'optional external links must not break timeline cards')
   const labelSource = appSource.slice(appSource.indexOf('function LocalizedMapLabels'), appSource.indexOf('function GlobalSearch'))
   assert.doesNotMatch(labelSource, /<Tooltip permanent/, 'city and district labels must not remain permanently over map candidates')
+})
+
+test('public map exposes review-pending information across mapped categories', () => {
+  assert.match(appSource, /const publicReviewCandidates=\[/, 'the public review layer must aggregate mapped research records')
+  for (const collection of ['mappedResearchCandidates','districtHistoryStories','heritageCandidates','culturalRecords','primaryAtlasEvents']) {
+    assert.match(appSource, new RegExp(`\\.\\.\\.${collection}`), `${collection} must feed the public review layer`)
+  }
+  assert.match(appSource, /useState\(true\).*showAllReviewCandidates|showAllReviewCandidates.*useState\(true\)/s, 'pending information must be visible by default')
+  assert.match(appSource, /href="#community"/, 'review candidates must link to the contribution workflow')
+  assert.match(appSource, /pending:true/, 'review candidates must retain a visibly pending marker style')
 })
 
 test('Bengaluru epigraphy access hydrates from the live session without a public restriction banner', () => {
