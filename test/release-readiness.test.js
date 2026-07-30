@@ -74,7 +74,7 @@ test('timeline categories coordinate with their required map layers', () => {
   assert.match(appSource, /onCategoryChange=\{coordinateTimelineCategory\}/, 'the timeline rail must be connected to map-layer coordination')
   assert.match(appSource, /chooseInscription=item=>\{enableMapLayer\('inscriptions'\)/, 'opening an inscription must recover a disabled inscription layer')
   assert.match(appSource, /story\.storyKind==='research-candidate'\)\{enableMapLayer\('researchCandidates'\)/, 'opening a review candidate must recover its public map layer')
-  assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords\}\)/, 'opening a review candidate must focus its mapped location')
+  assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords,reviewCandidateId:story\.id\}\)/, 'opening a review candidate must focus and highlight its mapped location')
 })
 
 test('the static release is installable and keeps map context available offline', () => {
@@ -97,12 +97,21 @@ test('public map exposes review-pending information across mapped categories', (
   for (const collection of ['mappedResearchCandidates','districtHistoryStories','heritageCandidates','culturalRecords','primaryAtlasEvents']) {
     assert.match(appSource, new RegExp(`\\.\\.\\.${collection}`), `${collection} must feed the public review layer`)
   }
-  assert.match(appSource, /useState\(true\).*showAllReviewCandidates|showAllReviewCandidates.*useState\(true\)/s, 'pending information must be visible by default')
+  assert.match(appSource, /showAllReviewCandidates,setShowAllReviewCandidates\]=useState\(false\)/, 'pending information must start timeline-filtered instead of flooding the opening map')
+  assert.match(appSource, /checked=\{showAllReviewCandidates\}/, 'the complete public review layer must remain available through an explicit control')
   assert.match(appSource, /href="#community"/, 'review candidates must link to the contribution workflow')
   assert.match(appSource, /pending:true/, 'review candidates must retain a visibly pending marker style')
   assert.match(appSource, /className="mobile-overlay-toggle"/, 'dense map overlays must expose compact mobile toggles')
   assert.match(appSource, /aria-expanded=\{mapLegendOpen\}/, 'the mobile map legend must expose its open state')
   assert.match(appSource, /aria-expanded=\{reviewOptionsOpen\}/, 'the mobile review options must expose their open state')
+})
+
+test('the first atlas view starts at the earliest story and reveals objects progressively', () => {
+  assert.match(appSource,/initialShareState\.year\?\?firstTimelineStory\?\.year\?\?MIN_YEAR/, 'a shared year may override the earliest mapped-story opening state')
+  assert.match(appSource,/reviewCandidateId:firstTimelineStory\.id,overview:true/, 'the earliest mapped record must be selected without abandoning the Karnataka overview')
+  assert.match(appSource,/selected,setSelected\]=useState\(null\)/, 'the opening map must not preselect a later kingdom')
+  assert.match(appSource,/showAllInscriptions,setShowAllInscriptions\]=useState\(false\)/, 'the opening map must timeline-filter inscriptions')
+  assert.doesNotMatch(appSource,/const isCultureActive=\(item,year\)=>item\.timelineIndependent/, 'timeline-independent research layers must not flood the initial map')
 })
 
 test('Bengaluru epigraphy access hydrates from the live session without a public restriction banner', () => {
