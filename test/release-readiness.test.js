@@ -2,6 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { bengaluruKmlCandidates } from '../src/data/bengaluru-kml.js'
+import { communityPeople, communityPeopleEvents } from '../src/data/community-people.js'
 
 const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
@@ -80,6 +81,26 @@ test('timeline categories coordinate with their required map layers', () => {
   assert.match(appSource, /chooseInscription=item=>\{enableMapLayer\('inscriptions'\)/, 'opening an inscription must recover a disabled inscription layer')
   assert.match(appSource, /story\.storyKind==='research-candidate'\)\{enableMapLayer\('researchCandidates'\)/, 'opening a review candidate must recover its public map layer')
   assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords,reviewCandidateId:story\.id\}\)/, 'opening a review candidate must focus and highlight its mapped location')
+})
+
+test('people and keyboard timeline traversal stay connected to map selection', () => {
+  assert.match(appSource, /relations:atlasData\.politicalRelations\.filter/, 'people must inherit bilateral relation context')
+  assert.match(appSource, /layers\.people&&activePeople\.map/, 'people with mapped context must be individually clickable on the atlas')
+  assert.match(appSource, /people-map-toggle/, 'the people layer must be independently toggleable')
+  assert.match(appSource, /ArrowLeft.*ArrowRight.*ArrowUp.*ArrowDown/, 'the atlas timeline must support keyboard traversal')
+  assert.match(relationsSource, /closest\?\.\('\.relations-timeline'\)/, 'relations timeline keyboard handling must be scoped to its controls')
+})
+
+test('the public history graph includes cited non-royal and occupational people', () => {
+  for (const id of ['person-onake-obavva','person-sangolli-rayanna','person-gurusiddappa-kittur','person-amatur-balappa','person-madivala-machayya','person-ambigara-chowdaiah']) {
+    const person=communityPeople.find(record=>record.id===id)
+    assert.ok(person,`${id} must remain in the community-people packet`)
+    assert.ok(person.citations.length,`${id} must retain a direct source`)
+    assert.equal(person.review.status,'needs-review',`${id} must remain visibly review-pending`)
+    assert.ok(communityPeopleEvents.some(event=>event.peopleIds.includes(id)),`${id} must be connected to a dated map event`)
+  }
+  assert.match(appSource,/personRoleColors/, 'community roles need visually distinct map markers')
+  assert.match(appSource,/personRoleLabel/, 'community roles need bilingual map labels')
 })
 
 test('selected timeline stories retain readable text contrast', () => {
