@@ -87,6 +87,8 @@ test('people and keyboard timeline traversal stay connected to map selection', (
   assert.match(appSource, /relations:atlasData\.politicalRelations\.filter/, 'people must inherit bilateral relation context')
   assert.match(appSource, /layers\.people&&activePeople\.map/, 'people with mapped context must be individually clickable on the atlas')
   assert.match(appSource, /people-map-toggle/, 'the people layer must be independently toggleable')
+  assert.match(appSource, /events:t\.events,people:`\$\{t\.people\} · \$\{activePeople\.length\}`/, 'the people control must live with the other map-layer controls')
+  assert.doesNotMatch(stylesSource, /\.people-map-toggle\{position:absolute/, 'the people control must not cover the map')
   assert.match(appSource, /ArrowLeft.*ArrowRight.*ArrowUp.*ArrowDown/, 'the atlas timeline must support keyboard traversal')
   assert.match(relationsSource, /closest\?\.\('\.relations-timeline'\)/, 'relations timeline keyboard handling must be scoped to its controls')
 })
