@@ -5,3 +5,4 @@ dist
 .env.backup.*
 var/
 public/data/approved-community.json.tmp
+public/data/published-atlas.json.tmp

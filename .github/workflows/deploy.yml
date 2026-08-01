@@ -27,6 +27,7 @@ jobs:
       - run: npm run build
         env:
           PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          VITE_STATIC_DATASET: 'true'
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

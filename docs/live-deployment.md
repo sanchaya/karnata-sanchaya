@@ -5,13 +5,15 @@ The live portal is one same-origin service: Express serves the built React appli
 ## Initial setup
 
 1. Copy `.env.example` to `.env` and set strong unique database passwords, the public HTTPS `APP_ORIGIN`, and a key generated with `openssl rand -base64 32`. Keep this file outside version control and back up the encryption key separately.
-2. Start MariaDB and the portal with `docker compose up -d --build`, or run MariaDB independently, then `npm run db:migrate`, `npm run build`, and `npm start`.
+2. Start MariaDB and the portal with `docker compose up -d --build`, or run MariaDB independently, then `npm run db:migrate`, `npm run db:sync-dataset`, `npm run build`, and `npm start`.
 3. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
 4. Schedule `npm run privacy:cleanup` daily. Schedule `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` daily; it creates a compressed MariaDB dump, an encrypted private-upload archive and SHA-256 checksums under `/var/backups/karnataka-atlas`. Copy that directory to separate durable storage and test restoration before inviting contributors.
 
 ## Updating an existing installation
 
-Run `sudo ./scripts/update-live.sh` from the cloned repository. It fast-forwards `origin/main`, installs the locked dependencies, validates and builds the public application, applies every pending MariaDB migration idempotently, restarts the service and checks `/api/health`.
+Run `sudo ./scripts/update-live.sh` from the cloned repository. It fast-forwards `origin/main`, installs the locked dependencies, validates and builds the public application, applies every pending MariaDB migration, synchronizes installation seed records into a permanent dataset revision, restarts the service and checks `/api/health`.
+
+For a reviewed static release, set `SNAPSHOT_PUBLISHER_ID` and run `npm run publish:static`. The release task exports both approved community contributions and the latest validated MariaDB dataset revision. The resulting `public/data/published-atlas.json` is a read-only publication artifact for GitHub Pages, never an editing source.
 
 Public interface changes and bundled research-data changes become available on the live portal after that deployment. A release that does not add a file under `server/migrations/` needs no separate manual database command; the update script is still safe to run normally.
 

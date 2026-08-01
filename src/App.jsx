@@ -673,7 +673,7 @@ export default function App(){
     if(result.coords){setSelectedSearchPlace({coords:result.coords});if(result.coords[0]>19.5||result.coords[1]<73||result.coords[1]>81)setScope('india')}
   }
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
-  const closeAdmin=()=>{history.replaceState(null,'',window.location.pathname+window.location.search);setAdmin(false)}
+  const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
   const primaryNavItems=[['atlas',t.atlas],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
   const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]

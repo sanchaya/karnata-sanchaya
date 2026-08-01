@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import { atlasData, collectionLabels } from '../src/data/atlas.js'
 import { validateAtlas } from '../src/data/validate.js'
 import { prepareDatasetSave } from '../src/admin-persistence.js'
+import { mergeRepositorySeed } from '../server/dataset-store.js'
 
 const clone = value => JSON.parse(JSON.stringify(value))
 
@@ -49,4 +50,17 @@ test('new records require a unique stable ID and preserve the complete record', 
   const result = prepareDatasetSave({ data: atlasData, collection: 'polities', draft, updatedAt: '2026-07-28' })
   assert.ok(!result.error)
   assert.equal(result.next.polities.at(-1).name.kn, 'ಪರೀಕ್ಷಾ ದಾಖಲೆ')
+})
+
+test('server-side repository sync adds people candidates without overwriting MariaDB edits', () => {
+  const server=clone(atlasData)
+  server.people[0].name.en='Server edit'
+  server.peopleCandidates=[]
+  server.peopleCandidateMeta=null
+  server.meta.schemaVersion='0.24.0'
+  const result=mergeRepositorySeed(server)
+  assert.equal(result.dataset.people[0].name.en,'Server edit')
+  assert.equal(result.dataset.peopleCandidates.length,905)
+  assert.equal(result.dataset.meta.schemaVersion,'0.25.0')
+  assert.equal(result.dataset.peopleCandidateMeta.candidateCount,905)
 })

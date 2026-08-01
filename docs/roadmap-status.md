@@ -1,6 +1,6 @@
 # Karnataka Historical Atlas — milestone status and roadmap
 
-Updated: 2026-07-30
+Updated: 2026-08-01
 
 This is the durable project summary for the decisions and implementation work accumulated across the atlas build. It separates working software from research that still needs human evidence. A record being visible on a map or timeline does not mean that it is authority-confirmed.
 
@@ -30,13 +30,14 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.21 — India political-relations pass | **Schema and first matrix pass delivered; research incomplete** | First-class bilateral relation records with parties, relation type, dates, routes, battle locations, outcomes, people, treaty-document placeholders, citations and explicit needs-review status; Deccan–Tamil–Kakatiya–Bahmani, northern/eastern, Maratha, Nizam, British, French and Portuguese seed coverage is connected to `#relations` and admin | Resolve campaign-level sources, exact battle geography, treaty witnesses, commanders and outcomes; expand the remaining north/east/south and colonial relations |
 | Atlas v0.22 — early Karnataka and regional-polity research wave | **Structured first pass delivered; human review open** | Pre-Kadamba archaeological and Mauryan epigraphic narrative; Alupa polity/inscription packet; Keladi–Ikkeri and Chitradurga governance modules; seven Kadamba/Ganga/Kalyani Chalukya reigns; citations for all previously uncited major rulers; four source-backed schematic territorial records; candidate packets for all 22 previously empty districts; five literary edition/manuscript witnesses | Resolve primary edition locators, individual reign dates, coastal inscriptions, district authority evidence and exact territorial reconstruction before promoting records |
 | Atlas v0.23 — evidence promotion sprint | **Focused workflow delivered; human evidence open** | Seven-record promotion dashboard derived from the normalized evidence packets; seven-gate readiness, blockers and direct filtering into the permanent assignment board | Complete independent Kannada reviews, signed/authority coordinates, present-condition surveys and licensed photographs; promote only after every gate is independently verified |
+| Atlas v0.25 — People, Culture and Public Life | **Discovery corpus and review workflow delivered; curation open** | 905 code-split Wikimedia candidates with stable IDs, bilingual labels where available, role/birthplace/date discovery fields, explicit evidence gates, searchable People Explorer, lazy directory, candidate map focus, prefilled community contribution handoff and permanent MariaDB baseline merge | Verify Kannada/Karnataka relevance and authority biographies; expand ministers through position-held sources and theatre through academy/archive records; promote balanced district-, gender- and era-based cohorts into curated people |
 | District Deep History / `#district-history` | **All districts seeded; research ongoing** | 31 district scope slots, 33 needs-review leads covering every district, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
 ## Current data coverage snapshot
 
 The bundled snapshot currently contains approximately:
 
-- 9 Karnataka polities, 46 external polities, 62 events, 93 people and 28 bilateral political relations;
+- 9 Karnataka polities, 46 external polities, 62 events, 106 curated people, 905 Wikimedia people-review candidates and 28 bilateral political relations;
 - 29 inscriptions, 25 literary works, 55 cultural records and 24 reign/period records;
 - 202 sources, 927 generated relationships and 13 collaboration records;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;

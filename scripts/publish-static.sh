@@ -12,7 +12,9 @@ APP_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$APP_DIR"
 printf '\n==> Exporting approved community contributions\n'
 npm run export:approved
+printf '\n==> Exporting the latest MariaDB atlas revision\n'
+npm run export:static-dataset
 printf '\n==> Validating the complete release\n'
-npm run check
+VITE_STATIC_DATASET=true npm run check
 printf '\n==> Static release is ready in %s/dist\n' "$APP_DIR"
-printf 'Only reviewed community contributions were exported to public/data/approved-community.json.\n'
+printf 'The validated MariaDB atlas revision and reviewed community contributions were exported as read-only publication artifacts.\n'

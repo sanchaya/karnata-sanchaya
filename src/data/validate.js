@@ -1,5 +1,7 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
+const PEOPLE_CANDIDATE_EVIDENCE=['identity','karnatakaConnection','bilingualName','lifeDates','roles','contributions','authorityCitations','imageLicense']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
 const DISTRICT_HISTORY_CATEGORIES = ['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope']
 
@@ -20,7 +22,7 @@ export function validateAtlas(data) {
       else all.set(record.id, collection)
       if (collection !== 'relationships' && collection !== 'sources') {
         if (!record?.name?.en?.trim()) add('error',collection,id,'name.en','English name is required.')
-        if (!record?.name?.kn?.trim()) add('warning',collection,id,'name.kn','Kannada name is missing.')
+        if (collection!=='peopleCandidates'&&!record?.name?.kn?.trim()) add('warning',collection,id,'name.kn','Kannada name is missing.')
       }
       if (!record?.review?.status || !['draft','needs-review','reviewed','published'].includes(record.review.status)) add('error',collection,id,'review.status','Review status is missing or invalid.')
       if (record?.date) {
@@ -140,7 +142,7 @@ export function validateAtlas(data) {
       }
       if (collection === 'people') {
         if (!Array.isArray(record.roles) || record.roles.length===0) add('error',collection,id,'roles','People require at least one controlled role.')
-        ;(record.roles||[]).forEach((role,index)=>{if(!['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman'].includes(role))add('error',collection,id,`roles.${index}`,`Unsupported person role: ${role}`)})
+        ;(record.roles||[]).forEach((role,index)=>{if(!PERSON_ROLES.includes(role))add('error',collection,id,`roles.${index}`,`Unsupported person role: ${role}`)})
         if (record.gender && !['woman','man','nonbinary','other','unknown'].includes(record.gender)) add('error',collection,id,'gender',`Unsupported gender value: ${record.gender}`)
         ;(record.districtAssociations||[]).forEach((association,index)=>{
           if (!association.districtId) add('error',collection,id,`districtAssociations.${index}.districtId`,'District associations require a stable district ID.')
@@ -150,6 +152,19 @@ export function validateAtlas(data) {
         if (!record.polityId) add('warning',collection,id,'polityId','A related polity or historical context is recommended.')
         if (record.date?.precision==='unknown' && (record.date.from!=null||record.date.to!=null)) add('error',collection,id,'date','Unknown person dates must not carry numeric bounds.')
         if ((!Array.isArray(record.citations)||record.citations.length===0) && !['ruler','patron'].some(role=>record.roles?.includes(role))) add('warning',collection,id,'citations','Non-ruler person profiles should cite at least one biographical or work-level source.')
+      }
+      if (collection === 'peopleCandidates') {
+        if (!/^person-candidate-q\d+$/.test(record.id)) add('error',collection,id,'id','Wikimedia person candidates require a stable person-candidate-q… ID.')
+        if (!/^Q\d+$/.test(record.externalIds?.wikidata||'')) add('error',collection,id,'externalIds.wikidata','A Wikidata Q identifier is required.')
+        if (!Array.isArray(record.roles)||record.roles.length===0) add('error',collection,id,'roles','Candidate people require at least one discovery role.')
+        ;(record.roles||[]).forEach((role,index)=>{if(!PERSON_ROLES.includes(role))add('error',collection,id,`roles.${index}`,`Unsupported candidate role: ${role}`)})
+        if (!record.birthplace?.wikidataId || !record.birthplace?.name?.en?.trim()) add('error',collection,id,'birthplace','Candidate intake requires its Wikidata birthplace identity and English label.')
+        const point=record.birthplace?.location?.coordinates
+        if(point&&(!Array.isArray(point)||point.length!==2||!point.every(Number.isFinite)||point[0] < -180||point[0] > 180||point[1] < -90||point[1] > 90))add('error',collection,id,'birthplace.location','Candidate birthplace coordinates must be valid [longitude, latitude].')
+        if(record.discovery?.publicationReady!==false)add('error',collection,id,'discovery.publicationReady','Wikimedia discovery candidates cannot be publication-ready before independent review.')
+        if(record.reviewWorkflow?.target!=='curated-person-record'||record.reviewWorkflow?.status!=='candidate-intake')add('error',collection,id,'reviewWorkflow','Candidate people must remain in the curated-person intake workflow.')
+        PEOPLE_CANDIDATE_EVIDENCE.forEach(field=>{if(!['verified','located','provisional','unresolved','not-available'].includes(record.reviewWorkflow?.evidence?.[field]?.status))add('error',collection,id,`reviewWorkflow.evidence.${field}`,'Every candidate evidence gate requires a supported status.')})
+        if(record.review?.status!=='needs-review')add('warning',collection,id,'review.status','Promote an independently verified candidate into the curated people collection instead of changing its intake status.')
       }
       if (collection === 'inscriptions') {
         if (!record.placeId || !record.polityId) add('error',collection,id,'relationships','Inscriptions require a mapped place and related polity.')

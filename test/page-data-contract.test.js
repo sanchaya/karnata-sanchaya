@@ -2,6 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { atlasData, collectionLabels } from '../src/data/atlas.js'
 import { validateAtlas } from '../src/data/validate.js'
+import peopleCandidateCorpus from '../server/seeds/wikimedia-people-candidates.json' with { type:'json' }
 
 const sourceIds = new Set(atlasData.sources.map(source => source.id))
 const placeById = new Map(atlasData.places.map(place => [place.id, place]))
@@ -12,6 +13,21 @@ const inscriptionIds = new Set(atlasData.inscriptions.map(item => item.id))
 const districtAuditIds = new Set(atlasData.inscriptionAudits.map(audit => audit.districtAuditId))
 const pointIsValid = point => Array.isArray(point) && point.length === 2 && point.every(Number.isFinite)
 const bilingual = value => Boolean(value?.en?.trim() && value?.kn?.trim())
+
+test('v0.25 Wikimedia people corpus is complete, stable and review-gated', () => {
+  const candidates=peopleCandidateCorpus.records
+  assert.equal(peopleCandidateCorpus.meta.candidateCount,905)
+  assert.equal(candidates.length,905)
+  assert.equal(new Set(candidates.map(item=>item.id)).size,905)
+  assert.equal(new Set(candidates.map(item=>item.externalIds.wikidata)).size,905)
+  assert.ok(candidates.every(item=>item.review.status==='needs-review'))
+  assert.ok(candidates.every(item=>item.discovery.publicationReady===false))
+  assert.ok(candidates.every(item=>item.reviewWorkflow.target==='curated-person-record'))
+  const counts=Object.fromEntries(['actor','author','film-director','screenwriter','poet','artist','theatre-director','minister'].map(role=>[role,candidates.filter(item=>item.roles.includes(role)).length]))
+  assert.deepEqual(counts,{actor:522,author:239,'film-director':168,screenwriter:105,poet:104,artist:14,'theatre-director':3,minister:2})
+  const errors=validateAtlas({...atlasData,peopleCandidateMeta:peopleCandidateCorpus.meta,peopleCandidates:candidates}).filter(issue=>issue.severity==='error')
+  assert.deepEqual(errors,[])
+})
 
 test('the bundled dataset is a clean page-data release candidate', () => {
   assert.deepEqual(validateAtlas(atlasData), [])
@@ -153,7 +169,7 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
 })
 
 test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated', () => {
-  assert.equal(atlasData.meta.schemaVersion, '0.22.0')
+  assert.equal(atlasData.meta.schemaVersion, '0.25.0')
   assert.ok(atlasData.polities.some(item => item.id === 'polity-alupa'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-keladi-ikkeri-nayaka'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-chitradurga-nayaka'))
