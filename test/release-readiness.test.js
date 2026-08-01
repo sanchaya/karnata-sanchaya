@@ -13,6 +13,7 @@ const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', imp
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
+const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
@@ -76,6 +77,12 @@ test('timeline categories coordinate with their required map layers', () => {
   assert.match(appSource, /chooseInscription=item=>\{enableMapLayer\('inscriptions'\)/, 'opening an inscription must recover a disabled inscription layer')
   assert.match(appSource, /story\.storyKind==='research-candidate'\)\{enableMapLayer\('researchCandidates'\)/, 'opening a review candidate must recover its public map layer')
   assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords,reviewCandidateId:story\.id\}\)/, 'opening a review candidate must focus and highlight its mapped location')
+})
+
+test('selected timeline stories retain readable text contrast', () => {
+  assert.match(stylesSource,/\.event-track button\.selected\{background:#eef2ff;color:var\(--sanchaya-ink\);border-color:var\(--sanchaya-blue\)\}/, 'selected timeline cards need a light, high-contrast surface')
+  assert.match(stylesSource,/\.event-track button\.selected span,\.event-track button\.selected strong\{color:var\(--sanchaya-ink\)\}/, 'selected timeline titles must not inherit unreadable white text')
+  assert.match(stylesSource,/\.event-track button\.selected em\{color:var\(--sanchaya-blue\)\}/, 'selected timeline metadata must remain legible')
 })
 
 test('the static release is installable and keeps map context available offline', () => {
@@ -160,6 +167,17 @@ test('relations map separates polity identity, relationship type and review stat
   assert.match(relationsSource,/color:routeColorFor\(item\)[\s\S]*dashArray:relationDashes\[item\.category\]/, 'pending review must not replace the route identity colour')
   assert.match(relationsSource,/relations-polity-legend/, 'the map legend must explain polity colours')
   assert.match(relationsSource,/relations-type-legend/, 'the map legend must explain relationship styles')
+})
+
+test('relations layout keeps the map and timeline usable on narrow screens', () => {
+  assert.match(relationsSource,/className="relations-timeline"/, 'relations needs an in-map timeline for direct traversal')
+  assert.match(relationsSource,/const \[open,setOpen\]=useState\(\(\)=>typeof window==='undefined'\|\|window\.innerWidth>820\)/, 'the review matrix should collapse on narrow screens')
+  assert.match(relationsSource,/timelineStories=filtered\.slice\(\)\.sort/, 'the in-map timeline must follow the active filtered relation set')
+  assert.match(relationsStylesSource,/\.relations-map\{height:68svh;min-height:480px\}/, 'mobile relations maps need enough height for map exploration')
+  assert.match(relationsStylesSource,/\.relations-timeline\{position:absolute/, 'the timeline must stay attached to the map instead of pushing the matrix below the page')
+  assert.match(relationsSource,/--timeline-color':colors\[item\.category\]/, 'timeline cards must carry the relationship colour')
+  assert.match(relationsStylesSource,/\.relations-timeline button\{position:relative;border-top:3px solid var\(--timeline-color/, 'timeline cards must expose their relationship colour')
+  assert.match(relationsStylesSource,/grid-template-columns:minmax\(230px,250px\) minmax\(560px,1fr\) minmax\(250px,280px\)/, 'wide layouts should reserve more space for the map')
 })
 
 test('guided tours cover public pages and the private admin workspace', () => {
