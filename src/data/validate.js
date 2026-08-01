@@ -140,8 +140,13 @@ export function validateAtlas(data) {
       }
       if (collection === 'people') {
         if (!Array.isArray(record.roles) || record.roles.length===0) add('error',collection,id,'roles','People require at least one controlled role.')
-        ;(record.roles||[]).forEach((role,index)=>{if(!['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','lieutenant','soldier','artisan','washerman','boatman'].includes(role))add('error',collection,id,`roles.${index}`,`Unsupported person role: ${role}`)})
+        ;(record.roles||[]).forEach((role,index)=>{if(!['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman'].includes(role))add('error',collection,id,`roles.${index}`,`Unsupported person role: ${role}`)})
         if (record.gender && !['woman','man','nonbinary','other','unknown'].includes(record.gender)) add('error',collection,id,'gender',`Unsupported gender value: ${record.gender}`)
+        ;(record.districtAssociations||[]).forEach((association,index)=>{
+          if (!association.districtId) add('error',collection,id,`districtAssociations.${index}.districtId`,'District associations require a stable district ID.')
+          if (!association.kind) add('error',collection,id,`districtAssociations.${index}.kind`,'District associations require a relationship kind.')
+          if (!Array.isArray(association.citations)||association.citations.length===0) add('warning',collection,id,`districtAssociations.${index}.citations`,'District associations should cite their biographical or event evidence.')
+        })
         if (!record.polityId) add('warning',collection,id,'polityId','A related polity or historical context is recommended.')
         if (record.date?.precision==='unknown' && (record.date.from!=null||record.date.to!=null)) add('error',collection,id,'date','Unknown person dates must not carry numeric bounds.')
         if ((!Array.isArray(record.citations)||record.citations.length===0) && !['ruler','patron'].some(role=>record.roles?.includes(role))) add('warning',collection,id,'citations','Non-ruler person profiles should cite at least one biographical or work-level source.')
