@@ -226,6 +226,8 @@ run_as_app "$NPM_BIN" run check
 if [[ $SKIP_MIGRATIONS -eq 0 ]]; then
   notice 'Applying MariaDB migrations'
   run_as_app "$NPM_BIN" run db:migrate
+  notice 'Synchronizing repository seed records into a permanent MariaDB revision'
+  run_as_app "$NPM_BIN" run db:sync-dataset
 fi
 
 cat > "$UNIT_FILE" <<UNIT

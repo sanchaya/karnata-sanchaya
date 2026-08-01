@@ -46,6 +46,7 @@ Copy `.env.example` to `.env`, configure a local MariaDB database, then run:
 
 ```bash
 npm run db:migrate
+npm run db:sync-dataset
 npm run dev:api
 npm run dev
 ```
@@ -77,6 +78,14 @@ node --test test/page-data-contract.test.js
 ```
 
 Add a focused regression case whenever a new page, map layer, timeline story or cross-collection relationship is introduced.
+
+Atlas v0.25 adds 905 Wikimedia people discovery candidates without treating them as verified biographies. Open `#people` → **Wikimedia review candidates** to search and submit cited corrections. `npm run db:sync-dataset` imports the reviewed repository seed into a permanent MariaDB dataset revision; the live portal and Admin both read that revision through the server API. See [`docs/v025-people-culture-public-life.md`](docs/v025-people-culture-public-life.md).
+
+## Dataset source of truth
+
+The live server treats the latest `dataset_snapshots` revision in MariaDB as the source of truth for every public page and the Admin editor. The browser never stores historical records, drafts, evidence assignments or candidate edits. Browser storage is limited to interface preferences such as language, map style and whether a guided tour was already shown. The service worker may retain a read-only copy of the last successfully loaded dataset for offline viewing; it cannot edit or publish it.
+
+Repository JSON is an installation seed, not the live data store. Deployment runs `db:migrate` followed by `db:sync-dataset`, and administrators create subsequent immutable MariaDB revisions. `npm run publish:static` exports the latest validated MariaDB revision to `public/data/published-atlas.json` before building the read-only GitHub Pages publication; the static site is not a second editing system.
 
 Open `#district-history` (ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ / District deep history) to browse the district intake layer. The older `#history` link remains a compatibility alias. Amber dashed markers are research leads, not verified sites. Researchers can edit the normalized `districtHistoryResearch` collection from the authenticated `#admin` workspace and save a permanent MariaDB revision before preparing a static release.
 

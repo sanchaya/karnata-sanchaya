@@ -5,27 +5,9 @@ import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
 
 const collections = Object.keys(collectionLabels)
-const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
-const LEGACY_STORAGE_KEY = 'karnataka-atlas-research-draft-v0.9'
+const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', peopleCandidates:'person-candidate-q', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
 const clone = value => JSON.parse(JSON.stringify(value))
 const today = () => new Date().toISOString().slice(0,10)
-const readLegacyDraft = () => { try { const value=localStorage.getItem(LEGACY_STORAGE_KEY);return value?JSON.parse(value):null } catch { return null } }
-const mergeLegacyDraft = (server, legacy) => {
-  if(!legacy||typeof legacy!=='object') return clone(server)
-  const merged=clone(server)
-  collections.forEach(collection=>{
-    if(!Array.isArray(legacy[collection])||!Array.isArray(merged[collection])) return
-    const byId=new Map(merged[collection].map(record=>[record.id,record]))
-    legacy[collection].forEach(record=>{
-      if(!record?.id) return
-      const current=byId.get(record.id)
-      const legacyDate=record.review?.updatedAt||'';const currentDate=current?.review?.updatedAt||''
-      if(!current||legacyDate>currentDate) byId.set(record.id,record)
-    })
-    merged[collection]=[...byId.values()]
-  })
-  return merged
-}
 
 const blankRecord = collection => collection === 'relationships'
   ? { id:'rel-', fromId:'', type:'associated-with', toId:'', date:{from:null,to:null,era:'CE',precision:'unknown'}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
@@ -51,6 +33,8 @@ const blankRecord = collection => collection === 'relationships'
     ? { id:'src-', type:'book', title:{en:'',kn:''}, authors:[], publisher:'', year:null, doi:'', isbn:'', url:'', review:{status:'draft',reviewer:null,updatedAt:today()} }
   : collection === 'collaborations'
     ? { id:'collaboration-', name:{en:'',kn:''}, entityKind:'organization', stage:'upcoming', collaborationType:'research', url:'', contribution:{en:'',kn:''}, contactPath:'#community', review:{status:'draft',reviewer:null,updatedAt:today()} }
+  : collection === 'peopleCandidates'
+    ? { id:'person-candidate-q', name:{en:'',kn:''}, aliases:{en:[],kn:[]}, roles:['author'], occupations:[], date:{from:null,to:null,era:'CE',precision:'unknown'}, birthplace:{wikidataId:'',name:{en:'',kn:''},location:null}, externalIds:{wikidata:''}, externalLinks:[], image:null, discovery:{method:'community-intake',scope:'Karnataka/Kannada connection requires review',retrievedAt:today(),publicationReady:false}, citations:[], reviewWorkflow:{target:'curated-person-record',status:'candidate-intake',evidence:{identity:{status:'unresolved'},karnatakaConnection:{status:'unresolved'},bilingualName:{status:'unresolved'},lifeDates:{status:'unresolved'},roles:{status:'unresolved'},contributions:{status:'unresolved'},authorityCitations:{status:'unresolved'},imageLicense:{status:'not-available'}}}, review:{status:'needs-review',reviewer:null,updatedAt:today()} }
     : { id:`${collectionPrefix[collection]}-`, name:{en:'',kn:''}, date:{from:null,to:null,era:'CE',precision:'unknown'}, citations:[], review:{status:'draft',reviewer:null,updatedAt:today()} }
 
 function recordTitle(record, collection = '', locale = 'en') {
@@ -77,8 +61,9 @@ adminText.kn.collections.heritageInventoryLeads='ಪರಂಪರೆ ಸಮಗ್
 adminText.kn.collections.inscriptionAudits='ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆಗಳು'
 adminText.kn.collections.politicalRelations='ದ್ವಿಪಕ್ಷೀಯ ರಾಜಕೀಯ ಸಂಬಂಧಗಳು'
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'
-adminText.kn.workspace='ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.20'
-adminText.en.workspace='Permanent research workspace · Atlas v0.20'
+adminText.kn.collections.peopleCandidates='ವ್ಯಕ್ತಿಗಳ ಪರಿಶೀಲನಾ ಅಭ್ಯರ್ಥಿಗಳು'
+adminText.kn.workspace='ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v0.25'
+adminText.en.workspace='Permanent research workspace · Atlas v0.25'
 Object.assign(adminText.kn,{progressTitle:'ದತ್ತಾಂಶ ಪ್ರಗತಿ ವರದಿ',progressIntro:'ಪರಿಶೀಲಿಸಿದ, ಬಾಕಿ ಮತ್ತು ದೋಷಗಳ ಸಂಕ್ಷಿಪ್ತ ಚಿತ್ರಣ',dataPoints:'ಒಟ್ಟು ದತ್ತಾಂಶ ಬಿಂದುಗಳು',verified:'ಪರಿಶೀಲಿಸಿದ / ಪ್ರಕಟಿತ',pending:'ಪರಿಶೀಲನೆ ಬಾಕಿ',validationErrors:'ದತ್ತಾಂಶ ದೋಷಗಳು',coverage:'ವ್ಯಾಪ್ತಿ',collectionProgress:'ಸಂಗ್ರಹವಾರು ಪ್ರಗತಿ'})
 Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntro:'A live summary of reviewed, pending and invalid records',dataPoints:'Total data points',verified:'Reviewed / published',pending:'Pending review',validationErrors:'Validation errors',coverage:'Coverage',collectionProgress:'Collection progress'})
 Object.assign(adminText.kn,{releaseTitle:'ಲೈವ್ ಸಮುದಾಯ ಹಸ್ತಾಂತರ',releaseIntro:'ಮಾರಿಯಾDB ಕಾರ್ಯಕ್ಷೇತ್ರ ಮತ್ತು ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆಯ ಸ್ಥಿತಿ',pendingAccounts:'ಅನುಮೋದನೆ ಬಾಕಿ ಖಾತೆಗಳು',submittedContributions:'ವಿಮರ್ಶೆ ಬಾಕಿ ಕೊಡುಗೆಗಳು',pendingVerifications:'ID ಪರಿಶೀಲನೆ ಬಾಕಿ',appointedReviewers:'ನೇಮಕಗೊಂಡ ಪರಿಶೀಲಕರು',latestRevision:'ಕೊನೆಯ MariaDB ಆವೃತ್ತಿ',lastPublished:'ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆ',notPublished:'ಇನ್ನೂ ಸ್ಥಿರ ಪ್ರಕಟಣೆ ಇಲ್ಲ'})
@@ -101,7 +86,6 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const [connection,setConnection] = useState('loading')
   const [readiness,setReadiness] = useState(null)
   const [saving,setSaving] = useState(false)
-  const [legacyPending,setLegacyPending] = useState(false)
   const [collection,setCollection] = useState('polities')
   const [query,setQuery] = useState('')
   const [selectedId,setSelectedId] = useState(data.polities[0]?.id || '')
@@ -113,7 +97,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     let active=true
     fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/dataset`,{credentials:'include'})
       .then(async response=>{const body=await response.json().catch(()=>({}));if(response.status===404&&body.revision===0)return {dataset:null,revision:0};if(!response.ok)throw new Error(body.error||`Server request failed (${response.status})`);return body})
-      .then(body=>{if(!active)return;const serverData=body.dataset||clone(atlasData);const legacy=readLegacyDraft();const merged=legacy?mergeLegacyDraft(serverData,legacy):serverData;setData(merged);setRevision(Number(body.revision||0));setCollection('polities');const first=merged.polities?.[0];setSelectedId(first?.id||'');setEditor(first||blankRecord('polities'));setLegacyPending(Boolean(legacy));setConnection('ready');setNotice(legacy?'A legacy browser draft was found and merged for one-time migration. Save it as a MariaDB revision to make it permanent.':`Loaded permanent server revision ${body.revision||0}.`)})
+      .then(body=>{if(!active)return;const dataset=body.dataset;if(!dataset)throw new Error('No permanent MariaDB dataset revision is available.');setData(dataset);setRevision(Number(body.revision||0));setCollection('polities');const first=dataset.polities?.[0];setSelectedId(first?.id||'');setEditor(first||blankRecord('polities'));setConnection('ready');setNotice(`Loaded permanent MariaDB revision ${body.revision||0}.`)})
       .catch(error=>{if(active){setConnection('error');setNotice(error.message)}})
     return()=>{active=false}
   },[])
@@ -154,7 +138,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     try {
       const response=await fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/dataset`,{method:'PUT',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify({dataset:next,baseRevision:revision})})
       const body=await response.json().catch(()=>({}));if(!response.ok){const details=Array.isArray(body.issues)&&body.issues.length?` ${formatValidationIssues(body.issues)}`:'';throw new Error(`${body.error||`Server request failed (${response.status})`}${details}`)}
-      setData(next);setRevision(Number(body.revision||revision+1));if(legacyPending){localStorage.removeItem(LEGACY_STORAGE_KEY);setLegacyPending(false)}setNotice(`${successMessage} Revision ${body.revision}.`);return true
+      setData(next);setRevision(Number(body.revision||revision+1));setNotice(`${successMessage} Revision ${body.revision}.`);return true
     } catch(error) { setNotice(error.message);return false } finally { setSaving(false) }
   }
   const save = async () => {
@@ -184,7 +168,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   }
 
   return <div className="admin-shell" lang={locale}>
-    <header className="admin-header"><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.back}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.workspace}</p><h1>{t.title}</h1><p className="admin-subtitle">{t.subtitle}</p></div></div><div className="admin-header-actions"><button className="secondary language-switch" onClick={onLocaleChange}>{locale==='kn'?'English':'ಕನ್ನಡ'}</button><button className="secondary" onClick={()=>{window.location.hash='profile'}}>{t.profile}</button><button className="secondary" onClick={onClose}>{t.back}</button></div></header>
+    <header className="admin-header"><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.back} onClick={event=>{event.preventDefault();onClose()}}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.workspace}</p><h1>{t.title}</h1><p className="admin-subtitle">{t.subtitle}</p></div></div><div className="admin-header-actions"><button className="secondary language-switch" onClick={onLocaleChange}>{locale==='kn'?'English':'ಕನ್ನಡ'}</button><button className="secondary" onClick={()=>{window.location.hash='profile'}}>{t.profile}</button><button className="secondary" onClick={onClose}>{t.back}</button></div></header>
     <div className="admin-warning"><strong>{locale==='kn'?'ಸ್ಥಿರ-ಮೊದಲ ವಿನ್ಯಾಸ:':'Static-first:'}</strong> {t.warning}</div>
     <div className="admin-toolbar">
       <div className="health"><strong>{issues.filter(i=>i.severity==='error').length}</strong> {t.errors} <strong>{issues.filter(i=>i.severity==='warning').length}</strong> {t.warnings} · <span className={`dataset-connection ${connection}`}>{connection==='ready'?`MariaDB · revision ${revision}`:connection==='loading'?'Connecting to MariaDB…':'MariaDB unavailable'}</span></div>
@@ -223,6 +207,11 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
             <label className="wide">Outcome / ಫಲಿತಾಂಶ<textarea rows="3" value={draft.outcome?.en||''} onChange={e=>update(['outcome','en'],e.target.value)}/></label><label className="wide">ಫಲಿತಾಂಶ / Kannada outcome<textarea lang="kn" rows="3" value={draft.outcome?.kn||''} onChange={e=>update(['outcome','kn'],e.target.value)}/></label>
           </> : collection==='sources' ? <>
             <label>English title <input value={draft.title?.en||''} onChange={e=>update(['title','en'],e.target.value)}/></label><label>Kannada title <input lang="kn" value={draft.title?.kn||''} onChange={e=>update(['title','kn'],e.target.value)}/></label><label className="wide">Authors / organizations<input value={(draft.authors||[]).join('; ')} onChange={e=>update(['authors'],e.target.value.split(';').map(value=>value.trim()).filter(Boolean))} placeholder="Author One; Institution Two"/></label><label>Source type <input value={draft.type||''} onChange={e=>update(['type'],e.target.value)}/></label><label>Publication year <input type="number" value={draft.year??''} onChange={e=>update(['year'],e.target.value===''?null:Number(e.target.value))}/></label><label className="wide">Publisher / repository<input value={draft.publisher||''} onChange={e=>update(['publisher'],e.target.value)}/></label><label>DOI<input value={draft.doi||''} onChange={e=>update(['doi'],e.target.value)}/></label><label>ISBN<input value={draft.isbn||''} onChange={e=>update(['isbn'],e.target.value)}/></label><label className="wide">URL <input type="url" value={draft.url||''} onChange={e=>update(['url'],e.target.value)}/></label>
+          </> : collection==='peopleCandidates' ? <>
+            <label>{t.englishName}<input value={draft.name?.en||''} onChange={e=>update(['name','en'],e.target.value)}/></label><label>{t.kannadaName}<input lang="kn" value={draft.name?.kn||''} onChange={e=>update(['name','kn'],e.target.value)}/></label>
+            <label>Wikidata ID<input value={draft.externalIds?.wikidata||''} onChange={e=>update(['externalIds','wikidata'],e.target.value)} placeholder="Q12345"/></label><label>Roles / ಪಾತ್ರಗಳು<input value={(draft.roles||[]).join(', ')} onChange={e=>update(['roles'],e.target.value.split(',').map(value=>value.trim()).filter(Boolean))} placeholder="author, poet"/></label>
+            <label>Birthplace Wikidata ID<input value={draft.birthplace?.wikidataId||''} onChange={e=>update(['birthplace','wikidataId'],e.target.value)} placeholder="Q1355"/></label><label>Birthplace / ಜನ್ಮಸ್ಥಳ<input value={draft.birthplace?.name?.en||''} onChange={e=>update(['birthplace','name','en'],e.target.value)}/></label><label>ಜನ್ಮಸ್ಥಳ ಕನ್ನಡ<input lang="kn" value={draft.birthplace?.name?.kn||''} onChange={e=>update(['birthplace','name','kn'],e.target.value)}/></label>
+            <label className="wide">Review guidance / ಪರಿಶೀಲನಾ ಸೂಚನೆ<textarea rows="3" value={draft.discovery?.scope||''} onChange={e=>update(['discovery','scope'],e.target.value)}/></label>
           </> : collection==='districtHistoryResearch' ? <>
             <label>Record kind / ದಾಖಲೆ ಪ್ರಕಾರ<select value={draft.recordKind||'candidate'} onChange={e=>update(['recordKind'],e.target.value)}><option value="candidate">candidate</option><option value="district-scope">district-scope</option></select></label><label>Category / ವರ್ಗ<select value={draft.category||'settlement-origin'} onChange={e=>update(['category'],e.target.value)}>{['prehistoric-landscape','settlement-origin','urban-foundation','foundation-stone','regional-memory','district-scope'].map(value=><option key={value}>{value}</option>)}</select></label>
             <label className="wide">District audit ID / ಜಿಲ್ಲಾ ಪರಿಶೀಲನೆ ID<input value={draft.districtId||''} onChange={e=>update(['districtId'],e.target.value)} placeholder="audit-kolar"/></label>
