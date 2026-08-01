@@ -10,16 +10,18 @@ const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.met
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
+const peopleSource = await readFile(new URL('../src/PeopleExplorer.jsx', import.meta.url), 'utf8')
 const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
 const explorerStylesSource = await readFile(new URL('../src/explorer.css', import.meta.url), 'utf8')
+const peopleStylesSource = await readFile(new URL('../src/people.css', import.meta.url), 'utf8')
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
+  const expectedRoutes = ['atlas', 'relations', 'people', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
@@ -58,6 +60,7 @@ test('tablet layouts preserve maps, readable cards and non-obstructing controls'
   assert.match(tabletStylesSource, /\.relations-detail \{ position: static/, 'tablet relation details must not cover the map')
   assert.match(tabletStylesSource, /\.evidence-procedure ol \{ grid-template-columns: repeat\(2/, 'tablet evidence steps must avoid a needlessly long single column')
   assert.match(tabletStylesSource, /pointer: coarse/, 'touch-first tablets need larger interaction targets')
+  assert.match(peopleStylesSource, /@media\(max-width:1180px\)/, 'the People Explorer must adapt its map, directory and profile at tablet widths')
   assert.match(explorerStylesSource, /\.explorer-map-heading\{left:52px;right:auto;width:fit-content;max-width:360px/, 'literature and epigraphy map headings must stay compact and clear Leaflet zoom controls')
   assert.match(stylesSource, /\.district-history-map-wrap \.map-theme-control\{left:52px\}/, 'district history map style controls must clear Leaflet zoom controls')
 })
@@ -103,6 +106,17 @@ test('the public history graph includes cited non-royal and occupational people'
   }
   assert.match(appSource,/personRoleColors/, 'community roles need visually distinct map markers')
   assert.match(appSource,/personRoleLabel/, 'community roles need bilingual map labels')
+})
+
+test('the People Explorer exposes the complete linked research workflow', () => {
+  assert.match(appSource,/const PeopleExplorer=lazy/, 'the public people page must remain code-split')
+  assert.match(appSource,/\['people',locale==='kn'\?'ವ್ಯಕ್ತಿಗಳು':'People'\]/, 'people must remain visible in primary navigation')
+  assert.match(peopleSource,/atlasData\.people\.map/, 'the directory must derive from the normalized people collection')
+  for (const filter of ['role','polity','century','district','gender','review']) assert.match(peopleSource,new RegExp(`\\[${filter},set${filter[0].toUpperCase()+filter.slice(1)}\\]`),`${filter} filter must remain available`)
+  for (const collection of ['events','works','culture','reigns','relations','inscriptions']) assert.match(peopleSource,new RegExp(`${collection}:`),`${collection} must remain linked to person profiles`)
+  assert.match(peopleSource,/PeopleMapViewport/, 'the people map must synchronize with selection')
+  assert.match(peopleSource,/ArrowLeft.*ArrowRight.*ArrowUp.*ArrowDown/, 'the people timeline must support keyboard traversal')
+  assert.match(peopleSource,/searchParams\.set\('person'/, 'individual profiles must be shareable through the URL')
 })
 
 test('selected timeline stories retain readable text contrast', () => {
