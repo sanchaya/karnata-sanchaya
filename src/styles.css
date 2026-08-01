@@ -142,3 +142,7 @@
   footer{flex-wrap:wrap;gap:10px;padding-inline:24px}
   .admin-main{grid-template-columns:260px minmax(0,1fr)}.admin-nav{grid-column:1/-1;padding:14px 18px}.admin-nav nav{display:flex;gap:4px;overflow-x:auto;margin-top:10px}.admin-nav nav button{flex:0 0 auto;min-width:145px}.record-list,.record-editor{max-height:calc(100vh - 330px)}.record-editor{padding:22px}.admin-stat-grid{grid-template-columns:repeat(2,minmax(130px,1fr))}
 }
+/* Keep the selected timeline story readable in both modern and historical map themes. */
+.event-track button.selected{background:#eef2ff;color:var(--sanchaya-ink);border-color:var(--sanchaya-blue)}
+.event-track button.selected span,.event-track button.selected strong{color:var(--sanchaya-ink)}
+.event-track button.selected em{color:var(--sanchaya-blue)}
