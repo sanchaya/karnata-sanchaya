@@ -1,6 +1,6 @@
 # Atlas v0.2 data model
 
-The bundled dataset is defined in `src/data/atlas.js`. It is normalized into linked collections. Every record has a globally unique, stable, lowercase kebab-case ID.
+The normalized installation seed is defined in `src/data/atlas.js` and `server/seeds/`. On the live portal, the latest immutable `dataset_snapshots` revision in MariaDB is the authoritative instance of these linked collections. The application loads `/api/dataset` before page modules evaluate, so maps, timelines, search, statistics and Admin use the same revision. Repository JSON remains a seed and static-publication input; no research record is persisted in browser storage. Every record has a globally unique, stable, lowercase kebab-case ID.
 
 | Collection | Purpose | Main links |
 | --- | --- | --- |
@@ -8,6 +8,7 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into lin
 | `externalPolities` | External empires, alliances and constitutional successors | Event participants |
 | `events` | Battles, campaigns, invasions, foundations and constitutional transitions | Participants, point/route, citations |
 | `people` | Rulers, authors, patrons and other people | `polityId` → polity |
+| `peopleCandidates` | Wikimedia and community discovery candidates awaiting biographical review | Wikidata ID, birthplace, roles, evidence gates, citations |
 | `places` | Named geographic locations | GeoJSON-style `location` |
 | `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` |
 | `works` | Literary and scholarly works | `polityId`, external links |
@@ -24,6 +25,7 @@ The bundled dataset is defined in `src/data/atlas.js`. It is normalized into lin
 - Geometry follows GeoJSON coordinate order (`[longitude, latitude]`) and declares precision such as `approximate` or `schematic`.
 - Citations point to stable source IDs and may include a page, inscription number, folio, URL fragment, or other locator.
 - Review metadata records `status`, `reviewer`, and `updatedAt`. Status progresses through `draft`, `needs-review`, `reviewed`, and `published`.
+- People candidates remain `needs-review` and `publicationReady: false`. They use eight evidence gates and are promoted by creating or updating a curated `people` record after independent review; discovery status is never changed to simulate publication.
 - Relationships are records because an assertion can have its own date, citations, and review state.
 - Political relations are deliberately separate from generated relationships. Each record names two or more parties, distinguishes war/invasion/campaign/trade/diplomacy/travel-and-knowledge/treaty/alliance/tribute/suzerainty/administrative or constitutional integration, carries a dated route and battle-location set, records an outcome, and links people, underlying events and documentary witnesses. Seed records remain `needs-review` until the relationship is independently resolved.
 - Events carry bilingual narratives, participants with roles and outcomes, an approximate point, an optional schematic campaign route, consequences, citations, and review state.

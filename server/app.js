@@ -3,13 +3,13 @@ import multer from 'multer'
 import path from 'node:path'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
-import { createHash, randomUUID } from 'node:crypto'
+import { randomUUID } from 'node:crypto'
 import { config } from './config.js'
 import { closeDatabase, pool, transaction } from './db.js'
 import { decryptDocument, encryptDocument, hashPassword, randomToken, sha256, verifyPassword } from './security.js'
 import { normalizeTranslationAssessment, translationApprovalIssues, translationProposalIssues } from './review-policy.js'
 import { validateAtlas } from '../src/data/validate.js'
-import { atlasData } from '../src/data/atlas.js'
+import { insertDatasetRevision, latestDataset, repositoryDataset } from './dataset-store.js'
 
 config.assertProductionSecrets()
 const app=express()
@@ -41,10 +41,15 @@ app.use('/api',loadSession)
 const requireUser=(req,res,next)=>req.user?next():res.status(401).json({error:'Sign in is required.'})
 const requireApproved=(req,res,next)=>req.user?.account_status==='approved'?next():res.status(403).json({error:'Sanchaya approval is required before contributing.'})
 const requireRole=(...roles)=>(req,res,next)=>roles.some(role=>req.roles?.includes(role))?next():res.status(403).json({error:'This action requires an appointed role.'})
-const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
 const datasetIssues=value=>validateAtlas(value).filter(issue=>issue.severity==='error')
 
 app.get('/api/health',async(req,res)=>{await pool.query('SELECT 1');res.json({ok:true,service:'Karnataka Historical Atlas community API'})})
+app.get('/api/dataset',async(req,res)=>{
+  const latest=await latestDataset(pool)
+  if(!latest)return res.status(503).set('Cache-Control','no-store').json({error:'The MariaDB atlas dataset has not been initialized.'})
+  if(req.get('if-none-match')===`"${latest.contentSha256}"`)return res.status(304).end()
+  res.set({'Cache-Control':'no-store',ETag:`"${latest.contentSha256}"`}).json(latest)
+})
 
 app.post('/api/auth/register',rateLimit('register',8,60*60*1000),async(req,res)=>{
   const body=req.body||{};const userEmail=email(body.email);const displayName=clean(body.displayName,160);const profession=clean(body.profession,80)
@@ -79,24 +84,21 @@ app.put('/api/auth/profile',requireUser,async(req,res)=>{
 })
 
 app.get('/api/administration/dataset',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
-  const rows=await pool.query('SELECT revision,schema_version,content_sha256,dataset_json,updated_by,created_at FROM dataset_snapshots ORDER BY revision DESC LIMIT 1')
-  if(!rows.length){
-    const content=datasetContent(atlasData);const hash=createHash('sha256').update(content).digest('hex');const id=randomUUID()
-    await pool.query('INSERT INTO dataset_snapshots (id,schema_version,revision,content_sha256,dataset_json,updated_by) VALUES (?,?,?,?,?,?)',[id,atlasData.meta.schemaVersion,1,hash,content,req.user.id]);await audit(pool,req.user.id,'dataset.snapshot-seeded','dataset',id,{revision:1,contentSha256:hash})
-    return res.json({revision:1,schemaVersion:atlasData.meta.schemaVersion,contentSha256:hash,dataset:atlasData,updatedBy:req.user.id,updatedAt:new Date().toISOString()})
-  }
-  const row=rows[0];res.json({revision:Number(row.revision),schemaVersion:row.schema_version,contentSha256:row.content_sha256,dataset:safeJson(row.dataset_json),updatedBy:row.updated_by,updatedAt:row.created_at})
+  const current=await latestDataset(pool)
+  if(current)return res.json(current)
+  const dataset=repositoryDataset();const saved=await insertDatasetRevision(pool,dataset,{revision:1,updatedBy:req.user.id})
+  await audit(pool,req.user.id,'dataset.snapshot-seeded','dataset',saved.id,{revision:1,contentSha256:saved.contentSha256})
+  res.json({revision:1,schemaVersion:dataset.meta.schemaVersion,contentSha256:saved.contentSha256,dataset,updatedBy:req.user.id,updatedAt:new Date().toISOString()})
 })
 
 app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
   const dataset=req.body?.dataset;const baseRevision=Number(req.body?.baseRevision||0);if(!dataset||typeof dataset!=='object'||Array.isArray(dataset))return res.status(400).json({error:'A complete atlas dataset object is required.'})
   const issues=datasetIssues(dataset);if(issues.length)return res.status(422).json({error:`Dataset has ${issues.length} validation error(s).`,issues})
-  const content=datasetContent(dataset);const hash=createHash('sha256').update(content).digest('hex')
   const result=await transaction(async db=>{
-    const latest=(await db.query('SELECT revision FROM dataset_snapshots ORDER BY revision DESC LIMIT 1 FOR UPDATE'))[0];const currentRevision=Number(latest?.revision||0);if(currentRevision!==baseRevision)throw Object.assign(new Error(`Dataset changed on the server. Reload revision ${currentRevision} before saving.`),{status:409})
-    const revision=currentRevision+1;const id=randomUUID();await db.query('INSERT INTO dataset_snapshots (id,schema_version,revision,content_sha256,dataset_json,updated_by) VALUES (?,?,?,?,?,?)',[id,dataset.meta?.schemaVersion||'unknown',revision,hash,content,req.user.id]);await audit(db,req.user.id,'dataset.snapshot-created','dataset',id,{revision,contentSha256:hash});return {id,revision}
+    const latest=await latestDataset(db,{lock:true});const currentRevision=Number(latest?.revision||0);if(currentRevision!==baseRevision)throw Object.assign(new Error(`Dataset changed on the server. Reload revision ${currentRevision} before saving.`),{status:409})
+    const saved=await insertDatasetRevision(db,dataset,{revision:currentRevision+1,updatedBy:req.user.id});await audit(db,req.user.id,'dataset.snapshot-created','dataset',saved.id,{revision:saved.revision,contentSha256:saved.contentSha256});return saved
   })
-  res.status(201).json({ok:true,...result,contentSha256:hash})
+  res.status(201).json({ok:true,...result})
 })
 
 app.get('/api/administration/release-readiness',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
