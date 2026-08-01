@@ -19,13 +19,13 @@ export const communityPeoplePlaces=[
   {id:'place-basavakalyana-community',name:n('Basavakalyana','ಬಸವಕಲ್ಯಾಣ'),kind:'religious-literary-centre',location:{type:'Point',coordinates:[76.949,17.872],precision:'approximate'},citations:[c('src-sahitya-akademi-basaveshwara','Vachana movement and occupational community context')],review},
 ]
 
-const person=(id,en,kn,roles,date,polityId,sourceId,locator)=>({
-  id:`person-${id}`,name:n(en,kn),roles,date,polityId,citations:[c(sourceId,locator)],review:{...review}
+const person=(id,en,kn,roles,date,polityId,sourceId,locator,gender)=>({
+  id:`person-${id}`,name:n(en,kn),roles,date,polityId,...(gender?{gender}:{}),citations:[c(sourceId,locator)],review:{...review}
 })
 
 export const communityPeople=[
-  person('onake-obavva','Onake Obavva','ಒನಕೆ ಓಬವ್ವ',['community-hero','defender'],d(1779,1779,'circa'),'external-polity-chitradurga-nayaka','src-karnataka-tourism-onake-obavva','Named fort defender; exact event date and biographical chronology require specialist review'),
-  person('kittur-chennamma','Kittur Rani Chennamma','ಕಿತ್ತೂರು ರಾಣಿ ಚೆನ್ನಮ್ಮ',['queen','resistance-leader'],d(1778,1829,'range'),'external-polity-kittur','src-pib-kittur-chennamma-network','Queen of Kittur and leader of the 1824 armed resistance'),
+  person('onake-obavva','Onake Obavva','ಒನಕೆ ಓಬವ್ವ',['community-hero','defender'],d(1779,1779,'circa'),'external-polity-chitradurga-nayaka','src-karnataka-tourism-onake-obavva','Named fort defender; exact event date and biographical chronology require specialist review','woman'),
+  person('kittur-chennamma','Kittur Rani Chennamma','ಕಿತ್ತೂರು ರಾಣಿ ಚೆನ್ನಮ್ಮ',['queen','resistance-leader'],d(1778,1829,'range'),'external-polity-kittur','src-pib-kittur-chennamma-network','Queen of Kittur and leader of the 1824 armed resistance','woman'),
   person('sangolli-rayanna','Sangolli Rayanna','ಸಂಗೊಳ್ಳಿ ರಾಯಣ್ಣ',['community-leader','military-leader','resistance-fighter'],d(1798,1831,'range'),'external-polity-kittur','src-amrit-sangolli-rayanna','Kittur resistance organiser; operations and execution at Nandagad'),
   person('gurusiddappa-kittur','Gurusiddappa of Kittur','ಕಿತ್ತೂರಿನ ಗುರುಸಿದ್ದಪ್ಪ',['administrator','lieutenant','resistance-fighter'],d(1824,1824,'circa'),'external-polity-kittur','src-pib-kittur-chennamma-network','Named lieutenant in the Kittur resistance; full identity and chronology require review'),
   person('amatur-balappa','Amatur Balappa','ಅಮಟೂರು ಬಾಳಪ್ಪ',['soldier','lieutenant','resistance-fighter'],d(1824,1824,'circa'),'external-polity-kittur','src-pib-kittur-chennamma-network','Named Kittur lieutenant associated with the first battle; biography requires review'),
