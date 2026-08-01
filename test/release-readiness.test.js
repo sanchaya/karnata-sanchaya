@@ -14,6 +14,7 @@ const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url),
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
+const explorerStylesSource = await readFile(new URL('../src/explorer.css', import.meta.url), 'utf8')
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
@@ -56,6 +57,8 @@ test('tablet layouts preserve maps, readable cards and non-obstructing controls'
   assert.match(tabletStylesSource, /\.relations-detail \{ position: static/, 'tablet relation details must not cover the map')
   assert.match(tabletStylesSource, /\.evidence-procedure ol \{ grid-template-columns: repeat\(2/, 'tablet evidence steps must avoid a needlessly long single column')
   assert.match(tabletStylesSource, /pointer: coarse/, 'touch-first tablets need larger interaction targets')
+  assert.match(explorerStylesSource, /\.explorer-map-heading\{left:52px;right:auto;width:fit-content;max-width:360px/, 'literature and epigraphy map headings must stay compact and clear Leaflet zoom controls')
+  assert.match(stylesSource, /\.district-history-map-wrap \.map-theme-control\{left:52px\}/, 'district history map style controls must clear Leaflet zoom controls')
 })
 
 test('mobile timeline categories and kingdom boundaries remain unambiguous', () => {
@@ -178,6 +181,15 @@ test('relations layout keeps the map and timeline usable on narrow screens', () 
   assert.match(relationsSource,/--timeline-color':colors\[item\.category\]/, 'timeline cards must carry the relationship colour')
   assert.match(relationsStylesSource,/\.relations-timeline button\{position:relative;border-top:3px solid var\(--timeline-color/, 'timeline cards must expose their relationship colour')
   assert.match(relationsStylesSource,/grid-template-columns:minmax\(230px,250px\) minmax\(560px,1fr\) minmax\(250px,280px\)/, 'wide layouts should reserve more space for the map')
+  assert.match(relationsStylesSource,/\.relations-filters\{display:block;grid-column:2;grid-row:1/, 'wide layouts should keep filters in a stable side rail')
+  assert.match(relationsStylesSource,/\.relations-list\{display:grid;grid-column:auto;grid-row:auto/, 'wide layouts should keep the relation list visible inside the side rail')
+  assert.match(relationsStylesSource,/\.relations-map \.relations-legend\{top:12px;bottom:auto/, 'the map key must stay clear of the bottom timeline')
+  assert.match(relationsSource,/const visibleRelations=isolateSelection&&selected\?\[selected\]:filtered/, 'selecting a relation must isolate its map paths')
+  assert.match(relationsSource,/className="relations-clear-selection"/, 'the map needs a clear-selection control to restore all paths')
+  assert.match(relationsStylesSource,/\.relations-clear-selection\{position:absolute;z-index:1200;left:52px/, 'clear selection must sit beside the Leaflet zoom controls')
+  assert.match(relationsStylesSource,/\.relations-map \.map-theme-control\{top:54px;left:52px\}/, 'mobile map controls must stack instead of overlap')
+  assert.match(relationsStylesSource,/\.relations-filters \.relations-clear-selection\{position:static/, 'clear selection should live below the filter controls')
+  assert.match(relationsStylesSource,/\.relations-filters \.map-theme-control\{position:static/, 'relations map style control should live outside the map')
 })
 
 test('guided tours cover public pages and the private admin workspace', () => {
