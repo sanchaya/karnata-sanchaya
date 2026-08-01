@@ -11,6 +11,7 @@ const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplore
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
 const peopleSource = await readFile(new URL('../src/PeopleExplorer.jsx', import.meta.url), 'utf8')
+const communityPeopleSource = await readFile(new URL('../src/data/community-people.js', import.meta.url), 'utf8')
 const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
@@ -117,6 +118,15 @@ test('the People Explorer exposes the complete linked research workflow', () => 
   assert.match(peopleSource,/PeopleMapViewport/, 'the people map must synchronize with selection')
   assert.match(peopleSource,/ArrowLeft.*ArrowRight.*ArrowUp.*ArrowDown/, 'the people timeline must support keyboard traversal')
   assert.match(peopleSource,/searchParams\.set\('person'/, 'individual profiles must be shareable through the URL')
+})
+
+test('freedom fighters remain discoverable by cited district associations', () => {
+  assert.match(peopleSource,/focus==='freedom'/, 'people must expose a dedicated freedom-fighter view')
+  assert.match(peopleSource,/person\.districtIds\.includes\(district\)/, 'district filtering must include every researched activity district, not only the map anchor')
+  assert.match(peopleSource,/people-district-coverage/, 'the starter district coverage must remain visible and selectable')
+  for (const id of ['kittur-chennamma','sangolli-rayanna','umabai-kundapur','kamaladevi-chattopadhyay','hardekar-manjappa']) assert.match(communityPeopleSource,new RegExp(`person\\('${id}'`),`${id} must remain in the starter set`)
+  assert.match(communityPeopleSource,/districtAssociations/, 'freedom-fighter district links must remain explicit research data')
+  assert.match(communityPeopleSource,/src-amrit-umabai-kundapur/, 'new district records must retain government biographical citations')
 })
 
 test('selected timeline stories retain readable text contrast', () => {
