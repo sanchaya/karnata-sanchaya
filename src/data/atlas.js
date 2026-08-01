@@ -3,6 +3,7 @@ import { deepChronologies, districtHistoryResearch, heritageAudits } from './res
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
 import { politicalRelations, politicalRelationPeople, politicalRelationPolities, foreignPoliticalRelations } from './political-relations.js'
+import { communityPeople, communityPeopleEvents, communityPeoplePlaces, communityPeoplePolities, communityPeopleSources } from './community-people.js'
 import { foreignInscriptionSources, foreignInscriptionPlaces, foreignInscriptionPolities, foreignInscriptionPeople, foreignInscriptions } from './foreign-inscriptions.js'
 import { offbeatHoysalaSources, offbeatHoysalaPlaces, offbeatHoysalaTemples } from './offbeat-hoysala-temples.js'
 import { hoysalaTempleInventorySources, hoysalaTempleInventoryLeads } from './hoysala-temple-inventory.js'
@@ -146,6 +147,18 @@ appendUniqueById(atlasData.places, inscriptionPlaces)
 appendUniqueById(atlasData.works, additionalWorks)
 appendUniqueById(atlasData.externalPolities, politicalRelationPolities)
 appendUniqueById(atlasData.people, politicalRelationPeople)
+appendUniqueById(atlasData.sources, communityPeopleSources)
+appendUniqueById(atlasData.externalPolities, communityPeoplePolities)
+appendUniqueById(atlasData.places, communityPeoplePlaces)
+appendUniqueById(atlasData.people, communityPeople)
+appendUniqueById(atlasData.events, communityPeopleEvents)
+// Keep named foreign hosts and eyewitnesses attached to the same dated events
+// that already document their Karnataka connection; this makes them discoverable
+// without implying a stronger political relationship than the cited record supports.
+for (const [eventId, peopleIds] of [['event-tipu-france-embassy',['person-louis-xvi']],['event-tipu-napoleon-contact',['person-napoleon-bonaparte']],['event-domingo-paes-vijayanagara',['person-domingo-paes']]]) {
+  const event=atlasData.events.find(record=>record.id===eventId)
+  if(event)event.peopleIds=[...new Set([...(event.peopleIds||[]),...peopleIds])]
+}
 appendUniqueById(atlasData.politicalRelations, politicalRelations)
 appendUniqueById(atlasData.politicalRelations, foreignPoliticalRelations)
 appendUniqueById(atlasData.sources, foreignInscriptionSources)
@@ -661,8 +674,16 @@ applyResearchWaveV022(atlasData,appendUniqueById)
 applyDistrictHeritageConnections(atlasData.districtHistoryResearch)
 appendUniqueById(atlasData.culturalHeritage, offbeatHoysalaTemples)
 
+const personPolityRelationshipType=person=>{
+  if(person.roles.includes('ruler')||person.roles.includes('queen')||person.roles.includes('foreign-monarch'))return'governed-or-represented'
+  if(person.roles.includes('patron'))return'patron-associated-with'
+  if(person.roles.some(role=>['poet','author','vachana-poet','scholar','religious-figure'].includes(role)))return'intellectual-or-religious-associated-with'
+  if(person.roles.some(role=>['military-leader','soldier','lieutenant','defender','resistance-leader','resistance-fighter'].includes(role)))return'military-or-resistance-associated-with'
+  return'community-associated-with'
+}
+
 atlasData.relationships = [
-  ...atlasData.people.map(person => ({ id:`rel-${person.id}-polity`, fromId:person.id, type:person.roles.includes('ruler')?'ruled':person.roles.includes('patron')?'patron-associated-with':'literary-associated-with', toId:person.polityId, date:person.date, citations:person.citations, review:person.review })),
+  ...atlasData.people.map(person => ({ id:`rel-${person.id}-polity`, fromId:person.id, type:personPolityRelationshipType(person), toId:person.polityId, date:person.date, citations:person.citations, review:person.review })),
   ...atlasData.reigns.flatMap(period => [
     { id:`rel-${period.id}-polity`, fromId:period.id, type:`${period.periodType}-of`, toId:period.polityId, date:period.date, citations:period.citations, review:period.review },
     ...period.rulerIds.map((rulerId,index) => ({ id:`rel-${period.id}-ruler-${index + 1}`, fromId:period.id, type:'held-by', toId:rulerId, date:period.date, citations:period.citations, review:period.review })),

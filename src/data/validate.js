@@ -140,7 +140,7 @@ export function validateAtlas(data) {
       }
       if (collection === 'people') {
         if (!Array.isArray(record.roles) || record.roles.length===0) add('error',collection,id,'roles','People require at least one controlled role.')
-        ;(record.roles||[]).forEach((role,index)=>{if(!['ruler','patron','poet','author','scholar','administrator','military-leader','diplomat','religious-figure'].includes(role))add('error',collection,id,`roles.${index}`,`Unsupported person role: ${role}`)})
+        ;(record.roles||[]).forEach((role,index)=>{if(!['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','lieutenant','soldier','artisan','washerman','boatman'].includes(role))add('error',collection,id,`roles.${index}`,`Unsupported person role: ${role}`)})
         if (!record.polityId) add('warning',collection,id,'polityId','A related polity or historical context is recommended.')
         if (record.date?.precision==='unknown' && (record.date.from!=null||record.date.to!=null)) add('error',collection,id,'date','Unknown person dates must not carry numeric bounds.')
         if ((!Array.isArray(record.citations)||record.citations.length===0) && !['ruler','patron'].some(role=>record.roles?.includes(role))) add('warning',collection,id,'citations','Non-ruler person profiles should cite at least one biographical or work-level source.')
