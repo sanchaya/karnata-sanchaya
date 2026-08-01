@@ -348,6 +348,7 @@ export const literaryPeople = [
   ['dvg','D. V. Gundappa','ಡಿ. ವಿ. ಗುಂಡಪ್ಪ','polity-mysore',1887,1975],
 ].map(([id,en,kn,polityId,from,to]) => ({
   id:`person-${id}`, name:name(en,kn), roles:['poet','author'], polityId,
+  ...(id==='akka-mahadevi'?{gender:'woman'}:{}),
   date:date(from,to,'range'), citations:[cite('src-asi-kannada-literature-survey','Author and period survey; dates remain research estimates')], review:review(),
 }))
 
