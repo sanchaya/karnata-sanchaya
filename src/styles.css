@@ -146,5 +146,5 @@
 .event-track button.selected{background:#eef2ff;color:var(--sanchaya-ink);border-color:var(--sanchaya-blue)}
 .event-track button.selected span,.event-track button.selected strong{color:var(--sanchaya-ink)}
 .event-track button.selected em{color:var(--sanchaya-blue)}
-/* Person markers are deliberately compact so portraits, rulers, queens and travellers remain clickable without obscuring the map. */
-.people-map-toggle{position:absolute;top:96px;left:52px;z-index:826;display:flex;align-items:center;gap:4px;padding:4px 7px;border:1px solid var(--sanchaya-border);border-radius:7px;background:rgba(255,255,255,.96);box-shadow:var(--sanchaya-shadow);font-size:9px}.people-map-toggle input{accent-color:#b26a22}
+/* Keep the people layer with the other sidebar controls instead of covering the map. */
+.layers .people-map-toggle input{accent-color:#b26a22}
