@@ -12,6 +12,7 @@ import { externalGovernancePhases } from './external-governance.js'
 import { applyResearchWaveV022 } from './research-wave-v022.js'
 import { mysuruHeritageBuildingLeads, mysuruHeritageBuildingSources } from './mysuru-heritage-buildings.js'
 import { applyDistrictHeritageConnections } from './district-heritage-connections.js'
+import { freedomFighterPeople, freedomFighterPolities, freedomFighterSources } from './freedom-fighters.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -155,6 +156,9 @@ appendUniqueById(atlasData.externalPolities, communityPeoplePolities)
 appendUniqueById(atlasData.places, communityPeoplePlaces)
 appendUniqueById(atlasData.people, communityPeople)
 appendUniqueById(atlasData.events, communityPeopleEvents)
+appendUniqueById(atlasData.sources, freedomFighterSources)
+appendUniqueById(atlasData.externalPolities, freedomFighterPolities)
+appendUniqueById(atlasData.people, freedomFighterPeople)
 // Keep named foreign hosts and eyewitnesses attached to the same dated events
 // that already document their Karnataka connection; this makes them discoverable
 // without implying a stronger political relationship than the cited record supports.
