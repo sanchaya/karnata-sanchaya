@@ -18,11 +18,18 @@ export function mergeRepositorySeed(current){
   if(!current)return {dataset:baseline,added:baseline.peopleCandidates.length,changed:true}
   const dataset=clone(current)
   let added=0
-  for(const collection of ['sources','peopleCandidates']){
-    const records=Array.isArray(dataset[collection])?dataset[collection]:[]
+  for(const [collection, seedRecords] of Object.entries(baseline)){
+    if(!Array.isArray(seedRecords))continue
+    const existing=dataset[collection]
+    const records=Array.isArray(existing)?existing:existing!=null&&typeof existing==='object'?Object.values(existing).filter(record=>record&&typeof record==='object'):null
+    if(records==null){
+      dataset[collection]=clone(seedRecords)
+      added+=seedRecords.length
+      continue
+    }
+    if(!Array.isArray(dataset[collection]))dataset[collection]=records
     const ids=new Set(records.map(record=>record?.id).filter(Boolean))
-    for(const record of baseline[collection])if(record?.id&&!ids.has(record.id)){records.push(clone(record));ids.add(record.id);added+=1}
-    dataset[collection]=records
+    for(const record of seedRecords)if(record?.id&&!ids.has(record.id)){records.push(clone(record));ids.add(record.id);added+=1}
   }
   if(!dataset.peopleCandidateMeta||dataset.peopleCandidateMeta.candidateCount!==baseline.peopleCandidateMeta.candidateCount)dataset.peopleCandidateMeta=clone(baseline.peopleCandidateMeta)
   dataset.meta={...(dataset.meta||{}),schemaVersion:baseline.meta.schemaVersion}
