@@ -57,6 +57,8 @@ For a cloned Linux deployment behind an existing Nginx instance, use the guarded
 
 See the maintained [milestone status and roadmap](docs/roadmap-status.md) for the implementation history, current coverage and prioritized next work.
 
+For repeatable research intake, citation management, MariaDB synchronization, social-update links and offline/PWA operation, follow [Research intake and update procedure](docs/research-intake.md).
+
 ## Build
 
 ```bash
@@ -129,6 +131,8 @@ Use the **Resources & collaborations management** shortcuts in the admin toolbar
 ## Research citations
 
 Open `#research` and choose **Reference catalogue**. Researchers can copy the recommended atlas citation, download atlas BibTeX or RIS, export the filtered source catalogue as JSON, and open the citation menu on any source for item-level BibTeX, RIS or plain-text citation. Citation quality improves as DOI, publisher and authorship metadata is completed in the admin workspace.
+
+Atlas v0.26 adds the Patrika Sanchaya periodicals layer: 3,715 Kannada newspaper and magazine catalogue rows remain available to Admin as `periodicals` records, with 76 grouped publication-place anchors on the atlas map and needs-review markers. Refresh the source with `npm run import:patrika`, then validate and synchronize MariaDB. The catalogue is credited to Patrike Sanchaya and Srinivas Havanur; future digitisation additions can be coordinated with ServantsOfKnowledge.
 
 ## Data structure
 

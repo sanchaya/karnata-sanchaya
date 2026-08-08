@@ -169,7 +169,7 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
 })
 
 test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated', () => {
-  assert.equal(atlasData.meta.schemaVersion, '0.25.0')
+  assert.equal(atlasData.meta.schemaVersion, '0.26.0')
   assert.ok(atlasData.polities.some(item => item.id === 'polity-alupa'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-keladi-ikkeri-nayaka'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-chitradurga-nayaka'))
@@ -189,6 +189,14 @@ test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated'
     assert.equal(work?.reviewWorkflow.evidence.editionWitness.status, 'located')
     assert.equal(work?.review.status, 'needs-review')
   }
+})
+
+test('Patrika Sanchaya periodicals retain row citations and grouped map anchors', () => {
+  assert.equal(atlasData.periodicals.length, 3715)
+  assert.ok(atlasData.periodicals.every(item => item.review.status === 'needs-review'))
+  assert.ok(atlasData.periodicals.every(item => item.citations?.[0]?.sourceId === 'src-patrika-sanchaya-kannada'))
+  assert.ok(atlasData.periodicalMapSites.length >= 70)
+  assert.ok(atlasData.periodicalMapSites.every(site => site.periodicalIds.length > 0 && site.review.status === 'needs-review'))
 })
 
 test('statewide heritage pass distinguishes authority registers from discovery leads', () => {

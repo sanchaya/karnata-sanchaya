@@ -12,6 +12,7 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 | `places` | Named geographic locations | GeoJSON-style `location` |
 | `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` |
 | `works` | Literary and scholarly works | `polityId`, external links |
+| `periodicals` | Patrika Sanchaya newspaper and magazine catalogue rows | source-row citation, publication place, publisher/editor, periodicity, language |
 | `sources` | Bibliographic evidence | Referenced by citations |
 | `heritageAudits` | District heritage candidates and authority evidence | `prioritySites`, protection checks |
 | `districtHistoryResearch` | District deep-history intake for prehistoric, settlement, foundation-stone and locality-history leads | `districtId`, `location`, `citations` |

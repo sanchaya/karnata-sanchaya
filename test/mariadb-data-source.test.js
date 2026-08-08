@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
-import { mergeRepositorySeed, repositoryDataset } from '../server/dataset-store.js'
+import { mergeRepositorySeed, normalizeDatasetCollections, repositoryDataset } from '../server/dataset-store.js'
 
 const root=new URL('../',import.meta.url)
 const source=async path=>readFile(new URL(path,root),'utf8')
@@ -19,6 +19,17 @@ test('server-side seed synchronization preserves existing MariaDB records',()=>{
   const merged=mergeRepositorySeed(dataset)
   assert.equal(merged.dataset.people[0].name.en,'MariaDB edit')
   assert.equal(merged.dataset.peopleCandidates.length,905)
+})
+
+test('legacy MariaDB snapshots receive every current collection as an array',()=>{
+  const legacy={meta:{schemaVersion:'0.20.0'},sources:{one:{id:'src-legacy'}},politicalRelations:null}
+  const normalized=normalizeDatasetCollections(legacy)
+  assert.ok(Array.isArray(normalized.externalGovernancePhases))
+  assert.ok(Array.isArray(normalized.templeInventoryLeads))
+  assert.ok(Array.isArray(normalized.heritageInventoryLeads))
+  assert.ok(Array.isArray(normalized.districtHistoryResearch))
+  assert.ok(Array.isArray(normalized.politicalRelations))
+  assert.deepEqual(normalized.sources,[{id:'src-legacy'}])
 })
 
 test('live application hydrates before App evaluates and public API reads MariaDB',async()=>{

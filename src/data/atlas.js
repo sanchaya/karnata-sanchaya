@@ -13,6 +13,8 @@ import { applyResearchWaveV022 } from './research-wave-v022.js'
 import { mysuruHeritageBuildingLeads, mysuruHeritageBuildingSources } from './mysuru-heritage-buildings.js'
 import { applyDistrictHeritageConnections } from './district-heritage-connections.js'
 import { freedomFighterPeople, freedomFighterPolities, freedomFighterSources } from './freedom-fighters.js'
+import { freedomMovementResearchSources } from './freedom-movement-research.js'
+import { patrikaPeriodicals, patrikaMapSites } from './patrika-sanchaya.generated.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -29,7 +31,7 @@ const appendUniqueById = (target, items) => {
 
 export const atlasData = {
   meta: {
-    schemaVersion: '0.25.0',
+    schemaVersion: '0.26.0',
     title: name('Karnataka Historical Atlas', 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ'),
     exportedAt: null,
   },
@@ -77,6 +79,8 @@ export const atlasData = {
     { id: 'src-karnataka-tourism-chitradurga', type: 'government-web', title: name('Chitradurga Fort', 'ಚಿತ್ರದುರ್ಗ ಕೋಟೆ'), authors: ['Karnataka Tourism, Government of Karnataka'], year: null, url: 'https://karnatakatourism.org/en/attractions/chitradurga-fort', review: review('reviewed') },
     ...eventSources,
   ],
+  periodicals: patrikaPeriodicals,
+  periodicalMapSites: patrikaMapSites,
   collaborations,
   districtHistoryResearch,
   externalPolities,
@@ -157,6 +161,18 @@ appendUniqueById(atlasData.places, communityPeoplePlaces)
 appendUniqueById(atlasData.people, communityPeople)
 appendUniqueById(atlasData.events, communityPeopleEvents)
 appendUniqueById(atlasData.sources, freedomFighterSources)
+appendUniqueById(atlasData.sources, freedomMovementResearchSources)
+appendUniqueById(atlasData.sources, [{
+  id:'src-patrika-sanchaya-kannada',
+  type:'periodical-catalogue',
+  title:name('Patrika Sanchaya — Kannada newspapers and magazines catalogue','ಪತ್ರಿಕಾ ಸಂಚಯ — ಕನ್ನಡ ಪತ್ರಿಕೆಗಳು ಮತ್ತು ಮಾಸಿಕೆಗಳ ಪಟ್ಟಿ'),
+  authors:['Patrike Sanchaya','Srinivas Havanur'],
+  publisher:'Sanchaya',
+  year:2026,
+  url:'https://patrike.sanchaya.net',
+  scope:name('Catalogue contribution documenting historic and contemporary Kannada newspapers and magazines. The imported rows retain Patrika Sanchaya’s serial, publication place, publisher, editor, periodicity and contributor-note fields. Exact title history, archive holdings and publication runs remain needs-review until matched to scans or authoritative catalogues.','ಐತಿಹಾಸಿಕ ಮತ್ತು ಸಮಕಾಲೀನ ಕನ್ನಡ ಪತ್ರಿಕೆಗಳು ಹಾಗೂ ಮಾಸಿಕೆಗಳನ್ನು ದಾಖಲಿಸುವ ಪಟ್ಟಿ ಕೊಡುಗೆ. ಆಮದು ಮಾಡಿದ ಸಾಲುಗಳಲ್ಲಿ ಪತ್ರಿಕಾ ಸಂಚಯದ ಕ್ರಮ ಸಂಖ್ಯೆ, ಪ್ರಕಟಣಾ ಸ್ಥಳ, ಪ್ರಕಾಶಕ, ಸಂಪಾದಕ, ಆವರ್ತಕತೆ ಮತ್ತು ಕೊಡುಗೆದಾರರ ಟಿಪ್ಪಣಿ ಕ್ಷೇತ್ರಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ. ನಿಖರ ಶೀರ್ಷಿಕೆ ಇತಿಹಾಸ, ಆರ್ಕೈವ್ ಲಭ್ಯತೆ ಮತ್ತು ಪ್ರಕಟಣಾ ಅವಧಿಗಳನ್ನು ಸ್ಕ್ಯಾನ್ ಅಥವಾ ಅಧಿಕೃತ ಪಟ್ಟಿಗಳೊಂದಿಗೆ ಹೊಂದಿಸುವವರೆಗೆ needs-review ಆಗಿವೆ.'),
+  review:review('needs-review')
+}])
 appendUniqueById(atlasData.externalPolities, freedomFighterPolities)
 appendUniqueById(atlasData.people, freedomFighterPeople)
 // Keep named foreign hosts and eyewitnesses attached to the same dated events
@@ -725,4 +741,4 @@ atlasData.relationships = [
   ]),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
