@@ -3,6 +3,12 @@ const review=status=>({status,reviewer:null,updatedAt:'2026-07-27'})
 
 export const collaborations=[
   {
+    id:'collaboration-patrika-sanchaya',name:name('Patrike Sanchaya','ಪತ್ರಿಕೆ ಸಂಚಯ'),entityKind:'organization',stage:'complete',
+    collaborationType:'periodical-catalogue-and-digitisation',url:'https://patrike.sanchaya.net',
+    contribution:name('Contributed the Kannada newspaper and magazine catalogue used for the Atlas periodicals layer. Future additions will be coordinated with ServantsOfKnowledge as additional newspapers and magazines are digitised.','ಅಟ್ಲಾಸ್ ಪತ್ರಿಕೆಗಳ ಪದರಕ್ಕೆ ಬಳಸಿದ ಕನ್ನಡ ಪತ್ರಿಕೆ ಮತ್ತು ಮಾಸಿಕೆಗಳ ಪಟ್ಟಿಯನ್ನು ಕೊಡುಗೆಯಾಗಿ ನೀಡಿದೆ. ಹೆಚ್ಚುವರಿ ಪತ್ರಿಕೆಗಳು ಮತ್ತು ಮಾಸಿಕೆಗಳನ್ನು ಡಿಜಿಟಲೀಕರಿಸಿದಂತೆ ಸರ್ವೆಂಟ್ಸ್ ಆಫ್ ನಾಲೆಜ್ ಸಹಯೋಗದಲ್ಲಿ ಮುಂದಿನ ಸೇರ್ಪಡೆಗಳನ್ನು ಸಂಯೋಜಿಸಲಾಗುತ್ತದೆ.'),
+    contactPath:'#research',review:review('published'),
+  },
+  {
     id:'collaboration-shashidhara-hg-hoysala-temples',name:name('Shashidhara HG — Hoysala temple documentation','ಶಶಿಧರ HG — ಹೊಯ್ಸಳ ದೇವಾಲಯ ದಾಖಲೀಕರಣ'),entityKind:'individual',stage:'complete',
     collaborationType:'heritage-dataset-contribution',url:'https://thesouthfirst.com/featured/preserving-history-bengaluru-man-documents-over-1500-hoysala-temples/',
     contribution:name('Credited contributor of the Offbeat Hoysala Temples KML research layer. The atlas preserves his dataset attribution and newspaper evidence while keeping each placemark as needs-review until temple identity, construction phase, protection status, managing authority, condition and item-level citations are independently resolved.','ಆಫ್‌ಬೀಟ್ ಹೊಯ್ಸಳ ದೇವಾಲಯಗಳ KML ಸಂಶೋಧನಾ ಪದರದ ಕೊಡುಗೆದಾರರಿಗೆ ಕೃತಜ್ಞತೆ. ದೇವಾಲಯದ ಗುರುತು, ನಿರ್ಮಾಣ ಹಂತ, ರಕ್ಷಣಾ ಸ್ಥಿತಿ, ನಿರ್ವಹಣಾ ಪ್ರಾಧಿಕಾರ, ಸ್ಥಿತಿ ಮತ್ತು ವಸ್ತುಮಟ್ಟದ ಆಕರಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಹರಿಸುವವರೆಗೆ ಪ್ರತಿಯೊಂದು ಸ್ಥಳಚಿಹ್ನೆಯನ್ನು needs-review ಆಗಿಯೇ ಇಟ್ಟು, ಅವರ ಡೇಟಾಸೆಟ್ ಮತ್ತು ಪತ್ರಿಕಾ ಸಾಕ್ಷ್ಯವನ್ನು ದಾಖಲಿಸಲಾಗಿದೆ.'),
