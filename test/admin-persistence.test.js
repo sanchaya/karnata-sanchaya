@@ -61,6 +61,6 @@ test('server-side repository sync adds people candidates without overwriting Mar
   const result=mergeRepositorySeed(server)
   assert.equal(result.dataset.people[0].name.en,'Server edit')
   assert.equal(result.dataset.peopleCandidates.length,905)
-  assert.equal(result.dataset.meta.schemaVersion,'0.25.0')
+  assert.equal(result.dataset.meta.schemaVersion,'0.26.0')
   assert.equal(result.dataset.peopleCandidateMeta.candidateCount,905)
 })
