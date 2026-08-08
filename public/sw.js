@@ -1,6 +1,6 @@
-const SHELL_CACHE = 'karnataka-atlas-shell-v1'
+const SHELL_CACHE = 'karnataka-atlas-shell-v2'
 const TILE_CACHE = 'karnataka-atlas-tiles-v1'
-const DATA_CACHE = 'karnataka-atlas-readonly-data-v1'
+const DATA_CACHE = 'karnataka-atlas-readonly-data-v2'
 const SHELL_ASSETS = ['./', './index.html', './site.webmanifest', './sanchaya-logo.png', './karnataka-districts.geojson']
 
 self.addEventListener('install', event => {

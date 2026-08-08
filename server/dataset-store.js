@@ -4,19 +4,33 @@ import peopleCandidateCorpus from './seeds/wikimedia-people-candidates.json' wit
 
 const clone=value=>JSON.parse(JSON.stringify(value))
 export const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
+const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+
+// Older MariaDB snapshots can predate collections introduced in later milestones.
+// Normalize those keys before validation so a deploy upgrades the revision instead
+// of failing with “Collection must be an array”.
+export function normalizeDatasetCollections(value){
+  const dataset=clone(value||{})
+  for(const collection of DATA_COLLECTIONS){
+    const current=dataset[collection]
+    if(Array.isArray(current))continue
+    dataset[collection]=current&&typeof current==='object'?Object.values(current).filter(record=>record&&typeof record==='object'):[]
+  }
+  return dataset
+}
 
 export function repositoryDataset(){
-  return {
+  return normalizeDatasetCollections({
     ...clone(atlasData),
     peopleCandidateMeta:clone(peopleCandidateCorpus.meta),
     peopleCandidates:clone(peopleCandidateCorpus.records),
-  }
+  })
 }
 
 export function mergeRepositorySeed(current){
   const baseline=repositoryDataset()
   if(!current)return {dataset:baseline,added:baseline.peopleCandidates.length,changed:true}
-  const dataset=clone(current)
+  const dataset=normalizeDatasetCollections(current)
   let added=0
   for(const [collection, seedRecords] of Object.entries(baseline)){
     if(!Array.isArray(seedRecords))continue
