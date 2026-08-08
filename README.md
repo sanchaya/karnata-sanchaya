@@ -59,6 +59,8 @@ See the maintained [milestone status and roadmap](docs/roadmap-status.md) for th
 
 For repeatable research intake, citation management, MariaDB synchronization, social-update links and offline/PWA operation, follow [Research intake and update procedure](docs/research-intake.md).
 
+For the complete CSV/import, migration, server-update and static-publication runbook, see [Data import and deployment](docs/data-import-and-deployment.md).
+
 ## Build
 
 ```bash
