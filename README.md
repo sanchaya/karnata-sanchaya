@@ -8,6 +8,7 @@ A Kannada-first React/Vite atlas for exploring Karnataka's history through a tim
 - Overlapping kingdoms for the selected year
 - Approximate historical extents on a Leaflet map
 - Inscription markers with language and script metadata
+- Every formal inscription is linked to its associated kingdom or governing empire; that attribution is visible in map popups, timeline cards, search results and district inscription lists, while unresolved candidates remain visibly needs-review
 - Kingdom details, rulers and sample literary works
 - Sanchaya integration points
 - Responsive static build suitable for GitHub Pages
