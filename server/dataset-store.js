@@ -4,7 +4,7 @@ import peopleCandidateCorpus from './seeds/wikimedia-people-candidates.json' wit
 
 const clone=value=>JSON.parse(JSON.stringify(value))
 export const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
-const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 
 // Older MariaDB snapshots can predate collections introduced in later milestones.
 // Normalize those keys before validation so a deploy upgrades the revision instead

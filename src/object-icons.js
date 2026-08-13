@@ -23,6 +23,7 @@ export const objectKindFor = item => {
   if (item.storyKind === 'person' || item.kind === 'person') return 'person'
   if (item.storyKind === 'territory') return 'territory'
   if (item.storyKind === 'reign') return 'reign'
+  if (item.storyKind === 'artifact' || item.kind === 'artifact' || item.artifactKind) return 'artifact'
   if (isTempleRecord(item) || /temple|basadi/i.test(item.category || '')) return 'temple'
   if (['battle', 'war', 'invasion', 'campaign'].includes(item.type)) return 'war'
   if (item.reach || ['trade-contact', 'diplomatic-mission', 'cultural-contact'].includes(item.type)) return 'connection'
@@ -37,11 +38,11 @@ export const objectKindFor = item => {
 export const objectIcon = kind => ({
   temple: '🛕', inscription: '▤', war: '⚔', connection: '↔', event: '◆', literature: '▥',
   person: '♟', territory: '▱', reign: '♛', monument: '▦', celebration: '✦', religion: '◉',
-  sport: '●', culture: '✧', heritage: '◇',
+  sport: '●', artifact: '◈', culture: '✧', heritage: '◇',
 }[kind] || '◇')
 
 export const objectLabelKey = kind => ({
   temple: 'temples', inscription: 'inscriptions', war: 'wars', connection: 'connections', event: 'political',
-  literature: 'literature', person: 'people', territory: 'territory', reign: 'reigns', monument: 'monuments',
+  literature: 'literature', person: 'people', territory: 'territory', reign: 'reigns', artifact: 'artifacts', monument: 'monuments',
   celebration: 'culture', religion: 'culture', sport: 'culture', culture: 'culture', heritage: 'monuments',
 }[kind] || 'culture')

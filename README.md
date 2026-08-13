@@ -136,6 +136,8 @@ Open `#research` and choose **Reference catalogue**. Researchers can copy the re
 
 Atlas v0.26 adds the Patrika Sanchaya periodicals layer: 3,715 Kannada newspaper and magazine catalogue rows remain available to Admin as `periodicals` records, with 76 grouped publication-place anchors on the atlas map and needs-review markers. Refresh the source with `npm run import:patrika`, then validate and synchronize MariaDB. The catalogue is credited to Patrike Sanchaya and Srinivas Havanur; future digitisation additions can be coordinated with ServantsOfKnowledge.
 
+Kingdom periods are shown as bounded reign cards on the timeline; when more than one polity is active at the selected year, the sidebar identifies the overlap. `artifacts` is the review-marked collection for dynastic symbols, coins, inscription stones, sculpture, regalia and architectural fragments. These objects appear in the dedicated timeline category and map layer with site-context coordinates until an object-level catalogue, repository and photograph are confirmed in Admin.
+
 ## Data structure
 
 Normalized prototype content is in `src/data/atlas.js`, validation rules are in `src/data/validate.js`, and the field contract is documented in `docs/data-model.md`.

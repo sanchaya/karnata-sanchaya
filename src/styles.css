@@ -149,3 +149,4 @@
 .event-track button.selected em{color:var(--sanchaya-blue)}
 /* Keep the people layer with the other sidebar controls instead of covering the map. */
 .layers .people-map-toggle input{accent-color:#b26a22}
+.kingdom-overlap-note{display:grid;gap:4px;margin:0 0 10px;padding:9px 10px;border:1px solid #d7c7a6;border-radius:8px;background:#fff9e9;color:var(--sanchaya-muted);font-size:11px}.kingdom-overlap-note strong{font-size:10px;color:#8b5a22;text-transform:uppercase;letter-spacing:.06em}.kingdom-overlap-note span{line-height:1.4}
