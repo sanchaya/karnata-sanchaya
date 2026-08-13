@@ -113,6 +113,8 @@ test('cross-page links resolve before records reach maps, timelines or explorers
   for (const inscription of atlasData.inscriptions) {
     assert.ok(inscription.geographicScope?.outsideKarnataka || districtAuditIds.has(inscription.districtAuditId), `${inscription.id} has an unknown district audit`)
     assert.ok(polityIds.has(inscription.polityId), `${inscription.id} has an unknown polity`)
+    const polity = [...atlasData.polities, ...atlasData.externalPolities].find(item => item.id === inscription.polityId)
+    assert.ok(bilingual(polity?.name), `${inscription.id} must expose a bilingual associated kingdom`)
     for (const citation of inscription.citations || []) assert.ok(sourceIds.has(citation.sourceId), `${inscription.id} has an unknown source`)
   }
   for (const audit of atlasData.inscriptionAudits) for (const id of audit.inscriptionIds) assert.ok(inscriptionIds.has(id), `${audit.id} has an unknown inscription`)
