@@ -12,7 +12,7 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 | `people` | Rulers, authors, patrons and other people | `polityId` → polity |
 | `peopleCandidates` | Wikimedia and community discovery candidates awaiting biographical review | Wikidata ID, birthplace, roles, evidence gates, citations |
 | `places` | Named geographic locations | GeoJSON-style `location` |
-| `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` |
+| `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` → `polities` or `externalPolities` |
 | `works` | Literary and scholarly works | `polityId`, external links |
 | `periodicals` | Patrika Sanchaya newspaper and magazine catalogue rows | source-row citation, publication place, publisher/editor, periodicity, language |
 | `sources` | Bibliographic evidence | Referenced by citations |
@@ -28,6 +28,7 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 - Geometry follows GeoJSON coordinate order (`[longitude, latitude]`) and declares precision such as `approximate` or `schematic`.
 - Citations point to stable source IDs and may include a page, inscription number, folio, URL fragment, or other locator.
 - Review metadata records `status`, `reviewer`, and `updatedAt`. Status progresses through `draft`, `needs-review`, `reviewed`, and `published`.
+- Every formal `inscriptions` record must carry a valid `polityId`. The linked polity is the record's historical attribution and must resolve to a bilingual kingdom or governing empire; the application exposes it in inscription details, district lists, search results, timeline cards and map popups. `npm run validate:data` fails when the link is missing or points to an unknown entity, and the page-data regression suite protects the same contract.
 - People candidates remain `needs-review` and `publicationReady: false`. They use eight evidence gates and are promoted by creating or updating a curated `people` record after independent review; discovery status is never changed to simulate publication.
 - Relationships are records because an assertion can have its own date, citations, and review state.
 - Political relations are deliberately separate from generated relationships. Each record names two or more parties, distinguishes war/invasion/campaign/trade/diplomacy/travel-and-knowledge/treaty/alliance/tribute/suzerainty/administrative or constitutional integration, carries a dated route and battle-location set, records an outcome, and links people, underlying events and documentary witnesses. Seed records remain `needs-review` until the relationship is independently resolved.
@@ -45,6 +46,8 @@ The live authenticated administrator service uses the same JSON contract for per
 ## Literature and epigraphy explorer fields
 
 Atlas v0.15.2 treats public records and district research candidates as different evidence states. A candidate is not rendered as a mapped inscription until its place, date and item-level edition have been reviewed.
+
+The distinction is important for attribution: the 29 formal inscription records have kingdom links and may be shown as mapped records, subject to their individual review status. The 62 district `priorityCandidates` are research leads, not formal inscriptions; they remain needs-review and are not assigned a kingdom merely from a nearby place or a speculative dynasty. During evidence capture, reviewers should add the polity link only when the corpus, date, findspot or governing context supports it, then promote the lead into `inscriptions` through the normal validation and MariaDB revision workflow.
 
 Every inscription candidate carries a `resolution` checklist with independent claims for `corpus`, `itemEdition`, `coordinates`, `transcription`, `translation`, `presentCondition`, `authority`, and `photographs`. Each claim is explicitly `verified`, `located`, `provisional`, `unresolved`, or `not-applicable` and resolved claims retain their source ID and locator. This prevents a reliable corpus reference from being mistaken for proof of a current site coordinate, condition, or managing authority.
 
