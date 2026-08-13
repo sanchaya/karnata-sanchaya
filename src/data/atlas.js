@@ -15,6 +15,7 @@ import { applyDistrictHeritageConnections } from './district-heritage-connection
 import { freedomFighterPeople, freedomFighterPolities, freedomFighterSources } from './freedom-fighters.js'
 import { freedomMovementResearchSources } from './freedom-movement-research.js'
 import { patrikaPeriodicals, patrikaMapSites } from './patrika-sanchaya.generated.js'
+import { kingdomArtifacts } from './kingdom-artifacts.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -81,6 +82,7 @@ export const atlasData = {
   ],
   periodicals: patrikaPeriodicals,
   periodicalMapSites: patrikaMapSites,
+  artifacts: kingdomArtifacts,
   collaborations,
   districtHistoryResearch,
   externalPolities,
@@ -741,4 +743,4 @@ atlasData.relationships = [
   ]),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', artifacts:'Kingdom symbols & artifacts', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }

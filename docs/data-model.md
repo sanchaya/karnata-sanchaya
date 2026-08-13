@@ -2,6 +2,8 @@
 
 The normalized installation seed is defined in `src/data/atlas.js` and `server/seeds/`. On the live portal, the latest immutable `dataset_snapshots` revision in MariaDB is the authoritative instance of these linked collections. The application loads `/api/dataset` before page modules evaluate, so maps, timelines, search, statistics and Admin use the same revision. Repository JSON remains a seed and static-publication input; no research record is persisted in browser storage. Every record has a globally unique, stable, lowercase kebab-case ID.
 
+`artifacts` records link a symbol, coin, inscription stone, sculpture, regalia or architectural fragment to a polity, place-context, bounded date, map point, citations and review state. Site-context points are discovery coordinates only; object-level catalogue and repository evidence is required before promotion.
+
 | Collection | Purpose | Main links |
 | --- | --- | --- |
 | `polities` | Karnataka-rooted kingdoms and political entities | `capitalId` → place |

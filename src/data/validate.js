@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
 const PEOPLE_CANDIDATE_EVIDENCE=['identity','karnatakaConnection','bilingualName','lifeDates','roles','contributions','authorityCitations','imageLicense']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
@@ -112,6 +112,15 @@ export function validateAtlas(data) {
         if (!record.description?.en?.trim()) add('warning',collection,id,'description.en','An English interpretation note is recommended.')
         if (!record.description?.kn?.trim()) add('warning',collection,id,'description.kn','A Kannada interpretation note is recommended.')
         if (!Array.isArray(record.citations) || record.citations.length === 0) add('warning',collection,id,'citations','Cultural records should cite at least one source.')
+      }
+      if (collection === 'artifacts') {
+        if (!['dynastic-symbol','inscription-stone','sculpture','architectural-fragment','coinage','regalia','manuscript','seal'].includes(record.artifactKind)) add('error',collection,id,'artifactKind','Artifact kind is invalid.')
+        if (!record.polityId) add('error',collection,id,'polityId','A related polity is required.')
+        if (!record.placeId) add('error',collection,id,'placeId','A mapped historical place is required.')
+        if (!record.date || record.date.from == null || record.date.to == null) add('error',collection,id,'date','An artifact date range is required.')
+        const point=record.location
+        if (point?.type !== 'Point' || !Array.isArray(point.coordinates) || point.coordinates.length !== 2) add('error',collection,id,'location','An artifact requires a mapped Point context.')
+        if (!Array.isArray(record.citations) || record.citations.length === 0) add('warning',collection,id,'citations','Artifacts should cite a source or catalogue lead.')
       }
       if (collection === 'templeInventoryLeads') {
         if (!record.deity?.trim() || !record.locationLabel?.trim()) add('error',collection,id,'deity/locationLabel','Inventory leads require deity and locality fields.')
