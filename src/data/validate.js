@@ -12,6 +12,7 @@ export function validateAtlas(data) {
   if (!data.meta?.schemaVersion) add('error','meta','meta','schemaVersion','A schema version is required.')
 
   const all = new Map()
+  const knownIds=new Set(COLLECTIONS.flatMap(collection=>Array.isArray(data[collection])?data[collection].map(record=>record?.id).filter(Boolean):[]))
   COLLECTIONS.forEach(collection => {
     if (!Array.isArray(data[collection])) return add('error',collection,'',collection,'Collection must be an array.')
     data[collection].forEach((record, index) => {
@@ -158,6 +159,11 @@ export function validateAtlas(data) {
           if (!association.districtId) add('error',collection,id,`districtAssociations.${index}.districtId`,'District associations require a stable district ID.')
           if (!association.kind) add('error',collection,id,`districtAssociations.${index}.kind`,'District associations require a relationship kind.')
           if (!Array.isArray(association.citations)||association.citations.length===0) add('warning',collection,id,`districtAssociations.${index}.citations`,'District associations should cite their biographical or event evidence.')
+        })
+        ;(record.placeAssociations||[]).forEach((association,index)=>{
+          if (!association.placeId || !knownIds.has(association.placeId)) add('error',collection,id,`placeAssociations.${index}.placeId`,`Unknown associated place: ${association.placeId||'missing'}`)
+          if (!association.kind) add('error',collection,id,`placeAssociations.${index}.kind`,'Place associations require a relationship kind.')
+          if (!Array.isArray(association.citations)||association.citations.length===0) add('error',collection,id,`placeAssociations.${index}.citations`,'Place associations require item-level biographical or event evidence.')
         })
         if (!record.polityId) add('warning',collection,id,'polityId','A related polity or historical context is recommended.')
         if (record.date?.precision==='unknown' && (record.date.from!=null||record.date.to!=null)) add('error',collection,id,'date','Unknown person dates must not carry numeric bounds.')

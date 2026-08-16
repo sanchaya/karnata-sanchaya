@@ -8,8 +8,8 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 | --- | --- | --- |
 | `polities` | Karnataka-rooted kingdoms and political entities | `capitalId` → place |
 | `externalPolities` | External empires, alliances and constitutional successors | Event participants |
-| `events` | Battles, campaigns, invasions, foundations and constitutional transitions | Participants, point/route, citations |
-| `people` | Rulers, authors, patrons and other people | `polityId` → polity |
+| `events` | Battles, campaigns, invasions, foundations and constitutional transitions | Participants, point/route, citations; review-only projections may retain `candidateIds` and `researchInput` |
+| `people` | Rulers, authors, patrons and other people | `polityId` → polity; `districtAssociations` and `placeAssociations` retain separately cited geographic claims |
 | `peopleCandidates` | Wikimedia and community discovery candidates awaiting biographical review | Wikidata ID, birthplace, roles, evidence gates, citations |
 | `martyrCandidates` | Karnataka-linked names extracted from *Dictionary of Martyrs*, Volume 5, awaiting page-image and identity review | Stable volume/page/line ID, printed-page locator, relationship class, district text leads, archival reference, evidence gates |
 | `places` | Named geographic locations | GeoJSON-style `location` |
@@ -31,9 +31,11 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 - Review metadata records `status`, `reviewer`, and `updatedAt`. Status progresses through `draft`, `needs-review`, `reviewed`, and `published`.
 - Every formal `inscriptions` record must carry a valid `polityId`. The linked polity is the record's historical attribution and must resolve to a bilingual kingdom or governing empire; the application exposes it in inscription details, district lists, search results, timeline cards and map popups. `npm run validate:data` fails when the link is missing or points to an unknown entity, and the page-data regression suite protects the same contract.
 - People candidates remain `needs-review` and `publicationReady: false`. They use eight evidence gates and are promoted by creating or updating a curated `people` record after independent review; discovery status is never changed to simulate publication.
+- Curated people may use `placeAssociations`, each containing a stable `placeId`, a controlled relationship description such as `birthplace`, `activity`, `arrest`, `imprisonment`, `martyrdom`, `resistance`, or `memorial`, and its own citations. A district association is not evidence for a village: district-centre markers remain provisional until a source names and locates the settlement.
 - Relationships are records because an assertion can have its own date, citations, and review state.
 - Political relations are deliberately separate from generated relationships. Each record names two or more parties, distinguishes war/invasion/campaign/trade/diplomacy/travel-and-knowledge/treaty/alliance/tribute/suzerainty/administrative or constitutional integration, carries a dated route and battle-location set, records an outcome, and links people, underlying events and documentary witnesses. Seed records remain `needs-review` until the relationship is independently resolved.
 - Events carry bilingual narratives, participants with roles and outcomes, an approximate point, an optional schematic campaign route, consequences, citations, and review state.
+- The 20 Dictionary of Martyrs `karnataka-event-connection` packets also generate review-only event projections for the main atlas. They preserve the complete extracted year/action/place input in `researchInput`, link back through `candidateIds`, use district/city-centre coordinates, and remain dashed `needs-review` records. Reviewers must verify the printed page, identity, exact locality and event sequence before replacing a projection with a promoted event.
 - District deep-history records use `recordKind` (`district-scope` or `candidate`), an explicit category, bilingual description and research note, optional GeoJSON point precision, provenance citations and a `needs-review` gate. The public `#district-history` explorer renders all 31 district scope slots and marks indicative locality leads with amber dashed markers; it does not promote the contributor-supplied Bengaluru infographic to an authority source.
 
 ## Validation and publication

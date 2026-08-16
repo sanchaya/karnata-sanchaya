@@ -359,7 +359,7 @@ export function applyBengaluruFreedomFighterDisplay(atlasData, appendUniqueById)
     ['ponnaswami',16,'Named among those killed in the 1942 City Post Office/Balepet/Cottonpet police firings',['Ponnuswamy','Ponnaswamy']],
     ['subhasing-ramsing',25,'Named among those killed in the 1942 City Post Office/Balepet/Cottonpet police firings',['Subbasing Ramasingh','Subash Singh Ram Singh']],
     ['thimmanna-das',null,'Killed in a separate 1942 firing near Mysore Bank Square',[]],
-  ]) enrich(slug, { ageAtDeath:ageAtDeath || undefined, aliases }, 'src-bangalore-first-bengaluru-1942-martyrs', locator, [
+  ]) enrich(slug, { ...(ageAtDeath?{ageAtDeath}:{}), aliases }, 'src-bangalore-first-bengaluru-1942-martyrs', locator, [
     {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator},
   ])
 
