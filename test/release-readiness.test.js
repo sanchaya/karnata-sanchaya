@@ -20,6 +20,7 @@ const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
 const explorerStylesSource = await readFile(new URL('../src/explorer.css', import.meta.url), 'utf8')
 const peopleStylesSource = await readFile(new URL('../src/people.css', import.meta.url), 'utf8')
+const freedomStylesSource = await readFile(new URL('../src/freedom-movement.css', import.meta.url), 'utf8')
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
@@ -125,6 +126,8 @@ test('freedom fighters remain discoverable by cited district associations', () =
   assert.match(peopleSource,/focus==='freedom'/, 'people must expose a dedicated freedom-fighter view')
   assert.match(peopleSource,/person\.districtIds\.includes\(district\)/, 'district filtering must include every researched activity district, not only the map anchor')
   assert.match(peopleSource,/people-district-coverage/, 'the starter district coverage must remain visible and selectable')
+  assert.match(peopleSource,/freedomResearchCount/, 'the people view must disclose the freedom-movement corpus size')
+  assert.match(peopleSource,/This is not a final count of verified, distinct people/, 'the corpus count must not imply that research leads are verified unique people')
   for (const id of ['kittur-chennamma','sangolli-rayanna','umabai-kundapur','kamaladevi-chattopadhyay','hardekar-manjappa']) assert.match(communityPeopleSource,new RegExp(`person\\('${id}'`),`${id} must remain in the starter set`)
   assert.match(communityPeopleSource,/districtAssociations/, 'freedom-fighter district links must remain explicit research data')
   assert.match(communityPeopleSource,/src-amrit-umabai-kundapur/, 'new district records must retain government biographical citations')
@@ -142,6 +145,9 @@ test('freedom movement has a dedicated map, timeline and evidence handoff', () =
   assert.match(peopleSource,/href="#freedom"/, 'the People Explorer must link its historical connections to the dedicated page')
   assert.match(districtHistorySource,/className="district-history-freedom"/, 'district history must expose district-specific freedom records')
   assert.match(districtHistorySource,/freedomDistrict=/, 'district coverage must open the matching freedom explorer filter')
+  assert.match(freedomSource,/freedomPeopleCount/, 'the freedom explorer must disclose the size of its wider people research corpus')
+  assert.match(freedomSource,/t\.people/, 'the people count must have a visible bilingual label')
+  assert.match(freedomStylesSource,/\.app-shell main\.freedom-page\{display:block;height:auto/, 'the explorer must not inherit the atlas fixed three-column main layout')
 })
 
 test('selected timeline stories retain readable text contrast', () => {
