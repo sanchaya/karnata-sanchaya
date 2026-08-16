@@ -11,6 +11,7 @@ const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplore
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
 const peopleSource = await readFile(new URL('../src/PeopleExplorer.jsx', import.meta.url), 'utf8')
+const freedomSource = await readFile(new URL('../src/FreedomMovementExplorer.jsx', import.meta.url), 'utf8')
 const communityPeopleSource = await readFile(new URL('../src/data/community-people.js', import.meta.url), 'utf8')
 const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
@@ -22,7 +23,7 @@ const peopleStylesSource = await readFile(new URL('../src/people.css', import.me
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'people', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
+  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
@@ -127,6 +128,20 @@ test('freedom fighters remain discoverable by cited district associations', () =
   for (const id of ['kittur-chennamma','sangolli-rayanna','umabai-kundapur','kamaladevi-chattopadhyay','hardekar-manjappa']) assert.match(communityPeopleSource,new RegExp(`person\\('${id}'`),`${id} must remain in the starter set`)
   assert.match(communityPeopleSource,/districtAssociations/, 'freedom-fighter district links must remain explicit research data')
   assert.match(communityPeopleSource,/src-amrit-umabai-kundapur/, 'new district records must retain government biographical citations')
+})
+
+test('freedom movement has a dedicated map, timeline and evidence handoff', () => {
+  assert.match(appSource,/const FreedomMovementExplorer=lazy/, 'the freedom explorer must remain code-split')
+  assert.match(appSource,/\['freedom',locale==='kn'\?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'\]/, 'freedom movement must be visible in primary navigation')
+  assert.match(freedomSource,/researchInput\?\.sourceCollection==='martyrCandidates'/, 'the page must reuse permanent event projections')
+  assert.match(freedomSource,/className="freedom-map/, 'the page must expose a dedicated map')
+  assert.match(freedomSource,/className="freedom-timeline"/, 'the page must expose a chronological timeline')
+  assert.match(freedomSource,/contributeType','martyrCandidate'/, 'review leads must hand off to the moderated contribution workflow')
+  assert.match(freedomSource,/location.*district\/city-centre|district\/city-centre leads/, 'provisional map locations must be explained')
+  assert.match(freedomSource,/initialParams\.get\('freedomDistrict'\)/, 'district-level freedom views must be shareable')
+  assert.match(peopleSource,/href="#freedom"/, 'the People Explorer must link its historical connections to the dedicated page')
+  assert.match(districtHistorySource,/className="district-history-freedom"/, 'district history must expose district-specific freedom records')
+  assert.match(districtHistorySource,/freedomDistrict=/, 'district coverage must open the matching freedom explorer filter')
 })
 
 test('selected timeline stories retain readable text contrast', () => {
