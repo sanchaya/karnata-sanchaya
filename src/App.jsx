@@ -20,6 +20,7 @@ const ResourcesCollaborations=lazy(()=>import('./ResourcesCollaborations'))
 const EvidenceWorkflow=lazy(()=>import('./EvidenceWorkflow'))
 const DistrictHistoryExplorer=lazy(()=>import('./DistrictHistoryExplorer'))
 const PeopleExplorer=lazy(()=>import('./PeopleExplorer'))
+const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 const socialLinks=[
@@ -98,6 +99,7 @@ const seoPages={
   literature:{kn:['ಕನ್ನಡ ಸಾಹಿತ್ಯ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕನ್ನಡ ಲೇಖಕರು, ಕವಿಗಳು, ಕೃತಿಗಳು, ಆಸ್ಥಾನಗಳು ಮತ್ತು ಅವುಗಳ ಕಾಲರೇಖೆಗಳನ್ನು ಸಂಶೋಧಿಸಿ.'],en:['Kannada Literature Explorer · Karnataka Historical Atlas','Research Kannada authors, poets, works, courts and their historical timelines.']},
   epigraphy:{kn:['ಕರ್ನಾಟಕ ಶಾಸನ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಶಾಸನಗಳು, ಲಿಪಿಗಳು, ಭಾಷೆಗಳು, ಪಠ್ಯಗಳು, ಅನುವಾದ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಅನ್ವೇಷಿಸಿ.'],en:['Karnataka Epigraphy Explorer · Karnataka Historical Atlas','Explore Karnataka inscriptions, scripts, languages, editions, translations and review status.']},
   people:{kn:['ವ್ಯಕ್ತಿಗಳ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಅರಸರು, ರಾಣಿಯರು, ಕವಿಗಳು, ವಿದ್ವಾಂಸರು, ಯೋಧರು, ಕಾಯಕಜೀವಿಗಳು ಮತ್ತು ಜನಸಮುದಾಯದ ಪ್ರಮುಖ ವ್ಯಕ್ತಿಗಳನ್ನು ಕಾಲ ಮತ್ತು ಸ್ಥಳದೊಂದಿಗೆ ಅನ್ವೇಷಿಸಿ.'],en:['People Explorer · Karnataka Historical Atlas','Explore rulers, queens, poets, scholars, soldiers, working people and community figures through time and place.']},
+  freedom:{kn:['ಕರ್ನಾಟಕದ ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರರು, ಘಟನೆಗಳು, ಬಂಧನ, ಸೆರೆವಾಸ, ಪ್ರತಿರೋಧ, ಹುತಾತ್ಮತೆ ಮತ್ತು ಜಿಲ್ಲಾವಾರು ಸಾಕ್ಷ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.'],en:["Karnataka's Freedom Movement · Karnataka Historical Atlas",'Explore Karnataka freedom fighters, events, arrests, imprisonment, resistance, martyrdom and district evidence.']},
   districts:{kn:['ಜಿಲ್ಲಾ ಪರಂಪರೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಜಿಲ್ಲಾವಾರು ದೇವಾಲಯ, ಬಸದಿ, ದರ್ಗಾ, ಚರ್ಚ್, ಮಠ, ಕೋಟೆ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪದ ದಾಖಲೆಗಳು.'],en:['District Heritage · Karnataka Historical Atlas','District-level records of Karnataka temples, basadis, dargahs, churches, monasteries, forts and architecture.']},
   'district-history':{kn:['ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಪೂರ್ವೈತಿಹಾಸಿಕ ತಾಣಗಳು, ವಸತಿ ಮೂಲಗಳು, ಸ್ಥಾಪನಾ ಶಿಲೆಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ಇತಿಹಾಸದ ಸಂಶೋಧನಾ ಅಭ್ಯರ್ಥಿಗಳು.'],en:['District Deep History · Karnataka Historical Atlas','Research leads for prehistoric places, settlement origins, foundation stones and locality histories across Karnataka.']},
   inscriptions:{kn:['ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಜಿಲ್ಲಾವಾರು ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳು, ಸಂಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನಾ ಪ್ರಗತಿ.'],en:['District Inscription Audits · Karnataka Historical Atlas','District inscription candidates, corpus locators and evidence-verification progress.']},
@@ -136,6 +138,12 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
       tourStep('.explorer-toolbar','ಶಾಸನ ಶೋಧಕಗಳು · ವರ್ಗ ಮತ್ತು ಸ್ಥಿತಿ ನೋಡಿ','Filter by district, script, language, classification, evidence type and review state.'),
       tourStep('.explorer-grid','ಶಾಸನ ಪಟ್ಟಿ · ದಾಖಲೆ ತೆರೆಯಿರಿ','Use the lazy-loaded list to explore corpus locators, coordinates and candidate records.'),
       tourStep('.explorer-layout','ಶಾಸನ ವಿವರ · ಪಠ್ಯ ಮತ್ತು ಅನುವಾದ ಪರಿಶೀಲಿಸಿ','Open a record card to reveal editions, transcription, translation, condition, protection and citations.'),
+    ],
+    freedom:[
+      tourStep('.freedom-filters','ಹುಡುಕಾಟ ಮತ್ತು ಶೋಧಕಗಳು · ವ್ಯಕ್ತಿ, ಜಿಲ್ಲೆ ಅಥವಾ ಘಟನೆ ಆಯ್ಕೆಮಾಡಿ','Search and filter freedom-movement records by person, district, action and review state.'),
+      tourStep('.freedom-map','ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ ಭೂಪಟ · ಸ್ಥಳ ಸುಳಿವನ್ನು ಆಯ್ಕೆಮಾಡಿ','Select a provisional map point to connect a person, event window and source locator.'),
+      tourStep('.freedom-list','ಘಟನೆ ಪಟ್ಟಿ · ಪರಿಶೀಲನಾ ದಾಖಲೆಯನ್ನು ತೆರೆಯಿರಿ','Open a record to inspect its source, review state and evidence still required.'),
+      tourStep('.freedom-timeline','ಕಾಲರೇಖೆ · ಕೀಬೋರ್ಡ್‌ನಿಂದಲೂ ಸಂಚರಿಸಿ','Traverse source-backed event leads chronologically with the timeline or arrow keys.'),
     ],
     people:[
       tourStep('.people-filters','ವ್ಯಕ್ತಿ ಶೋಧಕಗಳು · ಹೆಸರು, ಪಾತ್ರ ಮತ್ತು ಕಾಲ ಆಯ್ಕೆಮಾಡಿ','Search by bilingual name and filter people by role, polity, century, district, gender record and review status.'),
@@ -575,7 +583,7 @@ function InscriptionAuditSection({locale,t,onChooseInscription,districtGeojson})
 }
 
 export default function App(){
-  const publicViews=['atlas','relations','people','literature','epigraphy','districts','district-history','inscriptions','evidence','research','community','profile','about']
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','evidence','research','community','profile','about']
   const normalizeView=hash=>hash==='history'?'district-history':hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -710,7 +718,7 @@ export default function App(){
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const primaryNavItems=[['atlas',t.atlas],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
+  const primaryNavItems=[['atlas',t.atlas],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
   const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${view===key?'active':''}`.trim()} aria-current={view===key?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(key===view){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   if(admin)return <Suspense fallback={<PortalFallback/>}><Admin onClose={closeAdmin} locale={locale} onLocaleChange={changeLocale}/></Suspense>
@@ -758,6 +766,7 @@ export default function App(){
     {view==='districts'&&<div className="portal-page" id="districts"><DistrictAuditSection locale={locale} t={t} districtGeojson={districtGeojson}/><HeritageInventorySection locale={locale} t={t}/></div>}
     {view==='district-history'&&<Suspense fallback={<PortalFallback/>}><DistrictHistoryExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>}
     {view==='people'&&<Suspense fallback={<PortalFallback/>}><PeopleExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme} onOpenAtlas={person=>{choosePerson(person);navigateView('atlas')}}/></Suspense>}
+    {view==='freedom'&&<Suspense fallback={<PortalFallback/>}><FreedomMovementExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>}
     {view==='literature'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="literature" locale={locale} mapTheme={mapTheme} onOpenAtlas={item=>{chooseWork(item);navigateView('atlas')}}/></Suspense>}
     {view==='epigraphy'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="epigraphy" locale={locale} mapTheme={mapTheme} isCommunityMember={Boolean(communityUser)} onOpenAtlas={item=>{chooseInscription(inscriptionById.get(item.id)||item);navigateView('atlas')}}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
