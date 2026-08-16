@@ -3,7 +3,7 @@
 ## Executive Summary
 
 - **28 of 31 current Karnataka districts have at least one mapped freedom-fighter candidate.** The remaining districts are Chamarajanagar, Chikkamagaluru, Kalaburagi.
-- **180 of 255 people (70.6%) have an explicit district association.** 75 records still need birthplace, activity, arrest, imprisonment, residence or memorial evidence.
+- **285 of 357 people (79.8%) have an explicit district association.** 72 records still need birthplace, activity, arrest, imprisonment, residence or memorial evidence.
 - **No person record is independently reviewed yet.** Public records therefore remain visibly `needs-review`; a source-backed candidate count is not a completeness claim.
 - **The audit is reproducible.** Run `npm run audit:freedom-fighters` after every import or MariaDB/static release update.
 
@@ -15,10 +15,10 @@
 | Ballari / ಬಳ್ಳಾರಿ | 2 | 0 | 3 | thin |
 | Belagavi / ಬೆಳಗಾವಿ | 19 | 0 | 9 | seeded |
 | Bengaluru Rural / ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ | 1 | 0 | 1 | thin |
-| Bengaluru Urban / ಬೆಂಗಳೂರು ನಗರ | 11 | 0 | 5 | seeded |
+| Bengaluru Urban / ಬೆಂಗಳೂರು ನಗರ | 121 | 0 | 9 | seeded |
 | Bidar / ಬೀದರ್ | 1 | 0 | 1 | thin |
 | Chamarajanagar / ಚಾಮರಾಜನಗರ | 0 | 0 | 0 | empty |
-| Chikkaballapur / ಚಿಕ್ಕಬಳ್ಳಾಪುರ | 2 | 0 | 3 | thin |
+| Chikkaballapur / ಚಿಕ್ಕಬಳ್ಳಾಪುರ | 2 | 0 | 4 | thin |
 | Chikkamagaluru / ಚಿಕ್ಕಮಗಳೂರು | 0 | 0 | 0 | empty |
 | Chitradurga / ಚಿತ್ರದುರ್ಗ | 16 | 0 | 2 | seeded |
 | Dakshina Kannada / ದಕ್ಷಿಣ ಕನ್ನಡ | 18 | 0 | 10 | seeded |
@@ -32,14 +32,14 @@
 | Kolar / ಕೋಲಾರ | 2 | 0 | 2 | thin |
 | Koppal / ಕೊಪ್ಪಳ | 1 | 0 | 1 | thin |
 | Mandya / ಮಂಡ್ಯ | 3 | 0 | 4 | seeded |
-| Mysuru / ಮೈಸೂರು | 7 | 0 | 3 | seeded |
+| Mysuru / ಮೈಸೂರು | 7 | 0 | 4 | seeded |
 | Raichur / ರಾಯಚೂರು | 1 | 0 | 1 | thin |
-| Ramanagara / ರಾಮನಗರ | 1 | 0 | 1 | thin |
+| Ramanagara / ರಾಮನಗರ | 1 | 0 | 2 | thin |
 | Shivamogga / ಶಿವಮೊಗ್ಗ | 3 | 0 | 4 | seeded |
 | Tumakuru / ತುಮಕೂರು | 47 | 0 | 1 | seeded |
 | Udupi / ಉಡುಪಿ | 3 | 0 | 3 | seeded |
-| Uttara Kannada / ಉತ್ತರ ಕನ್ನಡ | 16 | 0 | 10 | seeded |
-| Vijayanagara / ವಿಜಯನಗರ | 1 | 0 | 1 | thin |
+| Uttara Kannada / ಉತ್ತರ ಕನ್ನಡ | 16 | 0 | 11 | seeded |
+| Vijayanagara / ವಿಜಯನಗರ | 1 | 0 | 2 | thin |
 | Vijayapura / ವಿಜಯಪುರ | 6 | 0 | 4 | seeded |
 | Yadgir / ಯಾದಗಿರಿ | 1 | 0 | 1 | thin |
 
@@ -47,7 +47,7 @@
 
 1. Resolve the empty districts first: Chamarajanagar, Chikkamagaluru, Kalaburagi.
 2. Strengthen thin districts (one or two candidates): Ballari, Bengaluru Rural, Bidar, Chikkaballapur, Davanagere, Gadag, Hassan, Kolar, Koppal, Raichur, Ramanagara, Vijayanagara, Yadgir.
-3. Reconcile the 75 existing people without a district association against district gazetteers, prison registers, pension/Tamra Patra files, court records and contemporary newspapers.
+3. Reconcile the 72 existing people without a district association against district gazetteers, prison registers, pension/Tamra Patra files, court records and contemporary newspapers.
 4. Independently review each Kannada name, person identity, association kind, date and item-level locator before promotion.
 
 ## First-wave authority evidence

@@ -16,6 +16,7 @@ import { freedomFighterPeople, freedomFighterPolities, freedomFighterSources } f
 import { freedomMovementResearchSources } from './freedom-movement-research.js'
 import { patrikaPeriodicals, patrikaMapSites } from './patrika-sanchaya.generated.js'
 import { kingdomArtifacts } from './kingdom-artifacts.js'
+import { applyBengaluruFreedomFighterDisplay } from './bengaluru-freedom-fighters-display.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -177,6 +178,7 @@ appendUniqueById(atlasData.sources, [{
 }])
 appendUniqueById(atlasData.externalPolities, freedomFighterPolities)
 appendUniqueById(atlasData.people, freedomFighterPeople)
+applyBengaluruFreedomFighterDisplay(atlasData, appendUniqueById)
 // Keep named foreign hosts and eyewitnesses attached to the same dated events
 // that already document their Karnataka connection; this makes them discoverable
 // without implying a stronger political relationship than the cited record supports.
