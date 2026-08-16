@@ -58,6 +58,10 @@ For a cloned Linux deployment behind an existing Nginx instance, use the guarded
 
 See the maintained [milestone status and roadmap](docs/roadmap-status.md) for the implementation history, current coverage and prioritized next work.
 
+The statewide freedom-fighter research pass is tracked in the [31-district coverage audit](docs/freedom-fighter-district-audit.md). Run `npm run audit:freedom-fighters` after changing people, district associations, citations or review status. The audit deliberately distinguishes captured candidates from independently reviewed records and keeps empty districts visible as research work rather than implying completeness.
+
+The [Internet Archive freedom-fighter research note](docs/internet-archive-freedom-fighter-research.md) records the first ServantsOfKnowledge/JaiGyan scan, six high-value source items and the page-image verification procedure. Internet Archive OCR is used only to find candidate pages; names and claims enter MariaDB through Admin with printed locators and remain `needs-review` until checked.
+
 For repeatable research intake, citation management, MariaDB synchronization, social-update links and offline/PWA operation, follow [Research intake and update procedure](docs/research-intake.md).
 
 For the complete CSV/import, migration, server-update and static-publication runbook, see [Data import and deployment](docs/data-import-and-deployment.md).

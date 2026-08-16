@@ -7,6 +7,19 @@ const OUT_JS = process.argv[4] ?? new URL('../src/data/freedom-fighters.js', imp
 const KANNADA_RE = /[\u0C80-\u0CFF\u0CE0-\u0CEF\u0CD6]+(?:\s+[\u0C80-\u0CFF\u0CE0-\u0CEF\u0CD6]+)*/g
 const REVIEW = { status: 'needs-review', reviewer: null, updatedAt: '2026-08-01' }
 
+// Evidence discovered outside the original CSV. Keep these overrides in the
+// importer so regenerating freedom-fighters.js does not discard reviewed
+// research work. Each association remains needs-review until a human checks
+// the cited printed page image rather than relying on OCR alone.
+const DISTRICT_ASSOCIATION_OVERRIDES = {
+  84: [{
+    districtId: 'audit-mandya',
+    kind: 'activity',
+    sourceId: 'src-ia-mandya-freedom-unification-2017',
+    locator: 'Printed p. 42; named among Mandya district leaders in the responsible-government movement (scan/OCR discovery; page-image check required)',
+  }],
+}
+
 // Provisional Kannada renderings for rows where the source CSV carries no Kannada script.
 // Machine-generated transliterations for review; every record ships with review.status
 // 'needs-review' so reviewers must verify these renderings before publication.
@@ -374,6 +387,7 @@ const DISTRICTS = {
 
 function districtIdsFor(raw) {
   if (!raw || raw === '-' || !raw.trim()) return []
+  if (/Doddaballapur/i.test(raw)) return ['audit-bengaluru-rural']
   const segment = raw.split(';')[0]
   const tokens = segment.split('/').map(t => t.trim().split('(')[0].trim())
   return [...new Set(tokens.map(t => DISTRICTS[t]).filter(Boolean))]
@@ -555,6 +569,15 @@ function buildPeople(rows) {
       kind: 'activity',
       citations: [{ sourceId: citations[0]?.sourceId || 'src-ff-wikipedia-en', locator: row['District/Place'] }],
     }))
+    for (const association of DISTRICT_ASSOCIATION_OVERRIDES[no] || []) {
+      if (districtAssociations.some(item => item.districtId === association.districtId && item.kind === association.kind)) continue
+      districtAssociations.push({
+        districtId: association.districtId,
+        kind: association.kind,
+        citations: [{ sourceId: association.sourceId, locator: association.locator }],
+      })
+      if (!citations.some(item => item.sourceId === association.sourceId)) citations.push({ sourceId: association.sourceId, locator: association.locator })
+    }
     const isWoman = WOMEN_ROWS.has(no) || WOMAN_SUFFIX_RE.test(nameEn) || /^rani\b|^pandita\b/i.test(nameEn)
     const person = {
       id: `person-ff-${no}`,
