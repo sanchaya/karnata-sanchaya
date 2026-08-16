@@ -90,6 +90,7 @@ These are intentionally source-specific and are not all run on every deploy:
 | `node scripts/import-wikimedia-people.mjs` | Refresh Wikimedia people candidates | A reviewed source export is supplied |
 | `node scripts/import-freedom-fighters.mjs` | Refresh freedom-fighter CSVs | Master/source CSVs change; pass both CSV paths when needed |
 | `npm run audit:freedom-fighters` | Measure freedom-fighter coverage across all 31 current districts | After imports, curated additions, reviews, or a MariaDB/static release update |
+| `npm run extract:martyrs-karnataka -- /path/to/Volume-5_djvu.txt src/data/dictionary-martyrs-karnataka.json` | Rebuild the Karnataka-linked *Dictionary of Martyrs*, Volume 5 review inventory from the Internet Archive text derivative | Only when the source OCR or extraction rules change; review the diff before committing |
 | `python3 scripts/import-bengaluru-kml.py` | Rebuild Bengaluru inscription candidates | The KML changes |
 | `python3 scripts/import-wikipedia-heritage.py` | Refresh heritage discovery leads | A deliberate research refresh is approved |
 | `node scripts/discover-pending-heritage-pages.mjs` | Discover possible Wikipedia pages for pending heritage leads | Discovery only; never treat output as verified |

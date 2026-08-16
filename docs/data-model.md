@@ -11,6 +11,7 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 | `events` | Battles, campaigns, invasions, foundations and constitutional transitions | Participants, point/route, citations |
 | `people` | Rulers, authors, patrons and other people | `polityId` → polity |
 | `peopleCandidates` | Wikimedia and community discovery candidates awaiting biographical review | Wikidata ID, birthplace, roles, evidence gates, citations |
+| `martyrCandidates` | Karnataka-linked names extracted from *Dictionary of Martyrs*, Volume 5, awaiting page-image and identity review | Stable volume/page/line ID, printed-page locator, relationship class, district text leads, archival reference, evidence gates |
 | `places` | Named geographic locations | GeoJSON-style `location` |
 | `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` → `polities` or `externalPolities` |
 | `works` | Literary and scholarly works | `polityId`, external links |

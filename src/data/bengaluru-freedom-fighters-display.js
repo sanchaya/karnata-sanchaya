@@ -24,6 +24,80 @@ export const bengaluruFreedomFighterDisplaySource = {
   review,
 }
 
+export const bengaluruFreedomFighterResearchSources = [
+  {
+    id:'src-india-culture-dictionary-martyrs-v5', type:'government-reference-book',
+    title:name('Dictionary of Martyrs: India’s Freedom Struggle, Volume 5','ಹುತಾತ್ಮರ ನಿಘಂಟು: ಭಾರತದ ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟ, ಸಂಪುಟ 5'),
+    authors:['Indian Council of Historical Research','Ministry of Culture, Government of India'], year:2018,
+    url:'https://www.indiaculture.gov.in/sites/default/files/pdf/Martyrs_Vol_5_06_03_2019.pdf',
+    publisher:'Ministry of Culture, Government of India and Indian Council of Historical Research',
+    isbn:'978-81-938176-1-2',
+    archiveIdentifier:'dictionary-of-martyrs-of-indias-freedom-struggle-5-vols',
+    alternateUrls:[
+      'https://archive.org/details/dictionary-of-martyrs-of-indias-freedom-struggle-5-vols/Volume%205%20Andhra%20Pradesh%2C%20Telangana%2C%20Karnataka%2C%20Tamil%20Nadu%20and%20Kerala%201857-1947/',
+      'https://archive.org/download/dictionary-of-martyrs-of-indias-freedom-struggle-5-vols/Volume%205%20Andhra%20Pradesh%2C%20Telangana%2C%20Karnataka%2C%20Tamil%20Nadu%20and%20Kerala%201857-1947_djvu.txt',
+    ],
+    scope:name('Government reference entries for martyrs from Andhra Pradesh, Telangana, Karnataka, Tamil Nadu and Kerala. Person-level locators are retained and should still be checked against the archival references cited by the dictionary.','ಆಂಧ್ರ ಪ್ರದೇಶ, ತೆಲಂಗಾಣ, ಕರ್ನಾಟಕ, ತಮಿಳುನಾಡು ಮತ್ತು ಕೇರಳದ ಹುತಾತ್ಮರ ಸರ್ಕಾರಿ ಉಲ್ಲೇಖ ಕೃತಿ. ವ್ಯಕ್ತಿ-ಮಟ್ಟದ ಸ್ಥಾನಸೂಚಿಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ; ನಿಘಂಟು ನೀಡಿದ ಆರ್ಕೈವ್ ಉಲ್ಲೇಖಗಳೊಂದಿಗೆ ಇನ್ನೂ ಪರಿಶೀಲಿಸಬೇಕು.'),
+    review:{...review},
+  },
+  {
+    id:'src-amrit-kc-reddy', type:'government-biography',
+    title:name('K. C. Reddy — Digital District Repository','ಕೆ. ಸಿ. ರೆಡ್ಡಿ — ಡಿಜಿಟಲ್ ಜಿಲ್ಲಾ ಸಂಗ್ರಹ'),
+    authors:['Ministry of Culture, Government of India'], year:2022,
+    url:'https://cmsadmin.amritmahotsav.nic.in/district-reopsitory-detail.htm?9799=',
+    scope:name('Biographical account of Kyasamballi Chengalaraya Reddy, his Mysore Congress work, responsible-government politics and service as the first Chief Minister of Mysore State.','ಕ್ಯಾಸಂಬಳ್ಳಿ ಚೆಂಗಲರಾಯ ರೆಡ್ಡಿಯ ಜೀವನ, ಮೈಸೂರು ಕಾಂಗ್ರೆಸ್ ಕಾರ್ಯ, ಜವಾಬ್ದಾರಿ ಸರ್ಕಾರದ ರಾಜಕೀಯ ಮತ್ತು ಮೈಸೂರು ರಾಜ್ಯದ ಮೊದಲ ಮುಖ್ಯಮಂತ್ರಿಯಾಗಿ ಸಲ್ಲಿಸಿದ ಸೇವೆಯ ಜೀವನಚರಿತ್ರೆ.'),
+    review:{...review},
+  },
+  {
+    id:'src-constitution-india-kengal-hanumanthaiah', type:'constitutional-biography',
+    title:name('Kengal Hanumanthaiah — Constitution of India member biography','ಕೆಂಗಲ್ ಹನುಮಂತಯ್ಯ — ಭಾರತದ ಸಂವಿಧಾನ ಸದಸ್ಯರ ಜೀವನಚರಿತ್ರೆ'),
+    authors:['Centre for Law and Policy Research'], year:null,
+    url:'https://www.constitutionofindia.net/members/kengal-hanumanthaiah/',
+    scope:name('Constituent Assembly biography with references to Karnataka Legislature and Karnataka Information Department biographies.','ಕರ್ನಾಟಕ ವಿಧಾನಮಂಡಲ ಮತ್ತು ಕರ್ನಾಟಕ ವಾರ್ತಾ ಇಲಾಖೆಯ ಜೀವನಚರಿತ್ರೆಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಸಂವಿಧಾನ ಸಭಾ ಸದಸ್ಯರ ಪರಿಚಯ.'),
+    review:{...review},
+  },
+  {
+    id:'src-tni-h-sreenivasaiah-2017', type:'news-obituary',
+    title:name('Sreenivasaiah, Gandhian and freedom fighter, dies at 92','ಗಾಂಧಿವಾದಿ ಮತ್ತು ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರ ಶ್ರೀನಿವಾಸಯ್ಯ ನಿಧನ'),
+    authors:['The New Indian Express'], year:2017,
+    url:'https://www.newindianexpress.com/bengaluru/2017/Apr/07/sreenivasaiah-gandhian--freedom-fighter-dies-at-92-1590897.html',
+    scope:name('Family-attributed obituary recording participation in the freedom movement, imprisonment in 1942 and 1947, underground publications and later journalism and social service.','ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿಯ ಭಾಗವಹಿಸುವಿಕೆ, 1942 ಮತ್ತು 1947ರ ಕಾರಾಗೃಹವಾಸ, ಭೂಗತ ಪ್ರಕಟಣೆಗಳು ಹಾಗೂ ನಂತರದ ಪತ್ರಿಕೋದ್ಯಮ ಮತ್ತು ಸಮಾಜಸೇವೆಯನ್ನು ಕುಟುಂಬದ ಹೇಳಿಕೆಯೊಂದಿಗೆ ದಾಖಲಿಸುವ ಶ್ರದ್ಧಾಂಜಲಿ.'),
+    review:{...review},
+  },
+  {
+    id:'src-toi-vs-krishna-iyer-2011', type:'news-obituary',
+    title:name('V. S. Krishna Iyer passes away at 90','ವಿ. ಎಸ್. ಕೃಷ್ಣ ಅಯ್ಯರ್ ನಿಧನ'),
+    authors:['The Times of India'], year:2011,
+    url:'https://timesofindia.indiatimes.com/city/bengaluru/v-s-krishna-iyer-passes-way-at-90/articleshow/9366285.cms',
+    scope:name('Obituary identifying Krishna Iyer as a veteran freedom fighter, Bengaluru mayor, minister and Member of Parliament.','ಕೃಷ್ಣ ಅಯ್ಯರ್ ಅವರನ್ನು ಹಿರಿಯ ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರ, ಬೆಂಗಳೂರು ಮೇಯರ್, ಸಚಿವ ಮತ್ತು ಸಂಸದರೆಂದು ಗುರುತಿಸುವ ಶ್ರದ್ಧಾಂಜಲಿ.'),
+    review:{...review},
+  },
+  {
+    id:'src-indian-express-bengaluru-freedom-memory-2024', type:'news-history',
+    title:name('Where to find memories of India’s freedom struggle in Bengaluru','ಬೆಂಗಳೂರಿನಲ್ಲಿ ಭಾರತದ ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟದ ನೆನಪುಗಳ ತಾಣಗಳು'),
+    authors:['The Indian Express','Suresh Moona'], year:2024,
+    url:'https://indianexpress.com/article/cities/bangalore/know-your-city-memories-india-freedom-struggle-bengaluru-9583753/',
+    scope:name('Public-history account of Bengaluru protest sites and memorials, including Gundappa and Prahlad Shetty. Use as a discovery/corroboration source pending memorial inscriptions and gazetteer locators.','ಗುಂಡಪ್ಪ ಮತ್ತು ಪ್ರಹ್ಲಾದ ಶೆಟ್ಟಿ ಸೇರಿದಂತೆ ಬೆಂಗಳೂರು ಪ್ರತಿಭಟನಾ ತಾಣಗಳು ಮತ್ತು ಸ್ಮಾರಕಗಳ ಸಾರ್ವಜನಿಕ ಇತಿಹಾಸ. ಸ್ಮಾರಕ ಶಾಸನ ಮತ್ತು ಗೆಜೆಟಿಯರ್ ಸ್ಥಾನಸೂಚಿ ಸಿಗುವವರೆಗೆ ಅನ್ವೇಷಣೆ/ಪೂರಕ ಆಕರವಾಗಿ ಬಳಸಿ.'),
+    review:{...review},
+  },
+  {
+    id:'src-bangalore-first-bengaluru-1942-martyrs', type:'news-archive',
+    title:name('Bengaluru 1942 police-firing martyrs — Karnataka Gazetteer summary','ಬೆಂಗಳೂರು 1942 ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯ ಹುತಾತ್ಮರು — ಕರ್ನಾಟಕ ಗೆಜೆಟಿಯರ್ ಸಾರಾಂಶ'),
+    authors:['Deccan Herald archive','Bangalore First'], year:2014,
+    url:'https://www.bangalorefirst.in/?m=201408',
+    scope:name('Secondary account explicitly attributing ten 1942 deaths to the Karnataka State Gazetteer and naming Thippaiah, Appaiah, Srinivasan, Narayanachar/Narayana Das, Subbasing Ramasingh, Ponnuswamy and Thimmanna Das. Printed gazetteer pages remain required.','1942ರ ಹತ್ತು ಸಾವುಗಳನ್ನು ಕರ್ನಾಟಕ ರಾಜ್ಯ ಗೆಜೆಟಿಯರ್‌ಗೆ ಸ್ಪಷ್ಟವಾಗಿ ಸೇರಿಸಿ ತಿಪ್ಪಯ್ಯ, ಅಪ್ಪಯ್ಯ, ಶ್ರೀನಿವಾಸನ್, ನಾರಾಯಣಾಚಾರ್/ನಾರಾಯಣ ದಾಸ್, ಸುಬ್ಬಸಿಂಗ್ ರಾಮಸಿಂಗ್, ಪೊನ್ನುಸ್ವಾಮಿ ಮತ್ತು ತಿಮ್ಮಣ್ಣ ದಾಸ್ ಹೆಸರುಗಳನ್ನು ನೀಡುವ ದ್ವಿತೀಯ ಆಕರ. ಮುದ್ರಿತ ಗೆಜೆಟಿಯರ್ ಪುಟಗಳು ಇನ್ನೂ ಅಗತ್ಯ.'),
+    review:{...review},
+  },
+  {
+    id:'src-bangalore-first-mysore-bank-martyrs', type:'memorial-news-report',
+    title:name('Mysore Bank Circle freedom-martyrs memorial','ಮೈಸೂರು ಬ್ಯಾಂಕ್ ವೃತ್ತದ ಸ್ವಾತಂತ್ರ್ಯ ಹುತಾತ್ಮರ ಸ್ಮಾರಕ'),
+    authors:['The Times of India archive','Bangalore First','S. K. Aruni','H. S. Doreswamy'], year:2014,
+    url:'https://www.bangalorefirst.in/?p=12669',
+    scope:name('Report describing the memorial plaque, naming its four commemorated people and recording historian and participant testimony about the 16–18 August 1942 police actions. The plaque and archival police/prison files remain the preferred item-level evidence.','ಸ್ಮಾರಕ ಫಲಕ, ಅದರಲ್ಲಿ ಸ್ಮರಿಸಿದ ನಾಲ್ವರು ಮತ್ತು 16–18 ಆಗಸ್ಟ್ 1942ರ ಪೊಲೀಸ್ ಕ್ರಮಗಳ ಕುರಿತು ಇತಿಹಾಸಕಾರ ಹಾಗೂ ಭಾಗವಹಿಸಿದವರ ಸಾಕ್ಷ್ಯವನ್ನು ದಾಖಲಿಸುವ ವರದಿ. ಫಲಕ ಮತ್ತು ಆರ್ಕೈವ್ ಪೊಲೀಸ್/ಕಾರಾಗೃಹ ಕಡತಗಳು ಆದ್ಯತೆಯ ವಸ್ತು-ಮಟ್ಟದ ಸಾಕ್ಷ್ಯವಾಗಿವೆ.'),
+    review:{...review},
+  },
+]
+
 const entry = (slug, en, kn, position, options = {}) => ({ slug, name: name(en, kn), position, ...options })
 
 // Row and column locators follow the photographed display from top-left to bottom-right.
@@ -169,7 +243,7 @@ const existingPersonIds = {
 const displayLocator = (record) => `Photographed display, ${record.position.join(' and ')}${record.deathYear ? `; printed “d. ${record.deathYear}”` : ''}`
 
 export function applyBengaluruFreedomFighterDisplay(atlasData, appendUniqueById) {
-  appendUniqueById(atlasData.sources, [bengaluruFreedomFighterDisplaySource])
+  appendUniqueById(atlasData.sources, [bengaluruFreedomFighterDisplaySource, ...bengaluruFreedomFighterResearchSources])
   const newPeople = []
 
   for (const record of bengaluruFreedomFighterDisplayEntries) {
@@ -211,4 +285,153 @@ export function applyBengaluruFreedomFighterDisplay(atlasData, appendUniqueById)
   }
 
   appendUniqueById(atlasData.people, newPeople)
+
+  const personFor = slug => atlasData.people.find(item => item.id === (existingPersonIds[slug] || `person-bengaluru-ff-${slug}`))
+  const addPersonCitation = (person, sourceId, locator) => {
+    if (!person) return
+    person.citations = [...(person.citations || [])]
+    if (!person.citations.some(item => item.sourceId === sourceId && item.locator === locator)) person.citations.push({ sourceId, locator })
+  }
+  const addDistrictAssociation = (person, districtId, kind, sourceId, locator) => {
+    if (!person) return
+    person.districtAssociations = [...(person.districtAssociations || [])]
+    if (!person.districtAssociations.some(item => item.districtId === districtId && item.kind === kind && item.citations?.some(cite => cite.sourceId === sourceId))) {
+      person.districtAssociations.push({ districtId, kind, citations:[{ sourceId, locator }] })
+    }
+  }
+  const enrich = (slug, fields, sourceId, locator, associations = []) => {
+    const person = personFor(slug)
+    if (!person) return
+    Object.assign(person, fields)
+    addPersonCitation(person, sourceId, locator)
+    associations.forEach(association => addDistrictAssociation(person, association.districtId, association.kind, sourceId, association.locator || locator))
+  }
+
+  enrich('kc-reddy', {
+    name:name('Kyasamballi Chengalaraya Reddy (K. C. Reddy)','ಕ್ಯಾಸಂಬಳ್ಳಿ ಚೆಂಗಲರಾಯ ರೆಡ್ಡಿ (ಕೆ. ಸಿ. ರೆಡ್ಡಿ)'),
+    roles:['freedom-fighter','administrator','minister'], gender:'man',
+    date:{from:1902,to:1976,era:'CE',precision:'range'}, deathYear:1976,
+    researchNote:name('Government biography identifies Reddy’s early freedom movement, Mysore Congress and responsible-government work. The photographed-display match is exact by initials and Bengaluru political context.','ಸರ್ಕಾರಿ ಜೀವನಚರಿತ್ರೆ ರೆಡ್ಡಿಯವರ ಆರಂಭಿಕ ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ, ಮೈಸೂರು ಕಾಂಗ್ರೆಸ್ ಮತ್ತು ಜವಾಬ್ದಾರಿ ಸರ್ಕಾರದ ಕಾರ್ಯವನ್ನು ಗುರುತಿಸುತ್ತದೆ. ಛಾಯಾಚಿತ್ರಿತ ಪಟ್ಟಿಯ ಹೊಂದಾಣಿಕೆ ಮೊದಲಕ್ಷರಗಳು ಮತ್ತು ಬೆಂಗಳೂರು ರಾಜಕೀಯ ಸಂದರ್ಭದಿಂದ ನಿಖರವಾಗಿದೆ.'),
+  }, 'src-amrit-kc-reddy', 'Government biography; born 4 May 1902, died 27 February 1976', [
+    {districtId:'audit-kolar',kind:'birthplace',locator:'Kyasamballi, Kolar district'},
+    {districtId:'audit-bengaluru-urban',kind:'activity',locator:'Mysore State government and responsible-government political activity'},
+  ])
+
+  enrich('kengal-hanumanthiah', {
+    name:name('Kengal Hanumanthaiah','ಕೆಂಗಲ್ ಹನುಮಂತಯ್ಯ'),
+    roles:['freedom-fighter','administrator','minister'], gender:'man',
+    date:{from:1908,to:1980,era:'CE',precision:'range'}, deathYear:1980,
+    researchNote:name('Constituent Assembly biography and its cited Karnataka institutional biographies establish Hanumanthaiah’s identity and public career; item-level imprisonment evidence remains to be added.','ಸಂವಿಧಾನ ಸಭಾ ಪರಿಚಯ ಮತ್ತು ಅದರಲ್ಲಿ ಉಲ್ಲೇಖಿಸಿದ ಕರ್ನಾಟಕದ ಸಂಸ್ಥಾತ್ಮಕ ಜೀವನಚರಿತ್ರೆಗಳು ಹನುಮಂತಯ್ಯನವರ ಗುರುತು ಮತ್ತು ಸಾರ್ವಜನಿಕ ಜೀವನವನ್ನು ಸ್ಥಾಪಿಸುತ್ತವೆ; ಕಾರಾಗೃಹವಾಸದ ವಸ್ತು-ಮಟ್ಟದ ಸಾಕ್ಷ್ಯ ಇನ್ನೂ ಸೇರಬೇಕು.'),
+  }, 'src-constitution-india-kengal-hanumanthaiah', 'Member biography and bibliography', [
+    {districtId:'audit-ramanagara',kind:'birthplace',locator:'Lakkappanahalli/Kengal regional association; exact historical boundary needs review'},
+    {districtId:'audit-bengaluru-urban',kind:'activity',locator:'Constituent, legislative and ministerial career centred in Bengaluru'},
+  ])
+
+  enrich('h-sreenivasaiah', {
+    roles:['freedom-fighter','journalist','author','social-reformer'], gender:'man', deathYear:2017,
+    researchNote:name('Family-attributed obituary records imprisonment in 1942 and 1947, underground freedom-movement publications, journalism and social service. Birth year remains approximate and is not asserted here.','ಕುಟುಂಬದ ಹೇಳಿಕೆಯ ಶ್ರದ್ಧಾಂಜಲಿ 1942 ಮತ್ತು 1947ರ ಕಾರಾಗೃಹವಾಸ, ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿಯ ಭೂಗತ ಪ್ರಕಟಣೆಗಳು, ಪತ್ರಿಕೋದ್ಯಮ ಮತ್ತು ಸಮಾಜಸೇವೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ಜನ್ಮವರ್ಷ ಅಂದಾಜಾಗಿರುವುದರಿಂದ ಇಲ್ಲಿ ಖಚಿತಪಡಿಸಿಲ್ಲ.'),
+  }, 'src-tni-h-sreenivasaiah-2017', 'Obituary, 7 April 2017; imprisonment in 1942 and 1947', [
+    {districtId:'audit-bengaluru-urban',kind:'activity',locator:'Bengaluru freedom-movement publications and public-history work'},
+    {districtId:'audit-bengaluru-urban',kind:'imprisonment',locator:'Imprisoned in 1942 and 1947; prison and file locators remain unresolved'},
+  ])
+
+  enrich('vs-krishna-iyer', {}, 'src-toi-vs-krishna-iyer-2011', 'Obituary: veteran freedom fighter, Bengaluru mayor, minister and MP')
+
+  enrich('chinnakannu', {
+    gender:'man', occupation:name('Labourer','ಕಾರ್ಮಿಕ'),
+    researchNote:name('The Government of India dictionary identifies Chinnakannu as Bengaluru-born, a labour participant in the 1942 Quit India movement, and records that his body was recovered in the V.O.P. Factory compound. The dictionary’s underlying archival abbreviation SSS, II still needs expansion and checking.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ಚಿನ್ನಕಣ್ಣುವನ್ನು ಬೆಂಗಳೂರಿನಲ್ಲಿ ಜನಿಸಿದ ಕಾರ್ಮಿಕ, 1942ರ ಭಾರತ ಬಿಟ್ಟು ತೊಲಗಿ ಚಳವಳಿಯ ಭಾಗವಹಿಸಿದವರು ಎಂದು ಗುರುತಿಸಿ, ಅವರ ಶವ ವಿ.ಒ.ಪಿ. ಕಾರ್ಖಾನೆ ಆವರಣದಲ್ಲಿ ದೊರೆತುದನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ನಿಘಂಟಿನ ಮೂಲ ಆರ್ಕೈವ್ ಸಂಕ್ಷೇಪ SSS, II ಅನ್ನು ಇನ್ನೂ ವಿಸ್ತರಿಸಿ ಪರಿಶೀಲಿಸಬೇಕು.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Chinnakannu”, printed p. 39; archival reference SSS, II', [
+    {districtId:'audit-bengaluru-urban',kind:'birthplace',locator:'Born in Bangalore'},
+    {districtId:'audit-bengaluru-urban',kind:'activity',locator:'Quit India labour strike and public meetings, 1942'},
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Body recovered in V.O.P. Factory Compound, Bangalore, 1942'},
+  ])
+
+  enrich('appayya', {
+    gender:'man', ageAtDeath:16, martyrdomDate:'1942-08-17',
+    researchNote:name('The Government of India dictionary records Appayya as a Bengaluru teenager who joined railway-station picketing on 17 August 1942 and was killed after police firing. The Karnataka Gazetteer summary independently lists an Appaiah, aged 16, among the city’s 1942 martyrs.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ಅಪ್ಪಯ್ಯನನ್ನು 17 ಆಗಸ್ಟ್ 1942ರಂದು ರೈಲು ನಿಲ್ದಾಣದ ಪಿಕೆಟಿಂಗ್‌ನಲ್ಲಿ ಪಾಲ್ಗೊಂಡು ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯಲ್ಲಿ ಮೃತಪಟ್ಟ ಬೆಂಗಳೂರು ಕಿಶೋರ ಎಂದು ದಾಖಲಿಸುತ್ತದೆ. ಕರ್ನಾಟಕ ಗೆಜೆಟಿಯರ್ ಸಾರಾಂಶವೂ 16 ವರ್ಷದ ಅಪ್ಪಯ್ಯನನ್ನು ನಗರದ 1942ರ ಹುತಾತ್ಮರಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Appayya”, printed p. 15; railway-station picketing, 17 August 1942; KQIC p. 52', [
+    {districtId:'audit-bengaluru-urban',kind:'activity',locator:'Railway-station picketing, 17 August 1942'},
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Killed following police firing during Quit India picketing'},
+  ])
+
+  for (const [slug, ageAtDeath, locator, aliases] of [
+    ['thippaiah-1942',null,'Named among those killed in the 1942 City Post Office/Balepet/Cottonpet police firings',['Tippaiah']],
+    ['ponnaswami',16,'Named among those killed in the 1942 City Post Office/Balepet/Cottonpet police firings',['Ponnuswamy','Ponnaswamy']],
+    ['subhasing-ramsing',25,'Named among those killed in the 1942 City Post Office/Balepet/Cottonpet police firings',['Subbasing Ramasingh','Subash Singh Ram Singh']],
+    ['thimmanna-das',null,'Killed in a separate 1942 firing near Mysore Bank Square',[]],
+  ]) enrich(slug, { ageAtDeath:ageAtDeath || undefined, aliases }, 'src-bangalore-first-bengaluru-1942-martyrs', locator, [
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator},
+  ])
+
+  for (const slug of ['thippaiah-1942','ponnaswami','subhasing-ramsing']) {
+    const person=personFor(slug)
+    if(person)person.martyrdomDate='1942-08-17'
+  }
+  const thimmanna=personFor('thimmanna-das')
+  if(thimmanna)thimmanna.martyrdomDate='1942-08-16'
+  for (const slug of ['appayya','thippaiah-1942','ponnaswami','subhasing-ramsing','thimmanna-das']) {
+    addPersonCitation(personFor(slug),'src-bangalore-first-mysore-bank-martyrs','Historian S. K. Aruni chronology of Bengaluru police actions, 16–18 August 1942')
+  }
+
+  enrich('abdul-razak', {
+    gender:'man', martyrdomDate:'1921-11-18', deathYear:1921,
+    researchNote:name('The Government of India dictionary records Abdul Razak as Bengaluru-born and killed after police firing on the 18 November 1921 Cantonment protest connected with the Prince of Wales visit. Its cited SSS volume and page remain the next archival check.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ಅಬ್ದುಲ್ ರಜಾಕ್ ಅವರನ್ನು ಬೆಂಗಳೂರಿನಲ್ಲಿ ಜನಿಸಿದವರು ಮತ್ತು ವೇಲ್ಸ್ ರಾಜಕುಮಾರನ ಭೇಟಿಗೆ ಸಂಬಂಧಿಸಿದ 18 ನವೆಂಬರ್ 1921ರ ಕಂಟೋನ್ಮೆಂಟ್ ಪ್ರತಿಭಟನೆಯಲ್ಲಿ ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯ ನಂತರ ಮೃತಪಟ್ಟವರು ಎಂದು ದಾಖಲಿಸುತ್ತದೆ. ಅದು ಉಲ್ಲೇಖಿಸಿದ SSS ಸಂಪುಟ ಮತ್ತು ಪುಟ ಮುಂದಿನ ಆರ್ಕೈವ್ ಪರಿಶೀಲನೆಯಾಗಿದೆ.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Abdul Razak”, printed pp. 2–3; SSS II, p. 31', [
+    {districtId:'audit-bengaluru-urban',kind:'birthplace',locator:'Born in Bangalore'},
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Cantonment protest police firing, 18 November 1921'},
+  ])
+
+  enrich('dastagir-sab', {
+    gender:'man', martyrdomDate:'1921-11-18', deathYear:1921,
+    researchNote:name('The Government of India dictionary records Dastagir Sab as Bengaluru-born and killed after police firing on the Cantonment protest of 18 November 1921. The abbreviated SSS reference needs resolution against the underlying source series.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ದಸ್ತಗೀರ್ ಸಾಬ್ ಅವರನ್ನು ಬೆಂಗಳೂರಿನಲ್ಲಿ ಜನಿಸಿದವರು ಮತ್ತು 18 ನವೆಂಬರ್ 1921ರ ಕಂಟೋನ್ಮೆಂಟ್ ಪ್ರತಿಭಟನೆಯಲ್ಲಿ ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯ ನಂತರ ಮೃತಪಟ್ಟವರು ಎಂದು ದಾಖಲಿಸುತ್ತದೆ. ಸಂಕ್ಷಿಪ್ತ SSS ಉಲ್ಲೇಖವನ್ನು ಮೂಲ ಆಕರ ಸರಣಿಯೊಂದಿಗೆ ಪರಿಶೀಲಿಸಬೇಕು.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Dastagir Sab”, printed pp. 44–45; SSS reference', [
+    {districtId:'audit-bengaluru-urban',kind:'birthplace',locator:'Born in Bangalore'},
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Cantonment protest police firing, 18 November 1921'},
+  ])
+
+  enrich('annapayya', {
+    name:name('Annayyappa (display: Annapayya)','ಅನ್ನಯ್ಯಪ್ಪ (ಪ್ರದರ್ಶನದಲ್ಲಿ: ಅನ್ನಪಯ್ಯ)'), aliases:['Annapayya'], gender:'man', martyrdomDate:'1937-10-25', deathYear:1937,
+    researchNote:name('The photographed “Annapayya, d. 1937” is a strong but still reviewable spelling match to the dictionary’s Annayyappa, killed in the 25 October 1937 Mysore Bank-area police firing. The Secret Files and Mysore political-history references cited by the dictionary should confirm the identity.','ಛಾಯಾಚಿತ್ರಿತ “ಅನ್ನಪಯ್ಯ, ಮೃ. 1937” ಹೆಸರು, 25 ಅಕ್ಟೋಬರ್ 1937ರ ಮೈಸೂರು ಬ್ಯಾಂಕ್ ಪ್ರದೇಶದ ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯಲ್ಲಿ ಮೃತಪಟ್ಟ ನಿಘಂಟಿನ ಅನ್ನಯ್ಯಪ್ಪನೊಂದಿಗೆ ಬಲವಾದರೂ ಇನ್ನೂ ಪರಿಶೀಲಿಸಬೇಕಾದ ಕಾಗುಣಿತ ಹೊಂದಾಣಿಕೆಯಾಗಿದೆ. ನಿಘಂಟು ಉಲ್ಲೇಖಿಸಿದ ಸೀಕ್ರೆಟ್ ಫೈಲ್ಸ್ ಮತ್ತು ಮೈಸೂರು ರಾಜಕೀಯ ಇತಿಹಾಸ ಆಕರಗಳು ಗುರುತನ್ನು ದೃಢಪಡಿಸಬೇಕು.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Annayyappa”, printed pp. 13–14; S-36 Secret Files, Special Branch Abstract 44/37', [
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Mysore Bank-area police firing, 25 October 1937'},
+  ])
+
+  enrich('srinivas-1942', {
+    gender:'man', ageAtDeath:16, martyrdomDate:'1942-08-17', deathYear:1942,
+    researchNote:name('The Government of India dictionary records Shrinivas as a 16-year-old Bengaluru resident killed by police while participating in railway stoppages during the Quit India movement. The photographed display spells the name Srinivas.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ಶ್ರೀನಿವಾಸರನ್ನು ಭಾರತ ಬಿಟ್ಟು ತೊಲಗಿ ಚಳವಳಿಯಲ್ಲಿ ರೈಲು ತಡೆಗಳಲ್ಲಿ ಪಾಲ್ಗೊಂಡಾಗ ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯಲ್ಲಿ ಮೃತಪಟ್ಟ 16 ವರ್ಷದ ಬೆಂಗಳೂರು ನಿವಾಸಿ ಎಂದು ದಾಖಲಿಸುತ್ತದೆ. ಛಾಯಾಚಿತ್ರಿತ ಪ್ರದರ್ಶನದಲ್ಲಿ ಹೆಸರನ್ನು Srinivas ಎಂದು ಬರೆಯಲಾಗಿದೆ.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Shrinivas”, printed p. 220; KQIC p. 52', [
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Railway-stoppage police firing, 17 August 1942'},
+  ])
+
+  for (const [slug, locator, note] of [
+    ['ponnaswami','Entry “Ponnaswami”, printed p. 191; KQIC p. 52','Age 16; railway picketing; killed 17 August 1942'],
+    ['subhasing-ramsing','Entry “Subhasing Ramsing”, printed p. 223; KQIC p. 52','Age 25; railway picketing; killed 17 August 1942'],
+    ['thimmanna-das','Entry “Thimmanna Das”, printed pp. 235–236; PMRA and PMLC','Born at Nagarathpet; killed at Mysore Bank Circle on 16 August 1942'],
+    ['thippaiah-1942','Entry “Thippaiah”, printed p. 236; PMRA and PMLC','Born in Bangalore; killed in a city procession firing on 17 August 1942'],
+  ]) {
+    addPersonCitation(personFor(slug),'src-india-culture-dictionary-martyrs-v5',`${locator}; ${note}`)
+  }
+  enrich('tippayya-1942', {
+    gender:'man', ageAtDeath:15, martyrdomDate:'1942-08-17', deathYear:1942,
+    researchNote:name('The Government of India dictionary treats Tippayya as a separate 15-year-old Bengaluru resident killed during railway-stoppage picketing on 17 August 1942. This should not be silently merged with the separately listed Thippaiah.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ತಿಪ್ಪಯ್ಯನನ್ನು 17 ಆಗಸ್ಟ್ 1942ರ ರೈಲು ತಡೆ ಪಿಕೆಟಿಂಗ್‌ನಲ್ಲಿ ಮೃತಪಟ್ಟ 15 ವರ್ಷದ ಪ್ರತ್ಯೇಕ ಬೆಂಗಳೂರು ನಿವಾಸಿಯಾಗಿ ದಾಖಲಿಸುತ್ತದೆ. ಪ್ರತ್ಯೇಕವಾಗಿ ಪಟ್ಟಿ ಮಾಡಿದ Thippaiah ಅವರೊಂದಿಗೆ ಇದನ್ನು ಮೌನವಾಗಿ ವಿಲೀನಗೊಳಿಸಬಾರದು.'),
+  }, 'src-india-culture-dictionary-martyrs-v5', 'Entry “Tippayya”, printed p. 238; KQIC p. 52', [
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Railway-stoppage police firing, 17 August 1942'},
+  ])
+
+  enrich('gundappa-1937', {
+    aliases:['Gundappa of Cubbonpet'],
+    researchNote:name('A public-history account identifies a Gundappa, possibly of Cubbonpet, as killed in the 1937 Banappa Park firing. The photographed display independently gives “Gundappa, d. 1937”; the tentative identity still requires the memorial inscription or gazetteer page.','ಸಾರ್ವಜನಿಕ ಇತಿಹಾಸದ ವರದಿ 1937ರ ಬಾಣಪ್ಪ ಪಾರ್ಕ್ ಗುಂಡಿನ ದಾಳಿಯಲ್ಲಿ ಮೃತಪಟ್ಟ, ಬಹುಶಃ ಕಬ್ಬನ್‌ಪೇಟೆಯ ಗುಂಡಪ್ಪನನ್ನು ಗುರುತಿಸುತ್ತದೆ. ಛಾಯಾಚಿತ್ರಿತ ಪ್ರದರ್ಶನವೂ “ಗುಂಡಪ್ಪ, ಮೃ. 1937” ಎಂದು ನೀಡುತ್ತದೆ; ತಾತ್ಕಾಲಿಕ ಗುರುತಿಗೆ ಸ್ಮಾರಕ ಶಾಸನ ಅಥವಾ ಗೆಜೆಟಿಯರ್ ಪುಟ ಇನ್ನೂ ಅಗತ್ಯ.'),
+  }, 'src-indian-express-bengaluru-freedom-memory-2024', 'Banappa Park firing; residence stated as possible Cubbonpet', [
+    {districtId:'audit-bengaluru-urban',kind:'martyrdom',locator:'Banappa Park firing, 1937; exact identity remains provisional'},
+  ])
+  addPersonCitation(personFor('gundappa-1937'),'src-india-culture-dictionary-martyrs-v5','Entry “Gundappa”, printed pp. 63–64; killed near Mysore Bank on 25 October 1937; S-36 Secret Files, Special Branch Abstract 44/37')
+
+  enrich('prahalada-setty', {
+    aliases:['Prahlad Shetty'],
+    researchNote:name('The Government of India dictionary says Prahalladha Setty died in police firing on 16 August 1942, while reported H. S. Doreswamy testimony says he died after incarceration in Central Jail. This material conflict is intentionally retained for reviewer resolution against the memorial, prison register, PMRA and PMLC.','ಭಾರತ ಸರ್ಕಾರದ ನಿಘಂಟು ಪ್ರಹ್ಲಾದ ಶೆಟ್ಟಿ 16 ಆಗಸ್ಟ್ 1942ರ ಪೊಲೀಸ್ ಗುಂಡಿನ ದಾಳಿಯಲ್ಲಿ ಮೃತಪಟ್ಟರು ಎಂದು ಹೇಳುತ್ತದೆ; ಹೆಚ್. ಎಸ್. ದೊರೆಸ್ವಾಮಿಯವರ ವರದಿಯಾದ ಸಾಕ್ಷ್ಯ ಅವರು ಕೇಂದ್ರ ಕಾರಾಗೃಹದಲ್ಲಿ ಸೆರೆವಾಸದ ನಂತರ ಮೃತಪಟ್ಟರು ಎಂದು ಹೇಳುತ್ತದೆ. ಸ್ಮಾರಕ, ಕಾರಾಗೃಹ ನೋಂದಣಿ, PMRA ಮತ್ತು PMLC ಆಧಾರಗಳಿಂದ ಪರಿಶೀಲಕರು ಬಗೆಹರಿಸುವಂತೆ ಈ ಮೂಲಭೂತ ವಿರೋಧವನ್ನು ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಉಳಿಸಲಾಗಿದೆ.'),
+  }, 'src-indian-express-bengaluru-freedom-memory-2024', 'Bengaluru memorial; circumstances of death explicitly unresolved')
+  addPersonCitation(personFor('prahalada-setty'),'src-india-culture-dictionary-martyrs-v5','Entry “Prahalladha Setty”, printed p. 194; dictionary says death in police firing on 16 August 1942; PMRA and PMLC')
+  addPersonCitation(personFor('prahalada-setty'),'src-bangalore-first-mysore-bank-martyrs','Named on memorial plaque; H. S. Doreswamy testimony reports incarceration and death in Central Jail')
+  addDistrictAssociation(personFor('prahalada-setty'),'audit-bengaluru-urban','imprisonment','src-bangalore-first-mysore-bank-martyrs','Central Jail, Bengaluru; prison register locator unresolved')
+  addDistrictAssociation(personFor('prahalada-setty'),'audit-bengaluru-urban','martyrdom','src-bangalore-first-mysore-bank-martyrs','Memorialised at Mysore Bank Circle; exact date and circumstances require review')
 }
