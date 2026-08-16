@@ -1,4 +1,5 @@
-.trail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;padding:0 0 3rem}
+.app-shell>main.trail-page{display:block;height:auto;min-height:calc(100vh - 142px)}
+.trail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;padding:0 clamp(16px,4vw,48px) 3rem}
 .trail-card{text-align:left;background:var(--card,#fff);border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px;padding:1.25rem;cursor:pointer;display:flex;flex-direction:column;gap:.35rem;transition:box-shadow .15s ease,transform .15s ease;color:inherit}
 .trail-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.12);transform:translateY(-2px)}
 .trail-card h3{margin:0;font-size:1.15rem}
