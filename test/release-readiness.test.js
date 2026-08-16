@@ -138,7 +138,7 @@ test('freedom movement has a dedicated map, timeline and evidence handoff', () =
   assert.match(appSource,/\['freedom',locale==='kn'\?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'\]/, 'freedom movement must be visible in primary navigation')
   assert.match(freedomSource,/researchInput\?\.sourceCollection==='martyrCandidates'/, 'the page must reuse permanent event projections')
   assert.match(freedomSource,/className="freedom-map/, 'the page must expose a dedicated map')
-  assert.match(freedomSource,/className="freedom-timeline"/, 'the page must expose a chronological timeline')
+  assert.match(freedomSource,/className="freedom-list"/, 'the page must expose a chronological records list')
   assert.match(freedomSource,/contributeType','martyrCandidate'/, 'review leads must hand off to the moderated contribution workflow')
   assert.match(freedomSource,/location.*district\/city-centre|district\/city-centre leads/, 'provisional map locations must be explained')
   assert.match(freedomSource,/initialParams\.get\('freedomDistrict'\)/, 'district-level freedom views must be shareable')
