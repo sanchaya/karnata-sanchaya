@@ -141,9 +141,8 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
     ],
     freedom:[
       tourStep('.freedom-filters','ಹುಡುಕಾಟ ಮತ್ತು ಶೋಧಕಗಳು · ವ್ಯಕ್ತಿ, ಜಿಲ್ಲೆ ಅಥವಾ ಘಟನೆ ಆಯ್ಕೆಮಾಡಿ','Search and filter freedom-movement records by person, district, action and review state.'),
-      tourStep('.freedom-map','ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ ಭೂಪಟ · ಸ್ಥಳ ಸುಳಿವನ್ನು ಆಯ್ಕೆಮಾಡಿ','Select a provisional map point to connect a person, event window and source locator.'),
-      tourStep('.freedom-list','ಘಟನೆ ಪಟ್ಟಿ · ಪರಿಶೀಲನಾ ದಾಖಲೆಯನ್ನು ತೆರೆಯಿರಿ','Open a record to inspect its source, review state and evidence still required.'),
-      tourStep('.freedom-timeline','ಕಾಲರೇಖೆ · ಕೀಬೋರ್ಡ್‌ನಿಂದಲೂ ಸಂಚರಿಸಿ','Traverse source-backed event leads chronologically with the timeline or arrow keys.'),
+      tourStep('.freedom-map','ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ ಭೂಪಟ · ಸ್ಥಳ ಸುಳಿವನ್ನು ಆಯ್ಕೆಮಾಡಿ','Select a map point to connect a freedom fighter, event window and source locator.'),
+      tourStep('.freedom-list','ಹೋರಾಟಗಾರರ ಪಟ್ಟಿ · ಪರಿಶೀಲನಾ ದಾಖಲೆಯನ್ನು ತೆರೆಯಿರಿ','Browse all freedom fighters and open a record to inspect its source, review state and evidence still required; arrow keys also traverse the list.'),
     ],
     people:[
       tourStep('.people-filters','ವ್ಯಕ್ತಿ ಶೋಧಕಗಳು · ಹೆಸರು, ಪಾತ್ರ ಮತ್ತು ಕಾಲ ಆಯ್ಕೆಮಾಡಿ','Search by bilingual name and filter people by role, polity, century, district, gender record and review status.'),
