@@ -10,15 +10,19 @@ test('the complete installation seed includes all Wikimedia review candidates',(
   const dataset=repositoryDataset()
   assert.equal(dataset.peopleCandidates.length,905)
   assert.equal(dataset.peopleCandidateMeta.candidateCount,905)
+  assert.equal(dataset.martyrCandidates.length,269)
+  assert.equal(dataset.martyrCandidateMeta.candidateCount,269)
 })
 
 test('server-side seed synchronization preserves existing MariaDB records',()=>{
   const dataset=repositoryDataset()
   dataset.people[0].name.en='MariaDB edit'
   dataset.peopleCandidates=[]
+  dataset.martyrCandidates=[]
   const merged=mergeRepositorySeed(dataset)
   assert.equal(merged.dataset.people[0].name.en,'MariaDB edit')
   assert.equal(merged.dataset.peopleCandidates.length,905)
+  assert.equal(merged.dataset.martyrCandidates.length,269)
 })
 
 test('legacy MariaDB snapshots receive every current collection as an array',()=>{
@@ -29,6 +33,7 @@ test('legacy MariaDB snapshots receive every current collection as an array',()=
   assert.ok(Array.isArray(normalized.heritageInventoryLeads))
   assert.ok(Array.isArray(normalized.districtHistoryResearch))
   assert.ok(Array.isArray(normalized.politicalRelations))
+  assert.ok(Array.isArray(normalized.martyrCandidates))
   assert.deepEqual(normalized.sources,[{id:'src-legacy'}])
 })
 
@@ -45,7 +50,11 @@ test('research records and assignments have no browser persistence path',async()
     assert.doesNotMatch(value,/localStorage\.|sessionStorage\.|indexedDB\s*\(/,`${name} must not persist research data in the browser`)
   }
   assert.match(people,/atlasData\.peopleCandidates/)
+  assert.match(people,/atlasData\.martyrCandidates/)
   assert.doesNotMatch(people,/wikimedia-people-candidates\.json/)
+  assert.match(admin,/sourceReviewTitle:'Reference review register'/)
+  assert.match(admin,/collection==='sources'\?t\.newSource:t\.new/)
+  assert.match(admin,/Save MariaDB revision/)
 })
 
 test('live install and update scripts synchronize the MariaDB dataset',async()=>{

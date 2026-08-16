@@ -4,7 +4,40 @@ import peopleCandidateCorpus from './seeds/wikimedia-people-candidates.json' wit
 
 const clone=value=>JSON.parse(JSON.stringify(value))
 export const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
-const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const ADDITIVE_ARRAY_FIELDS=new Set(['citations','alternateUrls','aliases','roles'])
+
+// Repository research passes may add evidence to records that already exist in
+// MariaDB. Add missing fields and provenance without replacing reviewer-edited
+// scalar values. District associations are merged by claim identity so a new
+// citation does not create a duplicate district tag.
+function mergeRepositoryAdditions(current,seed,key=''){
+  if(Array.isArray(current)&&Array.isArray(seed)){
+    if(key==='districtAssociations'){
+      let changed=false
+      for(const candidate of seed){
+        const match=current.find(item=>item?.districtId===candidate?.districtId&&item?.kind===candidate?.kind)
+        if(match)changed=mergeRepositoryAdditions(match,candidate,key)||changed
+        else{current.push(clone(candidate));changed=true}
+      }
+      return changed
+    }
+    if(!ADDITIVE_ARRAY_FIELDS.has(key))return false
+    let changed=false
+    for(const candidate of seed){
+      const signature=JSON.stringify(candidate)
+      if(!current.some(item=>JSON.stringify(item)===signature)){current.push(clone(candidate));changed=true}
+    }
+    return changed
+  }
+  if(!current||typeof current!=='object'||Array.isArray(current)||!seed||typeof seed!=='object'||Array.isArray(seed))return false
+  let changed=false
+  for(const [childKey,value] of Object.entries(seed)){
+    if(current[childKey]===undefined||current[childKey]===null){current[childKey]=clone(value);changed=true;continue}
+    changed=mergeRepositoryAdditions(current[childKey],value,childKey)||changed
+  }
+  return changed
+}
 
 // Older MariaDB snapshots can predate collections introduced in later milestones.
 // Normalize those keys before validation so a deploy upgrades the revision instead
@@ -32,6 +65,7 @@ export function mergeRepositorySeed(current){
   if(!current)return {dataset:baseline,added:baseline.peopleCandidates.length,changed:true}
   const dataset=normalizeDatasetCollections(current)
   let added=0
+  let updated=0
   for(const [collection, seedRecords] of Object.entries(baseline)){
     if(!Array.isArray(seedRecords))continue
     const existing=dataset[collection]
@@ -42,13 +76,13 @@ export function mergeRepositorySeed(current){
       continue
     }
     if(!Array.isArray(dataset[collection]))dataset[collection]=records
-    const ids=new Set(records.map(record=>record?.id).filter(Boolean))
-    for(const record of seedRecords)if(record?.id&&!ids.has(record.id)){records.push(clone(record));ids.add(record.id);added+=1}
+    const byId=new Map(records.map(record=>[record?.id,record]).filter(([id])=>Boolean(id)))
+    for(const record of seedRecords)if(record?.id){const existingRecord=byId.get(record.id);if(!existingRecord){records.push(clone(record));byId.set(record.id,record);added+=1}else if(mergeRepositoryAdditions(existingRecord,record))updated+=1}
   }
   if(!dataset.peopleCandidateMeta||dataset.peopleCandidateMeta.candidateCount!==baseline.peopleCandidateMeta.candidateCount)dataset.peopleCandidateMeta=clone(baseline.peopleCandidateMeta)
   dataset.meta={...(dataset.meta||{}),schemaVersion:baseline.meta.schemaVersion}
-  const changed=added>0||JSON.stringify(dataset.peopleCandidateMeta)!==JSON.stringify(current.peopleCandidateMeta)||dataset.meta.schemaVersion!==current.meta?.schemaVersion
-  return {dataset,added,changed}
+  const changed=added>0||updated>0||JSON.stringify(dataset.peopleCandidateMeta)!==JSON.stringify(current.peopleCandidateMeta)||dataset.meta.schemaVersion!==current.meta?.schemaVersion
+  return {dataset,added,updated,changed}
 }
 
 export async function latestDataset(db,{lock=false}={}){

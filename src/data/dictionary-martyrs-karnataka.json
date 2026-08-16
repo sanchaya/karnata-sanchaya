@@ -1,0 +1,3245 @@
+{
+  "meta": {
+    "sourceFile": "martyrs-v5-djvu.txt",
+    "extractedAt": "2026-08-16",
+    "sourceTitle": "Dictionary of Martyrs: India’s Freedom Struggle, Volume 5",
+    "sourceId": "src-india-culture-dictionary-martyrs-v5",
+    "method": "Rule-based OCR entry extraction using Karnataka and historical/current place forms; every name, page, place and relationship remains needs-review against the page image.",
+    "entryCount": 269,
+    "counts": {
+      "karnataka-origin-or-residence": 249,
+      "karnataka-event-connection": 20,
+      "incidental-karnataka-mention": 0
+    }
+  },
+  "records": [
+    {
+      "name": "Abdul Gafhar Chaktayi",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 2,
+      "printedPageTo": 2,
+      "sourceLine": 1032,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": "KQIC, p. 6"
+    },
+    {
+      "name": "Abdul Razak",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 2,
+      "printedPageTo": 2,
+      "sourceLine": 1068,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "SSS, II, p. 31"
+    },
+    {
+      "name": "Aboobacker (Avokar)",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 3,
+      "printedPageTo": 3,
+      "sourceLine": 1121,
+      "districtText": [
+        "Mangalore"
+      ],
+      "archivalReference": "Court Records in Sc. No. 44/1941 (Mangalore); Sc. No. 3/ 1941 (Tellicherry); Sc. No. 11/1941 (Tellichery); Fortnightly Report (Political) for the second half of March 1941, first half of April 1941, and first half of May 1941 NAI; PW, 21 March, 28 March and 11 April 1943, NMML",
+      "historicalConnection": {
+        "years": [
+          1918,
+          1941,
+          1943
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Ambalam Karuppiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 9,
+      "printedPageTo": 9,
+      "sourceLine": 1722,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Ramanathapuram District Jail Slip, Clean Copy No. 267, TNSAC"
+    },
+    {
+      "name": "Anant Sabade",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 9,
+      "printedPageTo": 9,
+      "sourceLine": 1913,
+      "districtText": [],
+      "archivalReference": "WWIM, II, p.278"
+    },
+    {
+      "name": "Annayyappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 13,
+      "printedPageTo": 13,
+      "sourceLine": 2057,
+      "districtText": [
+        "Bangalore",
+        "Mysore"
+      ],
+      "archivalReference": "S-36, Secret Files, Special Branch Abstract No. 44/37, KSAB; KSGI , BRD, p. 108; FAPG, pp. 23-24"
+    },
+    {
+      "name": "Appathan Kuhayamad",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 15,
+      "printedPageTo": 15,
+      "sourceLine": 2220,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. No.813, 22.08.1925; Pub Deptt (G), G.O. (Mis.Series) No.418, 16.05.1933, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1819,
+          1859,
+          1921,
+          1922,
+          1925,
+          1933
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Appayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 15,
+      "printedPageTo": 15,
+      "sourceLine": 2254,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "KQIC, p. 52"
+    },
+    {
+      "name": "Arjun",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 17,
+      "printedPageTo": 17,
+      "sourceLine": 2432,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, L. No. 322/1858, 24 June 1858"
+    },
+    {
+      "name": "Arunachalam Mudaliar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 17,
+      "printedPageTo": 17,
+      "sourceLine": 2472,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. (MS) No. 2146, 10.10.1946; FFPO No. 7907/1974, 22.10.1974; Salem District Jail Slip Office Copy No. 174, TNSAC"
+    },
+    {
+      "name": "Aswathanarayana Setty",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 18,
+      "printedPageTo": 18,
+      "sourceLine": 2554,
+      "districtText": [
+        "Chikkaballapur",
+        "Mysore"
+      ],
+      "archivalReference": "VDECB; SSS, II, p. 490; WWIM, II, pp. 293-94"
+    },
+    {
+      "name": "Awanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 19,
+      "printedPageTo": 19,
+      "sourceLine": 2599,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": "SI1857WI, p. 280; HFMK , 1, pp. 272- 441"
+    },
+    {
+      "name": "B. Ramaswamy",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 19,
+      "printedPageTo": 19,
+      "sourceLine": 2676,
+      "districtText": [
+        "Mysore"
+      ],
+      "archivalReference": "PMRA; PMLC"
+    },
+    {
+      "name": "B. Yellapa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 19,
+      "printedPageTo": 19,
+      "sourceLine": 2706,
+      "districtText": [
+        "Mangalore"
+      ],
+      "archivalReference": "INA Papers, F. No. 1/INA, NAI; ROH, pp. 796-97; WWIM , II, p. 13"
+    },
+    {
+      "name": "Babaji Sovaji Nimbalkar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 19,
+      "printedPageTo": 21,
+      "sourceLine": 2720,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p. 199"
+    },
+    {
+      "name": "Baburao Jadhao (Ptravali Babu Kasheru)",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 21,
+      "printedPageTo": 21,
+      "sourceLine": 2762,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "SSS, II, p. 963; WWIM, II, p. 125"
+    },
+    {
+      "name": "Baiyappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 21,
+      "printedPageTo": 21,
+      "sourceLine": 2783,
+      "districtText": [
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Bala Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 21,
+      "printedPageTo": 21,
+      "sourceLine": 2795,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Bala",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 21,
+      "printedPageTo": 21,
+      "sourceLine": 2806,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No.197, Part- XII, D.D, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Balakristayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 21,
+      "printedPageTo": 22,
+      "sourceLine": 2816,
+      "districtText": [
+        "Bidar"
+      ],
+      "archivalReference": "SSS, II, III; WWIM, III, p.17"
+    },
+    {
+      "name": "Balappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 22,
+      "printedPageTo": 22,
+      "sourceLine": 2835,
+      "districtText": [
+        "Bagalkot",
+        "Belgaum"
+      ],
+      "archivalReference": "SI1857WI, p. 199; WWIM, III, pp.17- 18"
+    },
+    {
+      "name": "Balwant Hari Jabade",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 22,
+      "printedPageTo": 22,
+      "sourceLine": 2848,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "KQIC, p. 207"
+    },
+    {
+      "name": "Bani Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 22,
+      "printedPageTo": 22,
+      "sourceLine": 2885,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "HFMK,1, pp. 272, 440; SI1857WI, p. 279"
+    },
+    {
+      "name": "Bapu",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 22,
+      "printedPageTo": 23,
+      "sourceLine": 2899,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 309/ 1858, 19 June 1858"
+    },
+    {
+      "name": "Baramappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2915,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Barma",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2925,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279;WWIM, III, p. 26"
+    },
+    {
+      "name": "Barmappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2935,
+      "districtText": [],
+      "archivalReference": "HFMK , 1, pp. 272, 440; SI1857WI, p. 279; WWIM, III, p. 26"
+    },
+    {
+      "name": "Basalingappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2946,
+      "districtText": [
+        "Bijapur"
+      ],
+      "archivalReference": "WWIM, III, p. 19"
+    },
+    {
+      "name": "Basappa Sindagi",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2956,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No.197, Part- XII, DD, Vol. No. 30, 12 June 1858, pp. 262-275"
+    },
+    {
+      "name": "Basappa Tambe",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2969,
+      "districtText": [
+        "Dharwad",
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No.197, Part-XII, DD, Vol. No. 30, L. No. 47/1858, 16 June 1858; WWIM, III, p.143"
+    },
+    {
+      "name": "Basappa Yligar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 23,
+      "sourceLine": 2982,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoners No. 18563, CPR No. 3, B. No. 09, 23-05-1939 to 01-04-1940, Hindalga Jail, Belgaum; RSVH, p. 73; WWIM, II, p.350"
+    },
+    {
+      "name": "Basappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 23,
+      "printedPageTo": 24,
+      "sourceLine": 2997,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 309/ 1858, 19 June 1858"
+    },
+    {
+      "name": "Basappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3013,
+      "districtText": [
+        "Davanagere"
+      ],
+      "archivalReference": "KQIC, p. 50"
+    },
+    {
+      "name": "Basappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3024,
+      "districtText": [
+        "Bagalakot",
+        "Dharwad"
+      ],
+      "archivalReference": "SI1857WI, p. 199"
+    },
+    {
+      "name": "Basappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3035,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30,10 June 1858"
+    },
+    {
+      "name": "Basava",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3046,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "HFMK, Vol. 1, pp. 272, 440; SI1857WI, p. 280"
+    },
+    {
+      "name": "Basavanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3058,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272 & 441; SI1857WI, p. 280; WWIM, III, p. 27"
+    },
+    {
+      "name": "Basayya Talari",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3068,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 440; SI1857WI, p. 280; WWIM, III, p. 27"
+    },
+    {
+      "name": "Basayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 24,
+      "sourceLine": 3079,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Basayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 24,
+      "printedPageTo": 25,
+      "sourceLine": 3088,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 440; SI1857WI, p. 279"
+    },
+    {
+      "name": "Bassya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 25,
+      "printedPageTo": 25,
+      "sourceLine": 3105,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    },
+    {
+      "name": "Bavireddi Viyyamma",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 25,
+      "printedPageTo": 25,
+      "sourceLine": 3130,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WWIM, III, p. 19"
+    },
+    {
+      "name": "Bayyanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 25,
+      "printedPageTo": 25,
+      "sourceLine": 3162,
+      "districtText": [
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Beemah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 25,
+      "printedPageTo": 25,
+      "sourceLine": 3175,
+      "districtText": [
+        "Belgaum",
+        "Gadag"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 440; SI1857WI, p. 278"
+    },
+    {
+      "name": "Beemnah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 25,
+      "printedPageTo": 26,
+      "sourceLine": 3185,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 441; SI1857WI, p. 279"
+    },
+    {
+      "name": "Bhaskar Rao Bhave",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 26,
+      "printedPageTo": 26,
+      "sourceLine": 3219,
+      "districtText": [
+        "Belgaum",
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 47/1858,16 June 1858; WWIM, III, p. 22"
+    },
+    {
+      "name": "Bhawani Singh",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 26,
+      "printedPageTo": 27,
+      "sourceLine": 3251,
+      "districtText": [
+        "Chikkaballapur",
+        "Koppal",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB; WWIM, II, pp. 35-36"
+    },
+    {
+      "name": "Bhikajipant Ganesh Gokhale",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 27,
+      "printedPageTo": 27,
+      "sourceLine": 3292,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD,Vol. No. 31, 24 June 1858"
+    },
+    {
+      "name": "Bhim Rao Nadgowda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 27,
+      "printedPageTo": 27,
+      "sourceLine": 3333,
+      "districtText": [
+        "Bellary",
+        "Gadag"
+      ],
+      "archivalReference": "WWIM, III, p. 23"
+    },
+    {
+      "name": "Bhim",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 27,
+      "printedPageTo": 27,
+      "sourceLine": 3351,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Bhima",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 27,
+      "printedPageTo": 28,
+      "sourceLine": 3375,
+      "districtText": [
+        "Koppal"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 440; SI1857WI, p. 280"
+    },
+    {
+      "name": "Bhima",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 28,
+      "printedPageTo": 28,
+      "sourceLine": 3390,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279; WWIM, III, p. 22"
+    },
+    {
+      "name": "Bhimanna Mandagai",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 28,
+      "printedPageTo": 28,
+      "sourceLine": 3401,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p. 199"
+    },
+    {
+      "name": "Bhimanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 28,
+      "printedPageTo": 28,
+      "sourceLine": 3414,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Bhimappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 28,
+      "printedPageTo": 28,
+      "sourceLine": 3424,
+      "districtText": [
+        "Koppal"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 440; SI1857WI, p. 279"
+    },
+    {
+      "name": "Boya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 29,
+      "printedPageTo": 29,
+      "sourceLine": 3481,
+      "districtText": [
+        "Chikkaballapur",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Burmah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 29,
+      "printedPageTo": 29,
+      "sourceLine": 3533,
+      "districtText": [
+        "Belgaum",
+        "Gadag"
+      ],
+      "archivalReference": "HFMK, 1, pp. 272, 440; SI1857WI, p. 278"
+    },
+    {
+      "name": "Chakala",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 31,
+      "printedPageTo": 31,
+      "sourceLine": 3661,
+      "districtText": [
+        "Chikkaballapur",
+        "Mysore"
+      ],
+      "archivalReference": "VDECB; PAR, P.M.R.A., P.M.L.C., C.B.F"
+    },
+    {
+      "name": "Channappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 33,
+      "printedPageTo": 33,
+      "sourceLine": 3866,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    },
+    {
+      "name": "Chenna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 38,
+      "printedPageTo": 38,
+      "sourceLine": 4279,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278; WWIM, III, p. 28"
+    },
+    {
+      "name": "Chhattu Singh Rajput",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 38,
+      "printedPageTo": 38,
+      "sourceLine": 4343,
+      "districtText": [
+        "Bijapur"
+      ],
+      "archivalReference": "WWIM, III, p. 29"
+    },
+    {
+      "name": "Chhotu Singh",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 38,
+      "printedPageTo": 39,
+      "sourceLine": 4353,
+      "districtText": [
+        "Bagalkot"
+      ],
+      "archivalReference": "SI1857WI, p. 72",
+      "historicalConnection": {
+        "years": [
+          1858
+        ],
+        "actions": [
+          "arrest-or-capture",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Chinnakannu",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 39,
+      "printedPageTo": 39,
+      "sourceLine": 4416,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "SSS, II, p. ?"
+    },
+    {
+      "name": "Chinnanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 40,
+      "printedPageTo": 40,
+      "sourceLine": 4461,
+      "districtText": [
+        "Chikkaballapur",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Chinniah",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 40,
+      "printedPageTo": 41,
+      "sourceLine": 4496,
+      "districtText": [
+        "Mangalore"
+      ],
+      "archivalReference": "PA, 27 January 1946",
+      "historicalConnection": {
+        "years": [
+          1942,
+          1946
+        ],
+        "actions": [
+          "arrest-or-capture",
+          "death-or-martyrdom"
+        ]
+      }
+    },
+    {
+      "name": "Chunia Virappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 41,
+      "printedPageTo": 42,
+      "sourceLine": 4638,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Dadanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 42,
+      "printedPageTo": 42,
+      "sourceLine": 4671,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p.199"
+    },
+    {
+      "name": "Dandu Narayana Raju",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 44,
+      "printedPageTo": 44,
+      "sourceLine": 4726,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "",
+      "historicalConnection": {
+        "years": [
+          1920,
+          1921,
+          1923,
+          1924,
+          1925,
+          1926,
+          1928,
+          1929,
+          1930,
+          1931,
+          1932,
+          1933,
+          1934,
+          1937,
+          1940,
+          1941,
+          1942,
+          1944,
+          1947
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Dastagir Sab",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 44,
+      "printedPageTo": 45,
+      "sourceLine": 4802,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "SSS, II, P- 31"
+    },
+    {
+      "name": "Dattu Lakshman Matad",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 45,
+      "printedPageTo": 45,
+      "sourceLine": 4823,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWTM, I, p. 219"
+    },
+    {
+      "name": "Dattu Matad",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 45,
+      "printedPageTo": 45,
+      "sourceLine": 4836,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WW1M, I, p.219"
+    },
+    {
+      "name": "Daud Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 45,
+      "printedPageTo": 45,
+      "sourceLine": 4849,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280; WWIM, III, pp. 31-32"
+    },
+    {
+      "name": "Durga",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 48,
+      "printedPageTo": 48,
+      "sourceLine": 5121,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278; WWIM, III, p. 38"
+    },
+    {
+      "name": "Dyamavva",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 48,
+      "printedPageTo": 48,
+      "sourceLine": 5170,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p. 198"
+    },
+    {
+      "name": "Ella",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 51,
+      "printedPageTo": 51,
+      "sourceLine": 5349,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WW1M, III, p. 39"
+    },
+    {
+      "name": "Eman Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 51,
+      "printedPageTo": 51,
+      "sourceLine": 5375,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278; WWIM, III, p. 39"
+    },
+    {
+      "name": "Fakeer Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 52,
+      "printedPageTo": 52,
+      "sourceLine": 5526,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278; WWIM, III, p. 40"
+    },
+    {
+      "name": "Fakir Mohammad",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 52,
+      "printedPageTo": 52,
+      "sourceLine": 5538,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Fakirappa Bheemappa Torgal",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 52,
+      "printedPageTo": 52,
+      "sourceLine": 5551,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Samyukta Karnataka , 09 April 1939; WWIM, II, pp. 332-33"
+    },
+    {
+      "name": "Faras Khan",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 52,
+      "printedPageTo": 52,
+      "sourceLine": 5570,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "G. Shankarappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 54,
+      "printedPageTo": 54,
+      "sourceLine": 5662,
+      "districtText": [
+        "Shimoga"
+      ],
+      "archivalReference": "WWJM, I, p.332"
+    },
+    {
+      "name": "Sahasrabudhe",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 57,
+      "printedPageTo": 57,
+      "sourceLine": 5811,
+      "districtText": [
+        "Dharwad",
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No.197, Part-XII, DD, Vol. No. 30, F. No. 47/1858, 16 June 1858; WWIM, III, p. 128"
+    },
+    {
+      "name": "Gangubai (Smt.)",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 58,
+      "printedPageTo": 58,
+      "sourceLine": 5879,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "SSS, I, p. 1147"
+    },
+    {
+      "name": "Girianna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 58,
+      "printedPageTo": 58,
+      "sourceLine": 5920,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278; WWIM, III, p. 46"
+    },
+    {
+      "name": "Giriyaappa Jogi",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 58,
+      "printedPageTo": 58,
+      "sourceLine": 5931,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoners No. 18558, CPR No. 3, B. No. 09, 23 Mayl939 to 01 April 1940; RSVH, p. 73"
+    },
+    {
+      "name": "Gograppa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 58,
+      "printedPageTo": 59,
+      "sourceLine": 5945,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Gograppa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 59,
+      "printedPageTo": 59,
+      "sourceLine": 5960,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WWIM, III, p. 47"
+    },
+    {
+      "name": "Gousaab",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 61,
+      "printedPageTo": 61,
+      "sourceLine": 6146,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": "KQIC, p. 6"
+    },
+    {
+      "name": "Govind Dhanagar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 61,
+      "printedPageTo": 61,
+      "sourceLine": 6160,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No.197, Part-XII, DD, Vol. No. 30, 12 June 1858"
+    },
+    {
+      "name": "Parachure",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 61,
+      "printedPageTo": 61,
+      "sourceLine": 6171,
+      "districtText": [
+        "Dharwad",
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 47/ 1858,16 June 1858; WWIM, III, p. 112"
+    },
+    {
+      "name": "Gowramma (Smt.)",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 61,
+      "printedPageTo": 61,
+      "sourceLine": 6311,
+      "districtText": [
+        "Bellary",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, Papers, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Guddu",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 61,
+      "printedPageTo": 63,
+      "sourceLine": 6324,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Gundappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 63,
+      "printedPageTo": 63,
+      "sourceLine": 6363,
+      "districtText": [
+        "Bangalore",
+        "Mysore"
+      ],
+      "archivalReference": "S-36, Secret Files, Special Branch Abstract No. 44/37, KSAB; KSGI, BRD, p. 108; FAPG, pp. 23-24"
+    },
+    {
+      "name": "Gurappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 64,
+      "printedPageTo": 64,
+      "sourceLine": 6454,
+      "districtText": [
+        "Shimoga"
+      ],
+      "archivalReference": "WWIM, I, p. 123"
+    },
+    {
+      "name": "Gurda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 64,
+      "printedPageTo": 64,
+      "sourceLine": 6469,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280; WWIM, III, p. 47"
+    },
+    {
+      "name": "Hamid Sahib",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 64,
+      "printedPageTo": 64,
+      "sourceLine": 6554,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI , p. 279; WWIM , III, p. 50"
+    },
+    {
+      "name": "Hammanana",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 64,
+      "printedPageTo": 66,
+      "sourceLine": 6564,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280; WWIM, III, p. 50"
+    },
+    {
+      "name": "Hanagowda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6581,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Hanamappa Naik",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6591,
+      "districtText": [],
+      "archivalReference": "WWIM, III, p. 50"
+    },
+    {
+      "name": "Hanumanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6603,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Hanumant Ghatage",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6613,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, 24 June 1858"
+    },
+    {
+      "name": "Hanumanta",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6627,
+      "districtText": [
+        "Dharwad",
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 47/ 1858, 16 June 1858; WWIM, III, pp. 50-51"
+    },
+    {
+      "name": "Hanumantappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6648,
+      "districtText": [
+        "Chitradurga",
+        "Davanagere"
+      ],
+      "archivalReference": "KQIC, p. 49; SSS, II, p. 564; WWIM, II, p. 113"
+    },
+    {
+      "name": "Hanumanthappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6661,
+      "districtText": [
+        "Kolar",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Hareah Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6680,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Hayat Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6706,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Hayat Saib",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6718,
+      "districtText": [
+        "Koppal"
+      ],
+      "archivalReference": "SI1857WI, p. 280; HFMK, 1, pp. 272,441; WWIM, III, p. 54"
+    },
+    {
+      "name": "Hereah Saib",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6728,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279; HFMK, 1, pp. 272 & 440"
+    },
+    {
+      "name": "Hiremath Mahalingayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 66,
+      "sourceLine": 6738,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoners No. 18560, CPR No. 3, B. No. 09, 23 Mayl939 to 01 April 1940; RSVH, p. 73; WWIM, II, p. 121"
+    },
+    {
+      "name": "Hiriyappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 66,
+      "printedPageTo": 68,
+      "sourceLine": 6753,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI , p. 279"
+    },
+    {
+      "name": "Hulgia",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 68,
+      "printedPageTo": 68,
+      "sourceLine": 6768,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    },
+    {
+      "name": "Huliyappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 68,
+      "printedPageTo": 68,
+      "sourceLine": 6778,
+      "districtText": [],
+      "archivalReference": "KQIC p. 155"
+    },
+    {
+      "name": "Hunma",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 68,
+      "printedPageTo": 68,
+      "sourceLine": 6790,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Hunnamah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 68,
+      "printedPageTo": 68,
+      "sourceLine": 6802,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Hussun Saib",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 68,
+      "printedPageTo": 68,
+      "sourceLine": 6828,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279; HFMK, 1, pp. 272, 440; WWIM, III, p. 58"
+    },
+    {
+      "name": "Imam Ismail",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 68,
+      "printedPageTo": 68,
+      "sourceLine": 6880,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part- XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Jadagannavar Jadagappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 71,
+      "printedPageTo": 71,
+      "sourceLine": 7085,
+      "districtText": [
+        "Bijapur"
+      ],
+      "archivalReference": "SI1857WI, p.199"
+    },
+    {
+      "name": "Jivan Sahib",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 73,
+      "printedPageTo": 73,
+      "sourceLine": 7215,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279; WWIM, III, p. 67"
+    },
+    {
+      "name": "Junah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 74,
+      "printedPageTo": 74,
+      "sourceLine": 7276,
+      "districtText": [
+        "Raichur"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "K. N. Nagamalliah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 77,
+      "printedPageTo": 77,
+      "sourceLine": 7540,
+      "districtText": [
+        "Kolar",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC Papers, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Kaithakkal Kunhalavi",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 81,
+      "printedPageTo": 81,
+      "sourceLine": 7871,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Law deptt (G), G.O. (Mis. Series) No. 3277, 29.09.1928, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1921,
+          1922,
+          1927
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Kajah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 82,
+      "printedPageTo": 82,
+      "sourceLine": 7934,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    },
+    {
+      "name": "Kallappa Mutnale",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 85,
+      "printedPageTo": 85,
+      "sourceLine": 8207,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWZM, I, p. 243"
+    },
+    {
+      "name": "Kallappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 85,
+      "printedPageTo": 85,
+      "sourceLine": 8219,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, 24 June 1858"
+    },
+    {
+      "name": "Kanchan Gowda Sirnagowda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 87,
+      "printedPageTo": 87,
+      "sourceLine": 8430,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279, WWIM, III, p. 70"
+    },
+    {
+      "name": "Kanchan Gowda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 87,
+      "printedPageTo": 87,
+      "sourceLine": 8445,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Kanhiranthodika Unni Moidin",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 88,
+      "printedPageTo": 88,
+      "sourceLine": 8516,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O.No.875, 27.10.1922, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1921,
+          1922
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Kanniah Padayachi",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 90,
+      "printedPageTo": 91,
+      "sourceLine": 8740,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt (Confd.), G.O. (MS) No. 248, 13.03.1928; South Arcot District Jail Slip Office Copy No. 14, TNSAC"
+    },
+    {
+      "name": "Karka",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 94,
+      "printedPageTo": 94,
+      "sourceLine": 9063,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Karka",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 94,
+      "printedPageTo": 94,
+      "sourceLine": 9072,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Karyanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 96,
+      "printedPageTo": 96,
+      "sourceLine": 9255,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Kashi Rao Nalgowda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 96,
+      "printedPageTo": 96,
+      "sourceLine": 9267,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WW1M, III, p. 105"
+    },
+    {
+      "name": "Kashirao Nemaji Nalwade",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 96,
+      "printedPageTo": 96,
+      "sourceLine": 9275,
+      "districtText": [
+        "Dharwad",
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No.30, E. No. 47/1858, 16 June 1858"
+    },
+    {
+      "name": "Kesava Mudaliar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 99,
+      "printedPageTo": 99,
+      "sourceLine": 9532,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt (G- E), G.O. (MS) No. 767, 08.03.1947, TNSAC"
+    },
+    {
+      "name": "Khandu",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 99,
+      "printedPageTo": 99,
+      "sourceLine": 9571,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858, MSM"
+    },
+    {
+      "name": "Kummara",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 113,
+      "printedPageTo": 113,
+      "sourceLine": 10851,
+      "districtText": [
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Kunhiraman Adiyodi",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 113,
+      "printedPageTo": 113,
+      "sourceLine": 10939,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "AICC Papers, F. No. G-l(i)/ 1931, NMML"
+    },
+    {
+      "name": "Lakshmana",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 119,
+      "printedPageTo": 119,
+      "sourceLine": 11492,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Latchma",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 119,
+      "printedPageTo": 119,
+      "sourceLine": 11505,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WW1M, III, p. 82"
+    },
+    {
+      "name": "Laxman Janardan",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 119,
+      "printedPageTo": 119,
+      "sourceLine": 11514,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Laxmana",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 119,
+      "printedPageTo": 121,
+      "sourceLine": 11524,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Laxminarayana Shetty alias Laxmaiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 121,
+      "printedPageTo": 121,
+      "sourceLine": 11541,
+      "districtText": [
+        "Kolar",
+        "Mysore"
+      ],
+      "archivalReference": "SSS, II, p. 490; WWIM, II, p. 302"
+    },
+    {
+      "name": "Linga",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 121,
+      "printedPageTo": 121,
+      "sourceLine": 11556,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Linga",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 121,
+      "printedPageTo": 121,
+      "sourceLine": 11567,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Linga",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 121,
+      "printedPageTo": 121,
+      "sourceLine": 11579,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Linga",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 121,
+      "printedPageTo": 121,
+      "sourceLine": 11590,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 309/1858, 19 June 1858"
+    },
+    {
+      "name": "Lingappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 121,
+      "printedPageTo": 121,
+      "sourceLine": 11602,
+      "districtText": [
+        "Davanagere"
+      ],
+      "archivalReference": "SSS, II, p. 125"
+    },
+    {
+      "name": "Lingiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 122,
+      "printedPageTo": 122,
+      "sourceLine": 11640,
+      "districtText": [
+        "Mandya",
+        "Mysore"
+      ],
+      "archivalReference": "WWZM, II, p. 173"
+    },
+    {
+      "name": "Madar Dyamanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 126,
+      "printedPageTo": 126,
+      "sourceLine": 12006,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p. 199"
+    },
+    {
+      "name": "Madarangah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 126,
+      "printedPageTo": 127,
+      "sourceLine": 12016,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Madathil Marakar",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 127,
+      "printedPageTo": 127,
+      "sourceLine": 12031,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. No. 875, 27.10.1922, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1921
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Mahadev Manjare",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 128,
+      "printedPageTo": 128,
+      "sourceLine": 12131,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWJM, I, p. 217"
+    },
+    {
+      "name": "Mahipal Singh",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 128,
+      "printedPageTo": 128,
+      "sourceLine": 12140,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "SI1857WI, p. 81"
+    },
+    {
+      "name": "Mailar Mahadevappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 128,
+      "printedPageTo": 128,
+      "sourceLine": 12184,
+      "districtText": [
+        "Haveri"
+      ],
+      "archivalReference": "SSS, I, p. 804; MMMM, p.133; WWIM, I, p. 203"
+    },
+    {
+      "name": "Malikasaab",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 129,
+      "printedPageTo": 129,
+      "sourceLine": 12252,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": ""
+    },
+    {
+      "name": "Mallanna Reddagar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 129,
+      "printedPageTo": 129,
+      "sourceLine": 12269,
+      "districtText": [
+        "Chikkaballapur",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC Papers, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Mallappa Chougule",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 129,
+      "printedPageTo": 129,
+      "sourceLine": 12282,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WW1M, I, pp. 73-74; SSS, I."
+    },
+    {
+      "name": "Mallappa Ittannavar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 129,
+      "printedPageTo": 129,
+      "sourceLine": 12292,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WW/M, II, p. 124"
+    },
+    {
+      "name": "Mallappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 129,
+      "printedPageTo": 130,
+      "sourceLine": 12302,
+      "districtText": [
+        "Shimoga"
+      ],
+      "archivalReference": "WWfM, I, p. 208"
+    },
+    {
+      "name": "Mallashetty Akki",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 130,
+      "printedPageTo": 130,
+      "sourceLine": 12321,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoners No. 18563, CPR No. 3, B. No. 09, 23 May 1939 to 1 April 1950, Hindalga Jail Belgaum; RSVH, p. 73; WWIM, II, p. 5"
+    },
+    {
+      "name": "Malliah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 130,
+      "printedPageTo": 130,
+      "sourceLine": 12356,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Manjalamparamban Pokar",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 133,
+      "printedPageTo": 134,
+      "sourceLine": 12675,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Low Deptt (G), G.O. (Mis.Series) No.3277, 29.09.1928, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1921,
+          1922,
+          1928
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Maruti Agalawe",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 137,
+      "printedPageTo": 138,
+      "sourceLine": 13049,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWIM, I, p. 4"
+    },
+    {
+      "name": "Mohammed Hussain (Munshi)",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 142,
+      "printedPageTo": 142,
+      "sourceLine": 13483,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Mutiny Records, Poll Deptt, Vol. Nos. 30-31 (1857), MSAM; SI1857WI, pp. 64-7",
+      "historicalConnection": {
+        "years": [
+          1857
+        ],
+        "actions": [
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Mohiuddin",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 142,
+      "printedPageTo": 142,
+      "sourceLine": 13507,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 12 June 1858"
+    },
+    {
+      "name": "Mudallaner",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 145,
+      "printedPageTo": 145,
+      "sourceLine": 13730,
+      "districtText": [
+        "Koppal"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Mudigouda Mudigondar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 145,
+      "printedPageTo": 145,
+      "sourceLine": 13742,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWIM, II, p. 204"
+    },
+    {
+      "name": "Mulla (II)",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 146,
+      "printedPageTo": 146,
+      "sourceLine": 13837,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    },
+    {
+      "name": "Mulla",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 146,
+      "printedPageTo": 146,
+      "sourceLine": 13847,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Mundath Saiyid Ali",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 147,
+      "printedPageTo": 147,
+      "sourceLine": 13904,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. (Ord.Series) No.318, 07.05.1920, TNSAC"
+    },
+    {
+      "name": "N. M. Sundararaman",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 153,
+      "printedPageTo": 153,
+      "sourceLine": 14447,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. (MS) No. 2146, 10.10.1946; Pub Deptt (G-E), G.O. (MS) No.2254, 21.07.1947, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1942
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Nabi Badasab Pinjar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 153,
+      "printedPageTo": 153,
+      "sourceLine": 14469,
+      "districtText": [],
+      "archivalReference": "WWIM, II, pp. 246-47"
+    },
+    {
+      "name": "Nagappa Hallur",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 155,
+      "printedPageTo": 155,
+      "sourceLine": 14662,
+      "districtText": [
+        "Chitradurga"
+      ],
+      "archivalReference": "SSS, II, p. 564; WWIM, II, p. 112"
+    },
+    {
+      "name": "Nagappa Sullad",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 155,
+      "printedPageTo": 156,
+      "sourceLine": 14673,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoner No. 18565, CPR No. 3, B. No. 09, 23 Mayl939 to 01 April 1940, Hindalga Jail, Belgaum; RSVH, p. 73"
+    },
+    {
+      "name": "Nagappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 156,
+      "printedPageTo": 156,
+      "sourceLine": 14693,
+      "districtText": [
+        "Davanagere"
+      ],
+      "archivalReference": "SSS, II, p. 125"
+    },
+    {
+      "name": "Nallavenkataraya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 156,
+      "printedPageTo": 156,
+      "sourceLine": 14727,
+      "districtText": [
+        "Kolar",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC, F. No. 115, NMML; BC, 27 April 1938"
+    },
+    {
+      "name": "Narasappa Shannbhog",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 157,
+      "printedPageTo": 157,
+      "sourceLine": 14787,
+      "districtText": [
+        "Kolar",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC Papers, F. No. 115, NMML; VDECB; WWIM, II, p. 297"
+    },
+    {
+      "name": "Naicken",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 157,
+      "printedPageTo": 157,
+      "sourceLine": 14805,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt G.O. (MS) No. 2550, 14.08.1947, TNSAC, contains correct details and in some records he is referred to, wrongly, as Naidu Narasimha with incorrect address",
+      "historicalConnection": {
+        "years": [
+          1890,
+          1930,
+          1942,
+          1943
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Naraya Doni",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 157,
+      "printedPageTo": 157,
+      "sourceLine": 14836,
+      "districtText": [],
+      "archivalReference": "WWIM, I, p. 250; WWIM, II, p. 84"
+    },
+    {
+      "name": "Narayana Reddagar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 158,
+      "printedPageTo": 158,
+      "sourceLine": 14885,
+      "districtText": [
+        "Chikkaballapur",
+        "Mysore"
+      ],
+      "archivalReference": "AISPC Papers, F. No. 115, NMML; VDECB"
+    },
+    {
+      "name": "Narayanacharya alias Narayanadas",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 158,
+      "printedPageTo": 158,
+      "sourceLine": 14898,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "KQIC, p. 52."
+    },
+    {
+      "name": "Narsu Parit",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 159,
+      "printedPageTo": 159,
+      "sourceLine": 15015,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Law Deptt (G), G.O. (MS) No.3400,14.09.1932; FFPO No. 3935/ 1969, 12.06.1969, TNSAC"
+    },
+    {
+      "name": "Navin Chandra Shroff",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 159,
+      "printedPageTo": 160,
+      "sourceLine": 15061,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt (G), G. O. Government of Madras, 30 September 1947; PASIHC, V, 1987, p. 98",
+      "historicalConnection": {
+        "years": [
+          1942
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Ningaiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 161,
+      "printedPageTo": 162,
+      "sourceLine": 15241,
+      "districtText": [
+        "Shimoga"
+      ],
+      "archivalReference": "SSS, II, p. 354"
+    },
+    {
+      "name": "Ningappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 162,
+      "printedPageTo": 162,
+      "sourceLine": 15259,
+      "districtText": [
+        "Chitradurga"
+      ],
+      "archivalReference": "SSS, II, p. 564; WWIM, II, p. 225"
+    },
+    {
+      "name": "Parsuram Salunke",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 183,
+      "printedPageTo": 183,
+      "sourceLine": 17091,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "KQIC, p. 207; WWIM, I, p. 317"
+    },
+    {
+      "name": "Giriyappagowda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 184,
+      "printedPageTo": 184,
+      "sourceLine": 17196,
+      "districtText": [
+        "Haveri"
+      ],
+      "archivalReference": "BDG; KQIC, p. WWIM, I, p. 271"
+    },
+    {
+      "name": "Patrappa Haragol",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 184,
+      "printedPageTo": 184,
+      "sourceLine": 17218,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoner, CPR No. 3, B. No. 09, 23 Mayl939 to 01 April 1940, Hindalga Jail, Belgaum; RSVH, p. 73; WWIM, II, p. 114"
+    },
+    {
+      "name": "Peeru",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 186,
+      "printedPageTo": 186,
+      "sourceLine": 17363,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Piraji",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 190,
+      "printedPageTo": 190,
+      "sourceLine": 17732,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30,10 June 1858"
+    },
+    {
+      "name": "Pongari",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 191,
+      "printedPageTo": 191,
+      "sourceLine": 17824,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Ponnaswami",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 191,
+      "printedPageTo": 191,
+      "sourceLine": 17835,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "KQIC, p. 52"
+    },
+    {
+      "name": "Potavara Kuhambu Nair",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 191,
+      "printedPageTo": 191,
+      "sourceLine": 17845,
+      "districtText": [
+        "Mangalore"
+      ],
+      "archivalReference": "",
+      "historicalConnection": {
+        "years": [
+          1917,
+          1941,
+          1943
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Prabandham Rangachar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 193,
+      "printedPageTo": 193,
+      "sourceLine": 18028,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "FFHFSAP, 1947-48; WWIM, II, p. 249; WWFSAP, I, p. 83"
+    },
+    {
+      "name": "Prahalladha Setty",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 194,
+      "printedPageTo": 194,
+      "sourceLine": 18101,
+      "districtText": [
+        "Bangalore",
+        "Mysore"
+      ],
+      "archivalReference": "PHRA; PMLC"
+    },
+    {
+      "name": "Pratap Rao Patil",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 194,
+      "printedPageTo": 194,
+      "sourceLine": 18111,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "BDG; WWIM, II, p. 241"
+    },
+    {
+      "name": "Pujari Hanamma",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 195,
+      "printedPageTo": 195,
+      "sourceLine": 18218,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p. 199"
+    },
+    {
+      "name": "Pulliyil Alavi",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 197,
+      "printedPageTo": 197,
+      "sourceLine": 18413,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. No.898, 23.09.1927, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1921,
+          1922,
+          1923,
+          1925,
+          1926,
+          1927
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Punee Saheb",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 199,
+      "printedPageTo": 199,
+      "sourceLine": 18608,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WW/M, III, 116"
+    },
+    {
+      "name": "Puthiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 201,
+      "printedPageTo": 201,
+      "sourceLine": 18771,
+      "districtText": [
+        "Mandya",
+        "Mysore"
+      ],
+      "archivalReference": "SSS, II, p. 354"
+    },
+    {
+      "name": "Puttaiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 201,
+      "printedPageTo": 202,
+      "sourceLine": 18829,
+      "districtText": [
+        "Shimoga"
+      ],
+      "archivalReference": "SSS, II, p. 354; WWIM, II, p. 254"
+    },
+    {
+      "name": "Rachappa Veerappa Hebbal",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 204,
+      "printedPageTo": 204,
+      "sourceLine": 18987,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWIM, I, p. 136"
+    },
+    {
+      "name": "Raghoba Limaya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 204,
+      "printedPageTo": 204,
+      "sourceLine": 19019,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part- XII, DD, Vol. No. 30, L. No. 299/1858, 17 June 1858"
+    },
+    {
+      "name": "Raju",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 205,
+      "printedPageTo": 205,
+      "sourceLine": 19149,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, L. No. 322/1858, June 1858"
+    },
+    {
+      "name": "Rama",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 205,
+      "printedPageTo": 205,
+      "sourceLine": 19190,
+      "districtText": [
+        "Bagalakot"
+      ],
+      "archivalReference": "SI1857WI, p. 199"
+    },
+    {
+      "name": "Ramachandra",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 205,
+      "printedPageTo": 205,
+      "sourceLine": 19220,
+      "districtText": [
+        "North Kanara"
+      ],
+      "archivalReference": "WWIM, I, p. 297"
+    },
+    {
+      "name": "Ramachandra",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 207,
+      "printedPageTo": 207,
+      "sourceLine": 19253,
+      "districtText": [],
+      "archivalReference": "SSS, II, p. 718."
+    },
+    {
+      "name": "Ramanatharaya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 207,
+      "printedPageTo": 207,
+      "sourceLine": 19308,
+      "districtText": [
+        "Shimoga"
+      ],
+      "archivalReference": "PMRA; PMLC"
+    },
+    {
+      "name": "Ramanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 208,
+      "printedPageTo": 208,
+      "sourceLine": 19382,
+      "districtText": [
+        "Tumkur"
+      ],
+      "archivalReference": "PMLC; PGM"
+    },
+    {
+      "name": "Ramannah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 208,
+      "printedPageTo": 208,
+      "sourceLine": 19396,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Ramappa Shadlageri",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 208,
+      "printedPageTo": 208,
+      "sourceLine": 19407,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Convicted Trial Prisoner No. 18563, CPR No. 3, B. No. 09, 23 Mayl939 to 01 April 1940, Hindalga Jail, Belgaum; RSVH, p. 74; WWIM, II, pp. 298-99"
+    },
+    {
+      "name": "Ramappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 208,
+      "printedPageTo": 208,
+      "sourceLine": 19424,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Ranga (II)",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 209,
+      "printedPageTo": 209,
+      "sourceLine": 19561,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Ranga",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 209,
+      "printedPageTo": 209,
+      "sourceLine": 19572,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Rehaman Khan",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 209,
+      "printedPageTo": 211,
+      "sourceLine": 19621,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 12 June 1858"
+    },
+    {
+      "name": "Sahib Husain",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 214,
+      "printedPageTo": 214,
+      "sourceLine": 19882,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Saroja",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 217,
+      "printedPageTo": 217,
+      "sourceLine": 20128,
+      "districtText": [
+        "Mysore",
+        "Shimoga"
+      ],
+      "archivalReference": "S.S.S, Vol-II, pp. 354 & 604.",
+      "historicalConnection": {
+        "years": [
+          1941,
+          1942
+        ],
+        "actions": [
+          "death-or-martyrdom"
+        ]
+      }
+    },
+    {
+      "name": "Satappa Topannawar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 217,
+      "printedPageTo": 217,
+      "sourceLine": 20170,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "SSS, I, p. 991; WWIM, II, p. 332"
+    },
+    {
+      "name": "Shankar Pangire",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 218,
+      "printedPageTo": 218,
+      "sourceLine": 20248,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "SSS, I, p. 991; WWIM, I, p. 263"
+    },
+    {
+      "name": "Shankar Soman",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 218,
+      "printedPageTo": 218,
+      "sourceLine": 20262,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WWIM, I, p. 344"
+    },
+    {
+      "name": "Shankarappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 218,
+      "printedPageTo": 219,
+      "sourceLine": 20292,
+      "districtText": [
+        "Kolar",
+        "Mysore"
+      ],
+      "archivalReference": "KQIC, p. 114; WWIM, II, p. 297"
+    },
+    {
+      "name": "Shankrappa Desai",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 219,
+      "printedPageTo": 219,
+      "sourceLine": 20312,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, L. No. 322/1858, 24 June 1858"
+    },
+    {
+      "name": "Shidda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 219,
+      "printedPageTo": 220,
+      "sourceLine": 20384,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Shiddappa Sattigeri",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 220,
+      "sourceLine": 20400,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "WW/M, I, p. 325"
+    },
+    {
+      "name": "Shivalingappa Kotambari",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 220,
+      "sourceLine": 20411,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "BDG; WWIM, I, p. 184"
+    },
+    {
+      "name": "Shivappa Hireholi",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 220,
+      "sourceLine": 20423,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "BDG; WWIM, I, p. 138"
+    },
+    {
+      "name": "Shivarayappa Hirebasannavar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 220,
+      "sourceLine": 20434,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "FSKWW, 1, p. 36"
+    },
+    {
+      "name": "Shrinivas",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 220,
+      "sourceLine": 20446,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "KQIC, p. 52"
+    },
+    {
+      "name": "Siddappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 220,
+      "sourceLine": 20456,
+      "districtText": [
+        "Tumkur"
+      ],
+      "archivalReference": "SSS, II, p. 491; KQIC, p. 62; WWIM, I, p. 339"
+    },
+    {
+      "name": "Sidramappa Nilagar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 220,
+      "printedPageTo": 221,
+      "sourceLine": 20471,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Samyukta Karnataka, 9 April 1939"
+    },
+    {
+      "name": "Somasundaram Chetti",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 222,
+      "printedPageTo": 222,
+      "sourceLine": 20600,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Andhra Patrika, 4 December 1941"
+    },
+    {
+      "name": "Somasundaram Chettiar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 222,
+      "printedPageTo": 222,
+      "sourceLine": 20620,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Pub Deptt, G.O. No. 2146, 10.10.1946, TNSAC"
+    },
+    {
+      "name": "Srinivas Veenkatadri Desai",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 222,
+      "printedPageTo": 223,
+      "sourceLine": 20667,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Subhasing Ramsing",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 223,
+      "printedPageTo": 223,
+      "sourceLine": 20720,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "KQIC, p. 52"
+    },
+    {
+      "name": "Sulagathi Narasappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 223,
+      "printedPageTo": 223,
+      "sourceLine": 20731,
+      "districtText": [
+        "Mysore"
+      ],
+      "archivalReference": "VDECB; PMRA; PMLC; AISPC, F. No. 115, NMML"
+    },
+    {
+      "name": "Suryanarayanachari",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 224,
+      "printedPageTo": 224,
+      "sourceLine": 20800,
+      "districtText": [
+        "Mysore",
+        "Shimoga"
+      ],
+      "archivalReference": "PMRA; PMLC; WWIM, I, p. 353"
+    },
+    {
+      "name": "Syed Budin",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 224,
+      "printedPageTo": 224,
+      "sourceLine": 20831,
+      "districtText": [
+        "Haveri"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Tammanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 228,
+      "printedPageTo": 228,
+      "sourceLine": 21148,
+      "districtText": [
+        "Koppal"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Tammanna",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 228,
+      "printedPageTo": 228,
+      "sourceLine": 21161,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, 24 June 1858"
+    },
+    {
+      "name": "Tammayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 228,
+      "printedPageTo": 228,
+      "sourceLine": 21172,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Tasdiq Husen",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 229,
+      "printedPageTo": 229,
+      "sourceLine": 21228,
+      "districtText": [],
+      "archivalReference": "SI1857WI, p. 248"
+    },
+    {
+      "name": "Tatyagouda Patil",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 230,
+      "printedPageTo": 230,
+      "sourceLine": 21306,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "BDG; WWIM, II, p. 241"
+    },
+    {
+      "name": "Thimmanna Das",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 235,
+      "printedPageTo": 236,
+      "sourceLine": 21850,
+      "districtText": [
+        "Bangalore",
+        "Mysore"
+      ],
+      "archivalReference": "PMRA; PMLC"
+    },
+    {
+      "name": "Thippaiah",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 236,
+      "printedPageTo": 236,
+      "sourceLine": 21863,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "PMRA; PMLC"
+    },
+    {
+      "name": "Timma",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 238,
+      "printedPageTo": 238,
+      "sourceLine": 22047,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Timmanaguda Menasinhaal",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 238,
+      "printedPageTo": 238,
+      "sourceLine": 22058,
+      "districtText": [
+        "Haveri"
+      ],
+      "archivalReference": "SSS, I, p. 791"
+    },
+    {
+      "name": "Timmappa alias Rangappa Mazumdar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 238,
+      "printedPageTo": 238,
+      "sourceLine": 22070,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, 24 June 1858"
+    },
+    {
+      "name": "Tippayya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 238,
+      "printedPageTo": 238,
+      "sourceLine": 22081,
+      "districtText": [
+        "Bangalore"
+      ],
+      "archivalReference": "KQIC, p. 52"
+    },
+    {
+      "name": "Tirakappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 238,
+      "printedPageTo": 238,
+      "sourceLine": 22094,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WW1M, I, p. 363"
+    },
+    {
+      "name": "Tukaram",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 239,
+      "printedPageTo": 240,
+      "sourceLine": 22219,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, 10 June 1858"
+    },
+    {
+      "name": "Tummanah Talari",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 240,
+      "printedPageTo": 240,
+      "sourceLine": 22234,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Ukunda",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 242,
+      "printedPageTo": 242,
+      "sourceLine": 22326,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279"
+    },
+    {
+      "name": "Urvee",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 242,
+      "printedPageTo": 242,
+      "sourceLine": 22371,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    },
+    {
+      "name": "Vallabhadas",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 247,
+      "printedPageTo": 247,
+      "sourceLine": 22755,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 280"
+    },
+    {
+      "name": "Veerappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 251,
+      "printedPageTo": 251,
+      "sourceLine": 23179,
+      "districtText": [
+        "Raichur"
+      ],
+      "archivalReference": "WW/M, III, p. 151"
+    },
+    {
+      "name": "Veeraputtappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 251,
+      "printedPageTo": 252,
+      "sourceLine": 23205,
+      "districtText": [
+        "Mysore"
+      ],
+      "archivalReference": "PMRA; PMLC; WWIM, II, p. 340"
+    },
+    {
+      "name": "Vellal Kunnan Alavi",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 254,
+      "printedPageTo": 254,
+      "sourceLine": 23454,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "Law Deptt (G), G.O. (Ord.Series) No. 2448, 07.10.1922, TNSAC",
+      "historicalConnection": {
+        "years": [
+          1921,
+          1922
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Vemula Virayya",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 256,
+      "printedPageTo": 256,
+      "sourceLine": 23617,
+      "districtText": [
+        "Bellary"
+      ],
+      "archivalReference": "RBCJ, C.No. 5230,1926, APSAH; WWFSAP, III, p. 228; WWIM, II, p. 341",
+      "historicalConnection": {
+        "years": [
+          1922,
+          1925,
+          1926
+        ],
+        "actions": [
+          "imprisonment-or-detention",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Venkappa Naik",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 257,
+      "printedPageTo": 257,
+      "sourceLine": 23701,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, L. No. 322/1858, 24 June 1858",
+      "historicalConnection": {
+        "years": [
+          1857,
+          1858
+        ],
+        "actions": [
+          "arrest-or-capture",
+          "death-or-martyrdom"
+        ]
+      }
+    },
+    {
+      "name": "Venkatappa Guntannavar",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 257,
+      "printedPageTo": 257,
+      "sourceLine": 23726,
+      "districtText": [
+        "Belgaum"
+      ],
+      "archivalReference": "Samyukta Karnataka, 9 April 1939; WWIM, II, p. 108"
+    },
+    {
+      "name": "Venkatappa Nayak",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 257,
+      "printedPageTo": 257,
+      "sourceLine": 23746,
+      "districtText": [],
+      "archivalReference": "SI1857WI, p. 248"
+    },
+    {
+      "name": "Virayya Hiremath",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 258,
+      "printedPageTo": 258,
+      "sourceLine": 23839,
+      "districtText": [
+        "Dharwad"
+      ],
+      "archivalReference": "DDG; WWIM, I, p. 138"
+    },
+    {
+      "name": "Virupakshappa",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 259,
+      "printedPageTo": 259,
+      "sourceLine": 23876,
+      "districtText": [
+        "Davanagere"
+      ],
+      "archivalReference": "KQIC, p. 49; SSS, II, p. 564"
+    },
+    {
+      "name": "Vishnu Bhagwan",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 259,
+      "printedPageTo": 259,
+      "sourceLine": 23889,
+      "districtText": [
+        "Gulbarga"
+      ],
+      "archivalReference": "WWIM, II, p. 343"
+    },
+    {
+      "name": "Kulkarni",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 259,
+      "printedPageTo": 259,
+      "sourceLine": 23906,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 197, Part-XII, DD, Vol. No. 30, L. No. 47/1858,16 June 1858"
+    },
+    {
+      "name": "Vobul Doss",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 259,
+      "printedPageTo": 259,
+      "sourceLine": 23918,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "WWIM, III, p. 152"
+    },
+    {
+      "name": "Vyanakatrao Bhosle",
+      "relationship": "karnataka-event-connection",
+      "printedPageFrom": 259,
+      "printedPageTo": 259,
+      "sourceLine": 23964,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "Poll Deptt, No. 226, Part-XIII, DD, Vol. No. 31, 24 June 1858",
+      "historicalConnection": {
+        "years": [
+          1857,
+          1858,
+          1947
+        ],
+        "actions": [
+          "arrest-or-capture",
+          "death-or-martyrdom",
+          "movement-or-resistance"
+        ]
+      }
+    },
+    {
+      "name": "Yalya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 259,
+      "printedPageTo": 259,
+      "sourceLine": 24005,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 279; HFMK, 1, pp. 272, 440"
+    },
+    {
+      "name": "Yllya",
+      "relationship": "karnataka-origin-or-residence",
+      "printedPageFrom": 262,
+      "printedPageTo": 262,
+      "sourceLine": 24120,
+      "districtText": [
+        "Gadag"
+      ],
+      "archivalReference": "SI1857WI, p. 278"
+    }
+  ]
+}

@@ -10,5 +10,5 @@ const warnings = issues.filter(issue => issue.severity === 'warning')
 for (const issue of issues) {
   console.log(`${issue.severity.toUpperCase()} ${issue.collection}/${issue.id || '-'} ${issue.path}: ${issue.message}`)
 }
-console.log(`Validated schema ${atlasData.meta.schemaVersion} with ${peopleCandidateCorpus.records.length} people candidates: ${errors.length} errors, ${warnings.length} warnings.`)
+console.log(`Validated schema ${atlasData.meta.schemaVersion} with ${peopleCandidateCorpus.records.length} Wikimedia candidates and ${atlasData.martyrCandidates.length} Dictionary of Martyrs candidates: ${errors.length} errors, ${warnings.length} warnings.`)
 if (errors.length) process.exitCode = 1

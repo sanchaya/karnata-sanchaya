@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
 const PEOPLE_CANDIDATE_EVIDENCE=['identity','karnatakaConnection','bilingualName','lifeDates','roles','contributions','authorityCitations','imageLicense']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
@@ -22,7 +22,7 @@ export function validateAtlas(data) {
       else all.set(record.id, collection)
       if (collection !== 'relationships' && collection !== 'sources') {
         if (!record?.name?.en?.trim()) add('error',collection,id,'name.en','English name is required.')
-        if (collection!=='peopleCandidates'&&!record?.name?.kn?.trim()) add('warning',collection,id,'name.kn','Kannada name is missing.')
+        if (!['peopleCandidates','martyrCandidates'].includes(collection)&&!record?.name?.kn?.trim()) add('warning',collection,id,'name.kn','Kannada name is missing.')
       }
       if (!record?.review?.status || !['draft','needs-review','reviewed','published'].includes(record.review.status)) add('error',collection,id,'review.status','Review status is missing or invalid.')
       if (record?.date) {
@@ -91,6 +91,7 @@ export function validateAtlas(data) {
         if (!Array.isArray(record.authors) || record.authors.length===0) add('error',collection,id,'authors','At least one author, editor, organization or repository is required.')
         if (record.year!=null && (!Number.isInteger(record.year)||record.year<0)) add('error',collection,id,'year','Source year must be a positive whole year or null.')
         if (record.url && !/^https:\/\//.test(record.url)) add('error',collection,id,'url','Public source URLs must use HTTPS.')
+        if (record.alternateUrls!=null && (!Array.isArray(record.alternateUrls) || record.alternateUrls.some(url=>!/^https:\/\//.test(url)))) add('error',collection,id,'alternateUrls','Alternate source URLs must be an array of HTTPS URLs.')
         if (record.doi!=null && typeof record.doi!=='string') add('error',collection,id,'doi','DOI must be text when supplied.')
         if (record.isbn!=null && typeof record.isbn!=='string') add('error',collection,id,'isbn','ISBN must be text when supplied.')
       }
@@ -174,6 +175,19 @@ export function validateAtlas(data) {
         if(record.reviewWorkflow?.target!=='curated-person-record'||record.reviewWorkflow?.status!=='candidate-intake')add('error',collection,id,'reviewWorkflow','Candidate people must remain in the curated-person intake workflow.')
         PEOPLE_CANDIDATE_EVIDENCE.forEach(field=>{if(!['verified','located','provisional','unresolved','not-available'].includes(record.reviewWorkflow?.evidence?.[field]?.status))add('error',collection,id,`reviewWorkflow.evidence.${field}`,'Every candidate evidence gate requires a supported status.')})
         if(record.review?.status!=='needs-review')add('warning',collection,id,'review.status','Promote an independently verified candidate into the curated people collection instead of changing its intake status.')
+      }
+      if (collection === 'martyrCandidates') {
+        if (!/^martyr-candidate-v5-p\d+-[a-z0-9-]+-l\d+$/.test(record.id)) add('error',collection,id,'id','Dictionary candidates require a stable volume, page, name and OCR-line ID.')
+        if (record.candidateKind!=='dictionary-martyr') add('error',collection,id,'candidateKind','Dictionary candidates require the dictionary-martyr kind.')
+        if (!['karnataka-origin-or-residence','karnataka-event-connection'].includes(record.relationship)) add('error',collection,id,'relationship','A supported Karnataka relationship classification is required.')
+        if (!Array.isArray(record.roles)||!record.roles.includes('freedom-fighter')) add('error',collection,id,'roles','Dictionary martyr candidates require the freedom-fighter review role.')
+        if (!Number.isInteger(record.sourceEntry?.printedPageFrom)||!Number.isInteger(record.sourceEntry?.sourceLine)) add('error',collection,id,'sourceEntry','Printed page and OCR source line locators are required.')
+        if (!Array.isArray(record.citations)||record.citations.length!==1||record.citations[0]?.sourceId!=='src-india-culture-dictionary-martyrs-v5'||!record.citations[0]?.locator?.includes('printed p.')) add('error',collection,id,'citations','The item-level dictionary citation and printed-page locator are required.')
+        if (record.relationship==='karnataka-event-connection'&&(!Array.isArray(record.historicalConnection?.years)||!record.historicalConnection.years.length||!Array.isArray(record.historicalConnection?.actions)||!record.historicalConnection.actions.length||!Array.isArray(record.historicalConnection?.placeLeads)||!record.historicalConnection.placeLeads.length)) add('error',collection,id,'historicalConnection','Event connections require provisional years, action types and Karnataka place leads.')
+        if (record.dateInterpretation==='historical-connection-window-not-life-dates'&&record.date?.precision==='unknown') add('error',collection,id,'date','Historical connection windows require a provisional date or range.')
+        if (record.discovery?.publicationReady!==false) add('error',collection,id,'discovery.publicationReady','OCR candidates cannot be publication-ready before page-image and identity review.')
+        if (record.reviewWorkflow?.target!=='curated-person-record'||record.reviewWorkflow?.status!=='candidate-intake') add('error',collection,id,'reviewWorkflow','Dictionary candidates must remain in curated-person intake.')
+        if (record.review?.status!=='needs-review') add('warning',collection,id,'review.status','Promote an independently verified candidate into curated people instead of changing intake status.')
       }
       if (collection === 'inscriptions') {
         if (!record.placeId || !record.polityId) add('error',collection,id,'relationships','Inscriptions require a mapped place and related polity.')
