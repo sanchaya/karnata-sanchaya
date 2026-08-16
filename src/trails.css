@@ -25,6 +25,29 @@
 .trail-stop-sources strong{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;opacity:.7}
 .explorer-citation{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.85rem;line-height:1.5}
 .trail-deep-link{display:inline-block;margin-top:.75rem;font-size:.85rem;font-weight:600}
+.trail-locator{display:block;margin-top:.15rem;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(0,0,0,.05);border:1px solid var(--border,rgba(0,0,0,.12));border-radius:6px;padding:.2rem .45rem;color:inherit;width:max-content;max-width:100%;white-space:normal;word-break:break-word}
+.trail-ledger{margin-top:.9rem;border-top:1px dashed var(--border,rgba(0,0,0,.15));padding-top:.7rem}
+.trail-ledger summary{cursor:pointer;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;opacity:.85;user-select:none}
+.trail-ledger-title{display:inline-flex;align-items:center;gap:.4rem}
+.trail-ledger summary::after{content:'▾';color:inherit;opacity:.6}
+.trail-ledger[open] summary::after{content:'▴'}
+.trail-ledger-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem 1rem;margin:.6rem 0 0;border:none;padding:0}
+.trail-ledger-grid div{display:flex;flex-direction:column;gap:.2rem}
+.trail-ledger-grid dt{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;opacity:.6}
+.trail-ledger-grid dd{margin:0;font-size:.9rem;font-weight:600}
+.trail-ledger-badge{display:inline-block;border-radius:99px;padding:.2rem .6rem;font-size:.72rem;font-weight:700}
+.trail-ledger-badge.reviewed,.trail-ledger-badge.published{background:#dce9de;color:#24572c}
+.trail-ledger-badge.needs-review{background:#f3e3c3;color:#86621a}
+.trail-ledger-badge.draft{background:#e6e3df;color:#4a463f}
+.trail-ledger-blocking{margin-top:.8rem;background:#fbf4e8;border:1px solid #ecd9b3;border-radius:8px;padding:.7rem .8rem}
+.trail-ledger-blocking strong{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#86621a}
+.trail-ledger-blocking p{margin:.4rem 0 0;font-size:.8rem;line-height:1.5;opacity:.9}
+.trail-ledger-blocking p::before{content:'◌ ';opacity:.6}
+.trail-ledger-sources{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
+.trail-ledger-sources strong{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;opacity:.65}
+.trail-cite-actions{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border,rgba(0,0,0,.12))}
+.trail-cite-actions span{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;opacity:.7;margin-right:.25rem;flex:1 1 100%}
+.trail-cite-actions button{font-size:.8rem;padding:.4rem .8rem}
 .trail-step-actions{display:flex;gap:.6rem;align-items:center;justify-content:space-between;margin-top:1.25rem}
 .trail-step-button{border-radius:8px;border:1px solid var(--border,rgba(0,0,0,.25));background:var(--card,#fff);padding:.55rem 1.1rem;cursor:pointer;font-weight:600;color:inherit}
 .trail-step-button.primary{background:#6b4f2a;color:#fff;border-color:#6b4f2a}

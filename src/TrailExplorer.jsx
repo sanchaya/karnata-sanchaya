@@ -23,8 +23,50 @@ const dateLabel=(date,locale)=>{
   return `${(date.precision==='circa'&&date.from)?circa:''}${date.from}${date.to&&date.to!==date.from?`–${date.to}`:''} ${era}`.trim()
 }
 
+const REVIEW_STATUS_LABELS={reviewed:{kn:'ಪರಿಶೀಲಿಸಲಾಗಿದೆ',en:'Reviewed'},published:{kn:'ಪ್ರಕಟಿತ',en:'Published'},'needs-review':{kn:'ಪರಿಶೀಲನೆ ಬಾಕಿ',en:'Needs review'},draft:{kn:'ಕರಡು',en:'Draft'}}
+const DATE_PRECISION_LABELS={year:{kn:'ನಿರ್ದಿಷ್ಟ ವರ್ಷ',en:'Specific year'},circa:{kn:'ಸುಮಾರು',en:'Circa'},range:{kn:'ಕಾಲಶ್ರೇಣಿ',en:'Date range'},century:{kn:'ಶತಮಾನ',en:'Century'},unknown:{kn:'ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ',en:'Not established'}}
+const LOCATION_PRECISION_LABELS={approximate:{kn:'ಸ್ಥೂಲ',en:'Approximate'},schematic:{kn:'ಯೋಜನಾತ್ಮಕ',en:'Schematic'},site:{kn:'ನಿರ್ದಿಷ್ಟ ಸ್ಥಳ',en:'Specific site'},'site-context':{kn:'ಸ್ಥಳ ಸಂದರ್ಭ',en:'Site context'},'district-centroid':{kn:'ಜಿಲ್ಲಾ ಕೇಂದ್ರಬಿಂದು',en:'District centroid'},'district-centre':{kn:'ಜಿಲ್ಲಾ ಕೇಂದ್ರ',en:'District centre'},'publication-place-anchor':{kn:'ಪ್ರಕಟಣಾ-ಸ್ಥಳ ಆಧಾರ',en:'Publication-place anchor'}}
+
+const clean=value=>String(value||'').replace(/[{}]/g,'').trim()
+const citationKey=source=>clean(source.id).replace(/^src-/,'').replace(/[^a-z0-9]+/gi,'_')
+const sourceBibtex=source=>`@misc{${citationKey(source)},\n  author = {${clean((source.authors||[]).join(' and '))}},\n  title = {${clean(source.title.en)}},${source.year?`\n  year = {${source.year}},`:''}${source.publisher?`\n  publisher = {${clean(source.publisher)}},`:''}${source.doi?`\n  doi = {${clean(source.doi)}},`:''}${source.url?`\n  url = {${source.url}},`:''}\n  note = {Karnataka Historical Atlas source ID: ${source.id}}\n}`
+const sourceRis=source=>['TY  - GEN',...(source.authors||[]).map(author=>`AU  - ${author}`),`TI  - ${source.title.en}`,source.year?`PY  - ${source.year}`:null,source.publisher?`PB  - ${source.publisher}`:null,source.doi?`DO  - ${source.doi}`:null,source.url?`UR  - ${source.url}`:null,`N1  - Karnataka Historical Atlas source ID: ${source.id}`,'ER  -'].filter(Boolean).join('\n')
+const sourceCsl=source=>({id:source.id,type:source.type?.includes('volume')||source.type==='book'?'book':'document',title:source.title.en,author:(source.authors||[]).map(literal=>({literal})),publisher:source.publisher||undefined,issued:source.year?{'date-parts':[[source.year]]}:undefined,URL:source.url||undefined,note:`Karnataka Historical Atlas source ID: ${source.id}`})
+const downloadText=(value,filename,type='text/plain')=>{const url=URL.createObjectURL(new Blob([value],{type}));const link=document.createElement('a');link.href=url;link.download=filename;link.click();URL.revokeObjectURL(url)}
+const citationEligible=source=>!source.provenanceRole||source.provenanceRole!=='discovery-only'
+const trailSources=trail=>{const byId=new Map();for(const stop of trail.stops){const record=recordByCollection.get(stop.kind)?.get(stop.recordId);for(const citation of record?.citations||[]){if(!byId.has(citation.sourceId)&&sourceById.has(citation.sourceId))byId.set(citation.sourceId,sourceById.get(citation.sourceId))}}return [...byId.values()]}
+const exportTrail=(trail,format)=>{const eligible=trailSources(trail).filter(citationEligible);const value=format==='csl'?JSON.stringify(eligible.map(sourceCsl),null,2):eligible.map(source=>format==='bib'?sourceBibtex(source):sourceRis(source)).join('\n\n');return downloadText(value,`karnataka-trail-${trail.slug}.${format==='csl'?'json':format}`,format==='csl'?'application/json':'text/plain')}
+
 function recordName(record,locale){
   return text(record?.name||record?.title,locale)||record?.id
+}
+
+function EvidenceLedger({record,locale}){
+  const ledgerT={
+    title:locale==='kn'?'ಸಾಕ್ಷ್ಯ ದಾಖಲೆ':'Evidence ledger',
+    review:locale==='kn'?'ಪರಿಶೀಲನೆ ಸ್ಥಿತಿ':'Review status',
+    date:locale==='kn'?'ದಿನಾಂಕದ ನಿಖರತೆ':'Date precision',
+    location:locale==='kn'?'ಸ್ಥಳದ ನಿಖರತೆ':'Location precision',
+    blocking:locale==='kn'?'ಪರಿಶೀಲನೆ ಬಾಕಿ ಉಳಿದಿರುವ ಸಾಕ್ಷ್ಯ':'Evidence awaiting review',
+    sources:locale==='kn'?'ಸಂಪೂರ್ಣ ಆಕರ ಪಟ್ಟಿ':'Full source list',
+    locator:locale==='kn'?'ಮುದ್ರಿತ ಸ್ಥಾನಸೂಚಿ':'Printed locator',
+  }
+  if(!record)return null
+  const reviewStatus=record.review?.status
+  const datePrecision=record.date?.precision
+  const locationPrecision=record.location?.precision||record.coordinates?.precision
+  const blocking=(record.reviewWorkflow?.blockingEvidence||[]).map(field=>({field,note:record.reviewWorkflow?.evidence?.[field]?.note}))
+  const citations=record.citations||[]
+  return <details className="trail-ledger">
+    <summary><span className="trail-ledger-title">{ledgerT.title}</span></summary>
+    <dl className="trail-ledger-grid">
+      {reviewStatus&&<div><dt>{ledgerT.review}</dt><dd><span className={`trail-ledger-badge ${reviewStatus}`}>{REVIEW_STATUS_LABELS[reviewStatus]?text(REVIEW_STATUS_LABELS[reviewStatus],locale):reviewStatus}</span></dd></div>}
+      {datePrecision&&<div><dt>{ledgerT.date}</dt><dd>{DATE_PRECISION_LABELS[datePrecision]?text(DATE_PRECISION_LABELS[datePrecision],locale):datePrecision}</dd></div>}
+      {locationPrecision&&<div><dt>{ledgerT.location}</dt><dd>{LOCATION_PRECISION_LABELS[locationPrecision]?text(LOCATION_PRECISION_LABELS[locationPrecision],locale):locationPrecision}</dd></div>}
+    </dl>
+    {blocking.length>0&&<section className="trail-ledger-blocking"><strong>{ledgerT.blocking}</strong>{blocking.map(item=><p key={item.field}>{item.note?text(item.note,locale):item.field.replace(/[A-Z]/g,' $&').toLowerCase()}</p>)}</section>}
+    <section className="trail-ledger-sources"><strong>{ledgerT.sources}</strong>{citations.map((citation,index)=>{const source=sourceById.get(citation.sourceId);return <span className="explorer-citation" key={`${citation.sourceId}-${index}`}>{source?.url?<a href={source.url} target="_blank" rel="noreferrer">{text(source.title,locale)||citation.sourceId} ↗</a>:<strong>{text(source?.title,locale)||citation.sourceId}</strong>}<ProvenanceBadge tier={sourceTiers.get(citation.sourceId)} locale={locale} short/>{citation.locator&&<code className="trail-locator">{citation.locator}</code>}</span>})}</section>
+  </details>
 }
 
 function StopEvidence({stop,locale}){
@@ -38,7 +80,8 @@ function StopEvidence({stop,locale}){
       <h4>{recordName(record,locale)}</h4>
       {record?.date&&<small>{dateLabel(record.date,locale)}</small>}
       <p>{text(record?.summary||record?.description,locale)||''}</p>
-      {citations.length>0&&<section className="trail-stop-sources"><strong>{locale==='kn'?'ಆಕರಗಳು':'Sources'}</strong>{citations.map((citation,index)=>{const source=sourceById.get(citation.sourceId);return <span className="explorer-citation" key={`${citation.sourceId}-${index}`}>{source?.url?<a href={source.url} target="_blank" rel="noreferrer">{text(source.title,locale)||citation.sourceId} ↗</a>:<strong>{text(source?.title,locale)||citation.sourceId}</strong>}<ProvenanceBadge tier={sourceTiers.get(citation.sourceId)} locale={locale} short/>{citation.locator&&<small>{citation.locator}</small>}</span>})}</section>}
+      {citations.length>0&&<section className="trail-stop-sources"><strong>{locale==='kn'?'ಆಕರಗಳು':'Sources'}</strong>{citations.map((citation,index)=>{const source=sourceById.get(citation.sourceId);return <span className="explorer-citation" key={`${citation.sourceId}-${index}`}>{source?.url?<a href={source.url} target="_blank" rel="noreferrer">{text(source.title,locale)||citation.sourceId} ↗</a>:<strong>{text(source?.title,locale)||citation.sourceId}</strong>}<ProvenanceBadge tier={sourceTiers.get(citation.sourceId)} locale={locale} short/>{citation.locator&&<code className="trail-locator">{citation.locator}</code>}</span>})}</section>}
+      <EvidenceLedger record={record} locale={locale}/>
       {deepLink&&<a className="trail-deep-link" href={deepLink}>{locale==='kn'?'ಅನ್ವೇಷಣೆಯಲ್ಲಿ ಮುಂದುವರಿಸಿ':'Open in explorer'} ↗</a>}
     </div>
   </article>
@@ -58,6 +101,10 @@ export default function TrailExplorer({locale='kn'}){
     next:locale==='kn'?'ಮುಂದಿನ ಹಂತ':'Next',
     complete:locale==='kn'?'ಪೂರ್ಣ':'Complete',
     selectTrail:locale==='kn'?'ಒಂದು ಕಥಾಮಾರ್ಗವನ್ನು ಆರಿಸಿ':'Choose a trail',
+    citeTrail:locale==='kn'?'ಕಥಾಮಾರ್ಗ ಆಕರಗಳನ್ನು ರಫ್ತು ಮಾಡಿ':'Export trail sources',
+    exportBibtex:locale==='kn'?'BibTeX':'BibTeX',
+    exportRis:locale==='kn'?'RIS':'RIS',
+    exportCsl:locale==='kn'?'CSL-JSON':'CSL-JSON',
   }
   if(selected){
     const stop=selected.stops[stopIndex]
@@ -78,6 +125,7 @@ export default function TrailExplorer({locale='kn'}){
         <div className="trail-narrative-head"><span className="trail-era">{text(ERA_LABELS[selected.era],locale)} · {dateLabel(selected.yearRange)}</span><h3>{recordName(record,locale)}</h3></div>
         <p>{text(stop.narrative,locale)}</p>
         <StopEvidence stop={stop} locale={locale}/>
+        <div className="trail-cite-actions"><span>{t.citeTrail}</span><button className="trail-step-button" onClick={()=>exportTrail(selected,'bib')}>{t.exportBibtex}</button><button className="trail-step-button" onClick={()=>exportTrail(selected,'ris')}>{t.exportRis}</button><button className="trail-step-button" onClick={()=>exportTrail(selected,'csl')}>{t.exportCsl}</button></div>
         <div className="trail-step-actions">
           <button className="trail-step-button" disabled={stopIndex===0} onClick={()=>setStopIndex(stopIndex-1)}>{t.previous}</button>
           {stopIndex<selected.stops.length-1?<button className="trail-step-button primary" onClick={()=>setStopIndex(stopIndex+1)}>{t.next}</button>:<span className="trail-complete">{t.complete} ✓</span>}
