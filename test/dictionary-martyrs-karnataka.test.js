@@ -36,4 +36,8 @@ test('dictionary candidates are visible to public review and permanent admin edi
   assert.match(peopleExplorerSource,/candidateKind==='dictionary-martyr'/)
   assert.match(peopleExplorerSource,/martyrCandidateMeta\?\.candidateCount/)
   assert.match(peopleExplorerSource,/people-event-connections/)
+  assert.match(peopleExplorerSource,/canonicalDistrictAssociation/)
+  assert.match(peopleExplorerSource,/const mapRecords=mapped/)
+  assert.match(peopleExplorerSource,/mapPrecision:'district-centroid-lead'/)
+  assert.doesNotMatch(peopleExplorerSource,/focus==='candidates'\?\(selected\?\.isCandidate/)
 })

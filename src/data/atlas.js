@@ -18,6 +18,7 @@ import { patrikaPeriodicals, patrikaMapSites } from './patrika-sanchaya.generate
 import { kingdomArtifacts } from './kingdom-artifacts.js'
 import { applyBengaluruFreedomFighterDisplay } from './bengaluru-freedom-fighters-display.js'
 import { dictionaryMartyrCandidateMeta, dictionaryMartyrCandidates } from './dictionary-martyrs-karnataka.js'
+import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -166,6 +167,7 @@ appendUniqueById(atlasData.externalPolities, communityPeoplePolities)
 appendUniqueById(atlasData.places, communityPeoplePlaces)
 appendUniqueById(atlasData.people, communityPeople)
 appendUniqueById(atlasData.events, communityPeopleEvents)
+appendUniqueById(atlasData.events, freedomMovementEventLeads)
 appendUniqueById(atlasData.sources, freedomFighterSources)
 appendUniqueById(atlasData.sources, freedomMovementResearchSources)
 appendUniqueById(atlasData.sources, [{
