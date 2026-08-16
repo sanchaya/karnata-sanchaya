@@ -58,9 +58,27 @@ test('Internet Archive discovery evidence remains review-gated and page-located'
 
 test('the public freedom-fighter view exposes people whose district evidence is missing', () => {
   const unassigned = fighters.filter(person => !(person.districtAssociations || []).length)
-  assert.equal(unassigned.length, 75)
+  assert.equal(unassigned.length, 72)
   assert.match(peopleExplorerSource, /districtEvidenceMissing:explicitDistricts\.length===0/)
   assert.match(peopleExplorerSource, /district==='district-needed'\?person\.districtEvidenceMissing/)
   assert.match(peopleExplorerSource, /className="people-gap-tag"/)
   assert.match(peopleExplorerSource, /districtNeeded:'ಜಿಲ್ಲೆ ಗುರುತಿಸಬೇಕಿದೆ'/)
+})
+
+test('the photographed Bengaluru display is preserved as a review-gated memorial list', () => {
+  const sourceId = 'src-bengaluru-freedom-fighters-display-photo'
+  const source = atlasData.sources.find(record => record.id === sourceId)
+  const displayedPeople = fighters.filter(person => person.citations?.some(citation => citation.sourceId === sourceId))
+  const newCandidates = displayedPeople.filter(person => person.id.startsWith('person-bengaluru-ff-'))
+
+  assert.ok(source)
+  assert.equal(source.review.status, 'needs-review')
+  assert.match(source.scope.en, /119 entries \(117 unique names\)/)
+  assert.equal(displayedPeople.length, 117)
+  assert.equal(newCandidates.length, 102)
+  assert.ok(displayedPeople.every(person => person.districtAssociations?.some(association =>
+    association.districtId === 'audit-bengaluru-urban'
+      && association.kind === 'memorial'
+      && association.citations?.some(citation => citation.sourceId === sourceId))))
+  assert.ok(newCandidates.every(person => person.review.status === 'needs-review'))
 })
