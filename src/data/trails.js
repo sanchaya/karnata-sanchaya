@@ -44,6 +44,52 @@ export const trails=[
     ],
   },
   {
+    id:'trail-sharana-vachana',
+    slug:'sharana-vachana',
+    era:'medieval',
+    yearRange:{from:1105,to:1200,era:'CE'},
+    title:name('ಶರಣರ ಚಳವಳಿ: ವಚನ ಸಾಹಿತ್ಯದ ಹುಟ್ಟು','The Sharana Movement: Birth of the Vachanas'),
+    summary:name(
+      '12ನೇ ಶತಮಾನದಲ್ಲಿ ಕಲ್ಯಾಣದ ಕೇಂದ್ರದಿಂದ ಹುಟ್ಟಿದ ಶರಣರ ಚಳವಳಿ — ಕಾಯಕ, ಜಾತ್ಯತೀತ ಸಮಾನತೆ ಮತ್ತು ವಚನ ಭಕ್ತಿ ಪರಂಪರೆ. ಬಸವಣ್ಣ, ಅಲ್ಲಮ ಪ್ರಭು ಮತ್ತು ಅಕ್ಕ ಮಹಾದೇವಿಯರ ಧ್ವನಿಗಳು.',
+      'The 12th-century Sharana movement centred at Kalyana — a stream of kayaka, caste-defying equality and vachana devotion, voiced by Basavanna, Allama Prabhu and Akka Mahadevi.'
+    ),
+    stops:[
+      narrative('people','person-basavanna','ಬಸವಣ್ಣ (ಸು. 1105–1167) ಕಲ್ಯಾಣದಲ್ಲಿ ಶರಣರ ಚಳವಳಿಯ ಮುಖ್ಯ ಚಾಲಕಶಕ್ತಿ. ಅವರ ವಚನಗಳು ಸಾಮಾಜಿಕ ಸುಧಾರಣೆಯ ಹರಿಕಾರರಾಗಿ ಅವರ ಸ್ಥಾನವನ್ನು ಸ್ಥಾಪಿಸುತ್ತವೆ.','Basavanna (c. 1105–1167) was the driving force of the Sharana movement at Kalyana; his vachanas placed a social revolution at its core.'),
+      narrative('events','event-kayaka-vachana-occupational-voices','ಈ ಘಟನೆಯು ಕೆಲಸ-ಕಸುಬಿನ ದನಿಗಳನ್ನು ವಚನ ಚಳವಳಿಯೊಳಗೆ ತರುತ್ತದೆ — ಕಾಯಕದ ಗೌರವವೇ ಚಳವಳಿಯ ಹೃದಯ.','This event carries the voices of working communities into the vachana movement — dignity of kayaka (work) at the movement’s heart.'),
+      narrative('places','place-kalyani','ಕಲ್ಯಾಣ (ಬಸವಕಲ್ಯಾಣ) 12ನೇ ಶತಮಾನದ ಉತ್ತರ ಕರ್ನಾಟಕದ ಕೇಂದ್ರ. ಶರಣರ ಚಳವಳಿಯ ಅನುಭವ ಮಂಟಪ ಈ ನಗರದೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದೆ.','Kalyani (Basavakalyana) was the northern Karnataka centre where the Anubhava Mantapa of the Sharana movement is associated with the city.'),
+      narrative('people','person-allama-prabhu','ಅಲ್ಲಮ ಪ್ರಭು (ಸು. 1100–1170) ಶೂನ್ಯ ಸಂಪಾದನೆಯ ಪ್ರವಾದಿ. ಅನುಭವ ಮಂಟಪದ ಕೇಂದ್ರ ವ್ಯಕ್ತಿಯಾಗಿ ಶರಣರ ಚಳವಳಿಯನ್ನು ನಡೆಸಿದರು.','Allama Prabhu (c. 1100–1170), prophet of the void, led the Anubhava Mantapa as its central presence guiding the gathered sharanas.'),
+      narrative('works','work-basavanna-vachanas','ಬಸವಣ್ಣನ ವಚನಗಳು (ಸು. 1160) ಕನ್ನಡ ಭಕ್ತಿ ಸಾಹಿತ್ಯದ ತಳಹದಿ. ಪ್ರಾಮಾಣಿಕತೆ, ಸಮಾನತೆ ಮತ್ತು ಕಾಯಕ ಕುರಿತ ವಚನಗಳು ಇಂದಿಗೂ ಪ್ರಸ್ತುತ.','The Basavanna vachanas (c. 1160) are the foundation of Kannada devotional literature — verses on honesty, equality and kayaka that still speak today.'),
+      narrative('works','work-allama-prabhu-vachanas','ಅಲ್ಲಮ ಪ್ರಭುವಿನ ವಚನಗಳು (ಸು. 1160) ನೆಟ್ಟಿಗರ ಗಂಪನ ಸಾರ — ವಿಚಾರ ಮತ್ತು ಭಕ್ತಿಯ ನಿಗೂಢ ಸಮ್ಮಿಳನ.','Allama Prabhu’s vachanas (c. 1160) condense a mystic blend of thought and devotion — Nettigara Gumpa’s essence.'),
+      narrative('people','person-akka-mahadevi','ಅಕ್ಕ ಮಹಾದೇವಿ (ಸು. 1130–1160) ಬಂಧಗಳಿಂದ ಹೊರಬಂದ ಮಹಿಳಾ ಶರಣೆ. ಅವರ ವಚನಗಳು ಒಂಟಿಯಾಗಿ ನಡೆಯುವ ಪಥವನ್ನು ವರ್ಣಿಸುತ್ತವೆ.','Akka Mahadevi (c. 1130–1160) was the woman sharana who renounced all bonds; her vachanas describe the path of walking alone.'),
+      narrative('works','work-akka-mahadevi-vachanas','ಅಕ್ಕ ಮಹಾದೇವಿಯ ವಚನಗಳು (ಸು. 1160) ಸಹಜ ಶರಣೆ ಎಂಬ ಹೆಸರಲ್ಲಿ ಭಕ್ತಿ ಮತ್ತು ವಿರಹವನ್ನು ಕನ್ನಡಕ್ಕೆ ಬರೆದವು.','Akka Mahadevi’s vachanas (c. 1160) wrote devotion and longing into Kannada under the name Sahaja Sharanē.'),
+    ],
+  },
+  {
+    id:'trail-vijayanagara',
+    slug:'vijayanagara-hampi',
+    era:'medieval',
+    yearRange:{from:1336,to:1565,era:'CE'},
+    title:name('ವಿಜಯನಗರ: ಹಂಪಿಯ ಸಾಮ್ರಾಜ್ಯ','Vijayanagara: The Empire of Hampi'),
+    summary:name(
+      '1936ರ ಸ್ಥಾಪನೆಯಿಂದ 1565ರ ತಾಳಿಕೋಟೆ ನಂತರದ ಪತನದವರೆಗೆ — ಹರಿಹರ-ಬುಕ್ಕರ ದಂಪತಿಯಿಂದ ಕೃಷ್ಣದೇವರಾಯನ ಆಳ್ವಿಕೆ, ವಿದೇಶಿ ರಾಯಭಾರಿಗಳು ಮತ್ತು ಹಂಪಿಯ ಸ್ಮಾರಕ ಭೂದೃಶ್ಯ.',
+      'From its 1336 founding to the fall after Talikota in 1565 — the brothers Harihara and Bukka, the reign of Krishnadevaraya, foreign ambassadors and the monumental landscape of Hampi.'
+    ),
+    stops:[
+      narrative('events','event-vijayanagara-foundation','ಸು. 1336ರಲ್ಲಿ ಹರಿಹರ ಮತ್ತು ಬುಕ್ಕ ವಿಜಯನಗರದ ಸ್ಥಾಪನೆ ಮಾಡಿದರು. ತುಂಗಭದ್ರೆಯ ದಡದಲ್ಲಿ ಹುಟ್ಟಿದ ಈ ನಗರ ದಕ್ಷಿಣ ಭಾರತದ ಬೃಹತ್ ಸಾಮ್ರಾಜ್ಯವಾಯಿತು.','Around 1336 Harihara and Bukka founded Vijayanagara on the Tungabhadra banks — a city that grew into southern India’s greatest empire.'),
+      narrative('people','person-harihara-i','ಹರಿಹರ I (ಹಕ್ಕ ಬುಕ್ಕರಲ್ಲಿ ಒಬ್ಬ) ಸ್ಥಾಪಕ ಸಹೋದರರಲ್ಲಿ ಮೊದಲಿಗ. ಅವರಿಂದ ಆರಂಭವಾದ ಸಂಗಮ ವಂಶ ಶತಮಾನಗಳ ಕಾಲ ಆಳಿತು.','Harihara I, one of the founding Hakka–Bukka brothers, opened the Sangama lineage that ruled for centuries.'),
+      narrative('places','place-hampi','ಹಂಪಿ ವಿಜಯನಗರದ ರಾಜಧಾನಿ ಮತ್ತು ಪವಿತ್ರ ಕೇಂದ್ರ. ಸ್ಮಾರಕಗಳ ಈ ಭೂದೃಶ್ಯವನ್ನು ಭೂಪಟದ ಮೇಲೆ ಸ್ಪಷ್ಟವಾಗಿ ಗುರುತಿಸಬಹುದು.','Hampi was Vijayanagara’s capital and sacred centre — a monumental landscape you can trace on the atlas map.'),
+      narrative('events','event-domingo-paes-vijayanagara','ಪೋರ್ಚುಗೀಸ್ ಪ್ರಯಾಣಿಕ ಡೊಮಿಂಗೊ ಪೇಸ್ ಸಾಮ್ರಾಜ್ಯವನ್ನು ಸಂದರ್ಶಿಸಿ ವಿಜಯನಗರ ಮತ್ತು ಅದರ ಆಸ್ಥಾನದ ಕಣ್ಣುಕಟ್ಟುವ ಚಿತ್ರಣ ಬಿಟ್ಟರು.','The Portuguese traveller Domingo Paes visited the empire and left one of the finest eyewitness portraits of Vijayanagara and its court.'),
+      narrative('events','event-abdur-razzaq-vijayanagara','ಟಿಮುರಿಡ್ ರಾಯಭಾರಿ ಅಬ್ದುಲ್ ರಜಾಕ್ ಹಂಪಿಯ ಐಶ್ವರ್ಯವನ್ನು ಕಣ್ಣಾರೆ ಕಂಡು ದಾಖಲಿಸಿದ. ಈ ಘಟನೆ ವಿಜಯನಗರದ ಅಂತಾರಾಷ್ಟ್ರೀಯ ಬಗೆಗೂ ಸಾಕ್ಷಿಯಾಗುತ್ತದೆ.','The Timurid ambassador Abd al-Razzaq recorded the wealth of Hampi at first hand — witness to Vijayanagara’s international reach.'),
+      narrative('events','event-vijayanagara-china-porcelain-trade','ಚೀನಾದ ಜಿಂಗ್ದೆಝೆನ್ ಪಿಂಗಾಣಿ ಹಂಪಿಗೆ ಬಂದ ಸಾಕ್ಷ್ಯ ಸಮುದ್ರ ವಾಣಿಜ್ಯ ಜಾಲದ ಅಂಚು. ಪೂರ್ವ ಮತ್ತು ದಕ್ಷಿಣ ಭಾರತದ ನಡುವಿನ ವ್ಯಾಪಾರ ಕೊಂಡಿ.','Chinese (Jingdezhen) porcelain reached Hampi along the maritime trade web — evidence of the commerce binding east and southern India.'),
+      narrative('culturalHeritage','culture-hampi-mahanavami-dasara','ಮಹಾನವಮಿ-ದಸರಾ ವಿಜಯನಗರದ ಅರಮನೆಯ ಆಚರಣೆ. ಈ ಸಾಂಸ್ಕೃತಿಕ ದಾಖಲೆ ಹಂಪಿಯ ರಾಜಕೀಯ-ಧಾರ್ಮಿಕ ಪರಂಪರೆಯನ್ನು ತೋರಿಸುತ್ತದೆ.','Mahanavami and royal Dasara were Vijayanagara’s courtly festivals; this cultural record shows Hampi’s political and religious heritage.'),
+      narrative('culturalHeritage','culture-hampi-vittala-complex','ವಿಟ್ಠಲ ದೇವಾಲಯ ಸಂಕೀರ್ಣ ಹಂಪಿಯ ವಾಸ್ತು ಪರಾಕಾಷ್ಠೆ — ರಥ, ಕಲ್ಲಿನ ಚಕ್ರ ಮತ್ತು ಸಂಗೀತ ಕಂಬಗಳಿಗೆ ಪ್ರಸಿದ್ಧ.','The Vittala Temple Complex is the architectural zenith of Hampi — famed for its stone chariot, wheels and musical pillars.'),
+      narrative('culturalHeritage','culture-hampi-virupaksha-living-centre','ವಿರೂಪಾಕ್ಷ ದೇವಾಲಯ ಹಂಪಿಯಲ್ಲಿ ಇಂದಿಗೂ ಜೀವಂತ ಆರಾಧನಾ ಕೇಂದ್ರ. ಸ್ಮಾರಕವಾಗಿ ಮಾತ್ರವಲ್ಲ, ನಿರಂತರ ಭಕ್ತಿ ಸಂಪ್ರದಾಯವಾಗಿ.','The Virupaksha Temple remains a living centre of worship at Hampi — not just a monument but an unbroken tradition of devotion.'),
+      narrative('people','person-krishnadevaraya','ಕೃಷ್ಣದೇವರಾಯ ವಿಜಯನಗರದ ಅತ್ಯಂತ ಪ್ರಸಿದ್ಧ ಚಕ್ರವರ್ತಿ (ಸು. 1509–1529). ಅವರ ಆಳ್ವಿಕೆಯಲ್ಲಿ ಸಾಮ್ರಾಜ್ಯ ಉತ್ತುಂಗಕ್ಕೆ ಏರಿತು.','Krishnadevaraya (r. c. 1509–1529) was Vijayanagara’s most celebrated emperor, under whom the empire reached its zenith.'),
+      narrative('people','person-rama-raya','ಅಲಿಯ ರಾಮರಾಯ ತಾಳಿಕೋಟೆ ಯುದ್ಧದ ನಿರ್ಣಾಯಕ (ಮತ್ತು ವಿವಾದಿತ) ಗುರುತು. 1565ರಲ್ಲಿ ದಕ್ಷಿಣ ಸುಲ್ತಾನರ ಒಕ್ಕೂಟದ ವಿರುದ್ಧದ ಸೋಲು ಸಾಮ್ರಾಜ್ಯದ ಪತನಕ್ಕೆ ದಾರಿ ಮಾಡಿತು.','Aliya Rama Raya was the decisive (and contested) figure at Talikota — the 1565 defeat to the southern sultans’ league opened the empire’s fall.'),
+      narrative('events','event-talikota','1565ರ ತಾಳಿಕೋಟೆ ಯುದ್ಧದಲ್ಲಿ ವಿಜಯನಗರ ದಕ್ಷಿಣ ಸುಲ್ತಾನರ ಒಕ್ಕೂಟಕ್ಕೆ ಸೋತಿತು. ಹಂಪಿ ಲೂಟಿಗೊಳಗಾದಾದ ಬಳಿಕ ಸಾಮ್ರಾಜ್ಯ ಕುಗ್ಗಿ ಹಲವು ದಶಕಗಳಲ್ಲಿ ಮರೆಯಾಯಿತು.','At Talikota in 1565 Vijayanagara fell to the league of southern sultans; after Hampi’s sack the empire shrank and faded over decades.'),
+    ],
+  },
+  {
     id:'trail-freedom-movement',
     slug:'freedom-movement',
     era:'modern',

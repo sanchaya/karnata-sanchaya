@@ -30,4 +30,4 @@
 .trail-step-button.primary{background:#6b4f2a;color:#fff;border-color:#6b4f2a}
 .trail-step-button:disabled{opacity:.4;cursor:default}
 .trail-complete{font-weight:700;color:#2f7d32}
-.trail-page .about-hero{padding:1rem 0 1.5rem}
+.trail-page .about-hero{padding:1.5rem clamp(16px,4vw,48px) 1.5rem}
