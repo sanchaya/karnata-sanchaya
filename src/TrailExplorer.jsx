@@ -14,7 +14,14 @@ const DEEP_LINKS={
   culturalHeritage:'#districts',districtHistoryResearch:'#district-history',relationships:'#relations',politicalRelations:'#relations',
 }
 const ERA_LABELS={classical:{kn:'ಪ್ರಾಚೀನ ಯುಗ',en:'Classical era'},medieval:{kn:'ಮಧ್ಯಯುಗ',en:'Medieval era'},modern:{kn:'ಆಧುನಿಕ ಯುಗ',en:'Modern era'}}
-const dateLabel=date=>`${date.precision==='circa'?'ಸು. ':''}${date.from}${date.to!==date.from?`–${date.to}`:''} ${date.era==='BCE'?'ಕ್ರಿ.ಪೂ.':'ಕ್ರಿ.ಶ.'}`
+const dateLabel=(date,locale)=>{
+  if(!date)return ''
+  if(!date.from&&!date.to)return ''
+  if(date.precision==='unknown')return ''
+  const era=date.era==='BCE'?(locale==='kn'?'ಕ್ರಿ.ಪೂ.':'BCE'):date.era==='CE'?(locale==='kn'?'ಕ್ರಿ.ಶ.':'CE'):''
+  const circa=locale==='kn'?'ಸು. ':'c. '
+  return `${(date.precision==='circa'&&date.from)?circa:''}${date.from}${date.to&&date.to!==date.from?`–${date.to}`:''} ${era}`.trim()
+}
 
 function recordName(record,locale){
   return text(record?.name||record?.title,locale)||record?.id
@@ -29,7 +36,7 @@ function StopEvidence({stop,locale}){
     {authorityCited&&<ProvenanceBadge tier="authority" locale={locale} short/>}
     <div>
       <h4>{recordName(record,locale)}</h4>
-      {record?.date&&<small>{dateLabel(record.date)}</small>}
+      {record?.date&&<small>{dateLabel(record.date,locale)}</small>}
       <p>{text(record?.summary||record?.description,locale)||''}</p>
       {citations.length>0&&<section className="trail-stop-sources"><strong>{locale==='kn'?'ಆಕರಗಳು':'Sources'}</strong>{citations.map((citation,index)=>{const source=sourceById.get(citation.sourceId);return <span className="explorer-citation" key={`${citation.sourceId}-${index}`}>{source?.url?<a href={source.url} target="_blank" rel="noreferrer">{text(source.title,locale)||citation.sourceId} ↗</a>:<strong>{text(source?.title,locale)||citation.sourceId}</strong>}<ProvenanceBadge tier={sourceTiers.get(citation.sourceId)} locale={locale} short/>{citation.locator&&<small>{citation.locator}</small>}</span>})}</section>}
       {deepLink&&<a className="trail-deep-link" href={deepLink}>{locale==='kn'?'ಅನ್ವೇಷಣೆಯಲ್ಲಿ ಮುಂದುವರಿಸಿ':'Open in explorer'} ↗</a>}
