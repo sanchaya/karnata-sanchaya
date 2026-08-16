@@ -24,6 +24,7 @@ const DistrictHistoryExplorer=lazy(()=>import('./DistrictHistoryExplorer'))
 const PeopleExplorer=lazy(()=>import('./PeopleExplorer'))
 const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
+const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 const socialLinks=[
   ['YouTube',import.meta.env.VITE_SOCIAL_YOUTUBE_URL],
@@ -168,6 +169,11 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
       tourStep('.audit-map-inscriptions','ಶಾಸನ ಭೂಪಟ · ಜಿಲ್ಲಾವಾರು ಗುರುತುಗಳನ್ನು ನೋಡಿ','The map separates mapped inscriptions from dashed candidates awaiting human review.'),
       tourStep('.inscription-audit-filters','ಜಿಲ್ಲಾ ಶೋಧಕಗಳು · ಪರಿಶೀಲನಾ ಪಾಸ್ ಆಯ್ಕೆಮಾಡಿ','Switch between seeded, candidate-identified and unassessed district batches.'),
       tourStep('.inscription-audit-grid','ಜಿಲ್ಲಾ ಶಾಸನ ಪಟ್ಟಿ · ಅಭ್ಯರ್ಥಿ ವಿವರ ತೆರೆಯಿರಿ','Open a district record to follow its corpus references, notes and candidate locations.'),
+    ],
+    trails:[
+      tourStep('.trail-grid','ಕಥಾಮಾರ್ಗಗಳು · ನಿರೂಪಣೆ ಆರಿಸಿ','Choose a curation-backed trail that walks Karnataka\u2019s history step by step.'),
+      tourStep('.trail-progress','ಹಂತಗಳ ಪ್ರಗತಿ · ಕಥೆಯಲ್ಲಿ ಚಲಿಸಿ','Jump between stops or read forward; every stop is rooted in the evidence ledger.'),
+      tourStep('.trail-narrative','ನಿರೂಪಣೆ ಮತ್ತು ಸಾಕ್ಷ್ಯ · ಆಕರಗಳನ್ನು ಪರಿಶೀಲಿಸಿ','Read the narrative, then open the citations and provenance behind each stop.'),
     ],
     evidence:[
       tourStep('.evidence-procedure','ಪರಿಶೀಲನಾ ವಿಧಾನ · ಕೆಲಸದ ಕ್ರಮ ತಿಳಿಯಿರಿ','Follow the evidence gates from assignment to transcription, translation, review and publication.'),
@@ -585,7 +591,7 @@ function InscriptionAuditSection({locale,t,onChooseInscription,districtGeojson})
 }
 
 export default function App(){
-  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','evidence','research','community','profile','about']
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','trails','evidence','research','community','profile','about']
   const normalizeView=hash=>hash==='history'?'district-history':hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -720,7 +726,7 @@ export default function App(){
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const primaryNavItems=[['atlas',t.atlas],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
+  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
   const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${view===key?'active':''}`.trim()} aria-current={view===key?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(key===view){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   if(admin)return <Suspense fallback={<PortalFallback/>}><Admin onClose={closeAdmin} locale={locale} onLocaleChange={changeLocale}/></Suspense>
@@ -771,6 +777,7 @@ export default function App(){
     {view==='freedom'&&<Suspense fallback={<PortalFallback/>}><FreedomMovementExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>}
     {view==='literature'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="literature" locale={locale} mapTheme={mapTheme} onOpenAtlas={item=>{chooseWork(item);navigateView('atlas')}}/></Suspense>}
     {view==='epigraphy'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="epigraphy" locale={locale} mapTheme={mapTheme} isCommunityMember={Boolean(communityUser)} onOpenAtlas={item=>{chooseInscription(inscriptionById.get(item.id)||item);navigateView('atlas')}}/></Suspense>}
+    {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
     {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} profileOnly onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
