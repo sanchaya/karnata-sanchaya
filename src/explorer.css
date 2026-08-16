@@ -32,6 +32,8 @@
 .epigraphy-collection-links span{display:inline-flex;align-items:center;gap:7px;font-size:12px}
 .epigraphy-collection-links a{color:#3f37c9;text-decoration:none}
 .epigraphy-collection-links a:hover{text-decoration:underline}
+.id-corpus{margin-top:4px}
+.id-corpus .epigraphy-volume-list small{background:#eef3fa;border-color:#c8d6ec;color:#35507c}
 .explorer-actions{display:flex;align-items:center;justify-content:space-between;margin:22px 0 12px}
 .explorer-actions button,.detail-actions button,.related-record{border:1px solid #cfd3e1;background:#fff;padding:9px 12px;border-radius:7px;cursor:pointer}
 .explorer-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,390px);gap:20px;align-items:start}
