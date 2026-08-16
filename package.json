@@ -10,6 +10,7 @@
     "db:migrate": "node server/migrate.js",
     "db:sync-dataset": "node scripts/sync-dataset.mjs",
     "import:patrika": "node scripts/import-patrika.mjs",
+    "audit:freedom-fighters": "node scripts/audit-freedom-fighters.mjs",
     "admin:create": "node server/create-admin.js",
     "backup:live": "sudo ./scripts/backup-live.sh",
     "export:approved": "node scripts/export-approved.mjs",

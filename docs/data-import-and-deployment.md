@@ -89,6 +89,7 @@ These are intentionally source-specific and are not all run on every deploy:
 | `npm run import:patrika` | Patrika Sanchaya newspapers/magazines CSV | The catalogue CSV changes |
 | `node scripts/import-wikimedia-people.mjs` | Refresh Wikimedia people candidates | A reviewed source export is supplied |
 | `node scripts/import-freedom-fighters.mjs` | Refresh freedom-fighter CSVs | Master/source CSVs change; pass both CSV paths when needed |
+| `npm run audit:freedom-fighters` | Measure freedom-fighter coverage across all 31 current districts | After imports, curated additions, reviews, or a MariaDB/static release update |
 | `python3 scripts/import-bengaluru-kml.py` | Rebuild Bengaluru inscription candidates | The KML changes |
 | `python3 scripts/import-wikipedia-heritage.py` | Refresh heritage discovery leads | A deliberate research refresh is approved |
 | `node scripts/discover-pending-heritage-pages.mjs` | Discover possible Wikipedia pages for pending heritage leads | Discovery only; never treat output as verified |
@@ -103,6 +104,14 @@ They are research tooling, not deployment prerequisites. Inspect `--help` or
 the first lines of a script before running it on a new machine. Never run an
 importer against production MariaDB directly; commit and validate the seed
 first.
+
+For Internet Archive name research, follow
+[`internet-archive-freedom-fighter-research.md`](internet-archive-freedom-fighter-research.md).
+Add a discovered book as a `sources` record in Admin, then attach the printed
+page locator to a person and its district association. `_djvu.txt` and HOCR
+matches locate candidate pages only; they must not be imported directly as
+verified people. The reviewed Admin save is permanent in MariaDB and reaches
+the public static atlas through the normal approved export/release workflow.
 
 ## 4. Validate and persist the repository seed in MariaDB
 
