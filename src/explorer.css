@@ -16,6 +16,22 @@
 .evidence-banner span{display:flex;align-items:center;gap:6px}
 .evidence-banner i{width:11px;height:11px;border-radius:50%;background:#4361ee}
 .evidence-banner i.candidate{background:#fff;border:2px dashed #c27a27}
+.epigraphy-corpus{margin:16px 0 6px;padding:16px;background:#f7f8fb;border:1px solid #e4e6ee;border-radius:12px}
+.epigraphy-corpus-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.epigraphy-corpus-head strong{font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+.epigraphy-corpus-head p{max-width:56ch;margin:0;font-size:12px;color:#5a6075;line-height:1.5}
+.epigraphy-volume-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:14px}
+.epigraphy-volume-list article{background:#fff;border:1px solid #e2e5ee;border-radius:10px;padding:12px}
+.epigraphy-volume-list header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.epigraphy-volume-list a{font-weight:700;color:#3f37c9;text-decoration:none}
+.epigraphy-volume-list a:hover{text-decoration:underline}
+.epigraphy-volume-list p{margin:8px 0 0;font-size:12px;line-height:1.5}
+.epigraphy-volume-list small{display:block;margin-top:8px;padding:7px 9px;background:#fbf4e8;border:1px solid #ecd9b3;border-radius:7px;font-size:11px;color:#86621a;line-height:1.45}
+.epigraphy-collection-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px dashed #dce0ea}
+.epigraphy-collection-links strong{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#5a6075;margin-right:4px}
+.epigraphy-collection-links span{display:inline-flex;align-items:center;gap:7px;font-size:12px}
+.epigraphy-collection-links a{color:#3f37c9;text-decoration:none}
+.epigraphy-collection-links a:hover{text-decoration:underline}
 .explorer-actions{display:flex;align-items:center;justify-content:space-between;margin:22px 0 12px}
 .explorer-actions button,.detail-actions button,.related-record{border:1px solid #cfd3e1;background:#fff;padding:9px 12px;border-radius:7px;cursor:pointer}
 .explorer-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,390px);gap:20px;align-items:start}
