@@ -65,6 +65,8 @@ Atlas v0.27 adds the first mature P1 model foundations. Genealogy records explic
 
 Atlas v0.28 starts the P2 corpus expansion. The seed batch adds Kadamba and Western Ganga genealogy assertions, Vijayanagara and Badami Chalukya coinage leads, Adipurana/Gadayuddha/Vaddaradhane manuscript witness packets, Western Ganga and Rashtrakuta boundary evidence, and item-level edition packets for Alupa Udiyavara, Lobu Tua/Barus and Polonnaruwa Ayyavole inscriptions. These records improve exploration coverage but remain `needs-review` until item editions, images, translations, authority coordinates and catalogue specimens are independently verified.
 
+Atlas v0.28.1 deepens the inscription review queue with provisional edition packets for Talagunda, Gudnapur, Kappe Arabhatta, Begur, Atakur, Tyagada Brahmadeva, Lakkundi, Belur, Hampi Krishna Temple, Chandravalli, Doddahundi and Takuapa. These packets intentionally capture the next editorial work to do: resolve the exact corpus locator, line transcription, translation witness, photograph/licence status and authority coordinate before promotion.
+
 ## Literature and epigraphy explorer fields
 
 Atlas v0.15.2 treats public records and district research candidates as different evidence states. A candidate is not rendered as a mapped inscription until its place, date and item-level edition have been reviewed.
