@@ -17,6 +17,7 @@ const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', imp
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
+const evidenceStylesSource = await readFile(new URL('../src/evidence-workflow.css', import.meta.url), 'utf8')
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
 const explorerStylesSource = await readFile(new URL('../src/explorer.css', import.meta.url), 'utf8')
 const peopleStylesSource = await readFile(new URL('../src/people.css', import.meta.url), 'utf8')
@@ -140,7 +141,22 @@ test('the Evidence Workflow includes P2 inscription edition packet tasks', () =>
   for (const field of ['itemEdition','transcription','translation','photographs','authorityCoordinate']) {
     assert.match(evidenceSource, new RegExp(`${field}:\\{submissionType`), `${field} needs a task template`)
   }
-  assert.match(evidenceSource, /baseTasks=\[\.\.\.inscriptionTasks,\.\.\.editionTasks,\.\.\.literatureTasks\]/, 'P2 tasks must be included with existing evidence tasks')
+  assert.match(evidenceSource, /taskPools=\{epigraphy:\[\.\.\.inscriptionTasks,\.\.\.editionTasks\],literature:literatureTasks/, 'P2 inscription edition tasks must remain included with existing evidence tasks')
+})
+
+test('the Evidence Workflow exposes P2 material evidence task streams', () => {
+  for (const collection of ['coinRecords','manuscriptWitnesses','genealogicalRelations','boundaryEvidence','scriptEvolution']) {
+    assert.match(evidenceSource, new RegExp(`atlasData\\.${collection}`), `${collection} must feed the evidence workflow`)
+  }
+  for (const domain of ['coinage','manuscripts','genealogy','boundaries','scripts']) {
+    assert.match(evidenceSource, new RegExp(`['"]${domain}['"]`), `${domain} must be filterable as a task domain`)
+    assert.match(evidenceStylesSource, new RegExp(`\\.evidence-task\\.${domain}`), `${domain} tasks need a visible board accent`)
+  }
+  for (const field of ['catalogue','repositoryRecord','relationshipProof','sampleWitnesses']) {
+    assert.match(evidenceSource, new RegExp(`${field}:\\{submissionType`), `${field} needs a task template`)
+  }
+  assert.match(evidenceSource, /source-map-comparison/, 'boundary source-map comparison needs a task template')
+  assert.match(evidenceSource, /taskPools=\{epigraphy:\[\.\.\.inscriptionTasks,\.\.\.editionTasks\],literature:literatureTasks,coinage:coinTasks,manuscripts:manuscriptTasks,genealogy:genealogyTasks,boundaries:boundaryTasks,scripts:scriptTasks\}/, 'all P2 material streams must be included in the board task pool')
 })
 
 test('freedom fighters remain discoverable by cited district associations', () => {
