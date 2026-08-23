@@ -1,5 +1,6 @@
 const n=(en,kn)=>({en,kn})
 const d=(year,precision='year')=>({from:year,to:year,era:'CE',precision})
+const span=(from,to,precision='range')=>({from,to,era:'CE',precision})
 const review={status:'needs-review',reviewer:null,updatedAt:'2026-07-26'}
 
 export const eventSources=[
@@ -27,9 +28,41 @@ export const eventSources=[
   ,{id:'src-iseas-barus-inscriptions',type:'scholarly-book-chapter',title:n('Ancient and Medieval Tamil and Sanskrit Inscriptions from Sumatra','ಸುಮಾತ್ರಾದ ಪ್ರಾಚೀನ ಮತ್ತು ಮಧ್ಯಕಾಲೀನ ತಮಿಳು–ಸಂಸ್ಕೃತ ಶಾಸನಗಳು'),authors:['École française d’Extrême-Orient contributors','ISEAS Publishing'],year:null,url:'https://bookshop.iseas.edu.sg/component/get/10527',review:{...review,status:'reviewed'}}
 ]
 
+const externalPolityContext={
+  harsha:{date:span(606,647),capital:n('Kannauj / Thanesar','ಕನ್ನೌಜ್ / ಥಾನೇಶ್ವರ'),center:[79.92,27.05],color:'#7b5aa6',contextScope:'india',extent:[[74.5,24.8],[84.5,24.8],[84.5,30.8],[74.5,30.8]]},
+  pallava:{date:span(275,897),capital:n('Kanchipuram','ಕಾಂಚಿಪುರಂ'),center:[79.70,12.84],color:'#7d4c91',contextScope:'india',extent:[[78.0,11.4],[80.3,11.4],[80.3,14.1],[78.0,14.1]]},
+  chola:{date:span(848,1279),capital:n('Thanjavur / Gangaikonda Cholapuram','ತಂಜಾವೂರು / ಗಂಗೈಕೊಂಡ ಚೋಳಪುರಂ'),center:[79.13,10.79],color:'#a64231',contextScope:'india',extent:[[76.5,8.2],[81.4,8.2],[81.4,14.4],[76.5,14.4]]},
+  seuna:{date:span(1187,1317),capital:n('Devagiri','ದೇವಗಿರಿ'),center:[75.24,19.95],color:'#7f6a32',contextScope:'india',extent:[[72.8,16.4],[78.8,16.4],[78.8,21.4],[72.8,21.4]]},
+  pandya:{date:span(590,1345),capital:n('Madurai','ಮದುರೈ'),center:[78.12,9.93],color:'#9c4f72',contextScope:'india',extent:[[76.6,8.0],[79.8,8.0],[79.8,10.8],[76.6,10.8]]},
+  chera:{date:span(800,1124),capital:n('Mahodayapuram','ಮಹೋದಯಪುರಂ'),center:[76.20,10.20],color:'#4f8a5f',contextScope:'india',extent:[[74.8,8.4],[77.4,8.4],[77.4,11.7],[74.8,11.7]]},
+  'eastern-ganga':{date:span(493,1434),capital:n('Kalinganagara / Cuttack','ಕಳಿಂಗನಗರ / ಕಟಕ್'),center:[85.83,20.27],color:'#4d7d9a',contextScope:'india',extent:[[83.0,18.0],[87.8,18.0],[87.8,21.8],[83.0,21.8]]},
+  gajapati:{date:span(1434,1541),capital:n('Cuttack','ಕಟಕ್'),center:[85.88,20.46],color:'#466b9d',contextScope:'india',extent:[[81.8,17.8],[87.8,17.8],[87.8,22.2],[81.8,22.2]]},
+  'delhi-sultanate':{date:span(1206,1526),capital:n('Delhi','ದೆಹಲಿ'),center:[77.21,28.61],color:'#6b6f85',contextScope:'india',extent:[[73.0,24.0],[82.8,24.0],[82.8,31.0],[73.0,31.0]]},
+  'mughal-empire':{date:span(1526,1857),capital:n('Agra / Delhi','ಆಗ್ರಾ / ದೆಹಲಿ'),center:[77.21,28.61],color:'#7b5656',contextScope:'india',extent:[[68.5,21.0],[88.0,21.0],[88.0,34.0],[68.5,34.0]]},
+  bahmani:{date:span(1347,1527),capital:n('Kalaburagi, later Bidar','ಕಲಬುರಗಿ, ನಂತರ ಬೀದರ್'),center:[77.52,17.91],color:'#3d7569',contextScope:'india',extent:[[74.0,15.0],[80.2,15.0],[80.2,19.6],[74.0,19.6]]},
+  'adil-shahi':{date:span(1490,1686),capital:n('Vijayapura','ವಿಜಯಪುರ'),center:[75.71,16.83],color:'#8f6b3d',contextScope:'india',extent:[[73.8,15.0],[77.8,15.0],[77.8,18.5],[73.8,18.5]]},
+  'chitradurga-nayaka':{date:span(1588,1779),capital:n('Chitradurga','ಚಿತ್ರದುರ್ಗ'),center:[76.40,14.23],color:'#a06735',contextScope:'india',extent:[[75.5,13.6],[77.2,13.6],[77.2,15.1],[75.5,15.1]]},
+  'deccan-sultanates':{date:span(1490,1687),capital:n('Deccan successor courts','ದಖ್ಖನ್ ಉತ್ತರಾಧಿಕಾರಿ ಅರಮನೆಗಳು'),center:[76.8,17.2],color:'#6b607e',contextScope:'india',extent:[[73.8,14.8],[80.2,14.8],[80.2,19.8],[73.8,19.8]]},
+  'maratha-confederacy':{date:span(1674,1818),capital:n('Raigad / Pune','ರಾಯಗಡ / ಪುಣೆ'),center:[73.85,18.52],color:'#b06a32',contextScope:'india',extent:[[72.0,15.2],[78.5,15.2],[78.5,22.8],[72.0,22.8]]},
+  'hyderabad-state':{date:span(1724,1948),capital:n('Hyderabad','ಹೈದರಾಬಾದ್'),center:[78.49,17.39],color:'#557b68',contextScope:'india',extent:[[76.0,15.0],[81.0,15.0],[81.0,19.8],[76.0,19.8]]},
+  travancore:{date:span(1729,1949),capital:n('Thiruvananthapuram','ತಿರುವನಂತಪುರಂ'),center:[76.94,8.52],color:'#557a9d',contextScope:'india',extent:[[76.2,8.0],[77.6,8.0],[77.6,10.4],[76.2,10.4]]},
+  'madurai-nayak':{date:span(1529,1736),capital:n('Madurai','ಮದುರೈ'),center:[78.12,9.93],color:'#9d6a4d',contextScope:'india',extent:[[77.2,8.5],[79.3,8.5],[79.3,11.2],[77.2,11.2]]},
+  'thanjavur-maratha':{date:span(1674,1855),capital:n('Thanjavur','ತಂಜಾವೂರು'),center:[79.13,10.79],color:'#9b6840',contextScope:'india',extent:[[78.5,10.0],[79.9,10.0],[79.9,11.3],[78.5,11.3]]},
+  'tang-china':{date:span(618,907),capital:n("Chang'an",'ಚಾಂಗ್‌ಆನ್'),center:[108.94,34.34],color:'#8c6f28',contextScope:'world',extent:[[98.0,24.0],[121.0,24.0],[121.0,42.0],[98.0,42.0]]},
+  'ming-china':{date:span(1368,1644),capital:n('Nanjing / Beijing','ನಾಂಜಿಂಗ್ / ಬೀಜಿಂಗ್'),center:[116.41,39.90],color:'#8c573a',contextScope:'world',extent:[[98.0,20.0],[123.0,20.0],[123.0,43.0],[98.0,43.0]]},
+  'portuguese-india':{date:span(1505,1961),capital:n('Goa','ಗೋವಾ'),center:[73.83,15.50],color:'#2f7c9d',contextScope:'world',extent:[[72.8,14.8],[74.4,14.8],[74.4,16.2],[72.8,16.2]]},
+  'british-east-india-company':{date:span(1757,1858),capital:n('Calcutta / Madras / Bombay','ಕಲ್ಕತ್ತಾ / ಮದ್ರಾಸ್ / ಬೊಂಬಾಯಿ'),center:[88.36,22.57],color:'#5f6f87',contextScope:'india',extent:[[68.0,8.0],[92.0,8.0],[92.0,32.0],[68.0,32.0]]},
+  'british-india':{date:span(1858,1947),capital:n('Calcutta, later New Delhi','ಕಲ್ಕತ್ತಾ, ನಂತರ ನವದೆಹಲಿ'),center:[77.21,28.61],color:'#5d6d7f',contextScope:'india',extent:[[67.0,7.5],[97.0,7.5],[97.0,35.5],[67.0,35.5]]},
+  india:{date:span(1947,1973),capital:n('New Delhi','ನವ ದೆಹಲಿ'),center:[77.21,28.61],color:'#4361ee',contextScope:'india',extent:[[68.0,8.0],[97.0,8.0],[97.0,35.5],[68.0,35.5]]},
+  'timurid-empire':{date:span(1370,1507),capital:n('Samarkand / Herat','ಸಮರ್ಕಂದ್ / ಹೆರಾತ್'),center:[67.00,39.65],color:'#7e638a',contextScope:'world',extent:[[56.0,29.0],[75.0,29.0],[75.0,43.0],[56.0,43.0]]},
+  'zand-iran':{date:span(1751,1794),capital:n('Shiraz','ಶಿರಾಜ್'),center:[52.58,29.59],color:'#7a7f43',contextScope:'world',extent:[[45.0,25.0],[61.0,25.0],[61.0,38.0],[45.0,38.0]]},
+  'ottoman-empire':{date:span(1299,1922),capital:n('Istanbul','ಇಸ್ತಾಂಬುಲ್'),center:[28.98,41.01],color:'#7c5f4b',contextScope:'world',extent:[[20.0,28.0],[46.0,28.0],[46.0,48.0],[20.0,48.0]]},
+  'kingdom-france':{date:span(987,1792),capital:n('Paris','ಪ್ಯಾರಿಸ್'),center:[2.35,48.86],color:'#5c73a8',contextScope:'world',extent:[[-5.0,42.0],[8.0,42.0],[8.0,51.0],[-5.0,51.0]]}
+}
+
 export const externalPolities=[
   ['harsha','Empire of Harsha','ಹರ್ಷನ ಸಾಮ್ರಾಜ್ಯ'],['pallava','Pallava kingdom','ಪಲ್ಲವ ರಾಜ್ಯ'],['chola','Chola empire','ಚೋಳ ಸಾಮ್ರಾಜ್ಯ'],['seuna','Seuna (Yadava) kingdom','ಸೇವುಣ (ಯಾದವ) ರಾಜ್ಯ'],['pandya','Pandya kingdom','ಪಾಂಡ್ಯ ರಾಜ್ಯ'],['chera','Chera kingdom','ಚೇರ ರಾಜ್ಯ'],['eastern-ganga','Eastern Ganga dynasty','ಪೂರ್ವ ಗಂಗ ವಂಶ'],['gajapati','Gajapati Empire','ಗಜಪತಿ ಸಾಮ್ರಾಜ್ಯ'],['delhi-sultanate','Delhi Sultanate','ದೆಹಲಿ ಸುಲ್ತಾನರು'],['mughal-empire','Mughal Empire','ಮೊಘಲ್ ಸಾಮ್ರಾಜ್ಯ'],['bahmani','Bahmani Sultanate','ಬಹಮನಿ ಸುಲ್ತಾನರು'],['adil-shahi','Adil Shahi Sultanate','ಆದಿಲ್ ಶಾಹಿ ಸುಲ್ತಾನರು'],['chitradurga-nayaka','Nayakas of Chitradurga','ಚಿತ್ರದುರ್ಗದ ನಾಯಕರು'],['deccan-sultanates','Deccan Sultanates alliance','ದಖ್ಖನ್ ಸುಲ್ತಾನರ ಒಕ್ಕೂಟ'],['maratha-confederacy','Maratha Confederacy','ಮರಾಠ ಒಕ್ಕೂಟ'],['hyderabad-state','Hyderabad State / Nizam','ಹೈದರಾಬಾದ್ ಸಂಸ್ಥಾನ / ನಿಜಾಮ್'],['travancore','Kingdom of Travancore','ತ್ರಾವಂಕೂರು ರಾಜ್ಯ'],['madurai-nayak','Madurai Nayak kingdom','ಮದುರೈ ನಾಯಕ ರಾಜ್ಯ'],['thanjavur-maratha','Thanjavur Maratha kingdom','ತಂಜಾವೂರು ಮರಾಠ ರಾಜ್ಯ'],['tang-china','Tang-era China','ಟಾಂಗ್ ಕಾಲದ ಚೀನಾ'],['ming-china','Ming-era China','ಮಿಂಗ್ ಕಾಲದ ಚೀನಾ'],['portuguese-india','Portuguese Estado da Índia','ಪೋರ್ಚುಗೀಸ್ ಎಸ್ಟಾಡೊ ದ ಇಂಡಿಯಾ'],['british-east-india-company','East India Company','ಈಸ್ಟ್ ಇಂಡಿಯಾ ಕಂಪನಿ'],['british-india','British India','ಬ್ರಿಟಿಷ್ ಭಾರತ'],['india','Union of India','ಭಾರತ ಒಕ್ಕೂಟ'],['timurid-empire','Timurid Empire under Shah Rukh','ಶಾಹ್ ರುಖ್ ಅಧೀನದ ತಿಮೂರಿಡ್ ಸಾಮ್ರಾಜ್ಯ'],['zand-iran','Zand Iran','ಝಾಂಡ್ ಇರಾನ್'],['ottoman-empire','Ottoman Empire','ಒಟ್ಟೊಮನ್ ಸಾಮ್ರಾಜ್ಯ'],['kingdom-france','Kingdom of France','ಫ್ರಾನ್ಸ್ ರಾಜಸತ್ತೆ']
-].map(([id,en,kn])=>({id:`external-polity-${id}`,name:n(en,kn),type:'external-polity',citations:[],review:{...review}}))
+].map(([id,en,kn])=>({id:`external-polity-${id}`,name:n(en,kn),type:'external-polity',...(externalPolityContext[id]||{}),citations:[{sourceId:'src-prototype-boundaries',locator:'Contextual external polity span and schematic envelope; not a reviewed frontier'}],review:{...review}}))
 
 const event=(id,type,en,kn,year,point,summaryEn,summaryKn,participants,sourceId='src-asi-early-history',route=null,precision='year',extra={})=>({id:`event-${id}`,type,name:n(en,kn),date:d(year,precision),location:{type:'Point',coordinates:point,precision:'approximate'},route:route?{type:'LineString',coordinates:route,precision:'schematic'}:null,summary:n(summaryEn,summaryKn),participants,consequences:n('See the linked political timeline.','ಸಂಬಂಧಿತ ರಾಜಕೀಯ ಕಾಲರೇಖೆಯನ್ನು ನೋಡಿ.'),citations:[{sourceId,locator:'Overview; verify against event-specific epigraphy and scholarship'}],review:{...review},...extra})
 
