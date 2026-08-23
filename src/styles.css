@@ -122,7 +122,7 @@
 .governance-interpretation{border-left:3px dashed #9a6b24;background:#fff8e8;padding:.7rem .85rem;color:#55492f}
 
 /* Map-first mobile controls: detailed keys remain available without covering the map. */
-.mobile-overlay-toggle{display:none}.map-legend-content,.public-map-notice-content{display:contents}
+.mobile-overlay-toggle{display:none}.map-legend-toggle{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:30px;border:1px solid var(--sanchaya-border);border-radius:8px;background:rgba(255,255,255,.96);box-shadow:var(--sanchaya-shadow);padding:6px 9px;color:var(--sanchaya-blue);font:750 9px/1.15 Inter,"Noto Sans Kannada",sans-serif;cursor:pointer}.map-legend-toggle::after{content:'▴';font-size:8px;transition:transform .15s ease}.map-legend.is-minimized{padding:0;border:0;background:transparent;box-shadow:none}.map-legend.is-minimized .map-legend-toggle::after{content:'▾'}.map-legend.is-minimized .map-legend-content{display:none}.map-legend-content,.public-map-notice-content{display:contents}
 @media(max-width:1366px), (any-pointer:coarse){
   .map-legend,.public-map-notice{display:block;width:auto;max-width:none;padding:0;border:0;background:transparent;box-shadow:none}
   .map-legend{top:10px;right:10px}
