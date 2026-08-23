@@ -171,7 +171,7 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
 })
 
 test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated', () => {
-  assert.equal(atlasData.meta.schemaVersion, '0.28.0')
+  assert.equal(atlasData.meta.schemaVersion, '0.28.1')
   assert.ok(atlasData.polities.some(item => item.id === 'polity-alupa'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-keladi-ikkeri-nayaka'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-chitradurga-nayaka'))
@@ -335,7 +335,7 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   assert.ok(atlasData.coinRecords.length >= 4)
   assert.ok(atlasData.manuscriptWitnesses.length >= 5)
   assert.ok(atlasData.boundaryEvidence.length >= 5)
-  assert.ok(atlasData.inscriptionEditions.length >= 5)
+  assert.ok(atlasData.inscriptionEditions.length >= 17)
   for (const item of atlasData.genealogicalRelations) {
     assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
     assert.ok(personIds.has(item.toPersonId), `${item.id} has an unknown target person`)
@@ -370,4 +370,9 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   assert.equal(barusEdition?.itemEdition.status, 'located')
   assert.equal(atlasData.manuscriptWitnesses.find(item=>item.id==='manuscript-vaddaradhane-palm-leaf-witness-lead')?.date.from, 1434)
   assert.equal(atlasData.boundaryEvidence.find(item=>item.id==='boundary-evidence-rashtrakuta-kannauj-campaign-circa-800')?.evidenceKind, 'campaign-route')
+  for (const id of ['edition-inscription-talagunda','edition-inscription-atakur','edition-inscription-belur-foundation','edition-inscription-takuapa-tamil-guild']) {
+    const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
+    assert.equal(edition?.review.status, 'needs-review')
+    assert.equal(edition?.itemEdition.status, 'provisional')
+  }
 })
