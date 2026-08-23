@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','feudatoryRelations','administrativeDivisions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
 const PEOPLE_CANDIDATE_EVIDENCE=['identity','karnatakaConnection','bilingualName','lifeDates','roles','contributions','authorityCitations','imageLicense']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
@@ -144,6 +144,61 @@ export function validateAtlas(data) {
         if (!Array.isArray(record.placeIds)) add('error',collection,id,'placeIds','Administrative place links must be an array.')
         if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('error',collection,id,'description','Administrative packets require a bilingual scope note.')
         if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Administrative packets require at least one source lead.')
+      }
+      if (collection === 'genealogicalRelations') {
+        if (!['parent-child','sibling','spouse','adoption','dynastic-claim','succession-family-assertion'].includes(record.relationKind)) add('error',collection,id,'relationKind','Genealogy relation kind is invalid.')
+        if (!record.fromPersonId || !knownIds.has(record.fromPersonId)) add('error',collection,id,'fromPersonId','A valid source person is required.')
+        if (!record.toPersonId || !knownIds.has(record.toPersonId)) add('error',collection,id,'toPersonId','A valid target person is required.')
+        if (record.fromPersonId === record.toPersonId) add('error',collection,id,'toPersonId','A genealogy assertion cannot point to the same person.')
+        if (!record.polityId || !knownIds.has(record.polityId)) add('error',collection,id,'polityId','A valid dynasty or polity context is required.')
+        if (!['primary','secondary','derived','contested'].includes(record.evidenceLevel)) add('error',collection,id,'evidenceLevel','Genealogy evidence level is invalid.')
+        if (!['low','medium','high'].includes(record.confidence)) add('error',collection,id,'confidence','Genealogy confidence must be low, medium or high.')
+        if (!record.derivation?.en?.trim() || !record.derivation?.kn?.trim()) add('error',collection,id,'derivation','Genealogy assertions require a bilingual derivation note.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Genealogy assertions require at least one source or derivation lead.')
+      }
+      if (collection === 'boundaryEvidence') {
+        if (!record.extentId || !knownIds.has(record.extentId)) add('error',collection,id,'extentId','Boundary evidence requires a valid territorial extent.')
+        if (!record.polityId || !knownIds.has(record.polityId)) add('error',collection,id,'polityId','Boundary evidence requires a valid polity.')
+        if (!['source-map','inscription-cluster','administrative-unit','campaign-route','schematic-synthesis'].includes(record.evidenceKind)) add('error',collection,id,'evidenceKind','Boundary evidence kind is invalid.')
+        if (!['low','medium','high'].includes(record.confidence)) add('error',collection,id,'confidence','Boundary evidence confidence must be low, medium or high.')
+        if (!['exact','approximate','schematic','unresolved'].includes(record.geometryStatus)) add('error',collection,id,'geometryStatus','Boundary geometry status is invalid.')
+        if (!Array.isArray(record.requiredEvidence) || record.requiredEvidence.length===0) add('error',collection,id,'requiredEvidence','Boundary evidence needs required evidence gates.')
+        if (!Array.isArray(record.completedEvidence) || !Array.isArray(record.blockingEvidence)) add('error',collection,id,'evidenceLists','Boundary completed and blocking evidence must be arrays.')
+        if (record.blockingEvidence.some(field=>!record.requiredEvidence.includes(field))) add('error',collection,id,'blockingEvidence','Boundary blockers must come from required evidence.')
+        if (!record.methodology?.en?.trim() || !record.methodology?.kn?.trim()) add('error',collection,id,'methodology','Boundary evidence requires a bilingual methodology note.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Boundary evidence requires citations.')
+      }
+      if (collection === 'coinRecords') {
+        if (!['dynastic-coinage-lead','catalogued-coin','hoard-record','mint-record','contested-origin-coinage-lead'].includes(record.coinKind)) add('error',collection,id,'coinKind','Coin record kind is invalid.')
+        if (!record.polityId || !knownIds.has(record.polityId)) add('error',collection,id,'polityId','Coin records require a valid polity.')
+        if (!record.placeId || !knownIds.has(record.placeId)) add('error',collection,id,'placeId','Coin records require a valid findspot or regional context place.')
+        if (record.weightGrams != null && (!Number.isFinite(record.weightGrams) || record.weightGrams <= 0)) add('error',collection,id,'weightGrams','Coin weight must be a positive number when supplied.')
+        if (record.diameterMm != null && (!Number.isFinite(record.diameterMm) || record.diameterMm <= 0)) add('error',collection,id,'diameterMm','Coin diameter must be a positive number when supplied.')
+        if (!record.obverse?.en?.trim() || !record.obverse?.kn?.trim() || !record.reverse?.en?.trim() || !record.reverse?.kn?.trim()) add('error',collection,id,'obverse/reverse','Coin records require bilingual obverse and reverse notes.')
+        if (!record.findspot?.placeId || !knownIds.has(record.findspot.placeId) || !['exact','site','regional-context','unknown'].includes(record.findspot.certainty)) add('error',collection,id,'findspot','Coin findspot context is missing or invalid.')
+        if (!record.image?.status || !['available','missing','restricted','unlicensed'].includes(record.image.status)) add('error',collection,id,'image.status','Coin image status is invalid.')
+        if (!record.evidenceGates || ['catalogue','image','metal','weight','findspot'].some(field=>!['verified','located','provisional','unresolved','not-applicable'].includes(record.evidenceGates[field]?.status))) add('error',collection,id,'evidenceGates','Coin records require catalogue, image, metal, weight and findspot evidence gates.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Coin records require citations.')
+      }
+      if (collection === 'manuscriptWitnesses') {
+        if (!record.workId || !knownIds.has(record.workId)) add('error',collection,id,'workId','Manuscript witnesses require a valid work.')
+        if (!['physical-manuscript','printed-edition','digital-edition-lead','catalogue-entry'].includes(record.witnessKind)) add('error',collection,id,'witnessKind','Manuscript witness kind is invalid.')
+        if (!record.repository?.en?.trim() || !record.repository?.kn?.trim()) add('error',collection,id,'repository','Manuscript witnesses require a bilingual repository label.')
+        if (!record.language?.trim() || !record.script?.trim()) add('error',collection,id,'language/script','Manuscript witnesses require language and script.')
+        if (!['complete','fragmentary','excerpt','unknown'].includes(record.completeness)) add('error',collection,id,'completeness','Manuscript completeness is invalid.')
+        if (!['linked-lead','public','restricted','unresolved'].includes(record.access?.status)) add('error',collection,id,'access.status','Manuscript access status is invalid.')
+        if (record.access?.url && !/^https:\/\//.test(record.access.url)) add('error',collection,id,'access.url','Manuscript access URL must use HTTPS.')
+        if (!record.evidenceGates || ['repositoryRecord','shelfmark','editionComparison','license'].some(field=>!['verified','located','provisional','unresolved','not-applicable'].includes(record.evidenceGates[field]?.status))) add('error',collection,id,'evidenceGates','Manuscript witnesses require repository, shelfmark, edition-comparison and license gates.')
+      }
+      if (collection === 'inscriptionEditions') {
+        if (!record.inscriptionId || !knownIds.has(record.inscriptionId)) add('error',collection,id,'inscriptionId','Inscription editions require a valid inscription.')
+        if (!['item-edition-review','published-edition','translation-review','photograph-set'].includes(record.editionKind)) add('error',collection,id,'editionKind','Inscription edition kind is invalid.')
+        if (!record.language?.trim() || !record.script?.trim()) add('error',collection,id,'language/script','Inscription editions require language and script.')
+        if (!record.itemEdition?.series?.trim() || !['verified','located','provisional','unresolved'].includes(record.itemEdition.status)) add('error',collection,id,'itemEdition','Inscription editions require an edition series and status.')
+        if (!['not-started','aligned','partial','unresolved'].includes(record.textWitness?.lineAlignment)) add('error',collection,id,'textWitness.lineAlignment','Edition line alignment status is invalid.')
+        if (!['available','missing','restricted','unlicensed'].includes(record.photographSet?.status) || !Number.isInteger(record.photographSet.itemCount) || record.photographSet.itemCount < 0) add('error',collection,id,'photographSet','Photograph set status and count are required.')
+        if (!record.evidenceGates || ['itemEdition','transcription','translation','photographs','authorityCoordinate'].some(field=>!['verified','located','provisional','unresolved','not-applicable'].includes(record.evidenceGates[field]?.status))) add('error',collection,id,'evidenceGates','Inscription editions require item, text, translation, photograph and coordinate gates.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Inscription editions require citations.')
       }
       if (collection === 'scriptEvolution') {
         if (!record.scriptFamily?.trim()) add('error',collection,id,'scriptFamily','A script family label is required.')

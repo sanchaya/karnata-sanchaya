@@ -616,7 +616,7 @@ export const openDatasetCatalogue = [
     datasetKind: 'public-summary',
     access: 'static-json',
     path: 'data/open/atlas-summary.json',
-    includedCollections: ['polities', 'externalPolities', 'people', 'places', 'events', 'culturalHeritage', 'inscriptions', 'works', 'sources', 'relationships', 'feudatoryRelations', 'administrativeDivisions', 'scriptEvolution'],
+    includedCollections: ['polities', 'externalPolities', 'people', 'places', 'events', 'culturalHeritage', 'inscriptions', 'works', 'sources', 'relationships', 'feudatoryRelations', 'genealogicalRelations', 'administrativeDivisions', 'boundaryEvidence', 'coinRecords', 'manuscriptWitnesses', 'inscriptionEditions', 'scriptEvolution'],
     excludedFields: ['private reviewer notes', 'institution IDs', 'raw worklist JSON', 'unapproved contribution drafts'],
     description: n('A privacy-safe public export planned for GitHub Pages. It exposes stable IDs, bilingual names, dates, review status and citation IDs, not private moderation data.', 'GitHub Pages ಗಾಗಿ ಯೋಜಿಸಿದ ಗೌಪ್ಯತೆ-ಸುರಕ್ಷಿತ ಸಾರ್ವಜನಿಕ ರಫ್ತು. ಇದು ಸ್ಥಿರ ID, ದ್ವಿಭಾಷಾ ಹೆಸರು, ದಿನಾಂಕ, ಪರಿಶೀಲನಾ ಸ್ಥಿತಿ ಮತ್ತು citation IDಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸುತ್ತದೆ; ಖಾಸಗಿ moderation ದತ್ತಾಂಶವಲ್ಲ.'),
     citations: [],

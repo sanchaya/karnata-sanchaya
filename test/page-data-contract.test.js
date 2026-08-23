@@ -171,7 +171,7 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
 })
 
 test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated', () => {
-  assert.equal(atlasData.meta.schemaVersion, '0.26.0')
+  assert.equal(atlasData.meta.schemaVersion, '0.27.0')
   assert.ok(atlasData.polities.some(item => item.id === 'polity-alupa'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-keladi-ikkeri-nayaka'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-chitradurga-nayaka'))
@@ -328,4 +328,41 @@ test('international research additions keep attested links separate from unresol
   assert.ok(polonnaruwa?.citations.some(citation=>citation.sourceId==='src-pathmanathan-kingdom-jaffna'))
   assert.equal(malaysia?.evidenceLevel,'inferred')
   assert.equal(singapore?.evidenceLevel,'inferred')
+})
+
+test('P1 mature model foundations are explicit, linked and review-gated', () => {
+  assert.ok(atlasData.genealogicalRelations.length >= 3)
+  assert.ok(atlasData.coinRecords.length >= 2)
+  assert.ok(atlasData.manuscriptWitnesses.length >= 2)
+  assert.ok(atlasData.boundaryEvidence.length >= 2)
+  assert.ok(atlasData.inscriptionEditions.length >= 2)
+  for (const item of atlasData.genealogicalRelations) {
+    assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
+    assert.ok(personIds.has(item.toPersonId), `${item.id} has an unknown target person`)
+    assert.equal(item.review.status, 'needs-review')
+    assert.ok(['primary', 'secondary', 'derived', 'contested'].includes(item.evidenceLevel))
+    assert.ok(/review|proof|evidence/i.test(item.derivation.en), `${item.id} must explain whether it is final family-tree evidence`)
+  }
+  for (const item of atlasData.coinRecords) {
+    assert.ok(polityIds.has(item.polityId), `${item.id} has an unknown polity`)
+    assert.ok(placeById.has(item.placeId), `${item.id} has an unknown place`)
+    assert.equal(item.review.status, 'needs-review')
+    assert.ok(item.image.status, `${item.id} needs image status`)
+    assert.ok(['catalogue', 'image', 'metal', 'weight', 'findspot'].every(field => item.evidenceGates[field]), `${item.id} needs coin evidence gates`)
+  }
+  for (const item of atlasData.manuscriptWitnesses) {
+    assert.ok(workIds.has(item.workId), `${item.id} has an unknown work`)
+    assert.equal(item.review.status, 'needs-review')
+    assert.ok(['repositoryRecord', 'shelfmark', 'editionComparison', 'license'].every(field => item.evidenceGates[field]), `${item.id} needs manuscript evidence gates`)
+  }
+  for (const item of atlasData.boundaryEvidence) {
+    assert.ok(atlasData.territorialExtents.some(extent => extent.id === item.extentId), `${item.id} has an unknown extent`)
+    assert.equal(item.review.status, 'needs-review')
+    assert.ok(item.blockingEvidence.length, `${item.id} must retain unresolved boundary work`)
+  }
+  for (const item of atlasData.inscriptionEditions) {
+    assert.ok(inscriptionIds.has(item.inscriptionId), `${item.id} has an unknown inscription`)
+    assert.equal(item.review.status, 'needs-review')
+    assert.ok(['itemEdition', 'transcription', 'translation', 'photographs', 'authorityCoordinate'].every(field => item.evidenceGates[field]), `${item.id} needs edition evidence gates`)
+  }
 })

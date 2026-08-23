@@ -16,6 +16,11 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 | `inscriptions` | Epigraphic records or described clusters | `placeId`, `polityId` → `polities` or `externalPolities` |
 | `works` | Literary and scholarly works | `polityId`, external links |
 | `periodicals` | Patrika Sanchaya newspaper and magazine catalogue rows | source-row citation, publication place, publisher/editor, periodicity, language |
+| `genealogicalRelations` | Review-gated family-tree assertions | `fromPersonId`, `toPersonId`, `polityId` |
+| `boundaryEvidence` | Evidence packets behind territorial polygons and campaign-reach lines | `extentId`, `polityId` |
+| `coinRecords` | Numismatic catalogue, image, metal, weight and findspot records | `polityId`, `placeId`, `findspot.placeId` |
+| `manuscriptWitnesses` | Manuscript, print and digital-edition witnesses for literary works | `workId` |
+| `inscriptionEditions` | Item-edition, transcription, translation and photograph review packets | `inscriptionId` |
 | `sources` | Bibliographic evidence | Referenced by citations |
 | `heritageAudits` | District heritage candidates and authority evidence | `prioritySites`, protection checks |
 | `districtHistoryResearch` | District deep-history intake for prehistoric, settlement, foundation-stone and locality-history leads | `districtId`, `location`, `citations` |
@@ -55,6 +60,8 @@ Migration `007_research_feature_indexes.sql` prepares the live database for the 
 - evidence gates from inscription resolution packets, literary review workflows and promotion reviews.
 
 These tables support future MariaDB-backed search, graph exploration, assignment queues and reviewer dashboards. They are derived from the latest reviewed dataset revision and can be rebuilt; they must not be treated as separate public data exports.
+
+Atlas v0.27 adds the first mature P1 model foundations. Genealogy records explicitly separate derived succession-family assertions from final family-tree evidence. Coin records require catalogue, image, metal, weight and findspot gates. Manuscript witnesses carry repository, shelfmark, edition-comparison and licence gates. Boundary evidence records explain why a map polygon is still schematic. Inscription edition packets keep item edition, transcription, translation, photograph and authority-coordinate review separate.
 
 ## Literature and epigraphy explorer fields
 
