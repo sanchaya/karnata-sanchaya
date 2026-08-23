@@ -16,6 +16,26 @@
 .evidence-banner span{display:flex;align-items:center;gap:6px}
 .evidence-banner i{width:11px;height:11px;border-radius:50%;background:#4361ee}
 .evidence-banner i.candidate{background:#fff;border:2px dashed #c27a27}
+.corpus-review-queue{margin:0 0 16px;padding:16px;border:1px solid #dfe5dc;border-radius:12px;background:#f8fbf7}
+.corpus-review-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);gap:18px;align-items:start}
+.corpus-review-head h3{margin:2px 0 7px;font:650 23px Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-ink)}
+.corpus-review-head p:not(.eyebrow){margin:0;max-width:68ch;color:var(--sanchaya-muted);font-size:12px;line-height:1.55}
+.corpus-review-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.corpus-review-stats span{display:grid;gap:2px;min-height:58px;padding:10px;border:1px solid #dce7d8;border-radius:8px;background:#fff;color:#536b54;font-size:10px}
+.corpus-review-stats b{color:#2f7b45;font-size:20px}
+.corpus-gate-filters{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 12px}
+.corpus-gate-filters button{border:1px solid #d7e3d2;border-radius:99px;background:#fff;padding:7px 10px;color:#526a55;font-size:10px;font-weight:750;cursor:pointer}
+.corpus-gate-filters button.active{border-color:#2f7b45;background:#e6f4e9;color:#1f6932}
+.corpus-gate-filters span{margin-left:4px;color:#2f7b45}
+.corpus-review-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:9px}
+.corpus-review-card{display:grid;gap:5px;text-align:left;border:1px solid #dce4d9;border-radius:9px;background:#fff;padding:12px;color:var(--sanchaya-ink);cursor:pointer}
+.corpus-review-card:hover{border-color:#7eb88a;box-shadow:0 7px 20px rgba(47,123,69,.12)}
+.corpus-review-card>span{color:#526a55;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.corpus-review-card strong{font-size:13px;line-height:1.3}
+.corpus-review-card small,.corpus-review-card em,.corpus-review-card p{margin:0;color:var(--sanchaya-muted);font-size:10px;line-height:1.4}
+.corpus-review-card em{font-style:normal;color:#315f91}
+.corpus-review-card p b{color:#526a55}
+.corpus-review-more{display:block;margin-top:9px;color:#526a55;font-size:10px}
 .epigraphy-corpus{margin:16px 0 6px;padding:16px;background:#f7f8fb;border:1px solid #e4e6ee;border-radius:12px}
 .epigraphy-corpus-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .epigraphy-corpus-head strong{font-size:13px;text-transform:uppercase;letter-spacing:.05em}
@@ -94,6 +114,16 @@
 .resolution-row small{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#70768a}
 .resolution-row p{margin:5px 0;font-size:11px;line-height:1.45;color:#555b6e}
 .resolution-row a{font-size:10px}
+.edition-packet-detail{padding:13px;border:1px solid #dce7d8;border-radius:9px;background:#f8fbf7}
+.edition-packet-detail>p{margin:6px 0;color:var(--sanchaya-muted);font-size:12px;line-height:1.5}
+.edition-packet-detail dl{border-color:#dce7d8}
+.edition-gate-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:10px 0}
+.edition-gate-list span{display:grid;gap:2px;border:1px solid #e0e4df;border-radius:7px;background:#fff;padding:8px}
+.edition-gate-list b{font-size:10px}
+.edition-gate-list small{color:var(--sanchaya-muted);font-size:8px;text-transform:uppercase;letter-spacing:.06em}
+.edition-gate-list .located{border-color:#c8d0ff;background:#f6f8ff}
+.edition-gate-list .provisional{border-color:#ecd9b3;background:#fffaf1}
+.edition-gate-list .verified{border-color:#b7dbc9;background:#f3fbf7}
 .promotion-review{display:grid;gap:7px;margin-top:12px;padding:12px;border:1px solid #e5d5bc;border-radius:9px;background:#fffaf3}.promotion-review>div{display:flex;align-items:center;justify-content:space-between;gap:10px}.promotion-review span{color:#7f674e;font-size:8px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.promotion-review strong{border-radius:99px;padding:5px 8px;background:#f0dfc5;color:#875517;font-size:9px}.promotion-review.translation-review{border-color:#c8d0ff;background:#f7f8ff}.promotion-review.translation-review strong{background:var(--sanchaya-active);color:var(--sanchaya-blue)}.promotion-review.ready-for-promotion{border-color:#b7dbc9;background:#f3fbf7}.promotion-review.ready-for-promotion strong{background:#dff3e9;color:#177352}.promotion-review p{margin:0;color:var(--sanchaya-muted);font-size:10px;line-height:1.45}.promotion-review>small{color:#70768a;font-size:9px}
 .literary-review>p{font-size:11px;color:var(--sanchaya-muted)}.literary-review>small{display:block;margin-top:9px;color:#735d43;font-size:9px;line-height:1.5}
 .literary-review article{display:grid;grid-template-columns:10px 1fr auto;gap:7px;align-items:start;margin:7px 0;border:1px solid var(--sanchaya-border);border-radius:7px;padding:8px;background:#fff}.literary-review article i{width:8px;height:8px;margin-top:3px;border-radius:50%;background:#b06a1f}.literary-review article strong{font-size:10px}.literary-review article span{color:#765f46;font-size:8px}.literary-review article small{grid-column:2/-1;color:var(--sanchaya-muted);font-size:8px;line-height:1.45}.explorer-workflow-link{display:inline-flex;margin-top:8px;border-radius:7px;background:var(--sanchaya-blue);padding:8px 11px;color:#fff;font-size:10px;font-weight:750;text-decoration:none}
@@ -112,6 +142,8 @@
 @media(max-width:720px){.explorer-page{width:auto;margin:0;padding:28px 14px}
 .explorer-hero{display:block}
 .explorer-stats{margin-top:18px;overflow:auto}
+.corpus-review-head{grid-template-columns:1fr}
+.corpus-review-stats,.edition-gate-list{grid-template-columns:1fr 1fr}
 .explorer-toolbar{grid-template-columns:1fr 1fr}
 .explorer-search{grid-column:1/-1}
 .explorer-toolbar button{grid-column:1/-1}
