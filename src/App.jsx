@@ -396,6 +396,15 @@ function MapShareSync({onMapMove}){
   return null
 }
 
+function MapResizeOnMode({active}){
+  const map=useMap()
+  useEffect(()=>{
+    const timers=[0,120,320].map(delay=>window.setTimeout(()=>map.invalidateSize({pan:false}),delay))
+    return()=>timers.forEach(timer=>window.clearTimeout(timer))
+  },[map,active])
+  return null
+}
+
 const featureCenter=feature=>{
   const points=[]
   const collect=value=>{if(Array.isArray(value)&&value.length>=2&&Number.isFinite(value[0])&&Number.isFinite(value[1]))points.push(value);else if(Array.isArray(value))value.forEach(collect)}
@@ -802,6 +811,7 @@ export default function App(){
         {(layers.inscriptions||layers.researchCandidates)&&<div className={`public-map-notice ${reviewOptionsOpen?'mobile-open':''}`}><button className="mobile-overlay-toggle" aria-expanded={reviewOptionsOpen} onClick={()=>{setReviewOptionsOpen(open=>!open);setMapLegendOpen(false)}}>{t.reviewMapOptions}</button><div className="public-map-notice-content">{layers.inscriptions&&<label><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label>}{layers.researchCandidates&&<label><input type="checkbox" checked={showAllReviewCandidates} onChange={event=>setShowAllReviewCandidates(event.target.checked)}/><span>{t.showAllReviewCandidates}</span></label>}<small>{t.publicReviewNote}</small></div></div>}
         <MapContainer center={[atlasMapView.lat,atlasMapView.lng]} zoom={atlasMapView.zoom} minZoom={3} scrollWheelZoom>
           <MapViewport scope={scope} selectedEvent={selectedEvent} selectedTerritory={selectedTerritory} selectedCulture={selectedCulture} selectedWorkPosition={selectedWorkPosition} selectedPersonPosition={selectedPersonPosition} selectedInscription={selectedInscription} selectedSearchPlace={selectedSearchPlace} comparisonPositions={comparisonPositions} preserveInitialMapView={Boolean(initialShareState.map)}/>
+          <MapResizeOnMode active={mapOnlyMode}/>
           <MapShareSync onMapMove={position=>{setMapZoom(position.zoom);if(view==='atlas')replaceShareUrl({map:position})}}/>
           {layers.modern&&<TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>}
           <LocalizedMapLabels locale={locale} capitalIds={activeCapitalIds} districtGeojson={districtGeojson} showDistricts={layers.districts} suppressLabels={Boolean(selectedEvent||selectedTerritory||selectedCulture||selectedPerson||selectedWork||selectedInscription||selectedSearchPlace)}/>
