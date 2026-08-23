@@ -171,7 +171,7 @@ test('Atlas v0.21 bilateral political relations retain parties, routes and revie
 })
 
 test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated', () => {
-  assert.equal(atlasData.meta.schemaVersion, '0.27.0')
+  assert.equal(atlasData.meta.schemaVersion, '0.28.0')
   assert.ok(atlasData.polities.some(item => item.id === 'polity-alupa'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-keladi-ikkeri-nayaka'))
   assert.ok(atlasData.externalGovernancePhases.some(item => item.id === 'external-governance-chitradurga-nayaka'))
@@ -330,12 +330,12 @@ test('international research additions keep attested links separate from unresol
   assert.equal(singapore?.evidenceLevel,'inferred')
 })
 
-test('P1 mature model foundations are explicit, linked and review-gated', () => {
-  assert.ok(atlasData.genealogicalRelations.length >= 3)
-  assert.ok(atlasData.coinRecords.length >= 2)
-  assert.ok(atlasData.manuscriptWitnesses.length >= 2)
-  assert.ok(atlasData.boundaryEvidence.length >= 2)
-  assert.ok(atlasData.inscriptionEditions.length >= 2)
+test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
+  assert.ok(atlasData.genealogicalRelations.length >= 5)
+  assert.ok(atlasData.coinRecords.length >= 4)
+  assert.ok(atlasData.manuscriptWitnesses.length >= 5)
+  assert.ok(atlasData.boundaryEvidence.length >= 5)
+  assert.ok(atlasData.inscriptionEditions.length >= 5)
   for (const item of atlasData.genealogicalRelations) {
     assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
     assert.ok(personIds.has(item.toPersonId), `${item.id} has an unknown target person`)
@@ -365,4 +365,9 @@ test('P1 mature model foundations are explicit, linked and review-gated', () => 
     assert.equal(item.review.status, 'needs-review')
     assert.ok(['itemEdition', 'transcription', 'translation', 'photographs', 'authorityCoordinate'].every(field => item.evidenceGates[field]), `${item.id} needs edition evidence gates`)
   }
+  const barusEdition=atlasData.inscriptionEditions.find(item=>item.id==='edition-inscription-lobu-tua-barus')
+  assert.equal(barusEdition?.itemEdition.number, '13')
+  assert.equal(barusEdition?.itemEdition.status, 'located')
+  assert.equal(atlasData.manuscriptWitnesses.find(item=>item.id==='manuscript-vaddaradhane-palm-leaf-witness-lead')?.date.from, 1434)
+  assert.equal(atlasData.boundaryEvidence.find(item=>item.id==='boundary-evidence-rashtrakuta-kannauj-campaign-circa-800')?.evidenceKind, 'campaign-route')
 })

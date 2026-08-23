@@ -63,6 +63,8 @@ These tables support future MariaDB-backed search, graph exploration, assignment
 
 Atlas v0.27 adds the first mature P1 model foundations. Genealogy records explicitly separate derived succession-family assertions from final family-tree evidence. Coin records require catalogue, image, metal, weight and findspot gates. Manuscript witnesses carry repository, shelfmark, edition-comparison and licence gates. Boundary evidence records explain why a map polygon is still schematic. Inscription edition packets keep item edition, transcription, translation, photograph and authority-coordinate review separate.
 
+Atlas v0.28 starts the P2 corpus expansion. The seed batch adds Kadamba and Western Ganga genealogy assertions, Vijayanagara and Badami Chalukya coinage leads, Adipurana/Gadayuddha/Vaddaradhane manuscript witness packets, Western Ganga and Rashtrakuta boundary evidence, and item-level edition packets for Alupa Udiyavara, Lobu Tua/Barus and Polonnaruwa Ayyavole inscriptions. These records improve exploration coverage but remain `needs-review` until item editions, images, translations, authority coordinates and catalogue specimens are independently verified.
+
 ## Literature and epigraphy explorer fields
 
 Atlas v0.15.2 treats public records and district research candidates as different evidence states. A candidate is not rendered as a mapped inscription until its place, date and item-level edition have been reviewed.
