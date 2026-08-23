@@ -101,3 +101,67 @@ export async function insertDatasetRevision(db,dataset,{revision,updatedBy=null}
   await db.query('INSERT INTO dataset_snapshots (id,schema_version,revision,content_sha256,dataset_json,updated_by) VALUES (?,?,?,?,?,?)',[id,dataset.meta?.schemaVersion||'unknown',revision,contentSha256,content,updatedBy])
   return {id,revision,contentSha256}
 }
+
+const INDEXED_COLLECTIONS=['polities','externalPolities','events','people','places','inscriptions','works','artifacts','territorialExtents','relationships','politicalRelations','collaborations','heritageAudits','districtHistoryResearch','inscriptionAudits','templeInventoryLeads','heritageInventoryLeads']
+const titleOf=value=>typeof value==='string'?{en:value,kn:null}:{en:value?.en||value?.kn||'Untitled record',kn:value?.kn||null}
+const dateOf=record=>record.date||record.period||record.activePeriod||record.temporalCoverage||{}
+const countryOf=record=>record.geographicScope?.countryCode||record.location?.countryCode||null
+const reviewStatusOf=record=>record.review?.status||record.reviewStatus||record.status||record.promotionStatus||'needs-review'
+const citationCountOf=record=>Array.isArray(record.citations)?record.citations.length:0
+const pushLink=(links,record,collection,linkType,target)=>{
+  if(!target)return
+  links.push([record.id,collection,linkType,target,null,reviewStatusOf(record),citationCountOf(record)])
+}
+
+function evidenceGateEntries(record,collection){
+  const gates=[]
+  const collect=(key,value)=>{
+    if(!value||typeof value!=='object')return
+    const status=typeof value==='string'?value:value.status||value.state||value.reviewStatus
+    if(!status)return
+    gates.push([record.id,collection,key,status,value.sourceId||value.source?.sourceId||null,value.locator||value.source?.locator||null])
+  }
+  for(const [key,value] of Object.entries(record.evidenceGates||record.resolution||{}))collect(key,value)
+  for(const [key,value] of Object.entries(record.reviewWorkflow||{}))collect(key,value)
+  for(const [key,value] of Object.entries(record.promotionReview||{}))collect(key,value)
+  return gates
+}
+
+function linkEntries(record,collection){
+  const links=[]
+  pushLink(links,record,collection,'capital',record.capitalId)
+  pushLink(links,record,collection,'place',record.placeId)
+  pushLink(links,record,collection,'polity',record.polityId)
+  for(const id of record.creatorIds||[])pushLink(links,record,collection,'creator',id)
+  for(const id of record.peopleIds||[])pushLink(links,record,collection,'person',id)
+  for(const id of record.eventIds||[])pushLink(links,record,collection,'event',id)
+  for(const item of record.participants||[])pushLink(links,record,collection,'participant',item.id||item.entityId)
+  for(const item of record.parties||[])pushLink(links,record,collection,'party',item.id||item.entityId)
+  for(const item of record.placeAssociations||[])pushLink(links,record,collection,item.kind||'place-association',item.placeId)
+  if(record.fromId&&record.toId){pushLink(links,record,collection,'from',record.fromId);pushLink(links,record,collection,record.type||'relationship',record.toId)}
+  return links
+}
+
+export async function refreshResearchIndexes(db,dataset){
+  const schemaVersion=dataset.meta?.schemaVersion||'unknown'
+  const records=[]
+  const links=[]
+  const gates=[]
+  for(const collection of INDEXED_COLLECTIONS){
+    for(const record of dataset[collection]||[]){
+      if(!record?.id)continue
+      const title=titleOf(record.name||record.title||record.label)
+      const date=dateOf(record)
+      records.push([record.id,collection,record.type||record.kind||record.category||null,title.en,title.kn,date.from??null,date.to??null,date.precision||null,reviewStatusOf(record),countryOf(record),record.geographicScope?.outsideKarnataka?1:0,schemaVersion,JSON.stringify(record)])
+      links.push(...linkEntries(record,collection))
+      gates.push(...evidenceGateEntries(record,collection))
+    }
+  }
+  await db.query('DELETE FROM research_evidence_gates')
+  await db.query('DELETE FROM research_entity_links')
+  await db.query('DELETE FROM research_record_index')
+  for(const record of records)await db.query('INSERT INTO research_record_index (record_id,collection_name,record_type,title_en,title_kn,date_from,date_to,date_precision,review_status,country_code,outside_karnataka,schema_version,payload_json) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',record)
+  for(const link of links)await db.query('INSERT INTO research_entity_links (source_record_id,source_collection,link_type,target_record_id,target_collection,review_status,citation_count) VALUES (?,?,?,?,?,?,?)',link)
+  for(const gate of gates)await db.query('INSERT INTO research_evidence_gates (record_id,collection_name,gate_key,gate_status,source_id,locator) VALUES (?,?,?,?,?,?)',gate)
+  return {records:records.length,links:links.length,gates:gates.length}
+}
