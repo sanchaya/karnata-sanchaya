@@ -69,8 +69,8 @@ Object.assign(messages.en,{bce:'BCE',researchCandidate:'Research candidate · no
 
 Object.assign(messages.kn,{dataDepth:'ದತ್ತಾಂಶ ವ್ಯಾಪ್ತಿ',publicRecords:'ದಾಖಲೆಗಳು',publicResearchLeads:'ಸಂಶೋಧನಾ ಸುಳಿವುಗಳು',publicSources:'ಆಕರಗಳು',publicRelationships:'ಸಂಬಂಧಗಳು'})
 Object.assign(messages.en,{dataDepth:'Dataset depth',publicRecords:'records',publicResearchLeads:'research leads',publicSources:'sources',publicRelationships:'relationships'})
-Object.assign(messages.kn,{mapLegend:'ಸೂಚಿ',reviewMapOptions:'ಪರಿಶೀಲನಾ ಪದರಗಳು'})
-Object.assign(messages.en,{mapLegend:'Legend',reviewMapOptions:'Review layers'})
+Object.assign(messages.kn,{mapLegend:'ಸೂಚಿ',showMapLegend:'ಸೂಚಿ ತೋರಿಸಿ',minimizeMapLegend:'ಸೂಚಿ ಚಿಕ್ಕದಾಗಿಸಿ',reviewMapOptions:'ಪರಿಶೀಲನಾ ಪದರಗಳು'})
+Object.assign(messages.en,{mapLegend:'Legend',showMapLegend:'Show legend',minimizeMapLegend:'Minimize legend',reviewMapOptions:'Review layers'})
 Object.assign(messages.kn,{heritageInventoryProtection:'ರಕ್ಷಣಾ / ಪಟ್ಟಿ ಹಂತ',heritageInventoryDistrict:'ಜಿಲ್ಲೆ',heritageInventoryProtectionLabels:{all:'ಎಲ್ಲ ಹಂತಗಳು',unesco:'ಯುನೆಸ್ಕೋ ವಿಶ್ವ ಪರಂಪರೆ',national:'ರಾಷ್ಟ್ರೀಯ ಮಹತ್ವದ ಸ್ಮಾರಕ',state:'ರಾಜ್ಯ ಸಂರಕ್ಷಿತ ಸ್ಮಾರಕ',local:'ಸ್ಥಳೀಯ ಪರಂಪರೆ ಮಾನ್ಯತೆ',institutional:'ಸಂಸ್ಥೆಯ ಪರಂಪರೆ','research-lead':'ಸಂಶೋಧನಾ ಸುಳಿವು',unknown:'ಮಾನ್ಯತೆ ತಿಳಿದಿಲ್ಲ'},heritageRegistryId:'ಪಟ್ಟಿ ಸಂಖ್ಯೆ',heritageDesignationUnverified:'ಕಾನೂನು ಮಾನ್ಯತೆ ಪರಿಶೀಲಿಸಿಲ್ಲ'})
 Object.assign(messages.en,{heritageInventoryProtection:'Protection / register level',heritageInventoryDistrict:'District',heritageInventoryProtectionLabels:{all:'All levels',unesco:'UNESCO World Heritage',national:'Monument of National Importance',state:'State Protected Monument',local:'Local heritage designation',institutional:'Institutional heritage','research-lead':'Research lead',unknown:'Designation unknown'},heritageRegistryId:'Register ID',heritageDesignationUnverified:'Legal designation not yet verified'})
 

@@ -203,6 +203,9 @@ test('public map exposes review-pending information across mapped categories', (
   assert.match(appSource, /pending:true/, 'review candidates must retain a visibly pending marker style')
   assert.match(appSource, /className="mobile-overlay-toggle"/, 'dense map overlays must expose compact mobile toggles')
   assert.match(appSource, /aria-expanded=\{mapLegendOpen\}/, 'the mobile map legend must expose its open state')
+  assert.match(appSource, /showMapLegend/, 'the atlas map legend must provide a visible restore control when minimized')
+  assert.match(appSource, /minimizeMapLegend/, 'the atlas map legend must provide a visible minimize control')
+  assert.match(stylesSource, /\.map-legend\.is-minimized \.map-legend-content\{display:none\}/, 'the minimized atlas legend must hide only the legend panel content')
   assert.match(appSource, /aria-expanded=\{reviewOptionsOpen\}/, 'the mobile review options must expose their open state')
 })
 
