@@ -21,6 +21,7 @@ export const objectKindFor = item => {
   if (item.storyKind === 'inscription' || item.kind === 'inscription' || item.evidenceKind === 'inscription') return 'inscription'
   if (item.storyKind === 'literature' || item.kind === 'work' || item.category === 'literature') return 'literature'
   if (item.storyKind === 'person' || item.kind === 'person') return 'person'
+  if (item.storyKind === 'external-kingdom') return 'territory'
   if (item.storyKind === 'territory') return 'territory'
   if (item.storyKind === 'reign') return 'reign'
   if (item.storyKind === 'artifact' || item.kind === 'artifact' || item.artifactKind) return 'artifact'

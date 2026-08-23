@@ -90,6 +90,16 @@ test('timeline categories coordinate with their required map layers', () => {
   assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords,reviewCandidateId:story\.id\}\)/, 'opening a review candidate must focus and highlight its mapped location')
 })
 
+test('external kingdom context is optional on the map and timeline', () => {
+  assert.match(appSource, /const contextualExternalKingdoms=atlasData\.externalPolities\.filter\(polity=>polity\.date&&polity\.extent\)/, 'dated external polities must feed a contextual kingdom layer')
+  assert.match(appSource, /externalKingdoms:false/, 'external kingdoms must be hidden by default')
+  assert.match(appSource, /storyKind:'external-kingdom',storyCategory:'externalKingdoms'/, 'external kingdoms must appear as their own timeline story category')
+  assert.match(appSource, /layers\.externalKingdoms\?timelineStories:timelineStories\.filter\(story=>story\.storyCategory!=='externalKingdoms'\)/, 'the timeline must hide external kingdom stories when the layer is off')
+  assert.match(appSource, /layers\.externalKingdoms&&activeExternalKingdoms\.map/, 'the map must render external kingdom polygons only when enabled')
+  assert.match(appSource, /externalKingdoms:'externalKingdoms'/, 'choosing the external kingdom category must enable the map layer')
+  assert.match(stylesSource, /\.external-context-boundary/, 'external context outlines need a distinct visual style')
+})
+
 test('people and keyboard timeline traversal stay connected to map selection', () => {
   assert.match(appSource, /relations:atlasData\.politicalRelations\.filter/, 'people must inherit bilateral relation context')
   assert.match(appSource, /layers\.people&&activePeople\.map/, 'people with mapped context must be individually clickable on the atlas')
