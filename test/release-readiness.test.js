@@ -135,6 +135,14 @@ test('the Epigraphy Explorer exposes the P2 corpus review queue', () => {
   assert.match(explorerStylesSource, /\.corpus-review-queue/, 'the P2 queue needs dedicated layout styles')
 })
 
+test('the Evidence Workflow includes P2 inscription edition packet tasks', () => {
+  assert.match(evidenceSource, /editionTasks=atlasData\.inscriptionEditions\.flatMap/, 'P2 inscription edition packets must feed the evidence board')
+  for (const field of ['itemEdition','transcription','translation','photographs','authorityCoordinate']) {
+    assert.match(evidenceSource, new RegExp(`${field}:\\{submissionType`), `${field} needs a task template`)
+  }
+  assert.match(evidenceSource, /baseTasks=\[\.\.\.inscriptionTasks,\.\.\.editionTasks,\.\.\.literatureTasks\]/, 'P2 tasks must be included with existing evidence tasks')
+})
+
 test('freedom fighters remain discoverable by cited district associations', () => {
   assert.match(peopleSource,/focus==='freedom'/, 'people must expose a dedicated freedom-fighter view')
   assert.match(peopleSource,/person\.districtIds\.includes\(district\)/, 'district filtering must include every researched activity district, not only the map anchor')
