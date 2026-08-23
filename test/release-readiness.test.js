@@ -122,6 +122,16 @@ test('the People Explorer exposes the complete linked research workflow', () => 
   assert.match(peopleSource,/searchParams\.set\('person'/, 'individual profiles must be shareable through the URL')
 })
 
+test('the Epigraphy Explorer exposes the P2 corpus review queue', () => {
+  assert.match(explorerSource, /CorpusReviewQueue/, 'P2 inscription edition packets need a visible review queue')
+  assert.match(explorerSource, /atlasData\.inscriptionEditions\.map/, 'the queue must derive from inscription edition packets')
+  for (const gate of ['itemEdition','transcription','translation','photographs','authorityCoordinate']) {
+    assert.match(explorerSource, new RegExp(gate), `${gate} must remain filterable or visible in the queue`)
+  }
+  assert.match(explorerSource, /EditionPacket/, 'opening a queue record must expose its edition packet detail')
+  assert.match(explorerStylesSource, /\.corpus-review-queue/, 'the P2 queue needs dedicated layout styles')
+})
+
 test('freedom fighters remain discoverable by cited district associations', () => {
   assert.match(peopleSource,/focus==='freedom'/, 'people must expose a dedicated freedom-fighter view')
   assert.match(peopleSource,/person\.districtIds\.includes\(district\)/, 'district filtering must include every researched activity district, not only the map anchor')
