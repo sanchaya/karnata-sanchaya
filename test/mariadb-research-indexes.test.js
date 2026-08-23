@@ -33,13 +33,24 @@ test('MariaDB research indexes are rebuilt from the reviewed dataset snapshot', 
       },
       review: { status: 'needs-review' },
     }],
+    genealogicalRelations: [{
+      id: 'genealogy-test',
+      name: { en: 'Test genealogy', kn: 'ಪರೀಕ್ಷಾ ವಂಶ ಸಂಬಂಧ' },
+      fromPersonId: 'person-a',
+      toPersonId: 'person-b',
+      relationKind: 'parent-child',
+      confidence: 'low',
+      evidenceLevel: 'derived',
+      review: { status: 'needs-review' },
+    }],
   })
 
-  assert.equal(result.records, 3)
-  assert.equal(result.links, 3)
+  assert.equal(result.records, 4)
+  assert.equal(result.links, 5)
   assert.equal(result.gates, 1)
   assert.equal(calls.filter(call => call.sql.startsWith('DELETE FROM')).length, 3)
   assert.ok(calls.some(call => call.sql.includes('INSERT INTO research_record_index') && call.args[0] === 'place-test' && call.args[10] === 1))
   assert.ok(calls.some(call => call.sql.includes('INSERT INTO research_entity_links') && call.args[2] === 'capital' && call.args[3] === 'place-test'))
+  assert.ok(calls.some(call => call.sql.includes('INSERT INTO research_entity_links') && call.args[2] === 'from-person' && call.args[3] === 'person-a'))
   assert.ok(calls.some(call => call.sql.includes('INSERT INTO research_evidence_gates') && call.args[2] === 'transcription' && call.args[3] === 'unresolved'))
 })

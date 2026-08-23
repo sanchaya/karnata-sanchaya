@@ -4,7 +4,7 @@ import peopleCandidateCorpus from './seeds/wikimedia-people-candidates.json' wit
 
 const clone=value=>JSON.parse(JSON.stringify(value))
 export const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
-const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const ADDITIVE_ARRAY_FIELDS=new Set(['citations','alternateUrls','aliases','roles'])
 
 // Repository research passes may add evidence to records that already exist in
@@ -102,7 +102,7 @@ export async function insertDatasetRevision(db,dataset,{revision,updatedBy=null}
   return {id,revision,contentSha256}
 }
 
-const INDEXED_COLLECTIONS=['polities','externalPolities','events','people','places','inscriptions','works','artifacts','territorialExtents','relationships','politicalRelations','collaborations','heritageAudits','districtHistoryResearch','inscriptionAudits','templeInventoryLeads','heritageInventoryLeads']
+const INDEXED_COLLECTIONS=['polities','externalPolities','events','people','places','inscriptions','works','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','territorialExtents','relationships','politicalRelations','collaborations','heritageAudits','districtHistoryResearch','inscriptionAudits','templeInventoryLeads','heritageInventoryLeads']
 const titleOf=value=>typeof value==='string'?{en:value,kn:null}:{en:value?.en||value?.kn||'Untitled record',kn:value?.kn||null}
 const dateOf=record=>record.date||record.period||record.activePeriod||record.temporalCoverage||{}
 const countryOf=record=>record.geographicScope?.countryCode||record.location?.countryCode||null
@@ -132,6 +132,12 @@ function linkEntries(record,collection){
   pushLink(links,record,collection,'capital',record.capitalId)
   pushLink(links,record,collection,'place',record.placeId)
   pushLink(links,record,collection,'polity',record.polityId)
+  pushLink(links,record,collection,'from-person',record.fromPersonId)
+  pushLink(links,record,collection,'to-person',record.toPersonId)
+  pushLink(links,record,collection,'work',record.workId)
+  pushLink(links,record,collection,'inscription',record.inscriptionId)
+  pushLink(links,record,collection,'extent',record.extentId)
+  pushLink(links,record,collection,'findspot',record.findspot?.placeId)
   for(const id of record.creatorIds||[])pushLink(links,record,collection,'creator',id)
   for(const id of record.peopleIds||[])pushLink(links,record,collection,'person',id)
   for(const id of record.eventIds||[])pushLink(links,record,collection,'event',id)
