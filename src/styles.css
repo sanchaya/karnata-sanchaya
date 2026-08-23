@@ -158,3 +158,16 @@
 /* Keep the people layer with the other sidebar controls instead of covering the map. */
 .layers .people-map-toggle input{accent-color:#b26a22}
 .kingdom-overlap-note{display:grid;gap:4px;margin:0 0 10px;padding:9px 10px;border:1px solid #d7c7a6;border-radius:8px;background:#fff9e9;color:var(--sanchaya-muted);font-size:11px}.kingdom-overlap-note strong{font-size:10px;color:#8b5a22;text-transform:uppercase;letter-spacing:.06em}.kingdom-overlap-note span{line-height:1.4}
+/* Full-map mode uses fixed control lanes so overlay buttons do not collide. */
+.atlas-map-only-main .map-only-toggle{top:14px;left:14px;z-index:870;max-width:min(180px,calc(50vw - 20px));white-space:normal}
+.atlas-map-only-main .map-theme-control{top:14px;left:150px;right:auto;z-index:860;max-width:calc(100vw - 430px)}
+.atlas-map-only-main .public-map-notice{top:14px;right:14px;left:auto;z-index:860}
+.atlas-map-only-main .map-legend{top:58px;right:14px;z-index:855}
+.atlas-map-only-main .map-only-controls{top:58px;left:14px;z-index:850;max-height:calc(100vh - 235px);overflow:auto}
+@media(max-width:720px){
+  .atlas-map-only-main .map-only-toggle{top:10px;left:10px;max-width:calc(50vw - 16px);padding:8px 10px;font-size:10px;line-height:1.2}
+  .atlas-map-only-main .public-map-notice{top:10px;right:10px;left:auto;max-width:calc(50vw - 16px)}
+  .atlas-map-only-main .map-theme-control{top:50px;left:10px;right:auto}
+  .atlas-map-only-main .map-legend{top:50px;right:10px}
+  .atlas-map-only-main .map-only-controls{top:92px;left:10px;width:min(300px,calc(100vw - 20px));max-height:calc(100vh - 250px)}
+}

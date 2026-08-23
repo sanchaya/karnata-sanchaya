@@ -157,6 +157,11 @@ test('the Evidence Workflow exposes P2 material evidence task streams', () => {
   }
   assert.match(evidenceSource, /source-map-comparison/, 'boundary source-map comparison needs a task template')
   assert.match(evidenceSource, /taskPools=\{epigraphy:\[\.\.\.inscriptionTasks,\.\.\.editionTasks\],literature:literatureTasks,coinage:coinTasks,manuscripts:manuscriptTasks,genealogy:genealogyTasks,boundaries:boundaryTasks,scripts:scriptTasks\}/, 'all P2 material streams must be included in the board task pool')
+  assert.match(evidenceSource, /const domainSummaries=taskDomains\.map/, 'the workflow must expose a readiness summary for each task domain')
+  assert.match(evidenceSource, /const focusDomain=value=>/, 'domain readiness cards must jump into the matching board filter')
+  assert.match(evidenceSource, /className="evidence-domain-overview"/, 'domain readiness must be visible before the review board')
+  assert.match(evidenceStylesSource, /\.evidence-domain-overview/, 'domain readiness needs dedicated layout styles')
+  assert.match(evidenceStylesSource, /\.evidence-domain-card\.coinage/, 'material streams need visible readiness accents')
 })
 
 test('freedom fighters remain discoverable by cited district associations', () => {
@@ -208,7 +213,11 @@ test('map and timeline safety guards remain wired into the public app', () => {
   assert.match(appSource, /<MapResizeOnMode active=\{mapOnlyMode\}\/>/, 'the atlas map must wire the resize guard to the map-only toggle')
   assert.match(stylesSource, /\.map-only-atlas\{position:fixed;inset:0/, 'map-only mode must occupy the viewport instead of scrolling below the page chrome')
   assert.match(stylesSource, /\.map-only-atlas>header,\.map-only-atlas>\.portal-nav,\.map-only-atlas>footer\{display:none\}/, 'map-only mode must hide all surrounding page chrome')
-  assert.match(stylesSource, /\.atlas-map-only-main \.map-theme-control\{top:16px;left:148px\}/, 'map-only controls must not overlap the exit button')
+  assert.match(stylesSource, /\.atlas-map-only-main \.map-only-toggle\{top:14px;left:14px;z-index:870/, 'map-only exit control must keep its own top-left lane')
+  assert.match(stylesSource, /\.atlas-map-only-main \.map-theme-control\{top:14px;left:150px;right:auto;z-index:860/, 'map-only map style control must clear the exit button')
+  assert.match(stylesSource, /\.atlas-map-only-main \.public-map-notice\{top:14px;right:14px;left:auto;z-index:860\}/, 'map-only review controls must sit in a separate top-right lane')
+  assert.match(stylesSource, /\.atlas-map-only-main \.map-only-controls\{top:58px;left:14px;z-index:850/, 'map-only layer controls must sit below the exit button')
+  assert.match(stylesSource, /\.atlas-map-only-main \.map-only-controls\{top:92px;left:10px;width:min\(300px,calc\(100vw - 20px\)\)/, 'mobile map-only layer controls must stack below the top overlay buttons')
   assert.match(stylesSource, /\.atlas-map-only-main \.event-rail\{left:16px;right:16px;bottom:126px/, 'map-only timeline story rail must clear the slider panel')
   const labelSource = appSource.slice(appSource.indexOf('function LocalizedMapLabels'), appSource.indexOf('function GlobalSearch'))
   assert.doesNotMatch(labelSource, /<Tooltip permanent/, 'city and district labels must not remain permanently over map candidates')
