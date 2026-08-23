@@ -225,6 +225,96 @@ test('every district-history research packet exposes safe contextual graph links
   assert.ok(atlasData.relationships.some(item=>item.type==='heritage-place-context'))
 })
 
+test('reign records produce review-gated succession network edges', () => {
+  const succession = atlasData.relationships.filter(item => item.type === 'succeeded-by')
+  assert.ok(succession.length >= 10, 'ruler succession should be visible as first-class relationship records')
+  for (const edge of succession) {
+    assert.ok(personIds.has(edge.fromId), `${edge.id} has an unknown predecessor`)
+    assert.ok(personIds.has(edge.toId), `${edge.id} has an unknown successor`)
+    assert.ok(polityIds.has(edge.polityId), `${edge.id} has an unknown polity`)
+    assert.equal(edge.review?.status, 'needs-review', `${edge.id} must stay review-gated until succession evidence is checked`)
+    assert.ok(edge.derivedFrom?.every(id => atlasData.reigns.some(reign => reign.id === id)), `${edge.id} must retain the source reign records`)
+  }
+})
+
+test('missing-feature foundations are linked, bilingual and review-gated', () => {
+  assert.ok(atlasData.feudatoryRelations.length >= 5)
+  assert.ok(atlasData.administrativeDivisions.length >= 3)
+  assert.ok(atlasData.scriptEvolution.length >= 3)
+  assert.ok(atlasData.openDatasetCatalogue.length >= 1)
+  for (const relation of atlasData.feudatoryRelations) {
+    assert.ok(bilingual(relation.name), `${relation.id} needs a bilingual name`)
+    assert.ok(polityIds.has(relation.overlordPolityId), `${relation.id} has an unknown overlord`)
+    assert.ok(polityIds.has(relation.subordinatePolityId), `${relation.id} has an unknown subordinate`)
+    assert.equal(relation.review.status, 'needs-review', `${relation.id} should remain review-gated`)
+    assert.ok(relation.citations.every(citation => sourceIds.has(citation.sourceId)), `${relation.id} has an unknown source`)
+  }
+  for (const division of atlasData.administrativeDivisions) {
+    assert.ok(polityIds.has(division.polityId), `${division.id} has an unknown polity`)
+    assert.equal(division.geometry.precision, 'schematic', `${division.id} should not imply final boundaries`)
+    assert.ok(division.geometry.coordinates.every(pointIsValid), `${division.id} has invalid geometry`)
+    for (const placeId of division.placeIds) assert.ok(placeById.has(placeId), `${division.id} has an unknown place`)
+  }
+  for (const script of atlasData.scriptEvolution) {
+    assert.ok(bilingual(script.name), `${script.id} needs a bilingual name`)
+    for (const polityId of script.relatedPolityIds) assert.ok(polityIds.has(polityId), `${script.id} has an unknown polity`)
+    for (const inscriptionId of script.sampleInscriptionIds) assert.ok(inscriptionIds.has(inscriptionId), `${script.id} has an unknown sample inscription`)
+    assert.equal(script.review.status, 'needs-review', `${script.id} should remain review-gated`)
+  }
+  assert.ok(atlasData.relationships.some(item => item.type === 'feudatory-overlord'))
+  assert.ok(atlasData.relationships.some(item => item.type === 'administrative-division-of'))
+  assert.ok(atlasData.relationships.some(item => item.type === 'script-sample-inscription'))
+  const summary=atlasData.openDatasetCatalogue.find(item=>item.id==='dataset-public-atlas-summary')
+  assert.ok(summary.includedCollections.includes('feudatoryRelations'))
+  assert.ok(summary.path.endsWith('.json'))
+})
+
+test('Karnata-origin Nepal reach is mapped without claiming Karnataka territorial rule', () => {
+  const simraungarh=placeById.get('place-simraungarh')
+  const karnataTirhut=atlasData.externalPolities.find(item=>item.id==='external-polity-karnata-tirhut')
+  const nanyadeva=atlasData.people.find(item=>item.id==='person-nanyadeva')
+  const foundation=atlasData.events.find(item=>item.id==='event-nanyadeva-founds-simraungarh')
+  const contested=atlasData.events.find(item=>item.id==='event-nanyadeva-nepal-valley-claim')
+  const fortress=atlasData.culturalHeritage.find(item=>item.id==='culture-simraungarh-karnata-fortress-city')
+  assert.ok(simraungarh?.geographicScope?.outsideKarnataka, 'Simraungarh must be treated as outside Karnataka')
+  assert.ok(simraungarh?.geographicScope?.outsideIndia, 'Simraungarh must be treated as outside India')
+  assert.equal(karnataTirhut?.capitalId, 'place-simraungarh')
+  assert.equal(nanyadeva?.polityId, 'external-polity-karnata-tirhut')
+  assert.equal(foundation?.destinationPlaceId, 'place-simraungarh')
+  assert.equal(foundation?.reach?.territorialControl, true)
+  assert.equal(foundation?.review.status, 'needs-review')
+  assert.equal(contested?.destinationPlaceId, 'place-bhaktapur-nepal')
+  assert.equal(contested?.reach?.evidenceLevel, 'contested')
+  assert.equal(contested?.reach?.territorialControl, false)
+  assert.ok(fortress?.placeIds.includes('place-simraungarh'))
+  assert.ok(atlasData.administrativeDivisions.some(item=>item.id==='admin-tirhut-simraungarh-karnata-zone'&&item.geometry.precision==='schematic'))
+})
+
+test('outside-Karnataka Kannada and Karnata rule layer has explorable regional coverage', () => {
+  for (const id of ['external-polity-karnata-tirhut','external-polity-eastern-chalukya-vengi','external-polity-goa-kadamba','external-polity-sevuna-devagiri']) {
+    const polity=atlasData.externalPolities.find(item=>item.id===id)
+    assert.ok(polity, `${id} should exist as an external polity`)
+    assert.equal(polity.review.status, 'needs-review', `${id} should remain review-gated`)
+    assert.ok(placeById.has(polity.capitalId), `${id} should point to a mapped capital`)
+  }
+  for (const id of ['event-eastern-chalukya-vengi-foundation','event-goa-kadamba-gopakapattana','event-sevuna-devagiri-independent-power','event-vijayanagara-southern-deccan-tamil-country','event-rashtrakuta-western-central-india-reach','event-kalyani-chalukya-vikramaditya-vi-empire-reach']) {
+    const event=atlasData.events.find(item=>item.id===id)
+    assert.ok(event, `${id} should exist as a mapped reach event`)
+    assert.equal(event.reach?.territorialControl, true, `${id} should be marked as territorial-control evidence`)
+    assert.ok(['attested','contested'].includes(event.reach?.evidenceLevel), `${id} should expose evidence level`)
+    assert.ok(event.route?.coordinates.length >= 2, `${id} should have a route for the explorer`)
+    assert.equal(event.review.status, 'needs-review', `${id} should stay review-gated`)
+  }
+  for (const id of ['place-vengi','place-gopakapattana','place-devagiri']) {
+    const place=placeById.get(id)
+    assert.ok(place?.geographicScope?.outsideKarnataka, `${id} should be outside Karnataka`)
+    assert.ok(pointIsValid(place.location.coordinates), `${id} should be mappable`)
+  }
+  const publicSummary=atlasData.openDatasetCatalogue.find(item=>item.id==='dataset-public-atlas-summary')
+  assert.ok(publicSummary.includedCollections.includes('externalPolities'))
+  assert.ok(publicSummary.includedCollections.includes('culturalHeritage'))
+})
+
 test('international research additions keep attested links separate from unresolved corridors', () => {
   const xuanzang=atlasData.politicalRelations.find(record=>record.id==='political-relation-xuanzang-chalukya-travel-account')
   const barus=atlasData.inscriptions.find(record=>record.id==='inscription-lobu-tua-barus')

@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','feudatoryRelations','administrativeDivisions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
 const PEOPLE_CANDIDATE_EVIDENCE=['identity','karnatakaConnection','bilingualName','lifeDates','roles','contributions','authorityCitations','imageLicense']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
@@ -123,6 +123,45 @@ export function validateAtlas(data) {
         const point=record.location
         if (point?.type !== 'Point' || !Array.isArray(point.coordinates) || point.coordinates.length !== 2) add('error',collection,id,'location','An artifact requires a mapped Point context.')
         if (!Array.isArray(record.citations) || record.citations.length === 0) add('warning',collection,id,'citations','Artifacts should cite a source or catalogue lead.')
+      }
+      if (collection === 'feudatoryRelations') {
+        if (!['suzerainty','feudatory','regional-chiefship','feudatory-to-independent-transition','successor-feudatory'].includes(record.relationKind)) add('error',collection,id,'relationKind','Feudatory relation kind is invalid.')
+        if (!record.overlordPolityId || !knownIds.has(record.overlordPolityId)) add('error',collection,id,'overlordPolityId','A valid overlord polity is required.')
+        if (!record.subordinatePolityId || !knownIds.has(record.subordinatePolityId)) add('error',collection,id,'subordinatePolityId','A valid subordinate polity is required.')
+        if (!['low','medium','high'].includes(record.confidence)) add('error',collection,id,'confidence','Confidence must be low, medium or high.')
+        if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('error',collection,id,'description','Feudatory packets require a bilingual interpretation note.')
+        if (!Array.isArray(record.placeIds)) add('error',collection,id,'placeIds','Feudatory place links must be an array.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Feudatory packets require at least one source lead.')
+        if (record.review?.status !== 'needs-review') add('warning',collection,id,'review.status','Feudatory hierarchy packets should remain needs-review until item-level proof is reviewed.')
+      }
+      if (collection === 'administrativeDivisions') {
+        if (!['province','mandala','nadu','contested-province','administrative-zone'].includes(record.divisionKind)) add('error',collection,id,'divisionKind','Administrative division kind is invalid.')
+        if (!record.polityId || !knownIds.has(record.polityId)) add('error',collection,id,'polityId','A valid governing polity is required.')
+        const geometry=record.geometry
+        if (!geometry || geometry.type!=='Polygon' || !Array.isArray(geometry.coordinates) || geometry.coordinates.length<3) add('error',collection,id,'geometry','Administrative geography requires a schematic polygon with at least three points.')
+        ;(geometry?.coordinates||[]).forEach((point,index)=>{const [lng,lat]=point||[];if(!Number.isFinite(lng)||!Number.isFinite(lat)||lng < -180||lng > 180||lat < -90||lat > 90)add('error',collection,id,`geometry.coordinates.${index}`,'Administrative coordinates must be valid [longitude, latitude] pairs.')})
+        if (!['schematic','approximate','site-derived','unknown'].includes(geometry?.precision)) add('error',collection,id,'geometry.precision','Administrative geometry precision is invalid.')
+        if (!Array.isArray(record.placeIds)) add('error',collection,id,'placeIds','Administrative place links must be an array.')
+        if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('error',collection,id,'description','Administrative packets require a bilingual scope note.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Administrative packets require at least one source lead.')
+      }
+      if (collection === 'scriptEvolution') {
+        if (!record.scriptFamily?.trim()) add('error',collection,id,'scriptFamily','A script family label is required.')
+        if (!Array.isArray(record.predecessorIds) || !Array.isArray(record.sampleInscriptionIds) || !Array.isArray(record.relatedPolityIds)) add('error',collection,id,'links','Script records require predecessor, sample inscription and polity arrays.')
+        ;(record.predecessorIds||[]).forEach((predecessorId,index)=>{if(!knownIds.has(predecessorId))add('error',collection,id,`predecessorIds.${index}`,`Unknown predecessor script: ${predecessorId}`)})
+        ;(record.sampleInscriptionIds||[]).forEach((inscriptionId,index)=>{if(!knownIds.has(inscriptionId))add('error',collection,id,`sampleInscriptionIds.${index}`,`Unknown sample inscription: ${inscriptionId}`)})
+        ;(record.relatedPolityIds||[]).forEach((polityId,index)=>{if(!knownIds.has(polityId))add('error',collection,id,`relatedPolityIds.${index}`,`Unknown related polity: ${polityId}`)})
+        if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('error',collection,id,'description','Script records require a bilingual interpretation note.')
+        if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Script records require at least one source lead.')
+      }
+      if (collection === 'openDatasetCatalogue') {
+        if (!['public-summary','restricted-research','citation-export'].includes(record.datasetKind)) add('error',collection,id,'datasetKind','Dataset kind is invalid.')
+        if (!['static-json','citation-file','restricted'].includes(record.access)) add('error',collection,id,'access','Dataset access type is invalid.')
+        if (!record.path?.trim() || record.path.startsWith('/')) add('error',collection,id,'path','Public dataset paths must be relative.')
+        if (!Array.isArray(record.includedCollections) || record.includedCollections.length===0) add('error',collection,id,'includedCollections','Dataset catalogue records require included collections.')
+        ;(record.includedCollections||[]).forEach((collectionName,index)=>{if(!COLLECTIONS.includes(collectionName))add('error',collection,id,`includedCollections.${index}`,`Unknown export collection: ${collectionName}`)})
+        if (!Array.isArray(record.excludedFields)) add('error',collection,id,'excludedFields','Excluded fields must be explicit.')
+        if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('error',collection,id,'description','Dataset catalogue records require a bilingual access note.')
       }
       if (collection === 'templeInventoryLeads') {
         if (!record.deity?.trim() || !record.locationLabel?.trim()) add('error',collection,id,'deity/locationLabel','Inventory leads require deity and locality fields.')

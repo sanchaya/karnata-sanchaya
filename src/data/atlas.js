@@ -19,6 +19,7 @@ import { kingdomArtifacts } from './kingdom-artifacts.js'
 import { applyBengaluruFreedomFighterDisplay } from './bengaluru-freedom-fighters-display.js'
 import { dictionaryMartyrCandidateMeta, dictionaryMartyrCandidates } from './dictionary-martyrs-karnataka.js'
 import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
+import { administrativeDivisions, feudatoryRelations, karnataReachEvents, karnataReachHeritage, karnataReachPeople, karnataReachPlaces, karnataReachPolities, karnataReachSources, openDatasetCatalogue, scriptEvolution } from './research-foundations.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -86,6 +87,10 @@ export const atlasData = {
   periodicals: patrikaPeriodicals,
   periodicalMapSites: patrikaMapSites,
   artifacts: kingdomArtifacts,
+  feudatoryRelations,
+  administrativeDivisions,
+  scriptEvolution,
+  openDatasetCatalogue,
   collaborations,
   districtHistoryResearch,
   externalPolities,
@@ -170,6 +175,11 @@ appendUniqueById(atlasData.events, communityPeopleEvents)
 appendUniqueById(atlasData.events, freedomMovementEventLeads)
 appendUniqueById(atlasData.sources, freedomFighterSources)
 appendUniqueById(atlasData.sources, freedomMovementResearchSources)
+appendUniqueById(atlasData.sources, karnataReachSources)
+appendUniqueById(atlasData.externalPolities, karnataReachPolities)
+appendUniqueById(atlasData.places, karnataReachPlaces)
+appendUniqueById(atlasData.people, karnataReachPeople)
+appendUniqueById(atlasData.events, karnataReachEvents)
 appendUniqueById(atlasData.sources, [{
   id:'src-patrika-sanchaya-kannada',
   type:'periodical-catalogue',
@@ -497,6 +507,7 @@ atlasData.culturalHeritage = [
     description:name('Indicative contemporary layer for kabaddi and other community games carried through schools, akhadas and local festivals; district-level documentation and living practitioners should be added.','ಶಾಲೆಗಳು, ಅಖಾಡಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ಹಬ್ಬಗಳ ಮೂಲಕ ಮುಂದುವರಿದ ಕಬಡ್ಡಿ ಹಾಗೂ ಇತರ ಸಮುದಾಯ ಆಟಗಳಿಗೆ ಸೂಚಕ ಸಮಕಾಲೀನ ಪದರ; ಜಿಲ್ಲಾಮಟ್ಟದ ದಾಖಲೆ ಮತ್ತು ಜೀವಂತ ಆಟಗಾರರ ಸಾಕ್ಷ್ಯವನ್ನು ಸೇರಿಸಬೇಕು.'),citations:[citation('src-karnataka-tourism-heritage','Statewide heritage discovery lead; add district sports archives and practitioner interviews')],review:review('needs-review')
   }
 ]
+appendUniqueById(atlasData.culturalHeritage, karnataReachHeritage)
 
 atlasData.reigns = [
   {
@@ -748,6 +759,52 @@ atlasData.relationships = [
     ...(item.peopleIds||[]).map((toId,index)=>({id:`rel-${item.id}-person-${index+1}`,fromId:item.id,type:'heritage-person-context',toId,citations:item.citations||[],review:item.review})),
     ...(item.eventIds||[]).map((toId,index)=>({id:`rel-${item.id}-event-${index+1}`,fromId:item.id,type:'heritage-event-context',toId,citations:item.citations||[],review:item.review}))
   ]),
+  ...atlasData.feudatoryRelations.flatMap(item => [
+    { id:`rel-${item.id}-overlord`, fromId:item.id, type:'feudatory-overlord', toId:item.overlordPolityId, date:item.date, citations:item.citations, review:item.review },
+    { id:`rel-${item.id}-subordinate`, fromId:item.id, type:'feudatory-subordinate', toId:item.subordinatePolityId, date:item.date, citations:item.citations, review:item.review },
+    ...(item.placeIds||[]).map((placeId,index)=>({ id:`rel-${item.id}-place-${index+1}`, fromId:item.id, type:'feudatory-place-context', toId:placeId, date:item.date, citations:item.citations, review:item.review }))
+  ]),
+  ...atlasData.administrativeDivisions.flatMap(item => [
+    { id:`rel-${item.id}-polity`, fromId:item.id, type:'administrative-division-of', toId:item.polityId, date:item.date, citations:item.citations, review:item.review },
+    ...(item.placeIds||[]).map((placeId,index)=>({ id:`rel-${item.id}-place-${index+1}`, fromId:item.id, type:'administrative-place-context', toId:placeId, date:item.date, citations:item.citations, review:item.review }))
+  ]),
+  ...atlasData.scriptEvolution.flatMap(item => [
+    ...(item.relatedPolityIds||[]).map((polityId,index)=>({ id:`rel-${item.id}-polity-${index+1}`, fromId:item.id, type:'script-used-by-polity', toId:polityId, date:item.date, citations:item.citations, review:item.review })),
+    ...(item.sampleInscriptionIds||[]).map((inscriptionId,index)=>({ id:`rel-${item.id}-inscription-${index+1}`, fromId:item.id, type:'script-sample-inscription', toId:inscriptionId, date:item.date, citations:item.citations, review:item.review })),
+    ...(item.predecessorIds||[]).map((predecessorId,index)=>({ id:`rel-${item.id}-predecessor-${index+1}`, fromId:item.id, type:'script-predecessor', toId:predecessorId, date:item.date, citations:item.citations, review:item.review }))
+  ]),
 ]
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', artifacts:'Kingdom symbols & artifacts', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', martyrCandidates:'Dictionary martyr candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
+const successionEdges = atlasData.reigns
+  .filter(period => period.periodType !== 'political-phase' && period.rulerIds?.length)
+  .reduce((groups, period) => {
+    const group = groups.get(period.polityId) || []
+    group.push(period)
+    groups.set(period.polityId, group)
+    return groups
+  }, new Map())
+
+for (const [polityId, periods] of successionEdges.entries()) {
+  periods
+    .sort((a, b) => a.date.from - b.date.from)
+    .forEach((period, index, ordered) => {
+      const next = ordered[index + 1]
+      if (!next) return
+      const fromId = period.rulerIds[period.rulerIds.length - 1]
+      const toId = next.rulerIds[0]
+      if (!fromId || !toId || fromId === toId) return
+      atlasData.relationships.push({
+        id: `rel-succession-${fromId.replace(/^person-/, '')}-${toId.replace(/^person-/, '')}`,
+        fromId,
+        type: 'succeeded-by',
+        toId,
+        date: { from: next.date.from, to: next.date.from, era: next.date.era, precision: next.date.precision },
+        citations: [...(period.citations || []), ...(next.citations || [])],
+        review: next.review || review('needs-review'),
+        derivedFrom: [period.id, next.id],
+        polityId,
+      })
+    })
+}
+
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', artifacts:'Kingdom symbols & artifacts', feudatoryRelations:'Feudatory relations', administrativeDivisions:'Administrative divisions', scriptEvolution:'Script evolution', openDatasetCatalogue:'Open dataset catalogue', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', martyrCandidates:'Dictionary martyr candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }

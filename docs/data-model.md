@@ -46,6 +46,16 @@ The live administrator workspace stores complete, validated dataset revisions in
 
 The live authenticated administrator service uses the same JSON contract for permanent full-dataset revisions. Concurrent saves use revision checks and return a conflict instead of silently overwriting another administrator's work. Keep the static repository dataset as the reviewed publication snapshot.
 
+## MariaDB research indexes
+
+Migration `007_research_feature_indexes.sql` prepares the live database for the next mature research features without changing the public static-site policy. `dataset_snapshots` remains the authoritative immutable record. During `npm run db:sync-dataset`, the server also refreshes derived indexes for:
+
+- cross-collection records such as polities, people, places, inscriptions, works, artifacts, territorial extents, relationships and political relations;
+- entity links such as capital, place, polity, participant, party, creator and relationship edges;
+- evidence gates from inscription resolution packets, literary review workflows and promotion reviews.
+
+These tables support future MariaDB-backed search, graph exploration, assignment queues and reviewer dashboards. They are derived from the latest reviewed dataset revision and can be rebuilt; they must not be treated as separate public data exports.
+
 ## Literature and epigraphy explorer fields
 
 Atlas v0.15.2 treats public records and district research candidates as different evidence states. A candidate is not rendered as a mapped inscription until its place, date and item-level edition have been reviewed.
