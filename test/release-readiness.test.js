@@ -129,6 +129,9 @@ test('the Epigraphy Explorer exposes the P2 corpus review queue', () => {
     assert.match(explorerSource, new RegExp(gate), `${gate} must remain filterable or visible in the queue`)
   }
   assert.match(explorerSource, /EditionPacket/, 'opening a queue record must expose its edition packet detail')
+  assert.match(explorerSource, /epigraphy-command-center/, 'the epigraphy page should keep map and filters together as a command center')
+  assert.match(explorerSource, /epigraphy-workbench/, 'the epigraphy page should organize queue, source corpora and records as one workbench')
+  assert.match(explorerSource, /epigraphy-corpus-drawer/, 'source corpus data must remain available in disclosure drawers')
   assert.match(explorerStylesSource, /\.corpus-review-queue/, 'the P2 queue needs dedicated layout styles')
 })
 
