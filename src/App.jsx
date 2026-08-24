@@ -25,6 +25,7 @@ const PeopleExplorer=lazy(()=>import('./PeopleExplorer'))
 const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
+const CoinExplorer=lazy(()=>import('./CoinExplorer'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 const socialLinks=[
   ['YouTube',import.meta.env.VITE_SOCIAL_YOUTUBE_URL],
@@ -107,6 +108,7 @@ const seoPages={
   districts:{kn:['ಜಿಲ್ಲಾ ಪರಂಪರೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಜಿಲ್ಲಾವಾರು ದೇವಾಲಯ, ಬಸದಿ, ದರ್ಗಾ, ಚರ್ಚ್, ಮಠ, ಕೋಟೆ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪದ ದಾಖಲೆಗಳು.'],en:['District Heritage · Karnataka Historical Atlas','District-level records of Karnataka temples, basadis, dargahs, churches, monasteries, forts and architecture.']},
   'district-history':{kn:['ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಪೂರ್ವೈತಿಹಾಸಿಕ ತಾಣಗಳು, ವಸತಿ ಮೂಲಗಳು, ಸ್ಥಾಪನಾ ಶಿಲೆಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ಇತಿಹಾಸದ ಸಂಶೋಧನಾ ಅಭ್ಯರ್ಥಿಗಳು.'],en:['District Deep History · Karnataka Historical Atlas','Research leads for prehistoric places, settlement origins, foundation stones and locality histories across Karnataka.']},
   inscriptions:{kn:['ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಜಿಲ್ಲಾವಾರು ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳು, ಸಂಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನಾ ಪ್ರಗತಿ.'],en:['District Inscription Audits · Karnataka Historical Atlas','District inscription candidates, corpus locators and evidence-verification progress.']},
+  coins:{kn:['ನಾಣ್ಯ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕ ಮತ್ತು ಕರ್ಣಾಟ ಸಂಬಂಧಿತ ನಾಣ್ಯ ದಾರಿಗಳನ್ನು ಪಟ್ಟಿ, ಚಿತ್ರ, ಲೋಹ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಸಾಕ್ಷ್ಯಗಳೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ.'],en:['Coin Explorer · Karnataka Historical Atlas','Explore Karnataka and Karnata-related coin leads with catalogue, image, metal, weight and findspot evidence gates.']},
   research:{kn:['ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಆಕರ ಪಟ್ಟಿ, BibTeX ಮತ್ತು RIS ಉಲ್ಲೇಖ ಸಾಧನಗಳು, ಸಂಶೋಧನಾ ವಿಧಾನ ಮತ್ತು ಸಹಯೋಗ ಅವಕಾಶಗಳು.'],en:['Resources and Collaborations · Karnataka Historical Atlas','Reference catalogue, BibTeX and RIS citation tools, research method and collaboration opportunities.']},
   community:{kn:['ಕೊಡುಗೆ ನೀಡಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಉಲ್ಲೇಖಗಳೊಂದಿಗೆ ಐತಿಹಾಸಿಕ ಜ್ಞಾನ, ತಿದ್ದುಪಡಿ ಮತ್ತು ಅನುವಾದಗಳನ್ನು ಸಮುದಾಯ ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಿ.'],en:['Contribute · Karnataka Historical Atlas','Submit cited historical knowledge, corrections and translations for moderated community review.']},
   profile:{kn:['ನನ್ನ ಪ್ರೊಫೈಲ್ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ನಿಮ್ಮ ಸಂಶೋಧನಾ ಗುರುತು, ಸಂಸ್ಥೆ, ಕೊಡುಗೆಗಳು ಮತ್ತು ಪರಿಶೀಲನಾ ಪ್ರಮಾಣಪತ್ರವನ್ನು ನಿರ್ವಹಿಸಿ.'],en:['My profile · Karnataka Historical Atlas','Manage your research identity, affiliation, contributions and certificates.']},
@@ -169,6 +171,11 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
       tourStep('.audit-map-inscriptions','ಶಾಸನ ಭೂಪಟ · ಜಿಲ್ಲಾವಾರು ಗುರುತುಗಳನ್ನು ನೋಡಿ','The map separates mapped inscriptions from dashed candidates awaiting human review.'),
       tourStep('.inscription-audit-filters','ಜಿಲ್ಲಾ ಶೋಧಕಗಳು · ಪರಿಶೀಲನಾ ಪಾಸ್ ಆಯ್ಕೆಮಾಡಿ','Switch between seeded, candidate-identified and unassessed district batches.'),
       tourStep('.inscription-audit-grid','ಜಿಲ್ಲಾ ಶಾಸನ ಪಟ್ಟಿ · ಅಭ್ಯರ್ಥಿ ವಿವರ ತೆರೆಯಿರಿ','Open a district record to follow its corpus references, notes and candidate locations.'),
+    ],
+    coins:[
+      tourStep('.coin-filters','ನಾಣ್ಯ ಶೋಧಕಗಳು · ರಾಜ್ಯ, ಲೋಹ ಮತ್ತು ಸಾಕ್ಷ್ಯ ಹಂತ ಆಯ್ಕೆಮಾಡಿ','Filter coin records by polity, material, open evidence gate and review status.'),
+      tourStep('.coin-map','ನಾಣ್ಯ ಭೂಪಟ · ಪತ್ತೆಸ್ಥಳ ಸಂದರ್ಭ ನೋಡಿ','Select a findspot or regional context marker to inspect the coin evidence packet.'),
+      tourStep('.coin-detail','ಸಾಕ್ಷ್ಯ ಹಂತಗಳು · ಪಟ್ಟಿ, ಚಿತ್ರ, ಲೋಹ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಪರಿಶೀಲಿಸಿ','Read the selected coin packet and see which publication gates remain open.'),
     ],
     trails:[
       tourStep('.trail-grid','ಕಥಾಮಾರ್ಗಗಳು · ನಿರೂಪಣೆ ಆರಿಸಿ','Choose a curation-backed trail that walks Karnataka\u2019s history step by step.'),
@@ -655,7 +662,7 @@ function InscriptionAuditSection({locale,t,onChooseInscription,districtGeojson})
 }
 
 export default function App(){
-  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','trails','evidence','research','community','profile','about']
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','trails','evidence','research','community','profile','about']
   const normalizeView=hash=>hash==='history'?'district-history':hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -727,6 +734,7 @@ export default function App(){
     ...primaryAtlasEvents.map(record=>({kind:'event',id:record.id,name:record.name,year:record.year,polityIds:record.participants.map(participant=>participant.polityId),review:record.review?.status,coords:record.coords,record})),
     ...culturalRecords.map(record=>({kind:'culture',id:record.id,name:record.name,year:record.date.from,polityIds:record.polityIds,review:record.review?.status,coords:record.coords,record})),
     ...artifactMapRecords.map(record=>({kind:'artifact',id:record.id,name:record.name,year:record.date.from,polityId:record.polityId,review:record.review?.status,coords:record.coords,record})),
+    ...atlasData.coinRecords.map(record=>{const place=placeById.get(record.placeId);return {kind:'coin',id:record.id,name:record.name,year:record.date.from,polityId:record.polityId,review:record.review?.status,coords:place?.location?.coordinates?[place.location.coordinates[1],place.location.coordinates[0]]:null,record}}),
     ...atlasData.places.map(record=>({kind:'place',id:record.id,name:record.name,year:null,review:record.review?.status,coords:[record.location.coordinates[1],record.location.coordinates[0]],record})),
     ...heritageCandidates.map(record=>({kind:'heritage',id:record.id,name:record.name,year:record.startYear,districtId:record.auditId,review:record.verification.verificationStatus,coords:record.coords,record})),
     ...atlasData.districtHistoryResearch.map(record=>({kind:'districtHistory',id:record.id,name:record.name,year:record.date?.from,districtId:record.districtId,review:record.review?.status,coords:record.location?.coordinates?[record.location.coordinates[1],record.location.coordinates[0]]:null,record})),
@@ -800,13 +808,14 @@ export default function App(){
     if(result.kind==='polity'){const polity=[...kingdoms,...contextualExternalKingdoms].find(item=>item.id===result.id);if(polity?.type==='external-context'){enableMapLayer('externalKingdoms');if(polity.contextScope==='world')setScope('world');else if(scope==='karnataka')setScope('india')}setSelected(result.id);if(polity&&(year<polity.start||year>polity.end))setYear(polity.start);const place=placeById.get(polity?.capitalId);if(place)setSelectedSearchPlace({coords:[place.location.coordinates[1],place.location.coordinates[0]]});else if(polity?.center)setSelectedSearchPlace({coords:[polity.center[1],polity.center[0]]});return}
     if(result.kind==='person')return choosePerson(result.record)
     if(result.kind==='artifact'){enableMapLayer('artifacts');setYear(result.year);setSelected(result.polityId);setSelectedSearchPlace({coords:result.coords,artifactId:result.id});return}
+    if(result.kind==='coin'){navigateView('coins');return}
     if(result.year)setYear(Math.max(MIN_YEAR,Math.min(MAX_YEAR,result.year)))
     if(result.coords){setSelectedSearchPlace({coords:result.coords});if(result.coords[0]>19.5||result.coords[1]<73||result.coords[1]>81)setScope('india')}
   }
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
+  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
   const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${view===key?'active':''}`.trim()} aria-current={view===key?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(key===view){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
@@ -869,6 +878,7 @@ export default function App(){
     {view==='freedom'&&<Suspense fallback={<PortalFallback/>}><FreedomMovementExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>}
     {view==='literature'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="literature" locale={locale} mapTheme={mapTheme} onOpenAtlas={item=>{chooseWork(item);navigateView('atlas')}}/></Suspense>}
     {view==='epigraphy'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="epigraphy" locale={locale} mapTheme={mapTheme} isCommunityMember={Boolean(communityUser)} onOpenAtlas={item=>{chooseInscription(inscriptionById.get(item.id)||item);navigateView('atlas')}}/></Suspense>}
+    {view==='coins'&&<Suspense fallback={<PortalFallback/>}><CoinExplorer locale={locale}/></Suspense>}
     {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
     {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
