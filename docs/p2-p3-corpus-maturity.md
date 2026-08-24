@@ -8,6 +8,7 @@ This runbook covers the collections that moved from “missing” to “structur
 
 - `#relations` shows genealogy and feudatory edges in the network graph.
 - `#coins` shows coinage leads with map, search, polity and evidence-gate filters.
+- `#scripts` shows script-evolution phases with sample inscriptions, predecessor links, polity context and evidence handoff.
 - `#epigraphy` includes the inscription-edition review queue.
 - `#evidence` includes P2 material streams, reviewer fields, saved status history, reviewer dashboard and the ready-for-promotion queue.
 - Static open dataset packets are regenerated during `npm run build`; public packets strip private workflow and moderation fields.
@@ -139,6 +140,27 @@ Current first targets:
 | `manuscript-torave-ramayana-sanchaya-witness-lead` | Locate source text, edition comparison and digital witness terms. |
 | `manuscript-vaddaradhane-palm-leaf-witness-lead` | Resolve repository shelfmarks and compare the 1434 witness to edited text. |
 
+### Script evolution maturity
+
+Goal: turn the initial script timeline into a reviewed palaeographic evidence layer.
+
+Minimum evidence per phase:
+
+- sample inscription IDs with item-level editions;
+- predecessor and successor relationships;
+- related polities and date range;
+- script-family label checked against specialist terminology;
+- citations with plate, page or line locators;
+- note explaining whether the phase is inscriptional, manuscript, print or mixed evidence.
+
+Current first targets:
+
+| Record | Next action |
+| --- | --- |
+| `script-southern-brahmi-kadamba-transition` | Attach item-level Talagunda and Halmidi edition locators and palaeographic references. |
+| `script-old-kannada-epigraphic-phase` | Add more sample inscriptions beyond Halmidi and Shravanabelagola, with exact corpus locators. |
+| `script-modern-kannada-print-transition` | Connect manuscript, print and Patrika Sanchaya witnesses with source runs and licence notes. |
+
 ## Reviewer operations
 
 Use `#evidence` for day-to-day work:
@@ -151,4 +173,3 @@ Use `#evidence` for day-to-day work:
 6. Use the ready-for-promotion queue to inspect packets close to completion.
 
 The reviewer dashboard is operational reporting, not publication authority. A task marked complete says the task was handled; the record remains `needs-review` until the evidence packet itself is reviewed and promoted in a permanent dataset revision.
-

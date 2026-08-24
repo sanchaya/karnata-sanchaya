@@ -26,6 +26,7 @@ const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const CoinExplorer=lazy(()=>import('./CoinExplorer'))
+const ScriptEvolutionExplorer=lazy(()=>import('./ScriptEvolutionExplorer'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 const socialLinks=[
   ['YouTube',import.meta.env.VITE_SOCIAL_YOUTUBE_URL],
@@ -662,7 +663,7 @@ function InscriptionAuditSection({locale,t,onChooseInscription,districtGeojson})
 }
 
 export default function App(){
-  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','trails','evidence','research','community','profile','about']
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','community','profile','about']
   const normalizeView=hash=>hash==='history'?'district-history':hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -681,6 +682,7 @@ export default function App(){
   const [selectedPerson,setSelectedPerson]=useState(null)
   const [selectedWork,setSelectedWork]=useState(null)
   const [selectedInscription,setSelectedInscription]=useState(null)
+  const [selectedScriptId,setSelectedScriptId]=useState(null)
   const [selectedPeriodicalSite,setSelectedPeriodicalSite]=useState(null)
   const [selectedSearchPlace,setSelectedSearchPlace]=useState(()=>initialShareState.year==null&&!initialShareState.map&&firstTimelineStory?.coords?{coords:firstTimelineStory.coords,reviewCandidateId:firstTimelineStory.id,overview:true}:null)
   const [scope,setScope]=useState('karnataka')
@@ -735,6 +737,7 @@ export default function App(){
     ...culturalRecords.map(record=>({kind:'culture',id:record.id,name:record.name,year:record.date.from,polityIds:record.polityIds,review:record.review?.status,coords:record.coords,record})),
     ...artifactMapRecords.map(record=>({kind:'artifact',id:record.id,name:record.name,year:record.date.from,polityId:record.polityId,review:record.review?.status,coords:record.coords,record})),
     ...atlasData.coinRecords.map(record=>{const place=placeById.get(record.placeId);return {kind:'coin',id:record.id,name:record.name,year:record.date.from,polityId:record.polityId,review:record.review?.status,coords:place?.location?.coordinates?[place.location.coordinates[1],place.location.coordinates[0]]:null,record}}),
+    ...atlasData.scriptEvolution.map(record=>({kind:'scriptEvolution',id:record.id,name:record.name,year:record.date.from,polityIds:record.relatedPolityIds,review:record.review?.status,scripts:[record.scriptFamily],record})),
     ...atlasData.places.map(record=>({kind:'place',id:record.id,name:record.name,year:null,review:record.review?.status,coords:[record.location.coordinates[1],record.location.coordinates[0]],record})),
     ...heritageCandidates.map(record=>({kind:'heritage',id:record.id,name:record.name,year:record.startYear,districtId:record.auditId,review:record.verification.verificationStatus,coords:record.coords,record})),
     ...atlasData.districtHistoryResearch.map(record=>({kind:'districtHistory',id:record.id,name:record.name,year:record.date?.from,districtId:record.districtId,review:record.review?.status,coords:record.location?.coordinates?[record.location.coordinates[1],record.location.coordinates[0]]:null,record})),
@@ -809,13 +812,14 @@ export default function App(){
     if(result.kind==='person')return choosePerson(result.record)
     if(result.kind==='artifact'){enableMapLayer('artifacts');setYear(result.year);setSelected(result.polityId);setSelectedSearchPlace({coords:result.coords,artifactId:result.id});return}
     if(result.kind==='coin'){navigateView('coins');return}
+    if(result.kind==='scriptEvolution'){setSelectedScriptId(result.id);navigateView('scripts');return}
     if(result.year)setYear(Math.max(MIN_YEAR,Math.min(MAX_YEAR,result.year)))
     if(result.coords){setSelectedSearchPlace({coords:result.coords});if(result.coords[0]>19.5||result.coords[1]<73||result.coords[1]>81)setScope('india')}
   }
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
+  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
   const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${view===key?'active':''}`.trim()} aria-current={view===key?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(key===view){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
@@ -879,6 +883,7 @@ export default function App(){
     {view==='literature'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="literature" locale={locale} mapTheme={mapTheme} onOpenAtlas={item=>{chooseWork(item);navigateView('atlas')}}/></Suspense>}
     {view==='epigraphy'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="epigraphy" locale={locale} mapTheme={mapTheme} isCommunityMember={Boolean(communityUser)} onOpenAtlas={item=>{chooseInscription(inscriptionById.get(item.id)||item);navigateView('atlas')}}/></Suspense>}
     {view==='coins'&&<Suspense fallback={<PortalFallback/>}><CoinExplorer locale={locale}/></Suspense>}
+    {view==='scripts'&&<Suspense fallback={<PortalFallback/>}><ScriptEvolutionExplorer locale={locale} initialSelectedId={selectedScriptId}/></Suspense>}
     {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
     {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}

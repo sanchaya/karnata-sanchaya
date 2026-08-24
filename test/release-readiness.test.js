@@ -10,6 +10,7 @@ const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.met
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const coinSource = await readFile(new URL('../src/CoinExplorer.jsx', import.meta.url), 'utf8')
+const scriptSource = await readFile(new URL('../src/ScriptEvolutionExplorer.jsx', import.meta.url), 'utf8')
 const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
 const peopleSource = await readFile(new URL('../src/PeopleExplorer.jsx', import.meta.url), 'utf8')
 const freedomSource = await readFile(new URL('../src/FreedomMovementExplorer.jsx', import.meta.url), 'utf8')
@@ -21,6 +22,7 @@ const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url
 const evidenceStylesSource = await readFile(new URL('../src/evidence-workflow.css', import.meta.url), 'utf8')
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
 const coinStylesSource = await readFile(new URL('../src/coins.css', import.meta.url), 'utf8')
+const scriptStylesSource = await readFile(new URL('../src/scripts.css', import.meta.url), 'utf8')
 const explorerStylesSource = await readFile(new URL('../src/explorer.css', import.meta.url), 'utf8')
 const peopleStylesSource = await readFile(new URL('../src/people.css', import.meta.url), 'utf8')
 const freedomStylesSource = await readFile(new URL('../src/freedom-movement.css', import.meta.url), 'utf8')
@@ -29,7 +31,7 @@ const packageSource = await readFile(new URL('../package.json', import.meta.url)
 const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'evidence', 'research', 'community', 'profile', 'about']
+  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'community', 'profile', 'about']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
@@ -63,6 +65,19 @@ test('coin explorer is public, searchable and evidence-gated', () => {
   assert.match(coinSource, /MapContainer/, 'coin findspots must be explorable on a map')
   assert.match(coinSource, /href="#evidence"/, 'coin packets must link back to the evidence workflow')
   assert.match(coinStylesSource, /\.coin-workspace/, 'coin explorer needs a dedicated map/list/detail layout')
+})
+
+test('script evolution explorer is public, searchable and evidence-gated', () => {
+  assert.match(appSource, /const ScriptEvolutionExplorer=lazy\(\(\)=>import\('\.\/ScriptEvolutionExplorer'\)\)/, 'the script explorer must be lazy-loaded')
+  assert.match(appSource, /'scripts'/, 'scripts must be a public route')
+  assert.match(appSource, /kind:'scriptEvolution'/, 'script evolution records must participate in global search')
+  assert.match(appSource, /view==='scripts'/, 'the script route must render a public page')
+  assert.match(scriptSource, /atlasData\.scriptEvolution\.map/, 'the page must derive records from the script evolution collection')
+  assert.match(scriptSource, /sampleInscriptionIds/, 'script phases must expose sample inscriptions')
+  assert.match(scriptSource, /predecessorIds/, 'script phases must expose predecessor links')
+  assert.match(scriptSource, /href="#evidence"/, 'script packets must link back to the evidence workflow')
+  assert.match(scriptSource, /href="#epigraphy"/, 'script packets must link to epigraphy records')
+  assert.match(scriptStylesSource, /\.script-workspace/, 'script explorer needs a dedicated timeline/detail layout')
 })
 
 test('public open dataset packets are generated during static builds', () => {
