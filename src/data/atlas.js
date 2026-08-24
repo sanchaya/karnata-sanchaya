@@ -15,6 +15,7 @@ import { applyDistrictHeritageConnections } from './district-heritage-connection
 import { freedomFighterPeople, freedomFighterPolities, freedomFighterSources } from './freedom-fighters.js'
 import { freedomMovementResearchSources } from './freedom-movement-research.js'
 import { patrikaPeriodicals, patrikaMapSites } from './patrika-sanchaya.generated.js'
+import { epigraphiaArchiveTexts } from './epigraphia-archive.generated.js'
 import { kingdomArtifacts } from './kingdom-artifacts.js'
 import { applyBengaluruFreedomFighterDisplay } from './bengaluru-freedom-fighters-display.js'
 import { dictionaryMartyrCandidateMeta, dictionaryMartyrCandidates } from './dictionary-martyrs-karnataka.js'
@@ -87,6 +88,7 @@ export const atlasData = {
   ],
   periodicals: patrikaPeriodicals,
   periodicalMapSites: patrikaMapSites,
+  epigraphiaArchiveTexts,
   artifacts: kingdomArtifacts,
   feudatoryRelations,
   genealogicalRelations,
@@ -826,4 +828,4 @@ for (const [polityId, periods] of successionEdges.entries()) {
     })
 }
 
-export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', artifacts:'Kingdom symbols & artifacts', feudatoryRelations:'Feudatory relations', genealogicalRelations:'Genealogy assertions', administrativeDivisions:'Administrative divisions', boundaryEvidence:'Boundary evidence packets', coinRecords:'Coin records', manuscriptWitnesses:'Manuscript witnesses', inscriptionEditions:'Inscription editions', scriptEvolution:'Script evolution', openDatasetCatalogue:'Open dataset catalogue', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', martyrCandidates:'Dictionary martyr candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }
+export const collectionLabels = { polities:'Polities', externalPolities:'External polities', externalGovernancePhases:'External governance phases', events:'Historical events', culturalHeritage:'Art, culture & traditions', periodicals:'Newspapers & magazines', epigraphiaArchiveTexts:'Epigraphia Archive OCR texts', artifacts:'Kingdom symbols & artifacts', feudatoryRelations:'Feudatory relations', genealogicalRelations:'Genealogy assertions', administrativeDivisions:'Administrative divisions', boundaryEvidence:'Boundary evidence packets', coinRecords:'Coin records', manuscriptWitnesses:'Manuscript witnesses', inscriptionEditions:'Inscription editions', scriptEvolution:'Script evolution', openDatasetCatalogue:'Open dataset catalogue', templeInventoryLeads:'Temple inventory leads', heritageInventoryLeads:'Heritage inventory leads', reigns:'Reigns & political periods', territorialExtents:'Territorial evidence', deepChronologies:'Deep-history chronologies', heritageAudits:'District heritage audits', districtHistoryResearch:'District deep-history research', inscriptionAudits:'District inscription audits', people:'Curated people', peopleCandidates:'People review candidates', martyrCandidates:'Dictionary martyr candidates', places:'Places', inscriptions:'Inscriptions', works:'Literary works', sources:'Sources', relationships:'Relationships', politicalRelations:'Bilateral political relations', collaborations:'Collaborations' }

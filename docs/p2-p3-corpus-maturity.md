@@ -22,6 +22,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `manuscriptWitnesses` | 7 | Repository leads located for some works; shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 7 | Schematic evidence packets, not research-grade boundary corpus |
 | `inscriptionEditions` | 20 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
+| `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
 
 ## Promotion rule
@@ -102,6 +103,8 @@ Current first targets:
 ### Inscription edition maturity
 
 Goal: turn inscription clusters and candidate packets into item-level editions.
+
+The local Epigraphia Carnatica TXT cache is indexed in `epigraphiaArchiveTexts`. These records are citation targets and OCR discovery signals only. They can help find likely volume/item/page leads, but they cannot close an evidence gate until a reviewer checks the printed page image and records an item-level locator.
 
 Minimum evidence per edition:
 

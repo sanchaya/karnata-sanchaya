@@ -1,5 +1,5 @@
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
-const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','epigraphiaArchiveTexts','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
 const PEOPLE_CANDIDATE_EVIDENCE=['identity','karnatakaConnection','bilingualName','lifeDates','roles','contributions','authorityCitations','imageLicense']
 const HERITAGE_CATEGORIES = ['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
@@ -212,6 +212,14 @@ export function validateAtlas(data) {
         ;(record.relatedPolityIds||[]).forEach((polityId,index)=>{if(!knownIds.has(polityId))add('error',collection,id,`relatedPolityIds.${index}`,`Unknown related polity: ${polityId}`)})
         if (!record.description?.en?.trim() || !record.description?.kn?.trim()) add('error',collection,id,'description','Script records require a bilingual interpretation note.')
         if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Script records require at least one source lead.')
+      }
+      if (collection === 'epigraphiaArchiveTexts') {
+        if (!record.archiveIdentifier?.trim()) add('error',collection,id,'archiveIdentifier','Archive text records require an Internet Archive identifier.')
+        if (!record.itemUrl?.startsWith('https://archive.org/details/')) add('error',collection,id,'itemUrl','Archive text records require a stable Archive.org item URL.')
+        if (!record.textFile?.url?.startsWith('https://archive.org/download/') || !record.textFile?.name?.endsWith('.txt')) add('error',collection,id,'textFile','Archive text records require a TXT derivative URL.')
+        if (!['Epigraphia Carnatica','Epigraphia Indica','Annual Report on South Indian Epigraphy','Annual Report on Indian Epigraphy','Epigraphy corpus'].includes(record.series)) add('error',collection,id,'series','Archive text record series is invalid.')
+        if (!record.citation?.sourceId || !knownIds.has(record.citation.sourceId) || !record.citation.locator?.includes('OCR discovery only')) add('error',collection,id,'citation','Archive text records require a review-safe OCR citation.')
+        if (record.review?.status !== 'needs-review') add('error',collection,id,'review.status','Archive OCR records must remain needs-review until page-image review.')
       }
       if (collection === 'openDatasetCatalogue') {
         if (!['public-summary','restricted-research','citation-export'].includes(record.datasetKind)) add('error',collection,id,'datasetKind','Dataset kind is invalid.')

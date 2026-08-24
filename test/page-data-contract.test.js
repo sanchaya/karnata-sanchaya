@@ -44,6 +44,22 @@ test('the bundled dataset is a clean page-data release candidate', () => {
   }
 })
 
+test('local Epigraphia Carnatica text cache is indexed as review-only citations', () => {
+  assert.ok(atlasData.epigraphiaArchiveTexts.length >= 12)
+  const volumes = new Set(atlasData.epigraphiaArchiveTexts.map(record => record.volume))
+  for (const volume of ['3', '4', '5', '7', '8', '9', '10', '11', '12', '24', '25']) assert.ok(volumes.has(volume), `EC volume ${volume} must remain indexed`)
+  for (const record of atlasData.epigraphiaArchiveTexts) {
+    assert.equal(record.series, 'Epigraphia Carnatica')
+    assert.equal(record.review.status, 'needs-review')
+    assert.ok(record.itemUrl.startsWith('https://archive.org/details/'), `${record.id} needs a stable item URL`)
+    assert.ok(record.textFile.url.startsWith('https://archive.org/download/'), `${record.id} needs a TXT derivative URL`)
+    assert.equal(record.textFile.localCache, true, `${record.id} should identify the local cache source`)
+    assert.ok(sourceIds.has(record.citation.sourceId), `${record.id} has an unknown citation source`)
+    assert.ok(record.citation.locator.includes('OCR discovery only'), `${record.id} must not imply OCR is final evidence`)
+    assert.ok(Object.values(record.ocrSignals || {}).some(count => count > 0), `${record.id} should retain OCR discovery signals`)
+  }
+})
+
 test('all map-facing records have safe coordinates and valid linked places', () => {
   for (const place of atlasData.places) {
     const [lng, lat] = place.location?.coordinates || []

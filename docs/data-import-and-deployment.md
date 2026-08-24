@@ -80,6 +80,28 @@ After review, commit the input, importer, generated seed and documentation in
 one change. The live server does **not** need to rerun this importer when the
 generated seed is already committed.
 
+### Epigraphia Carnatica / Epigraphia Indica Archive TXT workflow
+
+The Archive.org Epigraphia importer builds a review-only index of TXT/OCR
+derivatives. It records Internet Archive identifiers, TXT derivative URLs,
+series/volume labels and OCR discovery signals. It does not copy full OCR text
+into the app bundle, and OCR hits cannot be treated as final evidence until a
+reviewer checks the printed page image and item locator.
+
+To index the local Epigraphia Carnatica cache supplied for this project:
+
+```sh
+EPIGRAPHIA_LOCAL_ARCHIVE_DIR="/Users/omshivaprakash/Downloads/InscriptionStonesOfBengaluru-EC-Archive (1)" \
+EPIGRAPHIA_ARCHIVE_INCLUDE_NETWORK=0 \
+npm run import:epigraphia-archive
+```
+
+The importer generates `src/data/epigraphia-archive.generated.js`. Commit the
+generated module with the importer and documentation. To include live
+Archive.org discovery metadata later, set `EPIGRAPHIA_ARCHIVE_INCLUDE_NETWORK=1`
+and tune `EPIGRAPHIA_ARCHIVE_ROWS` / `EPIGRAPHIA_ARCHIVE_TEXT_SAMPLE_ROWS` for a
+bounded refresh.
+
 ## 3. Other repository import/refresh scripts
 
 These are intentionally source-specific and are not all run on every deploy:
@@ -87,6 +109,7 @@ These are intentionally source-specific and are not all run on every deploy:
 | Script | Use | Run when |
 | --- | --- | --- |
 | `npm run import:patrika` | Patrika Sanchaya newspapers/magazines CSV | The catalogue CSV changes |
+| `npm run import:epigraphia-archive` | Build review-only Epigraphia Archive TXT citation index | Local archive cache changes or a bounded Archive.org refresh is approved |
 | `node scripts/import-wikimedia-people.mjs` | Refresh Wikimedia people candidates | A reviewed source export is supplied |
 | `node scripts/import-freedom-fighters.mjs` | Refresh freedom-fighter CSVs | Master/source CSVs change; pass both CSV paths when needed |
 | `npm run audit:freedom-fighters` | Measure freedom-fighter coverage across all 31 current districts | After imports, curated additions, reviews, or a MariaDB/static release update |
