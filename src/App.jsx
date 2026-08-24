@@ -340,12 +340,13 @@ const publicReviewCandidates=[
   ...primaryAtlasEvents.filter(item=>needsHumanReview(item.review)).map(item=>({...item,...reviewBounds(item.date),...sourceContextFor(item),recordKind:item.type,reviewStatus:item.review.status,description:item.summary,placeLabel:null})),
 ]
 const publicDataDepth=(()=>{
-  const historicalCollections=['events','people','works','inscriptions','culturalHeritage','periodicals','artifacts','reigns','territorialExtents','politicalRelations','externalGovernancePhases','districtHistoryResearch']
-  const historicalRecords=historicalCollections.reduce((total,key)=>total+atlasData[key].length,0)
+  const historicalCollections=['polities','externalPolities','places','events','people','works','inscriptions','culturalHeritage','periodicals','periodicalMapSites','artifacts','reigns','territorialExtents','politicalRelations','relationships','externalGovernancePhases','districtHistoryResearch','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','collaborations']
+  const historicalRecords=historicalCollections.reduce((total,key)=>total+(atlasData[key]?.length||0),0)
   const inscriptionLeads=atlasData.inscriptionAudits.reduce((total,audit)=>total+(audit.priorityCandidates?.length||0),0)
   const heritageSites=atlasData.heritageAudits.reduce((total,audit)=>total+(audit.prioritySites?.length||0),0)
-  const researchLeads=atlasData.templeInventoryLeads.length+atlasData.heritageInventoryLeads.length+inscriptionLeads+heritageSites
-  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:atlasData.sources.length,relationships:atlasData.relationships.length}
+  const researchLeads=atlasData.templeInventoryLeads.length+atlasData.heritageInventoryLeads.length+inscriptionLeads+heritageSites+(atlasData.peopleCandidateMeta?.candidateCount||atlasData.peopleCandidates?.length||0)+(atlasData.martyrCandidates?.length||0)
+  const relationships=atlasData.relationships.length+atlasData.politicalRelations.length+atlasData.feudatoryRelations.length+atlasData.genealogicalRelations.length
+  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:atlasData.sources.length,relationships}
 })()
 const heritageStatusColors={verified:'#17835f','partially-verified':'#4361ee',identified:'#d08024','research-pending':'#8b8b98'}
 const isCultureActive=(item,year)=>year>=item.date.from&&(year<=item.date.to||['continuing-practice','material-survival'].includes(item.continuity))

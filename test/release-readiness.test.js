@@ -43,6 +43,8 @@ test('navigation separates historical exploration from project utilities', () =>
 
 test('public navigation reports the depth of the published research dataset', () => {
   assert.match(appSource, /const publicDataDepth=/, 'public dataset counts must be derived from the bundled release data')
+  assert.match(appSource, /peopleCandidateMeta\?\.candidateCount/, 'dataset depth must include the public Wikimedia candidate corpus without bundling every row into the top-level app')
+  assert.match(appSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
 })
