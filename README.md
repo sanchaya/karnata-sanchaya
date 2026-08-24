@@ -25,6 +25,8 @@ A Kannada-first React/Vite atlas for exploring Karnataka's history through a tim
 - MariaDB audit trail with an approved-only, privacy-safe static release export
 - Search-engine metadata, bilingual structured dataset markup, crawler rules and deployment-aware sitemap generation
 - Atlas-level and source-level citations with plain-text, BibTeX, RIS and JSON exports
+- Evidence Workflow reviewer dashboard with independent reviewer fields, status history and a ready-for-promotion queue for the current P1/P2 packets
+- Dedicated coin, genealogy, boundary-evidence, manuscript witness and inscription-edition seed collections, all review-gated and linked into the public research graph
 
 > The included boundaries and records are prototype data, not scholarly editions. Replace them with reviewed GeoJSON and cited research data before publication.
 
@@ -63,6 +65,8 @@ The statewide freedom-fighter research pass is tracked in the [31-district cover
 The [Internet Archive freedom-fighter research note](docs/internet-archive-freedom-fighter-research.md) records the first ServantsOfKnowledge/JaiGyan scan, six high-value source items and the page-image verification procedure. Internet Archive OCR is used only to find candidate pages; names and claims enter MariaDB through Admin with printed locators and remain `needs-review` until checked.
 
 For repeatable research intake, citation management, MariaDB synchronization, social-update links and offline/PWA operation, follow [Research intake and update procedure](docs/research-intake.md).
+
+For the current P2/P3 corpus maturity work, use [P2/P3 corpus maturity workflow](docs/p2-p3-corpus-maturity.md). It explains how to complete coin records, genealogy assertions, boundary evidence, inscription editions and manuscript/Sanchaya witnesses without promoting leads prematurely.
 
 For the complete CSV/import, migration, server-update and static-publication runbook, see [Data import and deployment](docs/data-import-and-deployment.md).
 
@@ -135,6 +139,8 @@ The admin workspace remains available only by opening `#admin` directly for main
 
 Use the **Resources & collaborations management** shortcuts in the admin toolbar to maintain source metadata and collaboration records. Source fields include authors/organizations, publisher or repository, DOI, ISBN, URL and review state; collaboration records include entity type, public stage, scope and bilingual descriptions. Export and review the complete JSON before publishing.
 
+Open `#evidence` to operate the current evidence board. The board now includes reviewer assignments, review notes, saved status history, a reviewer operations summary and a ready-for-promotion queue. A completed assignment is still only a workflow signal; publication requires an independently reviewed evidence packet, validation, a permanent MariaDB revision and a deliberate static release.
+
 ## Research citations
 
 Open `#research` and choose **Reference catalogue**. Researchers can copy the recommended atlas citation, download atlas BibTeX or RIS, export the filtered source catalogue as JSON, and open the citation menu on any source for item-level BibTeX, RIS or plain-text citation. Citation quality improves as DOI, publisher and authorship metadata is completed in the admin workspace.
@@ -142,6 +148,8 @@ Open `#research` and choose **Reference catalogue**. Researchers can copy the re
 Atlas v0.26 adds the Patrika Sanchaya periodicals layer: 3,715 Kannada newspaper and magazine catalogue rows remain available to Admin as `periodicals` records, with 76 grouped publication-place anchors on the atlas map and needs-review markers. Refresh the source with `npm run import:patrika`, then validate and synchronize MariaDB. The catalogue is credited to Patrike Sanchaya and Srinivas Havanur; future digitisation additions can be coordinated with ServantsOfKnowledge.
 
 Kingdom periods are shown as bounded reign cards on the timeline; when more than one polity is active at the selected year, the sidebar identifies the overlap. `artifacts` is the review-marked collection for dynastic symbols, coins, inscription stones, sculpture, regalia and architectural fragments. These objects appear in the dedicated timeline category and map layer with site-context coordinates until an object-level catalogue, repository and photograph are confirmed in Admin.
+
+Atlas v0.28.2 expands the P2/P3 maturity layer with Hoysala and Mysore genealogy bridges, Belur and Srirangapatna coinage leads, Kumaravyasa Bharata and Torave Ramayana Sanchaya witness leads, Hoysala and Mysore boundary-evidence packets, and Shravanabelagola/Muktesvara inscription-edition packets. These are discovery and review packets, not publication-ready claims.
 
 ## Data structure
 

@@ -1,6 +1,6 @@
 # Atlas v0.23 — evidence promotion sprint
 
-Updated: 2026-07-30
+Updated: 2026-08-24
 
 This milestone converts the P1 inscription queue into seven publication packets. It does not replace fieldwork or independent review. A record remains `needs-review` until all seven evidence gates are verified and a reviewer other than the contributor records the decision.
 
@@ -11,6 +11,17 @@ This milestone converts the P1 inscription queue into seven publication packets.
 - Each card derives its status and counts directly from the normalized candidate record; it does not maintain a second browser-only checklist.
 - Researchers can narrow the permanent MariaDB task board to the outstanding requests for one packet.
 - Maski and Sannati remain in `translation-review`; no software action can manufacture the required independent attestation.
+
+## Reviewer operations added after v0.23
+
+The `#evidence` page now includes a reviewer operations panel above the permanent task board:
+
+- reviewer dashboard: counts awaiting review, overdue tasks, blocking tasks and completed tasks by reviewer;
+- ready-for-promotion queue: ranks the seven current promotion packets by remaining blockers;
+- independent reviewer field and review note on every assignment;
+- saved assignment status history from MariaDB.
+
+This panel helps coordinate work, but it does not publish records. A completed task is evidence that the workflow item was handled. Promotion still requires the historical record itself to have all gates verified, an independent reviewer decision, validation and inclusion in an approved static release.
 
 ## Current readiness
 
@@ -26,5 +37,6 @@ This milestone converts the P1 inscription queue into seven publication packets.
 
 ## Completion rule
 
-An assignment marked complete means the requested material was submitted. Promotion additionally requires source and item identity checks, an independently approved Kannada interpretation, evidence dates and licences, validation, a permanent MariaDB dataset revision and deliberate inclusion in an approved static release.
+An assignment marked complete means the requested material was submitted and independently reviewed in the task workflow. Promotion additionally requires source and item identity checks, an independently approved Kannada interpretation, evidence dates and licences, validation, a permanent MariaDB dataset revision and deliberate inclusion in an approved static release.
 
+For the newer coin, genealogy, boundary, manuscript and inscription-edition maturity queues, use [`p2-p3-corpus-maturity.md`](p2-p3-corpus-maturity.md).

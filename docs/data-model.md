@@ -67,6 +67,8 @@ Atlas v0.28 starts the P2 corpus expansion. The seed batch adds Kadamba and West
 
 Atlas v0.28.1 deepens the inscription review queue with provisional edition packets for Talagunda, Gudnapur, Kappe Arabhatta, Begur, Atakur, Tyagada Brahmadeva, Lakkundi, Belur, Hampi Krishna Temple, Chandravalli, Doddahundi and Takuapa. These packets intentionally capture the next editorial work to do: resolve the exact corpus locator, line transcription, translation witness, photograph/licence status and authority coordinate before promotion.
 
+Atlas v0.28.2 adds the next P2/P3 maturity slice. Hoysala and Mysore genealogy bridge records make the network explorer traversable while explicitly labeling the claims as derived. Belur and Srirangapatna coinage leads add numismatic work packets without asserting catalogue-level maturity. Kumaravyasa Bharata and Torave Ramayana now have Sanchaya digital-witness leads. Hoysala Vishnuvardhana and Mysore Tipu Sultan boundary packets record why the map geometry remains schematic. Shravanabelagola and Muktesvara edition packets expand the inscription queue while retaining item-edition, transcription, translation, photograph and authority-coordinate gates.
+
 ## Literature and epigraphy explorer fields
 
 Atlas v0.15.2 treats public records and district research candidates as different evidence states. A candidate is not rendered as a mapped inscription until its place, date and item-level edition have been reviewed.
@@ -92,6 +94,8 @@ Atlas v0.21 adds a first bilateral political-relations pass to that matrix. The 
 The live MariaDB service stores collaboration proposals separately from the static `collaborations` catalogue. Approved contributors submit a bilingual scope and institutional contact; appointed reviewers can approve, request changes, or decline it. An approval remains a staging decision and does not automatically publish a collaboration to the GitHub Pages dataset.
 
 Each unresolved inscription gate also emits a structured `evidenceRequest`. These specify the submission type, bilingual field instruction and minimum required fields for authority coordinates, corpus editions, line transcription, independent Kannada review, dated condition surveys, protection-register matches and reusable photo sets. The Evidence Workflow exposes the complete 19-candidate worklist as a human-readable, paginated task board for field teams and reviewers. Raw dataset and worklist JSON remain confined to the administrator workspace and backend handoff process. A dated `verificationTrail` records authoritative searches that did not yield sufficient evidence, preventing repeated searches from being mistaken for verification.
+
+Evidence assignments are live workflow records, not dataset edits. They may store assignee, independent reviewer, due date, review note and status history in MariaDB. A task can be complete while the underlying historical record remains `needs-review`; promotion still requires validated source fields, independent review and a deliberate dataset revision.
 
 The public timeline is a cross-domain index over events, people, works, inscriptions, reigns, territorial snapshots, and cultural records. Selecting a timeline item delegates to its existing evidence/detail view rather than duplicating records.
 
