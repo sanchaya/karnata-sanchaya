@@ -82,6 +82,7 @@ test('script evolution explorer is public, searchable and evidence-gated', () =>
 
 test('public open dataset packets are generated during static builds', () => {
   assert.match(packageSource, /generate-open-datasets\.mjs/, 'static builds must emit the public open dataset packets')
+  assert.match(packageSource, /import:epigraphia-archive/, 'Epigraphia Archive TXT imports must be reproducible from npm scripts')
   assert.match(openDatasetExportSource, /atlasData\.openDatasetCatalogue/, 'the exporter must derive packets from the public catalogue')
   assert.match(openDatasetExportSource, /public\/data\/open/, 'open dataset packets must be written to the public static data path')
   assert.match(openDatasetExportSource, /atlasData\.meta\.exportedAt\|\|null/, 'static packets must not churn timestamps on every build')
@@ -186,6 +187,8 @@ test('the Epigraphy Explorer exposes the P2 corpus review queue', () => {
   assert.match(explorerSource, /corpusScope/, 'the corpus review queue must keep a dedicated sprint scope filter')
   assert.match(explorerSource, /script-support/, 'the corpus review queue must expose a script-support sprint')
   assert.match(explorerSource, /high-priority/, 'the corpus review queue must expose high-priority locator work')
+  assert.match(explorerSource, /ArchiveTextCorpus/, 'the epigraphy page must expose Archive.org TXT corpus citations')
+  assert.match(explorerSource, /atlasData\.epigraphiaArchiveTexts/, 'the Archive.org TXT corpus panel must derive from generated data')
   assert.match(explorerSource, /epigraphy-command-center/, 'the epigraphy page should keep map and filters together as a command center')
   assert.match(explorerSource, /epigraphy-workbench/, 'the epigraphy page should organize queue, source corpora and records as one workbench')
   assert.match(explorerSource, /epigraphy-corpus-drawer/, 'source corpus data must remain available in disclosure drawers')
