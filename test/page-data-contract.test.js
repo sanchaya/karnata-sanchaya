@@ -88,6 +88,23 @@ test('Itihasa Darshana volumes expose review-gated atlas link groups', () => {
   }
 })
 
+test('Karnataka Parampare volumes are queued as review-gated source links', () => {
+  const volumes = atlasData.sources.filter(source => source.collectionKey === 'karnataka-parampare')
+  assert.equal(volumes.length, 2)
+  assert.ok(volumes.every(source => source.url.startsWith('https://archive.org/details/sanchaya.karnatakaparampa0000_')))
+  assert.ok(volumes.every(source => source.review.status === 'needs-review'))
+  assert.ok(volumes.every(source => source.contentReview?.status === 'queued'))
+  assert.ok(volumes.every(source => source.contentReview?.atlasLinks?.length === 1))
+  for (const source of volumes) {
+    for (const link of source.contentReview.atlasLinks) {
+      assert.equal(link.status, 'needs-article-page-review')
+      assert.equal(link.confidence, 'low')
+      assert.ok(link.requiredReview.includes('printedPage'))
+      for (const targetId of link.targetRecordIds) assert.ok(knownIds.has(targetId), `${source.id} has unknown Karnataka Parampare link target ${targetId}`)
+    }
+  }
+})
+
 test('all map-facing records have safe coordinates and valid linked places', () => {
   for (const place of atlasData.places) {
     const [lng, lat] = place.location?.coordinates || []
