@@ -22,7 +22,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `manuscriptWitnesses` | 7 | Repository leads located for some works; shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 7 | Schematic evidence packets, not research-grade boundary corpus |
 | `inscriptionEditions` | 19 | Item-edition queue started; transcription, translation, photographs and coordinates mostly open |
-| `scriptEvolution` | 3 | Early sample timeline only |
+| `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
 
 ## Promotion rule
 
@@ -159,6 +159,9 @@ Current first targets:
 | --- | --- |
 | `script-southern-brahmi-kadamba-transition` | Attach item-level Talagunda and Halmidi edition locators and palaeographic references. |
 | `script-old-kannada-epigraphic-phase` | Add more sample inscriptions beyond Halmidi and Shravanabelagola, with exact corpus locators. |
+| `script-early-kannada-verse-transition` | Resolve Kappe Arabhatta, Begur and Atakur locators against printed editions, line numbers and image witnesses. |
+| `script-medieval-kannada-temple-epigraphy` | Attach Lakkundi, Belur and Muktesvara editions, translations, plate/page references and monument links. |
+| `script-vijayanagara-kannada-nagari-mixed-phase` | Split Hampi/Vijayanagara witnesses by script, language and medium once item-level corpus records are available. |
 | `script-modern-kannada-print-transition` | Connect manuscript, print and Patrika Sanchaya witnesses with source runs and licence notes. |
 
 ## Reviewer operations
