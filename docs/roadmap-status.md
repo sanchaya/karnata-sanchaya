@@ -45,11 +45,11 @@ The bundled snapshot currently contains approximately:
 
 - 9 Karnataka polities, 52 external polities, 96 events, 461 curated people, a 905-record lazy Wikimedia people-review candidate corpus and 28 bilateral political relations;
 - 29 inscriptions, 25 literary works, 58 cultural records and 24 reign/period records;
-- 309 sources, 1,494 generated relationships, 98 places and 13 collaboration records;
+- 311 sources, 1,494 generated relationships, 98 places and 13 collaboration records;
 - 3,715 Patrika Sanchaya periodicals and 76 grouped publication-place anchors, all visibly `needs-review`;
 - 7 genealogy assertions, 6 coin records, 7 manuscript witnesses, 7 boundary-evidence packets, 20 inscription-edition packets and 6 script-evolution records, all review-gated;
 - 12 local Epigraphia Carnatica Archive TXT records indexed as OCR discovery citations, with page-image review still required;
-- 31 Itihasa Darshana volumes linked to 57 atlas review-lead groups across inscriptions, scripts, literature, manuscripts and freedom-movement source review; article/page locators still required;
+- 33 Itihasa Darshana/Karnataka Parampare research volumes linked to 59 atlas review-lead groups across inscriptions, scripts, literature, manuscripts, freedom-movement, outside-Karnataka rule and heritage source review; article/page locators still required;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;
 - 1,531 heritage inventory leads with explicit protection/register levels. Twenty-five newly covered Mysuru buildings remain unverified discovery leads rather than claimed protected monuments;
 - 64 district deep-history records: 31 district scopes plus 33 research leads. The 22 districts that previously had no candidate now each have one explicit intake packet; all remain `needs-review` until site-level authority evidence is collected.

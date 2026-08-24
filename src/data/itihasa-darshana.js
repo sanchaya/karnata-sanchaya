@@ -96,6 +96,18 @@ const manuscriptTargets = [
   'manuscript-torave-ramayana-sanchaya-witness-lead',
 ]
 const freedomTargets = ['src-ff-31']
+const karnatakaParampareEventTargets = [
+  'event-nanyadeva-founds-simraungarh',
+  'event-eastern-chalukya-vengi-foundation',
+  'event-goa-kadamba-gopakapattana',
+  'event-sevuna-devagiri-independent-power',
+  'event-rashtrakuta-western-central-india-reach',
+]
+const karnatakaParampareHeritageTargets = [
+  'culture-simraungarh-karnata-fortress-city',
+  'culture-gopakapattana-goa-kadamba-port',
+  'culture-devagiri-sevuna-capital-fort',
+]
 const specialSourceLinks = {
   'kia.itihasadarshanas0000drsu1989samput4': [
     link(
@@ -119,6 +131,30 @@ const specialSourceLinks = {
       'medium',
       'Existing freedom-fighter research notes identify this volume as a likely biography source; exact article/page evidence is still required.',
       'ಈ ಸಂಪುಟವನ್ನು ಸಾಧ್ಯ ಜೀವನಚರಿತ್ರೆ ಆಕರವೆಂದು ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರರ ಸಂಶೋಧನಾ ಟಿಪ್ಪಣಿಗಳು ಗುರುತಿಸುತ್ತವೆ; ನಿಖರ ಲೇಖನ/ಪುಟ ಸಾಕ್ಷ್ಯ ಇನ್ನೂ ಬೇಕಾಗಿದೆ.',
+    ),
+  ],
+  'sanchaya.karnatakaparampa0000_v1': [
+    link(
+      'karnataka-parampare-transregional-rule-lead',
+      'Karnataka Parampare transregional rule leads',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಅಂತರಪ್ರಾದೇಶಿಕ ಆಳ್ವಿಕೆ ದಾರಿಗಳು',
+      'events',
+      karnatakaParampareEventTargets,
+      'low',
+      'User-supplied Karnataka Parampare volume is queued as a discovery source for outside-Karnataka rule and dynasty-branch packets; exact article and page locators are still required.',
+      'ಬಳಕೆದಾರರು ನೀಡಿದ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟವನ್ನು ಕರ್ನಾಟಕದಾಚೆಯ ಆಳ್ವಿಕೆ ಮತ್ತು ವಂಶ-ಶಾಖೆ ಕಡತಗಳ ಅನ್ವೇಷಣಾ ಆಕರವಾಗಿ ಸರದಿಗೆ ಸೇರಿಸಲಾಗಿದೆ; ನಿಖರ ಲೇಖನ ಮತ್ತು ಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಇನ್ನೂ ಬೇಕಾಗಿವೆ.',
+    ),
+  ],
+  'sanchaya.karnatakaparampa0000_v2': [
+    link(
+      'karnataka-parampare-heritage-lead',
+      'Karnataka Parampare heritage and material-culture leads',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಪರಂಪರೆ-ವಸ್ತುಸಂಸ್ಕೃತಿ ದಾರಿಗಳು',
+      'culturalHeritage',
+      karnatakaParampareHeritageTargets,
+      'low',
+      'User-supplied Karnataka Parampare volume is queued for fortress, port-capital and material-culture review leads; cite only after the printed article/page is identified.',
+      'ಬಳಕೆದಾರರು ನೀಡಿದ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟವನ್ನು ಕೋಟೆ, ಬಂದರು-ರಾಜಧಾನಿ ಮತ್ತು ವಸ್ತುಸಂಸ್ಕೃತಿ ಪರಿಶೀಲನಾ ದಾರಿಗಳಿಗೆ ಸರದಿಗೆ ಸೇರಿಸಲಾಗಿದೆ; ಮುದ್ರಿತ ಲೇಖನ/ಪುಟ ಗುರುತಿಸಿದ ನಂತರ ಮಾತ್ರ ಉಲ್ಲೇಖಿಸಿ.',
     ),
   ],
 }
@@ -255,4 +291,47 @@ export const itihasaDarshanaSources = [
   volume('kia.itihasadarshansa0000drsu1987samut2', 'Volume 2 (1987)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೨, ಸಂಚಿಕೆ ೧', 1987),
   volume('itihasadarshanav0000drde', 'Volume 31 (2016)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ 31/2016', 2016),
   volume('kia.itihasadarshanas0000drsu1995smput10', 'Volume 10 (1995)', 'ಇತಿಹಾಸ ದರ್ಶನ, ಸಂಪುಟ ೧೦', 1995),
+]
+
+const parampareVolume = (id, label, titleKn) => {
+  const base = `https://archive.org/details/${id}`
+  return {
+    id: `src-karnataka-parampare-${id.replace(/^sanchaya\.karnatakaparampa0000_/, '')}`,
+    type: 'digitised-research-volume',
+    title: name(`Karnataka Parampare, ${label}`, titleKn),
+    authors: ['Sanchaya contributors'],
+    publisher: 'Sanchaya',
+    year: null,
+    url: base,
+    collectionKey: 'karnataka-parampare',
+    repository: {
+      platform: 'Internet Archive',
+      identifier: id,
+      fullTextUrl: `https://archive.org/stream/${id}/${id}_djvu.txt`,
+      hocrUrl: `https://archive.org/download/${id}/${id}_hocr.html`,
+    },
+    contentReview: {
+      status: 'queued',
+      textFile: `${id}_djvu.txt`,
+      hocrFile: `${id}_hocr.html`,
+      accessedAt: '2026-08-25',
+      pass: 'source-registered-awaiting-full-text-screening',
+      ocrSignals: null,
+      atlasLinks: atlasLinksFor(id),
+      note: name(
+        'Registered from the user-supplied Internet Archive item. Reviewers must open OCR, HOCR and page images, then record article title, printed page and target-record fit before promoting citations.',
+        'ಬಳಕೆದಾರರು ನೀಡಿದ ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್ ದಾಖಲೆಯಿಂದ ನೋಂದಾಯಿಸಲಾಗಿದೆ. citation ಉತ್ತೇಜಿಸುವ ಮೊದಲು ಪರಿಶೀಲಕರು OCR, HOCR ಮತ್ತು ಪುಟ ಚಿತ್ರಗಳನ್ನು ತೆರೆಯಬೇಕು; ಲೇಖನ ಶೀರ್ಷಿಕೆ, ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಗುರಿ-ದಾಖಲೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ದಾಖಲಿಸಬೇಕು.',
+      ),
+    },
+    usageNote: name(
+      'Use as a discovery route until the exact article/page locator is captured; do not treat the volume-level link as final evidence.',
+      'ನಿಖರ ಲೇಖನ/ಪುಟ ಸ್ಥಾನಸೂಚಿ ಹಿಡಿಯುವವರೆಗೆ ಇದನ್ನು ಅನ್ವೇಷಣಾ ದಾರಿಯಾಗಿ ಮಾತ್ರ ಬಳಸಿ; ಸಂಪುಟ-ಮಟ್ಟದ ಕೊಂಡಿಯನ್ನು ಅಂತಿಮ ಸಾಕ್ಷ್ಯವೆಂದು ಪರಿಗಣಿಸಬೇಡಿ.',
+    ),
+    review: { status: 'needs-review', reviewer: null, updatedAt: '2026-08-25' },
+  }
+}
+
+export const karnatakaParampareSources = [
+  parampareVolume('sanchaya.karnatakaparampa0000_v1', 'Volume 1', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ, ಸಂಪುಟ ೧'),
+  parampareVolume('sanchaya.karnatakaparampa0000_v2', 'Volume 2', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ, ಸಂಪುಟ ೨'),
 ]

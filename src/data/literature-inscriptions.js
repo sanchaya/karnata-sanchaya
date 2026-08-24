@@ -1,5 +1,5 @@
 import { bengaluruWikipediaPages } from './bengaluru-wikipedia.js'
-import { itihasaDarshanaSources } from './itihasa-darshana.js'
+import { itihasaDarshanaSources, karnatakaParampareSources } from './itihasa-darshana.js'
 
 const name = (en, kn) => ({ en, kn })
 const review = (status = 'needs-review') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
@@ -62,6 +62,7 @@ export const literatureEpigraphySources = [
   { id:'src-mapunity-bengaluru-inscription-map', type:'community-geospatial-inventory', title:name('MapUnity: Inscription Stones on Mapunity Groups','ಮ್ಯಾಪ್‌ಯುನಿಟಿ: ಮ್ಯಾಪ್‌ಯುನಿಟಿ ಗುಂಪುಗಳ ಶಾಸನ ಕಲ್ಲುಗಳು'), authors:['Inscription Stones of Bengaluru contributors','MapUnity Groups'], year:null, url:'https://inscription-stones.mapunitygroups.com/', usageNote:name('Use the map as a community geospatial candidate inventory. Preserve its status labels and retrieval date; confirm coordinates, identity, condition and authority independently before promotion.','ಸಮುದಾಯದ ಭೌಗೋಳಿಕ ಅಭ್ಯರ್ಥಿ ಪಟ್ಟಿಯಾಗಿ ಈ ನಕ್ಷೆಯನ್ನು ಬಳಸಿ. ಅದರ ಸ್ಥಿತಿ ಗುರುತುಗಳು ಮತ್ತು ಪಡೆಯಲಾದ ದಿನಾಂಕವನ್ನು ಉಳಿಸಿ; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ನಿರ್ದೇಶಾಂಕ, ಗುರುತು, ಸ್ಥಿತಿ ಮತ್ತು ಪ್ರಾಧಿಕಾರವನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ದೃಢೀಕರಿಸಬೇಕು.'), review:review('needs-review') },
   { id:'src-kml-bengaluru-inscription-stones', type:'kml-geospatial-inventory', title:name('The Incredible Inscription Stones of Bengaluru — supplied KML inventory','ಬೆಂಗಳೂರಿನ ಅದ್ಭುತ ಶಾಸನ ಕಲ್ಲುಗಳು — ಒದಗಿಸಿದ KML ಪಟ್ಟಿ'), authors:['#InscriptionStonesOfBangalore conservation team'], year:null, url:'https://inscription-stones.mapunitygroups.com/', repository:{format:'KML',localAsset:'The Incredible Inscription Stones of Bengaluru (1).kml',placemarks:1740,pointPlacemarks:1368,polygonPlacemarks:369,deduplicatedPointCandidates:1281}, usageNote:name('Private staging input supplied to the Atlas team. It contains taluk point folders and a Bengaluru ward antiquity layer; import as unverified candidates, retain the original KML filename and style/status labels, and deduplicate before review.','ಅಟ್ಲಸ್ ತಂಡಕ್ಕೆ ಒದಗಿಸಿದ ಖಾಸಗಿ ಹಂತದ ಆಕರ. ಇದರಲ್ಲಿ ತಾಲ್ಲೂಕು ಬಿಂದು ಫೋಲ್ಡರ್‌ಗಳು ಮತ್ತು ಬೆಂಗಳೂರು ವಾರ್ಡ್ ಪುರಾತನತಾ ಪದರವಿದೆ; ಪರಿಶೀಲಿಸದ ಅಭ್ಯರ್ಥಿಗಳಾಗಿ ಆಮದು ಮಾಡಿ, ಮೂಲ KML ಹೆಸರನ್ನು ಮತ್ತು ಶೈಲಿ/ಸ್ಥಿತಿ ಗುರುತುಗಳನ್ನು ಉಳಿಸಿ, ಪರಿಶೀಲನೆಗೂ ಮೊದಲು ನಕಲುಗಳನ್ನು ತೆಗೆದುಹಾಕಬೇಕು.'), review:review('needs-review') },
   ...itihasaDarshanaSources,
+  ...karnatakaParampareSources,
 ]
 
 const unresolved = (noteEn, noteKn) => ({ status:'unresolved', note:name(noteEn,noteKn) })

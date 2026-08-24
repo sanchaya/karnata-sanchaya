@@ -10,8 +10,8 @@ const copy={
 }
 Object.assign(copy.en,{maturityTitle:'P2/P3 evidence maturity',maturityIntro:'Track corpus growth and publication readiness without treating discovery leads as finished history.',publicationReady:'Publication-ready',reviewBlocked:'Review blocked',evidenceFields:'Evidence fields',coinPanel:'Coin evidence maturity',coinIntro:'Coin leads stay public as review packets until catalogue item, image, metal, weight and findspot evidence are resolved.',metal:'Metal',weight:'Weight',findspot:'Findspot',image:'Image',catalogue:'Catalogue',openCoinTasks:'Open coin tasks',boundaryPanel:'Boundary evidence maturity',boundaryIntro:'Boundary packets separate schematic orientation layers from evidence-backed historical geography.',geometry:'Geometry',confidence:'Confidence'})
 Object.assign(copy.kn,{maturityTitle:'P2/P3 ಸಾಕ್ಷ್ಯ ಪರಿಪಕ್ವತೆ',maturityIntro:'ಅನ್ವೇಷಣಾ ಸುಳಿವುಗಳನ್ನು ಪೂರ್ಣ ಇತಿಹಾಸವೆಂದು ತೋರಿಸದೆ ಸಂಗ್ರಹ ವಿಸ್ತರಣೆ ಮತ್ತು ಪ್ರಕಟಣಾ ಸಿದ್ಧತೆಯನ್ನು ಗಮನಿಸಿ.',publicationReady:'ಪ್ರಕಟಣೆಗೆ ಸಿದ್ಧ',reviewBlocked:'ವಿಮರ್ಶೆ ತಡೆ',evidenceFields:'ಸಾಕ್ಷ್ಯ ಕ್ಷೇತ್ರಗಳು',coinPanel:'ನಾಣ್ಯ ಸಾಕ್ಷ್ಯ ಪರಿಪಕ್ವತೆ',coinIntro:'ಪಟ್ಟಿ ಮಾದರಿ, ಚಿತ್ರ, ಲೋಹ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಸಾಕ್ಷ್ಯ ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ನಾಣ್ಯ ದಾರಿಗಳು ಪರಿಶೀಲನಾ ಕಡತಗಳಾಗಿಯೇ ಉಳಿಯುತ್ತವೆ.',metal:'ಲೋಹ',weight:'ತೂಕ',findspot:'ಪತ್ತೆಸ್ಥಳ',image:'ಚಿತ್ರ',catalogue:'ಪಟ್ಟಿ',openCoinTasks:'ನಾಣ್ಯ ಕಾರ್ಯಗಳನ್ನು ತೆರೆಯಿರಿ',boundaryPanel:'ಗಡಿ ಸಾಕ್ಷ್ಯ ಪರಿಪಕ್ವತೆ',boundaryIntro:'ಗಡಿ ಕಡತಗಳು ರೂಪರೇಖಾ ದಿಕ್ಕುಪದರಗಳನ್ನು ಸಾಕ್ಷ್ಯಾಧಾರಿತ ಐತಿಹಾಸಿಕ ಭೂಗೋಳದಿಂದ ಪ್ರತ್ಯೇಕಿಸುತ್ತವೆ.',geometry:'ಜ್ಯಾಮಿತಿ',confidence:'ವಿಶ್ವಾಸ'})
-Object.assign(copy.en,{sourcePanel:'Source-link review sprint',sourceIntro:'Close the gap between OCR discovery and record-level citations by assigning Archive TXT locator checks and Itihasa Darshana article/page reviews.',archiveHintTasks:'Archive OCR locator tasks',itihasaLinkTasks:'Itihasa article/page tasks',openSourceTasks:'Open source-link tasks'})
-Object.assign(copy.kn,{sourceLinks:'ಆಕರ ಕೊಂಡಿಗಳು',sourcePanel:'ಆಕರ-ಕೊಂಡಿ ಪರಿಶೀಲನಾ ಹಂತ',sourceIntro:'Archive TXT ಸ್ಥಾನಸೂಚಿ ಪರಿಶೀಲನೆ ಮತ್ತು ಇತಿಹಾಸ ದರ್ಶನ ಲೇಖನ/ಪುಟ ವಿಮರ್ಶೆಗಳನ್ನು ನಿಯೋಜಿಸಿ OCR ಅನ್ವೇಷಣೆಯಿಂದ ದಾಖಲೆಮಟ್ಟದ citation ಗೆ ಸೇತುವೆ ನಿರ್ಮಿಸಿ.',archiveHintTasks:'Archive OCR ಸ್ಥಾನಸೂಚಿ ಕಾರ್ಯಗಳು',itihasaLinkTasks:'ಇತಿಹಾಸ ಲೇಖನ/ಪುಟ ಕಾರ್ಯಗಳು',openSourceTasks:'ಆಕರ-ಕೊಂಡಿ ಕಾರ್ಯಗಳನ್ನು ತೆರೆಯಿರಿ'})
+Object.assign(copy.en,{sourcePanel:'Source-link review sprint',sourceIntro:'Close the gap between OCR discovery and record-level citations by assigning Archive TXT locator checks plus Itihasa Darshana and Karnataka Parampare article/page reviews.',archiveHintTasks:'Archive OCR locator tasks',itihasaLinkTasks:'Research-volume article/page tasks',openSourceTasks:'Open source-link tasks'})
+Object.assign(copy.kn,{sourceLinks:'ಆಕರ ಕೊಂಡಿಗಳು',sourcePanel:'ಆಕರ-ಕೊಂಡಿ ಪರಿಶೀಲನಾ ಹಂತ',sourceIntro:'Archive TXT ಸ್ಥಾನಸೂಚಿ ಪರಿಶೀಲನೆ ಮತ್ತು ಇತಿಹಾಸ ದರ್ಶನ/ಕರ್ನಾಟಕ ಪರಂಪರೆ ಲೇಖನ-ಪುಟ ವಿಮರ್ಶೆಗಳನ್ನು ನಿಯೋಜಿಸಿ OCR ಅನ್ವೇಷಣೆಯಿಂದ ದಾಖಲೆಮಟ್ಟದ citation ಗೆ ಸೇತುವೆ ನಿರ್ಮಿಸಿ.',archiveHintTasks:'Archive OCR ಸ್ಥಾನಸೂಚಿ ಕಾರ್ಯಗಳು',itihasaLinkTasks:'ಸಂಶೋಧನಾ ಸಂಪುಟ ಲೇಖನ/ಪುಟ ಕಾರ್ಯಗಳು',openSourceTasks:'ಆಕರ-ಕೊಂಡಿ ಕಾರ್ಯಗಳನ್ನು ತೆರೆಯಿರಿ'})
 Object.assign(copy.kn.fields,{archiveLocator:'ಆರ್ಕೈವ್ OCR ಸ್ಥಾನಸೂಚಿ',articlePageReview:'ಲೇಖನ/ಪುಟ ಪರಿಶೀಲನೆ'})
 Object.assign(copy.en,{reviewer:'Independent reviewer',reviewNote:'Review note',history:'Status history',noHistory:'No saved history yet',reviewerRequired:'Complete requires a named reviewer who is different from the assignee.'})
 Object.assign(copy.kn,{reviewer:'ಸ್ವತಂತ್ರ ಪರಿಶೀಲಕ',reviewNote:'ವಿಮರ್ಶಾ ಟಿಪ್ಪಣಿ',history:'ಸ್ಥಿತಿ ಇತಿಹಾಸ',noHistory:'ಉಳಿಸಿದ ಇತಿಹಾಸ ಇನ್ನೂ ಇಲ್ಲ',reviewerRequired:'ಪೂರ್ಣಗೊಳಿಸಲು ನಿಯೋಜಿತ ವ್ಯಕ್ತಿಯಿಂದ ಬೇರೆ ಸ್ವತಂತ್ರ ಪರಿಶೀಲಕರ ಹೆಸರು ಅಗತ್ಯ.'})
@@ -96,13 +96,14 @@ const archiveLocatorTasks=atlasData.epigraphiaArchiveTexts.flatMap(record=>(reco
   ...sourceLinkTaskTemplates.archiveLocator,
   instruction:{en:`Verify ${candidate.label.en} in the printed page image before linking it to ${candidate.targetRecordIds.slice(0,3).join(', ')}. OCR line ${candidate.firstOcrLine||'unresolved'} and terms ${candidate.matchedTerms.join(', ')} are discovery aids only.`,kn:`${candidate.label.kn} ಅನ್ನು ${candidate.targetRecordIds.slice(0,3).join(', ')} ದಾಖಲೆಗೆ ಜೋಡಿಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟದ ಚಿತ್ರದಲ್ಲಿ ಪರಿಶೀಲಿಸಿ. OCR ಸಾಲು ${candidate.firstOcrLine||'ಬಗೆಹರಿದಿಲ್ಲ'} ಮತ್ತು ${candidate.matchedTerms.join(', ')} ಪದಗಳು ಅನ್ವೇಷಣಾ ಸಹಾಯ ಮಾತ್ರ.`},
 })))
-const itihasaSourceTasks=atlasData.sources.filter(source=>source.collectionKey==='itihasa-darshana').flatMap(source=>(source.contentReview?.atlasLinks||[]).map(link=>({
+const sourceReviewVolumes=atlasData.sources.filter(source=>source.contentReview?.atlasLinks?.length)
+const itihasaSourceTasks=sourceReviewVolumes.flatMap(source=>(source.contentReview?.atlasLinks||[]).map(link=>({
   id:`${source.id}:${link.linkKind}`,
   domain:'sourceLinks',
   recordId:source.id,
   recordName:source.title,
-  context:{en:`Itihasa Darshana · ${link.targetCollection}`,kn:`ಇತಿಹಾಸ ದರ್ಶನ · ${link.targetCollection}`},
-  stage:'p2-itihasa-article-review',
+  context:{en:`${source.collectionKey==='karnataka-parampare'?'Karnataka Parampare':'Itihasa Darshana'} · ${link.targetCollection}`,kn:`${source.collectionKey==='karnataka-parampare'?'ಕರ್ನಾಟಕ ಪರಂಪರೆ':'ಇತಿಹಾಸ ದರ್ಶನ'} · ${link.targetCollection}`},
+  stage:source.collectionKey==='karnataka-parampare'?'p2-karnataka-parampare-article-review':'p2-itihasa-article-review',
   verifiedCount:0,
   totalGates:link.requiredReview.length,
   priority:link.confidence==='high'?3:4,
@@ -132,7 +133,7 @@ const maturityStreams=[
   {domain:'genealogy',records:atlasData.genealogicalRelations.length,tasks:genealogyTasks.length,ready:0,fields:Object.keys(genealogyTaskTemplates)},
   {domain:'boundaries',records:atlasData.boundaryEvidence.length,tasks:boundaryTasks.length,ready:atlasData.boundaryEvidence.filter(record=>record.blockingEvidence?.length===0).length,fields:['inscriptionClusters','administrativeUnits','campaignEvents','sourceMapComparison']},
   {domain:'scripts',records:atlasData.scriptEvolution.length,tasks:scriptTasks.length,ready:0,fields:Object.keys(scriptTaskTemplates)},
-  {domain:'sourceLinks',records:atlasData.epigraphiaArchiveTexts.length+atlasData.sources.filter(source=>source.collectionKey==='itihasa-darshana').length,tasks:sourceLinkTasks.length,ready:0,fields:['archiveLocator','articlePageReview']},
+  {domain:'sourceLinks',records:atlasData.epigraphiaArchiveTexts.length+sourceReviewVolumes.length,tasks:sourceLinkTasks.length,ready:0,fields:['archiveLocator','articlePageReview']},
 ]
 const sourceLinkStats=[
   {label:'archiveHintTasks',value:archiveLocatorTasks.length,field:'archiveLocator'},
