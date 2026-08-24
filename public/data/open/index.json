@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.28.1",
+  "generatedAt": "2026-08-24T13:39:36.825Z",
+  "datasets": [
+    {
+      "id": "dataset-public-atlas-summary",
+      "name": {
+        "en": "Public atlas summary dataset",
+        "kn": "ಸಾರ್ವಜನಿಕ ಭೂಪಟ ಸಾರಾಂಶ ದತ್ತಸಂಚಯ"
+      },
+      "datasetKind": "public-summary",
+      "path": "data/open/atlas-summary.json",
+      "access": "static-json",
+      "review": {
+        "status": "needs-review",
+        "reviewer": null,
+        "updatedAt": "2026-08-23"
+      }
+    },
+    {
+      "id": "dataset-p1-model-foundations",
+      "name": {
+        "en": "P1 model-foundation packets",
+        "kn": "P1 ಮಾದರಿ-ಆಧಾರ ಕಡತಗಳು"
+      },
+      "datasetKind": "public-summary",
+      "path": "data/open/p1-model-foundations.json",
+      "access": "static-json",
+      "review": {
+        "status": "needs-review",
+        "reviewer": null,
+        "updatedAt": "2026-08-23"
+      }
+    },
+    {
+      "id": "dataset-p2-corpus-expansion",
+      "name": {
+        "en": "P2 corpus-expansion review packets",
+        "kn": "P2 ಸಂಗ್ರಹ-ವಿಸ್ತರಣೆ ಪರಿಶೀಲನಾ ಕಡತಗಳು"
+      },
+      "datasetKind": "public-summary",
+      "path": "data/open/p2-corpus-expansion.json",
+      "access": "static-json",
+      "review": {
+        "status": "needs-review",
+        "reviewer": null,
+        "updatedAt": "2026-08-23"
+      }
+    },
+    {
+      "id": "dataset-p3-publication-review-workflow",
+      "name": {
+        "en": "P3 publication-review workflow packet",
+        "kn": "P3 ಪ್ರಕಟಣಾ-ವಿಮರ್ಶೆ ಕಾರ್ಯಪ್ರವಾಹ ಕಡತ"
+      },
+      "datasetKind": "public-summary",
+      "path": "data/open/p3-publication-review-workflow.json",
+      "access": "static-json",
+      "review": {
+        "status": "needs-review",
+        "reviewer": null,
+        "updatedAt": "2026-08-23"
+      }
+    }
+  ]
+}

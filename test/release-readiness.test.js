@@ -23,6 +23,8 @@ const explorerStylesSource = await readFile(new URL('../src/explorer.css', impor
 const peopleStylesSource = await readFile(new URL('../src/people.css', import.meta.url), 'utf8')
 const freedomStylesSource = await readFile(new URL('../src/freedom-movement.css', import.meta.url), 'utf8')
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
+const packageSource = await readFile(new URL('../package.json', import.meta.url), 'utf8')
+const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
@@ -47,6 +49,13 @@ test('public navigation reports the depth of the published research dataset', ()
   assert.match(appSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
+})
+
+test('public open dataset packets are generated during static builds', () => {
+  assert.match(packageSource, /generate-open-datasets\.mjs/, 'static builds must emit the public open dataset packets')
+  assert.match(openDatasetExportSource, /atlasData\.openDatasetCatalogue/, 'the exporter must derive packets from the public catalogue')
+  assert.match(openDatasetExportSource, /public\/data\/open/, 'open dataset packets must be written to the public static data path')
+  for (const field of ['reviewWorkflow','verification','promotionReview','privateNotes','moderation']) assert.match(openDatasetExportSource,new RegExp(field),`${field} must be stripped from public packets`)
 })
 
 test('mobile and bilingual navigation expose accessible controls', () => {

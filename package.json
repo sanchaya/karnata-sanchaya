@@ -18,7 +18,7 @@
     "export:static-dataset": "node scripts/export-static-dataset.mjs",
     "publish:static": "./scripts/publish-static.sh",
     "privacy:cleanup": "node scripts/cleanup-private-documents.mjs",
-    "build": "node scripts/generate-seo.mjs && vite build",
+    "build": "node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build",
     "preview": "vite preview",
     "validate:data": "node scripts/validate-data.mjs",
     "check": "npm run validate:data && node --test && npm run build"

@@ -1,0 +1,2595 @@
+{
+  "meta": {
+    "title": {
+      "en": "Karnataka Historical Atlas",
+      "kn": "ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ"
+    },
+    "schemaVersion": "0.28.1",
+    "generatedAt": "2026-08-24T13:39:36.703Z",
+    "access": "static-json",
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-23"
+    }
+  },
+  "catalogue": {
+    "id": "dataset-p1-model-foundations",
+    "name": {
+      "en": "P1 model-foundation packets",
+      "kn": "P1 ಮಾದರಿ-ಆಧಾರ ಕಡತಗಳು"
+    },
+    "datasetKind": "public-summary",
+    "description": {
+      "en": "Focused export for completing the mature data model work: feudatory hierarchy, genealogy assertions, administrative geography, boundary evidence, coins, manuscripts, inscription editions and script phases.",
+      "kn": "ಪೂರ್ಣಗೊಂಡ ದತ್ತಾಂಶ ಮಾದರಿ ಕೆಲಸಕ್ಕೆ ಕೇಂದ್ರೀಕೃತ ರಫ್ತು: ಸಾಮಂತ ಕ್ರಮ, ವಂಶಾವಳಿ ನಿರೂಪಣೆ, ಆಡಳಿತ ಭೂಗೋಳ, ಗಡಿ ಸಾಕ್ಷ್ಯ, ನಾಣ್ಯಗಳು, ಹಸ್ತಪ್ರತಿಗಳು, ಶಾಸನ ಆವೃತ್ತಿಗಳು ಮತ್ತು ಲಿಪಿ ಹಂತಗಳು."
+    },
+    "includedCollections": [
+      "feudatoryRelations",
+      "genealogicalRelations",
+      "administrativeDivisions",
+      "boundaryEvidence",
+      "coinRecords",
+      "manuscriptWitnesses",
+      "inscriptionEditions",
+      "scriptEvolution"
+    ],
+    "excludedFields": [
+      "private reviewer notes",
+      "assignment history",
+      "unapproved contribution drafts"
+    ]
+  },
+  "collections": {
+    "feudatoryRelations": [
+      {
+        "id": "feudatory-western-ganga-rashtrakuta",
+        "name": {
+          "en": "Western Ganga under Rashtrakuta suzerainty — research packet",
+          "kn": "ರಾಷ್ಟ್ರಕೂಟ ಅಧೀನದಲ್ಲಿನ ಪಶ್ಚಿಮ ಗಂಗರು — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "polity-rashtrakuta",
+        "subordinatePolityId": "polity-western-ganga",
+        "relationKind": "suzerainty",
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-talakad",
+          "place-manyakheta"
+        ],
+        "confidence": "medium",
+        "description": {
+          "en": "A structured starting point for modelling Ganga participation within Rashtrakuta imperial politics; specific charters, battles and marriage links still need item-level evidence.",
+          "kn": "ರಾಷ್ಟ್ರಕೂಟ ಸಾಮ್ರಾಜ್ಯ ರಾಜಕೀಯದಲ್ಲಿ ಗಂಗರ ಪಾತ್ರವನ್ನು ಮಾದರಿಗೊಳಿಸಲು ಆರಂಭಿಕ ರಚನೆ; ನಿರ್ದಿಷ್ಟ ದಾನಪತ್ರ, ಯುದ್ಧ ಮತ್ತು ವೈವಾಹಿಕ ಕೊಂಡಿಗಳಿಗೆ ಇನ್ನೂ ವಸ್ತುಮಟ್ಟದ ಸಾಕ್ಷ್ಯ ಬೇಕಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Resolve Ganga/Rashtrakuta inscription locators before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "feudatory-alupa-badami-chalukya",
+        "name": {
+          "en": "Alupa coastal chiefs and Badami Chalukya overlordship — research packet",
+          "kn": "ಆಳುಪ ಕರಾವಳಿ ಮುಖ್ಯಸ್ಥರು ಮತ್ತು ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಅಧಿಪತ್ಯ — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "polity-badami-chalukya",
+        "subordinatePolityId": "polity-alupa",
+        "relationKind": "feudatory",
+        "date": {
+          "from": 600,
+          "to": 750,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "placeIds": [
+          "place-mangaluru",
+          "place-udupi"
+        ],
+        "confidence": "low",
+        "description": {
+          "en": "A coastal hierarchy lead for connecting Alupa inscriptions, ports and Chalukya-era political context without flattening the coast into direct imperial rule.",
+          "kn": "ಆಳುಪ ಶಾಸನಗಳು, ಬಂದರುಗಳು ಮತ್ತು ಚಾಲುಕ್ಯಕಾಲದ ರಾಜಕೀಯ ಸಂದರ್ಭವನ್ನು ನೇರ ಸಾಮ್ರಾಜ್ಯ ಆಳ್ವಿಕೆಯಾಗಿಸದೆ ಜೋಡಿಸಲು ಕರಾವಳಿ ಅಧೀನತೆಯ ಸಂಶೋಧನಾ ದಾರಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Alupa and coastal Karnataka inscription locators to resolve"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "feudatory-alupa-kalyani-chalukya",
+        "name": {
+          "en": "Alupa coastal chiefs and Kalyani Chalukya context — research packet",
+          "kn": "ಆಳುಪ ಕರಾವಳಿ ಮುಖ್ಯಸ್ಥರು ಮತ್ತು ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಸಂದರ್ಭ — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "polity-kalyani-chalukya",
+        "subordinatePolityId": "polity-alupa",
+        "relationKind": "regional-chiefship",
+        "date": {
+          "from": 973,
+          "to": 1150,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-mangaluru",
+          "place-udupi",
+          "place-kalyani"
+        ],
+        "confidence": "low",
+        "description": {
+          "en": "A placeholder for later inscription-backed coastal chiefship records under western Deccan political pressure.",
+          "kn": "ಪಶ್ಚಿಮ ದಖ್ಖನ್ ರಾಜಕೀಯ ಪ್ರಭಾವದಡಿ ಕರಾವಳಿ ಮುಖ್ಯಸ್ಥರ ಶಾಸನಾಧಾರಿತ ದಾಖಲೆಗಳನ್ನು ನಂತರ ಸೇರಿಸಲು ತಾತ್ಕಾಲಿಕ ರಚನೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Resolve coastal inscription and genealogy evidence"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "feudatory-hoysala-kalyani-chalukya",
+        "name": {
+          "en": "Hoysala rise within Kalyani Chalukya political order — research packet",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ರಾಜಕೀಯ ಕ್ರಮದಲ್ಲಿ ಹೊಯ್ಸಳರ ಉದಯ — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "polity-kalyani-chalukya",
+        "subordinatePolityId": "polity-hoysala",
+        "relationKind": "feudatory-to-independent-transition",
+        "date": {
+          "from": 1000,
+          "to": 1187,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-belur",
+          "place-halebidu",
+          "place-kalyani"
+        ],
+        "confidence": "medium",
+        "description": {
+          "en": "A transition model for showing how Hoysala authority moved from regional subordination toward sovereign rule; exact grants and titulature require review.",
+          "kn": "ಹೊಯ್ಸಳ ಅಧಿಕಾರವು ಪ್ರಾದೇಶಿಕ ಅಧೀನತೆಯಿಂದ ಸ್ವತಂತ್ರ ಆಳ್ವಿಕೆಗೆ ಹೇಗೆ ಸಾಗಿತು ಎಂಬುದನ್ನು ತೋರಿಸುವ ಪರಿವರ್ತನಾ ಮಾದರಿ; ನಿಖರ ದಾನಪತ್ರ ಮತ್ತು ಬಿರುದುಗಳ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Political and architectural context; add inscription-level proof"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "feudatory-keladi-vijayanagara",
+        "name": {
+          "en": "Keladi-Ikkeri Nayakas within the Vijayanagara successor world — research packet",
+          "kn": "ವಿಜಯನಗರಾನಂತರ ಲೋಕದಲ್ಲಿನ ಕೆಳದಿ-ಇಕ್ಕೇರಿ ನಾಯಕರು — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "polity-vijayanagara",
+        "subordinatePolityId": "external-polity-keladi-nayaka",
+        "relationKind": "successor-feudatory",
+        "date": {
+          "from": 1500,
+          "to": 1646,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-hampi",
+          "place-banavasi"
+        ],
+        "confidence": "low",
+        "description": {
+          "en": "A governance-link lead for modelling successor Nayaka authority separately from core Vijayanagara territory.",
+          "kn": "ಮೂಲ ವಿಜಯನಗರ ಭೂಪ್ರದೇಶದಿಂದ ಪ್ರತ್ಯೇಕವಾಗಿ ನಾಯಕ ಉತ್ತರಾಧಿಕಾರಿ ಅಧಿಕಾರವನ್ನು ಮಾದರಿಗೊಳಿಸಲು ಆಡಳಿತ-ಕೊಂಡಿಯ ಸಂಶೋಧನಾ ದಾರಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Keladi/Ikkeri and Vijayanagara successor context to locate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "genealogicalRelations": [
+      {
+        "id": "genealogy-pulakeshin-i-kirtivarman-i",
+        "name": {
+          "en": "Pulakeshin I to Kirtivarman I succession-family assertion",
+          "kn": "ಪುಲಕೇಶಿ I ರಿಂದ ಕೀರ್ತಿವರ್ಮ Iರವರೆಗಿನ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-pulakeshin-i",
+        "toPersonId": "person-kirtivarman-i",
+        "polityId": "polity-badami-chalukya",
+        "date": {
+          "from": 566,
+          "to": 597,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "derived",
+        "confidence": "low",
+        "derivation": {
+          "en": "Seeded from adjacent reign periods and conventional dynasty lists; not yet a reviewed family-tree proof packet.",
+          "kn": "ಅನುಕ್ರಮ ಆಳ್ವಿಕೆ ಅವಧಿ ಮತ್ತು ಸಾಮಾನ್ಯ ವಂಶಪಟ್ಟಿಯಿಂದ ರೂಪಿಸಲಾದ ಬೀಜ ದಾಖಲೆ; ಇದು ಇನ್ನೂ ಪರಿಶೀಲಿತ ಕುಟುಂಬವೃಕ್ಷ ಸಾಕ್ಷ್ಯವಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Badami Chalukya dynastic sequence; family relation requires specialist locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-kirtivarman-i-pulakeshin-ii",
+        "name": {
+          "en": "Kirtivarman I to Pulakeshin II succession-family assertion",
+          "kn": "ಕೀರ್ತಿವರ್ಮ I ರಿಂದ ಪುಲಕೇಶಿ IIರವರೆಗಿನ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-kirtivarman-i",
+        "toPersonId": "person-pulakeshin-ii",
+        "polityId": "polity-badami-chalukya",
+        "date": {
+          "from": 597,
+          "to": 610,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "derived",
+        "confidence": "low",
+        "derivation": {
+          "en": "Derived from reign sequence until the underlying inscription/genealogical text is reviewed.",
+          "kn": "ಮೂಲ ಶಾಸನ/ವಂಶವಿವರಣೆ ಪರಿಶೀಲನೆಯಾಗುವವರೆಗೆ ಆಳ್ವಿಕೆ ಅನುಕ್ರಮದಿಂದ ರೂಪಿಸಲಾಗಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Chalukya reign sequence; genealogy proof pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-vijayanagara-harihara-bukka-brothers",
+        "name": {
+          "en": "Harihara I and Bukka Raya I brotherhood assertion",
+          "kn": "ಹರಿಹರ I ಮತ್ತು ಬುಕ್ಕರಾಯ I ಸಹೋದರತ್ವ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-harihara-i",
+        "toPersonId": "person-bukka-i",
+        "polityId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1356,
+          "era": "CE",
+          "precision": "range"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Seeded as a review-gated dynastic relationship for future genealogy graph display.",
+          "kn": "ಮುಂದಿನ ಕುಟುಂಬವೃಕ್ಷ ಗ್ರಾಫ್ ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ಪರಿಶೀಲನೆ-ಬಾಕಿ ವಂಶ ಸಂಬಂಧವಾಗಿ ಸೇರಿಸಲಾಗಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Vijayanagara founders; replace with reviewed dynastic source locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-mayurasharma-kakusthavarma-dynastic-line",
+        "name": {
+          "en": "Mayurasharma to Kakusthavarma Kadamba dynastic-line assertion",
+          "kn": "ಮಯೂರಶರ್ಮರಿಂದ ಕಾಕುಸ್ಥವರ್ಮರವರೆಗಿನ ಕದಂಬ ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "dynastic-claim",
+        "fromPersonId": "person-mayurasharma",
+        "toPersonId": "person-kakusthavarma",
+        "polityId": "polity-kadamba",
+        "date": {
+          "from": 345,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Seeded from the Talagunda genealogy context as a dynastic-line claim; each parent-child step still needs inscription-level proof review.",
+          "kn": "ತಾಳಗುಂದ ವಂಶಾವಳಿ ಸಂದರ್ಭದಿಂದ ವಂಶರೇಖೆ ಹೇಳಿಕೆಯಾಗಿ ಸೇರಿಸಲಾಗಿದೆ; ಪ್ರತಿಯೊಂದು ಪೋಷಕ-ಸಂತಾನ ಹಂತಕ್ಕೂ ಶಾಸನಮಟ್ಟದ ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-asi-classical-age",
+            "locator": "Kadamba genealogy and Mayurasharma-Kakusthavarma context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-durvinita-sripurusha-dynastic-line",
+        "name": {
+          "en": "Durvinita to Sripurusha Western Ganga dynastic-line assertion",
+          "kn": "ದುರ್ವಿನೀತರಿಂದ ಶ್ರೀಪುರುಷರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "dynastic-claim",
+        "fromPersonId": "person-durvinita",
+        "toPersonId": "person-sripurusha",
+        "polityId": "polity-western-ganga",
+        "date": {
+          "from": 529,
+          "to": 788,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "derived",
+        "confidence": "low",
+        "derivation": {
+          "en": "Derived from separated reign anchors to make the genealogy graph explorable; it is not final family-tree evidence until the intervening lineage is resolved.",
+          "kn": "ವಿಭಿನ್ನ ಆಳ್ವಿಕೆ ಆಧಾರಗಳಿಂದ ಕುಟುಂಬವೃಕ್ಷ ಗ್ರಾಫ್ ಅನ್ವೇಷಣೆಗೆ ರೂಪಿಸಲಾಗಿದೆ; ಮಧ್ಯವರ್ತಿ ವಂಶರೇಖೆ ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಇದು ಅಂತಿಮ ಕುಟುಂಬವೃಕ್ಷ ಸಾಕ್ಷ್ಯವಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-classical-age",
+            "locator": "Western Ganga chronology and Durvinita context"
+          },
+          {
+            "sourceId": "src-wikipedia-sripurusha",
+            "locator": "Sripurusha succession list; replace with reviewed primary-source locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "administrativeDivisions": [
+      {
+        "id": "admin-tirhut-simraungarh-karnata-zone",
+        "name": {
+          "en": "Tirhut / Simraungarh Karnata state — external administrative envelope",
+          "kn": "ತಿರಹುತು / ಸಿಮ್ರೌನಗಢ ಕರ್ಣಾಟ ರಾಜ್ಯ — ಹೊರಪ್ರದೇಶ ಆಡಳಿತ ವ್ಯಾಪ್ತಿ"
+        },
+        "polityId": "external-polity-karnata-tirhut",
+        "divisionKind": "administrative-zone",
+        "date": {
+          "from": 1097,
+          "to": 1326,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-simraungarh"
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              84.1,
+              25.7
+            ],
+            [
+              86.9,
+              25.7
+            ],
+            [
+              86.9,
+              27.15
+            ],
+            [
+              84.1,
+              27.15
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "description": {
+          "en": "A schematic external-reach envelope for the Tirhut/Mithila realm associated with the Karnata dynasty. It is not a final border and must be reconciled with Nepal and Bihar historical geography.",
+          "kn": "ಕರ್ಣಾಟ ವಂಶದೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ತಿರಹುತು/ಮಿಥಿಲಾ ರಾಜ್ಯದ ತಾತ್ಕಾಲಿಕ ಹೊರಪ್ರದೇಶ ವ್ಯಾಪ್ತಿ. ಇದು ಅಂತಿಮ ಗಡಿಯಲ್ಲ; ನೇಪಾಳ ಮತ್ತು ಬಿಹಾರ ಐತಿಹಾಸಿಕ ಭೂಗೋಳದೊಂದಿಗೆ ಹೊಂದಿಸಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-simraungarh-archaeology-karnata-state",
+            "locator": "Stated Koshi-Gandak-Mahabharata-Ganga extent is treated as a research lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "admin-gangavadi-ninety-six-thousand",
+        "name": {
+          "en": "Gangavadi 96000 — administrative geography lead",
+          "kn": "ಗಂಗವಾಡಿ 96000 — ಆಡಳಿತ ಭೂಗೋಳ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "polityId": "polity-western-ganga",
+        "divisionKind": "province",
+        "date": {
+          "from": 350,
+          "to": 1116,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-talakad"
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              75.6,
+              11.6
+            ],
+            [
+              77.9,
+              11.6
+            ],
+            [
+              78.1,
+              13.8
+            ],
+            [
+              75.5,
+              13.8
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "description": {
+          "en": "A bounded study envelope for the historically named Gangavadi region; district-accurate borders and inscription locators remain unresolved.",
+          "kn": "ಗಂಗವಾಡಿ ಎಂಬ ಐತಿಹಾಸಿಕ ಪ್ರದೇಶದ ಅಧ್ಯಯನ ವ್ಯಾಪ್ತಿ; ಜಿಲ್ಲಾಮಟ್ಟದ ನಿಖರ ಗಡಿ ಮತ್ತು ಶಾಸನ ಸ್ಥಾನಸೂಚಿ ಇನ್ನೂ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Gangavadi references to locate by volume and inscription number"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "admin-banavasi-twelve-thousand",
+        "name": {
+          "en": "Banavasi 12000 — administrative geography lead",
+          "kn": "ಬನವಾಸಿ 12000 — ಆಡಳಿತ ಭೂಗೋಳ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "polityId": "polity-kadamba",
+        "divisionKind": "province",
+        "date": {
+          "from": 345,
+          "to": 757,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-banavasi"
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              73.7,
+              13.6
+            ],
+            [
+              75.3,
+              13.6
+            ],
+            [
+              75.5,
+              15.2
+            ],
+            [
+              73.7,
+              15.4
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "description": {
+          "en": "A provisional administrative-region packet around Banavasi; mandala/nadu subdivisions should be split after item-level inscription review.",
+          "kn": "ಬನವಾಸಿ ಸುತ್ತಲಿನ ತಾತ್ಕಾಲಿಕ ಆಡಳಿತ ಪ್ರದೇಶದ ಕಡತ; ವಸ್ತುಮಟ್ಟದ ಶಾಸನ ಪರಿಶೀಲನೆಯ ನಂತರ ಮಂಡಲ/ನಾಡು ಉಪವಿಭಾಗಗಳನ್ನು ಬೇರ್ಪಡಿಸಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-banavasi",
+            "locator": "Capital context; add Epigraphia Carnatica administrative locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "admin-raichur-doab-contested-province",
+        "name": {
+          "en": "Raichur Doab contested administrative zone",
+          "kn": "ರಾಯಚೂರು ದೋಆಬ್ ವಿವಾದಿತ ಆಡಳಿತ ವಲಯ"
+        },
+        "polityId": "polity-vijayanagara",
+        "divisionKind": "contested-province",
+        "date": {
+          "from": 1347,
+          "to": 1520,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              76.72,
+              15.58
+            ],
+            [
+              77.72,
+              15.68
+            ],
+            [
+              77.68,
+              16.28
+            ],
+            [
+              76.78,
+              16.22
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "description": {
+          "en": "A study zone for administrative contest between Deccan Sultanates and Vijayanagara; not a fixed border.",
+          "kn": "ದಖ್ಖನ್ ಸುಲ್ತಾನರು ಮತ್ತು ವಿಜಯನಗರದ ಆಡಳಿತದ ಹೋರಾಟದ ಅಧ್ಯಯನ ವಲಯ; ಸ್ಥಿರ ಗಡಿಯಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-raichur-1520",
+            "locator": "Raichur and Mudgal changing hands"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "boundaryEvidence": [
+      {
+        "id": "boundary-evidence-vijayanagara-krishnadevaraya-core-1520",
+        "name": {
+          "en": "Evidence packet for Vijayanagara core extent around 1520",
+          "kn": "ಸು. 1520ರ ವಿಜಯನಗರ ಕೇಂದ್ರ ವ್ಯಾಪ್ತಿ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-vijayanagara-krishnadevaraya-core-1520",
+        "polityId": "polity-vijayanagara",
+        "evidenceKind": "schematic-synthesis",
+        "date": {
+          "from": 1520,
+          "to": 1520,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "inscription-clusters",
+          "administrative-units",
+          "campaign-events",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "campaign-events"
+        ],
+        "blockingEvidence": [
+          "inscription-clusters",
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Current polygon is a public orientation layer. A publication-ready boundary needs inscription clusters, province records and source-map comparison.",
+          "kn": "ಪ್ರಸ್ತುತ ಬಹುಭುಜವು ಸಾರ್ವಜನಿಕ ದಿಕ್ಕು ತೋರಿಸುವ ಪದರ. ಪ್ರಕಟಣೆಗೆ ಸಿದ್ಧ ಗಡಿಗೆ ಶಾಸನ ಗುಚ್ಛಗಳು, ಪ್ರಾಂತ ದಾಖಲೆಗಳು ಮತ್ತು ಆಕರ-ನಕ್ಷೆ ಹೋಲಿಕೆ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-raichur-1520",
+            "locator": "Raichur campaign context"
+          },
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "Prototype polygon to be replaced"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "boundary-evidence-hoysala-ballala-ii-1187",
+        "name": {
+          "en": "Evidence packet for Hoysala Ballala II extent",
+          "kn": "ಹೊಯ್ಸಳ ಬಲ್ಲಾಳ II ವ್ಯಾಪ್ತಿ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-hoysala-ballala-ii-1187",
+        "polityId": "polity-hoysala",
+        "evidenceKind": "schematic-synthesis",
+        "date": {
+          "from": 1187,
+          "to": 1187,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "inscription-clusters",
+          "temple-patronage-sites",
+          "regional-campaigns",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "temple-patronage-sites"
+        ],
+        "blockingEvidence": [
+          "inscription-clusters",
+          "regional-campaigns",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Uses temple and reign context as a starter envelope; it is not a final administrative boundary.",
+          "kn": "ದೇವಾಲಯ ಮತ್ತು ಆಳ್ವಿಕೆ ಸಂದರ್ಭವನ್ನು ಪ್ರಾರಂಭಿಕ ವ್ಯಾಪ್ತಿಯಾಗಿ ಬಳಸುತ್ತದೆ; ಇದು ಅಂತಿಮ ಆಡಳಿತ ಗಡಿಯಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala heritage geography"
+          },
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "Prototype polygon to be replaced"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "boundary-evidence-western-ganga-core-prototype",
+        "name": {
+          "en": "Evidence packet for Western Ganga core extent",
+          "kn": "ಪಶ್ಚಿಮ ಗಂಗ ಕೇಂದ್ರ ವ್ಯಾಪ್ತಿ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-western-ganga-core-prototype",
+        "polityId": "polity-western-ganga",
+        "evidenceKind": "schematic-synthesis",
+        "date": {
+          "from": 350,
+          "to": 1000,
+          "era": "CE",
+          "precision": "range"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "inscription-distribution-lead",
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "inscription-distribution-lead"
+        ],
+        "blockingEvidence": [
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Uses Talakad and reign-linked inscription leads as a first comparison layer; province and inscription distribution need formal review before boundary promotion.",
+          "kn": "ತಳಕಾಡು ಮತ್ತು ಆಳ್ವಿಕೆ-ಸಂಬಂಧಿತ ಶಾಸನ ದಾರಿಗಳನ್ನು ಮೊದಲ ಹೋಲಿಕೆ ಪದರವಾಗಿ ಬಳಸುತ್ತದೆ; ಗಡಿ ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ಪ್ರಾಂತ ಮತ್ತು ಶಾಸನ ವಿತರಣೆಯ ಅಧಿಕೃತ ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-classical-age",
+            "locator": "Western Ganga chronology and regional context"
+          },
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "Prototype polygon to be replaced"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "boundary-evidence-rashtrakuta-amoghavarsha-850",
+        "name": {
+          "en": "Evidence packet for Manyakheta-centred Rashtrakuta core around 850",
+          "kn": "ಸು. 850ರ ಮಾನ್ಯಖೇಟ ಕೇಂದ್ರಿತ ರಾಷ್ಟ್ರಕೂಟ ಮೂಲ ವ್ಯಾಪ್ತಿ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-rashtrakuta-amoghavarsha-850",
+        "polityId": "polity-rashtrakuta",
+        "evidenceKind": "schematic-synthesis",
+        "date": {
+          "from": 850,
+          "to": 850,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "capital-context",
+          "inscription-clusters",
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "capital-context"
+        ],
+        "blockingEvidence": [
+          "inscription-clusters",
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Separates the Manyakheta-centred core from wider campaign claims; inscription clusters and administrative units remain the promotion blockers.",
+          "kn": "ಮಾನ್ಯಖೇಟ ಕೇಂದ್ರಿತ ಮೂಲ ವ್ಯಾಪ್ತಿಯನ್ನು ವ್ಯಾಪಕ ದಂಡಯಾತ್ರೆ ಹೇಳಿಕೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ; ಶಾಸನ ಗುಚ್ಛಗಳು ಮತ್ತು ಆಡಳಿತ ಘಟಕಗಳು ಉತ್ತೇಜನದ ಅಡೆತಡೆಗಳಾಗಿವೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Amoghavarsha and the Manyakheta-centred state"
+          },
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "Schematic comparison geometry"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "boundary-evidence-rashtrakuta-kannauj-campaign-circa-800",
+        "name": {
+          "en": "Evidence packet for Rashtrakuta Kannauj campaign reach",
+          "kn": "ರಾಷ್ಟ್ರಕೂಟ ಕನ್ನೌಜ್ ದಂಡಯಾತ್ರೆ ತಲುಪು ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-rashtrakuta-kannauj-campaign-circa-800",
+        "polityId": "polity-rashtrakuta",
+        "evidenceKind": "campaign-route",
+        "date": {
+          "from": 780,
+          "to": 850,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "campaign-events",
+          "opponent-polity-sources",
+          "route-control-distinction",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "campaign-events",
+          "route-control-distinction"
+        ],
+        "blockingEvidence": [
+          "opponent-polity-sources",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Keeps Kannauj as campaign/prestige reach rather than direct administration; northern polity sources and route review are still required.",
+          "kn": "ಕನ್ನೌಜ್ ಅನ್ನು ನೇರ ಆಡಳಿತವಲ್ಲ, ದಂಡಯಾತ್ರೆ/ಪ್ರತಿಷ್ಠೆಯ ತಲುಪುವಿಕೆ ಎಂದು ಉಳಿಸುತ್ತದೆ; ಉತ್ತರ ಭಾರತದ ರಾಜ್ಯ ಆಕರಗಳು ಮತ್ತು ಮಾರ್ಗ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Govinda III northern campaigns toward Kannauj"
+          },
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "Campaign reach kept separate from core geometry"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "coinRecords": [
+      {
+        "id": "coin-rashtrakuta-garuda-type-lead",
+        "name": {
+          "en": "Rashtrakuta Garuda coinage lead",
+          "kn": "ರಾಷ್ಟ್ರಕೂಟ ಗರುಡ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-rashtrakuta",
+        "placeId": "place-manyakheta",
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "unresolved",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Garuda or dynastic emblem reported in secondary numismatic descriptions; specimen image pending.",
+          "kn": "ದ್ವಿತೀಯ ನಾಣ್ಯಶಾಸ್ತ್ರ ವಿವರಣೆಗಳಲ್ಲಿ ಗರುಡ ಅಥವಾ ವಂಶ ಚಿಹ್ನೆ ವರದಿಯಾಗಿದೆ; ಮಾದರಿ ಚಿತ್ರ ಬಾಕಿ."
+        },
+        "reverse": {
+          "en": "Legend, mint and denomination unresolved.",
+          "kn": "ಲೇಖ, ಟಂಕಶಾಲೆ ಮತ್ತು ಮೌಲ್ಯ ನಿರ್ಣಯವಾಗಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-manyakheta",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Numismatic lead; catalogue item and plate required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-sevuna-devagiri-kannada-legend-lead",
+        "name": {
+          "en": "Seuna / Devagiri coinage with Kannada-inscription lead",
+          "kn": "ಕನ್ನಡ ಲಿಪಿಯ ಸುಳಿವಿರುವ ಸೇವುಣ / ದೇವಗಿರಿ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "contested-origin-coinage-lead",
+        "polityId": "external-polity-sevuna-devagiri",
+        "placeId": "place-devagiri",
+        "date": {
+          "from": 1185,
+          "to": 1318,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "unresolved",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Kannada-inscription claim is retained as a lead only until a catalogue specimen is matched.",
+          "kn": "ಪಟ್ಟಿ ಮಾದರಿಯೊಂದಿಗೆ ಹೊಂದಿಸುವವರೆಗೆ ಕನ್ನಡ ಲಿಪಿ ಹೇಳಿಕೆಯನ್ನು ಕೇವಲ ದಾರಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+        },
+        "reverse": {
+          "en": "Iconography and denomination unresolved.",
+          "kn": "ರೂಪಕ ಮತ್ತು ಮೌಲ್ಯ ನಿರ್ಣಯವಾಗಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-devagiri",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-sevuna-devagiri",
+            "locator": "Kannada inscriptions and coins mentioned; specimen proof pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-vijayanagara-hampi-gold-coinage-lead",
+        "name": {
+          "en": "Vijayanagara Hampi gold coinage lead",
+          "kn": "ವಿಜಯನಗರ ಹಂಪಿ ಚಿನ್ನದ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-vijayanagara",
+        "placeId": "place-hampi",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Royal-symbol and gold-coinage lead associated with the Hampi imperial centre; exact catalogue specimens and plates must be matched.",
+          "kn": "ಹಂಪಿ ಸಾಮ್ರಾಜ್ಯ ಕೇಂದ್ರಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ರಾಜಚಿಹ್ನೆ ಮತ್ತು ಚಿನ್ನದ ನಾಣ್ಯಗಳ ದಾರಿ; ನಿಖರ ಪಟ್ಟಿ ಮಾದರಿ ಮತ್ತು ಫಲಕಗಳನ್ನು ಹೊಂದಿಸಬೇಕು."
+        },
+        "reverse": {
+          "en": "Legend, mint and denomination need item-level numismatic review.",
+          "kn": "ಲೇಖ, ಟಂಕಶಾಲೆ ಮತ್ತು ಮೌಲ್ಯಕ್ಕೆ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "findspot": {
+          "placeId": "place-hampi",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi royal centre and material-culture context; numismatic catalogue item pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-badami-chalukya-varaha-emblem-lead",
+        "name": {
+          "en": "Badami Chalukya Varaha emblem coinage lead",
+          "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ವರಾಹ ಚಿಹ್ನೆ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-badami-chalukya",
+        "placeId": "place-aihole-meguti",
+        "date": {
+          "from": 550,
+          "to": 750,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "unresolved",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Varaha emblem tradition is retained as a coinage/artifact lead until a specific specimen, seal or inscriptional witness is identified.",
+          "kn": "ನಿಖರ ನಾಣ್ಯ ಮಾದರಿ, ಮುದ್ರೆ ಅಥವಾ ಶಾಸನ ಸಾಕ್ಷಿ ಗುರುತಿಸುವವರೆಗೆ ವರಾಹ ಚಿಹ್ನೆ ಪರಂಪರೆಯನ್ನು ನಾಣ್ಯ/ವಸ್ತು ದಾರಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+        },
+        "reverse": {
+          "en": "Object class, legend and denomination remain unresolved.",
+          "kn": "ವಸ್ತು ವರ್ಗ, ಲೇಖ ಮತ್ತು ಮೌಲ್ಯ ಇನ್ನೂ ನಿರ್ಧಾರವಾಗಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-aihole-meguti",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal Chalukya material-culture and iconographic context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "manuscriptWitnesses": [
+      {
+        "id": "manuscript-kavirajamarga-sanchaya-witness-lead",
+        "name": {
+          "en": "Kavirajamarga digital witness lead",
+          "kn": "ಕವಿರಾಜಮಾರ್ಗ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-kavirajamarga",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Sanchaya / Kannada digital text projects",
+          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 850,
+          "to": 850,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://sanchaya.org"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Work context; manuscript witness locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-vikramarjuna-vijaya-sanchaya-witness-lead",
+        "name": {
+          "en": "Vikramarjuna Vijaya digital witness lead",
+          "kn": "ವಿಕ್ರಮಾರ್ಜುನ ವಿಜಯ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-vikramarjuna-vijaya",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Sanchaya / Kannada digital text projects",
+          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 941,
+          "to": 941,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://sanchaya.org"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Pampa and court context; edition witness pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-adipurana-printed-edition-lead",
+        "name": {
+          "en": "Adipurana manuscript and 1900 edition lead",
+          "kn": "ಆದಿಪುರಾಣ ಹಸ್ತಪ್ರತಿ ಮತ್ತು 1900 ಆವೃತ್ತಿ ದಾರಿ"
+        },
+        "workId": "work-adipurana",
+        "witnessKind": "printed-edition",
+        "repository": {
+          "en": "Centre of Excellence for Studies in Classical Kannada catalogue lead",
+          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಅಧ್ಯಯನ ಉತ್ಕೃಷ್ಟತಾ ಕೇಂದ್ರದ ಪಟ್ಟಿಸುಳಿವು"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1900,
+          "to": 1900,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://cesck.uni-mysore.ac.in"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-cesck-adipurana",
+            "locator": "Palm-leaf and paper manuscripts; first publication 1900 by S. G. Narasimhachar; later editions listed"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-gadayuddha-routledge-witness-lead",
+        "name": {
+          "en": "Gadayuddha textual witness and translation lead",
+          "kn": "ಗದಾಯುದ್ಧ ಪಠ್ಯಸಾಕ್ಷಿ ಮತ್ತು ಅನುವಾದ ದಾರಿ"
+        },
+        "workId": "work-gadayuddha",
+        "witnessKind": "printed-edition",
+        "repository": {
+          "en": "Routledge critical translation and textual witness discussion",
+          "kn": "ರೂಟ್ಲೆಜ್ ವಿಮರ್ಶಾತ್ಮಕ ಅನುವಾದ ಮತ್ತು ಪಠ್ಯಸಾಕ್ಷಿ ಚರ್ಚೆ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 2021,
+          "to": 2021,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "restricted",
+          "url": null
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-vaddaradhane-palm-leaf-witness-lead",
+        "name": {
+          "en": "Vaddaradhane palm-leaf manuscript witness lead",
+          "kn": "ವಡ್ಡಾರಾಧನೆ ತಾಳೆಒಲೆ ಹಸ್ತಪ್ರತಿ ಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-vaddaradhane",
+        "witnessKind": "physical-manuscript",
+        "repository": {
+          "en": "Centre of Excellence for Studies in Classical Kannada catalogue lead",
+          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಅಧ್ಯಯನ ಉತ್ಕೃಷ್ಟತಾ ಕೇಂದ್ರದ ಪಟ್ಟಿಸುಳಿವು"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1434,
+          "to": 1434,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://cesck.uni-mysore.ac.in"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-cesck-vaddaradhane",
+            "locator": "Seven palm-leaf manuscripts including a 1434 witness; complete text edited by D. L. Narasimhachar, 1949"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "inscriptionEditions": [
+      {
+        "id": "edition-inscription-halmidi-review-packet",
+        "name": {
+          "en": "Halmidi inscription edition review packet",
+          "kn": "ಹಲ್ಮಿಡಿ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-halmidi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Early Kannada",
+        "date": {
+          "from": 450,
+          "to": 450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": null,
+          "number": null,
+          "locator": null,
+          "status": "unresolved"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "unresolved"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Item-level volume/page locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-aihole-ravikirti-review-packet",
+        "name": {
+          "en": "Aihole Ravikirti inscription edition review packet",
+          "kn": "ಐಹೊಳೆ ರವಿಕೀರ್ತಿ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-aihole",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit",
+        "script": "Southern Brahmi",
+        "date": {
+          "from": 634,
+          "to": 634,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Indica",
+          "volume": null,
+          "number": null,
+          "locator": null,
+          "status": "unresolved"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "unresolved"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Ravikirti inscription item locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-alupa-udiyavara-pillars",
+        "name": {
+          "en": "Alupa Udiyavara pillar inscriptions edition packet",
+          "kn": "ಅಳುಪ ಉದ್ಯಾವರ ಸ್ತಂಭ ಶಾಸನಗಳ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-alupa-udiyavara-pillars",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 700,
+          "to": 750,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Indica",
+          "volume": "IX",
+          "number": null,
+          "locator": "Archaic Kanarese inscriptions of the Alupas at Udiyavara",
+          "status": "located"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "located"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ei-vol-9-alupa-udiyavara",
+            "locator": "Epigraphia Indica Vol. IX item-level lead for Udiyavara Alupa inscriptions"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-lobu-tua-barus",
+        "name": {
+          "en": "Lobu Tua / Barus Ayyavole inscription edition packet",
+          "kn": "ಲೋಬು ತುವಾ / ಬರೂಸ್ ಐಹೊಳೆ ಐನೂರು ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-lobu-tua-barus",
+        "editionKind": "item-edition-review",
+        "language": "Tamil",
+        "script": "Tamil script",
+        "date": {
+          "from": 1088,
+          "to": 1088,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "Barus inscription corpus",
+          "volume": null,
+          "number": "13",
+          "locator": "Barus inscription no. 13; Saka 1010 / 1088 CE; findspot and repository noted",
+          "status": "located"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "located"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-iseas-barus-inscriptions",
+            "locator": "Barus inscription no. 13: date, findspot, repository and bibliography"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-polonnaruwa-ayyavole",
+        "name": {
+          "en": "Polonnaruwa Ayyavole inscription edition packet",
+          "kn": "ಪೊಲೊನ್ನರುವ ಐಹೊಳೆ ಐನೂರು ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-polonnaruwa-ayyavole",
+        "editionKind": "item-edition-review",
+        "language": "Tamil",
+        "script": "Tamil script",
+        "date": {
+          "from": 1000,
+          "to": 1100,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "Sri Lankan Tamil epigraphic corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Polonnaruwa two-line Ayyavole record; exact corpus number and stone unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-pathmanathan-kingdom-jaffna",
+            "locator": "The Colas in Sri Lanka, pp. 48-50; Polonnaruwa Ayyavole record and corpus references"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-talagunda",
+        "name": {
+          "en": "Talagunda pillar inscription edition packet",
+          "kn": "ತಾಳಗುಂದ ಸ್ತಂಭ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-talagunda",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit",
+        "script": "Southern Brahmi",
+        "date": {
+          "from": 455,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": null,
+          "number": null,
+          "locator": "Talagunda pillar inscription; exact volume, item number, page and plate pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context; resolve item number and edition pages"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-gudnapur",
+        "name": {
+          "en": "Gudnapur pillar inscription edition packet",
+          "kn": "ಗುಡ್ನಾಪುರ ಸ್ತಂಭ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-gudnapur",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit",
+        "script": "Southern Brahmi",
+        "date": {
+          "from": 475,
+          "to": 475,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Mysore Archaeology / Epigraphia lead",
+          "volume": null,
+          "number": null,
+          "locator": "Gudnapur Kadamba pillar record; exact corpus locator pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-mysore-archaeology-halmidi",
+            "locator": "Gudnapur and Halmidi early-Kannada/Kadamba research context; resolve edition details"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-kappe-arabhatta",
+        "name": {
+          "en": "Kappe Arabhatta inscription edition packet",
+          "kn": "ಕಪ್ಪೆ ಅರಭಟ್ಟ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-kappe-arabhatta",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Early Kannada",
+        "date": {
+          "from": 700,
+          "to": 700,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Indica / corpus index lead",
+          "volume": null,
+          "number": null,
+          "locator": "Badami Kappe Arabhatta verse inscription; match series, volume, item and plate",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Epigraphia Indica index lead for early Kannada inscription records"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-begur",
+        "name": {
+          "en": "Begur inscription edition packet",
+          "kn": "ಬೇಗೂರು ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-begur",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 890,
+          "to": 890,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica / article corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Begur record with early Bengaluru place-name; exact item locator pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur inscription and Bengaluru place-name discussion; resolve edition pages"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-atakur",
+        "name": {
+          "en": "Atakur hero-stone inscription edition packet",
+          "kn": "ಆತಕೂರು ವೀರಗಲ್ಲು ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-atakur",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 949,
+          "to": 949,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica / article corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Atakur hero-stone record associated with Krishna III and Kali; item locator pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Atakur inscription discussion; resolve corpus item number and translation witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-tyagada-brahmadeva",
+        "name": {
+          "en": "Tyagada Brahmadeva pillar inscription edition packet",
+          "kn": "ತ್ಯಾಗದ ಬ್ರಹ್ಮದೇವ ಸ್ತಂಭ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-tyagada-brahmadeva",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 983,
+          "to": 983,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": null,
+          "number": null,
+          "locator": "Shravanabelagola Tyagada Brahmadeva pillar record; exact inscription number and pages pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Shravanabelagola and Western Ganga inscription corpus lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-lakkundi",
+        "name": {
+          "en": "Lakkundi inscription edition packet",
+          "kn": "ಲಕ್ಕುಂಡಿ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-lakkundi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 1007,
+          "to": 1007,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": null,
+          "number": null,
+          "locator": "Lakkundi medieval record; exact edition number and pages pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi corpus lead; resolve Kalyani Chalukya item-level edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-belur-foundation",
+        "name": {
+          "en": "Belur Chennakeshava foundation inscription edition packet",
+          "kn": "ಬೇಲೂರು ಚೆನ್ನಕೇಶವ ಪ್ರತಿಷ್ಠಾಪನಾ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-belur-foundation",
+        "editionKind": "item-edition-review",
+        "language": "Kannada / Sanskrit",
+        "script": "Old Kannada / Nagari",
+        "date": {
+          "from": 1117,
+          "to": 1117,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "UNESCO Hoysala dossier / epigraphic corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Belur foundation and patronage inscription packet; item corpus locator pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Belur Chennakeshava foundation and Hoysala heritage context; attach inscription corpus item"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-hampi-krishna-temple",
+        "name": {
+          "en": "Hampi Krishna Temple inscription edition packet",
+          "kn": "ಹಂಪಿ ಕೃಷ್ಣ ದೇವಾಲಯ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-hampi-krishna-temple",
+        "editionKind": "item-edition-review",
+        "language": "Kannada / Sanskrit",
+        "script": "Kannada / Nagari",
+        "date": {
+          "from": 1513,
+          "to": 1513,
+          "era": "CE",
+          "precision": "year"
+        },
+        "itemEdition": {
+          "series": "Hampi epigraphic corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Krishnadevaraya-period Krishna Temple record; exact inscription number, text and photo set pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Krishna Temple and royal centre context; resolve item edition and photographic witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-chandravalli-mayurasharma",
+        "name": {
+          "en": "Chandravalli Mayurasharma inscription edition packet",
+          "kn": "ಚಂದ್ರವಳ್ಳಿ ಮಯೂರಶರ್ಮ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-chandravalli-mayurasharma",
+        "editionKind": "item-edition-review",
+        "language": "Prakrit",
+        "script": "Southern Brahmi",
+        "date": {
+          "from": 350,
+          "to": 350,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Mysore Archaeology / Epigraphia lead",
+          "volume": null,
+          "number": null,
+          "locator": "Chandravalli early Kadamba-associated record; exact edition locator pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-mysore-archaeology-halmidi",
+            "locator": "Chandravalli and early Kadamba context; resolve item-level epigraphic edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-doddahundi-nishidhi",
+        "name": {
+          "en": "Doddahundi nishidhi inscription edition packet",
+          "kn": "ದೊಡ್ಡಹುಂಡಿ ನಿಷಿಧಿ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-doddahundi-nishidhi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 869,
+          "to": 869,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Indica",
+          "volume": null,
+          "number": null,
+          "locator": "Doddahundi Jain memorial inscription; volume, item number and page locator pending",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica-doddahundi",
+            "locator": "Doddahundi nishidhi inscription lead; resolve exact item edition and translation"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-takuapa-tamil-guild",
+        "name": {
+          "en": "Takuapa Tamil merchant-guild inscription edition packet",
+          "kn": "ತಕುವಾಪಾ ತಮಿಳು ವ್ಯಾಪಾರಿ ಸಂಘ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-takuapa-tamil-guild",
+        "editionKind": "item-edition-review",
+        "language": "Tamil",
+        "script": "Tamil script",
+        "date": {
+          "from": 800,
+          "to": 900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "Journal of the Malayan Branch of the Royal Asiatic Society lead",
+          "volume": null,
+          "number": null,
+          "locator": "Takuapa Tamil inscription; edition, text and guild attribution require fresh review",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-jmbras-takuapa-tamil",
+            "locator": "Takuapa and its Tamil inscription; resolve item-level text and translation"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ],
+    "scriptEvolution": [
+      {
+        "id": "script-southern-brahmi-kadamba-transition",
+        "name": {
+          "en": "Southern Brahmi to Kadamba script transition",
+          "kn": "ದಕ್ಷಿಣ ಬ್ರಾಹ್ಮಿಯಿಂದ ಕದಂಬ ಲಿಪಿಗೆ ಪರಿವರ್ತನೆ"
+        },
+        "scriptFamily": "Southern Brahmi / Kadamba",
+        "date": {
+          "from": 300,
+          "to": 550,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [],
+        "sampleInscriptionIds": [
+          "inscription-talagunda",
+          "inscription-halmidi"
+        ],
+        "relatedPolityIds": [
+          "polity-kadamba"
+        ],
+        "description": {
+          "en": "A timeline packet for studying early southern Brahmi forms and the emergence of Kadamba/early Kannada inscriptional practice.",
+          "kn": "ಆರಂಭಿಕ ದಕ್ಷಿಣ ಬ್ರಾಹ್ಮಿ ರೂಪಗಳು ಮತ್ತು ಕದಂಬ/ಆರಂಭಿಕ ಕನ್ನಡ ಶಾಸನ ಪದ್ಧತಿಯ ಉದಯವನ್ನು ಅಧ್ಯಯನ ಮಾಡಲು ಕಾಲರೇಖೆ ಕಡತ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda and Halmidi item-level references required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "script-old-kannada-epigraphic-phase",
+        "name": {
+          "en": "Old Kannada epigraphic phase",
+          "kn": "ಹಳೆಗನ್ನಡ ಶಾಸನ ಹಂತ"
+        },
+        "scriptFamily": "Old Kannada",
+        "date": {
+          "from": 450,
+          "to": 1200,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-southern-brahmi-kadamba-transition"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-halmidi",
+          "inscription-shravanabelagola"
+        ],
+        "relatedPolityIds": [
+          "polity-kadamba",
+          "polity-western-ganga",
+          "polity-rashtrakuta",
+          "polity-kalyani-chalukya",
+          "polity-hoysala"
+        ],
+        "description": {
+          "en": "A research timeline node for linking Old Kannada scripts, inscriptions, courts and literary production.",
+          "kn": "ಹಳೆಗನ್ನಡ ಲಿಪಿ, ಶಾಸನಗಳು, ಆಸ್ಥಾನಗಳು ಮತ್ತು ಸಾಹಿತ್ಯ ಉತ್ಪಾದನೆಯನ್ನು ಜೋಡಿಸಲು ಸಂಶೋಧನಾ ಕಾಲರೇಖೆ ಬಿಂದು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Old Kannada inscription witnesses to resolve"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "script-modern-kannada-print-transition",
+        "name": {
+          "en": "Modern Kannada print and periodical phase",
+          "kn": "ಆಧುನಿಕ ಕನ್ನಡ ಮುದ್ರಣ ಮತ್ತು ಪತ್ರಿಕಾ ಹಂತ"
+        },
+        "scriptFamily": "Modern Kannada",
+        "date": {
+          "from": 1800,
+          "to": 1973,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-old-kannada-epigraphic-phase"
+        ],
+        "sampleInscriptionIds": [],
+        "relatedPolityIds": [
+          "polity-mysore"
+        ],
+        "description": {
+          "en": "A late script/publication node for connecting manuscript, print and Patrika Sanchaya periodical evidence.",
+          "kn": "ಹಸ್ತಪ್ರತಿ, ಮುದ್ರಣ ಮತ್ತು ಪತ್ರಿಕಾ ಸಂಚಯದ ಪತ್ರಿಕೆ ಸಾಕ್ಷ್ಯವನ್ನು ಜೋಡಿಸಲು ನಂತರದ ಲಿಪಿ/ಪ್ರಕಾಶನ ಹಂತ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-patrika-sanchaya-kannada",
+            "locator": "Publication-place catalogue rows; item runs still need review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      }
+    ]
+  }
+}
