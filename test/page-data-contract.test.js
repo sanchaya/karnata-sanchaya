@@ -348,7 +348,7 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   assert.ok(atlasData.coinRecords.length >= 6)
   assert.ok(atlasData.manuscriptWitnesses.length >= 7)
   assert.ok(atlasData.boundaryEvidence.length >= 7)
-  assert.ok(atlasData.inscriptionEditions.length >= 19)
+  assert.ok(atlasData.inscriptionEditions.length >= 20)
   for (const item of atlasData.genealogicalRelations) {
     assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
     assert.ok(personIds.has(item.toPersonId), `${item.id} has an unknown target person`)
@@ -377,6 +377,11 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
     assert.ok(inscriptionIds.has(item.inscriptionId), `${item.id} has an unknown inscription`)
     assert.equal(item.review.status, 'needs-review')
     assert.ok(['itemEdition', 'transcription', 'translation', 'photographs', 'authorityCoordinate'].every(field => item.evidenceGates[field]), `${item.id} needs edition evidence gates`)
+    assert.ok(['open', 'in-progress', 'blocked', 'complete'].includes(item.locatorReview?.status), `${item.id} needs locator-review status`)
+    assert.ok(['high', 'normal', 'low'].includes(item.locatorReview?.priority), `${item.id} needs locator-review priority`)
+    assert.ok(item.locatorReview?.requiredLocators?.length >= 4, `${item.id} needs required locator fields`)
+    assert.ok(bilingual(item.locatorReview?.nextAction), `${item.id} needs a bilingual locator-review next action`)
+    for (const scriptPhaseId of item.locatorReview?.scriptPhaseIds || []) assert.ok(atlasData.scriptEvolution.some(script => script.id === scriptPhaseId), `${item.id} has an unknown script phase link`)
   }
   const barusEdition=atlasData.inscriptionEditions.find(item=>item.id==='edition-inscription-lobu-tua-barus')
   assert.equal(barusEdition?.itemEdition.number, '13')
@@ -390,5 +395,10 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.review.status, 'needs-review')
     assert.equal(edition?.itemEdition.status, 'provisional')
+  }
+  for (const id of ['edition-inscription-halmidi-review-packet','edition-inscription-kappe-arabhatta','edition-inscription-begur','edition-inscription-atakur','edition-inscription-lakkundi','edition-inscription-belur-foundation','edition-inscription-hampi-cluster','edition-inscription-hampi-krishna-temple','edition-inscription-muktesvara-attiraja-review-packet']) {
+    const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
+    assert.equal(edition?.locatorReview.priority, 'high', `${id} must stay prioritized for the script-evolution maturity path`)
+    assert.ok(edition?.locatorReview.scriptPhaseIds.length > 0, `${id} must remain linked to a script phase`)
   }
 })

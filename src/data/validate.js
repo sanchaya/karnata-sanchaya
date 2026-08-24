@@ -198,6 +198,10 @@ export function validateAtlas(data) {
         if (!['not-started','aligned','partial','unresolved'].includes(record.textWitness?.lineAlignment)) add('error',collection,id,'textWitness.lineAlignment','Edition line alignment status is invalid.')
         if (!['available','missing','restricted','unlicensed'].includes(record.photographSet?.status) || !Number.isInteger(record.photographSet.itemCount) || record.photographSet.itemCount < 0) add('error',collection,id,'photographSet','Photograph set status and count are required.')
         if (!record.evidenceGates || ['itemEdition','transcription','translation','photographs','authorityCoordinate'].some(field=>!['verified','located','provisional','unresolved','not-applicable'].includes(record.evidenceGates[field]?.status))) add('error',collection,id,'evidenceGates','Inscription editions require item, text, translation, photograph and coordinate gates.')
+        if (!record.locatorReview || !['open','in-progress','blocked','complete'].includes(record.locatorReview.status) || !['high','normal','low'].includes(record.locatorReview.priority)) add('error',collection,id,'locatorReview','Inscription editions require locator-review status and priority.')
+        if (!Array.isArray(record.locatorReview?.requiredLocators) || record.locatorReview.requiredLocators.length < 4) add('error',collection,id,'locatorReview.requiredLocators','Locator review requires the source fields still needed for promotion.')
+        if (!record.locatorReview?.nextAction?.en?.trim() || !record.locatorReview?.nextAction?.kn?.trim()) add('error',collection,id,'locatorReview.nextAction','Locator review requires a bilingual next action.')
+        ;(record.locatorReview?.scriptPhaseIds || []).forEach((scriptPhaseId,index)=>{if(!knownIds.has(scriptPhaseId))add('error',collection,id,`locatorReview.scriptPhaseIds.${index}`,`Unknown script phase: ${scriptPhaseId}`)})
         if (!Array.isArray(record.citations) || record.citations.length===0) add('error',collection,id,'citations','Inscription editions require citations.')
       }
       if (collection === 'scriptEvolution') {

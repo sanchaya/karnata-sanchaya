@@ -5,12 +5,21 @@ const review={status:'needs-review',reviewer:null,updatedAt:'2026-08-23'}
 const pendingText={originalStatus:'unresolved',transliterationStatus:'unresolved',translationStatus:'unresolved',lineAlignment:'not-started'}
 const missingPhotos={status:'missing',license:null,itemCount:0}
 const editionGates=(itemEditionStatus='unresolved')=>({itemEdition:{status:itemEditionStatus},transcription:{status:'unresolved'},translation:{status:'unresolved'},photographs:{status:'unresolved'},authorityCoordinate:{status:'unresolved'}})
-const editionPacket=(id,en,kn,inscriptionId,language,script,from,to,precision,series,volume,number,locator,status,sourceId,sourceLocator)=>({
+const defaultLocatorFields=['series','volume','inscriptionNumber','printedPageOrPlate','sourceUrl','imageWitness']
+const locatorReview=(priority,scriptPhaseIds,nextActionEn,nextActionKn,requiredLocators=defaultLocatorFields)=>({
+  status:'open',
+  priority,
+  scriptPhaseIds,
+  requiredLocators,
+  nextAction:n(nextActionEn,nextActionKn),
+})
+const editionPacket=(id,en,kn,inscriptionId,language,script,from,to,precision,series,volume,number,locator,status,sourceId,sourceLocator,locatorReviewPacket=locatorReview('normal',[],'Resolve the exact printed edition locator, line witness and image evidence before promotion.','ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ನಿಖರ ಮುದ್ರಿತ ಆವೃತ್ತಿ ಸ್ಥಾನಸೂಚಿ, ಸಾಲು ಸಾಕ್ಷ್ಯ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ನಿರ್ಧರಿಸಿ.'))=>({
   id,name:n(en,kn),inscriptionId,editionKind:'item-edition-review',language,script,date:d(from,to,precision),
   itemEdition:{series,volume,number,locator,status},
   textWitness:{...pendingText},
   photographSet:{...missingPhotos},
   evidenceGates:editionGates(status),
+  locatorReview:locatorReviewPacket,
   citations:[cite(sourceId,sourceLocator)],
   review,
 })
@@ -470,6 +479,7 @@ export const inscriptionEditions=[
     textWitness:{originalStatus:'unresolved',transliterationStatus:'unresolved',translationStatus:'unresolved',lineAlignment:'not-started'},
     photographSet:{status:'missing',license:null,itemCount:0},
     evidenceGates:{itemEdition:{status:'unresolved'},transcription:{status:'unresolved'},translation:{status:'unresolved'},photographs:{status:'unresolved'},authorityCoordinate:{status:'unresolved'}},
+    locatorReview:locatorReview('high',['script-southern-brahmi-kadamba-transition','script-old-kannada-epigraphic-phase'],'Identify the exact Halmidi corpus volume, inscription number, printed page, plate/image witness and line-aligned text.','ಹಲ್ಮಿಡಿಯ ನಿಖರ ಕಾರ್ಪಸ್ ಸಂಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟ, ಫಲಕ/ಚಿತ್ರ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸಾಲು-ಹೊಂದಿದ ಪಾಠವನ್ನು ಗುರುತಿಸಿ.'),
     citations:[cite('src-epigraphia-carnatica','Item-level volume/page locator required')],
     review,
   },
@@ -485,6 +495,7 @@ export const inscriptionEditions=[
     textWitness:{originalStatus:'unresolved',transliterationStatus:'unresolved',translationStatus:'unresolved',lineAlignment:'not-started'},
     photographSet:{status:'missing',license:null,itemCount:0},
     evidenceGates:{itemEdition:{status:'unresolved'},transcription:{status:'unresolved'},translation:{status:'unresolved'},photographs:{status:'unresolved'},authorityCoordinate:{status:'unresolved'}},
+    locatorReview:locatorReview('normal',[],'Resolve the Ravikirti item locator, printed pages, plate evidence and line alignment before this packet can support publication.','ಈ ಕಡತವು ಪ್ರಕಟಣೆಗೆ ಆಧಾರವಾಗುವ ಮೊದಲು ರವಿಕೀರ್ತಿ ವಸ್ತು-ಸ್ಥಾನಸೂಚಿ, ಮುದ್ರಿತ ಪುಟಗಳು, ಫಲಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸಾಲು ಹೊಂದಾಣಿಕೆಯನ್ನು ನಿರ್ಧರಿಸಿ.'),
     citations:[cite('src-epigraphia-indica','Ravikirti inscription item locator required')],
     review,
   },
@@ -500,6 +511,7 @@ export const inscriptionEditions=[
     textWitness:{originalStatus:'unresolved',transliterationStatus:'unresolved',translationStatus:'unresolved',lineAlignment:'not-started'},
     photographSet:{status:'missing',license:null,itemCount:0},
     evidenceGates:{itemEdition:{status:'located'},transcription:{status:'unresolved'},translation:{status:'unresolved'},photographs:{status:'unresolved'},authorityCoordinate:{status:'unresolved'}},
+    locatorReview:locatorReview('normal',[],'Confirm inscription numbers, printed page range, plates and present-site/repository evidence for the Udiyavara pillar records.','ಉದ್ಯಾವರ ಸ್ತಂಭ ದಾಖಲೆಗಳಿಗೆ ಶಾಸನ ಸಂಖ್ಯೆಗಳು, ಮುದ್ರಿತ ಪುಟ ವ್ಯಾಪ್ತಿ, ಫಲಕಗಳು ಮತ್ತು ಪ್ರಸ್ತುತ ತಾಣ/ಸಂಗ್ರಹಾಲಯ ಸಾಕ್ಷ್ಯವನ್ನು ದೃಢಪಡಿಸಿ.'),
     citations:[cite('src-ei-vol-9-alupa-udiyavara','Epigraphia Indica Vol. IX item-level lead for Udiyavara Alupa inscriptions')],
     review,
   },
@@ -515,6 +527,7 @@ export const inscriptionEditions=[
     textWitness:{originalStatus:'unresolved',transliterationStatus:'unresolved',translationStatus:'unresolved',lineAlignment:'not-started'},
     photographSet:{status:'missing',license:null,itemCount:0},
     evidenceGates:{itemEdition:{status:'located'},transcription:{status:'unresolved'},translation:{status:'unresolved'},photographs:{status:'unresolved'},authorityCoordinate:{status:'unresolved'}},
+    locatorReview:locatorReview('normal',[],'Attach line transcription, translation witness, repository image/licence and findspot confidence for the Barus packet.','ಬರೂಸ್ ಕಡತಕ್ಕೆ ಸಾಲು ಲಿಪ್ಯಂತರ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ, ಸಂಗ್ರಹಾಲಯ ಚಿತ್ರ/ಪರವಾನಗಿ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ವಿಶ್ವಾಸವನ್ನು ಜೋಡಿಸಿ.'),
     citations:[cite('src-iseas-barus-inscriptions','Barus inscription no. 13: date, findspot, repository and bibliography')],
     review,
   },
@@ -530,6 +543,7 @@ export const inscriptionEditions=[
     textWitness:{originalStatus:'unresolved',transliterationStatus:'unresolved',translationStatus:'unresolved',lineAlignment:'not-started'},
     photographSet:{status:'missing',license:null,itemCount:0},
     evidenceGates:{itemEdition:{status:'provisional'},transcription:{status:'unresolved'},translation:{status:'unresolved'},photographs:{status:'unresolved'},authorityCoordinate:{status:'unresolved'}},
+    locatorReview:locatorReview('normal',[],'Resolve the Sri Lankan corpus number, exact stone identity, page locator and image witness before promotion.','ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ಶ್ರೀಲಂಕಾ ಕಾರ್ಪಸ್ ಸಂಖ್ಯೆ, ನಿಖರ ಕಲ್ಲಿನ ಗುರುತು, ಪುಟ ಸ್ಥಾನಸೂಚಿ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ನಿರ್ಧರಿಸಿ.'),
     citations:[cite('src-pathmanathan-kingdom-jaffna','The Colas in Sri Lanka, pp. 48-50; Polonnaruwa Ayyavole record and corpus references')],
     review,
   },
@@ -549,7 +563,8 @@ export const inscriptionEditions=[
     'Talagunda pillar inscription; exact volume, item number, page and plate pending',
     'provisional',
     'src-epigraphia-carnatica',
-    'Talagunda pillar inscription and Kadamba genealogy context; resolve item number and edition pages'
+    'Talagunda pillar inscription and Kadamba genealogy context; resolve item number and edition pages',
+    locatorReview('high',['script-southern-brahmi-kadamba-transition'],'Resolve Talagunda volume, item number, printed pages, plate witness and palaeographic bibliography for the Kadamba transition phase.','ಕದಂಬ ಪರಿವರ್ತನೆ ಹಂತಕ್ಕಾಗಿ ತಾಳಗುಂದ ಸಂಪುಟ, ವಸ್ತು ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟಗಳು, ಫಲಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಲಿಪಿಶಾಸ್ತ್ರ ಗ್ರಂಥಸೂಚಿಯನ್ನು ನಿರ್ಧರಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-gudnapur',
@@ -585,7 +600,8 @@ export const inscriptionEditions=[
     'Badami Kappe Arabhatta verse inscription; match series, volume, item and plate',
     'provisional',
     'src-ignca-epigraphia-indica-index',
-    'Epigraphia Indica index lead for early Kannada inscription records'
+    'Epigraphia Indica index lead for early Kannada inscription records',
+    locatorReview('high',['script-early-kannada-verse-transition'],'Match Kappe Arabhatta to its exact Epigraphia Indica or corpus witness, page range, plate and line-numbered verse text.','ಕಪ್ಪೆ ಅರಭಟ್ಟವನ್ನು ನಿಖರ Epigraphia Indica ಅಥವಾ ಕಾರ್ಪಸ್ ಸಾಕ್ಷ್ಯ, ಪುಟ ವ್ಯಾಪ್ತಿ, ಫಲಕ ಮತ್ತು ಸಾಲುಸಂಖ್ಯೆಯ ಪದ್ಯ ಪಾಠದೊಂದಿಗೆ ಹೊಂದಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-begur',
@@ -603,7 +619,8 @@ export const inscriptionEditions=[
     'Begur record with early Bengaluru place-name; exact item locator pending',
     'provisional',
     'src-epigraphia-atakur-begur',
-    'Begur inscription and Bengaluru place-name discussion; resolve edition pages'
+    'Begur inscription and Bengaluru place-name discussion; resolve edition pages',
+    locatorReview('high',['script-early-kannada-verse-transition'],'Resolve the Begur inscription edition pages, inscription number, image witness and line-aligned Old Kannada text.','ಬೇಗೂರು ಶಾಸನದ ಆವೃತ್ತಿ ಪುಟಗಳು, ಶಾಸನ ಸಂಖ್ಯೆ, ಚಿತ್ರ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸಾಲು-ಹೊಂದಿದ ಹಳೆಗನ್ನಡ ಪಾಠವನ್ನು ನಿರ್ಧರಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-atakur',
@@ -621,7 +638,8 @@ export const inscriptionEditions=[
     'Atakur hero-stone record associated with Krishna III and Kali; item locator pending',
     'provisional',
     'src-epigraphia-atakur-begur',
-    'Atakur inscription discussion; resolve corpus item number and translation witness'
+    'Atakur inscription discussion; resolve corpus item number and translation witness',
+    locatorReview('high',['script-early-kannada-verse-transition'],'Resolve the Atakur hero-stone item number, printed pages, translation witness and photograph/licence status.','ಆತಕೂರು ವೀರಗಲ್ಲಿನ ವಸ್ತು ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟಗಳು, ಅನುವಾದ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಛಾಯಾಚಿತ್ರ/ಪರವಾನಗಿ ಸ್ಥಿತಿಯನ್ನು ನಿರ್ಧರಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-tyagada-brahmadeva',
@@ -657,7 +675,8 @@ export const inscriptionEditions=[
     'Lakkundi medieval record; exact edition number and pages pending',
     'provisional',
     'src-epigraphia-carnatica',
-    'Lakkundi corpus lead; resolve Kalyani Chalukya item-level edition'
+    'Lakkundi corpus lead; resolve Kalyani Chalukya item-level edition',
+    locatorReview('high',['script-medieval-kannada-temple-epigraphy'],'Resolve the Lakkundi item-level edition, printed page, plate/image witness and temple context link for the medieval temple epigraphy phase.','ಮಧ್ಯಯುಗೀನ ದೇವಾಲಯ ಶಾಸನ ಹಂತಕ್ಕಾಗಿ ಲಕ್ಕುಂಡಿ ವಸ್ತುಮಟ್ಟದ ಆವೃತ್ತಿ, ಮುದ್ರಿತ ಪುಟ, ಫಲಕ/ಚಿತ್ರ ಸಾಕ್ಷ್ಯ ಮತ್ತು ದೇವಾಲಯ ಸಂದರ್ಭ ಕೊಂಡಿಯನ್ನು ನಿರ್ಧರಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-belur-foundation',
@@ -675,7 +694,27 @@ export const inscriptionEditions=[
     'Belur foundation and patronage inscription packet; item corpus locator pending',
     'provisional',
     'src-unesco-hoysala-dossier',
-    'Belur Chennakeshava foundation and Hoysala heritage context; attach inscription corpus item'
+    'Belur Chennakeshava foundation and Hoysala heritage context; attach inscription corpus item',
+    locatorReview('high',['script-medieval-kannada-temple-epigraphy'],'Attach the Belur foundation inscription corpus item, printed-page locator, translation witness and monument-authority evidence.','ಬೇಲೂರು ಪ್ರತಿಷ್ಠಾಪನಾ ಶಾಸನದ ಕಾರ್ಪಸ್ ವಸ್ತು, ಮುದ್ರಿತ ಪುಟ ಸ್ಥಾನಸೂಚಿ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸ್ಮಾರಕ-ಪ್ರಾಧಿಕಾರ ಸಾಕ್ಷ್ಯವನ್ನು ಜೋಡಿಸಿ.')
+  ),
+  editionPacket(
+    'edition-inscription-hampi-cluster',
+    'Hampi inscription cluster edition packet',
+    'ಹಂಪಿ ಶಾಸನ ಸಮೂಹ ಆವೃತ್ತಿ ಕಡತ',
+    'inscription-hampi',
+    'Kannada / Sanskrit',
+    'Kannada / Nagari',
+    1336,
+    1646,
+    'range',
+    'Hampi epigraphic corpus lead',
+    null,
+    null,
+    'Hampi inscription cluster; split by monument, language, script and item number before promotion',
+    'provisional',
+    'src-unesco-hampi',
+    'Hampi inscriptional and monument context; split cluster into item-level edition packets',
+    locatorReview('high',['script-vijayanagara-kannada-nagari-mixed-phase'],'Split the Hampi cluster into monument-level inscription items with corpus numbers, scripts, languages, page locators and image witnesses.','ಹಂಪಿ ಸಮೂಹವನ್ನು ಸ್ಮಾರಕಮಟ್ಟದ ಶಾಸನ ವಸ್ತುಗಳಾಗಿ ವಿಭಜಿಸಿ; ಕಾರ್ಪಸ್ ಸಂಖ್ಯೆಗಳು, ಲಿಪಿಗಳು, ಭಾಷೆಗಳು, ಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯಗಳನ್ನು ಸೇರಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-hampi-krishna-temple',
@@ -693,7 +732,8 @@ export const inscriptionEditions=[
     'Krishnadevaraya-period Krishna Temple record; exact inscription number, text and photo set pending',
     'provisional',
     'src-unesco-hampi',
-    'Krishna Temple and royal centre context; resolve item edition and photographic witness'
+    'Krishna Temple and royal centre context; resolve item edition and photographic witness',
+    locatorReview('high',['script-vijayanagara-kannada-nagari-mixed-phase'],'Resolve the Hampi Krishna Temple inscription number, script/language split, line witness and licensed site photograph set.','ಹಂಪಿ ಕೃಷ್ಣ ದೇವಾಲಯ ಶಾಸನದ ಸಂಖ್ಯೆ, ಲಿಪಿ/ಭಾಷಾ ವಿಭಜನೆ, ಸಾಲು ಸಾಕ್ಷ್ಯ ಮತ್ತು ಪರವಾನಗಿ ಹೊಂದಿದ ತಾಣ ಛಾಯಾಚಿತ್ರ ಸಮೂಹವನ್ನು ನಿರ್ಧರಿಸಿ.')
   ),
   editionPacket(
     'edition-inscription-chandravalli-mayurasharma',
@@ -783,6 +823,7 @@ export const inscriptionEditions=[
     'S.I.I. XVIII No. 112; verify line, image and relocation metadata',
     'located',
     'src-ignca-muktesvara-epigraphy',
-    'Inscription I; S.I.I. XVIII No. 112; attach reviewed transcription, translation and image set'
+    'Inscription I; S.I.I. XVIII No. 112; attach reviewed transcription, translation and image set',
+    locatorReview('high',['script-medieval-kannada-temple-epigraphy'],'Use the located S.I.I. XVIII No. 112 witness to complete line transcription, translation review and image/licence evidence.','ಗುರುತಿಸಲಾದ S.I.I. XVIII No. 112 ಸಾಕ್ಷ್ಯದಿಂದ ಸಾಲು ಲಿಪ್ಯಂತರ, ಅನುವಾದ ವಿಮರ್ಶೆ ಮತ್ತು ಚಿತ್ರ/ಪರವಾನಗಿ ಸಾಕ್ಷ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.')
   ),
 ]

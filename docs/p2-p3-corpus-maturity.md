@@ -9,7 +9,7 @@ This runbook covers the collections that moved from “missing” to “structur
 - `#relations` shows genealogy and feudatory edges in the network graph.
 - `#coins` shows coinage leads with map, search, polity and evidence-gate filters.
 - `#scripts` shows script-evolution phases with sample inscriptions, predecessor links, polity context and evidence handoff.
-- `#epigraphy` includes the inscription-edition review queue.
+- `#epigraphy` includes the inscription-edition review queue with locator-review next actions and linked script-phase context.
 - `#evidence` includes P2 material streams, reviewer fields, saved status history, reviewer dashboard and the ready-for-promotion queue.
 - Static open dataset packets are regenerated during `npm run build`; public packets strip private workflow and moderation fields.
 
@@ -21,7 +21,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `coinRecords` | 6 | Catalogue/image/metal/weight/findspot gates open |
 | `manuscriptWitnesses` | 7 | Repository leads located for some works; shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 7 | Schematic evidence packets, not research-grade boundary corpus |
-| `inscriptionEditions` | 19 | Item-edition queue started; transcription, translation, photographs and coordinates mostly open |
+| `inscriptionEditions` | 20 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
 
 ## Promotion rule
