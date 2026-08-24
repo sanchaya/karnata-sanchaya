@@ -24,6 +24,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `inscriptionEditions` | 20 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
+| Itihasa Darshana source links | 31 linked volumes / 57 link groups | Volume-level OCR signals now route to inscription, script, literature, manuscript and freedom-movement review targets; article/page locators still required |
 
 ## Promotion rule
 
@@ -105,6 +106,8 @@ Current first targets:
 Goal: turn inscription clusters and candidate packets into item-level editions.
 
 The local Epigraphia Carnatica TXT cache is indexed in `epigraphiaArchiveTexts`. These records are citation targets and OCR discovery signals only. They can help find likely volume/item/page leads, but they cannot close an evidence gate until a reviewer checks the printed page image and records an item-level locator.
+
+Itihasa Darshana volumes now carry `contentReview.atlasLinks` on the source records. These links connect volume-level OCR signals to existing atlas targets such as inscription-edition packets, script-evolution phases, Kannada literary works, manuscript witnesses and selected freedom-movement source leads. They are routing aids only: reviewers must identify the article title, printed page, quotation or summary, and target-record fit before using an Itihasa Darshana volume as a record citation.
 
 Minimum evidence per edition:
 

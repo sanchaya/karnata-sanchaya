@@ -5690,6 +5690,127 @@
           "vijayanagara": 68
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 241,
+            "firstOcrLine": 2191,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "krishnadevaraya",
+              "hampi",
+              "vijayanagar"
+            ],
+            "matchCount": 83,
+            "firstOcrLine": 2692,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 33,
+            "firstOcrLine": 2060,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-atakur-rashtrakuta",
+            "label": {
+              "en": "Atakur / Rashtrakuta hero-stone lead",
+              "kn": "ಆತಕೂರು / ರಾಷ್ಟ್ರಕೂಟ ವೀರಗಲ್ಲು ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-atakur",
+              "edition-inscription-atakur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "rashtrakuta",
+              "krishna iii",
+              "atakur",
+              "atakuru"
+            ],
+            "matchCount": 16,
+            "firstOcrLine": 1679,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 7,
+            "firstOcrLine": 217,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "iisb.epigraphiacarnat0000unse.vol.7/iisb.epigraphiacarnat0000unse.vol.7_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -5742,6 +5863,125 @@
           "vijayanagara": 48
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 191,
+            "firstOcrLine": 817,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-halmidi-old-kannada",
+            "label": {
+              "en": "Halmidi / early Kannada lead",
+              "kn": "ಹಲ್ಮಿಡಿ / ಆರಂಭಿಕ ಕನ್ನಡ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-halmidi",
+              "edition-inscription-halmidi-review-packet",
+              "script-old-kannada-epigraphic-phase"
+            ],
+            "matchedTerms": [
+              "kannada",
+              "kadamba",
+              "halmidi"
+            ],
+            "matchCount": 129,
+            "firstOcrLine": 95,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "vijayanagar",
+              "krishnadevaraya"
+            ],
+            "matchCount": 52,
+            "firstOcrLine": 2558,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 23,
+            "firstOcrLine": 2129,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 4,
+            "firstOcrLine": 216,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epicraphiacarnat0000unse.vol.8/isb.epicraphiacarnat0000unse.vol.8_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -5794,6 +6034,150 @@
           "vijayanagara": 78
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana"
+            ],
+            "matchCount": 117,
+            "firstOcrLine": 3293,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-shravanabelagola-ganga",
+            "label": {
+              "en": "Shravanabelagola / Western Ganga lead",
+              "kn": "ಶ್ರವಣಬೆಳಗೊಳ / ಪಶ್ಚಿಮ ಗಂಗ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-shravanabelagola",
+              "edition-inscription-shravanabelagola-cluster",
+              "edition-inscription-tyagada-brahmadeva"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "shravanabelagola"
+            ],
+            "matchCount": 106,
+            "firstOcrLine": 462,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "vijayanagar",
+              "krishnadevaraya",
+              "hampi"
+            ],
+            "matchCount": 93,
+            "firstOcrLine": 3495,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-talagunda-kadamba",
+            "label": {
+              "en": "Talagunda / Kadamba genealogy lead",
+              "kn": "ತಾಳಗುಂದ / ಕದಂಬ ವಂಶಾವಳಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-talagunda",
+              "edition-inscription-talagunda",
+              "script-southern-brahmi-kadamba-transition"
+            ],
+            "matchedTerms": [
+              "kadamba",
+              "talagunda",
+              "kakusthavarma"
+            ],
+            "matchCount": 35,
+            "firstOcrLine": 3365,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-lakkundi-chalukya",
+            "label": {
+              "en": "Lakkundi / Kalyani Chalukya lead",
+              "kn": "ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-lakkundi",
+              "edition-inscription-lakkundi",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "chalukya",
+              "kalyani"
+            ],
+            "matchCount": 9,
+            "firstOcrLine": 7656,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "begur",
+              "bangalore"
+            ],
+            "matchCount": 8,
+            "firstOcrLine": 243,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat00000une.vol.3/isb.epigraphiacarnat00000une.vol.3_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -5847,6 +6231,79 @@
           "vijayanagara": 47
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 499,
+            "firstOcrLine": 694,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "hampi",
+              "vijayanagar"
+            ],
+            "matchCount": 55,
+            "firstOcrLine": 694,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bengaluru"
+            ],
+            "matchCount": 2,
+            "firstOcrLine": 51602,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse.vol.10/isb.epigraphiacarnat0000unse.vol.10_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -5899,6 +6356,125 @@
           "vijayanagara": 106
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 304,
+            "firstOcrLine": 793,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "hampi",
+              "vijayanagar"
+            ],
+            "matchCount": 109,
+            "firstOcrLine": 352,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 57,
+            "firstOcrLine": 1764,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-shravanabelagola-ganga",
+            "label": {
+              "en": "Shravanabelagola / Western Ganga lead",
+              "kn": "ಶ್ರವಣಬೆಳಗೊಳ / ಪಶ್ಚಿಮ ಗಂಗ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-shravanabelagola",
+              "edition-inscription-shravanabelagola-cluster",
+              "edition-inscription-tyagada-brahmadeva"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "sravana belgola"
+            ],
+            "matchCount": 55,
+            "firstOcrLine": 1764,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-talagunda-kadamba",
+            "label": {
+              "en": "Talagunda / Kadamba genealogy lead",
+              "kn": "ತಾಳಗುಂದ / ಕದಂಬ ವಂಶಾವಳಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-talagunda",
+              "edition-inscription-talagunda",
+              "script-southern-brahmi-kadamba-transition"
+            ],
+            "matchedTerms": [
+              "kadamba",
+              "talagunda"
+            ],
+            "matchCount": 16,
+            "firstOcrLine": 6126,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse.vol.11/isb.epigraphiacarnat0000unse.vol.11_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -5952,6 +6528,101 @@
           "vijayanagara": 57
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 309,
+            "firstOcrLine": 1758,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 124,
+            "firstOcrLine": 1613,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "hampi",
+              "vijayanagar"
+            ],
+            "matchCount": 60,
+            "firstOcrLine": 266,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 1,
+            "firstOcrLine": 7134,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse.vol.12/isb.epigraphiacarnat0000unse.vol.12_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -6005,6 +6676,149 @@
           "vijayanagara": 38
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 112,
+            "firstOcrLine": 1357,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "krishnadevaraya",
+              "hampi"
+            ],
+            "matchCount": 46,
+            "firstOcrLine": 1480,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi",
+              "doddahundi"
+            ],
+            "matchCount": 35,
+            "firstOcrLine": 1226,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-shravanabelagola-ganga",
+            "label": {
+              "en": "Shravanabelagola / Western Ganga lead",
+              "kn": "ಶ್ರವಣಬೆಳಗೊಳ / ಪಶ್ಚಿಮ ಗಂಗ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-shravanabelagola",
+              "edition-inscription-shravanabelagola-cluster",
+              "edition-inscription-tyagada-brahmadeva"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "chamundaraya"
+            ],
+            "matchCount": 27,
+            "firstOcrLine": 1226,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-lakkundi-chalukya",
+            "label": {
+              "en": "Lakkundi / Kalyani Chalukya lead",
+              "kn": "ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-lakkundi",
+              "edition-inscription-lakkundi",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "chalukya",
+              "kalyani"
+            ],
+            "matchCount": 22,
+            "firstOcrLine": 1289,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore",
+              "bengaluru"
+            ],
+            "matchCount": 7,
+            "firstOcrLine": 145,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse.vol.5/isb.epigraphiacarnat0000unse.vol.5_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -6055,6 +6869,102 @@
           "vijayanagara": 50
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana",
+              "belur"
+            ],
+            "matchCount": 213,
+            "firstOcrLine": 2333,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "vijayanagar",
+              "hampi"
+            ],
+            "matchCount": 57,
+            "firstOcrLine": 2566,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-lakkundi-chalukya",
+            "label": {
+              "en": "Lakkundi / Kalyani Chalukya lead",
+              "kn": "ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-lakkundi",
+              "edition-inscription-lakkundi",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "chalukya",
+              "kalyani"
+            ],
+            "matchCount": 12,
+            "firstOcrLine": 5412,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 3,
+            "firstOcrLine": 1077,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse.vol.7/isb.epigraphiacarnat0000unse.vol.7_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -6108,6 +7018,148 @@
           "vijayanagara": 116
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana"
+            ],
+            "matchCount": 281,
+            "firstOcrLine": 908,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 198,
+            "firstOcrLine": 793,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "krishnadevaraya",
+              "vijayanagar",
+              "hampi"
+            ],
+            "matchCount": 140,
+            "firstOcrLine": 930,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-lakkundi-chalukya",
+            "label": {
+              "en": "Lakkundi / Kalyani Chalukya lead",
+              "kn": "ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-lakkundi",
+              "edition-inscription-lakkundi",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "chalukya",
+              "kalyani",
+              "lakkundi"
+            ],
+            "matchCount": 108,
+            "firstOcrLine": 1706,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-talagunda-kadamba",
+            "label": {
+              "en": "Talagunda / Kadamba genealogy lead",
+              "kn": "ತಾಳಗುಂದ / ಕದಂಬ ವಂಶಾವಳಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-talagunda",
+              "edition-inscription-talagunda",
+              "script-southern-brahmi-kadamba-transition"
+            ],
+            "matchedTerms": [
+              "kadamba",
+              "talagunda"
+            ],
+            "matchCount": 25,
+            "firstOcrLine": 1658,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 5,
+            "firstOcrLine": 530,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse.volu.24/isb.epigraphiacarnat0000unse.volu.24_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -6158,6 +7210,103 @@
           "vijayanagara": 121
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "vijayanagar",
+              "hampi",
+              "krishnadevaraya"
+            ],
+            "matchCount": 139,
+            "firstOcrLine": 2788,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-lakkundi-chalukya",
+            "label": {
+              "en": "Lakkundi / Kalyani Chalukya lead",
+              "kn": "ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-lakkundi",
+              "edition-inscription-lakkundi",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "chalukya",
+              "kalyani"
+            ],
+            "matchCount": 32,
+            "firstOcrLine": 2586,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-talagunda-kadamba",
+            "label": {
+              "en": "Talagunda / Kadamba genealogy lead",
+              "kn": "ತಾಳಗುಂದ / ಕದಂಬ ವಂಶಾವಳಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-talagunda",
+              "edition-inscription-talagunda",
+              "script-southern-brahmi-kadamba-transition"
+            ],
+            "matchedTerms": [
+              "kadamba",
+              "talagunda"
+            ],
+            "matchCount": 11,
+            "firstOcrLine": 15282,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore",
+              "bengaluru"
+            ],
+            "matchCount": 11,
+            "firstOcrLine": 377,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiacarnat0000unse_g7l3.volu.25/isb.epigraphiacarnat0000unse_g7l3.volu.25_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -6211,6 +7360,123 @@
           "vijayanagara": 66
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "vishnuvardhana"
+            ],
+            "matchCount": 149,
+            "firstOcrLine": 3604,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "krishnadevaraya",
+              "hampi"
+            ],
+            "matchCount": 70,
+            "firstOcrLine": 9628,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 27,
+            "firstOcrLine": 3545,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-shravanabelagola-ganga",
+            "label": {
+              "en": "Shravanabelagola / Western Ganga lead",
+              "kn": "ಶ್ರವಣಬೆಳಗೊಳ / ಪಶ್ಚಿಮ ಗಂಗ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-shravanabelagola",
+              "edition-inscription-shravanabelagola-cluster",
+              "edition-inscription-tyagada-brahmadeva"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "shravanabelagola"
+            ],
+            "matchCount": 25,
+            "firstOcrLine": 477,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 3,
+            "firstOcrLine": 280,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiakarnat0000unse.vol.4/isb.epigraphiakarnat0000unse.vol.4_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"
@@ -6264,6 +7530,197 @@
           "vijayanagara": 68
         },
         "ocrSignalStatus": "local-sampled",
+        "locatorCandidates": [
+          {
+            "id": "archive-hint-belur-hoysala",
+            "label": {
+              "en": "Belur / Hoysala temple epigraphy lead",
+              "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-belur-foundation",
+              "edition-inscription-belur-foundation",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "hoysala",
+              "belur",
+              "vishnuvardhana"
+            ],
+            "matchCount": 352,
+            "firstOcrLine": 5199,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-halmidi-old-kannada",
+            "label": {
+              "en": "Halmidi / early Kannada lead",
+              "kn": "ಹಲ್ಮಿಡಿ / ಆರಂಭಿಕ ಕನ್ನಡ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-halmidi",
+              "edition-inscription-halmidi-review-packet",
+              "script-old-kannada-epigraphic-phase"
+            ],
+            "matchedTerms": [
+              "kannada",
+              "kadamba",
+              "halmidi"
+            ],
+            "matchCount": 184,
+            "firstOcrLine": 124,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-hampi-vijayanagara",
+            "label": {
+              "en": "Hampi / Vijayanagara inscription lead",
+              "kn": "ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-hampi",
+              "edition-inscription-hampi-cluster",
+              "edition-inscription-hampi-krishna-temple",
+              "script-vijayanagara-kannada-nagari-mixed-phase"
+            ],
+            "matchedTerms": [
+              "vijayanagara",
+              "krishnadevaraya",
+              "vijayanagar",
+              "hampi"
+            ],
+            "matchCount": 81,
+            "firstOcrLine": 2195,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-talagunda-kadamba",
+            "label": {
+              "en": "Talagunda / Kadamba genealogy lead",
+              "kn": "ತಾಳಗುಂದ / ಕದಂಬ ವಂಶಾವಳಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-talagunda",
+              "edition-inscription-talagunda",
+              "script-southern-brahmi-kadamba-transition"
+            ],
+            "matchedTerms": [
+              "kadamba",
+              "talagunda",
+              "kakusthavarma"
+            ],
+            "matchCount": 60,
+            "firstOcrLine": 4575,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-doddahundi-nishidhi",
+            "label": {
+              "en": "Doddahundi / nishidhi lead",
+              "kn": "ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-doddahundi-nishidhi",
+              "edition-inscription-doddahundi-nishidhi"
+            ],
+            "matchedTerms": [
+              "ganga",
+              "nishidhi"
+            ],
+            "matchCount": 42,
+            "firstOcrLine": 7646,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-lakkundi-chalukya",
+            "label": {
+              "en": "Lakkundi / Kalyani Chalukya lead",
+              "kn": "ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-lakkundi",
+              "edition-inscription-lakkundi",
+              "script-medieval-kannada-temple-epigraphy"
+            ],
+            "matchedTerms": [
+              "chalukya",
+              "kalyani"
+            ],
+            "matchCount": 29,
+            "firstOcrLine": 7759,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-begur-bengaluru",
+            "label": {
+              "en": "Begur / Bengaluru place-name lead",
+              "kn": "ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-begur",
+              "edition-inscription-begur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "bangalore"
+            ],
+            "matchCount": 4,
+            "firstOcrLine": 231,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          },
+          {
+            "id": "archive-hint-atakur-rashtrakuta",
+            "label": {
+              "en": "Atakur / Rashtrakuta hero-stone lead",
+              "kn": "ಆತಕೂರು / ರಾಷ್ಟ್ರಕೂಟ ವೀರಗಲ್ಲು ದಾರಿ"
+            },
+            "targetRecordIds": [
+              "inscription-atakur",
+              "edition-inscription-atakur",
+              "script-early-kannada-verse-transition"
+            ],
+            "matchedTerms": [
+              "rashtrakuta",
+              "atakuru",
+              "krishna iii"
+            ],
+            "matchCount": 4,
+            "firstOcrLine": 7823,
+            "status": "needs-page-image-review",
+            "reviewNote": {
+              "en": "OCR term match only; verify printed page, inscription number and image witness before using as evidence.",
+              "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ."
+            }
+          }
+        ],
         "citation": {
           "sourceId": "src-ia-jaigyan-epigraphy-collection",
           "locator": "isb.epigraphiyakarna000000unse.vol.9/isb.epigraphiyakarna000000unse.vol.9_djvu.txt; local OCR cache indexed; OCR discovery only, verify against page image before citation"

@@ -5,6 +5,7 @@ import { validateAtlas } from '../src/data/validate.js'
 import peopleCandidateCorpus from '../server/seeds/wikimedia-people-candidates.json' with { type:'json' }
 
 const sourceIds = new Set(atlasData.sources.map(source => source.id))
+const knownIds = new Set(Object.values(atlasData).flatMap(collection => Array.isArray(collection) ? collection.map(record => record?.id).filter(Boolean) : []))
 const placeById = new Map(atlasData.places.map(place => [place.id, place]))
 const polityIds = new Set([...atlasData.polities, ...atlasData.externalPolities].map(polity => polity.id))
 const personIds = new Set(atlasData.people.map(person => person.id))
@@ -57,6 +58,33 @@ test('local Epigraphia Carnatica text cache is indexed as review-only citations'
     assert.ok(sourceIds.has(record.citation.sourceId), `${record.id} has an unknown citation source`)
     assert.ok(record.citation.locator.includes('OCR discovery only'), `${record.id} must not imply OCR is final evidence`)
     assert.ok(Object.values(record.ocrSignals || {}).some(count => count > 0), `${record.id} should retain OCR discovery signals`)
+    for (const hint of record.locatorCandidates || []) {
+      assert.equal(hint.status, 'needs-page-image-review')
+      assert.ok(hint.id.startsWith('archive-hint-'))
+      assert.ok(hint.matchCount > 0)
+      assert.ok(hint.matchedTerms.length > 0)
+      assert.ok(hint.reviewNote.en.includes('OCR term match only'))
+      for (const targetId of hint.targetRecordIds) assert.ok(knownIds.has(targetId), `${record.id} has unknown OCR locator target ${targetId}`)
+    }
+  }
+})
+
+test('Itihasa Darshana volumes expose review-gated atlas link groups', () => {
+  const volumes = atlasData.sources.filter(source => source.collectionKey === 'itihasa-darshana')
+  const linkedVolumes = volumes.filter(source => source.contentReview?.atlasLinks?.length)
+  assert.ok(volumes.length >= 37)
+  assert.ok(linkedVolumes.length >= 30)
+  assert.ok(linkedVolumes.reduce((sum, source) => sum + source.contentReview.atlasLinks.length, 0) >= 50)
+  assert.ok(linkedVolumes.some(source => source.contentReview.atlasLinks.some(link => link.targetCollection === 'inscriptionEditions')))
+  assert.ok(linkedVolumes.some(source => source.contentReview.atlasLinks.some(link => link.targetCollection === 'works')))
+  for (const source of linkedVolumes) {
+    for (const link of source.contentReview.atlasLinks) {
+      assert.equal(link.status, 'needs-article-page-review')
+      assert.ok(['high', 'medium', 'low'].includes(link.confidence))
+      assert.ok(link.reason.en.length > 20)
+      assert.ok(link.requiredReview.includes('printedPage'))
+      for (const targetId of link.targetRecordIds) assert.ok(knownIds.has(targetId), `${source.id} has unknown Itihasa link target ${targetId}`)
+    }
   }
 })
 

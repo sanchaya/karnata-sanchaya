@@ -44,6 +44,137 @@ const ocrSignals = {
   'kia.itihasadarshanas0000drsu1995smput10': { kannada: 74, inscriptions: 142, literature: 35 },
 }
 
+const link = (linkKind, labelEn, labelKn, targetCollection, targetRecordIds, confidence, reasonEn, reasonKn) => ({
+  linkKind,
+  label: name(labelEn, labelKn),
+  targetCollection,
+  targetRecordIds,
+  confidence,
+  status: 'needs-article-page-review',
+  reason: name(reasonEn, reasonKn),
+  requiredReview: [
+    'articleTitle',
+    'printedPage',
+    'sourceQuotationOrSummary',
+    'targetRecordConfirmation',
+  ],
+})
+
+const inscriptionTargets = [
+  'edition-inscription-halmidi-review-packet',
+  'edition-inscription-talagunda',
+  'edition-inscription-begur',
+  'edition-inscription-atakur',
+  'edition-inscription-lakkundi',
+  'edition-inscription-belur-foundation',
+  'edition-inscription-hampi-cluster',
+  'edition-inscription-shravanabelagola-cluster',
+]
+const scriptTargets = [
+  'script-southern-brahmi-kadamba-transition',
+  'script-old-kannada-epigraphic-phase',
+  'script-early-kannada-verse-transition',
+  'script-medieval-kannada-temple-epigraphy',
+  'script-vijayanagara-kannada-nagari-mixed-phase',
+  'script-modern-kannada-print-transition',
+]
+const literatureTargets = [
+  'work-kavirajamarga',
+  'work-vikramarjuna-vijaya',
+  'work-adipurana',
+  'work-gadayuddha',
+  'work-kumaravyasa-bharata',
+  'work-torave-ramayana',
+  'work-vaddaradhane',
+]
+const manuscriptTargets = [
+  'manuscript-kavirajamarga-sanchaya-witness-lead',
+  'manuscript-vikramarjuna-vijaya-sanchaya-witness-lead',
+  'manuscript-adipurana-printed-edition-lead',
+  'manuscript-vaddaradhane-palm-leaf-witness-lead',
+  'manuscript-kumaravyasa-bharata-sanchaya-witness-lead',
+  'manuscript-torave-ramayana-sanchaya-witness-lead',
+]
+const freedomTargets = ['src-ff-31']
+const specialSourceLinks = {
+  'kia.itihasadarshanas0000drsu1989samput4': [
+    link(
+      'freedom-movement-article-lead',
+      'Women freedom fighters article lead',
+      'ಮಹಿಳಾ ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರರ ಲೇಖನ ದಾರಿ',
+      'freedom-fighter-sources',
+      freedomTargets,
+      'medium',
+      'Existing freedom-fighter research notes identify this volume as a likely article source; exact article/page evidence is still required.',
+      'ಈ ಸಂಪುಟವನ್ನು ಸಾಧ್ಯ ಲೇಖನ ಆಕರವೆಂದು ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರರ ಸಂಶೋಧನಾ ಟಿಪ್ಪಣಿಗಳು ಗುರುತಿಸುತ್ತವೆ; ನಿಖರ ಲೇಖನ/ಪುಟ ಸಾಕ್ಷ್ಯ ಇನ್ನೂ ಬೇಕಾಗಿದೆ.',
+    ),
+  ],
+  'kia.itihasadarsanasa0000drmgsamputa-25': [
+    link(
+      'freedom-movement-biography-lead',
+      'Yashodharamma Dasappa biography lead',
+      'ಯಶೋಧರಮ್ಮ ದಾಸಪ್ಪ ಜೀವನಚರಿತ್ರೆ ದಾರಿ',
+      'freedom-fighter-sources',
+      freedomTargets,
+      'medium',
+      'Existing freedom-fighter research notes identify this volume as a likely biography source; exact article/page evidence is still required.',
+      'ಈ ಸಂಪುಟವನ್ನು ಸಾಧ್ಯ ಜೀವನಚರಿತ್ರೆ ಆಕರವೆಂದು ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರರ ಸಂಶೋಧನಾ ಟಿಪ್ಪಣಿಗಳು ಗುರುತಿಸುತ್ತವೆ; ನಿಖರ ಲೇಖನ/ಪುಟ ಸಾಕ್ಷ್ಯ ಇನ್ನೂ ಬೇಕಾಗಿದೆ.',
+    ),
+  ],
+}
+
+const atlasLinksFor = id => {
+  const signals = ocrSignals[id] || {}
+  const links = []
+  if ((signals.inscriptions || 0) >= 250) {
+    links.push(link(
+      'inscription-edition-review-lead',
+      'Inscription edition review leads',
+      'ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ದಾರಿಗಳು',
+      'inscriptionEditions',
+      inscriptionTargets,
+      signals.inscriptions >= 400 ? 'high' : 'medium',
+      'High inscription OCR signal; use this volume to search for exact printed article, page and item locators for current inscription-edition packets.',
+      'ಶಾಸನ OCR ಸೂಚನೆ ಹೆಚ್ಚಿನದು; ಪ್ರಸ್ತುತ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತಗಳಿಗೆ ನಿಖರ ಮುದ್ರಿತ ಲೇಖನ, ಪುಟ ಮತ್ತು ವಸ್ತು ಸ್ಥಾನಸೂಚಿಗಳನ್ನು ಹುಡುಕಲು ಈ ಸಂಪುಟ ಬಳಸಿ.',
+    ))
+  }
+  if ((signals.kannada || 0) >= 70 && (signals.inscriptions || 0) >= 120) {
+    links.push(link(
+      'script-evolution-review-lead',
+      'Kannada script-evolution review leads',
+      'ಕನ್ನಡ ಲಿಪಿ-ವಿಕಾಸ ಪರಿಶೀಲನಾ ದಾರಿಗಳು',
+      'scriptEvolution',
+      scriptTargets,
+      signals.inscriptions >= 300 ? 'medium' : 'low',
+      'Kannada plus inscription OCR signals make this volume useful for palaeography/script-phase article review.',
+      'ಕನ್ನಡ ಮತ್ತು ಶಾಸನ OCR ಸೂಚನೆಗಳಿಂದ ಈ ಸಂಪುಟವು ಲಿಪಿಶಾಸ್ತ್ರ/ಲಿಪಿ ಹಂತಗಳ ಲೇಖನ ಪರಿಶೀಲನೆಗೆ ಉಪಯುಕ್ತವಾಗಿದೆ.',
+    ))
+  }
+  if ((signals.literature || 0) >= 45) {
+    links.push(link(
+      'literature-review-lead',
+      'Kannada literature review leads',
+      'ಕನ್ನಡ ಸಾಹಿತ್ಯ ಪರಿಶೀಲನಾ ದಾರಿಗಳು',
+      'works',
+      literatureTargets,
+      signals.literature >= 60 ? 'high' : 'medium',
+      'Literature OCR signal is strong enough to route this volume to work-date, author and court-context review packets.',
+      'ಸಾಹಿತ್ಯ OCR ಸೂಚನೆ ಬಲವಾಗಿರುವುದರಿಂದ ಈ ಸಂಪುಟವನ್ನು ಕೃತಿ ದಿನಾಂಕ, ಕರ್ತೃ ಮತ್ತು ಆಸ್ಥಾನ ಸಂದರ್ಭ ಪರಿಶೀಲನಾ ಕಡತಗಳಿಗೆ ಜೋಡಿಸಲಾಗಿದೆ.',
+    ))
+    links.push(link(
+      'manuscript-witness-review-lead',
+      'Manuscript and edition witness leads',
+      'ಹಸ್ತಪ್ರತಿ ಮತ್ತು ಆವೃತ್ತಿ ಸಾಕ್ಷ್ಯ ದಾರಿಗಳು',
+      'manuscriptWitnesses',
+      manuscriptTargets,
+      'medium',
+      'Literature-heavy volumes can help identify edition/source discussions for the current manuscript witness queue.',
+      'ಸಾಹಿತ್ಯ-ಭಾರಿತ ಸಂಪುಟಗಳು ಪ್ರಸ್ತುತ ಹಸ್ತಪ್ರತಿ ಸಾಕ್ಷ್ಯ ಸರದಿಗೆ ಆವೃತ್ತಿ/ಆಕರ ಚರ್ಚೆಗಳನ್ನು ಗುರುತಿಸಲು ಸಹಾಯ ಮಾಡಬಹುದು.',
+    ))
+  }
+  return [...links, ...(specialSourceLinks[id] || [])]
+}
+
 const volume = (id, label, titleKn, year = null) => {
   const slug = id.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()
   const base = `https://archive.org/details/${id}`
@@ -72,6 +203,7 @@ const volume = (id, label, titleKn, year = null) => {
       accessedAt: '2026-07-28',
       pass: 'full-text-and-hocr-opened',
       ocrSignals: ocrSignals[id] || null,
+      atlasLinks: atlasLinksFor(id),
       note: name(
         'Full-text OCR and HOCR were opened for catalogue and subject screening. Use the page image and printed locator for every quotation, transcription or translation; OCR is a discovery aid, not a substitute for the volume.',
         'ಸೂಚಿ ಮತ್ತು ವಿಷಯ ಪರಿಶೀಲನೆಗಾಗಿ ಸಂಪೂರ್ಣ OCR ಮತ್ತು HOCR ತೆರೆಯಲಾಗಿದೆ. ಪ್ರತಿಯೊಂದು ಉಲ್ಲೇಖ, ಲಿಪ್ಯಂತರ ಅಥವಾ ಅನುವಾದಕ್ಕೆ ಪುಟದ ಚಿತ್ರ ಮತ್ತು ಮುದ್ರಿತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಬಳಸಿ; OCR ಸಂಪುಟಕ್ಕೆ ಪರ್ಯಾಯವಲ್ಲ, ಶೋಧನಾ ಸಹಾಯಕ ಮಾತ್ರ.',

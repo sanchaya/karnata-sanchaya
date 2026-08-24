@@ -95,6 +95,15 @@ export function validateAtlas(data) {
         if (record.alternateUrls!=null && (!Array.isArray(record.alternateUrls) || record.alternateUrls.some(url=>!/^https:\/\//.test(url)))) add('error',collection,id,'alternateUrls','Alternate source URLs must be an array of HTTPS URLs.')
         if (record.doi!=null && typeof record.doi!=='string') add('error',collection,id,'doi','DOI must be text when supplied.')
         if (record.isbn!=null && typeof record.isbn!=='string') add('error',collection,id,'isbn','ISBN must be text when supplied.')
+        ;(record.contentReview?.atlasLinks || []).forEach((link,index)=>{
+          if (!link.linkKind?.trim()) add('error',collection,id,`contentReview.atlasLinks.${index}.linkKind`,'Itihasa Darshana atlas links require a link kind.')
+          if (!link.label?.en?.trim() || !link.label?.kn?.trim()) add('error',collection,id,`contentReview.atlasLinks.${index}.label`,'Itihasa Darshana atlas links require bilingual labels.')
+          if (!['high','medium','low'].includes(link.confidence)) add('error',collection,id,`contentReview.atlasLinks.${index}.confidence`,'Atlas link confidence must be high, medium or low.')
+          if (link.status !== 'needs-article-page-review') add('error',collection,id,`contentReview.atlasLinks.${index}.status`,'Itihasa Darshana links must remain needs-article-page-review until exact page locators are verified.')
+          if (!Array.isArray(link.requiredReview) || link.requiredReview.length < 4) add('error',collection,id,`contentReview.atlasLinks.${index}.requiredReview`,'Atlas links require explicit article/page review gates.')
+          if (!Array.isArray(link.targetRecordIds) || link.targetRecordIds.length === 0) add('error',collection,id,`contentReview.atlasLinks.${index}.targetRecordIds`,'Atlas links require target records.')
+          ;(link.targetRecordIds || []).forEach((targetId,targetIndex)=>{if(!knownIds.has(targetId))add('error',collection,id,`contentReview.atlasLinks.${index}.targetRecordIds.${targetIndex}`,`Unknown Itihasa Darshana link target: ${targetId}`)})
+        })
       }
       if (collection === 'reigns') {
         if (!['reign','regency','political-phase'].includes(record.periodType)) add('error',collection,id,'periodType','Period type must be reign, regency, or political-phase.')
@@ -219,6 +228,16 @@ export function validateAtlas(data) {
         if (!record.textFile?.url?.startsWith('https://archive.org/download/') || !record.textFile?.name?.endsWith('.txt')) add('error',collection,id,'textFile','Archive text records require a TXT derivative URL.')
         if (!['Epigraphia Carnatica','Epigraphia Indica','Annual Report on South Indian Epigraphy','Annual Report on Indian Epigraphy','Epigraphy corpus'].includes(record.series)) add('error',collection,id,'series','Archive text record series is invalid.')
         if (!record.citation?.sourceId || !knownIds.has(record.citation.sourceId) || !record.citation.locator?.includes('OCR discovery only')) add('error',collection,id,'citation','Archive text records require a review-safe OCR citation.')
+        ;(record.locatorCandidates || []).forEach((candidate,index)=>{
+          if (!candidate.id?.startsWith('archive-hint-')) add('error',collection,id,`locatorCandidates.${index}.id`,'Archive locator hints require a stable archive-hint ID.')
+          if (!candidate.label?.en?.trim() || !candidate.label?.kn?.trim()) add('error',collection,id,`locatorCandidates.${index}.label`,'Archive locator hints require bilingual labels.')
+          if (!Number.isInteger(candidate.matchCount) || candidate.matchCount < 1) add('error',collection,id,`locatorCandidates.${index}.matchCount`,'Archive locator hints require a positive OCR match count.')
+          if (candidate.firstOcrLine != null && (!Number.isInteger(candidate.firstOcrLine) || candidate.firstOcrLine < 1)) add('error',collection,id,`locatorCandidates.${index}.firstOcrLine`,'Archive locator hints require a positive OCR line number when present.')
+          if (candidate.status !== 'needs-page-image-review') add('error',collection,id,`locatorCandidates.${index}.status`,'Archive locator hints must remain needs-page-image-review.')
+          if (!Array.isArray(candidate.matchedTerms) || candidate.matchedTerms.length === 0) add('error',collection,id,`locatorCandidates.${index}.matchedTerms`,'Archive locator hints require matched OCR terms.')
+          if (!Array.isArray(candidate.targetRecordIds) || candidate.targetRecordIds.length === 0) add('error',collection,id,`locatorCandidates.${index}.targetRecordIds`,'Archive locator hints require target records.')
+          ;(candidate.targetRecordIds || []).forEach((targetId,targetIndex)=>{if(!knownIds.has(targetId))add('error',collection,id,`locatorCandidates.${index}.targetRecordIds.${targetIndex}`,`Unknown Archive locator target: ${targetId}`)})
+        })
         if (record.review?.status !== 'needs-review') add('error',collection,id,'review.status','Archive OCR records must remain needs-review until page-image review.')
       }
       if (collection === 'openDatasetCatalogue') {

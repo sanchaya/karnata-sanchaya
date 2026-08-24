@@ -66,6 +66,16 @@
 .archive-text-list a{color:#315f91;font-size:11px;font-weight:750;text-decoration:none}
 .archive-text-list span{border-radius:99px;background:#fff4dc;padding:3px 6px;color:#8b5a16;font-size:8px;font-weight:800}
 .archive-text-list small,.archive-text-list p{margin:0;color:var(--sanchaya-muted);font-size:9px;line-height:1.4}
+.archive-locator-hints{display:grid;gap:5px;margin-top:6px;padding-top:7px;border-top:1px solid #efe8da}
+.archive-locator-hints strong{color:#71542d;font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.archive-locator-hints div{display:grid;gap:2px;padding:6px;border-radius:6px;background:#f9f6ef}
+.archive-locator-hints div span{display:block;width:fit-content;border-radius:5px;background:#eef3ff;color:#315f91;font-size:8px;line-height:1.35}
+.archive-locator-hints div small{color:#6f685d}
+.itihasa-atlas-links{display:grid;gap:5px;margin-top:7px;padding-top:7px;border-top:1px solid #e2e6f2}
+.itihasa-atlas-links strong{color:#394453;font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.itihasa-atlas-links div{display:grid;gap:2px;padding:6px;border:1px solid #e5e9f5;border-radius:6px;background:#f8faff}
+.itihasa-atlas-links span{display:block;color:#315f91;font-size:8px;font-weight:800;line-height:1.35}
+.itihasa-atlas-links small{color:#606779}
 .epigraphy-corpus-drawer{margin:0;padding:0;overflow:hidden}
 .epigraphy-corpus-drawer summary{cursor:pointer;padding:12px 14px;color:var(--sanchaya-ink);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.06em;list-style:none}
 .epigraphy-corpus-drawer summary::-webkit-details-marker{display:none}
