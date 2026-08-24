@@ -9,7 +9,7 @@ This runbook covers the collections that moved from “missing” to “structur
 - `#relations` shows genealogy and feudatory edges in the network graph.
 - `#coins` shows coinage leads with map, search, polity and evidence-gate filters.
 - `#scripts` shows script-evolution phases with sample inscriptions, predecessor links, polity context and evidence handoff.
-- `#epigraphy` includes the inscription-edition review queue with locator-review next actions and linked script-phase context.
+- `#epigraphy` includes the inscription-edition review queue with locator-review next actions, linked script-phase context, and sprint filters for script-support/high-priority packets.
 - `#evidence` includes P2 material streams, reviewer fields, saved status history, reviewer dashboard and the ready-for-promotion queue.
 - Static open dataset packets are regenerated during `npm run build`; public packets strip private workflow and moderation fields.
 
