@@ -339,11 +339,11 @@ test('international research additions keep attested links separate from unresol
 })
 
 test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
-  assert.ok(atlasData.genealogicalRelations.length >= 5)
-  assert.ok(atlasData.coinRecords.length >= 4)
-  assert.ok(atlasData.manuscriptWitnesses.length >= 5)
-  assert.ok(atlasData.boundaryEvidence.length >= 5)
-  assert.ok(atlasData.inscriptionEditions.length >= 17)
+  assert.ok(atlasData.genealogicalRelations.length >= 7)
+  assert.ok(atlasData.coinRecords.length >= 6)
+  assert.ok(atlasData.manuscriptWitnesses.length >= 7)
+  assert.ok(atlasData.boundaryEvidence.length >= 7)
+  assert.ok(atlasData.inscriptionEditions.length >= 19)
   for (const item of atlasData.genealogicalRelations) {
     assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
     assert.ok(personIds.has(item.toPersonId), `${item.id} has an unknown target person`)
@@ -378,6 +378,9 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   assert.equal(barusEdition?.itemEdition.status, 'located')
   assert.equal(atlasData.manuscriptWitnesses.find(item=>item.id==='manuscript-vaddaradhane-palm-leaf-witness-lead')?.date.from, 1434)
   assert.equal(atlasData.boundaryEvidence.find(item=>item.id==='boundary-evidence-rashtrakuta-kannauj-campaign-circa-800')?.evidenceKind, 'campaign-route')
+  for (const id of ['genealogy-vishnuvardhana-ballala-ii-hoysala-line','genealogy-yaduraya-krishnaraja-iii-mysore-line','coin-hoysala-belur-numismatic-lead','coin-mysore-srirangapatna-tipu-lead','manuscript-kumaravyasa-bharata-sanchaya-witness-lead','manuscript-torave-ramayana-sanchaya-witness-lead','boundary-evidence-hoysala-vishnuvardhana-1117','boundary-evidence-mysore-tipu-sultan-1787','edition-inscription-shravanabelagola-cluster','edition-inscription-muktesvara-attiraja-review-packet']) {
+    assert.ok(atlasData.relationships.some(relation=>relation.fromId===id||relation.sourceRecordId===id), `${id} must be linked into the public research graph`)
+  }
   for (const id of ['edition-inscription-talagunda','edition-inscription-atakur','edition-inscription-belur-foundation','edition-inscription-takuapa-tamil-guild']) {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.review.status, 'needs-review')
