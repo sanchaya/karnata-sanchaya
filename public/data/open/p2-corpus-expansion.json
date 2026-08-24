@@ -5093,6 +5093,132 @@
           "reviewer": null,
           "updatedAt": "2026-08-23"
         }
+      },
+      {
+        "id": "edition-inscription-shravanabelagola-cluster",
+        "name": {
+          "en": "Shravanabelagola inscription cluster edition packet",
+          "kn": "ಶ್ರವಣಬೆಳಗೊಳ ಶಾಸನ ಸಮೂಹ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-shravanabelagola",
+        "editionKind": "item-edition-review",
+        "language": "Kannada / Sanskrit",
+        "script": "Old Kannada",
+        "date": {
+          "from": 981,
+          "to": 981,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": null,
+          "number": null,
+          "locator": "Shravanabelagola cluster review packet; split into item-level inscriptions before promotion",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Shravanabelagola inscription corpus lead; item-level separation pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-muktesvara-attiraja-review-packet",
+        "name": {
+          "en": "Muktesvara Attiraja inscription edition review packet",
+          "kn": "ಮುಕ್ತೇಶ್ವರ ಅತ್ತಿರಾಜ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-muktesvara-attiraja-construction",
+        "editionKind": "item-edition-review",
+        "language": "Kannada / Sanskrit",
+        "script": "Old Kannada",
+        "date": {
+          "from": 1101,
+          "to": 1120,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "South Indian Inscriptions",
+          "volume": "XVIII",
+          "number": "112",
+          "locator": "S.I.I. XVIII No. 112; verify line, image and relocation metadata",
+          "status": "located"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "located"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Inscription I; S.I.I. XVIII No. 112; attach reviewed transcription, translation and image set"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
       }
     ],
     "templeInventoryLeads": [
@@ -73092,6 +73218,134 @@
           "reviewer": null,
           "updatedAt": "2026-08-23"
         }
+      },
+      {
+        "id": "coin-hoysala-belur-numismatic-lead",
+        "name": {
+          "en": "Hoysala Belur numismatic catalogue lead",
+          "kn": "ಬೇಲೂರು ಹೊಯ್ಸಳ ನಾಣ್ಯ ಪಟ್ಟಿ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-hoysala",
+        "placeId": "place-belur",
+        "date": {
+          "from": 1108,
+          "to": 1220,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "unresolved",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Hoysala dynastic coinage lead associated with the Belur royal-patronage zone; exact catalogue specimen and emblem reading pending.",
+          "kn": "ಬೇಲೂರು ರಾಜಾಶ್ರಯ ವಲಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಹೊಯ್ಸಳ ವಂಶ ನಾಣ್ಯ ದಾರಿ; ನಿಖರ ಪಟ್ಟಿ ಮಾದರಿ ಮತ್ತು ಚಿಹ್ನೆ ಓದು ಬಾಕಿ."
+        },
+        "reverse": {
+          "en": "Legend, denomination, mint and findspot must be resolved from a numismatic catalogue.",
+          "kn": "ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ನಾಣ್ಯಶಾಸ್ತ್ರ ಪಟ್ಟಿಯಿಂದ ನಿರ್ಧರಿಸಬೇಕು."
+        },
+        "findspot": {
+          "placeId": "place-belur",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Belur-Halebidu royal centre and material-culture context; numismatic specimen pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-mysore-srirangapatna-tipu-lead",
+        "name": {
+          "en": "Mysore Srirangapatna Tipu-period coinage lead",
+          "kn": "ಶ್ರೀರಂಗಪಟ್ಟಣ ಮೈಸೂರು ಟಿಪ್ಪು ಕಾಲದ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-srirangapatna",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "unresolved",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Tipu-period Srirangapatna coinage is retained as a catalogue lead until specimen images, metal, denomination and mint details are attached.",
+          "kn": "ಮಾದರಿ ಚಿತ್ರಗಳು, ಲೋಹ, ಮೌಲ್ಯ ಮತ್ತು ಟಂಕಶಾಲೆ ವಿವರಗಳನ್ನು ಜೋಡಿಸುವವರೆಗೆ ಟಿಪ್ಪು ಕಾಲದ ಶ್ರೀರಂಗಪಟ್ಟಣ ನಾಣ್ಯಗಳನ್ನು ಪಟ್ಟಿ ದಾರಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+        },
+        "reverse": {
+          "en": "Legend and regnal-date interpretation require item-level numismatic review.",
+          "kn": "ಲೇಖ ಮತ್ತು ಆಳ್ವಿಕೆ-ವರ್ಷ ವ್ಯಾಖ್ಯಾನಕ್ಕೆ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "findspot": {
+          "placeId": "place-srirangapatna",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-srirangapatna",
+            "locator": "Srirangapatna political centre through Tipu Sultan period; numismatic catalogue locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
       }
     ],
     "manuscriptWitnesses": [
@@ -73347,6 +73601,110 @@
           {
             "sourceId": "src-cesck-vaddaradhane",
             "locator": "Seven palm-leaf manuscripts including a 1434 witness; complete text edited by D. L. Narasimhachar, 1949"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-kumaravyasa-bharata-sanchaya-witness-lead",
+        "name": {
+          "en": "Kumaravyasa Bharata digital witness lead",
+          "kn": "ಕುಮಾರವ್ಯಾಸ ಭಾರತ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-kumaravyasa-bharata",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Sanchaya / Kannada digital text projects",
+          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1430,
+          "to": 1430,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://sanchaya.org"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kumaravyasa and Vijayanagara-period Kannada literary context; digital witness locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-torave-ramayana-sanchaya-witness-lead",
+        "name": {
+          "en": "Torave Ramayana digital witness lead",
+          "kn": "ತೊರವೆ ರಾಮಾಯಣ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-torave-ramayana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Sanchaya / Kannada digital text projects",
+          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1500,
+          "to": 1500,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://sanchaya.org"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Torave Ramayana literary context; Sanchaya witness and edition comparison pending"
           }
         ],
         "review": {

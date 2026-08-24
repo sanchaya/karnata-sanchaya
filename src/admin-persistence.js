@@ -15,14 +15,14 @@ export function prepareDatasetSave({ data, collection, selectedId = '', draft, u
     return { error: `Stable ID “${selectedId}” cannot be changed to “${saved.id}”. Create a new record instead so references remain intact.` }
   }
 
-  const records = clone(data[collection])
+  const records = data[collection].slice()
   const index = records.findIndex(record => record.id === (selectedId || saved.id))
   if (selectedId && index < 0) return { error: `The selected record “${selectedId}” is no longer present. Reload the server revision before saving.` }
   if (!selectedId && index >= 0) return { error: `Stable ID “${saved.id}” is already used in this collection.` }
   if (index >= 0) records[index] = saved
   else records.push(saved)
 
-  return { next: { ...clone(data), [collection]: records }, saved }
+  return { next: { ...data, [collection]: records }, saved }
 }
 
 export function formatValidationIssues(issues, limit = 5) {
