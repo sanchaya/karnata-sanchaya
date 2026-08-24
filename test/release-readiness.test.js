@@ -187,6 +187,8 @@ test('the Epigraphy Explorer exposes the P2 corpus review queue', () => {
   assert.match(explorerSource, /corpusScope/, 'the corpus review queue must keep a dedicated sprint scope filter')
   assert.match(explorerSource, /script-support/, 'the corpus review queue must expose a script-support sprint')
   assert.match(explorerSource, /high-priority/, 'the corpus review queue must expose high-priority locator work')
+  assert.match(explorerSource, /const scopedQueue=allQueue\.filter/, 'P2 queue gate counts must follow the active scope')
+  assert.match(explorerSource, /<b>\{queue\.length\}<\/b>\{t\.reviewPacket\}/, 'P2 queue headline count must match the visible filtered queue')
   assert.match(explorerSource, /ArchiveTextCorpus/, 'the epigraphy page must expose Archive.org TXT corpus citations')
   assert.match(explorerSource, /atlasData\.epigraphiaArchiveTexts/, 'the Archive.org TXT corpus panel must derive from generated data')
   assert.match(explorerSource, /locatorCandidates/, 'Archive.org OCR locator hints must remain visible for reviewer triage')
