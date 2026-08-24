@@ -74539,6 +74539,473 @@
         }
       },
       {
+        "id": "rel-script-early-kannada-verse-transition-polity-1",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-used-by-polity",
+        "toId": "polity-badami-chalukya",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-early-kannada-verse-transition-polity-2",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-used-by-polity",
+        "toId": "polity-western-ganga",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-early-kannada-verse-transition-polity-3",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-used-by-polity",
+        "toId": "polity-rashtrakuta",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-early-kannada-verse-transition-inscription-1",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-sample-inscription",
+        "toId": "inscription-kappe-arabhatta",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-early-kannada-verse-transition-inscription-2",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-sample-inscription",
+        "toId": "inscription-begur",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-early-kannada-verse-transition-inscription-3",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-sample-inscription",
+        "toId": "inscription-atakur",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-early-kannada-verse-transition-predecessor-1",
+        "fromId": "script-early-kannada-verse-transition",
+        "type": "script-predecessor",
+        "toId": "script-southern-brahmi-kadamba-transition",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-medieval-kannada-temple-epigraphy-polity-1",
+        "fromId": "script-medieval-kannada-temple-epigraphy",
+        "type": "script-used-by-polity",
+        "toId": "polity-kalyani-chalukya",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-medieval-kannada-temple-epigraphy-polity-2",
+        "fromId": "script-medieval-kannada-temple-epigraphy",
+        "type": "script-used-by-polity",
+        "toId": "polity-hoysala",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-medieval-kannada-temple-epigraphy-inscription-1",
+        "fromId": "script-medieval-kannada-temple-epigraphy",
+        "type": "script-sample-inscription",
+        "toId": "inscription-lakkundi",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-medieval-kannada-temple-epigraphy-inscription-2",
+        "fromId": "script-medieval-kannada-temple-epigraphy",
+        "type": "script-sample-inscription",
+        "toId": "inscription-belur-foundation",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-medieval-kannada-temple-epigraphy-inscription-3",
+        "fromId": "script-medieval-kannada-temple-epigraphy",
+        "type": "script-sample-inscription",
+        "toId": "inscription-muktesvara-attiraja-construction",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-medieval-kannada-temple-epigraphy-predecessor-1",
+        "fromId": "script-medieval-kannada-temple-epigraphy",
+        "type": "script-predecessor",
+        "toId": "script-old-kannada-epigraphic-phase",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-kannada-nagari-mixed-phase-polity-1",
+        "fromId": "script-vijayanagara-kannada-nagari-mixed-phase",
+        "type": "script-used-by-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1646,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional and monument context; exact inscription corpus locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-kannada-nagari-mixed-phase-inscription-1",
+        "fromId": "script-vijayanagara-kannada-nagari-mixed-phase",
+        "type": "script-sample-inscription",
+        "toId": "inscription-hampi",
+        "date": {
+          "from": 1336,
+          "to": 1646,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional and monument context; exact inscription corpus locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-kannada-nagari-mixed-phase-inscription-2",
+        "fromId": "script-vijayanagara-kannada-nagari-mixed-phase",
+        "type": "script-sample-inscription",
+        "toId": "inscription-hampi-krishna-temple",
+        "date": {
+          "from": 1336,
+          "to": 1646,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional and monument context; exact inscription corpus locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-kannada-nagari-mixed-phase-predecessor-1",
+        "fromId": "script-vijayanagara-kannada-nagari-mixed-phase",
+        "type": "script-predecessor",
+        "toId": "script-medieval-kannada-temple-epigraphy",
+        "date": {
+          "from": 1336,
+          "to": 1646,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional and monument context; exact inscription corpus locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
         "id": "rel-script-modern-kannada-print-transition-polity-1",
         "fromId": "script-modern-kannada-print-transition",
         "type": "script-used-by-polity",
@@ -74565,7 +75032,7 @@
         "id": "rel-script-modern-kannada-print-transition-predecessor-1",
         "fromId": "script-modern-kannada-print-transition",
         "type": "script-predecessor",
-        "toId": "script-old-kannada-epigraphic-phase",
+        "toId": "script-vijayanagara-kannada-nagari-mixed-phase",
         "date": {
           "from": 1800,
           "to": 1973,
@@ -79328,6 +79795,140 @@
         }
       },
       {
+        "id": "script-early-kannada-verse-transition",
+        "name": {
+          "en": "Early Kannada verse and mixed inscriptional phase",
+          "kn": "ಆರಂಭಿಕ ಕನ್ನಡ ಪದ್ಯ ಮತ್ತು ಮಿಶ್ರ ಶಾಸನ ಹಂತ"
+        },
+        "scriptFamily": "Early Kannada / Old Kannada",
+        "date": {
+          "from": 650,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-southern-brahmi-kadamba-transition"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-kappe-arabhatta",
+          "inscription-begur",
+          "inscription-atakur"
+        ],
+        "relatedPolityIds": [
+          "polity-badami-chalukya",
+          "polity-western-ganga",
+          "polity-rashtrakuta"
+        ],
+        "description": {
+          "en": "A review packet for comparing early Kannada verse, mixed Sanskrit-Kannada records and regional epigraphic forms before the later medieval temple corpus is promoted.",
+          "kn": "ನಂತರದ ಮಧ್ಯಯುಗೀನ ದೇವಾಲಯ ಶಾಸನ ಸಂಗ್ರಹವನ್ನು ಉತ್ತೇಜಿಸುವ ಮೊದಲು ಆರಂಭಿಕ ಕನ್ನಡ ಪದ್ಯ, ಸಂಸ್ಕೃತ-ಕನ್ನಡ ಮಿಶ್ರ ದಾಖಲೆಗಳು ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಶಾಸನ ರೂಪಗಳನ್ನು ಹೋಲಿಸಲು ಪರಿಶೀಲನಾ ಕಡತ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "Kappe Arabhatta witness and related early Kannada verse records; exact volume and line locators pending"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Begur and Atakur records; exact page and inscription-number locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "script-medieval-kannada-temple-epigraphy",
+        "name": {
+          "en": "Medieval Kannada temple epigraphy phase",
+          "kn": "ಮಧ್ಯಯುಗೀನ ಕನ್ನಡ ದೇವಾಲಯ ಶಾಸನ ಹಂತ"
+        },
+        "scriptFamily": "Medieval Kannada",
+        "date": {
+          "from": 950,
+          "to": 1350,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-old-kannada-epigraphic-phase"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-lakkundi",
+          "inscription-belur-foundation",
+          "inscription-muktesvara-attiraja-construction"
+        ],
+        "relatedPolityIds": [
+          "polity-kalyani-chalukya",
+          "polity-hoysala"
+        ],
+        "description": {
+          "en": "A corpus-building phase for temple, donor and construction inscriptions from the later Chalukya and Hoysala worlds, kept as evidence leads until editions, plates and translations are attached.",
+          "kn": "ನಂತರದ ಚಾಲುಕ್ಯ ಮತ್ತು ಹೊಯ್ಸಳ ಲೋಕಗಳ ದೇವಾಲಯ, ದಾತೃ ಮತ್ತು ನಿರ್ಮಾಣ ಶಾಸನಗಳ ಸಂಗ್ರಹ-ನಿರ್ಮಾಣ ಹಂತ; ಆವೃತ್ತಿ, ಫಲಕ ಮತ್ತು ಅನುವಾದಗಳನ್ನು ಜೋಡಿಸುವವರೆಗೆ ಸಾಕ್ಷ್ಯ ಸುಳಿವುಗಳಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi and Hoysala-period temple inscription witnesses to resolve"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple and inscriptional context; item-level edition links pending"
+          },
+          {
+            "sourceId": "src-ignca-muktesvara-epigraphy",
+            "locator": "Muktesvara inscription packet and translation review queue"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "script-vijayanagara-kannada-nagari-mixed-phase",
+        "name": {
+          "en": "Vijayanagara Kannada-Nagari mixed epigraphic phase",
+          "kn": "ವಿಜಯನಗರ ಕನ್ನಡ-ನಾಗರಿ ಮಿಶ್ರ ಶಾಸನ ಹಂತ"
+        },
+        "scriptFamily": "Kannada / Nagari",
+        "date": {
+          "from": 1336,
+          "to": 1646,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-medieval-kannada-temple-epigraphy"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-hampi",
+          "inscription-hampi-krishna-temple"
+        ],
+        "relatedPolityIds": [
+          "polity-vijayanagara"
+        ],
+        "description": {
+          "en": "A Vijayanagara-period research lane for comparing Kannada, Nagari and multilingual inscriptional witnesses around Hampi without collapsing every record into one script label.",
+          "kn": "ಹಂಪಿ ಸುತ್ತಲಿನ ಕನ್ನಡ, ನಾಗರಿ ಮತ್ತು ಬಹುಭಾಷಾ ಶಾಸನ ಸಾಕ್ಷ್ಯಗಳನ್ನು ಒಂದೇ ಲಿಪಿ ಲೇಬಲ್‌ಗೆ ಕುಗ್ಗಿಸದೆ ಹೋಲಿಸಲು ವಿಜಯನಗರ ಕಾಲದ ಸಂಶೋಧನಾ ಹಾದಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional and monument context; exact inscription corpus locators pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
         "id": "script-modern-kannada-print-transition",
         "name": {
           "en": "Modern Kannada print and periodical phase",
@@ -79341,7 +79942,7 @@
           "precision": "range"
         },
         "predecessorIds": [
-          "script-old-kannada-epigraphic-phase"
+          "script-vijayanagara-kannada-nagari-mixed-phase"
         ],
         "sampleInscriptionIds": [],
         "relatedPolityIds": [

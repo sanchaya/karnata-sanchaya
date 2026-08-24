@@ -241,7 +241,7 @@ test('reign records produce review-gated succession network edges', () => {
 test('missing-feature foundations are linked, bilingual and review-gated', () => {
   assert.ok(atlasData.feudatoryRelations.length >= 5)
   assert.ok(atlasData.administrativeDivisions.length >= 3)
-  assert.ok(atlasData.scriptEvolution.length >= 3)
+  assert.ok(atlasData.scriptEvolution.length >= 6)
   assert.ok(atlasData.openDatasetCatalogue.length >= 1)
   for (const relation of atlasData.feudatoryRelations) {
     assert.ok(bilingual(relation.name), `${relation.id} needs a bilingual name`)
@@ -262,6 +262,11 @@ test('missing-feature foundations are linked, bilingual and review-gated', () =>
     for (const inscriptionId of script.sampleInscriptionIds) assert.ok(inscriptionIds.has(inscriptionId), `${script.id} has an unknown sample inscription`)
     assert.equal(script.review.status, 'needs-review', `${script.id} should remain review-gated`)
   }
+  for (const id of ['script-early-kannada-verse-transition', 'script-medieval-kannada-temple-epigraphy', 'script-vijayanagara-kannada-nagari-mixed-phase']) {
+    assert.ok(atlasData.scriptEvolution.some(item => item.id === id), `${id} must remain in the script evolution queue`)
+    assert.ok(atlasData.relationships.some(relation => relation.fromId === id), `${id} must remain linked into the research graph`)
+  }
+  assert.deepEqual(atlasData.scriptEvolution.find(item => item.id === 'script-modern-kannada-print-transition')?.predecessorIds, ['script-vijayanagara-kannada-nagari-mixed-phase'])
   assert.ok(atlasData.relationships.some(item => item.type === 'feudatory-overlord'))
   assert.ok(atlasData.relationships.some(item => item.type === 'administrative-division-of'))
   assert.ok(atlasData.relationships.some(item => item.type === 'script-sample-inscription'))
