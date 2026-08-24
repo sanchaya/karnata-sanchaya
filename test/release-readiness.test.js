@@ -9,6 +9,7 @@ const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 
 const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
+const coinSource = await readFile(new URL('../src/CoinExplorer.jsx', import.meta.url), 'utf8')
 const districtHistorySource = await readFile(new URL('../src/DistrictHistoryExplorer.jsx', import.meta.url), 'utf8')
 const peopleSource = await readFile(new URL('../src/PeopleExplorer.jsx', import.meta.url), 'utf8')
 const freedomSource = await readFile(new URL('../src/FreedomMovementExplorer.jsx', import.meta.url), 'utf8')
@@ -19,6 +20,7 @@ const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.u
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
 const evidenceStylesSource = await readFile(new URL('../src/evidence-workflow.css', import.meta.url), 'utf8')
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
+const coinStylesSource = await readFile(new URL('../src/coins.css', import.meta.url), 'utf8')
 const explorerStylesSource = await readFile(new URL('../src/explorer.css', import.meta.url), 'utf8')
 const peopleStylesSource = await readFile(new URL('../src/people.css', import.meta.url), 'utf8')
 const freedomStylesSource = await readFile(new URL('../src/freedom-movement.css', import.meta.url), 'utf8')
@@ -27,7 +29,7 @@ const packageSource = await readFile(new URL('../package.json', import.meta.url)
 const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']
+  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'evidence', 'research', 'community', 'profile', 'about']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
@@ -49,6 +51,18 @@ test('public navigation reports the depth of the published research dataset', ()
   assert.match(appSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
+})
+
+test('coin explorer is public, searchable and evidence-gated', () => {
+  assert.match(appSource, /const CoinExplorer=lazy\(\(\)=>import\('\.\/CoinExplorer'\)\)/, 'the coin explorer must be lazy-loaded')
+  assert.match(appSource, /'coins'/, 'coins must be a public route')
+  assert.match(appSource, /kind:'coin'/, 'coin records must participate in global search')
+  assert.match(appSource, /view==='coins'/, 'the coin route must render a public page')
+  assert.match(coinSource, /atlasData\.coinRecords\.map/, 'the page must derive records from the mature coin collection')
+  assert.match(coinSource, /const gateFields=\['catalogue','image','metal','weight','findspot'\]/, 'coin evidence gates must remain explicit')
+  assert.match(coinSource, /MapContainer/, 'coin findspots must be explorable on a map')
+  assert.match(coinSource, /href="#evidence"/, 'coin packets must link back to the evidence workflow')
+  assert.match(coinStylesSource, /\.coin-workspace/, 'coin explorer needs a dedicated map/list/detail layout')
 })
 
 test('public open dataset packets are generated during static builds', () => {
@@ -337,7 +351,10 @@ test('relations explorer exposes genealogy and feudatory network edges', () => {
   assert.match(relationsSource, /function GenealogyNetwork/, 'relations must include a network UI component')
   assert.match(relationsSource, /evidenceLevel==='derived'/, 'derived genealogy edges must be visibly distinguished from source-backed edges')
   assert.match(relationsSource, /<GenealogyNetwork locale=\{locale\} t=\{t\}\/>/, 'the network panel must render on the relations page')
+  assert.match(relationsSource, /relations-network-graph/, 'the network panel must include a graph visualization')
+  assert.match(relationsSource, /nodePositions/, 'network nodes must be positioned visually instead of only listed')
   assert.match(relationsStylesSource, /\.relations-network-panel/, 'the network panel needs dedicated layout styles')
+  assert.match(relationsStylesSource, /\.relations-network-graph/, 'the network graph needs dedicated visual styles')
 })
 
 test('relations layout keeps the map and timeline usable on narrow screens', () => {
