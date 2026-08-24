@@ -57,6 +57,17 @@ test('research records and assignments have no browser persistence path',async()
   assert.match(admin,/Save MariaDB revision/)
 })
 
+test('evidence assignments retain reviewer metadata and status history in MariaDB',async()=>{
+  const [server,migration]=await Promise.all([source('server/app.js'),source('server/migrations/008_evidence_review_maturity.sql')])
+  assert.match(migration,/ADD COLUMN reviewer VARCHAR\(255\)/)
+  assert.match(migration,/CREATE TABLE IF NOT EXISTS evidence_assignment_history/)
+  assert.match(migration,/FOREIGN KEY \(task_id\) REFERENCES evidence_assignments\(task_id\)/)
+  assert.match(server,/SELECT task_id,status,assignee,reviewer,due_date,review_note/)
+  assert.match(server,/INSERT INTO evidence_assignment_history/)
+  assert.match(server,/A named independent reviewer is required/)
+  assert.match(server,/The assignee and independent reviewer must be different/)
+})
+
 test('live install and update scripts synchronize the MariaDB dataset',async()=>{
   const [install,update]=await Promise.all([source('scripts/install-linux-nginx.sh'),source('scripts/update-live.sh')])
   assert.match(install,/run db:sync-dataset/)

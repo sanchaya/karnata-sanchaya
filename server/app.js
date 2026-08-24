@@ -114,17 +114,23 @@ app.get('/api/administration/release-readiness',requireUser,requireApproved,requ
 })
 
 app.get('/api/evidence/assignments',requireUser,requireApproved,async(req,res)=>{
-  const rows=await pool.query('SELECT task_id,status,assignee,due_date,updated_by,updated_at FROM evidence_assignments ORDER BY updated_at DESC')
-  res.json({assignments:rows.map(row=>({taskId:row.task_id,status:row.status,assignee:row.assignee||'',due:row.due_date?String(row.due_date).slice(0,10):'',updatedBy:row.updated_by,updatedAt:row.updated_at}))})
+  const [rows,historyRows]=await Promise.all([
+    pool.query('SELECT task_id,status,assignee,reviewer,due_date,review_note,updated_by,updated_at FROM evidence_assignments ORDER BY updated_at DESC'),
+    pool.query('SELECT task_id,status,assignee,reviewer,due_date,review_note,updated_by,created_at FROM evidence_assignment_history ORDER BY created_at DESC LIMIT 500')
+  ])
+  const historyByTask=historyRows.reduce((groups,row)=>{const list=groups.get(row.task_id)||[];list.push({status:row.status,assignee:row.assignee||'',reviewer:row.reviewer||'',due:row.due_date?String(row.due_date).slice(0,10):'',reviewNote:row.review_note||'',updatedBy:row.updated_by,updatedAt:row.created_at});groups.set(row.task_id,list);return groups},new Map())
+  res.json({assignments:rows.map(row=>({taskId:row.task_id,status:row.status,assignee:row.assignee||'',reviewer:row.reviewer||'',due:row.due_date?String(row.due_date).slice(0,10):'',reviewNote:row.review_note||'',history:historyByTask.get(row.task_id)||[],updatedBy:row.updated_by,updatedAt:row.updated_at}))})
 })
 
 app.put('/api/evidence/assignments/:taskId',requireUser,requireApproved,async(req,res)=>{
-  const taskId=clean(req.params.taskId,240);const status=req.body?.status;const assignee=clean(req.body?.assignee,255)||null;const due=clean(req.body?.due,10)||null
+  const taskId=clean(req.params.taskId,240);const status=req.body?.status;const assignee=clean(req.body?.assignee,255)||null;const reviewer=clean(req.body?.reviewer,255)||null;const due=clean(req.body?.due,10)||null;const reviewNote=clean(req.body?.reviewNote,10000)||null
   if(!taskId||!/^[^/]+$/.test(taskId))return res.status(400).json({error:'A valid evidence task ID is required.'})
   if(!['todo','in-progress','awaiting-review','blocked','complete'].includes(status))return res.status(400).json({error:'Evidence task status is invalid.'})
   if(due&&!/^\d{4}-\d{2}-\d{2}$/.test(due))return res.status(400).json({error:'Due date must use YYYY-MM-DD.'})
-  await transaction(async db=>{await db.query(`INSERT INTO evidence_assignments (task_id,status,assignee,due_date,updated_by) VALUES (?,?,?,?,?) ON DUPLICATE KEY UPDATE status=VALUES(status),assignee=VALUES(assignee),due_date=VALUES(due_date),updated_by=VALUES(updated_by),updated_at=CURRENT_TIMESTAMP(3)`,[taskId,status,assignee,due,req.user.id]);await audit(db,req.user.id,'evidence-assignment.updated','evidence-task',taskId,{status,assignee,due})})
-  res.json({ok:true,taskId,status,assignee:assignee||'',due:due||''})
+  if(status==='complete'&&!reviewer)return res.status(400).json({error:'A named independent reviewer is required before a task can be marked complete.'})
+  if(status==='complete'&&assignee&&reviewer&&assignee.toLowerCase()===reviewer.toLowerCase())return res.status(400).json({error:'The assignee and independent reviewer must be different.'})
+  await transaction(async db=>{await db.query(`INSERT INTO evidence_assignments (task_id,status,assignee,reviewer,due_date,review_note,updated_by) VALUES (?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE status=VALUES(status),assignee=VALUES(assignee),reviewer=VALUES(reviewer),due_date=VALUES(due_date),review_note=VALUES(review_note),updated_by=VALUES(updated_by),updated_at=CURRENT_TIMESTAMP(3)`,[taskId,status,assignee,reviewer,due,reviewNote,req.user.id]);await db.query(`INSERT INTO evidence_assignment_history (id,task_id,status,assignee,reviewer,due_date,review_note,updated_by) VALUES (?,?,?,?,?,?,?,?)`,[randomUUID(),taskId,status,assignee,reviewer,due,reviewNote,req.user.id]);await audit(db,req.user.id,'evidence-assignment.updated','evidence-task',taskId,{status,assignee,reviewer,due,hasReviewNote:Boolean(reviewNote)})})
+  res.json({ok:true,taskId,status,assignee:assignee||'',reviewer:reviewer||'',due:due||'',reviewNote:reviewNote||''})
 })
 
 const upload=multer({storage:multer.memoryStorage(),limits:{fileSize:5*1024*1024,files:1,fields:5,parts:6},fileFilter:(req,file,callback)=>callback(null,['image/jpeg','image/png','application/pdf'].includes(file.mimetype))})
