@@ -55,6 +55,7 @@ test('public open dataset packets are generated during static builds', () => {
   assert.match(packageSource, /generate-open-datasets\.mjs/, 'static builds must emit the public open dataset packets')
   assert.match(openDatasetExportSource, /atlasData\.openDatasetCatalogue/, 'the exporter must derive packets from the public catalogue')
   assert.match(openDatasetExportSource, /public\/data\/open/, 'open dataset packets must be written to the public static data path')
+  assert.match(openDatasetExportSource, /atlasData\.meta\.exportedAt\|\|null/, 'static packets must not churn timestamps on every build')
   for (const field of ['reviewWorkflow','verification','promotionReview','privateNotes','moderation']) assert.match(openDatasetExportSource,new RegExp(field),`${field} must be stripped from public packets`)
 })
 
@@ -183,6 +184,16 @@ test('the Evidence Workflow exposes P2 material evidence task streams', () => {
   assert.match(evidenceSource, /className="evidence-domain-overview"/, 'domain readiness must be visible before the review board')
   assert.match(evidenceStylesSource, /\.evidence-domain-overview/, 'domain readiness needs dedicated layout styles')
   assert.match(evidenceStylesSource, /\.evidence-domain-card\.coinage/, 'material streams need visible readiness accents')
+})
+
+test('P2/P3 evidence maturity exposes publication, coin and boundary readiness', () => {
+  assert.match(evidenceSource, /const maturityStreams=\[/, 'P2/P3 maturity must be computed from evidence streams')
+  assert.match(evidenceSource, /publicationReadyPackets/, 'publication-ready packets must be counted separately from discovery leads')
+  assert.match(evidenceSource, /className="evidence-maturity-panel"/, 'the workflow must expose a maturity panel before the board')
+  assert.match(evidenceSource, /className="coin-evidence-panel"/, 'coin evidence maturity must be visible')
+  assert.match(evidenceSource, /className="boundary-evidence-panel"/, 'boundary evidence maturity must be visible')
+  assert.match(evidenceStylesSource, /\.coin-evidence-panel/, 'coin maturity needs dedicated layout styles')
+  assert.match(evidenceStylesSource, /\.boundary-evidence-panel/, 'boundary maturity needs dedicated layout styles')
 })
 
 test('freedom fighters remain discoverable by cited district associations', () => {
@@ -318,6 +329,15 @@ test('relations map separates polity identity, relationship type and review stat
   assert.match(relationsSource,/color:routeColorFor\(item\)[\s\S]*dashArray:relationDashes\[item\.category\]/, 'pending review must not replace the route identity colour')
   assert.match(relationsSource,/relations-polity-legend/, 'the map legend must explain polity colours')
   assert.match(relationsSource,/relations-type-legend/, 'the map legend must explain relationship styles')
+})
+
+test('relations explorer exposes genealogy and feudatory network edges', () => {
+  assert.match(relationsSource, /atlasData\.genealogicalRelations\.map/, 'genealogy assertions must feed the network panel')
+  assert.match(relationsSource, /atlasData\.feudatoryRelations\.map/, 'samanta and feudatory links must feed the network panel')
+  assert.match(relationsSource, /function GenealogyNetwork/, 'relations must include a network UI component')
+  assert.match(relationsSource, /evidenceLevel==='derived'/, 'derived genealogy edges must be visibly distinguished from source-backed edges')
+  assert.match(relationsSource, /<GenealogyNetwork locale=\{locale\} t=\{t\}\/>/, 'the network panel must render on the relations page')
+  assert.match(relationsStylesSource, /\.relations-network-panel/, 'the network panel needs dedicated layout styles')
 })
 
 test('relations layout keeps the map and timeline usable on narrow screens', () => {
