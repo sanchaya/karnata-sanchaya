@@ -1,6 +1,6 @@
 # Karnataka Historical Atlas — milestone status and roadmap
 
-Updated: 2026-08-08
+Updated: 2026-08-24
 
 This is the durable project summary for the decisions and implementation work accumulated across the atlas build. It separates working software from research that still needs human evidence. A record being visible on a map or timeline does not mean that it is authority-confirmed.
 
@@ -12,6 +12,8 @@ The portal is Kannada-first with English support and has two intentionally separ
 - **Live research service:** authenticated accounts, MariaDB dataset revisions, moderation, reviewer workflow and controlled static-release handoff.
 
 The district-history explorer milestone is included in the current committed snapshot. The current release candidate also includes bounded map focus, permanent admin-save safeguards and cross-page contract tests.
+
+The current committed snapshot also includes the P2/P3 evidence maturity slice: public coin and network exploration, reviewer notes and status history, a reviewer operations panel, a ready-for-promotion queue, regenerated open dataset packets and faster admin save checks for the larger corpus.
 
 ## Milestone assessment
 
@@ -33,6 +35,7 @@ The district-history explorer milestone is included in the current committed sna
 | Atlas v0.25 — People, Culture and Public Life | **Discovery corpus and review workflow delivered; curation open** | 905 code-split Wikimedia candidates with stable IDs, bilingual labels where available, role/birthplace/date discovery fields, explicit evidence gates, searchable People Explorer, lazy directory, candidate map focus, prefilled community contribution handoff and permanent MariaDB baseline merge | Verify Kannada/Karnataka relevance and authority biographies; expand ministers through position-held sources and theatre through academy/archive records; promote balanced district-, gender- and era-based cohorts into curated people |
 | Atlas v0.26 — Patrika Sanchaya periodicals layer | **Catalogue imported; item-level archival review open** | 3,715 Patrika Sanchaya newspaper/magazine rows, row-level source locators, 76 grouped publication-place map anchors, Admin `periodicals` collection, refresh script and Patrike Sanchaya/ServantsOfKnowledge attribution | Match titles and runs to scans, library/press catalogues and archive holdings; replace publication-place anchors with exact offices or digitised-item locations where evidence exists |
 | Atlas v0.27 — statewide freedom-fighter district research | **First measured pass delivered; research open** | Reproducible 31-district audit, 255 candidates, 180 district-linked people, 28 represented districts, a public “District needed” queue for 75 unassigned names, Doddaballapur district correction, Ministry of Culture records for Raichur, Yadgir and Mandya, and a first ServantsOfKnowledge/JaiGyan OCR discovery pass | Fill Chamarajanagar, Chikkamagaluru and Kalaburagi; resolve 75 people without district links; review Haveri, Mandya and Kundaranadu appendix names; strengthen thin districts; independently review every person–district claim |
+| Atlas v0.28 — P1/P2 model foundations and corpus maturity | **Schema and seed packets delivered; review open** | Mature collections for genealogy assertions, coin records, manuscript witnesses, boundary evidence, inscription editions and script evolution; public coin explorer; genealogy/feudatory network panel; Hoysala/Mysore extension packets; open dataset packets; reviewer dashboard and ready-for-promotion queue | Replace leads with catalogue specimens, source locators, image/licence evidence, exact generations, administrative geography and independent reviews before promotion |
 | Freedom Movement Explorer / `#freedom` | **Public explorer delivered; evidence review open** | All 626 freedom-fighter research records on a bilingual map and chronological timeline with district/action/review filters, shareable selections and contribution handoff; source-provenance tiers with an **authority-cited** badge (296 of 626 people carry at least one government/epigraphic/UNESCO citation) surfaced across the Freedom, People and Resources pages | Replace provisional district/city-centre markers with authority-confirmed event locations; verify printed pages, identities, event sequences and Kannada names; expand beyond martyr records into protests, organisations, newspapers and constitutional milestones |
 | District Deep History / `#district-history` | **All districts seeded; research ongoing** | 31 district scope slots, 33 needs-review leads covering every district, map/filter/detail view, admin collection and validation | Replace intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
@@ -40,15 +43,16 @@ The district-history explorer milestone is included in the current committed sna
 
 The bundled snapshot currently contains approximately:
 
-- 9 Karnataka polities, 46 external polities, 62 events, 106 curated people, 905 Wikimedia people-review candidates and 28 bilateral political relations;
-- 29 inscriptions, 25 literary works, 55 cultural records and 24 reign/period records;
-- 202 sources, 927 generated relationships and 13 collaboration records;
+- 9 Karnataka polities, 52 external polities, 96 events, 461 curated people, a 905-record lazy Wikimedia people-review candidate corpus and 28 bilateral political relations;
+- 29 inscriptions, 25 literary works, 58 cultural records and 24 reign/period records;
+- 309 sources, 1,494 generated relationships, 98 places and 13 collaboration records;
 - 3,715 Patrika Sanchaya periodicals and 76 grouped publication-place anchors, all visibly `needs-review`;
+- 7 genealogy assertions, 6 coin records, 7 manuscript witnesses, 7 boundary-evidence packets, 19 inscription-edition packets and 3 script-evolution records, all review-gated;
 - 32 heritage audit records and 32 inscription-audit records, with review gates still open;
 - 1,531 heritage inventory leads with explicit protection/register levels. Twenty-five newly covered Mysuru buildings remain unverified discovery leads rather than claimed protected monuments;
 - 64 district deep-history records: 31 district scopes plus 33 research leads. The 22 districts that previously had no candidate now each have one explicit intake packet; all remain `needs-review` until site-level authority evidence is collected.
 
-The literature collection contains 25 linked works, but the 24-packet review pass is not complete. Five strong works now have a named edition or manuscript witness; their remaining attribution, dating, bilingual interpretation and independent-review gates stay open. The relationship graph has 927 records, including clearly labeled district/heritage context links. Xuanzang, Barus and Polonnaruwa strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
+The literature collection contains 25 linked works, but the 24-packet review pass is not complete. Seven works now have manuscript or digital-edition witness leads; their remaining attribution, dating, bilingual interpretation and independent-review gates stay open. The relationship graph has 1,494 records, including clearly labeled district/heritage context links. Xuanzang, Barus and Polonnaruwa strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
 
 The freedom-fighter corpus now has a reproducible statewide audit. It contains 255 candidates; 180 (70.6%) have at least one explicit current-district association, and 28 of 31 districts are represented. Chamarajanagar, Chikkamagaluru and Kalaburagi remain explicit empty research queues rather than being populated with unsupported names. The first Internet Archive pass identified six high-value books and theses and attached printed-page Mandya evidence to H. K. Veerannagowda; see [`docs/internet-archive-freedom-fighter-research.md`](internet-archive-freedom-fighter-research.md). Rerun `npm run audit:freedom-fighters` after each research/import pass.
 
@@ -73,11 +77,12 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 ### P2 — expand the research graph
 
-1. Turn the 31 district-history scope slots into source-backed candidate records, starting with prehistoric and early-settlement evidence, foundation stones and locality-name histories.
-2. Complete the 24 literary review packets and add authors, poets, manuscripts, scholars and inscriptions as linked records.
-3. Continue the Atlas v0.21 political-relations pass: resolve the first bilateral records, then fill the north/east/south/deccan and colonial gaps with primary or authority-level citations.
-4. Add exact campaign routes, battle locations, treaty documents, commanders and outcomes; keep inferred or contested records visibly `needs-review`.
-5. Connect rulers, people, wars, capitals, literature, inscriptions, monuments and external relations into one dated timeline without collapsing contact into territorial rule.
+1. Complete the P2/P3 maturity queues in [`docs/p2-p3-corpus-maturity.md`](p2-p3-corpus-maturity.md): coin catalogue specimens, genealogy proof packets, boundary evidence, inscription editions and manuscript/Sanchaya witnesses.
+2. Turn the 31 district-history scope slots into source-backed candidate records, starting with prehistoric and early-settlement evidence, foundation stones and locality-name histories.
+3. Complete the 24 literary review packets and add authors, poets, manuscripts, scholars and inscriptions as linked records.
+4. Continue the Atlas v0.21 political-relations pass: resolve the first bilateral records, then fill the north/east/south/deccan and colonial gaps with primary or authority-level citations.
+5. Add exact campaign routes, battle locations, treaty documents, commanders and outcomes; keep inferred or contested records visibly `needs-review`.
+6. Connect rulers, people, wars, capitals, literature, inscriptions, monuments and external relations into one dated timeline without collapsing contact into territorial rule.
 
 ### P3 — operate the research community safely
 
@@ -111,6 +116,7 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 ## Source of truth
 
 - Data model and evidence contract: [`docs/data-model.md`](data-model.md)
+- P2/P3 corpus maturity workflow: [`docs/p2-p3-corpus-maturity.md`](p2-p3-corpus-maturity.md)
 - P1 human evidence queue: [`docs/p1-evidence-queue.md`](p1-evidence-queue.md)
 - v0.23 promotion sprint: [`docs/v023-evidence-promotion.md`](v023-evidence-promotion.md)
 - Eight-district heritage batch: [`docs/p1-district-batch.md`](p1-district-batch.md)

@@ -1,6 +1,6 @@
 # Community operations and release handoff
 
-Updated: 2026-07-28
+Updated: 2026-08-24
 
 This is the operating checklist for the live MariaDB portal. It keeps community work permanent and reviewable while keeping the GitHub Pages site a deliberate, read-only release.
 
@@ -11,6 +11,7 @@ This is the operating checklist for the live MariaDB portal. It keeps community 
 3. A reviewer opens the queue, chooses a proposal from another contributor, checks the source locator and evidence, and records a public decision comment. Kannada translations additionally require all six scholarly checks.
 4. Verification officers separately review institution ID requests. Documents remain encrypted and private; the verified badge is the only public result.
 5. Approved proposals earn ledger points and remain linked to the review. The record is not public until it is included in an administrator-approved dataset revision.
+6. Evidence-board assignments are coordinated in `#evidence`. Researchers may set assignee, independent reviewer, due date, status and review note. The saved status history is operational metadata; it does not change the historical record's review status by itself.
 
 ## Administrator release gate
 
@@ -20,6 +21,7 @@ Before a static release, open the admin dashboard and check the **Live community
 - submitted contributions are either reviewed or intentionally held;
 - at least one qualified reviewer is appointed;
 - the latest MariaDB revision has passed validation;
+- evidence assignments marked complete have a reviewer different from the assignee when the task requires independent review;
 - the last static publication is known, or the release is explicitly the first publication.
 
 Then run `npm run export:approved`, inspect `public/data/approved-community.json`, run `npm run check`, and publish the static build. Never copy the live database, sessions, private review notes or encrypted uploads to GitHub Pages.
