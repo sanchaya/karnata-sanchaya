@@ -138,7 +138,12 @@ export const atlasData = {
     ['harihara-i','Harihara I','ಹರಿಹರ I','polity-vijayanagara'],['bukka-i','Bukka Raya I','ಬುಕ್ಕರಾಯ I','polity-vijayanagara'],['devaraya-ii','Devaraya II','ದೇವರಾಯ II','polity-vijayanagara'],['krishnadevaraya','Krishnadevaraya','ಕೃಷ್ಣದೇವರಾಯ','polity-vijayanagara'],['rama-raya','Aliya Rama Raya','ಅಳಿಯ ರಾಮರಾಯ','polity-vijayanagara'],
     ['yaduraya','Yaduraya','ಯದುರಾಯ','polity-mysore'],['chikka-devaraja','Chikka Devaraja Wadiyar','ಚಿಕ್ಕ ದೇವರಾಜ ಒಡೆಯರ್','polity-mysore'],['hyder-ali','Hyder Ali','ಹೈದರ್ ಅಲಿ','polity-mysore'],['tipu-sultan','Tipu Sultan','ಟಿಪ್ಪು ಸುಲ್ತಾನ್','polity-mysore'],['krishnaraja-iii','Krishnaraja Wadiyar III','ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ III','polity-mysore'],['jayachamarajendra','Jayachamarajendra Wadiyar','ಜಯಚಾಮರಾಜೇಂದ್ರ ಒಡೆಯರ್','polity-mysore']
   ].map(([id,en,kn,polityId,role='ruler'])=>({ id:`person-${id}`, name:name(en,kn), roles:[role], ...(id==='lokamahadevi'?{gender:'woman'}:{}), date:{ from:null,to:null,era:'CE',precision:'unknown' }, citations:[], review:review('needs-review'), polityId })),
-  peopleCandidateMeta: null,
+  peopleCandidateMeta: {
+    schemaVersion: 'atlas-people-candidates-0.25',
+    title: 'Wikimedia people discovery candidates born in present-day Karnataka',
+    candidateCount: 905,
+    reviewStatus: 'discovery-only',
+  },
   peopleCandidates: [],
   martyrCandidateMeta: dictionaryMartyrCandidateMeta,
   martyrCandidates: dictionaryMartyrCandidates,

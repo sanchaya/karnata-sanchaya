@@ -17,6 +17,7 @@ const bilingual = value => Boolean(value?.en?.trim() && value?.kn?.trim())
 test('v0.25 Wikimedia people corpus is complete, stable and review-gated', () => {
   const candidates=peopleCandidateCorpus.records
   assert.equal(peopleCandidateCorpus.meta.candidateCount,905)
+  assert.equal(atlasData.peopleCandidateMeta?.candidateCount, peopleCandidateCorpus.meta.candidateCount)
   assert.equal(candidates.length,905)
   assert.equal(new Set(candidates.map(item=>item.id)).size,905)
   assert.equal(new Set(candidates.map(item=>item.externalIds.wikidata)).size,905)
@@ -267,6 +268,13 @@ test('missing-feature foundations are linked, bilingual and review-gated', () =>
   const summary=atlasData.openDatasetCatalogue.find(item=>item.id==='dataset-public-atlas-summary')
   assert.ok(summary.includedCollections.includes('feudatoryRelations'))
   assert.ok(summary.path.endsWith('.json'))
+  for (const id of ['dataset-p1-model-foundations','dataset-p2-corpus-expansion','dataset-p3-publication-review-workflow']) {
+    const packet=atlasData.openDatasetCatalogue.find(item=>item.id===id)
+    assert.ok(packet, `${id} must be available as a focused public export packet`)
+    assert.equal(packet.access, 'static-json')
+    assert.ok(packet.includedCollections.length >= 4, `${id} should include useful review collections`)
+    assert.ok(packet.excludedFields.some(field=>field.includes('private')||field.includes('unapproved')), `${id} must declare privacy exclusions`)
+  }
 })
 
 test('Karnata-origin Nepal reach is mapped without claiming Karnataka territorial rule', () => {
