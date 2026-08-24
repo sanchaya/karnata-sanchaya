@@ -27,6 +27,7 @@ A Kannada-first React/Vite atlas for exploring Karnataka's history through a tim
 - Atlas-level and source-level citations with plain-text, BibTeX, RIS and JSON exports
 - Evidence Workflow reviewer dashboard with independent reviewer fields, status history and a ready-for-promotion queue for the current P1/P2 packets
 - Dedicated coin, genealogy, boundary-evidence, manuscript witness and inscription-edition seed collections, all review-gated and linked into the public research graph
+- Public script evolution explorer for Kannada script phases, sample inscriptions, predecessor links and evidence-workflow handoff
 
 > The included boundaries and records are prototype data, not scholarly editions. Replace them with reviewed GeoJSON and cited research data before publication.
 
@@ -149,7 +150,7 @@ Atlas v0.26 adds the Patrika Sanchaya periodicals layer: 3,715 Kannada newspaper
 
 Kingdom periods are shown as bounded reign cards on the timeline; when more than one polity is active at the selected year, the sidebar identifies the overlap. `artifacts` is the review-marked collection for dynastic symbols, coins, inscription stones, sculpture, regalia and architectural fragments. These objects appear in the dedicated timeline category and map layer with site-context coordinates until an object-level catalogue, repository and photograph are confirmed in Admin.
 
-Atlas v0.28.2 expands the P2/P3 maturity layer with Hoysala and Mysore genealogy bridges, Belur and Srirangapatna coinage leads, Kumaravyasa Bharata and Torave Ramayana Sanchaya witness leads, Hoysala and Mysore boundary-evidence packets, and Shravanabelagola/Muktesvara inscription-edition packets. These are discovery and review packets, not publication-ready claims.
+Atlas v0.28.2 expands the P2/P3 maturity layer with Hoysala and Mysore genealogy bridges, Belur and Srirangapatna coinage leads, Kumaravyasa Bharata and Torave Ramayana Sanchaya witness leads, Hoysala and Mysore boundary-evidence packets, and Shravanabelagola/Muktesvara inscription-edition packets. The `#scripts` explorer makes the script-evolution records publicly navigable. These are discovery and review packets, not publication-ready claims.
 
 ## Data structure
 
