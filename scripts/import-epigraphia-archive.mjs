@@ -12,8 +12,20 @@ const collections = (process.env.EPIGRAPHIA_ARCHIVE_COLLECTIONS || 'JaiGyan,Serv
 const epigraphyPattern = /(epigraphia|epigraphy|epigraphical|epigraphs|inscription|inscriptions)/i
 const excludePattern = /(epigenetic|epigenetics|epigram|epigrams|hesperidin|prostate|tomato)/i
 const signalTerms = ['kannada', 'kanarese', 'carnatica', 'mysore', 'kolar', 'hassan', 'tumkur', 'shimoga', 'dharwar', 'belgaum', 'bijapur', 'hampi', 'chalukya', 'kadamba', 'ganga', 'rashtrakuta', 'hoysala', 'vijayanagara']
-
 const n = (en, kn) => ({ en, kn })
+const locatorTargets = [
+  { id: 'archive-hint-talagunda-kadamba', label: n('Talagunda / Kadamba genealogy lead', 'ತಾಳಗುಂದ / ಕದಂಬ ವಂಶಾವಳಿ ದಾರಿ'), terms: ['talagunda', 'kadamba', 'kakusthavarma', 'mayurasharma'], anchorTerms: ['talagunda', 'kakusthavarma', 'mayurasharma'], targetRecordIds: ['inscription-talagunda', 'edition-inscription-talagunda', 'script-southern-brahmi-kadamba-transition'] },
+  { id: 'archive-hint-halmidi-old-kannada', label: n('Halmidi / early Kannada lead', 'ಹಲ್ಮಿಡಿ / ಆರಂಭಿಕ ಕನ್ನಡ ದಾರಿ'), terms: ['halmidi', 'kadamba', 'kannada'], anchorTerms: ['halmidi'], targetRecordIds: ['inscription-halmidi', 'edition-inscription-halmidi-review-packet', 'script-old-kannada-epigraphic-phase'] },
+  { id: 'archive-hint-shravanabelagola-ganga', label: n('Shravanabelagola / Western Ganga lead', 'ಶ್ರವಣಬೆಳಗೊಳ / ಪಶ್ಚಿಮ ಗಂಗ ದಾರಿ'), terms: ['shravanabelagola', 'sravana belgola', 'ganga', 'chamundaraya'], anchorTerms: ['shravanabelagola', 'sravana belgola', 'chamundaraya'], targetRecordIds: ['inscription-shravanabelagola', 'edition-inscription-shravanabelagola-cluster', 'edition-inscription-tyagada-brahmadeva'] },
+  { id: 'archive-hint-begur-bengaluru', label: n('Begur / Bengaluru place-name lead', 'ಬೇಗೂರು / ಬೆಂಗಳೂರು ಸ್ಥಳನಾಮ ದಾರಿ'), terms: ['begur', 'bengaluru', 'bangalore'], anchorTerms: ['begur', 'bengaluru', 'bangalore'], targetRecordIds: ['inscription-begur', 'edition-inscription-begur', 'script-early-kannada-verse-transition'] },
+  { id: 'archive-hint-atakur-rashtrakuta', label: n('Atakur / Rashtrakuta hero-stone lead', 'ಆತಕೂರು / ರಾಷ್ಟ್ರಕೂಟ ವೀರಗಲ್ಲು ದಾರಿ'), terms: ['atakur', 'atakuru', 'rashtrakuta', 'krishna iii'], anchorTerms: ['atakur', 'atakuru'], targetRecordIds: ['inscription-atakur', 'edition-inscription-atakur', 'script-early-kannada-verse-transition'] },
+  { id: 'archive-hint-lakkundi-chalukya', label: n('Lakkundi / Kalyani Chalukya lead', 'ಲಕ್ಕುಂಡಿ / ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದಾರಿ'), terms: ['lakkundi', 'chalukya', 'kalyani'], anchorTerms: ['lakkundi', 'kalyani'], targetRecordIds: ['inscription-lakkundi', 'edition-inscription-lakkundi', 'script-medieval-kannada-temple-epigraphy'] },
+  { id: 'archive-hint-belur-hoysala', label: n('Belur / Hoysala temple epigraphy lead', 'ಬೇಲೂರು / ಹೊಯ್ಸಳ ದೇವಾಲಯ ಶಾಸನ ದಾರಿ'), terms: ['belur', 'hoysala', 'vishnuvardhana'], anchorTerms: ['belur', 'vishnuvardhana'], targetRecordIds: ['inscription-belur-foundation', 'edition-inscription-belur-foundation', 'script-medieval-kannada-temple-epigraphy'] },
+  { id: 'archive-hint-hampi-vijayanagara', label: n('Hampi / Vijayanagara inscription lead', 'ಹಂಪಿ / ವಿಜಯನಗರ ಶಾಸನ ದಾರಿ'), terms: ['hampi', 'vijayanagara', 'vijayanagar', 'krishnadevaraya'], anchorTerms: ['hampi', 'krishnadevaraya'], targetRecordIds: ['inscription-hampi', 'edition-inscription-hampi-cluster', 'edition-inscription-hampi-krishna-temple', 'script-vijayanagara-kannada-nagari-mixed-phase'] },
+  { id: 'archive-hint-doddahundi-nishidhi', label: n('Doddahundi / nishidhi lead', 'ದೊಡ್ಡಹುಂಡಿ / ನಿಷಿಧಿ ದಾರಿ'), terms: ['doddahundi', 'nishidhi', 'ganga'], anchorTerms: ['doddahundi', 'nishidhi'], targetRecordIds: ['inscription-doddahundi-nishidhi', 'edition-inscription-doddahundi-nishidhi'] },
+  { id: 'archive-hint-muktesvara-attiraja', label: n('Muktesvara / Attiraja construction lead', 'ಮುಕ್ತೇಶ್ವರ / ಅತ್ತಿರಾಜ ನಿರ್ಮಾಣ ದಾರಿ'), terms: ['muktesvara', 'mukteshvara', 'attiraja', 'chaudayyadanapura'], anchorTerms: ['muktesvara', 'mukteshvara', 'attiraja', 'chaudayyadanapura'], targetRecordIds: ['inscription-muktesvara-attiraja-construction', 'edition-inscription-muktesvara-attiraja-review-packet', 'script-medieval-kannada-temple-epigraphy'] },
+]
+
 const review = { status: 'needs-review', reviewer: null, updatedAt: '2026-08-24' }
 const slug = value => String(value).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90)
 const normaliseArray = value => Array.isArray(value) ? value : value ? [value] : []
@@ -22,6 +34,28 @@ const fileUrl = (identifier, name) => `https://archive.org/download/${identifier
 const signalCounts = text => {
   const lower = text.toLowerCase()
   return Object.fromEntries(signalTerms.map(term => [term, (lower.match(new RegExp(`\\b${term}\\b`, 'g')) || []).length]).filter(([, count]) => count > 0))
+}
+const escapeRegex = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+const termCount = (text, term) => (text.match(new RegExp(`\\b${escapeRegex(term)}\\b`, 'gi')) || []).length
+const locatorCandidates = text => {
+  const lines = text.split(/\r?\n/)
+  return locatorTargets.map(target => {
+    const matchedTerms = target.terms.map(term => ({ term, count: termCount(text, term) })).filter(item => item.count > 0)
+    const matchCount = matchedTerms.reduce((sum, item) => sum + item.count, 0)
+    const anchorCount = target.anchorTerms.reduce((sum, term) => sum + termCount(text, term), 0)
+    if (!matchCount || !anchorCount) return null
+    const firstLineIndex = lines.findIndex(line => target.terms.some(term => new RegExp(`\\b${escapeRegex(term)}\\b`, 'i').test(line)))
+    return {
+      id: target.id,
+      label: target.label,
+      targetRecordIds: target.targetRecordIds,
+      matchedTerms: matchedTerms.sort((a, b) => b.count - a.count).map(item => item.term),
+      matchCount,
+      firstOcrLine: firstLineIndex >= 0 ? firstLineIndex + 1 : null,
+      status: 'needs-page-image-review',
+      reviewNote: n('OCR term match only; verify printed page, inscription number and image witness before using as evidence.', 'OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ, ಶಾಸನ ಸಂಖ್ಯೆ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ.'),
+    }
+  }).filter(Boolean).sort((a, b) => b.matchCount - a.matchCount || String(a.firstOcrLine || '').localeCompare(String(b.firstOcrLine || ''))).slice(0, 8)
 }
 
 async function fetchJson(url) {
@@ -111,6 +145,7 @@ async function discover() {
       },
       ocrSignals,
       ocrSignalStatus: shouldSampleText ? 'sampled' : 'not-sampled',
+      locatorCandidates: locatorCandidates(text),
       citation: {
         sourceId: sourceCollections.includes('ServantsOfKnowledge') ? 'src-ia-sok-epigraphy-collection' : 'src-ia-jaigyan-epigraphy-collection',
         locator: `${candidate.identifier}/${textFile.name}; OCR discovery only, verify against page image before citation`,
@@ -154,6 +189,7 @@ async function discoverLocal(rootDir) {
       },
       ocrSignals: signalCounts(text),
       ocrSignalStatus: 'local-sampled',
+      locatorCandidates: locatorCandidates(text),
       citation: {
         sourceId: 'src-ia-jaigyan-epigraphy-collection',
         locator: `${identifier}/${textName}; local OCR cache indexed; OCR discovery only, verify against page image before citation`,
