@@ -109,6 +109,8 @@ The local Epigraphia Carnatica TXT cache is indexed in `epigraphiaArchiveTexts`.
 
 Itihasa Darshana volumes now carry `contentReview.atlasLinks` on the source records. These links connect volume-level OCR signals to existing atlas targets such as inscription-edition packets, script-evolution phases, Kannada literary works, manuscript witnesses and selected freedom-movement source leads. They are routing aids only: reviewers must identify the article title, printed page, quotation or summary, and target-record fit before using an Itihasa Darshana volume as a record citation.
 
+The Evidence Workflow includes a `sourceLinks` stream for these discovery links. It currently creates assignable tasks for Epigraphia OCR locator hints and Itihasa Darshana article/page review groups, so reviewers can close the gap between a volume-level discovery signal and a record-level citation.
+
 Minimum evidence per edition:
 
 - edition series, volume, item number and page/line locator;
