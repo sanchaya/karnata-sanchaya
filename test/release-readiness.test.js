@@ -210,6 +210,16 @@ test('P2/P3 evidence maturity exposes publication, coin and boundary readiness',
   assert.match(evidenceStylesSource, /\.boundary-evidence-panel/, 'boundary maturity needs dedicated layout styles')
 })
 
+test('Evidence Workflow exposes P3 reviewer notes and status history', () => {
+  assert.match(evidenceSource, /reviewer:assignments\[task\.id\]\?\.reviewer/, 'tasks must hydrate independent reviewer assignments')
+  assert.match(evidenceSource, /reviewNote:assignments\[task\.id\]\?\.reviewNote/, 'tasks must hydrate reviewer notes')
+  assert.match(evidenceSource, /history:assignments\[task\.id\]\?\.history/, 'tasks must hydrate assignment status history')
+  assert.match(evidenceSource, /t\.reviewer/, 'the board must expose a reviewer field')
+  assert.match(evidenceSource, /className="evidence-review-note"/, 'the board must expose a review-note field')
+  assert.match(evidenceSource, /className="evidence-history"/, 'the board must show saved status history')
+  assert.match(evidenceStylesSource, /\.evidence-history/, 'history needs dedicated compact card styling')
+})
+
 test('freedom fighters remain discoverable by cited district associations', () => {
   assert.match(peopleSource,/focus==='freedom'/, 'people must expose a dedicated freedom-fighter view')
   assert.match(peopleSource,/person\.districtIds\.includes\(district\)/, 'district filtering must include every researched activity district, not only the map anchor')
