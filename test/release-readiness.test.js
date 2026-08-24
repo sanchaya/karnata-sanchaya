@@ -210,15 +210,17 @@ test('the Evidence Workflow exposes P2 material evidence task streams', () => {
   for (const collection of ['coinRecords','manuscriptWitnesses','genealogicalRelations','boundaryEvidence','scriptEvolution']) {
     assert.match(evidenceSource, new RegExp(`atlasData\\.${collection}`), `${collection} must feed the evidence workflow`)
   }
-  for (const domain of ['coinage','manuscripts','genealogy','boundaries','scripts']) {
+  for (const domain of ['coinage','manuscripts','genealogy','boundaries','scripts','sourceLinks']) {
     assert.match(evidenceSource, new RegExp(`['"]${domain}['"]`), `${domain} must be filterable as a task domain`)
     assert.match(evidenceStylesSource, new RegExp(`\\.evidence-task\\.${domain}`), `${domain} tasks need a visible board accent`)
   }
-  for (const field of ['catalogue','repositoryRecord','relationshipProof','sampleWitnesses']) {
+  for (const field of ['catalogue','repositoryRecord','relationshipProof','sampleWitnesses','archiveLocator','articlePageReview']) {
     assert.match(evidenceSource, new RegExp(`${field}:\\{submissionType`), `${field} needs a task template`)
   }
   assert.match(evidenceSource, /source-map-comparison/, 'boundary source-map comparison needs a task template')
-  assert.match(evidenceSource, /taskPools=\{epigraphy:\[\.\.\.inscriptionTasks,\.\.\.editionTasks\],literature:literatureTasks,coinage:coinTasks,manuscripts:manuscriptTasks,genealogy:genealogyTasks,boundaries:boundaryTasks,scripts:scriptTasks\}/, 'all P2 material streams must be included in the board task pool')
+  assert.match(evidenceSource, /archiveLocatorTasks=atlasData\.epigraphiaArchiveTexts\.flatMap/, 'Epigraphia OCR locator hints must feed the evidence workflow')
+  assert.match(evidenceSource, /itihasaSourceTasks=atlasData\.sources\.filter/, 'Itihasa Darshana atlas links must feed the evidence workflow')
+  assert.match(evidenceSource, /taskPools=\{epigraphy:\[\.\.\.inscriptionTasks,\.\.\.editionTasks\],literature:literatureTasks,coinage:coinTasks,manuscripts:manuscriptTasks,genealogy:genealogyTasks,boundaries:boundaryTasks,scripts:scriptTasks,sourceLinks:sourceLinkTasks\}/, 'all P2 material streams must be included in the board task pool')
   assert.match(evidenceSource, /const domainSummaries=taskDomains\.map/, 'the workflow must expose a readiness summary for each task domain')
   assert.match(evidenceSource, /const focusDomain=value=>/, 'domain readiness cards must jump into the matching board filter')
   assert.match(evidenceSource, /className="evidence-domain-overview"/, 'domain readiness must be visible before the review board')
