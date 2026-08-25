@@ -93,13 +93,22 @@ test('Karnataka Parampare volumes are queued as review-gated source links', () =
   assert.equal(volumes.length, 2)
   assert.ok(volumes.every(source => source.url.startsWith('https://archive.org/details/sanchaya.karnatakaparampa0000_')))
   assert.ok(volumes.every(source => source.review.status === 'needs-review'))
-  assert.ok(volumes.every(source => source.contentReview?.status === 'queued'))
-  assert.ok(volumes.every(source => source.contentReview?.atlasLinks?.length === 1))
+  assert.ok(volumes.every(source => source.contentReview?.status === 'screened'))
+  assert.ok(volumes.every(source => source.contentReview?.pass === 'metadata-and-ocr-locator-screening'))
+  assert.ok(volumes.every(source => Object.values(source.contentReview?.ocrSignals || {}).some(count => count > 0)))
+  assert.ok(volumes.every(source => source.contentReview?.atlasLinks?.length >= 4))
   for (const source of volumes) {
     for (const link of source.contentReview.atlasLinks) {
       assert.equal(link.status, 'needs-article-page-review')
-      assert.equal(link.confidence, 'low')
+      assert.ok(['medium', 'low'].includes(link.confidence))
       assert.ok(link.requiredReview.includes('printedPage'))
+      assert.ok(link.locatorHints?.length >= 1)
+      for (const hint of link.locatorHints) {
+        assert.equal(hint.status, 'needs-page-image-review')
+        assert.ok(hint.printedLocator.length > 8)
+        assert.ok(hint.ocrLocator.length > 8)
+        assert.ok(hint.note.en.length > 20)
+      }
       for (const targetId of link.targetRecordIds) assert.ok(knownIds.has(targetId), `${source.id} has unknown Karnataka Parampare link target ${targetId}`)
     }
   }

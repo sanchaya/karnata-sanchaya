@@ -44,7 +44,15 @@ const ocrSignals = {
   'kia.itihasadarshanas0000drsu1995smput10': { kannada: 74, inscriptions: 142, literature: 35 },
 }
 
-const link = (linkKind, labelEn, labelKn, targetCollection, targetRecordIds, confidence, reasonEn, reasonKn) => ({
+const locatorHint = (labelEn, labelKn, printedLocator, ocrLocator, noteEn, noteKn) => ({
+  label: name(labelEn, labelKn),
+  printedLocator,
+  ocrLocator,
+  status: 'needs-page-image-review',
+  note: name(noteEn, noteKn),
+})
+
+const link = (linkKind, labelEn, labelKn, targetCollection, targetRecordIds, confidence, reasonEn, reasonKn, locatorHints = []) => ({
   linkKind,
   label: name(labelEn, labelKn),
   targetCollection,
@@ -58,6 +66,7 @@ const link = (linkKind, labelEn, labelKn, targetCollection, targetRecordIds, con
     'sourceQuotationOrSummary',
     'targetRecordConfirmation',
   ],
+  ...(locatorHints.length ? { locatorHints } : {}),
 })
 
 const inscriptionTargets = [
@@ -96,13 +105,6 @@ const manuscriptTargets = [
   'manuscript-torave-ramayana-sanchaya-witness-lead',
 ]
 const freedomTargets = ['src-ff-31']
-const karnatakaParampareEventTargets = [
-  'event-nanyadeva-founds-simraungarh',
-  'event-eastern-chalukya-vengi-foundation',
-  'event-goa-kadamba-gopakapattana',
-  'event-sevuna-devagiri-independent-power',
-  'event-rashtrakuta-western-central-india-reach',
-]
 const karnatakaParampareHeritageTargets = [
   'culture-simraungarh-karnata-fortress-city',
   'culture-gopakapattana-goa-kadamba-port',
@@ -135,26 +137,166 @@ const specialSourceLinks = {
   ],
   'sanchaya.karnatakaparampa0000_v1': [
     link(
-      'karnataka-parampare-transregional-rule-lead',
-      'Karnataka Parampare transregional rule leads',
-      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಅಂತರಪ್ರಾದೇಶಿಕ ಆಳ್ವಿಕೆ ದಾರಿಗಳು',
+      'karnataka-parampare-rashtrakuta-history-lead',
+      'Rashtrakuta political-history article lead',
+      'ರಾಷ್ಟ್ರಕೂಟ ರಾಜಕೀಯ ಇತಿಹಾಸ ಲೇಖನ ದಾರಿ',
       'events',
-      karnatakaParampareEventTargets,
+      ['event-rashtrakuta-western-central-india-reach'],
+      'medium',
+      'Karnataka Parampare volume 1 has a table-of-contents and OCR hit cluster for Malkhed Rashtrakuta political history; promote only after page-image review.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರಲ್ಲಿ ಮಳಖೇಡ ರಾಷ್ಟ್ರಕೂಟ ರಾಜಕೀಯ ಇತಿಹಾಸಕ್ಕೆ ವಿಷಯಸೂಚಿ ಮತ್ತು OCR ಗುಚ್ಛ ಸಿಕ್ಕಿದೆ; ಪುಟ-ಚಿತ್ರ ಪರಿಶೀಲನೆಯ ನಂತರ ಮಾತ್ರ citation ಆಗಿ ಉತ್ತೇಜಿಸಿ.',
+      [
+        locatorHint(
+          'Malkhed Rashtrakuta political history',
+          'ಮಳಖೇಡದ ರಾಷ್ಟ್ರಕೂಟರ ರಾಜಕೀಯ ಚರಿತ್ರೆ',
+          'Printed pp. 279-289',
+          'OCR lines around 654 and 14891-15030',
+          'TOC and chapter-heading lead; verify page images and exact passage before attaching to an event record.',
+          'ವಿಷಯಸೂಚಿ ಮತ್ತು ಅಧ್ಯಾಯ-ಶೀರ್ಷಿಕೆ ದಾರಿ; ಘಟನೆ ದಾಖಲೆಗೆ ಜೋಡಿಸುವ ಮೊದಲು ಪುಟಚಿತ್ರ ಮತ್ತು ನಿಖರ ಭಾಗ ಪರಿಶೀಲಿಸಿ.',
+        ),
+      ],
+    ),
+    link(
+      'karnataka-parampare-goa-kadamba-lead',
+      'Goa Kadamba and small-dynasty article lead',
+      'ಗೋವೆಯ ಕದಂಬರು ಮತ್ತು ಸಣ್ಣ ವಂಶಗಳ ಲೇಖನ ದಾರಿ',
+      'events',
+      ['event-goa-kadamba-gopakapattana'],
+      'medium',
+      'Karnataka Parampare volume 1 has a small-dynasties section with Goa Kadamba OCR locators useful for the Gopakapattana review packet.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರಲ್ಲಿ ಗೋವೆಯ ಕದಂಬರ OCR ಸ್ಥಾನಸೂಚಿಗಳಿರುವ ಸಣ್ಣ ವಂಶಗಳ ವಿಭಾಗವಿದೆ; ಗೋಪಕಪಟ್ಟಣ ಪರಿಶೀಲನಾ ಕಡತಕ್ಕೆ ಉಪಯುಕ್ತ.',
+      [
+        locatorHint(
+          'Small dynasties: Goa Kadambas',
+          'ಸಣ್ಣಪುಟ್ಟ ರಾಜವಂಶಗಳು: ಗೋವೆಯ ಕದಂಬರು',
+          'Printed pp. 354-374',
+          'OCR lines around 702 and 18603-18941',
+          'Use as a dynasty-branch locator, not as final boundary evidence until the page spread is checked.',
+          'ಪುಟ ಹರವು ಪರಿಶೀಲನೆಯವರೆಗೆ ಅಂತಿಮ ಗಡಿ ಸಾಕ್ಷ್ಯವಲ್ಲ; ವಂಶ-ಶಾಖೆ ಸ್ಥಾನಸೂಚಿಯಾಗಿ ಬಳಸಿ.',
+        ),
+      ],
+    ),
+    link(
+      'karnataka-parampare-devagiri-yadava-lead',
+      'Devagiri Yadava article lead',
+      'ದೇವಗಿರಿಯ ಯಾದವರ ಲೇಖನ ದಾರಿ',
+      'events',
+      ['event-sevuna-devagiri-independent-power'],
+      'medium',
+      'Karnataka Parampare volume 1 has Devagiri Yadava TOC and OCR locators; Seuna/Yadava naming and chronology still need specialist review.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರಲ್ಲಿ ದೇವಗಿರಿಯ ಯಾದವರ ವಿಷಯಸೂಚಿ ಮತ್ತು OCR ಸ್ಥಾನಸೂಚಿಗಳಿವೆ; ಸೇವುಣ/ಯಾದವ ಹೆಸರಿಕೆ ಮತ್ತು ಕಾಲಕ್ರಮಕ್ಕೆ ಪರಿಣಿತ ಪರಿಶೀಲನೆ ಬೇಕಾಗಿದೆ.',
+      [
+        locatorHint(
+          'Devagiri Yadavas',
+          'ದೇವಗಿರಿಯ ಯಾದವರು',
+          'Printed pp. 478-484',
+          'OCR lines around 800 and 24680-24827',
+          'Review the article framing before linking it to Seuna political expansion records.',
+          'ಸೇವುಣ ರಾಜಕೀಯ ವಿಸ್ತರಣೆ ದಾಖಲೆಗಳಿಗೆ ಜೋಡಿಸುವ ಮೊದಲು ಲೇಖನದ ನಿರೂಪಣೆಯನ್ನು ಪರಿಶೀಲಿಸಿ.',
+        ),
+      ],
+    ),
+    link(
+      'karnataka-parampare-early-inscription-plate-lead',
+      'Early inscription image-plate lead',
+      'ಆದಿಕಾಲದ ಶಾಸನ ಚಿತ್ರ-ಫಲಕ ದಾರಿ',
+      'inscriptionEditions',
+      ['edition-inscription-halmidi-review-packet', 'edition-inscription-talagunda'],
       'low',
-      'User-supplied Karnataka Parampare volume is queued as a discovery source for outside-Karnataka rule and dynasty-branch packets; exact article and page locators are still required.',
-      'ಬಳಕೆದಾರರು ನೀಡಿದ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟವನ್ನು ಕರ್ನಾಟಕದಾಚೆಯ ಆಳ್ವಿಕೆ ಮತ್ತು ವಂಶ-ಶಾಖೆ ಕಡತಗಳ ಅನ್ವೇಷಣಾ ಆಕರವಾಗಿ ಸರದಿಗೆ ಸೇರಿಸಲಾಗಿದೆ; ನಿಖರ ಲೇಖನ ಮತ್ತು ಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಇನ್ನೂ ಬೇಕಾಗಿವೆ.',
+      'Karnataka Parampare volume 1 image list names Talagunda and Halmidi plates; this is a plate locator until inscription text/page evidence is reviewed.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರ ಚಿತ್ರಪಟ್ಟಿಯಲ್ಲಿ ತಾಳಗುಂದ ಮತ್ತು ಹಲ್ಮಿಡಿ ಫಲಕಗಳಿವೆ; ಶಾಸನ ಪಠ್ಯ/ಪುಟ ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನೆಯವರೆಗೆ ಇದು ಚಿತ್ರ-ಫಲಕ ಸ್ಥಾನಸೂಚಿ ಮಾತ್ರ.',
+      [
+        locatorHint(
+          'Talagunda and Halmidi inscription plates',
+          'ತಾಳಗುಂದ ಮತ್ತು ಹಲ್ಮಿಡಿ ಶಾಸನ ಫಲಕಗಳು',
+          'Image list; printed plate pages require visual review',
+          'OCR lines around 980-982',
+          'Match the plate to the edition packet before treating it as source-verified inscription evidence.',
+          'ಆಕರ-ಪರಿಶೀಲಿತ ಶಾಸನ ಸಾಕ್ಷ್ಯವೆಂದು ಪರಿಗಣಿಸುವ ಮೊದಲು ಫಲಕವನ್ನು ಆವೃತ್ತಿ ಕಡತಕ್ಕೆ ಹೊಂದಿಸಿ.',
+        ),
+      ],
     ),
   ],
   'sanchaya.karnatakaparampa0000_v2': [
     link(
-      'karnataka-parampare-heritage-lead',
-      'Karnataka Parampare heritage and material-culture leads',
-      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಪರಂಪರೆ-ವಸ್ತುಸಂಸ್ಕೃತಿ ದಾರಿಗಳು',
-      'culturalHeritage',
-      karnatakaParampareHeritageTargets,
+      'karnataka-parampare-vijayanagara-origin-lead',
+      'Vijayanagara origin and Karnata comparison lead',
+      'ವಿಜಯನಗರ ಉದಯ ಮತ್ತು ಕರ್ಣಾಟ ಹೋಲಿಕೆ ದಾರಿ',
+      'events',
+      ['event-vijayanagara-southern-deccan-tamil-country', 'event-nanyadeva-founds-simraungarh'],
+      'medium',
+      'Karnataka Parampare volume 2 discusses Vijayanagara origins and compares Bengal/Mithila Karnata precedents; keep the Mithila connection as a review lead until inscriptions are checked.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ ವಿಜಯನಗರ ಉದಯವನ್ನು ಚರ್ಚಿಸಿ ಬಂಗಾಳ/ಮಿಥಿಲ ಕರ್ಣಾಟ ಪೂರ್ವದರ್ಶನಗಳೊಂದಿಗೆ ಹೋಲಿಸುತ್ತದೆ; ಮಿಥಿಲ ಸಂಪರ್ಕವನ್ನು ಶಾಸನ ಪರಿಶೀಲನೆಯವರೆಗೆ ಪರಿಶೀಲನಾ ದಾರಿಯಾಗಿ ಇಡಿ.',
+      [
+        locatorHint(
+          'Vijayanagara rise and Karnata precedents',
+          'ವಿಜಯನಗರದ ಉದಯ ಮತ್ತು ಕರ್ಣಾಟ ಪೂರ್ವದರ್ಶನಗಳು',
+          'Printed chapter pages require page-number reconciliation',
+          'OCR lines around 861, 1550, 1908-1910 and 1987-1992',
+          'Do not promote the Mithila/Karnata lineage note without locating the cited political inscriptions.',
+          'ಉಲ್ಲೇಖಿತ ರಾಜಕೀಯ ಶಾಸನಗಳನ್ನು ಪತ್ತೆಹಚ್ಚದೆ ಮಿಥಿಲ/ಕರ್ಣಾಟ ವಂಶ ಟಿಪ್ಪಣಿಯನ್ನು ಉತ್ತೇಜಿಸಬೇಡಿ.',
+        ),
+      ],
+    ),
+    link(
+      'karnataka-parampare-vijayanagara-port-goa-lead',
+      'Vijayanagara ports and Goa transition lead',
+      'ವಿಜಯನಗರ ಬಂದರುಗಳು ಮತ್ತು ಗೋವಾ ಪರಿವರ್ತನೆ ದಾರಿ',
+      'events',
+      ['event-vijayanagara-southern-deccan-tamil-country', 'event-goa-kadamba-gopakapattana'],
+      'medium',
+      'Karnataka Parampare volume 2 has OCR locators for coastal ports, Goa, and Portuguese transition context that can refine outside-Karnataka map notes.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರಲ್ಲಿ ಕರಾವಳಿ ಬಂದರುಗಳು, ಗೋವಾ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಪರಿವರ್ತನೆ ಸಂದರ್ಭದ OCR ಸ್ಥಾನಸೂಚಿಗಳಿವೆ; ಕರ್ನಾಟಕದಾಚೆ ನಕ್ಷೆ ಟಿಪ್ಪಣಿಗಳನ್ನು ಸುಧಾರಿಸಲು ಉಪಯುಕ್ತ.',
+      [
+        locatorHint(
+          'Coastal ports, Goa and Portuguese transition',
+          'ಕರಾವಳಿ ಬಂದರುಗಳು, ಗೋವಾ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಪರಿವರ್ತನೆ',
+          'Printed pages require page-image review',
+          'OCR lines around 3228-3232 and 3591-3593',
+          'Use to separate Vijayanagara-era port reach from earlier Goa Kadamba evidence.',
+          'ವಿಜಯನಗರ ಕಾಲದ ಬಂದರು ವ್ಯಾಪ್ತಿಯನ್ನು ಹಿಂದಿನ ಗೋವಾ ಕದಂಬ ಸಾಕ್ಷ್ಯದಿಂದ ಬೇರ್ಪಡಿಸಲು ಬಳಸಿ.',
+        ),
+      ],
+    ),
+    link(
+      'karnataka-parampare-vijayanagara-coin-lead',
+      'Vijayanagara coin image-plate lead',
+      'ವಿಜಯನಗರ ನಾಣ್ಯ ಚಿತ್ರ-ಫಲಕ ದಾರಿ',
+      'coinRecords',
+      ['coin-vijayanagara-hampi-gold-coinage-lead'],
       'low',
-      'User-supplied Karnataka Parampare volume is queued for fortress, port-capital and material-culture review leads; cite only after the printed article/page is identified.',
-      'ಬಳಕೆದಾರರು ನೀಡಿದ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟವನ್ನು ಕೋಟೆ, ಬಂದರು-ರಾಜಧಾನಿ ಮತ್ತು ವಸ್ತುಸಂಸ್ಕೃತಿ ಪರಿಶೀಲನಾ ದಾರಿಗಳಿಗೆ ಸರದಿಗೆ ಸೇರಿಸಲಾಗಿದೆ; ಮುದ್ರಿತ ಲೇಖನ/ಪುಟ ಗುರುತಿಸಿದ ನಂತರ ಮಾತ್ರ ಉಲ್ಲೇಖಿಸಿ.',
+      'Karnataka Parampare volume 2 image list names Krishnadevaraya, Achyutaraya and Vijayanagara coin plates; catalogue fields still need specimen-level sources.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ಚಿತ್ರಪಟ್ಟಿಯಲ್ಲಿ ಕೃಷ್ಣದೇವರಾಯ, ಅಚ್ಯುತರಾಯ ಮತ್ತು ವಿಜಯನಗರ ನಾಣ್ಯ ಫಲಕಗಳಿವೆ; catalogue ಕ್ಷೇತ್ರಗಳಿಗೆ ಇನ್ನೂ ಮಾದರಿ-ಮಟ್ಟದ ಆಕರಗಳು ಬೇಕು.',
+      [
+        locatorHint(
+          'Krishnadevaraya, Achyutaraya and Vijayanagara coin plates',
+          'ಕೃಷ್ಣದೇವರಾಯ, ಅಚ್ಯುತರಾಯ ಮತ್ತು ವಿಜಯನಗರ ನಾಣ್ಯ ಫಲಕಗಳು',
+          'Image list around plate pages 632-633',
+          'OCR lines around 1499-1506',
+          'Treat as a visual plate lead, not a metal/weight/findspot catalogue source.',
+          'ಲೋಹ/ತೂಕ/ಪತ್ತೆಸ್ಥಳ catalogue ಆಕರವಲ್ಲ; ದೃಶ್ಯ ಫಲಕ ದಾರಿಯಾಗಿ ಪರಿಗಣಿಸಿ.',
+        ),
+      ],
+    ),
+    link(
+      'karnataka-parampare-later-heritage-lead',
+      'Later heritage and Mysore-period monument lead',
+      'ನಂತರದ ಪರಂಪರೆ ಮತ್ತು ಮೈಸೂರು ಕಾಲದ ಸ್ಮಾರಕ ದಾರಿ',
+      'culturalHeritage',
+      [...karnatakaParampareHeritageTargets, 'culture-srirangapatna-fort', 'culture-daria-daulat-bagh', 'culture-srirangapatna-gumbaz', 'culture-mysuru-palace-1912'],
+      'low',
+      'Karnataka Parampare volume 2 image and chapter lists include later heritage sites; cite only after the matching article, caption and page image are confirmed.',
+      'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ಚಿತ್ರಪಟ್ಟಿ ಮತ್ತು ಅಧ್ಯಾಯಪಟ್ಟಿಯಲ್ಲಿ ನಂತರದ ಪರಂಪರೆ ತಾಣಗಳಿವೆ; ಹೊಂದುವ ಲೇಖನ, ಚಿತ್ರಶೀರ್ಷಿಕೆ ಮತ್ತು ಪುಟಚಿತ್ರ ದೃಢಪಟ್ಟ ನಂತರ ಮಾತ್ರ ಉಲ್ಲೇಖಿಸಿ.',
+      [
+        locatorHint(
+          'Later heritage image and chapter leads',
+          'ನಂತರದ ಪರಂಪರೆ ಚಿತ್ರ ಮತ್ತು ಅಧ್ಯಾಯ ದಾರಿಗಳು',
+          'Image list and later-period chapters',
+          'OCR lines around 1490-1525 and later Mysore sections',
+          'Use as a triage route for monument captions before record-level citation.',
+          'ದಾಖಲೆ-ಮಟ್ಟದ citation ಮೊದಲು ಸ್ಮಾರಕ ಚಿತ್ರಶೀರ್ಷಿಕೆಗಳ triage ದಾರಿಯಾಗಿ ಬಳಸಿ.',
+        ),
+      ],
     ),
   ],
 }
@@ -299,8 +441,8 @@ const parampareVolume = (id, label, titleKn) => {
     id: `src-karnataka-parampare-${id.replace(/^sanchaya\.karnatakaparampa0000_/, '')}`,
     type: 'digitised-research-volume',
     title: name(`Karnataka Parampare, ${label}`, titleKn),
-    authors: ['Sanchaya contributors'],
-    publisher: 'Sanchaya',
+    authors: ['Mysuru Rajya Sarkara', 'Sanchaya / ServantsOfKnowledge digitisation contributors'],
+    publisher: 'Mysuru Rajya Sarkara',
     year: null,
     url: base,
     collectionKey: 'karnataka-parampare',
@@ -311,16 +453,18 @@ const parampareVolume = (id, label, titleKn) => {
       hocrUrl: `https://archive.org/download/${id}/${id}_hocr.html`,
     },
     contentReview: {
-      status: 'queued',
+      status: 'screened',
       textFile: `${id}_djvu.txt`,
       hocrFile: `${id}_hocr.html`,
       accessedAt: '2026-08-25',
-      pass: 'source-registered-awaiting-full-text-screening',
-      ocrSignals: null,
+      pass: 'metadata-and-ocr-locator-screening',
+      ocrSignals: id.endsWith('_v1')
+        ? { kannada: 531, inscriptions: 1033, literature: 246, coins: 78, kadamba: 181, rashtrakuta: 185, devagiri: 28, goa: 4, vijayanagara: 23, ports: 25 }
+        : { kannada: 753, inscriptions: 312, literature: 352, coins: 20, kadamba: 11, rashtrakuta: 1, devagiri: 6, goa: 10, vijayanagara: 461, ports: 50 },
       atlasLinks: atlasLinksFor(id),
       note: name(
-        'Registered from the user-supplied Internet Archive item. Reviewers must open OCR, HOCR and page images, then record article title, printed page and target-record fit before promoting citations.',
-        'ಬಳಕೆದಾರರು ನೀಡಿದ ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್ ದಾಖಲೆಯಿಂದ ನೋಂದಾಯಿಸಲಾಗಿದೆ. citation ಉತ್ತೇಜಿಸುವ ಮೊದಲು ಪರಿಶೀಲಕರು OCR, HOCR ಮತ್ತು ಪುಟ ಚಿತ್ರಗಳನ್ನು ತೆರೆಯಬೇಕು; ಲೇಖನ ಶೀರ್ಷಿಕೆ, ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಗುರಿ-ದಾಖಲೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ದಾಖಲಿಸಬೇಕು.',
+        'Screened from the user-supplied Internet Archive item and OCR text. Reviewers must open HOCR and page images, then record article title, printed page and target-record fit before promoting citations.',
+        'ಬಳಕೆದಾರರು ನೀಡಿದ ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್ ದಾಖಲೆ ಮತ್ತು OCR ಪಠ್ಯದಿಂದ screening ಮಾಡಲಾಗಿದೆ. citation ಉತ್ತೇಜಿಸುವ ಮೊದಲು ಪರಿಶೀಲಕರು HOCR ಮತ್ತು ಪುಟ ಚಿತ್ರಗಳನ್ನು ತೆರೆಯಬೇಕು; ಲೇಖನ ಶೀರ್ಷಿಕೆ, ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಗುರಿ-ದಾಖಲೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ದಾಖಲಿಸಬೇಕು.',
       ),
     },
     usageNote: name(

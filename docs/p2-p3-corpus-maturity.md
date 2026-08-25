@@ -24,7 +24,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `inscriptionEditions` | 20 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
-| Research-volume source links | 33 linked volumes / 59 link groups | Itihasa Darshana plus Karnataka Parampare volume-level leads now route to inscription, script, literature, manuscript, freedom-movement, outside-Karnataka rule and heritage review targets; article/page locators still required |
+| Research-volume source links | 33 linked volumes / 65 link groups | Itihasa Darshana plus Karnataka Parampare source leads now route to inscription, script, literature, manuscript, freedom-movement, outside-Karnataka rule, ports, coinage and heritage review targets; Parampare links include OCR/page locator hints but still require page-image review |
 
 ## Promotion rule
 
@@ -107,7 +107,7 @@ Goal: turn inscription clusters and candidate packets into item-level editions.
 
 The local Epigraphia Carnatica TXT cache is indexed in `epigraphiaArchiveTexts`. These records are citation targets and OCR discovery signals only. They can help find likely volume/item/page leads, but they cannot close an evidence gate until a reviewer checks the printed page image and records an item-level locator.
 
-Itihasa Darshana volumes now carry `contentReview.atlasLinks` on the source records. These links connect volume-level OCR signals to existing atlas targets such as inscription-edition packets, script-evolution phases, Kannada literary works, manuscript witnesses and selected freedom-movement source leads. Karnataka Parampare volumes 1 and 2 are also registered as review-gated research-volume sources for outside-Karnataka rule and material-culture/heritage packets. They are routing aids only: reviewers must identify the article title, printed page, quotation or summary, and target-record fit before using either series as a record citation.
+Itihasa Darshana volumes now carry `contentReview.atlasLinks` on the source records. These links connect volume-level OCR signals to existing atlas targets such as inscription-edition packets, script-evolution phases, Kannada literary works, manuscript witnesses and selected freedom-movement source leads. Karnataka Parampare volumes 1 and 2 have completed a first metadata/OCR locator screening pass: they now carry article or plate leads for Rashtrakutas, Goa Kadambas, Devagiri Yadavas, Vijayanagara origins, coastal ports/Goa, Vijayanagara coin plates and later heritage records. They are routing aids only: reviewers must identify the article title, printed page, quotation or summary, and target-record fit before using either series as a record citation.
 
 The Evidence Workflow includes a `sourceLinks` stream for these discovery links. It currently creates assignable tasks for Epigraphia OCR locator hints and research-volume article/page review groups, so reviewers can close the gap between a volume-level discovery signal and a record-level citation.
 
