@@ -113,6 +113,8 @@ The Evidence Workflow includes a `sourceLinks` stream for these discovery links.
 
 The first source-volume extraction sprint converts the strongest Karnataka Parampare and offline Archive identifier leads into normal atlas candidate records. This batch adds four place leads, two people leads, four event leads, two inscription leads, three inscription-edition packets and one coin-plate packet. The offline folder names are treated as Internet Archive identifiers in source records, but the extracted records remain `needs-review` until the page image, printed locator and item-level citation are confirmed.
 
+The second extraction sprint registers all 12 offline Epigraphia Carnatica folder names as Internet Archive identifiers and adds five Parampare image/caption leads for Achyutaraya-period Hampi, Daria Daulat Bagh, Srirangapatna Gumbaz, Chitradurga Fort and Mysuru Palace. These enrich exploration and reviewer triage without replacing existing authority-backed heritage records.
+
 Minimum evidence per edition:
 
 - edition series, volume, item number and page/line locator;

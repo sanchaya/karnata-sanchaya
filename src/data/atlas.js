@@ -22,7 +22,7 @@ import { dictionaryMartyrCandidateMeta, dictionaryMartyrCandidates } from './dic
 import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
 import { administrativeDivisions, feudatoryRelations, karnataReachEvents, karnataReachHeritage, karnataReachPeople, karnataReachPlaces, karnataReachPolities, karnataReachSources, openDatasetCatalogue, scriptEvolution } from './research-foundations.js'
 import { boundaryEvidence, coinRecords, genealogicalRelations, inscriptionEditions, manuscriptWitnesses } from './p1-model-foundations.js'
-import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
+import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionHeritage, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -533,6 +533,7 @@ atlasData.culturalHeritage = [
   }
 ]
 appendUniqueById(atlasData.culturalHeritage, karnataReachHeritage)
+appendUniqueById(atlasData.culturalHeritage, sourceVolumeExtractionHeritage)
 
 atlasData.reigns = [
   {

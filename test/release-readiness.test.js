@@ -58,7 +58,7 @@ test('public navigation reports the depth of the published research dataset', ()
 
 test('source-volume extraction sprint is assembled into the atlas dataset', () => {
   assert.match(atlasSource, /source-volume-extraction\.js/, 'source-volume extraction records must be imported into the atlas bundle')
-  for (const collection of ['sourceVolumeExtractionSources','sourceVolumeExtractionPlaces','sourceVolumeExtractionPeople','sourceVolumeExtractionEvents','sourceVolumeExtractionInscriptions','sourceVolumeExtractionInscriptionEditions','sourceVolumeExtractionCoinRecords']) {
+  for (const collection of ['sourceVolumeExtractionSources','sourceVolumeExtractionPlaces','sourceVolumeExtractionPeople','sourceVolumeExtractionEvents','sourceVolumeExtractionInscriptions','sourceVolumeExtractionInscriptionEditions','sourceVolumeExtractionCoinRecords','sourceVolumeExtractionHeritage']) {
     assert.match(atlasSource, new RegExp(collection), `${collection} must be appended into the atlas dataset`)
   }
   assert.match(atlasSource, /sourceVolumeInscriptionDistrictAssignments/, 'source-volume inscription leads must retain district audit assignments')

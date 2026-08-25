@@ -33040,6 +33040,233 @@
         }
       },
       {
+        "id": "culture-parampare-achyutaraya-temple-plate-lead",
+        "name": {
+          "en": "Achyutaraya temple and Vijayanagara image-plate lead",
+          "kn": "ಅಚ್ಯುತರಾಯ ದೇವಾಲಯ ಮತ್ತು ವಿಜಯನಗರ ಚಿತ್ರ-ಫಲಕ ದಾರಿ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1529,
+          "to": 1542,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [
+          "person-achyuta-devaraya"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Vijayanagara",
+          "temple",
+          "image-plate",
+          "Hampi"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "Karnataka Parampare Volume 2 image-list lead for Achyuta Devaraya-era Vijayanagara material culture. The exact monument caption and page image remain unresolved.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ಚಿತ್ರಪಟ್ಟಿಯಿಂದ ಬಂದ ಅಚ್ಯುತ ದೇವರಾಯ ಕಾಲದ ವಿಜಯನಗರ ವಸ್ತುಸಂಸ್ಕೃತಿ ದಾರಿ. ನಿಖರ ಸ್ಮಾರಕ ಚಿತ್ರಶೀರ್ಷಿಕೆ ಮತ್ತು ಪುಟಚಿತ್ರ ಇನ್ನೂ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR locator near Vijayanagara/Achyuta Devaraya plates; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "culture-parampare-daria-daulat-image-lead",
+        "name": {
+          "en": "Daria Daulat Bagh Parampare image lead",
+          "kn": "ದರಿಯಾ ದೌಲತ್ ಬಾಗ್ ಪರಂಪರೆ ಚಿತ್ರ ದಾರಿ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1778,
+          "to": 1784,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-mysore"
+        ],
+        "placeIds": [
+          "place-daria-daulat"
+        ],
+        "peopleIds": [
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Mysore",
+          "palace",
+          "painting",
+          "image-plate"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "Karnataka Parampare Volume 2 later-period image/chapter lead for Daria Daulat Bagh. Use only after matching the caption and printed page.",
+          "kn": "ದರಿಯಾ ದೌಲತ್ ಬಾಗ್‌ಗೆ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ನಂತರದ ಅವಧಿಯ ಚಿತ್ರ/ಅಧ್ಯಾಯ ದಾರಿ. ಚಿತ್ರಶೀರ್ಷಿಕೆ ಮತ್ತು ಮುದ್ರಿತ ಪುಟ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಬಳಸಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "culture-parampare-srirangapatna-gumbaz-image-lead",
+        "name": {
+          "en": "Srirangapatna Gumbaz Parampare image lead",
+          "kn": "ಶ್ರೀರಂಗಪಟ್ಟಣ ಗುಂಬಜ್ ಪರಂಪರೆ ಚಿತ್ರ ದಾರಿ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1780,
+          "to": 1800,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "polityIds": [
+          "polity-mysore"
+        ],
+        "placeIds": [
+          "place-gumbaz-srirangapatna"
+        ],
+        "peopleIds": [
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Mysore",
+          "mausoleum",
+          "image-plate"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "Karnataka Parampare Volume 2 later-period heritage lead for the Gumbaz at Srirangapatna; caption/page matching is still pending.",
+          "kn": "ಶ್ರೀರಂಗಪಟ್ಟಣದ ಗುಂಬಜ್‌ಗಾಗಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ನಂತರದ ಅವಧಿಯ ಪರಂಪರೆ ದಾರಿ; ಚಿತ್ರಶೀರ್ಷಿಕೆ/ಪುಟ ಹೊಂದಿಕೆ ಇನ್ನೂ ಬಾಕಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "culture-parampare-chitradurga-fort-image-lead",
+        "name": {
+          "en": "Chitradurga Fort Parampare image lead",
+          "kn": "ಚಿತ್ರದುರ್ಗ ಕೋಟೆ ಪರಂಪರೆ ಚಿತ್ರ ದಾರಿ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1568,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "external-polity-chitradurga-nayaka",
+          "polity-mysore"
+        ],
+        "placeIds": [
+          "place-chitradurga-fort"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "fort",
+          "Nayaka",
+          "Mysore",
+          "image-plate"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "Karnataka Parampare Volume 2 image/chapter lead for Chitradurga fort and later regional power. It supplements existing heritage records after review.",
+          "kn": "ಚಿತ್ರದುರ್ಗ ಕೋಟೆ ಮತ್ತು ನಂತರದ ಪ್ರಾದೇಶಿಕ ಅಧಿಕಾರಕ್ಕಾಗಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ಚಿತ್ರ/ಅಧ್ಯಾಯ ದಾರಿ. ಪರಿಶೀಲನೆಯ ನಂತರ ಮಾತ್ರ ಇದು ಇರುವ ಪರಂಪರೆ ದಾಖಲೆಗಳನ್ನು ಪೂರೈಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period fort image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "culture-parampare-mysuru-palace-image-lead",
+        "name": {
+          "en": "Mysuru Palace Parampare image lead",
+          "kn": "ಮೈಸೂರು ಅರಮನೆ ಪರಂಪರೆ ಚಿತ್ರ ದಾರಿ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1897,
+          "to": 1912,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-mysore"
+        ],
+        "placeIds": [
+          "place-mysuru-palace"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Mysore",
+          "palace",
+          "image-plate"
+        ],
+        "continuity": "continuing-practice",
+        "description": {
+          "en": "Karnataka Parampare Volume 2 later-period heritage lead for Mysuru Palace. It remains a source-volume locator until caption and page are verified.",
+          "kn": "ಮೈಸೂರು ಅರಮನೆಗಾಗಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರ ನಂತರದ ಅವಧಿಯ ಪರಂಪರೆ ದಾರಿ. ಚಿತ್ರಶೀರ್ಷಿಕೆ ಮತ್ತು ಪುಟ ಪರಿಶೀಲನೆಯವರೆಗೆ ಇದು source-volume locator ಆಗಿಯೇ ಉಳಿಯುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "culture-kml-hoysala-govindanahally",
         "name": {
           "en": "Govindanahally — Hoysala temple research lead",
@@ -44736,6 +44963,96 @@
         }
       },
       {
+        "id": "src-ia-local-isb-epigraphiacarnat00000une-vol-3",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 3",
+          "kn": "Epigraphia Carnatica Volume 3"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat00000une.vol.3",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat00000une.vol.3",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat00000une.vol.3/isb.epigraphiacarnat00000une.vol.3_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 3. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 3ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "3",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiakarnat0000unse-vol-4",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 4",
+          "kn": "Epigraphia Carnatica Volume 4"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiakarnat0000unse.vol.4",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiakarnat0000unse.vol.4",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiakarnat0000unse.vol.4/isb.epigraphiakarnat0000unse.vol.4_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 4. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 4ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "4",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-vol-5",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 5",
+          "kn": "Epigraphia Carnatica Volume 5"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse.vol.5",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse.vol.5",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse.vol.5/isb.epigraphiacarnat0000unse.vol.5_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 5. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 5ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "5",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "src-ia-local-iisb-epigraphiacarnat0000unse-vol-7",
         "type": "digitised-epigraphical-volume",
         "title": {
@@ -44766,6 +45083,96 @@
         }
       },
       {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-vol-7",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 7 alternate scan",
+          "kn": "Epigraphia Carnatica Volume 7 alternate scan"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse.vol.7",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse.vol.7",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse.vol.7/isb.epigraphiacarnat0000unse.vol.7_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 7 alternate scan. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 7 alternate scanಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "7",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epicraphiacarnat0000unse-vol-8",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 8",
+          "kn": "Epigraphia Carnatica Volume 8"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epicraphiacarnat0000unse.vol.8",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epicraphiacarnat0000unse.vol.8",
+          "fullTextUrl": "https://archive.org/download/isb.epicraphiacarnat0000unse.vol.8/isb.epicraphiacarnat0000unse.vol.8_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 8. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 8ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "8",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiyakarna000000unse-vol-9",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 9",
+          "kn": "Epigraphia Carnatica Volume 9"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiyakarna000000unse.vol.9",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiyakarna000000unse.vol.9",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiyakarna000000unse.vol.9/isb.epigraphiyakarna000000unse.vol.9_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 9. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 9ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "9",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "src-ia-local-isb-epigraphiacarnat0000unse-vol-10",
         "type": "digitised-epigraphical-volume",
         "title": {
@@ -44789,6 +45196,126 @@
           "kn": "Epigraphia Carnatica Volume 10ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
         },
         "volume": "10",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-vol-11",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 11",
+          "kn": "Epigraphia Carnatica Volume 11"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse.vol.11",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse.vol.11",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse.vol.11/isb.epigraphiacarnat0000unse.vol.11_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 11. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 11ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "11",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-vol-12",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 12",
+          "kn": "Epigraphia Carnatica Volume 12"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse.vol.12",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse.vol.12",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse.vol.12/isb.epigraphiacarnat0000unse.vol.12_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 12. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 12ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "12",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-volu-24",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 24",
+          "kn": "Epigraphia Carnatica Volume 24"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse.volu.24",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse.volu.24",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse.volu.24/isb.epigraphiacarnat0000unse.volu.24_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 24. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 24ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "24",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-g7l3-volu-25",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 25",
+          "kn": "Epigraphia Carnatica Volume 25"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse_g7l3.volu.25",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse_g7l3.volu.25",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse_g7l3.volu.25/isb.epigraphiacarnat0000unse_g7l3.volu.25_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 25. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 25ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "25",
         "review": {
           "status": "needs-review",
           "reviewer": null,
@@ -69208,6 +69735,374 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-achyutaraya-temple-plate-lead-polity-1",
+        "fromId": "culture-parampare-achyutaraya-temple-plate-lead",
+        "type": "cultural-architecture",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1529,
+          "to": 1542,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR locator near Vijayanagara/Achyuta Devaraya plates; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-achyutaraya-temple-plate-lead-place-1",
+        "fromId": "culture-parampare-achyutaraya-temple-plate-lead",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1529,
+          "to": 1542,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR locator near Vijayanagara/Achyuta Devaraya plates; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-achyutaraya-temple-plate-lead-person-1",
+        "fromId": "culture-parampare-achyutaraya-temple-plate-lead",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-achyuta-devaraya",
+        "date": {
+          "from": 1529,
+          "to": 1542,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR locator near Vijayanagara/Achyuta Devaraya plates; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-daria-daulat-image-lead-polity-1",
+        "fromId": "culture-parampare-daria-daulat-image-lead",
+        "type": "cultural-architecture",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1778,
+          "to": 1784,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-daria-daulat-image-lead-place-1",
+        "fromId": "culture-parampare-daria-daulat-image-lead",
+        "type": "cultural-location",
+        "toId": "place-daria-daulat",
+        "date": {
+          "from": 1778,
+          "to": 1784,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-daria-daulat-image-lead-person-1",
+        "fromId": "culture-parampare-daria-daulat-image-lead",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-hyder-ali",
+        "date": {
+          "from": 1778,
+          "to": 1784,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-daria-daulat-image-lead-person-2",
+        "fromId": "culture-parampare-daria-daulat-image-lead",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-tipu-sultan",
+        "date": {
+          "from": 1778,
+          "to": 1784,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-srirangapatna-gumbaz-image-lead-polity-1",
+        "fromId": "culture-parampare-srirangapatna-gumbaz-image-lead",
+        "type": "cultural-architecture",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1780,
+          "to": 1800,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-srirangapatna-gumbaz-image-lead-place-1",
+        "fromId": "culture-parampare-srirangapatna-gumbaz-image-lead",
+        "type": "cultural-location",
+        "toId": "place-gumbaz-srirangapatna",
+        "date": {
+          "from": 1780,
+          "to": 1800,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-srirangapatna-gumbaz-image-lead-person-1",
+        "fromId": "culture-parampare-srirangapatna-gumbaz-image-lead",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-hyder-ali",
+        "date": {
+          "from": 1780,
+          "to": 1800,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-srirangapatna-gumbaz-image-lead-person-2",
+        "fromId": "culture-parampare-srirangapatna-gumbaz-image-lead",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-tipu-sultan",
+        "date": {
+          "from": 1780,
+          "to": 1800,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-chitradurga-fort-image-lead-polity-1",
+        "fromId": "culture-parampare-chitradurga-fort-image-lead",
+        "type": "cultural-architecture",
+        "toId": "external-polity-chitradurga-nayaka",
+        "date": {
+          "from": 1568,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period fort image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-chitradurga-fort-image-lead-polity-2",
+        "fromId": "culture-parampare-chitradurga-fort-image-lead",
+        "type": "cultural-architecture",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1568,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period fort image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-chitradurga-fort-image-lead-place-1",
+        "fromId": "culture-parampare-chitradurga-fort-image-lead",
+        "type": "cultural-location",
+        "toId": "place-chitradurga-fort",
+        "date": {
+          "from": 1568,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period fort image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-mysuru-palace-image-lead-polity-1",
+        "fromId": "culture-parampare-mysuru-palace-image-lead",
+        "type": "cultural-architecture",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1897,
+          "to": 1912,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-culture-parampare-mysuru-palace-image-lead-place-1",
+        "fromId": "culture-parampare-mysuru-palace-image-lead",
+        "type": "cultural-location",
+        "toId": "place-mysuru-palace",
+        "date": {
+          "from": 1897,
+          "to": 1912,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Later-period Mysore image/chapter locator; exact caption and page unresolved"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
