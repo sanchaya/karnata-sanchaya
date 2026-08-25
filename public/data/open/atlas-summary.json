@@ -37858,15 +37858,18 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed (item-level), freely downloadable"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": [
+          "manuscript-shantipurana-jangamwadi-witness-lead"
+        ]
       },
       {
         "id": "work-chavundaraya-purana",
@@ -37941,7 +37944,7 @@
           "from": 993,
           "to": 993,
           "era": "CE",
-          "precision": "circa"
+          "precision": "year"
         },
         "languages": [
           "Kannada"
@@ -37960,15 +37963,18 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection (item-level), freely downloadable"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": [
+          "manuscript-ajitapurana-jangamwadi-witness-lead"
+        ]
       },
       {
         "id": "work-panchatantra-durgasimha",
@@ -39506,6 +39512,54 @@
         "scope": {
           "en": "Full digitized text of Epigraphia Carnatica Vol. VII (Shimoga district). Identifies the Talagunda pillar inscription as Shikaripur-taluk item Sk. 176: a 46-line granite pillar beside the Pranaveshvara temple, giving the Kadamba dynastic genealogy up to King Shantivarman, dated c. 455-470 CE; also edited by Kielhorn in Epigraphia Indica. OCR discovery source; a reviewer must still check the printed plate/page image.",
           "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ VIIರ (ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ) ಸಂಪೂರ್ಣ ಡಿಜಿಟಲೀಕೃತ ಪಠ್ಯ. ತಾಳಗುಂದ ಸ್ತಂಭ ಶಾಸನವನ್ನು ಶಿಕಾರಿಪುರ-ತಾಲೂಕು ವಸ್ತು Sk. 176 ಎಂದು ಗುರುತಿಸುತ್ತದೆ: ಪ್ರಾಣವೇಶ್ವರ ದೇವಾಲಯದ ಬಳಿಯ 46-ಸಾಲಿನ ಗ್ರಾನೈಟ್ ಸ್ತಂಭ, ರಾಜ ಶಾಂತಿವರ್ಮನವರೆಗಿನ ಕದಂಬ ವಂಶಾವಳಿಯನ್ನು ನೀಡುತ್ತದೆ, ಸು. 455-470; ಕೀಲ್‌ಹಾರ್ನ್ ಎಪಿಗ್ರಾಫಿಯಾ ಇಂಡಿಕಾದಲ್ಲೂ ಸಂಪಾದಿಸಿದ್ದಾರೆ. OCR ಅನ್ವೇಷಣಾ ಆಕರ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಇನ್ನೂ ಪರಿಶೀಲಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-archive-ajitapurana-sannayya-ramagauda",
+        "type": "digitized-print-edition",
+        "title": {
+          "en": "Ajita Tirthakara Puranam of Ranna, ed. N. Sannayya Rama Gauda (Internet Archive)",
+          "kn": "ರನ್ನನ ಅಜಿತ ತೀರ್ಥಕರ ಪುರಾಣಂ, ಸಂ. ಎನ್. ಸಣ್ಣಯ್ಯ ರಾಮಗೌಡ (ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್)"
+        },
+        "authors": [
+          "Ranna",
+          "N. Sannayya Rama Gauda (ed.)"
+        ],
+        "year": null,
+        "url": "https://archive.org/details/ajita-tirthakara-puranam-of-ranna-by-n-sannayya-rama-gauda-jangamwadi-math-collection",
+        "licence": "freely downloadable on Internet Archive; formal copyright status not independently confirmed",
+        "scope": {
+          "en": "Jangamwadi Math Library Collection digitized edition of Ranna's Ajitapurana (993 CE), the shortest Jain purana in Kannada, narrating the life of the second tirthankara Ajitanatha. Freely downloadable in full; usable as an edition-comparison witness pending independent scholarly review.",
+          "kn": "ರನ್ನನ ಅಜಿತಪುರಾಣದ (993) ಜಂಗಮವಾಡಿ ಮಠ ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕೃತ ಆವೃತ್ತಿ, ಕನ್ನಡದ ಅತ್ಯಂತ ಚಿಕ್ಕ ಜೈನ ಪುರಾಣ, ಎರಡನೇ ತೀರ್ಥಂಕರ ಅಜಿತನಾಥನ ಜೀವನವನ್ನು ನಿರೂಪಿಸುತ್ತದೆ. ಸಂಪೂರ್ಣವಾಗಿ ಉಚಿತ ಡೌನ್‌ಲೋಡ್; ಸ್ವತಂತ್ರ ವಿದ್ವತ್ ಪರಿಶೀಲನೆಯವರೆಗೆ ಆವೃತ್ತಿ-ಹೋಲಿಕೆ ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸಬಹುದು."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-archive-shantipurana-vidyashankar",
+        "type": "digitized-print-edition",
+        "title": {
+          "en": "Ponna Shanti Purana Sangraha, ed. Dr. S. Vidyashankar (Internet Archive)",
+          "kn": "ಪೊನ್ನ ಶಾಂತಿಪುರಾಣ ಸಂಗ್ರಹ, ಸಂ. ಡಾ. ಎಸ್. ವಿದ್ಯಾಶಂಕರ್ (ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್)"
+        },
+        "authors": [
+          "Ponna",
+          "S. Vidyashankar (ed.)"
+        ],
+        "year": null,
+        "url": "https://archive.org/details/ibQB_ponna-shanti-purana-sangraha-by-dr.-s.-vidyashankar-kannada-priyadarshini-prakashan",
+        "licence": "CC0 1.0 Universal (public domain dedication)",
+        "scope": {
+          "en": "Priyadarshini Prakashan edition of Ponna's Shantipurana, a twelve-chapter champu biography of the sixteenth tirthankara Shantinatha, digitized by the Jangamwadi Math Library Collection at 600 DPI with Kannada OCR. Explicitly released CC0; freely downloadable in full; usable as an edition-comparison witness pending independent scholarly review.",
+          "kn": "ಪೊನ್ನನ ಶಾಂತಿಪುರಾಣದ ಪ್ರಿಯದರ್ಶಿನಿ ಪ್ರಕಾಶನ ಆವೃತ್ತಿ, ಹದಿನಾರನೇ ತೀರ್ಥಂಕರ ಶಾಂತಿನಾಥನ ಹನ್ನೆರಡು-ಅಧ್ಯಾಯದ ಚಂಪೂ ಜೀವನಚರಿತ್ರೆ, ಜಂಗಮವಾಡಿ ಮಠ ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹದಿಂದ 600 DPIನಲ್ಲಿ ಕನ್ನಡ OCR ಜೊತೆ ಡಿಜಿಟಲೀಕೃತ. ಸ್ಪಷ್ಟವಾಗಿ CC0 ಬಿಡುಗಡೆ; ಸಂಪೂರ್ಣವಾಗಿ ಉಚಿತ ಡೌನ್‌ಲೋಡ್; ಸ್ವತಂತ್ರ ವಿದ್ವತ್ ಪರಿಶೀಲನೆಯವರೆಗೆ ಆವೃತ್ತಿ-ಹೋಲಿಕೆ ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸಬಹುದು."
         },
         "review": {
           "status": "needs-review",
@@ -62622,8 +62676,8 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed (item-level), freely downloadable"
           }
         ],
         "review": {
@@ -62664,12 +62718,12 @@
           "from": 993,
           "to": 993,
           "era": "CE",
-          "precision": "circa"
+          "precision": "year"
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection (item-level), freely downloadable"
           }
         ],
         "review": {
@@ -63125,8 +63179,8 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed (item-level), freely downloadable"
           }
         ],
         "review": {
@@ -63167,12 +63221,12 @@
           "from": 993,
           "to": 993,
           "era": "CE",
-          "precision": "circa"
+          "precision": "year"
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection (item-level), freely downloadable"
           }
         ],
         "review": {
@@ -85654,6 +85708,52 @@
         }
       },
       {
+        "id": "rel-manuscript-ajitapurana-jangamwadi-witness-lead-work",
+        "fromId": "manuscript-ajitapurana-jangamwadi-witness-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-ajitapurana",
+        "date": {
+          "from": 993,
+          "to": 993,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection, freely downloadable"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-manuscript-shantipurana-jangamwadi-witness-lead-work",
+        "fromId": "manuscript-shantipurana-jangamwadi-witness-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-shantipurana",
+        "date": {
+          "from": 950,
+          "to": 950,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed, freely downloadable"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
         "id": "rel-manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead-work",
         "fromId": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
         "type": "manuscript-witness-for",
@@ -90102,6 +90202,110 @@
           {
             "sourceId": "src-archive-torave-ramayana-vol2",
             "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2, freely downloadable; Volume 1 still to be located"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-ajitapurana-jangamwadi-witness-lead",
+        "name": {
+          "en": "Ajitapurana digital witness lead",
+          "kn": "ಅಜಿತಪುರಾಣ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-ajitapurana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Jangamwadi Math Library Collection edition, ed. N. Sannayya Rama Gauda, digitized on the Internet Archive",
+          "kn": "ಜಂಗಮವಾಡಿ ಮಠ ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹ ಆವೃತ್ತಿ, ಸಂ. ಎನ್. ಸಣ್ಣಯ್ಯ ರಾಮಗೌಡ, ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನಲ್ಲಿ ಡಿಜಿಟಲೀಕೃತ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 993,
+          "to": 993,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "complete",
+        "access": {
+          "status": "public",
+          "url": "https://archive.org/details/ajita-tirthakara-puranam-of-ranna-by-n-sannayya-rama-gauda-jangamwadi-math-collection"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection, freely downloadable"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-shantipurana-jangamwadi-witness-lead",
+        "name": {
+          "en": "Shantipurana digital witness lead",
+          "kn": "ಶಾಂತಿಪುರಾಣ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-shantipurana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Priyadarshini Prakashan edition, ed. Dr. S. Vidyashankar, digitized by the Jangamwadi Math Library Collection",
+          "kn": "ಪ್ರಿಯದರ್ಶಿನಿ ಪ್ರಕಾಶನ ಆವೃತ್ತಿ, ಸಂ. ಡಾ. ಎಸ್. ವಿದ್ಯಾಶಂಕರ್, ಜಂಗಮವಾಡಿ ಮಠ ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹದಿಂದ ಡಿಜಿಟಲೀಕೃತ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 950,
+          "to": 950,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "complete",
+        "access": {
+          "status": "public",
+          "url": "https://archive.org/details/ibQB_ponna-shanti-purana-sangraha-by-dr.-s.-vidyashankar-kannada-priyadarshini-prakashan"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "located"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed, freely downloadable"
           }
         ],
         "review": {
