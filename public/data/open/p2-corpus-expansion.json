@@ -58,6 +58,7 @@
         "auditStatus": "seeded",
         "inscriptionIds": [
           "inscription-aihole",
+          "inscription-parampare-badami-chamarasa-lead",
           "inscription-kappe-arabhatta"
         ],
         "priorityCandidates": [],
@@ -3315,8 +3316,10 @@
           "kn": "ಉಡುಪಿ"
         },
         "districtAuditId": "audit-udupi",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-parampare-barkur-harihara-lead"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-barkur-kathali-basti",
@@ -3401,17 +3404,13 @@
         ],
         "reviewPass": null,
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-asi-barkur-register",
-            "locator": "Archaeological Survey register index: Kathali Basti at Barkur; cross-reference required to the South Kanara epigraphical corpus"
-          },
-          {
-            "sourceId": "src-wikipedia-kannada-inscriptions",
-            "locator": "Kannada inscriptions: 8th-century Belmannu copper plate of Aluvarasa II"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -5643,6 +5642,249 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-source-volume-barkur-harihara-lead",
+        "name": {
+          "en": "Barkur Harihara I inscription edition lead",
+          "kn": "ಬಾರಕೂರು ಹರಿಹರ I ಶಾಸನ ಆವೃತ್ತಿ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-parampare-barkur-harihara-lead",
+        "editionKind": "item-edition-review",
+        "language": "unresolved",
+        "script": "unresolved",
+        "date": {
+          "from": 1339,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "2",
+          "number": "unresolved",
+          "locator": "OCR lines around 1987-1992; printed page and inscription number unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-vijayanagara-kannada-nagari-mixed-phase"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Resolve the Barkur inscription number, page image and line witness before linking this to coastal authority.",
+            "kn": "ಕರಾವಳಿ ಅಧಿಕಾರಕ್ಕೆ ಜೋಡಿಸುವ ಮೊದಲು ಬಾರಕೂರು ಶಾಸನ ಸಂಖ್ಯೆ, ಪುಟಚಿತ್ರ ಮತ್ತು ಸಾಲು ಸಾಕ್ಷ್ಯವನ್ನು ನಿರ್ಧರಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v2; OCR locator around Barkur/Harihara passage"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-source-volume-badami-chamarasa-lead",
+        "name": {
+          "en": "Badami Chamarasa fort inscription edition lead",
+          "kn": "ಬಾದಾಮಿ ಚಾಮರಸ ಕೋಟೆ ಶಾಸನ ಆವೃತ್ತಿ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-parampare-badami-chamarasa-lead",
+        "editionKind": "item-edition-review",
+        "language": "unresolved",
+        "script": "unresolved",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "2",
+          "number": "unresolved",
+          "locator": "OCR locator for Badami fort/Chamarasa passage; printed page and inscription number unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-vijayanagara-kannada-nagari-mixed-phase"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Find the exact Badami fort inscription edition and page image before promotion.",
+            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ನಿಖರ ಬಾದಾಮಿ ಕೋಟೆ ಶಾಸನ ಆವೃತ್ತಿ ಮತ್ತು ಪುಟಚಿತ್ರವನ್ನು ಪತ್ತೆಹಚ್ಚಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v2; OCR locator around Badami fort/Chamarasa passage"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-source-volume-belur-hoysala-vol7-lead",
+        "name": {
+          "en": "Belur / Hoysala Epigraphia Carnatica Vol. 7 lead",
+          "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಕ ಸಂಪುಟ 7 ದಾರಿ"
+        },
+        "inscriptionId": "inscription-belur-foundation",
+        "editionKind": "item-edition-review",
+        "language": "unresolved",
+        "script": "unresolved",
+        "date": {
+          "from": 1117,
+          "to": 1117,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": "7",
+          "number": "unresolved",
+          "locator": "Internet Archive identifier iisb.epigraphiacarnat0000unse.vol.7; OCR first line 2191 for Belur/Hoysala hint",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-medieval-kannada-temple-epigraphy"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Use the IA identifier folder to locate the printed EC item number, page image and text witness.",
+            "kn": "IA identifier folder ಬಳಸಿ ಮುದ್ರಿತ EC ವಸ್ತು ಸಂಖ್ಯೆ, ಪುಟಚಿತ್ರ ಮತ್ತು ಪಠ್ಯ ಸಾಕ್ಷ್ಯವನ್ನು ಪತ್ತೆಹಚ್ಚಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-local-iisb-epigraphiacarnat0000unse-vol-7",
+            "locator": "OCR discovery only: archive-hint-belur-hoysala; page image and item number required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],
@@ -75855,6 +76097,70 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
+        "name": {
+          "en": "Krishnadevaraya and Achyuta Devaraya gold coin plate lead",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಅಚ್ಯುತ ದೇವರಾಯ ಚಿನ್ನದ ನಾಣ್ಯ ಫಲಕ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-vijayanagara",
+        "placeId": "place-hampi",
+        "date": {
+          "from": 1509,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Karnataka Parampare image-list lead for gold coins associated with Krishnadevaraya and Achyuta Devaraya; catalogue specimen unresolved.",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಅಚ್ಯುತ ದೇವರಾಯರೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಚಿನ್ನದ ನಾಣ್ಯಗಳ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಚಿತ್ರಪಟ್ಟಿ ದಾರಿ; catalogue ಮಾದರಿ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "reverse": {
+          "en": "Legend, denomination, mint and findspot remain unresolved until a numismatic catalogue is matched.",
+          "kn": "ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ಹೊಂದುವವರೆಗೆ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-hampi",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "provisional"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR lines around 1499-1506; plate pages around 632-633 need page-image review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],
