@@ -2552,6 +2552,36 @@
         }
       },
       {
+        "id": "external-polity-satavahana",
+        "name": {
+          "en": "Satavahana polity",
+          "kn": "ಸಾತವಾಹನ ರಾಜ್ಯ"
+        },
+        "type": "external-context-polity",
+        "date": {
+          "from": 1,
+          "to": 250,
+          "era": "CE",
+          "precision": "range"
+        },
+        "capitalId": "place-pratishthana-paithan",
+        "description": {
+          "en": "Deccan polity retained as a context layer for post-Mauryan Brahmi comparison. It is not modelled here as a Karnataka kingdom.",
+          "kn": "ಮೌರ್ಯಾನಂತರ ಬ್ರಾಹ್ಮಿ ಹೋಲಿಕೆಗಾಗಿ ಸಂದರ್ಭ ಪದರವಾಗಿ ಉಳಿಸಿದ ದಖ್ಖನ್ ರಾಜ್ಯ. ಇದನ್ನು ಇಲ್ಲಿ ಕರ್ನಾಟಕ ರಾಜ್ಯವಾಗಿ ಮಾದರಿಗೊಳಿಸಿಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-script-paleography-sprint-2026",
+            "locator": "Satavahana Brahmi comparison lane; add specialist palaeographic citation before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "external-polity-ullal-chowta",
         "name": {
           "en": "Chowta dynasty of Ullal",
@@ -23722,6 +23752,124 @@
         }
       },
       {
+        "id": "place-maski-rock-edict",
+        "name": {
+          "en": "Maski Minor Rock Edict site",
+          "kn": "ಮಸ್ಕಿ ಲಘು ಶಿಲಾಶಾಸನ ತಾಣ"
+        },
+        "kind": "ashokan-rock-edict-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.653,
+            15.955
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski archaeological and epigraphical site; coordinate requires authority reconciliation"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-brahmagiri-rock-edict",
+        "name": {
+          "en": "Brahmagiri Ashokan edict site",
+          "kn": "ಬ್ರಹ್ಮಗಿರಿ ಅಶೋಕ ಶಾಸನ ತಾಣ"
+        },
+        "kind": "ashokan-rock-edict-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.82,
+            14.82
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "ASI Hampi Circle Asokan edict context; exact monument coordinate and protected-boundary point pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-basel-mission-mangaluru-printing",
+        "name": {
+          "en": "Basel Mission printing context, Mangaluru",
+          "kn": "ಮಂಗಳೂರಿನ ಬಾಸೆಲ್ ಮಿಷನ್ ಮುದ್ರಣ ಸಂದರ್ಭ"
+        },
+        "kind": "print-history-context",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.856,
+            12.914
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-basel-mission-kannada-print-lead",
+            "locator": "Print-history locator to resolve against a citable publication and page image"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-pratishthana-paithan",
+        "name": {
+          "en": "Pratishthana / Paithan",
+          "kn": "ಪ್ರತಿಷ್ಠಾನ / ಪೈಠಣ"
+        },
+        "kind": "historical-capital-context",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.38,
+            19.48
+          ],
+          "precision": "approximate"
+        },
+        "geographicScope": {
+          "region": "Maharashtra / Deccan",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "ಭಾರತ"
+          },
+          "outsideKarnataka": true,
+          "outsideIndia": false
+        },
+        "citations": [
+          {
+            "sourceId": "src-script-paleography-sprint-2026",
+            "locator": "Satavahana capital context added only for map-ready chronology filtering; specialist gazetteer locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "place-kalsi-ashokan-edicts",
         "name": {
           "en": "Kalsi Ashokan rock edict site",
@@ -31780,6 +31928,86 @@
         }
       },
       {
+        "id": "event-paleography-parampare-script-standardisation-lead",
+        "type": "cultural-contact",
+        "name": {
+          "en": "Karnataka Parampare script-standardisation review lead",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ ಲಿಪಿ-ಮಾನಕೀಕರಣ ಪರಿಶೀಲನಾ ದಾರಿ"
+        },
+        "date": {
+          "from": 450,
+          "to": 1900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "year": 850,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.68,
+            15.92
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "A source-volume extraction record that routes Parampare and Epigraphia leads into the expanded script-evolution classification instead of leaving script evidence scattered by dynasty.",
+          "kn": "ಲಿಪಿ ಸಾಕ್ಷ್ಯವನ್ನು ವಂಶವಾರು ಚದುರಿಸದೆ ವಿಸ್ತರಿಸಿದ ಲಿಪಿ-ವಿಕಾಸ ವರ್ಗೀಕರಣಕ್ಕೆ ಪರಂಪರೆ ಮತ್ತು ಎಪಿಗ್ರಾಫಿಯಾ ದಾರಿಗಳನ್ನು ಕೊಂಡೊಯ್ಯುವ source-volume extraction ದಾಖಲೆ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-kadamba",
+            "role": "early-script-context",
+            "outcome": "palaeography-review-lead"
+          },
+          {
+            "polityId": "polity-badami-chalukya",
+            "role": "dynastic-stage-context",
+            "outcome": "palaeography-review-lead"
+          },
+          {
+            "polityId": "polity-rashtrakuta",
+            "role": "dynastic-stage-context",
+            "outcome": "palaeography-review-lead"
+          },
+          {
+            "polityId": "polity-hoysala",
+            "role": "middle-kannada-context",
+            "outcome": "palaeography-review-lead"
+          },
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "standardising-stage-context",
+            "outcome": "palaeography-review-lead"
+          }
+        ],
+        "placeIds": [
+          "place-halmidi",
+          "place-aihole",
+          "place-manyakheta",
+          "place-belur",
+          "place-hampi"
+        ],
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Early dynastic and literary OCR/article locators"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara and later material-culture OCR/article locators"
+          },
+          {
+            "sourceId": "src-ia-jaigyan-epigraphy-collection",
+            "locator": "Epigraphia corpus search route for exact volume/page locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "event-brahmagiri-chandravalli-archaeological-sequence",
         "type": "cultural-contact",
         "name": {
@@ -35265,6 +35493,84 @@
           {
             "sourceId": "src-karnataka-parampare-v2",
             "locator": "OCR locator around 1340 Badami fort passage; identify exact inscription edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "inscription-maski-minor-rock-edict",
+        "name": {
+          "en": "Maski Minor Rock Edict",
+          "kn": "ಮಸ್ಕಿ ಲಘು ಶಿಲಾಶಾಸನ"
+        },
+        "date": {
+          "from": 260,
+          "to": 250,
+          "era": "BCE",
+          "precision": "circa"
+        },
+        "placeId": "place-maski-rock-edict",
+        "polityId": "external-polity-maurya",
+        "districtAuditId": "audit-raichur",
+        "languages": [
+          "Prakrit"
+        ],
+        "scripts": [
+          "Ashokan Brahmi"
+        ],
+        "description": {
+          "en": "A key Ashokan Brahmi witness in Karnataka used here as a root-script sample for the Kannada palaeography timeline; item-level transcription and page locators remain under review.",
+          "kn": "ಕನ್ನಡ ಲಿಪಿಶಾಸ್ತ್ರ ಕಾಲರೇಖೆಯ ಮೂಲ-ಲಿಪಿ ಮಾದರಿಯಾಗಿ ಬಳಸಿದ ಕರ್ನಾಟಕದ ಪ್ರಮುಖ ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಸಾಕ್ಷ್ಯ; ವಸ್ತುಮಟ್ಟದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಪರಿಶೀಲನೆಗೆ ಬಾಕಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict; edition, plate and line locator required"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Direct reading context; compare before translation promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "inscription-brahmagiri-minor-rock-edict",
+        "name": {
+          "en": "Brahmagiri Minor Rock Edict",
+          "kn": "ಬ್ರಹ್ಮಗಿರಿ ಲಘು ಶಿಲಾಶಾಸನ"
+        },
+        "date": {
+          "from": 260,
+          "to": 250,
+          "era": "BCE",
+          "precision": "circa"
+        },
+        "placeId": "place-brahmagiri-rock-edict",
+        "polityId": "external-polity-maurya",
+        "districtAuditId": "audit-chitradurga",
+        "languages": [
+          "Prakrit"
+        ],
+        "scripts": [
+          "Ashokan Brahmi"
+        ],
+        "description": {
+          "en": "A Karnataka Ashokan Brahmi sample for comparing straight strokes, angular intersections and early inscriptional ductus before Kadamba/Old Kannada divergence.",
+          "kn": "ಕದಂಬ/ಹಳೆಗನ್ನಡ ವಿಭಜನೆಯ ಮೊದಲು ನೇರ ರೇಖೆಗಳು, ಕೋನೀಯ ಜೋಡಣೆಗಳು ಮತ್ತು ಆರಂಭಿಕ ಶಾಸನ ಲಿಪಿಚಲನೆಯನ್ನು ಹೋಲಿಸಲು ಕರ್ನಾಟಕದ ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮಾದರಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict context; exact edition and line locator pending"
           }
         ],
         "review": {
@@ -46409,6 +46715,50 @@
           "kn": "Epigraphia Carnatica Volume 25ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
         },
         "volume": "25",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-script-paleography-sprint-2026",
+        "type": "research-worklist",
+        "title": {
+          "en": "Kannada script paleography classification sprint",
+          "kn": "ಕನ್ನಡ ಲಿಪಿ ಲಿಪಿಶಾಸ್ತ್ರ ವರ್ಗೀಕರಣ ಸ್ಪ್ರಿಂಟ್"
+        },
+        "authors": [
+          "Karnataka Historical Atlas research team"
+        ],
+        "year": 2026,
+        "url": "",
+        "scope": {
+          "en": "Internal review worklist for separating broad script eras, dynastic stages, morphology terms and evidence media. It is a routing source, not final palaeographic authority.",
+          "kn": "ವಿಸ್ತೃತ ಲಿಪಿ ಯುಗಗಳು, ವಂಶ ಹಂತಗಳು, ಆಕಾರಶಾಸ್ತ್ರ ಪದಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಮಾಧ್ಯಮಗಳನ್ನು ಪ್ರತ್ಯೇಕಿಸಲು ಆಂತರಿಕ ಪರಿಶೀಲನಾ ಕಾರ್ಯಪಟ್ಟಿ. ಇದು ಅಂತಿಮ ಲಿಪಿಶಾಸ್ತ್ರ ಪ್ರಾಧಿಕಾರವಲ್ಲ, ಮಾರ್ಗದರ್ಶಕ ಆಕರ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-basel-mission-kannada-print-lead",
+        "type": "print-history-lead",
+        "title": {
+          "en": "Basel Mission and Kannada movable-type printing lead",
+          "kn": "ಬಾಸೆಲ್ ಮಿಷನ್ ಮತ್ತು ಕನ್ನಡ ಚಲ ಅಕ್ಷರ ಮುದ್ರಣ ದಾರಿ"
+        },
+        "authors": [
+          "Karnataka Historical Atlas research team"
+        ],
+        "year": 2026,
+        "url": "",
+        "scope": {
+          "en": "Review lead for connecting Mangaluru/Bangalore printing, orthographic standardisation and modern Kannada glyph forms to printed sources and page images.",
+          "kn": "ಮಂಗಳೂರು/ಬೆಂಗಳೂರು ಮುದ್ರಣ, ಅಕ್ಷರಸಂಪ್ರದಾಯದ ಮಾನಕೀಕರಣ ಮತ್ತು ಆಧುನಿಕ ಕನ್ನಡ ಅಕ್ಷರರೂಪಗಳನ್ನು ಮುದ್ರಿತ ಆಕರಗಳು ಮತ್ತು ಪುಟಚಿತ್ರಗಳಿಗೆ ಜೋಡಿಸಲು ಪರಿಶೀಲನಾ ದಾರಿ."
+        },
         "review": {
           "status": "needs-review",
           "reviewer": null,
@@ -61430,6 +61780,56 @@
         }
       },
       {
+        "id": "rel-inscription-maski-minor-rock-edict-attests",
+        "fromId": "inscription-maski-minor-rock-edict",
+        "type": "attests",
+        "toId": "external-polity-maurya",
+        "date": {
+          "from": 260,
+          "to": 250,
+          "era": "BCE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict; edition, plate and line locator required"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Direct reading context; compare before translation promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-inscription-brahmagiri-minor-rock-edict-attests",
+        "fromId": "inscription-brahmagiri-minor-rock-edict",
+        "type": "attests",
+        "toId": "external-polity-maurya",
+        "date": {
+          "from": 260,
+          "to": 250,
+          "era": "BCE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict context; exact edition and line locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-inscription-kandahar-bilingual-edict-attests",
         "fromId": "inscription-kandahar-bilingual-edict",
         "type": "attests",
@@ -65645,6 +66045,161 @@
           {
             "sourceId": "src-karnataka-parampare-v1",
             "locator": "Printed pp. 478-484; OCR lines around 800 and 24680-24827; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-paleography-parampare-script-standardisation-lead-participant-1",
+        "fromId": "event-paleography-parampare-script-standardisation-lead",
+        "type": "participant-early-script-context",
+        "toId": "polity-kadamba",
+        "date": {
+          "from": 450,
+          "to": 1900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Early dynastic and literary OCR/article locators"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara and later material-culture OCR/article locators"
+          },
+          {
+            "sourceId": "src-ia-jaigyan-epigraphy-collection",
+            "locator": "Epigraphia corpus search route for exact volume/page locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-paleography-parampare-script-standardisation-lead-participant-2",
+        "fromId": "event-paleography-parampare-script-standardisation-lead",
+        "type": "participant-dynastic-stage-context",
+        "toId": "polity-badami-chalukya",
+        "date": {
+          "from": 450,
+          "to": 1900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Early dynastic and literary OCR/article locators"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara and later material-culture OCR/article locators"
+          },
+          {
+            "sourceId": "src-ia-jaigyan-epigraphy-collection",
+            "locator": "Epigraphia corpus search route for exact volume/page locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-paleography-parampare-script-standardisation-lead-participant-3",
+        "fromId": "event-paleography-parampare-script-standardisation-lead",
+        "type": "participant-dynastic-stage-context",
+        "toId": "polity-rashtrakuta",
+        "date": {
+          "from": 450,
+          "to": 1900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Early dynastic and literary OCR/article locators"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara and later material-culture OCR/article locators"
+          },
+          {
+            "sourceId": "src-ia-jaigyan-epigraphy-collection",
+            "locator": "Epigraphia corpus search route for exact volume/page locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-paleography-parampare-script-standardisation-lead-participant-4",
+        "fromId": "event-paleography-parampare-script-standardisation-lead",
+        "type": "participant-middle-kannada-context",
+        "toId": "polity-hoysala",
+        "date": {
+          "from": 450,
+          "to": 1900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Early dynastic and literary OCR/article locators"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara and later material-culture OCR/article locators"
+          },
+          {
+            "sourceId": "src-ia-jaigyan-epigraphy-collection",
+            "locator": "Epigraphia corpus search route for exact volume/page locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-paleography-parampare-script-standardisation-lead-participant-5",
+        "fromId": "event-paleography-parampare-script-standardisation-lead",
+        "type": "participant-standardising-stage-context",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 450,
+          "to": 1900,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Early dynastic and literary OCR/article locators"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara and later material-culture OCR/article locators"
+          },
+          {
+            "sourceId": "src-ia-jaigyan-epigraphy-collection",
+            "locator": "Epigraphia corpus search route for exact volume/page locators"
           }
         ],
         "review": {
@@ -76450,6 +77005,217 @@
         }
       },
       {
+        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-place-1",
+        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
+        "type": "district-history-place-context",
+        "toId": "place-brahmagiri-rock-edict",
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-place-2",
+        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
+        "type": "district-history-place-context",
+        "toId": "place-chitradurga-fort",
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-polity-1",
+        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-chitradurga-nayaka",
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-polity-2",
+        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
+        "type": "district-history-polity-context",
+        "toId": "polity-mysore",
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-event-1",
+        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
+        "type": "district-history-event-context",
+        "toId": "event-chitradurga-nayaka-governance",
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri Asokan edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-raichur-maski-ashokan-edict-place-1",
+        "fromId": "district-history-raichur-maski-ashokan-edict",
+        "type": "district-history-place-context",
+        "toId": "place-maski-rock-edict",
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski monograph review lead"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Critical reading comparison lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-raichur-maski-ashokan-edict-polity-1",
+        "fromId": "district-history-raichur-maski-ashokan-edict",
+        "type": "district-history-polity-context",
+        "toId": "polity-vijayanagara",
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski monograph review lead"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Critical reading comparison lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-raichur-maski-ashokan-edict-polity-2",
+        "fromId": "district-history-raichur-maski-ashokan-edict",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-bahmani",
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski monograph review lead"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Critical reading comparison lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-raichur-maski-ashokan-edict-polity-3",
+        "fromId": "district-history-raichur-maski-ashokan-edict",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-adil-shahi",
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski monograph review lead"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Critical reading comparison lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-raichur-maski-ashokan-edict-person-1",
+        "fromId": "district-history-raichur-maski-ashokan-edict",
+        "type": "district-history-person-context",
+        "toId": "person-krishnadevaraya",
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski monograph review lead"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Critical reading comparison lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-district-history-raichur-maski-ashokan-edict-event-1",
+        "fromId": "district-history-raichur-maski-ashokan-edict",
+        "type": "district-history-event-context",
+        "toId": "event-raichur-1520",
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski monograph review lead"
+          },
+          {
+            "sourceId": "src-falk-maski-critical-reading",
+            "locator": "Critical reading comparison lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-district-history-v022-bagalkote-place-1",
         "fromId": "district-history-v022-bagalkote",
         "type": "district-history-place-context",
@@ -76781,74 +77547,6 @@
           {
             "sourceId": "src-v022-district-audit-provenance",
             "locator": "audit-chikkaballapur / candidate-chikkaballapur-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-place-1",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-place-context",
-        "toId": "place-chitradurga-fort",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-polity-1",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-chitradurga-nayaka",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-polity-2",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-polity-context",
-        "toId": "polity-mysore",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-event-1",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-event-context",
-        "toId": "event-chitradurga-nayaka-governance",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
           }
         ],
         "review": {
@@ -79489,6 +80187,206 @@
         }
       },
       {
+        "id": "rel-feudatory-eastern-chalukya-vengi-badami-chalukya-overlord",
+        "fromId": "feudatory-eastern-chalukya-vengi-badami-chalukya",
+        "type": "feudatory-overlord",
+        "toId": "polity-badami-chalukya",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Pulakeshin II appointing Kubja Vishnuvardhana; verify with primary charter locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-eastern-chalukya-vengi-badami-chalukya-subordinate",
+        "fromId": "feudatory-eastern-chalukya-vengi-badami-chalukya",
+        "type": "feudatory-subordinate",
+        "toId": "external-polity-eastern-chalukya-vengi",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Pulakeshin II appointing Kubja Vishnuvardhana; verify with primary charter locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-eastern-chalukya-vengi-badami-chalukya-place-1",
+        "fromId": "feudatory-eastern-chalukya-vengi-badami-chalukya",
+        "type": "feudatory-place-context",
+        "toId": "place-badami",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Pulakeshin II appointing Kubja Vishnuvardhana; verify with primary charter locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-eastern-chalukya-vengi-badami-chalukya-place-2",
+        "fromId": "feudatory-eastern-chalukya-vengi-badami-chalukya",
+        "type": "feudatory-place-context",
+        "toId": "place-vengi",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Pulakeshin II appointing Kubja Vishnuvardhana; verify with primary charter locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-to-mysore-overlord",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-to-mysore",
+        "type": "feudatory-overlord",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1588,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Fort and Nayaka context"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Chitradurga district political history locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-to-mysore-subordinate",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-to-mysore",
+        "type": "feudatory-subordinate",
+        "toId": "external-polity-chitradurga-nayaka",
+        "date": {
+          "from": 1588,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Fort and Nayaka context"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Chitradurga district political history locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-to-mysore-place-1",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-to-mysore",
+        "type": "feudatory-place-context",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1588,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Fort and Nayaka context"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Chitradurga district political history locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-to-mysore-place-2",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-to-mysore",
+        "type": "feudatory-place-context",
+        "toId": "place-chitradurga-fort",
+        "date": {
+          "from": 1588,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Fort and Nayaka context"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Chitradurga district political history locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-admin-tirhut-simraungarh-karnata-zone-polity",
         "fromId": "admin-tirhut-simraungarh-karnata-zone",
         "type": "administrative-division-of",
@@ -79700,6 +80598,29 @@
         "fromId": "script-southern-brahmi-kadamba-transition",
         "type": "script-sample-inscription",
         "toId": "inscription-halmidi",
+        "date": {
+          "from": 300,
+          "to": 550,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda and Halmidi item-level references required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-southern-brahmi-kadamba-transition-predecessor-1",
+        "fromId": "script-southern-brahmi-kadamba-transition",
+        "type": "script-predecessor",
+        "toId": "script-ashokan-satavahana-brahmi-root",
         "date": {
           "from": 300,
           "to": 550,
@@ -80068,7 +80989,7 @@
         "id": "rel-script-early-kannada-verse-transition-predecessor-1",
         "fromId": "script-early-kannada-verse-transition",
         "type": "script-predecessor",
-        "toId": "script-southern-brahmi-kadamba-transition",
+        "toId": "script-badami-chalukya-rounded-transition",
         "date": {
           "from": 650,
           "to": 950,
@@ -80250,7 +81171,7 @@
         "id": "rel-script-medieval-kannada-temple-epigraphy-predecessor-1",
         "fromId": "script-medieval-kannada-temple-epigraphy",
         "type": "script-predecessor",
-        "toId": "script-old-kannada-epigraphic-phase",
+        "toId": "script-rashtrakuta-uniform-old-kannada",
         "date": {
           "from": 950,
           "to": 1350,
@@ -80350,7 +81271,7 @@
         "id": "rel-script-vijayanagara-kannada-nagari-mixed-phase-predecessor-1",
         "fromId": "script-vijayanagara-kannada-nagari-mixed-phase",
         "type": "script-predecessor",
-        "toId": "script-medieval-kannada-temple-epigraphy",
+        "toId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
         "date": {
           "from": 1336,
           "to": 1646,
@@ -80376,7 +81297,7 @@
         "toId": "polity-mysore",
         "date": {
           "from": 1800,
-          "to": 1973,
+          "to": 2026,
           "era": "CE",
           "precision": "range"
         },
@@ -80396,10 +81317,10 @@
         "id": "rel-script-modern-kannada-print-transition-predecessor-1",
         "fromId": "script-modern-kannada-print-transition",
         "type": "script-predecessor",
-        "toId": "script-vijayanagara-kannada-nagari-mixed-phase",
+        "toId": "script-vijayanagara-nayaka-standardising-kannada",
         "date": {
           "from": 1800,
-          "to": 1973,
+          "to": 2026,
           "era": "CE",
           "precision": "range"
         },
@@ -80413,6 +81334,735 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-script-ashokan-satavahana-brahmi-root-polity-1",
+        "fromId": "script-ashokan-satavahana-brahmi-root",
+        "type": "script-used-by-polity",
+        "toId": "external-polity-maurya",
+        "date": {
+          "from": 300,
+          "to": 300,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri and Karnataka Asokan edict context"
+          },
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-ashokan-satavahana-brahmi-root-polity-2",
+        "fromId": "script-ashokan-satavahana-brahmi-root",
+        "type": "script-used-by-polity",
+        "toId": "external-polity-satavahana",
+        "date": {
+          "from": 300,
+          "to": 300,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri and Karnataka Asokan edict context"
+          },
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-ashokan-satavahana-brahmi-root-inscription-1",
+        "fromId": "script-ashokan-satavahana-brahmi-root",
+        "type": "script-sample-inscription",
+        "toId": "inscription-maski-minor-rock-edict",
+        "date": {
+          "from": 300,
+          "to": 300,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri and Karnataka Asokan edict context"
+          },
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-ashokan-satavahana-brahmi-root-inscription-2",
+        "fromId": "script-ashokan-satavahana-brahmi-root",
+        "type": "script-sample-inscription",
+        "toId": "inscription-brahmagiri-minor-rock-edict",
+        "date": {
+          "from": 300,
+          "to": 300,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri and Karnataka Asokan edict context"
+          },
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-badami-chalukya-rounded-transition-polity-1",
+        "fromId": "script-badami-chalukya-rounded-transition",
+        "type": "script-used-by-polity",
+        "toId": "polity-badami-chalukya",
+        "date": {
+          "from": 543,
+          "to": 757,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole and Badami Chalukya inscription edition locators required"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Kappe Arabhatta witness; line locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-badami-chalukya-rounded-transition-inscription-1",
+        "fromId": "script-badami-chalukya-rounded-transition",
+        "type": "script-sample-inscription",
+        "toId": "inscription-aihole",
+        "date": {
+          "from": 543,
+          "to": 757,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole and Badami Chalukya inscription edition locators required"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Kappe Arabhatta witness; line locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-badami-chalukya-rounded-transition-inscription-2",
+        "fromId": "script-badami-chalukya-rounded-transition",
+        "type": "script-sample-inscription",
+        "toId": "inscription-kappe-arabhatta",
+        "date": {
+          "from": 543,
+          "to": 757,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole and Badami Chalukya inscription edition locators required"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Kappe Arabhatta witness; line locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-badami-chalukya-rounded-transition-predecessor-1",
+        "fromId": "script-badami-chalukya-rounded-transition",
+        "type": "script-predecessor",
+        "toId": "script-southern-brahmi-kadamba-transition",
+        "date": {
+          "from": 543,
+          "to": 757,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole and Badami Chalukya inscription edition locators required"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Kappe Arabhatta witness; line locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-rashtrakuta-uniform-old-kannada-polity-1",
+        "fromId": "script-rashtrakuta-uniform-old-kannada",
+        "type": "script-used-by-polity",
+        "toId": "polity-rashtrakuta",
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Rashtrakuta political and cultural context; add palaeographic plate references"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Atakur and Begur printed edition locators required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-rashtrakuta-uniform-old-kannada-inscription-1",
+        "fromId": "script-rashtrakuta-uniform-old-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-atakur",
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Rashtrakuta political and cultural context; add palaeographic plate references"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Atakur and Begur printed edition locators required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-rashtrakuta-uniform-old-kannada-inscription-2",
+        "fromId": "script-rashtrakuta-uniform-old-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-begur",
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Rashtrakuta political and cultural context; add palaeographic plate references"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Atakur and Begur printed edition locators required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-rashtrakuta-uniform-old-kannada-predecessor-1",
+        "fromId": "script-rashtrakuta-uniform-old-kannada",
+        "type": "script-predecessor",
+        "toId": "script-badami-chalukya-rounded-transition",
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Rashtrakuta political and cultural context; add palaeographic plate references"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Atakur and Begur printed edition locators required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-kalyani-chalukya-hoysala-ornate-middle-kannada-polity-1",
+        "fromId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "type": "script-used-by-polity",
+        "toId": "polity-kalyani-chalukya",
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-kalyani-chalukya-hoysala-ornate-middle-kannada-polity-2",
+        "fromId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "type": "script-used-by-polity",
+        "toId": "polity-hoysala",
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-kalyani-chalukya-hoysala-ornate-middle-kannada-inscription-1",
+        "fromId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-lakkundi",
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-kalyani-chalukya-hoysala-ornate-middle-kannada-inscription-2",
+        "fromId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-belur-foundation",
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-kalyani-chalukya-hoysala-ornate-middle-kannada-inscription-3",
+        "fromId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-muktesvara-attiraja-construction",
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-kalyani-chalukya-hoysala-ornate-middle-kannada-predecessor-1",
+        "fromId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "type": "script-predecessor",
+        "toId": "script-rashtrakuta-uniform-old-kannada",
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-polity-1",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-used-by-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-polity-2",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-used-by-polity",
+        "toId": "external-polity-keladi-nayaka",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-polity-3",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-used-by-polity",
+        "toId": "external-polity-chitradurga-nayaka",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-inscription-1",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-hampi",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-inscription-2",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-hampi-krishna-temple",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-inscription-3",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-sample-inscription",
+        "toId": "inscription-parampare-barkur-harihara-lead",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-vijayanagara-nayaka-standardising-kannada-predecessor-1",
+        "fromId": "script-vijayanagara-nayaka-standardising-kannada",
+        "type": "script-predecessor",
+        "toId": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-mysore-wodeyar-print-standard-kannada-polity-1",
+        "fromId": "script-mysore-wodeyar-print-standard-kannada",
+        "type": "script-used-by-polity",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1700,
+          "to": 2026,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-basel-mission-kannada-print-lead",
+            "locator": "Resolve Basel Mission/Mangaluru and Bangalore printing locators"
+          },
+          {
+            "sourceId": "src-patrika-sanchaya-kannada",
+            "locator": "Periodical catalogue rows as print-culture discovery leads"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-script-mysore-wodeyar-print-standard-kannada-predecessor-1",
+        "fromId": "script-mysore-wodeyar-print-standard-kannada",
+        "type": "script-predecessor",
+        "toId": "script-vijayanagara-nayaka-standardising-kannada",
+        "date": {
+          "from": 1700,
+          "to": 2026,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-basel-mission-kannada-print-lead",
+            "locator": "Resolve Basel Mission/Mangaluru and Bangalore printing locators"
+          },
+          {
+            "sourceId": "src-patrika-sanchaya-kannada",
+            "locator": "Periodical catalogue rows as print-culture discovery leads"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -80604,6 +82254,58 @@
         "sourceRecordId": "genealogy-yaduraya-krishnaraja-iii-mysore-line",
         "evidenceLevel": "derived",
         "confidence": "low"
+      },
+      {
+        "id": "rel-genealogy-pulakeshin-ii-kubja-vishnuvardhana-brotherhood",
+        "fromId": "person-pulakeshin-ii",
+        "type": "genealogy-sibling",
+        "toId": "person-kubja-vishnuvardhana",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Brother/viceroy claim; verify against Vengi charter or epigraphic edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        },
+        "sourceRecordId": "genealogy-pulakeshin-ii-kubja-vishnuvardhana-brotherhood",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
+      },
+      {
+        "id": "rel-genealogy-vijayanagara-tuluva-krishnadevaraya-achyutaraya",
+        "fromId": "person-krishnadevaraya",
+        "type": "genealogy-sibling",
+        "toId": "person-achyuta-devaraya",
+        "date": {
+          "from": 1509,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Krishnadevaraya/Achyuta Devaraya image and coin leads; dynasty relation needs page review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        },
+        "sourceRecordId": "genealogy-vijayanagara-tuluva-krishnadevaraya-achyutaraya",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
       },
       {
         "id": "rel-coin-rashtrakuta-garuda-type-lead-polity",
@@ -80974,6 +82676,98 @@
         }
       },
       {
+        "id": "rel-coin-maturity-maski-ashokan-punchmarked-context-polity",
+        "fromId": "coin-maturity-maski-ashokan-punchmarked-context",
+        "type": "coinage-of",
+        "toId": "external-polity-maurya",
+        "date": {
+          "from": 300,
+          "to": 200,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Archaeological comparison context; match a catalogue specimen before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-coin-maturity-maski-ashokan-punchmarked-context-place",
+        "fromId": "coin-maturity-maski-ashokan-punchmarked-context",
+        "type": "coin-findspot-context",
+        "toId": "place-maski-rock-edict",
+        "date": {
+          "from": 300,
+          "to": 200,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Archaeological comparison context; match a catalogue specimen before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-coin-maturity-hoysala-garuda-fanam-catalogue-lead-polity",
+        "fromId": "coin-maturity-hoysala-garuda-fanam-catalogue-lead",
+        "type": "coinage-of",
+        "toId": "polity-hoysala",
+        "date": {
+          "from": 1100,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Royal centre and material-culture context; numismatic catalogue plate required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-coin-maturity-hoysala-garuda-fanam-catalogue-lead-place",
+        "fromId": "coin-maturity-hoysala-garuda-fanam-catalogue-lead",
+        "type": "coin-findspot-context",
+        "toId": "place-belur",
+        "date": {
+          "from": 1100,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Royal centre and material-culture context; numismatic catalogue plate required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-manuscript-kavirajamarga-sanchaya-witness-lead-work",
         "fromId": "manuscript-kavirajamarga-sanchaya-witness-lead",
         "type": "manuscript-witness-for",
@@ -81132,6 +82926,52 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-manuscript-kavirajamarga-parampare-print-witness-lead-work",
+        "fromId": "manuscript-kavirajamarga-parampare-print-witness-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-kavirajamarga",
+        "date": {
+          "from": 850,
+          "to": 850,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Article/OCR cluster for early Kannada literary history; exact article page and edition comparison pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-manuscript-shabdamanidarpana-script-grammar-witness-lead-work",
+        "fromId": "manuscript-shabdamanidarpana-script-grammar-witness-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-shabdamanidarpana",
+        "date": {
+          "from": 1260,
+          "to": 1260,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Kesiraja/Shabdamanidarpana literary-history context; Sanchaya witness URL pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -81321,6 +83161,60 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-boundary-evidence-badami-chalukya-aihole-inscription-cluster-extent",
+        "fromId": "boundary-evidence-badami-chalukya-aihole-inscription-cluster",
+        "type": "boundary-evidence-for",
+        "toId": "extent-badami-chalukya-pulakeshin-ii-618",
+        "date": {
+          "from": 610,
+          "to": 642,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole inscription and Chalukya corpus locators required"
+          },
+          {
+            "sourceId": "src-unesco-pattadakal",
+            "locator": "Pattadakal protected monument context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-boundary-evidence-keladi-coastal-interior-admin-zone-extent",
+        "fromId": "boundary-evidence-keladi-coastal-interior-admin-zone",
+        "type": "boundary-evidence-for",
+        "toId": "extent-vijayanagara-penukonda-core-1570",
+        "date": {
+          "from": 1499,
+          "to": 1763,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Keladi/Ikkeri administrative history locator required"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Late Vijayanagara/Nayaka OCR leads"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -82483,6 +84377,82 @@
           "reviewer": null,
           "updatedAt": "2026-08-23"
         }
+      },
+      {
+        "id": "feudatory-eastern-chalukya-vengi-badami-chalukya",
+        "name": {
+          "en": "Vengi viceroyalty under Badami Chalukya expansion — proof packet",
+          "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ವಿಸ್ತರಣೆಯಡಿ ವೇಂಗಿ ಪ್ರತಿನಿಧಿ ಆಡಳಿತ — ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "overlordPolityId": "polity-badami-chalukya",
+        "subordinatePolityId": "external-polity-eastern-chalukya-vengi",
+        "relationKind": "feudatory-to-independent-transition",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-badami",
+          "place-vengi"
+        ],
+        "confidence": "medium",
+        "description": {
+          "en": "Models the move from Badami Chalukya appointment/viceroyalty to an autonomous Vengi branch, pending charter-level evidence.",
+          "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ನೇಮಕಾತಿ/ಪ್ರತಿನಿಧಿ ಆಡಳಿತದಿಂದ ಸ್ವತಂತ್ರ ವೇಂಗಿ ಶಾಖೆಗೆ ನಡೆದ ಪರಿವರ್ತನೆಯನ್ನು ದಾನಪತ್ರಮಟ್ಟದ ಸಾಕ್ಷ್ಯ ಬರುವವರೆಗೆ ಮಾದರಿಗೊಳಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Pulakeshin II appointing Kubja Vishnuvardhana; verify with primary charter locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "feudatory-chitradurga-nayaka-vijayanagara-to-mysore",
+        "name": {
+          "en": "Chitradurga Nayaka succession hierarchy proof packet",
+          "kn": "ಚಿತ್ರದುರ್ಗ ನಾಯಕ ಉತ್ತರಾಧಿಕಾರಿ ಅಧೀನತೆ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "overlordPolityId": "polity-vijayanagara",
+        "subordinatePolityId": "external-polity-chitradurga-nayaka",
+        "relationKind": "successor-feudatory",
+        "date": {
+          "from": 1588,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-hampi",
+          "place-chitradurga-fort"
+        ],
+        "confidence": "low",
+        "description": {
+          "en": "Keeps Chitradurga Nayaka authority as a successor/regional hierarchy packet while later Mysore conquest and dependency evidence is reviewed separately.",
+          "kn": "ನಂತರದ ಮೈಸೂರು ವಿಜಯ ಮತ್ತು ಅವಲಂಬನೆ ಸಾಕ್ಷ್ಯವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸುವವರೆಗೆ ಚಿತ್ರದುರ್ಗ ನಾಯಕ ಅಧಿಕಾರವನ್ನು ಉತ್ತರಾಧಿಕಾರಿ/ಪ್ರಾದೇಶಿಕ ಅಧೀನತೆ ಕಡತವಾಗಿ ಇಡುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Fort and Nayaka context"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Chitradurga district political history locator required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
       }
     ],
     "genealogicalRelations": [
@@ -82730,6 +84700,74 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-pulakeshin-ii-kubja-vishnuvardhana-brotherhood",
+        "name": {
+          "en": "Pulakeshin II and Kubja Vishnuvardhana brotherhood proof packet",
+          "kn": "ಪುಲಕೇಶಿ II ಮತ್ತು ಕುಬ್ಜ ವಿಷ್ಣುವರ್ಧನ ಸಹೋದರತ್ವ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-pulakeshin-ii",
+        "toPersonId": "person-kubja-vishnuvardhana",
+        "polityId": "polity-badami-chalukya",
+        "date": {
+          "from": 624,
+          "to": 641,
+          "era": "CE",
+          "precision": "range"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Created as a proof packet for the Vengi branch rather than an inferred reign bridge; it needs inscriptional genealogy and Eastern Chalukya charter locators.",
+          "kn": "ವೇಂಗಿ ಶಾಖೆಗಾಗಿ ಆಳ್ವಿಕೆ-ಅನುಮಾನ ಸೇತುವೆಯ ಬದಲು ಸಾಕ್ಷ್ಯ ಕಡತವಾಗಿ ರಚಿಸಲಾಗಿದೆ; ಶಾಸನೀಯ ವಂಶಾವಳಿ ಮತ್ತು ಪೂರ್ವ ಚಾಲುಕ್ಯ ದಾನಪತ್ರ ಸ್ಥಾನಸೂಚಿಗಳು ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriya-kannada-eastern-chalukyas-vengi",
+            "locator": "Brother/viceroy claim; verify against Vengi charter or epigraphic edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "genealogy-vijayanagara-tuluva-krishnadevaraya-achyutaraya",
+        "name": {
+          "en": "Krishnadevaraya and Achyuta Devaraya Tuluva-line proof packet",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಅಚ್ಯುತ ದೇವರಾಯ ತುಳುವ ವಂಶ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-krishnadevaraya",
+        "toPersonId": "person-achyuta-devaraya",
+        "polityId": "polity-vijayanagara",
+        "date": {
+          "from": 1509,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Promotes the Achyuta lead into a genealogy proof packet connected to coin and Parampare image-plate review, pending dynasty-source locators.",
+          "kn": "ನಾಣ್ಯ ಮತ್ತು ಪರಂಪರೆ ಚಿತ್ರ-ಫಲಕ ಪರಿಶೀಲನೆಗೆ ಸಂಬಂಧಿಸಿದ ಅಚ್ಯುತ ದಾರಿಯನ್ನು ವಂಶಾವಳಿ ಸಾಕ್ಷ್ಯ ಕಡತವಾಗಿ ವಿಸ್ತರಿಸಲಾಗಿದೆ; ವಂಶಾವಳಿ ಆಕರ ಸ್ಥಾನಸೂಚಿಗಳು ಬಾಕಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Krishnadevaraya/Achyuta Devaraya image and coin leads; dynasty relation needs page review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],
@@ -83308,6 +85346,106 @@
           "reviewer": null,
           "updatedAt": "2026-08-23"
         }
+      },
+      {
+        "id": "boundary-evidence-badami-chalukya-aihole-inscription-cluster",
+        "name": {
+          "en": "Aihole-Badami-Pattadakal Chalukya inscription-cluster boundary packet",
+          "kn": "ಐಹೊಳೆ-ಬಾದಾಮಿ-ಪಟ್ಟದಕಲ್ಲು ಚಾಲುಕ್ಯ ಶಾಸನ-ಗುಚ್ಛ ಗಡಿ ಕಡತ"
+        },
+        "extentId": "extent-badami-chalukya-pulakeshin-ii-618",
+        "polityId": "polity-badami-chalukya",
+        "evidenceKind": "inscription-cluster",
+        "date": {
+          "from": 610,
+          "to": 642,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "inscriptionClusters",
+          "administrativeUnits",
+          "campaignEvents",
+          "sourceMapComparison"
+        ],
+        "completedEvidence": [
+          "inscriptionClusters"
+        ],
+        "blockingEvidence": [
+          "administrativeUnits",
+          "campaignEvents",
+          "sourceMapComparison"
+        ],
+        "methodology": {
+          "en": "Use Aihole, Badami and Pattadakal inscription clusters as fixed anchors, then compare against campaign and administrative evidence before widening the schematic boundary.",
+          "kn": "ಐಹೊಳೆ, ಬಾದಾಮಿ ಮತ್ತು ಪಟ್ಟದಕಲ್ಲಿನ ಶಾಸನ ಗುಚ್ಛಗಳನ್ನು ಸ್ಥಿರ ಆಧಾರಗಳಾಗಿ ಬಳಸಿ, ತಾತ್ಕಾಲಿಕ ಗಡಿಯನ್ನು ವಿಸ್ತರಿಸುವ ಮೊದಲು ದಂಡಯಾತ್ರೆ ಮತ್ತು ಆಡಳಿತ ಸಾಕ್ಷ್ಯಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole inscription and Chalukya corpus locators required"
+          },
+          {
+            "sourceId": "src-unesco-pattadakal",
+            "locator": "Pattadakal protected monument context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "boundary-evidence-keladi-coastal-interior-admin-zone",
+        "name": {
+          "en": "Keladi-Ikkeri coastal-interior administrative evidence packet",
+          "kn": "ಕೆಳದಿ-ಇಕ್ಕೇರಿ ಕರಾವಳಿ-ಒಳನಾಡು ಆಡಳಿತ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-vijayanagara-penukonda-core-1570",
+        "polityId": "polity-vijayanagara",
+        "evidenceKind": "administrative-unit",
+        "date": {
+          "from": 1499,
+          "to": 1763,
+          "era": "CE",
+          "precision": "range"
+        },
+        "confidence": "low",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "administrativeUnits",
+          "inscriptionClusters",
+          "sourceMapComparison"
+        ],
+        "completedEvidence": [
+          "administrativeUnits"
+        ],
+        "blockingEvidence": [
+          "inscriptionClusters",
+          "sourceMapComparison"
+        ],
+        "methodology": {
+          "en": "Treat Keladi-Ikkeri as a successor governance comparison layer; do not merge its changing coastal-interior authority into the old Vijayanagara core polygon.",
+          "kn": "ಕೆಳದಿ-ಇಕ್ಕೇರಿಯನ್ನು ಉತ್ತರಾಧಿಕಾರಿ ಆಡಳಿತ ಹೋಲಿಕೆ ಪದರವಾಗಿ ಪರಿಗಣಿಸಿ; ಅದರ ಬದಲಾಗುವ ಕರಾವಳಿ-ಒಳನಾಡು ಅಧಿಕಾರವನ್ನು ಹಳೆಯ ವಿಜಯನಗರ ಮೂಲ ಬಹುಭುಜಕ್ಕೆ ಸೇರಿಸಬೇಡಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Keladi/Ikkeri administrative history locator required"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Late Vijayanagara/Nayaka OCR leads"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
       }
     ],
     "coinRecords": [
@@ -83822,6 +85960,134 @@
           "reviewer": null,
           "updatedAt": "2026-08-25"
         }
+      },
+      {
+        "id": "coin-maturity-maski-ashokan-punchmarked-context",
+        "name": {
+          "en": "Maski Ashokan-period punch-marked coin context lead",
+          "kn": "ಮಸ್ಕಿ ಅಶೋಕ ಕಾಲದ ಪಂಚಮುದ್ರಿತ ನಾಣ್ಯ ಸಂದರ್ಭ ದಾರಿ"
+        },
+        "coinKind": "hoard-record",
+        "polityId": "external-polity-maurya",
+        "placeId": "place-maski-rock-edict",
+        "date": {
+          "from": 300,
+          "to": 200,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "material": "silver",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Regional punch-marked coin context is queued only as an archaeological comparison lead for the Ashokan epigraphic horizon.",
+          "kn": "ಅಶೋಕ ಶಾಸನ ಹಂತಕ್ಕೆ ಪುರಾತತ್ತ್ವ ಹೋಲಿಕೆ ದಾರಿಯಾಗಿ ಮಾತ್ರ ಪ್ರಾದೇಶಿಕ ಪಂಚಮುದ್ರಿತ ನಾಣ್ಯ ಸಂದರ್ಭವನ್ನು ಸೇರಿಸಲಾಗಿದೆ."
+        },
+        "reverse": {
+          "en": "No specimen, symbol group, hoard number, weight or museum accession is verified yet.",
+          "kn": "ಯಾವುದೇ ಮಾದರಿ, ಚಿಹ್ನಾ ಗುಂಪು, ನಿಧಿ ಸಂಖ್ಯೆ, ತೂಕ ಅಥವಾ ಸಂಗ್ರಹಾಲಯ ಪ್ರವೇಶ ಸಂಖ್ಯೆ ಇನ್ನೂ ದೃಢಪಟ್ಟಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-maski-rock-edict",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "provisional"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Archaeological comparison context; match a catalogue specimen before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "coin-maturity-hoysala-garuda-fanam-catalogue-lead",
+        "name": {
+          "en": "Hoysala Garuda/fanam catalogue proof packet",
+          "kn": "ಹೊಯ್ಸಳ ಗರುಡ/ಫಣಂ ಪಟ್ಟಿ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "coinKind": "catalogued-coin",
+        "polityId": "polity-hoysala",
+        "placeId": "place-belur",
+        "date": {
+          "from": 1100,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "A named Hoysala gold-coin specimen packet to resolve symbol, legend, metal and catalogue plate rather than leaving the dynasty at a generic coinage lead.",
+          "kn": "ವಂಶವನ್ನು ಸಾಮಾನ್ಯ ನಾಣ್ಯ ದಾರಿಯಾಗಿ ಬಿಟ್ಟಿರದೆ ಚಿಹ್ನೆ, ಲೇಖ, ಲೋಹ ಮತ್ತು catalogue ಫಲಕವನ್ನು ನಿರ್ಧರಿಸಲು ಹೆಸರಿಸಲಾದ ಹೊಯ್ಸಳ ಚಿನ್ನದ ನಾಣ್ಯ ಮಾದರಿ ಕಡತ."
+        },
+        "reverse": {
+          "en": "Reverse legend, denomination, mint and findspot are unresolved until a numismatic catalogue entry is attached.",
+          "kn": "ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ದಾಖಲೆ ಜೋಡಿಸುವವರೆಗೆ ಹಿಂಭಾಗ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-belur",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Royal centre and material-culture context; numismatic catalogue plate required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
       }
     ],
     "manuscriptWitnesses": [
@@ -84187,6 +86453,110 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-kavirajamarga-parampare-print-witness-lead",
+        "name": {
+          "en": "Kavirajamarga Parampare print-context witness lead",
+          "kn": "ಕವಿರಾಜಮಾರ್ಗ ಪರಂಪರೆ ಮುದ್ರಣ-ಸಂದರ್ಭ ಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-kavirajamarga",
+        "witnessKind": "printed-edition",
+        "repository": {
+          "en": "Karnataka Parampare / Sanchaya review queue",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ / ಸಂಚಯ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 850,
+          "to": 850,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/sanchaya.karnatakaparampa0000_v1"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "provisional"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Article/OCR cluster for early Kannada literary history; exact article page and edition comparison pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-shabdamanidarpana-script-grammar-witness-lead",
+        "name": {
+          "en": "Shabdamanidarpana script and grammar witness lead",
+          "kn": "ಶಬ್ದಮಣಿದರ್ಪಣ ಲಿಪಿ ಮತ್ತು ವ್ಯಾಕರಣ ಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-shabdamanidarpana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Sanchaya / Kannada grammar witness review queue",
+          "kn": "ಸಂಚಯ / ಕನ್ನಡ ವ್ಯಾಕರಣ ಸಾಕ್ಷಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1260,
+          "to": 1260,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://sanchaya.org"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Kesiraja/Shabdamanidarpana literary-history context; Sanchaya witness URL pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],
@@ -86070,7 +88440,9 @@
           "era": "CE",
           "precision": "range"
         },
-        "predecessorIds": [],
+        "predecessorIds": [
+          "script-ashokan-satavahana-brahmi-root"
+        ],
         "sampleInscriptionIds": [
           "inscription-talagunda",
           "inscription-halmidi"
@@ -86092,6 +88464,23 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        },
+        "morphologicalStage": "Early / Archaic Kannada",
+        "dynasticClassification": [
+          "Kadamba"
+        ],
+        "evidenceMedium": [
+          "stone-inscription",
+          "royal-epigraph"
+        ],
+        "visualTraits": [
+          "box-headed-or-nail-headed-strokes",
+          "emerging-loops",
+          "early-matra-attachments"
+        ],
+        "morphologyNote": {
+          "en": "Kadamba/Proto-Kannada divergence from Southern Brahmi, with Halmidi and Talagunda retained as high-priority item-edition review samples.",
+          "kn": "ಹಲ್ಮಿಡಿ ಮತ್ತು ತಾಳಗುಂದವನ್ನು ಉನ್ನತ ಆದ್ಯತೆಯ ವಸ್ತುಮಟ್ಟದ ಆವೃತ್ತಿ ಮಾದರಿಗಳಾಗಿ ಇಟ್ಟು, ದಕ್ಷಿಣ ಬ್ರಾಹ್ಮಿಯಿಂದ ಕದಂಬ/ಪ್ರೋಟೋ-ಕನ್ನಡ ವಿಭಜನೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ."
         }
       },
       {
@@ -86135,6 +88524,27 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        },
+        "morphologicalStage": "Early / Archaic Kannada",
+        "dynasticClassification": [
+          "Kadamba",
+          "Western Ganga",
+          "Rashtrakuta",
+          "Kalyani Chalukya",
+          "Hoysala"
+        ],
+        "evidenceMedium": [
+          "inscription",
+          "literary-context"
+        ],
+        "visualTraits": [
+          "box-headed-strokes",
+          "emerging-loops",
+          "distinct-matra-attachments"
+        ],
+        "morphologyNote": {
+          "en": "Kept as the broad Old Kannada umbrella while the Badami Chalukya and Rashtrakuta sub-stages mature as separate packets.",
+          "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಮತ್ತು ರಾಷ್ಟ್ರಕೂಟ ಉಪಹಂತಗಳು ಪ್ರತ್ಯೇಕ ಕಡತಗಳಾಗಿ ಪರಿಪಕ್ವವಾಗುವವರೆಗೆ ಇದು ವಿಸ್ತೃತ ಹಳೆಗನ್ನಡ ಅಂಬರ ಹಂತವಾಗಿ ಉಳಿಯುತ್ತದೆ."
         }
       },
       {
@@ -86151,7 +88561,7 @@
           "precision": "range"
         },
         "predecessorIds": [
-          "script-southern-brahmi-kadamba-transition"
+          "script-badami-chalukya-rounded-transition"
         ],
         "sampleInscriptionIds": [
           "inscription-kappe-arabhatta",
@@ -86181,6 +88591,25 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        },
+        "morphologicalStage": "Early / Archaic Kannada",
+        "dynasticClassification": [
+          "Badami Chalukya",
+          "Western Ganga",
+          "Rashtrakuta"
+        ],
+        "evidenceMedium": [
+          "verse-inscription",
+          "hero-stone"
+        ],
+        "visualTraits": [
+          "mixed-sanskrit-kannada-records",
+          "verse-layout",
+          "developing-ligatures"
+        ],
+        "morphologyNote": {
+          "en": "Review lane for early Kannada verse and mixed-language inscriptions before the later temple-corpus forms dominate.",
+          "kn": "ನಂತರದ ದೇವಾಲಯ ಶಾಸನ ರೂಪಗಳು ಮೇಲುಗೈ ಪಡೆಯುವ ಮೊದಲು ಆರಂಭಿಕ ಕನ್ನಡ ಪದ್ಯ ಮತ್ತು ಮಿಶ್ರಭಾಷಾ ಶಾಸನಗಳ ಪರಿಶೀಲನಾ ಹಾದಿ."
         }
       },
       {
@@ -86197,7 +88626,7 @@
           "precision": "range"
         },
         "predecessorIds": [
-          "script-old-kannada-epigraphic-phase"
+          "script-rashtrakuta-uniform-old-kannada"
         ],
         "sampleInscriptionIds": [
           "inscription-lakkundi",
@@ -86230,6 +88659,24 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        },
+        "morphologicalStage": "Medieval / Middle Kannada",
+        "dynasticClassification": [
+          "Kalyani Chalukya",
+          "Hoysala"
+        ],
+        "evidenceMedium": [
+          "temple-inscription",
+          "donor-record"
+        ],
+        "visualTraits": [
+          "fully-circular-body-forms",
+          "ornate-loops",
+          "talekattu"
+        ],
+        "morphologyNote": {
+          "en": "Broad medieval temple-epigraphy bucket retained for compatibility, now backed by a finer Kalyani Chalukya-Hoysala ornate phase.",
+          "kn": "ಹೊಂದಾಣಿಕೆಗೆ ವಿಸ್ತೃತ ಮಧ್ಯಯುಗೀನ ದೇವಾಲಯ ಶಾಸನ ಗುಂಪು ಉಳಿದಿದ್ದು, ಈಗ ಸೂಕ್ಷ್ಮ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ-ಹೊಯ್ಸಳ ಅಲಂಕೃತ ಹಂತದಿಂದ ಬೆಂಬಲಿತವಾಗಿದೆ."
         }
       },
       {
@@ -86246,7 +88693,7 @@
           "precision": "range"
         },
         "predecessorIds": [
-          "script-medieval-kannada-temple-epigraphy"
+          "script-kalyani-chalukya-hoysala-ornate-middle-kannada"
         ],
         "sampleInscriptionIds": [
           "inscription-hampi",
@@ -86269,6 +88716,23 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        },
+        "morphologicalStage": "Modern Kannada",
+        "dynasticClassification": [
+          "Vijayanagara"
+        ],
+        "evidenceMedium": [
+          "imperial-inscription",
+          "multilingual-record"
+        ],
+        "visualTraits": [
+          "near-modern-letter-shapes",
+          "kannada-nagari-mixed-records",
+          "regional-ligature-differentiation"
+        ],
+        "morphologyNote": {
+          "en": "Imperial Vijayanagara review lane retained while the successor Nayaka and Telugu-Kannada divergence packet carries the longer standardisation story.",
+          "kn": "ದೀರ್ಘ ಮಾನಕೀಕರಣ ಕಥೆಯನ್ನು ಉತ್ತರಾಧಿಕಾರಿ ನಾಯಕ ಮತ್ತು ತೆಲುಗು-ಕನ್ನಡ ವಿಭಜನೆ ಕಡತ ಹೊತ್ತಿರುವಾಗ ಸಾಮ್ರಾಜ್ಯ ವಿಜಯನಗರ ಪರಿಶೀಲನಾ ಹಾದಿ ಉಳಿದಿದೆ."
         }
       },
       {
@@ -86280,12 +88744,12 @@
         "scriptFamily": "Modern Kannada",
         "date": {
           "from": 1800,
-          "to": 1973,
+          "to": 2026,
           "era": "CE",
           "precision": "range"
         },
         "predecessorIds": [
-          "script-vijayanagara-kannada-nagari-mixed-phase"
+          "script-vijayanagara-nayaka-standardising-kannada"
         ],
         "sampleInscriptionIds": [],
         "relatedPolityIds": [
@@ -86305,6 +88769,398 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        },
+        "morphologicalStage": "Modern Kannada",
+        "dynasticClassification": [
+          "Mysore Wodeyar",
+          "print culture"
+        ],
+        "evidenceMedium": [
+          "print",
+          "periodical",
+          "digital-text"
+        ],
+        "visualTraits": [
+          "standardised-circular-glyphs",
+          "movable-type-regularisation",
+          "periodical-typography"
+        ],
+        "morphologyNote": {
+          "en": "Modern print lane extended to the present, with Basel Mission/Mangaluru, Bangalore print culture and Patrika Sanchaya witnesses left as review tasks.",
+          "kn": "ಆಧುನಿಕ ಮುದ್ರಣ ಹಾದಿಯನ್ನು ವರ್ತಮಾನವರೆಗೆ ವಿಸ್ತರಿಸಿದ್ದು, ಬಾಸೆಲ್ ಮಿಷನ್/ಮಂಗಳೂರು, ಬೆಂಗಳೂರು ಮುದ್ರಣ ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪತ್ರಿಕಾ ಸಂಚಯ ಸಾಕ್ಷ್ಯಗಳನ್ನು ಪರಿಶೀಲನಾ ಕಾರ್ಯಗಳಾಗಿ ಇಡಲಾಗಿದೆ."
+        }
+      },
+      {
+        "id": "script-ashokan-satavahana-brahmi-root",
+        "name": {
+          "en": "Ashokan and Satavahana Brahmi root phase",
+          "kn": "ಅಶೋಕ ಮತ್ತು ಸಾತವಾಹನ ಬ್ರಾಹ್ಮಿ ಮೂಲ ಹಂತ"
+        },
+        "scriptFamily": "Ashokan / Satavahana Brahmi",
+        "morphologicalStage": "Early Brahmi Derivative",
+        "dynasticClassification": [
+          "Maurya",
+          "Satavahana"
+        ],
+        "date": {
+          "from": 300,
+          "to": 300,
+          "era": "BCE",
+          "precision": "range"
+        },
+        "predecessorIds": [],
+        "sampleInscriptionIds": [
+          "inscription-maski-minor-rock-edict",
+          "inscription-brahmagiri-minor-rock-edict"
+        ],
+        "relatedPolityIds": [
+          "external-polity-maurya",
+          "external-polity-satavahana"
+        ],
+        "evidenceMedium": [
+          "rock-edict",
+          "inscription"
+        ],
+        "visualTraits": [
+          "simple-linear-forms",
+          "geometric-angular-strokes",
+          "minimal-loops"
+        ],
+        "morphologyNote": {
+          "en": "Root comparison packet for simple, linear and angular Brahmi forms visible in Karnataka edict sites before the regional southern/Kadamba transition.",
+          "kn": "ಪ್ರಾದೇಶಿಕ ದಕ್ಷಿಣ/ಕದಂಬ ಪರಿವರ್ತನೆಗೂ ಮೊದಲು ಕರ್ನಾಟಕದ ಶಾಸನ ತಾಣಗಳಲ್ಲಿ ಕಾಣುವ ಸರಳ, ರೇಖೀಯ ಮತ್ತು ಕೋನೀಯ ಬ್ರಾಹ್ಮಿ ರೂಪಗಳ ಮೂಲ ಹೋಲಿಕೆ ಕಡತ."
+        },
+        "description": {
+          "en": "This phase anchors the Kannada script timeline in the Ashokan and Satavahana Brahmi tradition. It must remain a root-script comparison layer, not a Kannada-script claim.",
+          "kn": "ಈ ಹಂತವು ಕನ್ನಡ ಲಿಪಿ ಕಾಲರೇಖೆಯನ್ನು ಅಶೋಕ ಮತ್ತು ಸಾತವಾಹನ ಬ್ರಾಹ್ಮಿ ಪರಂಪರೆಯಲ್ಲಿ ನೆಲೆಯೂರಿಸುತ್ತದೆ. ಇದು ಕನ್ನಡ ಲಿಪಿ ಹೇಳಿಕೆಯಲ್ಲ, ಮೂಲ-ಲಿಪಿ ಹೋಲಿಕೆ ಪದರವಾಗಿಯೇ ಉಳಿಯಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-hampi-ashokan-edicts",
+            "locator": "Brahmagiri and Karnataka Asokan edict context"
+          },
+          {
+            "sourceId": "src-asi-maski-monograph",
+            "locator": "Maski Minor Rock Edict review lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "script-badami-chalukya-rounded-transition",
+        "name": {
+          "en": "Badami Chalukya rounded inscriptional stage",
+          "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯರ ವೃತ್ತಾಕಾರ ಶಾಸನ ಹಂತ"
+        },
+        "scriptFamily": "Early Kannada / Southern Brahmi",
+        "morphologicalStage": "Early / Archaic Kannada",
+        "dynasticClassification": [
+          "Badami Chalukya"
+        ],
+        "date": {
+          "from": 543,
+          "to": 757,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-southern-brahmi-kadamba-transition"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-aihole",
+          "inscription-kappe-arabhatta"
+        ],
+        "relatedPolityIds": [
+          "polity-badami-chalukya"
+        ],
+        "evidenceMedium": [
+          "stone-inscription",
+          "prasasti",
+          "verse-inscription"
+        ],
+        "visualTraits": [
+          "more-rounded-strokes",
+          "clearer-matra-attachments",
+          "early-vattakshara-ligature-forms"
+        ],
+        "morphologyNote": {
+          "en": "Dedicated packet for comparing the more rounded and fluid Badami Chalukya letter forms with clearer vowel markers and conjunct structures.",
+          "kn": "ಹೆಚ್ಚು ವೃತ್ತಾಕಾರ, ಹರಿವಿನ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಅಕ್ಷರರೂಪಗಳನ್ನು ಸ್ಪಷ್ಟ ಸ್ವರಮಾತ್ರೆ ಮತ್ತು ಸಂಯುಕ್ತ ರೂಪಗಳೊಂದಿಗೆ ಹೋಲಿಸಲು ವಿಶೇಷ ಕಡತ."
+        },
+        "description": {
+          "en": "Splits the Badami Chalukya stage out of the older broad “early Kannada” bucket so Aihole and Kappe Arabhatta can be reviewed with dynasty-specific palaeographic notes.",
+          "kn": "ಐಹೊಳೆ ಮತ್ತು ಕಪ್ಪೆ ಅರಭಟ್ಟವನ್ನು ವಂಶ-ನಿರ್ದಿಷ್ಟ ಲಿಪಿಶಾಸ್ತ್ರ ಟಿಪ್ಪಣಿಗಳೊಂದಿಗೆ ಪರಿಶೀಲಿಸಲು ಹಳೆಯ ವಿಸ್ತೃತ “ಆರಂಭಿಕ ಕನ್ನಡ” ಗುಂಪಿನಿಂದ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಹಂತವನ್ನು ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-indica",
+            "locator": "Aihole and Badami Chalukya inscription edition locators required"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Kappe Arabhatta witness; line locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "script-rashtrakuta-uniform-old-kannada",
+        "name": {
+          "en": "Rashtrakuta wider Old Kannada stage",
+          "kn": "ರಾಷ್ಟ್ರಕೂಟರ ವಿಶಾಲ ಹಳೆಗನ್ನಡ ಹಂತ"
+        },
+        "scriptFamily": "Old Kannada",
+        "morphologicalStage": "Early / Archaic Kannada",
+        "dynasticClassification": [
+          "Rashtrakuta"
+        ],
+        "date": {
+          "from": 753,
+          "to": 982,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-badami-chalukya-rounded-transition"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-atakur",
+          "inscription-begur"
+        ],
+        "relatedPolityIds": [
+          "polity-rashtrakuta"
+        ],
+        "evidenceMedium": [
+          "hero-stone",
+          "stone-inscription"
+        ],
+        "visualTraits": [
+          "wider-letter-bodies",
+          "more-uniform-proportions",
+          "emerging-talekattu-headmark"
+        ],
+        "morphologyNote": {
+          "en": "Review packet for wider, more uniform Old Kannada letter bodies and the transition toward a recognisable headmark/talekattu.",
+          "kn": "ವಿಶಾಲ, ಹೆಚ್ಚು ಏಕರೂಪ ಹಳೆಗನ್ನಡ ಅಕ್ಷರದೇಹಗಳು ಮತ್ತು ಗುರುತಿಸಬಹುದಾದ ತಲೆಕಟ್ಟು ಕಡೆಗಿನ ಪರಿವರ್ತನೆಗಾಗಿ ಪರಿಶೀಲನಾ ಕಡತ."
+        },
+        "description": {
+          "en": "Makes Rashtrakuta-period morphology separately searchable, with Atakur and Begur treated as edition-linked samples rather than final typological proof.",
+          "kn": "ಆತಕೂರು ಮತ್ತು ಬೇಗೂರನ್ನು ಅಂತಿಮ ರೂಪಶಾಸ್ತ್ರ ಸಾಕ್ಷ್ಯವಲ್ಲದೆ ಆವೃತ್ತಿ-ಸಂಬಂಧಿತ ಮಾದರಿಗಳಾಗಿ ಇಟ್ಟು, ರಾಷ್ಟ್ರಕೂಟ ಕಾಲದ ಆಕಾರಶಾಸ್ತ್ರವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಹುಡುಕಬಹುದಾಗಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-rashtrakutas",
+            "locator": "Rashtrakuta political and cultural context; add palaeographic plate references"
+          },
+          {
+            "sourceId": "src-epigraphia-atakur-begur",
+            "locator": "Atakur and Begur printed edition locators required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
+        "name": {
+          "en": "Kalyani Chalukya and Hoysala ornate Middle Kannada stage",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಮತ್ತು ಹೊಯ್ಸಳ ಅಲಂಕೃತ ಮಧ್ಯಕನ್ನಡ ಹಂತ"
+        },
+        "scriptFamily": "Middle Kannada",
+        "morphologicalStage": "Medieval / Middle Kannada",
+        "dynasticClassification": [
+          "Kalyani Chalukya",
+          "Hoysala"
+        ],
+        "date": {
+          "from": 973,
+          "to": 1346,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-rashtrakuta-uniform-old-kannada"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-lakkundi",
+          "inscription-belur-foundation",
+          "inscription-muktesvara-attiraja-construction"
+        ],
+        "relatedPolityIds": [
+          "polity-kalyani-chalukya",
+          "polity-hoysala"
+        ],
+        "evidenceMedium": [
+          "temple-inscription",
+          "donor-record",
+          "construction-record"
+        ],
+        "visualTraits": [
+          "circular-body-forms",
+          "ornate-loops",
+          "pronounced-talekattu",
+          "chloritic-schist-calligraphic-carving"
+        ],
+        "morphologyNote": {
+          "en": "Tracks the ornate, circular temple-inscription forms made especially visible in Hoysala-period stone carving and late western Deccan epigraphy.",
+          "kn": "ಹೊಯ್ಸಳ ಕಾಲದ ಕಲ್ಲುಕಲೆ ಮತ್ತು ನಂತರದ ಪಶ್ಚಿಮ ದಖ್ಖನ್ ಶಾಸನಗಳಲ್ಲಿ ವಿಶೇಷವಾಗಿ ಗೋಚರಿಸುವ ಅಲಂಕೃತ, ವೃತ್ತಾಕಾರ ದೇವಾಲಯ-ಶಾಸನ ರೂಪಗಳನ್ನು ಹಿಂಬಾಲಿಸುತ್ತದೆ."
+        },
+        "description": {
+          "en": "A mature replacement target for the broad medieval temple phase, separating Kalyani Chalukya and Hoysala palaeographic review from earlier Old Kannada packets.",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಮತ್ತು ಹೊಯ್ಸಳ ಲಿಪಿಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆಯನ್ನು ಹಿಂದಿನ ಹಳೆಗನ್ನಡ ಕಡತಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸುವ ವಿಸ್ತೃತ ಮಧ್ಯಯುಗೀನ ದೇವಾಲಯ ಹಂತದ ಪರಿಪಕ್ವ ಗುರಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Lakkundi, Belur and Hoysala/Kalyani Chalukya inscription locators required"
+          },
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala temple material and inscriptional context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "script-vijayanagara-nayaka-standardising-kannada",
+        "name": {
+          "en": "Vijayanagara and Nayaka standardising Kannada stage",
+          "kn": "ವಿಜಯನಗರ ಮತ್ತು ನಾಯಕ ಮಾನಕೀಕರಿಸುವ ಕನ್ನಡ ಹಂತ"
+        },
+        "scriptFamily": "Kannada / Telugu-Kannada / Nagari",
+        "morphologicalStage": "Modern Kannada",
+        "dynasticClassification": [
+          "Vijayanagara",
+          "Keladi Nayaka",
+          "Chitradurga Nayaka"
+        ],
+        "date": {
+          "from": 1336,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-kalyani-chalukya-hoysala-ornate-middle-kannada"
+        ],
+        "sampleInscriptionIds": [
+          "inscription-hampi",
+          "inscription-hampi-krishna-temple",
+          "inscription-parampare-barkur-harihara-lead"
+        ],
+        "relatedPolityIds": [
+          "polity-vijayanagara",
+          "external-polity-keladi-nayaka",
+          "external-polity-chitradurga-nayaka"
+        ],
+        "evidenceMedium": [
+          "imperial-inscription",
+          "regional-nayaka-record",
+          "multilingual-record"
+        ],
+        "visualTraits": [
+          "near-modern-letter-shapes",
+          "regional-ligature-differentiation",
+          "mixed-kannada-nagari-and-telugu-kannada-context"
+        ],
+        "morphologyNote": {
+          "en": "Tracks stabilising letter shapes and the gradual regional separation of Kannada and Telugu script practice from the shared Telugu-Kannada inheritance.",
+          "kn": "ಸಾಮಾನ್ಯ ತೆಲುಗು-ಕನ್ನಡ ಪರಂಪರೆಯಿಂದ ಕನ್ನಡ ಮತ್ತು ತೆಲುಗು ಲಿಪಿ ಪದ್ಧತಿಗಳ ಕ್ರಮೇಣ ಪ್ರಾದೇಶಿಕ ವಿಭಜನೆಯನ್ನು ಮತ್ತು ಸ್ಥಿರಗೊಳ್ಳುವ ಅಕ್ಷರರೂಪಗಳನ್ನು ಹಿಂಬಾಲಿಸುತ್ತದೆ."
+        },
+        "description": {
+          "en": "Extends the Vijayanagara script lane through successor Nayaka records so the timeline can show both imperial Hampi and regional post-imperial evidence.",
+          "kn": "ಸಾಮ್ರಾಜ್ಯ ಹಂಪಿ ಹಾಗೂ ಪ್ರಾದೇಶಿಕ ವಿಜಯನಗರಾನಂತರ ಸಾಕ್ಷ್ಯ ಎರಡನ್ನೂ ಕಾಲರೇಖೆಯಲ್ಲಿ ತೋರಿಸಲು ವಿಜಯನಗರ ಲಿಪಿ ಹಾದಿಯನ್ನು ನಾಯಕ ಉತ್ತರಾಧಿಕಾರಿ ದಾಖಲೆಗಳವರೆಗೆ ವಿಸ್ತರಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hampi",
+            "locator": "Hampi inscriptional context"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Barkur/Badami and late Vijayanagara/Nayaka OCR leads; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "script-mysore-wodeyar-print-standard-kannada",
+        "name": {
+          "en": "Mysore Wodeyar and modern print standard Kannada stage",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ಮತ್ತು ಆಧುನಿಕ ಮುದ್ರಿತ ಮಾನಕ ಕನ್ನಡ ಹಂತ"
+        },
+        "scriptFamily": "Modern Kannada",
+        "morphologicalStage": "Modern Kannada",
+        "dynasticClassification": [
+          "Mysore Wodeyar",
+          "Basel Mission print",
+          "Bangalore print culture"
+        ],
+        "date": {
+          "from": 1700,
+          "to": 2026,
+          "era": "CE",
+          "precision": "range"
+        },
+        "predecessorIds": [
+          "script-vijayanagara-nayaka-standardising-kannada"
+        ],
+        "sampleInscriptionIds": [],
+        "relatedPolityIds": [
+          "polity-mysore"
+        ],
+        "evidenceMedium": [
+          "palm-leaf-manuscript",
+          "print",
+          "periodical"
+        ],
+        "visualTraits": [
+          "standardised-circular-glyphs",
+          "print-fixed-orthography",
+          "differentiated-kannada-telugu-ligatures",
+          "palm-leaf-rounded-curves"
+        ],
+        "morphologyNote": {
+          "en": "Connects rounded manuscript practice, nineteenth-century movable type and modern periodicals to standard Kannada glyph forms.",
+          "kn": "ವೃತ್ತಾಕಾರ ಹಸ್ತಪ್ರತಿ ಪದ್ಧತಿ, ಹತ್ತೊಂಬತ್ತನೇ ಶತಮಾನದ ಚಲ ಅಕ್ಷರ ಮುದ್ರಣ ಮತ್ತು ಆಧುನಿಕ ಪತ್ರಿಕೆಗಳನ್ನು ಮಾನಕ ಕನ್ನಡ ಅಕ್ಷರರೂಪಗಳಿಗೆ ಜೋಡಿಸುತ್ತದೆ."
+        },
+        "description": {
+          "en": "A modern palaeography and print-culture packet for Mysore, Mangaluru and Bangalore contexts. It still needs exact print runs, type specimens and manuscript witnesses.",
+          "kn": "ಮೈಸೂರು, ಮಂಗಳೂರು ಮತ್ತು ಬೆಂಗಳೂರು ಸಂದರ್ಭಗಳಿಗಾಗಿ ಆಧುನಿಕ ಲಿಪಿಶಾಸ್ತ್ರ ಮತ್ತು ಮುದ್ರಣ-ಸಂಸ್ಕೃತಿ ಕಡತ. ಇದಕ್ಕೆ ಇನ್ನೂ ನಿಖರ ಮುದ್ರಣ ಆವೃತ್ತಿಗಳು, ಅಕ್ಷರ ಮಾದರಿಗಳು ಮತ್ತು ಹಸ್ತಪ್ರತಿ ಸಾಕ್ಷ್ಯಗಳು ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-basel-mission-kannada-print-lead",
+            "locator": "Resolve Basel Mission/Mangaluru and Bangalore printing locators"
+          },
+          {
+            "sourceId": "src-patrika-sanchaya-kannada",
+            "locator": "Periodical catalogue rows as print-culture discovery leads"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],
