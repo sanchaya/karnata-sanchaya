@@ -1460,16 +1460,16 @@
           "source-map-comparison"
         ],
         "completedEvidence": [
-          "campaign-events"
+          "campaign-events",
+          "administrative-units",
+          "inscription-clusters"
         ],
         "blockingEvidence": [
-          "inscription-clusters",
-          "administrative-units",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Current polygon is a public orientation layer. A publication-ready boundary needs inscription clusters, province records and source-map comparison.",
-          "kn": "ಪ್ರಸ್ತುತ ಬಹುಭುಜವು ಸಾರ್ವಜನಿಕ ದಿಕ್ಕು ತೋರಿಸುವ ಪದರ. ಪ್ರಕಟಣೆಗೆ ಸಿದ್ಧ ಗಡಿಗೆ ಶಾಸನ ಗುಚ್ಛಗಳು, ಪ್ರಾಂತ ದಾಖಲೆಗಳು ಮತ್ತು ಆಕರ-ನಕ್ಷೆ ಹೋಲಿಕೆ ಬೇಕು."
+          "en": "Administrative-unit evidence is now located: the empire was governed through a Rajya (province) - Kottam/Sime (region) - Kampana/Sthala (municipality) hierarchy, with amaranayakas holding amaram land grants for revenue and troops. Inscription-cluster evidence is now located via the Hampi inscription cluster (already the atlas's inscription-hampi record), the imperial capital during Krishnadevaraya's reign. A reign-specific source map is still missing, so the polygon remains schematic.",
+          "kn": "ಆಡಳಿತ-ಘಟಕ ಸಾಕ್ಷ್ಯ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: ಸಾಮ್ರಾಜ್ಯವನ್ನು ರಾಜ್ಯ (ಪ್ರಾಂತ) - ಕೊಟ್ಟಂ/ಸೀಮೆ (ಪ್ರದೇಶ) - ಕಂಪಣ/ಸ್ಥಳ (ಪುರಸಭೆ) ಶ್ರೇಣಿಯ ಮೂಲಕ ಆಡಳಿತ ನಡೆಸಲಾಗುತ್ತಿತ್ತು, ಅಮರನಾಯಕರು ಆದಾಯ ಮತ್ತು ಸೈನ್ಯಕ್ಕಾಗಿ ಅಮರಂ ಭೂಮಿ ಅನುದಾನ ಹೊಂದಿದ್ದರು. ಶಾಸನ ಗುಚ್ಛ ಸಾಕ್ಷ್ಯ ಈಗ ಹಂಪಿ ಶಾಸನ ಗುಚ್ಛದ (ಈಗಾಗಲೇ ಭೂಪಟದ inscription-hampi ದಾಖಲೆ) ಮೂಲಕ ಗುರುತಿಸಲಾಗಿದೆ, ಕೃಷ್ಣದೇವರಾಯನ ಆಳ್ವಿಕೆಯ ಸಾಮ್ರಾಜ್ಯ ರಾಜಧಾನಿ. ಆಳ್ವಿಕೆ-ನಿರ್ದಿಷ್ಟ ಆಕರ ನಕ್ಷೆ ಇನ್ನೂ ಕಾಣೆಯಾಗಿದೆ, ಆದ್ದರಿಂದ ಬಹುಭುಜ ಅಂದಾಜಿನದ್ದೇ ಆಗಿ ಉಳಿದಿದೆ."
         },
         "citations": [
           {
@@ -1479,6 +1479,10 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Prototype polygon to be replaced"
+          },
+          {
+            "sourceId": "src-wikipedia-krishnadevaraya-administration",
+            "locator": "Rajya-Kottam/Sime-Kampana provincial hierarchy and amaranayaka land-grant administration"
           }
         ],
         "review": {
@@ -1619,16 +1623,16 @@
           "source-map-comparison"
         ],
         "completedEvidence": [
-          "capital-context"
+          "capital-context",
+          "inscription-clusters"
         ],
         "blockingEvidence": [
-          "inscription-clusters",
           "administrative-units",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Separates the Manyakheta-centred core from wider campaign claims; inscription clusters and administrative units remain the promotion blockers.",
-          "kn": "ಮಾನ್ಯಖೇಟ ಕೇಂದ್ರಿತ ಮೂಲ ವ್ಯಾಪ್ತಿಯನ್ನು ವ್ಯಾಪಕ ದಂಡಯಾತ್ರೆ ಹೇಳಿಕೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ; ಶಾಸನ ಗುಚ್ಛಗಳು ಮತ್ತು ಆಡಳಿತ ಘಟಕಗಳು ಉತ್ತೇಜನದ ಅಡೆತಡೆಗಳಾಗಿವೆ."
+          "en": "Separates the Manyakheta-centred core from wider campaign claims. Inscription-cluster evidence is now located: the 872 CE Sanjan copper-plate inscription, issued under Amoghavarsha I and authored by his chief justice/army-general Vatsaraja, records homage from the rulers of Anga, Vanga, Magadha and the Pallavas of Kanchi. This is prestige/tribute evidence close to but after 850, not a direct administrative-unit record, so that gate and source-map comparison remain the promotion blockers.",
+          "kn": "ಮಾನ್ಯಖೇಟ ಕೇಂದ್ರಿತ ಮೂಲ ವ್ಯಾಪ್ತಿಯನ್ನು ವ್ಯಾಪಕ ದಂಡಯಾತ್ರೆ ಹೇಳಿಕೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ. ಶಾಸನ ಗುಚ್ಛ ಸಾಕ್ಷ್ಯ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: ಅಮೋಘವರ್ಷ Iನ ಕಾಲದ 872ರ ಸಂಜಾನ್ ತಾಮ್ರಪಟ ಶಾಸನ, ಅವನ ಮುಖ್ಯ ನ್ಯಾಯಾಧೀಶ/ಸೇನಾಪತಿ ವತ್ಸರಾಜ ರಚಿಸಿದ್ದು, ಅಂಗ, ವಂಗ, ಮಗಧ ಮತ್ತು ಕಾಂಚಿಯ ಪಲ್ಲವರ ಅಧೀನತೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ಇದು 850ಕ್ಕೆ ಹತ್ತಿರವಾದರೂ ನಂತರದ ಪ್ರತಿಷ್ಠೆ/ಕಪ್ಪಕಾಣಿಕೆ ಸಾಕ್ಷ್ಯ, ನೇರ ಆಡಳಿತ-ಘಟಕ ದಾಖಲೆಯಲ್ಲ, ಆದ್ದರಿಂದ ಆ ಗಡಿ ಮತ್ತು ಆಕರ-ನಕ್ಷೆ ಹೋಲಿಕೆ ಉತ್ತೇಜನದ ಅಡೆತಡೆಗಳಾಗಿ ಉಳಿದಿವೆ."
         },
         "citations": [
           {
@@ -1638,6 +1642,10 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Schematic comparison geometry"
+          },
+          {
+            "sourceId": "src-wikipedia-sanjan-copper-plate",
+            "locator": "872 CE Sanjan copper-plate inscription recording homage from Anga, Vanga, Magadha and Pallava rulers"
           }
         ],
         "review": {
@@ -1671,15 +1679,15 @@
         ],
         "completedEvidence": [
           "campaign-events",
-          "route-control-distinction"
+          "route-control-distinction",
+          "opponent-polity-sources"
         ],
         "blockingEvidence": [
-          "opponent-polity-sources",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Keeps Kannauj as campaign/prestige reach rather than direct administration; northern polity sources and route review are still required.",
-          "kn": "ಕನ್ನೌಜ್ ಅನ್ನು ನೇರ ಆಡಳಿತವಲ್ಲ, ದಂಡಯಾತ್ರೆ/ಪ್ರತಿಷ್ಠೆಯ ತಲುಪುವಿಕೆ ಎಂದು ಉಳಿಸುತ್ತದೆ; ಉತ್ತರ ಭಾರತದ ರಾಜ್ಯ ಆಕರಗಳು ಮತ್ತು ಮಾರ್ಗ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಬೇಕು."
+          "en": "Keeps Kannauj as campaign/prestige reach rather than direct administration. Opponent-polity sources are now located: the Gurjara-Pratihara (Nagabhata II) and Pala (Dharmapala, his vassal Chakrayudha) sides of the c. 800 CE tripartite struggle for Kannauj are documented in the linked political-relation record, confirming that Govinda III defeated Nagabhata II in the Doab and received the submission of Dharmapala and Chakrayudha without retaining Kannauj. A reign-specific source map is still missing.",
+          "kn": "ಕನ್ನೌಜ್ ಅನ್ನು ನೇರ ಆಡಳಿತವಲ್ಲ, ದಂಡಯಾತ್ರೆ/ಪ್ರತಿಷ್ಠೆಯ ತಲುಪುವಿಕೆ ಎಂದು ಉಳಿಸುತ್ತದೆ. ಎದುರಾಳಿ-ರಾಜ್ಯ ಆಕರಗಳು ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: ಸು. ಕ್ರಿ.ಶ. 800ರ ಕನ್ನೌಜ್ ತ್ರಿಪಕ್ಷೀಯ ಸಂಘರ್ಷದ ಗುರ್ಜರ-ಪ್ರತಿಹಾರ (ನಾಗಭಟ II) ಮತ್ತು ಪಾಲ (ಧರ್ಮಪಾಲ, ಅಧೀನ ಚಕ್ರಾಯುಧ) ಬದಿಗಳನ್ನು ಸಂಪರ್ಕಿತ ರಾಜಕೀಯ-ಸಂಬಂಧ ದಾಖಲೆಯಲ್ಲಿ ದಾಖಲಿಸಲಾಗಿದೆ, ಗೋವಿಂದ III ದೋಆಬ್‌ನಲ್ಲಿ ನಾಗಭಟ IIನನ್ನು ಸೋಲಿಸಿ ಧರ್ಮಪಾಲ ಮತ್ತು ಚಕ್ರಾಯುಧರ ಶರಣಾಗತಿ ಪಡೆದನೆಂದೂ, ಕನ್ನೌಜ್ ಉಳಿಸಿಕೊಳ್ಳಲಿಲ್ಲವೆಂದೂ ದೃಢಪಡಿಸುತ್ತದೆ. ಆಳ್ವಿಕೆ-ನಿರ್ದಿಷ್ಟ ಆಕರ ನಕ್ಷೆ ಇನ್ನೂ ಕಾಣೆಯಾಗಿದೆ."
         },
         "citations": [
           {
@@ -1689,6 +1697,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Campaign reach kept separate from core geometry"
+          },
+          {
+            "sourceId": "src-wikipedia-nagabhata-ii",
+            "locator": "Nagabhata II (Gurjara-Pratihara), defeated by Govinda III in the Doab after occupying Kannauj"
+          },
+          {
+            "sourceId": "src-wikipedia-tripartite-struggle",
+            "locator": "Full opponent-polity sequence: Pala vassal Chakrayudha, Gurjara-Pratihara Nagabhata II, both submitting to Govinda III"
           }
         ],
         "review": {
