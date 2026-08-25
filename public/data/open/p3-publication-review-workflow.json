@@ -10343,15 +10343,15 @@
           "precision": "range"
         },
         "material": "silver",
-        "weightGrams": null,
+        "weightGrams": 3.4,
         "diameterMm": null,
         "obverse": {
-          "en": "Regional punch-marked coin context is queued only as an archaeological comparison lead for the Ashokan epigraphic horizon.",
-          "kn": "ಅಶೋಕ ಶಾಸನ ಹಂತಕ್ಕೆ ಪುರಾತತ್ತ್ವ ಹೋಲಿಕೆ ದಾರಿಯಾಗಿ ಮಾತ್ರ ಪ್ರಾದೇಶಿಕ ಪಂಚಮುದ್ರಿತ ನಾಣ್ಯ ಸಂದರ್ಭವನ್ನು ಸೇರಿಸಲಾಗಿದೆ."
+          "en": "Regional comparison type: Mauryan-period silver karshapana punch-marked coins, typically 3.4-3.6 g at .750-.850 fine silver, struck (not cast) with five standard punches (a sun symbol, a six-armed symbol and three others). No Maski-specific hoard, specimen or accession number has been matched; this is dynasty/type-level catalogue context only.",
+          "kn": "ಪ್ರಾದೇಶಿಕ ಹೋಲಿಕೆ ಬಗೆ: ಮೌರ್ಯ ಕಾಲದ ಬೆಳ್ಳಿ ಕಾರ್ಷಾಪಣ ಪಂಚಮುದ್ರಿತ ನಾಣ್ಯಗಳು, ಸಾಮಾನ್ಯವಾಗಿ 3.4-3.6 ಗ್ರಾಂ, .750-.850 ಶುದ್ಧ ಬೆಳ್ಳಿ, ಐದು ಪ್ರಮಾಣಿತ ಮುದ್ರೆಗಳೊಂದಿಗೆ (ಸೂರ್ಯ ಚಿಹ್ನೆ, ಆರು-ಕೈ ಚಿಹ್ನೆ ಮತ್ತು ಇತರ ಮೂರು) ಟಂಕಿಸಲಾಗಿದೆ (ಎರಕವಲ್ಲ). ಯಾವುದೇ ಮಸ್ಕಿ-ನಿರ್ದಿಷ್ಟ ನಿಧಿ, ಮಾದರಿ ಅಥವಾ ಸಂಗ್ರಹಾಲಯ ಸಂಖ್ಯೆ ಇನ್ನೂ ಹೊಂದಿಸಲಾಗಿಲ್ಲ; ಇದು ವಂಶ/ಬಗೆ-ಮಟ್ಟದ ಪಟ್ಟಿ ಸಂದರ್ಭ ಮಾತ್ರ."
         },
         "reverse": {
-          "en": "No specimen, symbol group, hoard number, weight or museum accession is verified yet.",
-          "kn": "ಯಾವುದೇ ಮಾದರಿ, ಚಿಹ್ನಾ ಗುಂಪು, ನಿಧಿ ಸಂಖ್ಯೆ, ತೂಕ ಅಥವಾ ಸಂಗ್ರಹಾಲಯ ಪ್ರವೇಶ ಸಂಖ್ಯೆ ಇನ್ನೂ ದೃಢಪಟ್ಟಿಲ್ಲ."
+          "en": "No Maski-specific specimen, symbol group, hoard number, or museum accession is verified yet; only the general Mauryan karshapana type is located.",
+          "kn": "ಯಾವುದೇ ಮಸ್ಕಿ-ನಿರ್ದಿಷ್ಟ ಮಾದರಿ, ಚಿಹ್ನಾ ಗುಂಪು, ನಿಧಿ ಸಂಖ್ಯೆ ಅಥವಾ ಸಂಗ್ರಹಾಲಯ ಪ್ರವೇಶ ಸಂಖ್ಯೆ ಇನ್ನೂ ದೃಢಪಟ್ಟಿಲ್ಲ; ಸಾಮಾನ್ಯ ಮೌರ್ಯ ಕಾರ್ಷಾಪಣ ಬಗೆ ಮಾತ್ರ ಗುರುತಿಸಲಾಗಿದೆ."
         },
         "findspot": {
           "placeId": "place-maski-rock-edict",
@@ -10364,16 +10364,16 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "provisional"
           },
           "image": {
             "status": "unresolved"
           },
           "metal": {
-            "status": "provisional"
+            "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -10383,6 +10383,10 @@
           {
             "sourceId": "src-asi-maski-monograph",
             "locator": "Archaeological comparison context; match a catalogue specimen before promotion"
+          },
+          {
+            "sourceId": "src-wikipedia-punch-marked-coins",
+            "locator": "General Mauryan silver karshapana type: weight, fineness and five-punch pattern; dynasty type-level reference, not a Maski-matched specimen"
           }
         ],
         "review": {
@@ -10407,15 +10411,15 @@
           "precision": "range"
         },
         "material": "gold",
-        "weightGrams": null,
-        "diameterMm": null,
+        "weightGrams": 0.4,
+        "diameterMm": 8,
         "obverse": {
-          "en": "A named Hoysala gold-coin specimen packet to resolve symbol, legend, metal and catalogue plate rather than leaving the dynasty at a generic coinage lead.",
-          "kn": "ವಂಶವನ್ನು ಸಾಮಾನ್ಯ ನಾಣ್ಯ ದಾರಿಯಾಗಿ ಬಿಟ್ಟಿರದೆ ಚಿಹ್ನೆ, ಲೇಖ, ಲೋಹ ಮತ್ತು catalogue ಫಲಕವನ್ನು ನಿರ್ಧರಿಸಲು ಹೆಸರಿಸಲಾದ ಹೊಯ್ಸಳ ಚಿನ್ನದ ನಾಣ್ಯ ಮಾದರಿ ಕಡತ."
+          "en": "Catalogued gold fanam of the Hoysalas of Dwarasamudra (0.40 g, 8 mm): a stylised lion (sardula) standing right with a crescent above. Note: the record name's \"Garuda\" reference does not match the catalogued iconography, which shows a lion, not Garuda; this is corrected here pending independent review. Dynasty/type-level catalogue data, not yet matched to a Belur-specific specimen.",
+          "kn": "ದ್ವಾರಸಮುದ್ರದ ಹೊಯ್ಸಳರ ಪಟ್ಟಿಗತ ಚಿನ್ನದ ಫಣಂ (0.40 ಗ್ರಾಂ, 8 ಮಿ.ಮೀ): ಬಲಕ್ಕೆ ನಿಂತ ಶೈಲೀಕೃತ ಸಿಂಹ (ಶಾರ್ದೂಲ) ಮೇಲೆ ಅರ್ಧಚಂದ್ರನೊಂದಿಗೆ. ಗಮನಿಸಿ: ದಾಖಲೆಯ ಹೆಸರಿನ \"ಗರುಡ\" ಉಲ್ಲೇಖ ಪಟ್ಟಿಗತ ರೂಪಕಕ್ಕೆ ಹೊಂದುವುದಿಲ್ಲ, ಇದು ಗರುಡವಲ್ಲ, ಸಿಂಹವನ್ನು ತೋರಿಸುತ್ತದೆ; ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ ಇಲ್ಲಿ ಇದನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ. ವಂಶ/ಬಗೆ-ಮಟ್ಟದ ಪಟ್ಟಿ ದತ್ತಾಂಶ, ಇನ್ನೂ ಬೇಲೂರು-ನಿರ್ದಿಷ್ಟ ಮಾದರಿಗೆ ಹೊಂದಿಸಲಾಗಿಲ್ಲ."
         },
         "reverse": {
-          "en": "Reverse legend, denomination, mint and findspot are unresolved until a numismatic catalogue entry is attached.",
-          "kn": "ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ದಾಖಲೆ ಜೋಡಿಸುವವರೆಗೆ ಹಿಂಭಾಗ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಬಗೆಹರಿದಿಲ್ಲ."
+          "en": "Reverse shows a stylised boar (varaha) standing right. Legend, denomination, mint and findspot for a Belur-matched specimen remain unresolved until independent numismatic review.",
+          "kn": "ಹಿಂಭಾಗ ಬಲಕ್ಕೆ ನಿಂತ ಶೈಲೀಕೃತ ವರಾಹವನ್ನು ತೋರಿಸುತ್ತದೆ. ಬೇಲೂರು-ಹೊಂದಿಸಿದ ಮಾದರಿಯ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಸ್ವತಂತ್ರ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ ಬಗೆಹರಿದಿಲ್ಲ."
         },
         "findspot": {
           "placeId": "place-belur",
@@ -10428,7 +10432,7 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
@@ -10437,7 +10441,7 @@
             "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -10447,6 +10451,10 @@
           {
             "sourceId": "src-unesco-hoysala-dossier",
             "locator": "Royal centre and material-culture context; numismatic catalogue plate required"
+          },
+          {
+            "sourceId": "src-numista-hoysala-empire",
+            "locator": "Hoysala of Dwarasamudra gold fanam type: lion obverse, boar reverse, 0.40 g, 8 mm; dynasty type-level reference, not a Belur-matched specimen"
           }
         ],
         "review": {
