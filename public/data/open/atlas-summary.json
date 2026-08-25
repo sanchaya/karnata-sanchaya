@@ -39228,6 +39228,50 @@
         }
       },
       {
+        "id": "src-sciencedirect-sanganakallu-kupgal",
+        "type": "journal-article",
+        "title": {
+          "en": "Lithic technology and social transformations in the South Indian Neolithic: the evidence from Sanganakallu-Kupgal",
+          "kn": "ದಕ್ಷಿಣ ಭಾರತ ನವಶಿಲಾಯುಗದ ಶಿಲಾ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಸಾಮಾಜಿಕ ಪರಿವರ್ತನೆಗಳು: ಸಂಗನಕಲ್ಲು-ಕುಪ್ಗಲ್‌ನ ಸಾಕ್ಷ್ಯ"
+        },
+        "authors": [
+          "Journal of Anthropological Archaeology"
+        ],
+        "year": null,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0278416511000663",
+        "scope": {
+          "en": "Peer-reviewed archaeological study of the Sanganakallu-Kupgal Neolithic/Mesolithic complex near Ballari; dates the ashmound/axe-production phase from c. 1900 BCE with peak output 1400-1200 BCE.",
+          "kn": "ಬಳ್ಳಾರಿ ಬಳಿಯ ಸಂಗನಕಲ್ಲು-ಕುಪ್ಗಲ್ ನವಶಿಲಾಯುಗ/ಮಧ್ಯಶಿಲಾಯುಗ ಸಂಕೀರ್ಣದ ಪೀರ್-ಪರಿಶೀಲಿತ ಪುರಾತತ್ತ್ವ ಅಧ್ಯಯನ; ಬೂದಿದಿಬ್ಬ/ಕೊಡಲಿ-ಉತ್ಪಾದನಾ ಹಂತವನ್ನು ಸು. ಕ್ರಿ.ಪೂ. 1900ರಿಂದ, ಗರಿಷ್ಠ ಉತ್ಪಾದನೆ 1400-1200 ಎಂದು ದಿನಾಂಕಿಸುತ್ತದೆ."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-sanganakallu",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Sanganakallu",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಸಂಗನಕಲ್ಲು"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Sanganakallu",
+        "scope": {
+          "en": "Site location, extent and excavation history for the Sanganakallu-Kupgal complex. Discovery lead; verify against the archaeological literature and field survey before promotion.",
+          "kn": "ಸಂಗನಕಲ್ಲು-ಕುಪ್ಗಲ್ ಸಂಕೀರ್ಣದ ತಾಣ ಸ್ಥಳ, ವ್ಯಾಪ್ತಿ ಮತ್ತು ಉತ್ಖನನ ಇತಿಹಾಸ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಪುರಾತತ್ತ್ವ ಸಾಹಿತ್ಯ ಮತ್ತು ಕ್ಷೇತ್ರ ಸಮೀಕ್ಷೆಯ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-archive-torave-ramayana-vol2",
         "type": "digitized-print-edition",
         "title": {
@@ -77953,6 +77997,48 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Ballari district chapter: prehistoric and early iron-age references to locate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-ballari-sanganakallu-kupgal-neolithic-complex-polity-1",
+        "fromId": "district-history-ballari-sanganakallu-kupgal-neolithic-complex",
+        "type": "district-history-polity-context",
+        "toId": "polity-vijayanagara",
+        "citations": [
+          {
+            "sourceId": "src-sciencedirect-sanganakallu-kupgal",
+            "locator": "Lithic technology and social transformations in the South Indian Neolithic: the evidence from Sanganakallu-Kupgal; ashmound phase from c. 1900 BCE, peak production 1400-1200 BCE"
+          },
+          {
+            "sourceId": "src-wikipedia-sanganakallu",
+            "locator": "Site location, extent and excavation history; discovery-lead pending independent field verification"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-ballari-sanganakallu-kupgal-neolithic-complex-event-1",
+        "fromId": "district-history-ballari-sanganakallu-kupgal-neolithic-complex",
+        "type": "district-history-event-context",
+        "toId": "event-vijayanagara-foundation",
+        "citations": [
+          {
+            "sourceId": "src-sciencedirect-sanganakallu-kupgal",
+            "locator": "Lithic technology and social transformations in the South Indian Neolithic: the evidence from Sanganakallu-Kupgal; ashmound phase from c. 1900 BCE, peak production 1400-1200 BCE"
+          },
+          {
+            "sourceId": "src-wikipedia-sanganakallu",
+            "locator": "Site location, extent and excavation history; discovery-lead pending independent field verification"
           }
         ],
         "review": {
