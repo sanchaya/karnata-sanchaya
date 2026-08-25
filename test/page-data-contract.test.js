@@ -91,17 +91,32 @@ test('source-volume extraction sprint records remain citation-led and review-gat
     assert.equal(event?.review.status, 'needs-review')
     assert.ok(event?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v1'), `${id} must cite Karnataka Parampare Volume 1`)
   }
+  const earlyPlateEvent=atlasData.events.find(item=>item.id==='event-parampare-v1-halmidi-talagunda-plate-lead')
+  assert.equal(earlyPlateEvent?.review.status, 'needs-review')
+  assert.ok(earlyPlateEvent?.placeIds.includes('place-halmidi'))
+  assert.ok(earlyPlateEvent?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v1'))
+  const karnataComparisonEvent=atlasData.events.find(item=>item.id==='event-parampare-v2-vijayanagara-karnata-comparison-lead')
+  assert.equal(karnataComparisonEvent?.review.status, 'needs-review')
+  assert.ok(karnataComparisonEvent?.participants.some(participant=>participant.polityId==='external-polity-karnata-tirhut'))
+  assert.ok(karnataComparisonEvent?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v2'))
   for (const id of ['inscription-parampare-barkur-harihara-lead','inscription-parampare-badami-chamarasa-lead']) {
     const inscription=atlasData.inscriptions.find(item=>item.id===id)
     assert.equal(inscription?.review.status, 'needs-review')
     assert.ok(districtAuditIds.has(inscription?.districtAuditId), `${id} must be assigned to a district audit`)
   }
-  for (const id of ['edition-source-volume-barkur-harihara-lead','edition-source-volume-badami-chamarasa-lead','edition-source-volume-belur-hoysala-vol7-lead']) {
+  for (const id of ['edition-source-volume-halmidi-parampare-v1-plate-lead','edition-source-volume-talagunda-parampare-v1-plate-lead','edition-source-volume-barkur-harihara-lead','edition-source-volume-badami-chamarasa-lead','edition-source-volume-belur-hoysala-vol7-lead']) {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.review.status, 'needs-review')
     assert.equal(edition?.locatorReview.priority, 'high')
     assert.ok(edition?.locatorReview.requiredLocators.includes('archiveIdentifier'))
     assert.equal(edition?.itemEdition.status, 'provisional')
+  }
+  for (const id of ['manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead','manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead','manuscript-source-volume-torave-ramayana-itihasa-literature-lead']) {
+    const witness=atlasData.manuscriptWitnesses.find(item=>item.id===id)
+    assert.equal(witness?.review.status, 'needs-review')
+    assert.equal(witness?.access.status, 'linked-lead')
+    assert.ok(witness?.citations.some(citation=>citation.sourceId.startsWith('src-itihasa-darshana-')), `${id} must cite Itihasa Darshana`)
+    assert.equal(witness?.evidenceGates.editionComparison.status, 'unresolved')
   }
   const coin=atlasData.coinRecords.find(item=>item.id==='coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead')
   assert.equal(coin?.review.status, 'needs-review')

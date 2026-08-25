@@ -5624,6 +5624,168 @@
         }
       },
       {
+        "id": "edition-source-volume-halmidi-parampare-v1-plate-lead",
+        "name": {
+          "en": "Halmidi Karnataka Parampare plate lead",
+          "kn": "ಹಲ್ಮಿಡಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಫಲಕ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-halmidi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Kadamba / Proto-Kannada",
+        "date": {
+          "from": 450,
+          "to": 450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "1",
+          "number": "unresolved",
+          "locator": "Image-list OCR lines around 980-982; printed plate page unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-southern-brahmi-kadamba-transition"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Match the Parampare plate to the printed page image and reconcile it with the established Halmidi edition.",
+            "kn": "ಪರಂಪರೆ ಫಲಕವನ್ನು ಮುದ್ರಿತ ಪುಟಚಿತ್ರಕ್ಕೆ ಹೊಂದಿಸಿ, ಸ್ಥಾಪಿತ ಹಲ್ಮಿಡಿ ಆವೃತ್ತಿಯೊಂದಿಗೆ ಹೋಲಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v1; Halmidi plate/image-list lead from OCR"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-source-volume-talagunda-parampare-v1-plate-lead",
+        "name": {
+          "en": "Talagunda Karnataka Parampare plate lead",
+          "kn": "ತಾಳಗುಂದ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಫಲಕ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-talagunda",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit / Kannada-context",
+        "script": "Kadamba / Proto-Kannada",
+        "date": {
+          "from": 455,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "1",
+          "number": "unresolved",
+          "locator": "Image-list OCR lines around 980-982; printed plate page unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-southern-brahmi-kadamba-transition"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Match the Parampare plate to the printed page image and reconcile it with the existing Talagunda proof packet.",
+            "kn": "ಪರಂಪರೆ ಫಲಕವನ್ನು ಮುದ್ರಿತ ಪುಟಚಿತ್ರಕ್ಕೆ ಹೊಂದಿಸಿ, ಈಗಿರುವ ತಾಳಗುಂದ proof packet ಜೊತೆಗೆ ಪರಿಶೀಲಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v1; Talagunda plate/image-list lead from OCR"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "edition-source-volume-barkur-harihara-lead",
         "name": {
           "en": "Barkur Harihara I inscription edition lead",
@@ -76775,6 +76937,162 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
+        "name": {
+          "en": "Vikramarjuna Vijaya Itihasa Darshana literature lead",
+          "kn": "ವಿಕ್ರಮಾರ್ಜುನ ವಿಜಯ ಇತಿಹಾಸ ದರ್ಶನ ಸಾಹಿತ್ಯ ದಾರಿ"
+        },
+        "workId": "work-vikramarjuna-vijaya",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Itihasa Darshana / Karnataka Itihasa Academy review queue",
+          "kn": "ಇತಿಹಾಸ ದರ್ಶನ / ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾಡೆಮಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": "unresolved",
+        "date": {
+          "from": 941,
+          "to": 941,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/kia.itihasadarsanasa0000mgnasmput-16"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000mgnasmput-16",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead",
+        "name": {
+          "en": "Kumaravyasa Bharata Itihasa Darshana literature lead",
+          "kn": "ಕುಮಾರವ್ಯಾಸ ಭಾರತ ಇತಿಹಾಸ ದರ್ಶನ ಸಾಹಿತ್ಯ ದಾರಿ"
+        },
+        "workId": "work-kumaravyasa-bharata",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Itihasa Darshana / Karnataka Itihasa Academy review queue",
+          "kn": "ಇತಿಹಾಸ ದರ್ಶನ / ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾಡೆಮಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": "unresolved",
+        "date": {
+          "from": 1430,
+          "to": 1450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/kia.itihasadarsanasa0000drmgsamputa-25"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000drmgsamputa-25",
+            "locator": "Literature and inscription OCR signal; article/page review required before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-source-volume-torave-ramayana-itihasa-literature-lead",
+        "name": {
+          "en": "Torave Ramayana Itihasa Darshana literature lead",
+          "kn": "ತೊರವೆ ರಾಮಾಯಣ ಇತಿಹಾಸ ದರ್ಶನ ಸಾಹಿತ್ಯ ದಾರಿ"
+        },
+        "workId": "work-torave-ramayana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Itihasa Darshana / Karnataka Itihasa Academy review queue",
+          "kn": "ಇತಿಹಾಸ ದರ್ಶನ / ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾಡೆಮಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": "unresolved",
+        "date": {
+          "from": 1500,
+          "to": 1600,
+          "era": "CE",
+          "precision": "century"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/itihasadarshanav0000drde"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-itihasadarshanav0000drde",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {

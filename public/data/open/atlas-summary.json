@@ -31538,6 +31538,131 @@
         }
       },
       {
+        "id": "event-parampare-v1-halmidi-talagunda-plate-lead",
+        "type": "inscription",
+        "name": {
+          "en": "Karnataka Parampare Halmidi and Talagunda plate lead",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ ಹಲ್ಮಿಡಿ ಮತ್ತು ತಾಳಗುಂದ ಫಲಕ ದಾರಿ"
+        },
+        "date": {
+          "from": 450,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "year": 450,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.162,
+            14.372
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Karnataka Parampare Volume 1 image-list OCR gives a paired early-inscription plate lead for Halmidi and Talagunda. It is a review route into Kadamba/Proto-Kannada palaeography, not a closed item edition.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರ ಚಿತ್ರಪಟ್ಟಿ OCR ಹಲ್ಮಿಡಿ ಮತ್ತು ತಾಳಗುಂದ ಮೊದಲಿನ ಶಾಸನ ಫಲಕಗಳಿಗೆ ಜೋಡಿ ದಾರಿ ನೀಡುತ್ತದೆ. ಇದು ಕದಂಬ/ಪ್ರೋಟೋ-ಕನ್ನಡ ಲಿಪಿಶಾಸ್ತ್ರಕ್ಕೆ ಪರಿಶೀಲನಾ ದಾರಿ; ಮುಚ್ಚಿದ ವಸ್ತು-ಆವೃತ್ತಿ ಅಲ್ಲ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-kadamba",
+            "role": "inscriptional-polity",
+            "outcome": "early-kannada-script-lead"
+          }
+        ],
+        "peopleIds": [
+          "person-mayurasharma",
+          "person-kakusthavarma"
+        ],
+        "placeIds": [
+          "place-halmidi",
+          "place-talagunda"
+        ],
+        "destinationPlaceId": "place-talagunda",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Image-list OCR lines around 980-982 for Talagunda/Halmidi plates; printed page and plate image require review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "type": "kingdom-foundation",
+        "name": {
+          "en": "Vijayanagara and wider Karnata comparison lead",
+          "kn": "ವಿಜಯನಗರ ಮತ್ತು ವ್ಯಾಪಕ ಕರ್ಣಾಟ ಹೋಲಿಕೆ ದಾರಿ"
+        },
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "year": 1336,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.475,
+            15.335
+          ],
+          "precision": "approximate"
+        },
+        "route": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              76.475,
+              15.335
+            ],
+            [
+              85.08,
+              26.9
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "summary": {
+          "en": "Karnataka Parampare Volume 2 contains OCR/article leads for Vijayanagara origins and wider Karnata political memory, including comparison with the Tirhut/Karnata stream. This makes the comparison explorable while keeping the genealogy and origin claims open for proof-packet review.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೨ರಲ್ಲಿ ವಿಜಯನಗರ ಮೂಲಗಳು ಮತ್ತು ತಿರಹುತ್/ಕರ್ಣಾಟ ಧಾರೆಯೊಂದಿಗೆ ಹೋಲಿಕೆಯಂತಹ ವ್ಯಾಪಕ ಕರ್ಣಾಟ ರಾಜಕೀಯ ಸ್ಮರಣೆಗೆ OCR/ಲೇಖನ ದಾರಿಗಳು ಇವೆ. ಇದರಿಂದ ಹೋಲಿಕೆ ಅನ್ವೇಷಣೆಗೆ ಬರುತ್ತದೆ; ವಂಶಾವಳಿ ಮತ್ತು ಮೂಲದ ಹಕ್ಕುಗಳು proof-packet ಪರಿಶೀಲನೆಗೆ ತೆರೆದಿರುತ್ತವೆ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "founding-polity",
+            "outcome": "review-lead"
+          },
+          {
+            "polityId": "external-polity-karnata-tirhut",
+            "role": "comparative-precedent",
+            "outcome": "context-only"
+          }
+        ],
+        "peopleIds": [
+          "person-harihara-i",
+          "person-bukka-i",
+          "person-nanyadeva"
+        ],
+        "originPlaceId": "place-hampi",
+        "destinationPlaceId": "place-simraungarh",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "event-parampare-barkur-fort-lead",
         "type": "campaign",
         "name": {
@@ -65801,6 +65926,75 @@
         }
       },
       {
+        "id": "rel-event-parampare-v1-halmidi-talagunda-plate-lead-participant-1",
+        "fromId": "event-parampare-v1-halmidi-talagunda-plate-lead",
+        "type": "participant-inscriptional-polity",
+        "toId": "polity-kadamba",
+        "date": {
+          "from": 450,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Image-list OCR lines around 980-982 for Talagunda/Halmidi plates; printed page and plate image require review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-v2-vijayanagara-karnata-comparison-lead-participant-1",
+        "fromId": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "type": "participant-founding-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-v2-vijayanagara-karnata-comparison-lead-participant-2",
+        "fromId": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "type": "participant-comparative-precedent",
+        "toId": "external-polity-karnata-tirhut",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-event-parampare-barkur-fort-lead-participant-1",
         "fromId": "event-parampare-barkur-fort-lead",
         "type": "participant-expanding-polity",
@@ -67606,6 +67800,121 @@
         }
       },
       {
+        "id": "rel-person-mayurasharma-event-parampare-v1-halmidi-talagunda-plate-lead",
+        "fromId": "person-mayurasharma",
+        "type": "associated-with-event",
+        "toId": "event-parampare-v1-halmidi-talagunda-plate-lead",
+        "date": {
+          "from": 450,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Image-list OCR lines around 980-982 for Talagunda/Halmidi plates; printed page and plate image require review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-kakusthavarma-event-parampare-v1-halmidi-talagunda-plate-lead",
+        "fromId": "person-kakusthavarma",
+        "type": "associated-with-event",
+        "toId": "event-parampare-v1-halmidi-talagunda-plate-lead",
+        "date": {
+          "from": 450,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Image-list OCR lines around 980-982 for Talagunda/Halmidi plates; printed page and plate image require review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-harihara-i-event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "fromId": "person-harihara-i",
+        "type": "associated-with-event",
+        "toId": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-bukka-i-event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "fromId": "person-bukka-i",
+        "type": "associated-with-event",
+        "toId": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-nanyadeva-event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "fromId": "person-nanyadeva",
+        "type": "associated-with-event",
+        "toId": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-person-harihara-i-event-parampare-barkur-fort-lead",
         "fromId": "person-harihara-i",
         "type": "associated-with-event",
@@ -68716,6 +69025,52 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-event-parampare-v1-halmidi-talagunda-plate-lead-destination",
+        "fromId": "event-parampare-v1-halmidi-talagunda-plate-lead",
+        "type": "reached-destination",
+        "toId": "place-talagunda",
+        "date": {
+          "from": 450,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Image-list OCR lines around 980-982 for Talagunda/Halmidi plates; printed page and plate image require review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-v2-vijayanagara-karnata-comparison-lead-destination",
+        "fromId": "event-parampare-v2-vijayanagara-karnata-comparison-lead",
+        "type": "reached-destination",
+        "toId": "place-simraungarh",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR/article locators around Vijayanagara origins and Karnata comparison; page-image and claim-by-claim review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -82929,6 +83284,75 @@
         }
       },
       {
+        "id": "rel-manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead-work",
+        "fromId": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-vikramarjuna-vijaya",
+        "date": {
+          "from": 941,
+          "to": 941,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000mgnasmput-16",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead-work",
+        "fromId": "manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-kumaravyasa-bharata",
+        "date": {
+          "from": 1430,
+          "to": 1450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000drmgsamputa-25",
+            "locator": "Literature and inscription OCR signal; article/page review required before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-manuscript-source-volume-torave-ramayana-itihasa-literature-lead-work",
+        "fromId": "manuscript-source-volume-torave-ramayana-itihasa-literature-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-torave-ramayana",
+        "date": {
+          "from": 1500,
+          "to": 1600,
+          "era": "CE",
+          "precision": "century"
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-itihasadarshanav0000drde",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-manuscript-kavirajamarga-parampare-print-witness-lead-work",
         "fromId": "manuscript-kavirajamarga-parampare-print-witness-lead",
         "type": "manuscript-witness-for",
@@ -83675,6 +84099,52 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-edition-source-volume-halmidi-parampare-v1-plate-lead-inscription",
+        "fromId": "edition-source-volume-halmidi-parampare-v1-plate-lead",
+        "type": "edition-for-inscription",
+        "toId": "inscription-halmidi",
+        "date": {
+          "from": 450,
+          "to": 450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v1; Halmidi plate/image-list lead from OCR"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-edition-source-volume-talagunda-parampare-v1-plate-lead-inscription",
+        "fromId": "edition-source-volume-talagunda-parampare-v1-plate-lead",
+        "type": "edition-for-inscription",
+        "toId": "inscription-talagunda",
+        "date": {
+          "from": 455,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v1; Talagunda plate/image-list lead from OCR"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -86456,6 +86926,162 @@
         }
       },
       {
+        "id": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
+        "name": {
+          "en": "Vikramarjuna Vijaya Itihasa Darshana literature lead",
+          "kn": "ವಿಕ್ರಮಾರ್ಜುನ ವಿಜಯ ಇತಿಹಾಸ ದರ್ಶನ ಸಾಹಿತ್ಯ ದಾರಿ"
+        },
+        "workId": "work-vikramarjuna-vijaya",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Itihasa Darshana / Karnataka Itihasa Academy review queue",
+          "kn": "ಇತಿಹಾಸ ದರ್ಶನ / ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾಡೆಮಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": "unresolved",
+        "date": {
+          "from": 941,
+          "to": 941,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/kia.itihasadarsanasa0000mgnasmput-16"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000mgnasmput-16",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead",
+        "name": {
+          "en": "Kumaravyasa Bharata Itihasa Darshana literature lead",
+          "kn": "ಕುಮಾರವ್ಯಾಸ ಭಾರತ ಇತಿಹಾಸ ದರ್ಶನ ಸಾಹಿತ್ಯ ದಾರಿ"
+        },
+        "workId": "work-kumaravyasa-bharata",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Itihasa Darshana / Karnataka Itihasa Academy review queue",
+          "kn": "ಇತಿಹಾಸ ದರ್ಶನ / ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾಡೆಮಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": "unresolved",
+        "date": {
+          "from": 1430,
+          "to": 1450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/kia.itihasadarsanasa0000drmgsamputa-25"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000drmgsamputa-25",
+            "locator": "Literature and inscription OCR signal; article/page review required before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-source-volume-torave-ramayana-itihasa-literature-lead",
+        "name": {
+          "en": "Torave Ramayana Itihasa Darshana literature lead",
+          "kn": "ತೊರವೆ ರಾಮಾಯಣ ಇತಿಹಾಸ ದರ್ಶನ ಸಾಹಿತ್ಯ ದಾರಿ"
+        },
+        "workId": "work-torave-ramayana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Itihasa Darshana / Karnataka Itihasa Academy review queue",
+          "kn": "ಇತಿಹಾಸ ದರ್ಶನ / ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಅಕಾಡೆಮಿ ಪರಿಶೀಲನಾ ಸರದಿ"
+        },
+        "shelfmark": "unresolved",
+        "date": {
+          "from": 1500,
+          "to": 1600,
+          "era": "CE",
+          "precision": "century"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "linked-lead",
+          "url": "https://archive.org/details/itihasadarshanav0000drde"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-itihasa-darshana-itihasadarshanav0000drde",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "manuscript-kavirajamarga-parampare-print-witness-lead",
         "name": {
           "en": "Kavirajamarga Parampare print-context witness lead",
@@ -88180,6 +88806,168 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-source-volume-halmidi-parampare-v1-plate-lead",
+        "name": {
+          "en": "Halmidi Karnataka Parampare plate lead",
+          "kn": "ಹಲ್ಮಿಡಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಫಲಕ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-halmidi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Kadamba / Proto-Kannada",
+        "date": {
+          "from": 450,
+          "to": 450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "1",
+          "number": "unresolved",
+          "locator": "Image-list OCR lines around 980-982; printed plate page unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-southern-brahmi-kadamba-transition"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Match the Parampare plate to the printed page image and reconcile it with the established Halmidi edition.",
+            "kn": "ಪರಂಪರೆ ಫಲಕವನ್ನು ಮುದ್ರಿತ ಪುಟಚಿತ್ರಕ್ಕೆ ಹೊಂದಿಸಿ, ಸ್ಥಾಪಿತ ಹಲ್ಮಿಡಿ ಆವೃತ್ತಿಯೊಂದಿಗೆ ಹೋಲಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v1; Halmidi plate/image-list lead from OCR"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-source-volume-talagunda-parampare-v1-plate-lead",
+        "name": {
+          "en": "Talagunda Karnataka Parampare plate lead",
+          "kn": "ತಾಳಗುಂದ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಫಲಕ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-talagunda",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit / Kannada-context",
+        "script": "Kadamba / Proto-Kannada",
+        "date": {
+          "from": 455,
+          "to": 455,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "1",
+          "number": "unresolved",
+          "locator": "Image-list OCR lines around 980-982; printed plate page unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-southern-brahmi-kadamba-transition"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Match the Parampare plate to the printed page image and reconcile it with the existing Talagunda proof packet.",
+            "kn": "ಪರಂಪರೆ ಫಲಕವನ್ನು ಮುದ್ರಿತ ಪುಟಚಿತ್ರಕ್ಕೆ ಹೊಂದಿಸಿ, ಈಗಿರುವ ತಾಳಗುಂದ proof packet ಜೊತೆಗೆ ಪರಿಶೀಲಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v1; Talagunda plate/image-list lead from OCR"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {

@@ -19,9 +19,9 @@ This runbook covers the collections that moved from “missing” to “structur
 | --- | ---: | --- |
 | `genealogicalRelations` | 9 | Derived or secondary assertions; new Vengi and Tuluva-line proof packets are review-gated, not final family-tree proof |
 | `coinRecords` | 10 | Catalogue/image/metal/weight/findspot gates open; new Maski Ashokan-context and Hoysala catalogue proof packets keep images, weights and findspots unresolved until reviewed |
-| `manuscriptWitnesses` | 9 | Repository leads located for some works; new Kavirajamarga Parampare and Shabdamanidarpana/Sanchaya witness leads keep shelfmark, licence and edition comparison mostly open |
+| `manuscriptWitnesses` | 12 | Repository leads located for some works; new Kavirajamarga Parampare, Shabdamanidarpana/Sanchaya and Itihasa Darshana literature-heavy witness leads keep shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; not research-grade boundary corpus |
-| `inscriptionEditions` | 23 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
+| `inscriptionEditions` | 25 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 12 | Public explorer now covers Ashokan/Satavahana Brahmi, Kadamba/Proto-Kannada, Badami Chalukya, Rashtrakuta, Kalyani Chalukya-Hoysala, Vijayanagara-Nayaka/Telugu-Kannada divergence and modern print phases; all still review-gated |
 | Research-volume source links | 33 linked volumes / 65 link groups | Itihasa Darshana plus Karnataka Parampare source leads now route to inscription, script, literature, manuscript, freedom-movement, outside-Karnataka rule, ports, coinage and heritage review targets; Parampare links include OCR/page locator hints but still require page-image review |
@@ -118,6 +118,8 @@ The second extraction sprint registers all 12 offline Epigraphia Carnatica folde
 The third extraction sprint adds Volume 1 article-review event leads for Rashtrakuta political history, Goa Kadambas and Devagiri Yadavas, plus a Western Ganga gold-coin image-plate packet. These records make the topics visible in timeline/search while preserving the next action: locate page image, printed article range and item-level evidence.
 
 The fourth maturity sprint expands the palaeography layer into a full chronological and morphological classification. It adds Maski and Brahmagiri Ashokan Brahmi inscription packets, a Satavahana context polity, Badami Chalukya and Rashtrakuta sub-stages, Kalyani Chalukya-Hoysala ornate Middle Kannada, Vijayanagara-Nayaka standardisation, Telugu-Kannada differentiation, palm-leaf influence and modern print-standard Kannada. The same sprint adds new review-gated coin, genealogy, samanta, boundary, district-history, manuscript and source-volume routing records.
+
+The fifth extraction sprint finishes the current bounded source-volume pass by promoting the strongest remaining volume-level leads into review-gated atlas records. Karnataka Parampare Volume 1 now has map/timeline-visible Halmidi-Talagunda plate and inscription-edition review packets, Karnataka Parampare Volume 2 has a Vijayanagara/Karnata comparison event lead, and Itihasa Darshana literature-heavy volumes now seed manuscript-witness review packets for Vikramarjuna Vijaya, Kumaravyasa Bharata and Torave Ramayana. These records are intentionally not treated as verified witnesses until page images, article titles, printed locators and claim-level summaries are entered.
 
 Minimum evidence per edition:
 
