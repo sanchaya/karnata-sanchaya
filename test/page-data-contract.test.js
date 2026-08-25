@@ -549,16 +549,29 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   for (const id of ['genealogy-vishnuvardhana-narasimha-i-hoysala','genealogy-narasimha-i-ballala-ii-hoysala','genealogy-yaduraya-chikkadevaraja-mysore-early-line','genealogy-chamaraja-wodeyar-ix-krishnaraja-iii-mysore','coin-hoysala-belur-numismatic-lead','coin-mysore-srirangapatna-tipu-lead','manuscript-kumaravyasa-bharata-sanchaya-witness-lead','manuscript-torave-ramayana-sanchaya-witness-lead','boundary-evidence-hoysala-vishnuvardhana-1117','boundary-evidence-mysore-tipu-sultan-1787','edition-inscription-shravanabelagola-cluster','edition-inscription-muktesvara-attiraja-review-packet']) {
     assert.ok(atlasData.relationships.some(relation=>relation.fromId===id||relation.sourceRecordId===id), `${id} must be linked into the public research graph`)
   }
-  for (const id of ['edition-inscription-talagunda','edition-inscription-atakur','edition-inscription-belur-foundation','edition-inscription-takuapa-tamil-guild']) {
+  for (const id of ['edition-inscription-talagunda','edition-inscription-atakur','edition-inscription-takuapa-tamil-guild']) {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.review.status, 'needs-review')
     assert.equal(edition?.itemEdition.status, 'provisional')
   }
+  const belurFoundation=atlasData.inscriptionEditions.find(item=>item.id==='edition-inscription-belur-foundation')
+  assert.equal(belurFoundation?.review.status, 'needs-review')
+  assert.equal(belurFoundation?.itemEdition.status, 'located')
+  assert.equal(belurFoundation?.itemEdition.number, 'Bl. 68')
   for (const id of ['edition-inscription-halmidi-review-packet','edition-inscription-kappe-arabhatta','edition-inscription-begur','edition-inscription-atakur','edition-inscription-lakkundi','edition-inscription-belur-foundation','edition-inscription-hampi-cluster','edition-inscription-hampi-krishna-temple','edition-inscription-muktesvara-attiraja-review-packet']) {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.locatorReview.priority, 'high', `${id} must stay prioritized for the script-evolution maturity path`)
     assert.ok(edition?.locatorReview.scriptPhaseIds.length > 0, `${id} must remain linked to a script phase`)
   }
+  for (const [id, number] of [['edition-inscription-shravanabelagola-gommateshwara-chavundaraya','175'],['edition-inscription-shravanabelagola-gangaraja-basti','70'],['edition-inscription-shravanabelagola-panditarya-epitaph','254']]) {
+    const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
+    assert.equal(edition?.review.status, 'needs-review', `${id} must stay needs-review`)
+    assert.equal(edition?.itemEdition.status, 'located', `${id} must have a located item-level number`)
+    assert.equal(edition?.itemEdition.number, number, `${id} must cite its Epigraphia Carnatica item number`)
+    assert.equal(edition?.inscriptionId, 'inscription-shravanabelagola', `${id} must stay linked to the Shravanabelagola inscription`)
+  }
+  const muktesvara=atlasData.inscriptionEditions.find(item=>item.id==='edition-inscription-muktesvara-attiraja-review-packet')
+  assert.equal(muktesvara?.textWitness.originalStatus, 'located')
 })
 
 test('full paleographic classification covers dynastic and morphological stages', () => {
