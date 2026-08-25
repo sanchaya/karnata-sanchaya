@@ -18,7 +18,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | Collection | Current count | Status |
 | --- | ---: | --- |
 | `genealogicalRelations` | 23 | Derived or secondary assertions; the Hoysala, Wadiyar and Western Ganga long bridges are now split into individual-generation links (still needs-review), plus the Vengi and Tuluva-line proof packets — none are final family-tree proof |
-| `coinRecords` | 10 | Catalogue/image/metal/weight/findspot gates open; new Maski Ashokan-context and Hoysala catalogue proof packets keep images, weights and findspots unresolved until reviewed |
+| `coinRecords` | 10 | The 6 P1-model-foundations leads (Rashtrakuta, Sevuna/Devagiri, Vijayanagara, Badami Chalukya, Hoysala, Mysore/Tipu) now have located catalogue/metal/weight gates from specialist numismatic catalogues (Numista, CoinIndia); the 4 source-volume/paleography-sprint coin leads (Maski, Hoysala fanam, Western Ganga, Krishnadevaraya/Achyutaraya plate leads) are untouched by this pass. Image and findspot gates stay open across all 10 |
 | `manuscriptWitnesses` | 12 | Repository leads located for some works; new Kavirajamarga Parampare, Shabdamanidarpana/Sanchaya and Itihasa Darshana literature-heavy witness leads keep shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; the three Hoysala/Tipu first-target packets now have sourced inscription, campaign and treaty evidence for some gates, each still blocked on a reign-specific source map; not research-grade boundary corpus |
 | `inscriptionEditions` | 28 | Item-edition queue started; locator-review metadata added; three new item-level Shravanabelagola packets and a located Belur (Bl. 68) and Muktesvara (S.I.I. XVIII No. 112) record; transcription, translation, photographs and coordinates mostly open |
@@ -62,6 +62,14 @@ Current first targets:
 | `coin-hoysala-belur-numismatic-lead` | Dynasty-wide catalogue now located (gold fanam, copper kasu, silver tara/Veera Ballala III); still need a specimen matched to Belur specifically, a licensed image and independent review. |
 | `coin-mysore-srirangapatna-tipu-lead` | Patan-mint gold pagoda specimens now located with weight/diameter and KM numbers (AH1198 RY1, AH1200 RY4, AM1221/KM129); still need a licensed photograph and independent Kannada/Persian review. |
 | `coin-vijayanagara-hampi-gold-coinage-lead` | Type-level gold pagoda/varaha data now located (~3.38 g, 11-12 mm, Mitchiner numbers); still need a Hampi-mint-matched specimen, licensed image and independent review. |
+
+A second pass located Numista type-level data for the remaining three coin leads (Rashtrakuta Garuda, Sevuna/Devagiri Kannada-legend, Badami Chalukya Varaha), moving each catalogue/metal/weight gate from `unresolved` to `located`. Findspot and image gates stay open for all three.
+
+| Record | What's now located |
+| --- | --- |
+| `coin-rashtrakuta-garuda-type-lead` | Anonymous gold gadyana (3.96 g, 14.45 mm, c. 900-1100): Garuda in padmasana with anjalimudra, reverse temple with crescent; also silver damma denominations (0.37-0.82 g). |
+| `coin-sevuna-devagiri-kannada-legend-lead` | Gold padmatanka/gadyana types across five named Seuna/Yadava rulers, ~3.8 g each (Bhillama V catalogued at 3.79 g); confirms bilingual Kannada/Nagari legend content on the type, but not yet a Kannada-script reading matched to one photographed specimen. |
+| `coin-badami-chalukya-varaha-emblem-lead` | Gold gadyana (3.7 g, c. 700-900), called honnu in Kannada; the Varaha (boar) emblem obverse is the origin of the "varaha" coin name. |
 
 ### Genealogy and network maturity
 
