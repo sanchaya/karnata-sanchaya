@@ -4714,6 +4714,90 @@
         }
       },
       {
+        "id": "person-nagabhata-ii",
+        "name": {
+          "en": "Nagabhata II Gurjara-Pratihara",
+          "kn": "ನಾಗಭಟ II ಗುರ್ಜರ-ಪ್ರತಿಹಾರ"
+        },
+        "date": {
+          "from": 800,
+          "to": 833,
+          "era": "CE",
+          "precision": "range"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "polityId": "external-polity-gurjara-pratihara",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-nagabhata-ii",
+            "locator": "Occupied Kannauj after defeating Chakrayudha, then defeated Dharmapala and advanced to Munger; later defeated by Govinda III"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "person-dharmapala-pala",
+        "name": {
+          "en": "Dharmapala Pala",
+          "kn": "ಧರ್ಮಪಾಲ ಪಾಲ"
+        },
+        "date": {
+          "from": 775,
+          "to": 812,
+          "era": "CE",
+          "precision": "range"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "polityId": "external-polity-pala",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-tripartite-struggle",
+            "locator": "Captured Kannauj and installed the vassal Chakrayudha; later defeated by Nagabhata II and submitted to Govinda III"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "person-chakrayudha",
+        "name": {
+          "en": "Chakrayudha of Kannauj",
+          "kn": "ಚಕ್ರಾಯುಧ ಕನ್ನೌಜ್"
+        },
+        "date": {
+          "from": 800,
+          "to": 810,
+          "era": "CE",
+          "precision": "range"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "polityId": "external-polity-pala",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-tripartite-struggle",
+            "locator": "Pala-installed vassal ruler of Kannauj; defeated by Nagabhata II, later submitted to Govinda III"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
         "id": "person-onake-obavva",
         "name": {
           "en": "Onake Obavva",
@@ -39352,6 +39436,50 @@
         }
       },
       {
+        "id": "src-wikipedia-nagabhata-ii",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Nagabhata II",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ನಾಗಭಟ II"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Nagabhata_II",
+        "scope": {
+          "en": "Documents Nagabhata II (r. 800-833 CE) capturing Kannauj from the Pala vassal Chakrayudha, defeating Dharmapala and advancing to Munger, before his own defeat by the Rashtrakuta Govinda III. Discovery lead; verify against inscriptions and specialist chronology before promotion.",
+          "kn": "ನಾಗಭಟ II (ಆ. 800-833) ಪಾಲ ಅಧೀನ ಚಕ್ರಾಯುಧನಿಂದ ಕನ್ನೌಜ್ ವಶಪಡಿಸಿಕೊಂಡು, ಧರ್ಮಪಾಲನನ್ನು ಸೋಲಿಸಿ ಮುಂಗೇರ್‌ವರೆಗೆ ಮುನ್ನಡೆದನೆಂದೂ, ನಂತರ ರಾಷ್ಟ್ರಕೂಟ ಗೋವಿಂದ IIIರಿಂದ ಸೋಲನುಭವಿಸಿದನೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಮತ್ತು ವಿಶೇಷಜ್ಞ ಕಾಲಕ್ರಮದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-tripartite-struggle",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Tripartite Struggle",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ತ್ರಿಪಕ್ಷೀಯ ಸಂಘರ್ಷ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Tripartite_Struggle",
+        "scope": {
+          "en": "Documents the c. 800 CE struggle for control of Kannauj between the Rashtrakutas (Govinda III), Gurjara-Pratiharas (Nagabhata II) and Palas (Dharmapala, his vassal Chakrayudha): Dharmapala installs Chakrayudha, Nagabhata II defeats both and occupies Kannauj, then Govinda III defeats Nagabhata II in the Doab, after which Dharmapala and Chakrayudha submit to Rashtrakuta overlordship. Discovery lead; verify against inscriptions and specialist chronology before promotion.",
+          "kn": "ಸು. ಕ್ರಿ.ಶ. 800ರ ಕನ್ನೌಜ್ ನಿಯಂತ್ರಣಕ್ಕಾಗಿ ರಾಷ್ಟ್ರಕೂಟರು (ಗೋವಿಂದ III), ಗುರ್ಜರ-ಪ್ರತಿಹಾರರು (ನಾಗಭಟ II) ಮತ್ತು ಪಾಲರ (ಧರ್ಮಪಾಲ, ಅಧೀನ ಚಕ್ರಾಯುಧ) ನಡುವಿನ ಸಂಘರ್ಷವನ್ನು ದಾಖಲಿಸುತ್ತದೆ: ಧರ್ಮಪಾಲ ಚಕ್ರಾಯುಧನನ್ನು ಸ್ಥಾಪಿಸುತ್ತಾನೆ, ನಾಗಭಟ II ಇಬ್ಬರನ್ನೂ ಸೋಲಿಸಿ ಕನ್ನೌಜ್ ವಶಪಡಿಸಿಕೊಳ್ಳುತ್ತಾನೆ, ನಂತರ ಗೋವಿಂದ III ದೋಆಬ್‌ನಲ್ಲಿ ನಾಗಭಟ IIನನ್ನು ಸೋಲಿಸುತ್ತಾನೆ, ಇದಾದ ನಂತರ ಧರ್ಮಪಾಲ ಮತ್ತು ಚಕ್ರಾಯುಧ ರಾಷ್ಟ್ರಕೂಟ ಪರಮಾಧಿಕಾರಕ್ಕೆ ಶರಣಾಗುತ್ತಾರೆ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಮತ್ತು ವಿಶೇಷಜ್ಞ ಕಾಲಕ್ರಮದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-sciencedirect-sanganakallu-kupgal",
         "type": "journal-article",
         "title": {
@@ -50666,6 +50794,75 @@
           {
             "sourceId": "src-xuanzang-si-yu-ki-vol-2",
             "locator": "Volume II, Mo-ho-la-cha travel account"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "rel-person-nagabhata-ii-polity",
+        "fromId": "person-nagabhata-ii",
+        "type": "governed-or-represented",
+        "toId": "external-polity-gurjara-pratihara",
+        "date": {
+          "from": 800,
+          "to": 833,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-nagabhata-ii",
+            "locator": "Occupied Kannauj after defeating Chakrayudha, then defeated Dharmapala and advanced to Munger; later defeated by Govinda III"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "rel-person-dharmapala-pala-polity",
+        "fromId": "person-dharmapala-pala",
+        "type": "governed-or-represented",
+        "toId": "external-polity-pala",
+        "date": {
+          "from": 775,
+          "to": 812,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-tripartite-struggle",
+            "locator": "Captured Kannauj and installed the vassal Chakrayudha; later defeated by Nagabhata II and submitted to Govinda III"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "rel-person-chakrayudha-polity",
+        "fromId": "person-chakrayudha",
+        "type": "governed-or-represented",
+        "toId": "external-polity-pala",
+        "date": {
+          "from": 800,
+          "to": 810,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-tripartite-struggle",
+            "locator": "Pala-installed vassal ruler of Kannauj; defeated by Nagabhata II, later submitted to Govinda III"
           }
         ],
         "review": {
