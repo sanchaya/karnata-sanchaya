@@ -552,7 +552,7 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   for (const id of ['genealogy-vishnuvardhana-narasimha-i-hoysala','genealogy-narasimha-i-ballala-ii-hoysala','genealogy-yaduraya-chikkadevaraja-mysore-early-line','genealogy-chamaraja-wodeyar-ix-krishnaraja-iii-mysore','coin-hoysala-belur-numismatic-lead','coin-mysore-srirangapatna-tipu-lead','manuscript-kumaravyasa-bharata-sanchaya-witness-lead','manuscript-torave-ramayana-sanchaya-witness-lead','boundary-evidence-hoysala-vishnuvardhana-1117','boundary-evidence-mysore-tipu-sultan-1787','edition-inscription-shravanabelagola-cluster','edition-inscription-muktesvara-attiraja-review-packet']) {
     assert.ok(atlasData.relationships.some(relation=>relation.fromId===id||relation.sourceRecordId===id), `${id} must be linked into the public research graph`)
   }
-  for (const id of ['edition-inscription-talagunda','edition-inscription-atakur','edition-inscription-takuapa-tamil-guild']) {
+  for (const id of ['edition-inscription-atakur','edition-inscription-takuapa-tamil-guild']) {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.review.status, 'needs-review')
     assert.equal(edition?.itemEdition.status, 'provisional')
@@ -561,6 +561,10 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   assert.equal(belurFoundation?.review.status, 'needs-review')
   assert.equal(belurFoundation?.itemEdition.status, 'located')
   assert.equal(belurFoundation?.itemEdition.number, 'Bl. 68')
+  const talagunda=atlasData.inscriptionEditions.find(item=>item.id==='edition-inscription-talagunda')
+  assert.equal(talagunda?.review.status, 'needs-review')
+  assert.equal(talagunda?.itemEdition.status, 'located')
+  assert.equal(talagunda?.itemEdition.number, 'Sk. 176')
   for (const id of ['edition-inscription-halmidi-review-packet','edition-inscription-kappe-arabhatta','edition-inscription-begur','edition-inscription-atakur','edition-inscription-lakkundi','edition-inscription-belur-foundation','edition-inscription-hampi-cluster','edition-inscription-hampi-krishna-temple','edition-inscription-muktesvara-attiraja-review-packet']) {
     const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
     assert.equal(edition?.locatorReview.priority, 'high', `${id} must stay prioritized for the script-evolution maturity path`)
