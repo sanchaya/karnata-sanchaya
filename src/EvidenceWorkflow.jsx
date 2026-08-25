@@ -111,7 +111,7 @@ const itihasaSourceTasks=sourceReviewVolumes.flatMap(source=>(source.contentRevi
   currentStatus:link.status,
   ...sourceLinkTaskTemplates.articlePageReview,
   requiredFields:link.requiredReview,
-  instruction:{en:`Identify the article title, printed page and target-record fit for ${link.label.en}. Current target leads: ${link.targetRecordIds.slice(0,4).join(', ')}.`,kn:`${link.label.kn}ಗಾಗಿ ಲೇಖನ ಶೀರ್ಷಿಕೆ, ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಗುರಿ-ದಾಖಲೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ಗುರುತಿಸಿ. ಪ್ರಸ್ತುತ ಗುರಿ ದಾರಿಗಳು: ${link.targetRecordIds.slice(0,4).join(', ')}.`},
+  instruction:{en:`Identify the article title, printed page and target-record fit for ${link.label.en}. Current target leads: ${link.targetRecordIds.slice(0,4).join(', ')}.${link.locatorHints?.length?` Locator hints: ${link.locatorHints.slice(0,2).map(hint=>`${hint.label.en}: ${hint.printedLocator}; ${hint.ocrLocator}`).join(' | ')}.`:''}`,kn:`${link.label.kn}ಗಾಗಿ ಲೇಖನ ಶೀರ್ಷಿಕೆ, ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಗುರಿ-ದಾಖಲೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ಗುರುತಿಸಿ. ಪ್ರಸ್ತುತ ಗುರಿ ದಾರಿಗಳು: ${link.targetRecordIds.slice(0,4).join(', ')}.${link.locatorHints?.length?` ಸ್ಥಾನಸೂಚಿ ದಾರಿಗಳು: ${link.locatorHints.slice(0,2).map(hint=>`${hint.label.kn}: ${hint.printedLocator}; ${hint.ocrLocator}`).join(' | ')}.`:''}`},
 })))
 const sourceLinkTasks=[...archiveLocatorTasks,...itihasaSourceTasks]
 const taskDomains=['epigraphy','literature','coinage','manuscripts','genealogy','boundaries','scripts','sourceLinks']

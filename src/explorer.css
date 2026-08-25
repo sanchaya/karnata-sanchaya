@@ -76,6 +76,7 @@
 .itihasa-atlas-links div{display:grid;gap:2px;padding:6px;border:1px solid #e5e9f5;border-radius:6px;background:#f8faff}
 .itihasa-atlas-links span{display:block;color:#315f91;font-size:8px;font-weight:800;line-height:1.35}
 .itihasa-atlas-links small{color:#606779}
+.itihasa-atlas-links .itihasa-locator-hint{padding-top:3px;color:#756645;border-top:1px dashed #ddd3bd}
 .epigraphy-corpus-drawer{margin:0;padding:0;overflow:hidden}
 .epigraphy-corpus-drawer summary{cursor:pointer;padding:12px 14px;color:var(--sanchaya-ink);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.06em;list-style:none}
 .epigraphy-corpus-drawer summary::-webkit-details-marker{display:none}
