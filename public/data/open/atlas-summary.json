@@ -39492,6 +39492,72 @@
         }
       },
       {
+        "id": "src-archive-epigraphia-carnatica-vol7-shimoga",
+        "type": "digitized-primary-edition",
+        "title": {
+          "en": "Epigraphia Carnatica, Volume VII: Shimoga District (Internet Archive)",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ, ಸಂಪುಟ VII: ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ (ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್)"
+        },
+        "authors": [
+          "B. Lewis Rice"
+        ],
+        "year": null,
+        "url": "https://archive.org/details/epigraphia_carnatica_vol7_myso",
+        "scope": {
+          "en": "Full digitized text of Epigraphia Carnatica Vol. VII (Shimoga district). Identifies the Talagunda pillar inscription as Shikaripur-taluk item Sk. 176: a 46-line granite pillar beside the Pranaveshvara temple, giving the Kadamba dynastic genealogy up to King Shantivarman, dated c. 455-470 CE; also edited by Kielhorn in Epigraphia Indica. OCR discovery source; a reviewer must still check the printed plate/page image.",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ VIIರ (ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ) ಸಂಪೂರ್ಣ ಡಿಜಿಟಲೀಕೃತ ಪಠ್ಯ. ತಾಳಗುಂದ ಸ್ತಂಭ ಶಾಸನವನ್ನು ಶಿಕಾರಿಪುರ-ತಾಲೂಕು ವಸ್ತು Sk. 176 ಎಂದು ಗುರುತಿಸುತ್ತದೆ: ಪ್ರಾಣವೇಶ್ವರ ದೇವಾಲಯದ ಬಳಿಯ 46-ಸಾಲಿನ ಗ್ರಾನೈಟ್ ಸ್ತಂಭ, ರಾಜ ಶಾಂತಿವರ್ಮನವರೆಗಿನ ಕದಂಬ ವಂಶಾವಳಿಯನ್ನು ನೀಡುತ್ತದೆ, ಸು. 455-470; ಕೀಲ್‌ಹಾರ್ನ್ ಎಪಿಗ್ರಾಫಿಯಾ ಇಂಡಿಕಾದಲ್ಲೂ ಸಂಪಾದಿಸಿದ್ದಾರೆ. OCR ಅನ್ವೇಷಣಾ ಆಕರ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಇನ್ನೂ ಪರಿಶೀಲಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-kappe-arabhatta",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Kappe Arabhatta",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಕಪ್ಪೆ ಅರಭಟ್ಟ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Kappe_Arabhatta",
+        "scope": {
+          "en": "Documents the c. 700 CE Kappe Arabhatta verse inscription cut into a cliff near Tattukoti hamlet at the north-east corner of the Badami lake: five stanzas in ten lines (one Sanskrit shloka, the rest in the earliest recorded Kannada tripadi metre), catalogued as Indian Antiquary Vol. X, item 61 (the \"Tattukoti Inscription\"), and discussed in A. N. Narasimhia's 1941 \"A Grammar of the Oldest Kanarese Inscriptions\". Discovery lead; verify against the printed edition before promotion.",
+          "kn": "ಬಾದಾಮಿ ಸರೋವರದ ಈಶಾನ್ಯ ಮೂಲೆಯ ತಟ್ಟುಕೋಟಿ ಹಳ್ಳಿಯ ಬಳಿಯ ಬಂಡೆಯ ಮೇಲೆ ಕೊರೆದ ಸು. ಕ್ರಿ.ಶ. 700ರ ಕಪ್ಪೆ ಅರಭಟ್ಟ ಪದ್ಯ ಶಾಸನವನ್ನು ದಾಖಲಿಸುತ್ತದೆ: ಹತ್ತು ಸಾಲುಗಳಲ್ಲಿ ಐದು ಪದ್ಯಗಳು (ಒಂದು ಸಂಸ್ಕೃತ ಶ್ಲೋಕ, ಉಳಿದವು ಮೊದಲ ದಾಖಲಿತ ಕನ್ನಡ ತ್ರಿಪದಿ ಛಂದಸ್ಸಿನಲ್ಲಿ), ಇಂಡಿಯನ್ ಆಂಟಿಕ್ವರಿ ಸಂಪುಟ X, ವಸ್ತು 61 (\"ತಟ್ಟುಕೋಟಿ ಶಾಸನ\") ಎಂದು ಪಟ್ಟಿಮಾಡಲಾಗಿದೆ, ಮತ್ತು ಎ. ಎನ್. ನರಸಿಂಹಯ್ಯನವರ 1941ರ \"A Grammar of the Oldest Kanarese Inscriptions\"ನಲ್ಲಿ ಚರ್ಚಿಸಲಾಗಿದೆ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಮುದ್ರಿತ ಆವೃತ್ತಿಯ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-narasimhia-grammar-oldest-kanarese-inscriptions",
+        "type": "book",
+        "title": {
+          "en": "A Grammar of the Oldest Kanarese Inscriptions",
+          "kn": "A Grammar of the Oldest Kanarese Inscriptions"
+        },
+        "authors": [
+          "A. N. Narasimhia"
+        ],
+        "year": 1941,
+        "url": "",
+        "scope": {
+          "en": "University of Mysore monograph on the grammar of the earliest Kannada inscriptions, including Kappe Arabhatta; not yet independently checked against this atlas's inscription record.",
+          "kn": "ಆರಂಭಿಕ ಕನ್ನಡ ಶಾಸನಗಳ ವ್ಯಾಕರಣದ ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ ಗ್ರಂಥ, ಕಪ್ಪೆ ಅರಭಟ್ಟ ಸೇರಿ; ಈ ಭೂಪಟದ ಶಾಸನ ದಾಖಲೆಯೊಂದಿಗೆ ಇನ್ನೂ ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಿಲ್ಲ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-krishnadevaraya-administration",
         "type": "discovery-lead",
         "title": {
@@ -85945,14 +86011,18 @@
         "toId": "inscription-talagunda",
         "date": {
           "from": 455,
-          "to": 455,
+          "to": 470,
           "era": "CE",
-          "precision": "circa"
+          "precision": "range"
         },
         "citations": [
           {
+            "sourceId": "src-archive-epigraphia-carnatica-vol7-shimoga",
+            "locator": "EC VII Sk. 176: Talagunda pillar inscription, Kadamba genealogy to King Shantivarman, c. 455-470 CE"
+          },
+          {
             "sourceId": "src-epigraphia-carnatica",
-            "locator": "Talagunda pillar inscription and Kadamba genealogy context; resolve item number and edition pages"
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
           }
         ],
         "review": {
@@ -85996,6 +86066,14 @@
           "precision": "circa"
         },
         "citations": [
+          {
+            "sourceId": "src-wikipedia-kappe-arabhatta",
+            "locator": "I.A. X.61 (Tattukoti Inscription): Kappe Arabhatta verse inscription, Badami lake, c. 700 CE, earliest recorded Kannada tripadi metre"
+          },
+          {
+            "sourceId": "src-narasimhia-grammar-oldest-kanarese-inscriptions",
+            "locator": "A Grammar of the Oldest Kanarese Inscriptions, 1941, discusses Kappe Arabhatta"
+          },
           {
             "sourceId": "src-ignca-epigraphia-indica-index",
             "locator": "Epigraphia Indica index lead for early Kannada inscription records"
@@ -90539,19 +90617,19 @@
         "script": "Southern Brahmi",
         "date": {
           "from": 455,
-          "to": 455,
+          "to": 470,
           "era": "CE",
-          "precision": "circa"
+          "precision": "range"
         },
         "itemEdition": {
           "series": "Epigraphia Carnatica",
-          "volume": null,
-          "number": null,
-          "locator": "Talagunda pillar inscription; exact volume, item number, page and plate pending",
-          "status": "provisional"
+          "volume": "VII (Shikaripur taluk)",
+          "number": "Sk. 176",
+          "locator": "Sk. 176; a 46-line granite pillar beside the Pranaveshvara temple at Talagunda, giving the Kadamba dynastic genealogy up to King Shantivarman; also edited by Kielhorn in Epigraphia Indica; verify against the printed plate before promotion",
+          "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -90563,7 +90641,7 @@
         },
         "evidenceGates": {
           "itemEdition": {
-            "status": "provisional"
+            "status": "located"
           },
           "transcription": {
             "status": "unresolved"
@@ -90593,14 +90671,18 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Resolve Talagunda volume, item number, printed pages, plate witness and palaeographic bibliography for the Kadamba transition phase.",
-            "kn": "ಕದಂಬ ಪರಿವರ್ತನೆ ಹಂತಕ್ಕಾಗಿ ತಾಳಗುಂದ ಸಂಪುಟ, ವಸ್ತು ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟಗಳು, ಫಲಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಲಿಪಿಶಾಸ್ತ್ರ ಗ್ರಂಥಸೂಚಿಯನ್ನು ನಿರ್ಧರಿಸಿ."
+            "en": "Item Sk. 176 is now located in Epigraphia Carnatica Vol. VII; a reviewer must check the printed plate/page image, compare against Kielhorn's Epigraphia Indica edition, complete a line-aligned transcription and translation, and attach dated photographs for the Kadamba transition phase.",
+            "kn": "ವಸ್ತು Sk. 176 ಈಗ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ VIIರಲ್ಲಿ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೀಲ್‌ಹಾರ್ನ್ ಎಪಿಗ್ರಾಫಿಯಾ ಇಂಡಿಕಾ ಆವೃತ್ತಿಯೊಂದಿಗೆ ಹೋಲಿಸಿ, ಕದಂಬ ಪರಿವರ್ತನೆ ಹಂತಕ್ಕಾಗಿ ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
           }
         },
         "citations": [
           {
+            "sourceId": "src-archive-epigraphia-carnatica-vol7-shimoga",
+            "locator": "EC VII Sk. 176: Talagunda pillar inscription, Kadamba genealogy to King Shantivarman, c. 455-470 CE"
+          },
+          {
             "sourceId": "src-epigraphia-carnatica",
-            "locator": "Talagunda pillar inscription and Kadamba genealogy context; resolve item number and edition pages"
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
           }
         ],
         "review": {
@@ -90697,7 +90779,7 @@
         },
         "inscriptionId": "inscription-kappe-arabhatta",
         "editionKind": "item-edition-review",
-        "language": "Kannada",
+        "language": "Kannada / Sanskrit",
         "script": "Early Kannada",
         "date": {
           "from": 700,
@@ -90706,14 +90788,14 @@
           "precision": "circa"
         },
         "itemEdition": {
-          "series": "Epigraphia Indica / corpus index lead",
-          "volume": null,
-          "number": null,
-          "locator": "Badami Kappe Arabhatta verse inscription; match series, volume, item and plate",
-          "status": "provisional"
+          "series": "Indian Antiquary",
+          "volume": "X",
+          "number": "61",
+          "locator": "I.A. X.61, the \"Tattukoti Inscription\": five stanzas in ten lines cut into a cliff near Tattukoti hamlet, north-east corner of the Badami lake; one Sanskrit shloka and the earliest recorded Kannada tripadi-metre stanzas; discussed in A. N. Narasimhia's 1941 grammar of the oldest Kannada inscriptions; verify against the printed plate before promotion",
+          "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -90725,7 +90807,7 @@
         },
         "evidenceGates": {
           "itemEdition": {
-            "status": "provisional"
+            "status": "located"
           },
           "transcription": {
             "status": "unresolved"
@@ -90755,11 +90837,19 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Match Kappe Arabhatta to its exact Epigraphia Indica or corpus witness, page range, plate and line-numbered verse text.",
-            "kn": "ಕಪ್ಪೆ ಅರಭಟ್ಟವನ್ನು ನಿಖರ Epigraphia Indica ಅಥವಾ ಕಾರ್ಪಸ್ ಸಾಕ್ಷ್ಯ, ಪುಟ ವ್ಯಾಪ್ತಿ, ಫಲಕ ಮತ್ತು ಸಾಲುಸಂಖ್ಯೆಯ ಪದ್ಯ ಪಾಠದೊಂದಿಗೆ ಹೊಂದಿಸಿ."
+            "en": "Item I.A. X.61 is now located; a reviewer must check the printed plate/page image, cross-check against Narasimhia's 1941 grammar, complete a line-aligned transcription and translation of all five stanzas, and attach dated photographs.",
+            "kn": "ವಸ್ತು I.A. X.61 ಈಗ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ, ನರಸಿಂಹಯ್ಯನವರ 1941ರ ವ್ಯಾಕರಣದೊಂದಿಗೆ ಅಡ್ಡ-ಪರಿಶೀಲಿಸಿ, ಎಲ್ಲಾ ಐದು ಪದ್ಯಗಳ ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
           }
         },
         "citations": [
+          {
+            "sourceId": "src-wikipedia-kappe-arabhatta",
+            "locator": "I.A. X.61 (Tattukoti Inscription): Kappe Arabhatta verse inscription, Badami lake, c. 700 CE, earliest recorded Kannada tripadi metre"
+          },
+          {
+            "sourceId": "src-narasimhia-grammar-oldest-kanarese-inscriptions",
+            "locator": "A Grammar of the Oldest Kanarese Inscriptions, 1941, discusses Kappe Arabhatta"
+          },
           {
             "sourceId": "src-ignca-epigraphia-indica-index",
             "locator": "Epigraphia Indica index lead for early Kannada inscription records"

@@ -4418,19 +4418,19 @@
         "script": "Southern Brahmi",
         "date": {
           "from": 455,
-          "to": 455,
+          "to": 470,
           "era": "CE",
-          "precision": "circa"
+          "precision": "range"
         },
         "itemEdition": {
           "series": "Epigraphia Carnatica",
-          "volume": null,
-          "number": null,
-          "locator": "Talagunda pillar inscription; exact volume, item number, page and plate pending",
-          "status": "provisional"
+          "volume": "VII (Shikaripur taluk)",
+          "number": "Sk. 176",
+          "locator": "Sk. 176; a 46-line granite pillar beside the Pranaveshvara temple at Talagunda, giving the Kadamba dynastic genealogy up to King Shantivarman; also edited by Kielhorn in Epigraphia Indica; verify against the printed plate before promotion",
+          "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -4442,7 +4442,7 @@
         },
         "evidenceGates": {
           "itemEdition": {
-            "status": "provisional"
+            "status": "located"
           },
           "transcription": {
             "status": "unresolved"
@@ -4472,14 +4472,18 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Resolve Talagunda volume, item number, printed pages, plate witness and palaeographic bibliography for the Kadamba transition phase.",
-            "kn": "ಕದಂಬ ಪರಿವರ್ತನೆ ಹಂತಕ್ಕಾಗಿ ತಾಳಗುಂದ ಸಂಪುಟ, ವಸ್ತು ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟಗಳು, ಫಲಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಲಿಪಿಶಾಸ್ತ್ರ ಗ್ರಂಥಸೂಚಿಯನ್ನು ನಿರ್ಧರಿಸಿ."
+            "en": "Item Sk. 176 is now located in Epigraphia Carnatica Vol. VII; a reviewer must check the printed plate/page image, compare against Kielhorn's Epigraphia Indica edition, complete a line-aligned transcription and translation, and attach dated photographs for the Kadamba transition phase.",
+            "kn": "ವಸ್ತು Sk. 176 ಈಗ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ VIIರಲ್ಲಿ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೀಲ್‌ಹಾರ್ನ್ ಎಪಿಗ್ರಾಫಿಯಾ ಇಂಡಿಕಾ ಆವೃತ್ತಿಯೊಂದಿಗೆ ಹೋಲಿಸಿ, ಕದಂಬ ಪರಿವರ್ತನೆ ಹಂತಕ್ಕಾಗಿ ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
           }
         },
         "citations": [
           {
+            "sourceId": "src-archive-epigraphia-carnatica-vol7-shimoga",
+            "locator": "EC VII Sk. 176: Talagunda pillar inscription, Kadamba genealogy to King Shantivarman, c. 455-470 CE"
+          },
+          {
             "sourceId": "src-epigraphia-carnatica",
-            "locator": "Talagunda pillar inscription and Kadamba genealogy context; resolve item number and edition pages"
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
           }
         ],
         "review": {
@@ -4576,7 +4580,7 @@
         },
         "inscriptionId": "inscription-kappe-arabhatta",
         "editionKind": "item-edition-review",
-        "language": "Kannada",
+        "language": "Kannada / Sanskrit",
         "script": "Early Kannada",
         "date": {
           "from": 700,
@@ -4585,14 +4589,14 @@
           "precision": "circa"
         },
         "itemEdition": {
-          "series": "Epigraphia Indica / corpus index lead",
-          "volume": null,
-          "number": null,
-          "locator": "Badami Kappe Arabhatta verse inscription; match series, volume, item and plate",
-          "status": "provisional"
+          "series": "Indian Antiquary",
+          "volume": "X",
+          "number": "61",
+          "locator": "I.A. X.61, the \"Tattukoti Inscription\": five stanzas in ten lines cut into a cliff near Tattukoti hamlet, north-east corner of the Badami lake; one Sanskrit shloka and the earliest recorded Kannada tripadi-metre stanzas; discussed in A. N. Narasimhia's 1941 grammar of the oldest Kannada inscriptions; verify against the printed plate before promotion",
+          "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -4604,7 +4608,7 @@
         },
         "evidenceGates": {
           "itemEdition": {
-            "status": "provisional"
+            "status": "located"
           },
           "transcription": {
             "status": "unresolved"
@@ -4634,11 +4638,19 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Match Kappe Arabhatta to its exact Epigraphia Indica or corpus witness, page range, plate and line-numbered verse text.",
-            "kn": "ಕಪ್ಪೆ ಅರಭಟ್ಟವನ್ನು ನಿಖರ Epigraphia Indica ಅಥವಾ ಕಾರ್ಪಸ್ ಸಾಕ್ಷ್ಯ, ಪುಟ ವ್ಯಾಪ್ತಿ, ಫಲಕ ಮತ್ತು ಸಾಲುಸಂಖ್ಯೆಯ ಪದ್ಯ ಪಾಠದೊಂದಿಗೆ ಹೊಂದಿಸಿ."
+            "en": "Item I.A. X.61 is now located; a reviewer must check the printed plate/page image, cross-check against Narasimhia's 1941 grammar, complete a line-aligned transcription and translation of all five stanzas, and attach dated photographs.",
+            "kn": "ವಸ್ತು I.A. X.61 ಈಗ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ, ನರಸಿಂಹಯ್ಯನವರ 1941ರ ವ್ಯಾಕರಣದೊಂದಿಗೆ ಅಡ್ಡ-ಪರಿಶೀಲಿಸಿ, ಎಲ್ಲಾ ಐದು ಪದ್ಯಗಳ ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
           }
         },
         "citations": [
+          {
+            "sourceId": "src-wikipedia-kappe-arabhatta",
+            "locator": "I.A. X.61 (Tattukoti Inscription): Kappe Arabhatta verse inscription, Badami lake, c. 700 CE, earliest recorded Kannada tripadi metre"
+          },
+          {
+            "sourceId": "src-narasimhia-grammar-oldest-kanarese-inscriptions",
+            "locator": "A Grammar of the Oldest Kanarese Inscriptions, 1941, discusses Kappe Arabhatta"
+          },
           {
             "sourceId": "src-ignca-epigraphia-indica-index",
             "locator": "Epigraphia Indica index lead for early Kannada inscription records"
