@@ -21987,6 +21987,64 @@
           "reviewer": null,
           "updatedAt": "2026-07-26"
         }
+      },
+      {
+        "id": "person-kumaravyasa",
+        "name": {
+          "en": "Kumaravyasa (Gadugina Veera Naranappa)",
+          "kn": "ಕುಮಾರವ್ಯಾಸ (ಗದುಗಿನ ವೀರನಾರಣಪ್ಪ)"
+        },
+        "roles": [
+          "poet",
+          "author"
+        ],
+        "polityId": "polity-vijayanagara",
+        "date": {
+          "from": 1400,
+          "to": 1450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kumara-vyasa",
+            "locator": "Pen name of Gadugina Veera Naranappa; court poet under Deva Raya II; lived in Koliwad near Gadag; author of Karnata Bharata Kathamanjari (Kumaravyasa Bharata), completed 1430"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "person-kumara-valmiki",
+        "name": {
+          "en": "Kumara Valmiki (Narahari)",
+          "kn": "ಕುಮಾರ ವಾಲ್ಮೀಕಿ (ನರಹರಿ)"
+        },
+        "roles": [
+          "poet",
+          "author"
+        ],
+        "polityId": "polity-vijayanagara",
+        "date": {
+          "from": 1500,
+          "to": 1500,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriyakannada-toraveya-ramayana",
+            "locator": "Pen name of Narahari; composed the Toraveya Ramayana from c. 1500 at the Narasimha temple, Torvi (Torave); influenced by Kumaravyasa"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
       }
     ],
     "places": [
@@ -37452,7 +37510,9 @@
           "en": "Kumaravyasa",
           "kn": "ಕುಮಾರವ್ಯಾಸ"
         },
-        "creatorIds": [],
+        "creatorIds": [
+          "person-kumaravyasa"
+        ],
         "creatorDisplay": "Kumaravyasa",
         "creatorRole": {
           "en": "Poet / author",
@@ -37476,14 +37536,25 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
+          },
+          {
+            "sourceId": "src-murty-classical-library-kannada-mahabharata",
+            "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
+        },
+        "manuscriptWitnesses": [
+          "manuscript-kumaravyasa-bharata-sanchaya-witness-lead"
+        ],
+        "description": {
+          "en": "A Kannada retelling of the first ten parvas of the Mahabharata in Bhamini Shatpadi metre, by the court poet Kumaravyasa under Deva Raya II of Vijayanagara; completion traditionally dated 1430.",
+          "kn": "ವಿಜಯನಗರದ ದೇವರಾಯ IIನ ಆಸ್ಥಾನ ಕವಿ ಕುಮಾರವ್ಯಾಸನಿಂದ ಭಾಮಿನಿ ಷಟ್ಪದಿಯಲ್ಲಿ ರಚಿತವಾದ ಮಹಾಭಾರತದ ಮೊದಲ ಹತ್ತು ಪರ್ವಗಳ ಕನ್ನಡ ಮರುಕಥನ; ಪೂರ್ಣಗೊಂಡ ದಿನಾಂಕ ಸಾಂಪ್ರದಾಯಿಕವಾಗಿ 1430."
         }
       },
       {
@@ -37496,7 +37567,9 @@
           "en": "Kumara Valmiki",
           "kn": "ಕುಮಾರ ವಾಲ್ಮೀಕಿ"
         },
-        "creatorIds": [],
+        "creatorIds": [
+          "person-kumara-valmiki"
+        ],
         "creatorDisplay": "Kumara Valmiki",
         "creatorRole": {
           "en": "Poet / author",
@@ -37520,14 +37593,21 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
+        },
+        "manuscriptWitnesses": [
+          "manuscript-torave-ramayana-sanchaya-witness-lead"
+        ],
+        "description": {
+          "en": "A Kannada retelling of the Ramayana in Bhamini Shatpadi metre, composed from c. 1500 by Kumara Valmiki (pen name of Narahari) at the Narasimha temple, Torvi (Torave); ~5000 verses in 112 sections.",
+          "kn": "ಕುಮಾರ ವಾಲ್ಮೀಕಿ (ನರಹರಿಯ ಕಾವ್ಯನಾಮ) ಅವರಿಂದ ಸು. 1500ರಿಂದ ತೊರವಿ (ತೊರವೆ)ಯ ನರಸಿಂಹ ದೇವಾಲಯದಲ್ಲಿ ಭಾಮಿನಿ ಷಟ್ಪದಿಯಲ್ಲಿ ರಚಿತವಾದ ರಾಮಾಯಣದ ಕನ್ನಡ ಮರುಕಥನ; 112 ಸಂಧಿಗಳಲ್ಲಿ ಸು. 5000 ಪದ್ಯಗಳು."
         }
       },
       {
@@ -39169,6 +39249,50 @@
         "scope": {
           "en": "Full digitized text of Epigraphia Carnatica Vol. V Part 1 (Hassan district). Identifies Belur item Bl. 68 as recording Vishnuvardhana's 1117 consecration of the Vijayanarayana/Chennakeshava temple at Velapura (Belur), his military conquests and queen Santala Devi. OCR discovery source; a reviewer must still check the printed plate/page image.",
           "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ V ಭಾಗ 1ರ (ಹಾಸನ ಜಿಲ್ಲೆ) ಸಂಪೂರ್ಣ ಡಿಜಿಟಲೀಕೃತ ಪಠ್ಯ. ಬೇಲೂರು ವಸ್ತು Bl. 68 ಅನ್ನು ವಿಷ್ಣುವರ್ಧನನ 1117ರ ವೇಲಾಪುರ (ಬೇಲೂರು)ದ ವಿಜಯನಾರಾಯಣ/ಚೆನ್ನಕೇಶವ ದೇವಾಲಯ ಪ್ರತಿಷ್ಠಾಪನೆ, ಅವನ ಸೇನಾ ವಿಜಯಗಳು ಮತ್ತು ರಾಣಿ ಶಾಂತಲಾ ದೇವಿಯನ್ನು ದಾಖಲಿಸುವಂತೆ ಗುರುತಿಸುತ್ತದೆ. OCR ಅನ್ವೇಷಣಾ ಆಕರ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಇನ್ನೂ ಪರಿಶೀಲಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-kumara-vyasa",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Kumara Vyasa",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಕುಮಾರ ವ್ಯಾಸ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Kumara_Vyasa",
+        "scope": {
+          "en": "Biographical discovery lead: pen name of Gadugina Veera Naranappa, court poet under Deva Raya II of Vijayanagara, lived in Koliwad near Gadag, author of Karnata Bharata Kathamanjari (completed 1430) in Bhamini Shatpadi metre. Verify against a specialist literary-history source before promotion.",
+          "kn": "ಜೀವನಚರಿತ್ರೆಯ ಅನ್ವೇಷಣಾ ಸುಳಿವು: ಗದುಗಿನ ವೀರನಾರಣಪ್ಪನ ಕಾವ್ಯನಾಮ, ವಿಜಯನಗರದ ದೇವರಾಯ IIನ ಆಸ್ಥಾನ ಕವಿ, ಗದಗ ಬಳಿಯ ಕೋಳಿವಾಡದಲ್ಲಿ ವಾಸ, ಭಾಮಿನಿ ಷಟ್ಪದಿಯಲ್ಲಿ ಕರ್ಣಾಟ ಭಾರತ ಕಥಾಮಂಜರಿಯ (1430ರಲ್ಲಿ ಪೂರ್ಣ) ಕರ್ತೃ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ವಿಶೇಷಜ್ಞ ಸಾಹಿತ್ಯ ಇತಿಹಾಸ ಆಕರದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-shastriyakannada-toraveya-ramayana",
+        "type": "research-portal",
+        "title": {
+          "en": "Classical Kannada portal: Toraveya Ramayana",
+          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಪೋರ್ಟಲ್: ತೊರವೆಯ ರಾಮಾಯಣ"
+        },
+        "authors": [
+          "Classical Kannada / Shastriya Kannada project contributors"
+        ],
+        "year": null,
+        "url": "https://shastriyakannada.org/database/english/literature/TORAVEYA%20RAMAYANA%20HTML.htm",
+        "scope": {
+          "en": "Discovery and synthesis source on Kumara Valmiki (pen name of Narahari), who composed the Toraveya Ramayana from c. 1500 at the Narasimha temple, Torvi (Torave); item-level edition review still required.",
+          "kn": "ಕುಮಾರ ವಾಲ್ಮೀಕಿ (ನರಹರಿಯ ಕಾವ್ಯನಾಮ) ಕುರಿತ ಅನ್ವೇಷಣಾ ಮತ್ತು ಸಂಕ್ಷೇಪ ಆಕರ, ಇವರು ಸು. 1500ರಿಂದ ತೊರವಿ (ತೊರವೆ)ಯ ನರಸಿಂಹ ದೇವಾಲಯದಲ್ಲಿ ತೊರವೆಯ ರಾಮಾಯಣವನ್ನು ರಚಿಸಿದರು; ವಸ್ತುಮಟ್ಟದ ಆವೃತ್ತಿ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
         },
         "review": {
           "status": "needs-review",
@@ -60010,6 +60134,52 @@
         }
       },
       {
+        "id": "rel-person-kumaravyasa-polity",
+        "fromId": "person-kumaravyasa",
+        "type": "intellectual-or-religious-associated-with",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1400,
+          "to": 1450,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kumara-vyasa",
+            "locator": "Pen name of Gadugina Veera Naranappa; court poet under Deva Raya II; lived in Koliwad near Gadag; author of Karnata Bharata Kathamanjari (Kumaravyasa Bharata), completed 1430"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-person-kumara-valmiki-polity",
+        "fromId": "person-kumara-valmiki",
+        "type": "intellectual-or-religious-associated-with",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1500,
+          "to": 1500,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-shastriyakannada-toraveya-ramayana",
+            "locator": "Pen name of Narahari; composed the Toraveya Ramayana from c. 1500 at the Narasimha temple, Torvi (Torave); influenced by Kumaravyasa"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "rel-reign-pulakeshin-ii-badami-chalukya-polity",
         "fromId": "reign-pulakeshin-ii-badami-chalukya",
         "type": "reign-of",
@@ -61786,8 +61956,12 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
+          },
+          {
+            "sourceId": "src-murty-classical-library-kannada-mahabharata",
+            "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
           }
         ],
         "review": {
@@ -61809,8 +61983,8 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable"
           }
         ],
         "review": {
@@ -62264,6 +62438,56 @@
           {
             "sourceId": "src-routledge-gadayuddham",
             "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-work-kumaravyasa-bharata-creator-1",
+        "fromId": "work-kumaravyasa-bharata",
+        "type": "created-by",
+        "toId": "person-kumaravyasa",
+        "date": {
+          "from": 1430,
+          "to": 1430,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
+          },
+          {
+            "sourceId": "src-murty-classical-library-kannada-mahabharata",
+            "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-work-torave-ramayana-creator-1",
+        "fromId": "work-torave-ramayana",
+        "type": "created-by",
+        "toId": "person-kumara-valmiki",
+        "date": {
+          "from": 1500,
+          "to": 1500,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable"
           }
         ],
         "review": {
