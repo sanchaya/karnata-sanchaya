@@ -43,9 +43,9 @@ The current committed snapshot also includes the P2/P3 evidence maturity slice: 
 
 The bundled snapshot currently contains approximately:
 
-- 9 Karnataka polities, 52 external polities, 103 events, 463 curated people, a 905-record lazy Wikimedia people-review candidate corpus and 28 bilateral political relations;
+- 9 Karnataka polities, 52 external polities with 52 map-ready capital/context-centre links, 103 events, 463 curated people, a 905-record lazy Wikimedia people-review candidate corpus and 28 bilateral political relations;
 - 31 inscriptions, 25 literary works, 63 cultural records and 24 reign/period records;
-- 323 sources, 1,564 generated relationships, 102 places and 13 collaboration records;
+- 323 sources, 1,564 generated relationships, 135 places and 13 collaboration records;
 - 3,715 Patrika Sanchaya periodicals and 76 grouped publication-place anchors, all visibly `needs-review`;
 - 7 genealogy assertions, 8 coin records, 7 manuscript witnesses, 7 boundary-evidence packets, 23 inscription-edition packets and 6 script-evolution records, all review-gated;
 - 12 local Epigraphia Carnatica Archive TXT records indexed as OCR discovery citations, with page-image review still required;
@@ -57,7 +57,7 @@ The bundled snapshot currently contains approximately:
 - 1,531 heritage inventory leads with explicit protection/register levels. Twenty-five newly covered Mysuru buildings remain unverified discovery leads rather than claimed protected monuments;
 - 64 district deep-history records: 31 district scopes plus 33 research leads. The 22 districts that previously had no candidate now each have one explicit intake packet; all remain `needs-review` until site-level authority evidence is collected.
 
-The literature collection contains 25 linked works, but the 24-packet review pass is not complete. Seven works now have manuscript or digital-edition witness leads; their remaining attribution, dating, bilingual interpretation and independent-review gates stay open. The relationship graph has 1,494 records, including clearly labeled district/heritage context links. Xuanzang, Barus and Polonnaruwa strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
+The literature collection contains 25 linked works, but the 24-packet review pass is not complete. Seven works now have manuscript or digital-edition witness leads; their remaining attribution, dating, bilingual interpretation and independent-review gates stay open. The relationship graph has 1,564 records, including clearly labeled district/heritage context links. Xuanzang, Barus and Polonnaruwa strengthen the China, Southeast Asia and Sri Lanka corridors; Malaysia and Singapore remain explicitly unresolved research leads pending item-level Karnataka evidence.
 
 The freedom-fighter corpus now has a reproducible statewide audit. It contains 255 candidates; 180 (70.6%) have at least one explicit current-district association, and 28 of 31 districts are represented. Chamarajanagar, Chikkamagaluru and Kalaburagi remain explicit empty research queues rather than being populated with unsupported names. The first Internet Archive pass identified six high-value books and theses and attached printed-page Mandya evidence to H. K. Veerannagowda; see [`docs/internet-archive-freedom-fighter-research.md`](internet-archive-freedom-fighter-research.md). Rerun `npm run audit:freedom-fighters` after each research/import pass.
 

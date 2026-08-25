@@ -652,7 +652,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-kannauj"
       },
       {
         "id": "external-polity-pallava",
@@ -705,7 +706,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-kanchipuram"
       },
       {
         "id": "external-polity-chola",
@@ -758,7 +760,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-thanjavur"
       },
       {
         "id": "external-polity-seuna",
@@ -811,7 +814,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-devagiri"
       },
       {
         "id": "external-polity-pandya",
@@ -864,7 +868,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-madurai"
       },
       {
         "id": "external-polity-chera",
@@ -917,7 +922,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-mahodayapuram"
       },
       {
         "id": "external-polity-eastern-ganga",
@@ -970,7 +976,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-cuttack"
       },
       {
         "id": "external-polity-gajapati",
@@ -1023,7 +1030,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-cuttack"
       },
       {
         "id": "external-polity-delhi-sultanate",
@@ -1076,7 +1084,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-delhi"
       },
       {
         "id": "external-polity-mughal-empire",
@@ -1129,7 +1138,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-delhi"
       },
       {
         "id": "external-polity-bahmani",
@@ -1182,7 +1192,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-bidar"
       },
       {
         "id": "external-polity-adil-shahi",
@@ -1235,7 +1246,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-vijayapura"
       },
       {
         "id": "external-polity-chitradurga-nayaka",
@@ -1288,7 +1300,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-chitradurga-fort"
       },
       {
         "id": "external-polity-deccan-sultanates",
@@ -1341,7 +1354,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-deccan-successor-courts"
       },
       {
         "id": "external-polity-maratha-confederacy",
@@ -1394,7 +1408,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-pune"
       },
       {
         "id": "external-polity-hyderabad-state",
@@ -1447,7 +1462,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-hyderabad"
       },
       {
         "id": "external-polity-travancore",
@@ -1500,7 +1516,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-thiruvananthapuram"
       },
       {
         "id": "external-polity-madurai-nayak",
@@ -1553,7 +1570,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-madurai"
       },
       {
         "id": "external-polity-thanjavur-maratha",
@@ -1606,7 +1624,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-thanjavur"
       },
       {
         "id": "external-polity-tang-china",
@@ -1659,7 +1678,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-changan"
       },
       {
         "id": "external-polity-ming-china",
@@ -1712,7 +1732,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-beijing"
       },
       {
         "id": "external-polity-portuguese-india",
@@ -1765,7 +1786,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-goa"
       },
       {
         "id": "external-polity-british-east-india-company",
@@ -1818,7 +1840,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-kolkata"
       },
       {
         "id": "external-polity-british-india",
@@ -1871,7 +1894,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-new-delhi"
       },
       {
         "id": "external-polity-india",
@@ -1924,7 +1948,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-new-delhi"
       },
       {
         "id": "external-polity-timurid-empire",
@@ -1977,7 +2002,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-samarkand"
       },
       {
         "id": "external-polity-zand-iran",
@@ -2030,7 +2056,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-shiraz"
       },
       {
         "id": "external-polity-ottoman-empire",
@@ -2083,7 +2110,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-istanbul"
       },
       {
         "id": "external-polity-kingdom-france",
@@ -2136,7 +2164,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "capitalId": "place-paris"
       },
       {
         "id": "external-polity-gurjara-pratihara",
@@ -2150,7 +2179,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-kannauj"
       },
       {
         "id": "external-polity-pala",
@@ -2164,7 +2194,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-munger"
       },
       {
         "id": "external-polity-kakatiya",
@@ -2178,7 +2209,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-warangal"
       },
       {
         "id": "external-polity-paramara",
@@ -2192,7 +2224,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-dhara"
       },
       {
         "id": "external-polity-maurya",
@@ -2206,7 +2239,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-pataliputra"
       },
       {
         "id": "external-polity-champa",
@@ -2220,7 +2254,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-indrapura-champa"
       },
       {
         "id": "external-polity-ayyavole-guild",
@@ -2234,7 +2269,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-aihole"
       },
       {
         "id": "external-polity-song-china",
@@ -2248,7 +2284,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-kaifeng"
       },
       {
         "id": "external-polity-shakya-lumbini",
@@ -2262,7 +2299,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-lumbini"
       },
       {
         "id": "external-polity-gandhara",
@@ -2276,7 +2314,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-peshawar"
       },
       {
         "id": "external-polity-takuapa-port",
@@ -2290,7 +2329,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-takuapa-port"
       },
       {
         "id": "external-polity-barus-port",
@@ -2304,7 +2344,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-lobu-tua"
       },
       {
         "id": "external-polity-sri-lanka",
@@ -2318,7 +2359,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-polonnaruwa"
       },
       {
         "id": "external-polity-old-kedah",
@@ -2332,7 +2374,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-bujang-valley"
       },
       {
         "id": "external-polity-temasek-singapore",
@@ -2346,7 +2389,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-temasek"
       },
       {
         "id": "external-polity-south-asian-merchant-network",
@@ -2360,7 +2404,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
+        },
+        "capitalId": "place-nagapattinam"
       },
       {
         "id": "external-polity-kittur",
@@ -2379,7 +2424,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-01"
-        }
+        },
+        "capitalId": "place-kittur"
       },
       {
         "id": "external-polity-karnata-tirhut",
@@ -2522,7 +2568,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-01"
-        }
+        },
+        "capitalId": "place-ullal"
       },
       {
         "id": "external-polity-keladi-nayaka",
@@ -2541,7 +2588,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-01"
-        }
+        },
+        "capitalId": "place-keladi"
       }
     ],
     "people": [
@@ -24472,6 +24520,897 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-30"
+        }
+      },
+      {
+        "id": "place-kannauj",
+        "name": {
+          "en": "Kannauj",
+          "kn": "ಕನ್ನೌಜ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            79.92,
+            27.05
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-kanchipuram",
+        "name": {
+          "en": "Kanchipuram",
+          "kn": "ಕಾಂಚಿಪುರಂ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            79.7,
+            12.84
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-thanjavur",
+        "name": {
+          "en": "Thanjavur",
+          "kn": "ತಂಜಾವೂರು"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            79.13,
+            10.79
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-madurai",
+        "name": {
+          "en": "Madurai",
+          "kn": "ಮದುರೈ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            78.12,
+            9.93
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-mahodayapuram",
+        "name": {
+          "en": "Mahodayapuram / Kodungallur",
+          "kn": "ಮಹೋದಯಪುರಂ / ಕೊಡുങ്ങಲ್ಲೂರು"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.2,
+            10.2
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-cuttack",
+        "name": {
+          "en": "Cuttack",
+          "kn": "ಕಟಕ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            85.88,
+            20.46
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-delhi",
+        "name": {
+          "en": "Delhi",
+          "kn": "ದೆಹಲಿ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            77.21,
+            28.61
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-bidar",
+        "name": {
+          "en": "Bidar",
+          "kn": "ಬೀದರ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            77.52,
+            17.91
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-vijayapura",
+        "name": {
+          "en": "Vijayapura / Bijapur",
+          "kn": "ವಿಜಯಪುರ / ಬಿಜಾಪುರ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.71,
+            16.83
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-deccan-successor-courts",
+        "name": {
+          "en": "Deccan successor courts context centre",
+          "kn": "ದಖ್ಖನ್ ಉತ್ತರಾಧಿಕಾರಿ ಅರಮನೆಗಳ ಸಂದರ್ಭ ಕೇಂದ್ರ"
+        },
+        "kind": "context-centre",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.8,
+            17.2
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-pune",
+        "name": {
+          "en": "Pune",
+          "kn": "ಪುಣೆ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            73.85,
+            18.52
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-hyderabad",
+        "name": {
+          "en": "Hyderabad",
+          "kn": "ಹೈದರಾಬಾದ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            78.49,
+            17.39
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-thiruvananthapuram",
+        "name": {
+          "en": "Thiruvananthapuram",
+          "kn": "ತಿರುವನಂತಪುರಂ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.94,
+            8.52
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-changan",
+        "name": {
+          "en": "Chang’an / Xi’an",
+          "kn": "ಚಾಂಗ್‌ಆನ್ / ಶಿಯನ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            108.94,
+            34.34
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-beijing",
+        "name": {
+          "en": "Beijing",
+          "kn": "ಬೀಜಿಂಗ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            116.41,
+            39.9
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-kolkata",
+        "name": {
+          "en": "Calcutta / Kolkata",
+          "kn": "ಕಲ್ಕತ್ತಾ / ಕೋಲ್ಕತ್ತಾ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            88.36,
+            22.57
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-new-delhi",
+        "name": {
+          "en": "New Delhi",
+          "kn": "ನವ ದೆಹಲಿ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            77.21,
+            28.61
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-samarkand",
+        "name": {
+          "en": "Samarkand",
+          "kn": "ಸಮರ್ಕಂದ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            67,
+            39.65
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-paris",
+        "name": {
+          "en": "Paris",
+          "kn": "ಪ್ಯಾರಿಸ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            2.35,
+            48.86
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-munger",
+        "name": {
+          "en": "Munger / Monghyr",
+          "kn": "ಮುಂಗೇರ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            86.47,
+            25.37
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-warangal",
+        "name": {
+          "en": "Warangal",
+          "kn": "ವಾರಂಗಲ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            79.59,
+            17.97
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-dhara",
+        "name": {
+          "en": "Dhara / Dhar",
+          "kn": "ಧಾರಾ / ಧಾರ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.3,
+            22.6
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-pataliputra",
+        "name": {
+          "en": "Pataliputra / Patna",
+          "kn": "ಪಾಟಲಿಪುತ್ರ / ಪಾಟ್ನಾ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            85.14,
+            25.61
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-indrapura-champa",
+        "name": {
+          "en": "Indrapura, Champa context",
+          "kn": "ಇಂದ್ರಪುರ, ಚಂಪಾ ಸಂದರ್ಭ"
+        },
+        "kind": "context-centre",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            108.25,
+            15.88
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-kaifeng",
+        "name": {
+          "en": "Kaifeng",
+          "kn": "ಕೈಫೆಂಗ್"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            114.31,
+            34.8
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-lumbini",
+        "name": {
+          "en": "Lumbini",
+          "kn": "ಲುಂಬಿನಿ"
+        },
+        "kind": "sacred-landscape-centre",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            83.28,
+            27.48
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-peshawar",
+        "name": {
+          "en": "Peshawar / Purushapura",
+          "kn": "ಪೇಶಾವರ್ / ಪುರುಷಪುರ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            71.52,
+            34.02
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-takuapa-port",
+        "name": {
+          "en": "Takuapa port",
+          "kn": "ತಕುವಾಪಾ ಬಂದರು"
+        },
+        "kind": "historical-port",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            98.35,
+            8.98
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-polonnaruwa",
+        "name": {
+          "en": "Polonnaruwa",
+          "kn": "ಪೊಲೊನ್ನರುವ"
+        },
+        "kind": "historical-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            81,
+            7.94
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-bujang-valley",
+        "name": {
+          "en": "Bujang Valley / Old Kedah",
+          "kn": "ಬುಜಾಂಗ್ ಕಣಿವೆ / ಪ್ರಾಚೀನ ಕೆದಾಹ್"
+        },
+        "kind": "historical-port-region",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            100.45,
+            5.7
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-temasek",
+        "name": {
+          "en": "Temasek / Singapore",
+          "kn": "ತೆಮಾಸೆಕ್ / ಸಿಂಗಪುರ"
+        },
+        "kind": "historical-port",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            103.85,
+            1.29
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-nagapattinam",
+        "name": {
+          "en": "Nagapattinam maritime context centre",
+          "kn": "ನಾಗಪಟ್ಟಣಂ ಸಮುದ್ರ ಸಂದರ್ಭ ಕೇಂದ್ರ"
+        },
+        "kind": "context-centre",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            79.84,
+            10.77
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-ullal",
+        "name": {
+          "en": "Ullal",
+          "kn": "ಉಳ್ಳಾಲ"
+        },
+        "kind": "historical-port-capital",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.85,
+            12.8
+          ],
+          "precision": "approximate"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],

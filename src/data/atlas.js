@@ -23,6 +23,7 @@ import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
 import { administrativeDivisions, feudatoryRelations, karnataReachEvents, karnataReachHeritage, karnataReachPeople, karnataReachPlaces, karnataReachPolities, karnataReachSources, openDatasetCatalogue, scriptEvolution } from './research-foundations.js'
 import { boundaryEvidence, coinRecords, genealogicalRelations, inscriptionEditions, manuscriptWitnesses } from './p1-model-foundations.js'
 import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionHeritage, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
+import { applyExternalCapitalLinks } from './external-capitals.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -740,6 +741,7 @@ atlasData.territorialExtents = [
 // leads so the public map can show the geography without promoting uncertain
 // temple identities or protection claims.
 applyResearchWaveV022(atlasData,appendUniqueById)
+applyExternalCapitalLinks(atlasData,appendUniqueById)
 applyDistrictHeritageConnections(atlasData.districtHistoryResearch)
 appendUniqueById(atlasData.culturalHeritage, offbeatHoysalaTemples)
 

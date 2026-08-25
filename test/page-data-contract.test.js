@@ -45,6 +45,17 @@ test('the bundled dataset is a clean page-data release candidate', () => {
   }
 })
 
+test('all external kingdoms have map-ready capital links', () => {
+  const missing = atlasData.externalPolities.filter(polity => !polity.capitalId)
+  assert.deepEqual(missing.map(polity => polity.id), [])
+  for (const polity of atlasData.externalPolities) {
+    const capital = placeById.get(polity.capitalId)
+    assert.ok(capital, `${polity.id} must point to a known capital place`)
+    assert.ok(pointIsValid(capital.location?.coordinates), `${polity.id} capital must have safe map coordinates`)
+    assert.equal(capital.review.status, 'needs-review', `${polity.capitalId} must stay review-gated until source verified`)
+  }
+})
+
 test('source-volume extraction sprint records remain citation-led and review-gated', () => {
   const localArchiveSources=atlasData.sources.filter(item=>item.id.startsWith('src-ia-local-'))
   assert.ok(localArchiveSources.length >= 12)
