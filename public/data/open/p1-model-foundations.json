@@ -2984,6 +2984,110 @@
         }
       },
       {
+        "id": "manuscript-ajitapurana-jangamwadi-witness-lead",
+        "name": {
+          "en": "Ajitapurana digital witness lead",
+          "kn": "ಅಜಿತಪುರಾಣ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-ajitapurana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Jangamwadi Math Library Collection edition, ed. N. Sannayya Rama Gauda, digitized on the Internet Archive",
+          "kn": "ಜಂಗಮವಾಡಿ ಮಠ ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹ ಆವೃತ್ತಿ, ಸಂ. ಎನ್. ಸಣ್ಣಯ್ಯ ರಾಮಗೌಡ, ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನಲ್ಲಿ ಡಿಜಿಟಲೀಕೃತ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 993,
+          "to": 993,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "complete",
+        "access": {
+          "status": "public",
+          "url": "https://archive.org/details/ajita-tirthakara-puranam-of-ranna-by-n-sannayya-rama-gauda-jangamwadi-math-collection"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection, freely downloadable"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "manuscript-shantipurana-jangamwadi-witness-lead",
+        "name": {
+          "en": "Shantipurana digital witness lead",
+          "kn": "ಶಾಂತಿಪುರಾಣ ಡಿಜಿಟಲ್ ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-shantipurana",
+        "witnessKind": "digital-edition-lead",
+        "repository": {
+          "en": "Priyadarshini Prakashan edition, ed. Dr. S. Vidyashankar, digitized by the Jangamwadi Math Library Collection",
+          "kn": "ಪ್ರಿಯದರ್ಶಿನಿ ಪ್ರಕಾಶನ ಆವೃತ್ತಿ, ಸಂ. ಡಾ. ಎಸ್. ವಿದ್ಯಾಶಂಕರ್, ಜಂಗಮವಾಡಿ ಮಠ ಗ್ರಂಥಾಲಯ ಸಂಗ್ರಹದಿಂದ ಡಿಜಿಟಲೀಕೃತ"
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 950,
+          "to": 950,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "complete",
+        "access": {
+          "status": "public",
+          "url": "https://archive.org/details/ibQB_ponna-shanti-purana-sangraha-by-dr.-s.-vidyashankar-kannada-priyadarshini-prakashan"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "located"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed, freely downloadable"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
         "id": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
         "name": {
           "en": "Vikramarjuna Vijaya Itihasa Darshana literature lead",
