@@ -39001,6 +39001,116 @@
         }
       },
       {
+        "id": "src-shastriya-kannada-vishnuvardhana",
+        "type": "research-portal",
+        "title": {
+          "en": "Classical Kannada portal: Vishnuvardhana",
+          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಪೋರ್ಟಲ್: ವಿಷ್ಣುವರ್ಧನ"
+        },
+        "authors": [
+          "Classical Kannada / Shastriya Kannada project contributors"
+        ],
+        "year": null,
+        "url": "https://shastriyakannada.org/database/english/land%20history%20and%20people/VISHNUVARDHANA.htm",
+        "scope": {
+          "en": "Discovery and synthesis source on Vishnuvardhana's campaigns, including the Belur Chennakeshava temple inscription of 1117 recording victory over the Cholas at Talakad; item-level inscription review still required.",
+          "kn": "ವಿಷ್ಣುವರ್ಧನನ ದಂಡಯಾತ್ರೆಗಳ ಬಗ್ಗೆ ಅನ್ವೇಷಣಾ ಮತ್ತು ಸಂಕ್ಷೇಪ ಆಕರ, ತಾಳಗಾಡಿನಲ್ಲಿ ಚೋಳರ ಮೇಲಿನ ಜಯವನ್ನು ದಾಖಲಿಸುವ 1117ರ ಬೇಲೂರು ಚೆನ್ನಕೇಶವ ದೇವಾಲಯ ಶಾಸನ ಸೇರಿ; ವಸ್ತುಮಟ್ಟದ ಶಾಸನ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-veera-ballala-ii",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Veera Ballala II",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ವೀರ ಬಲ್ಲಾಳ II"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Veera_Ballala_II",
+        "scope": {
+          "en": "Documents Ballala II's campaigns against the Yadavas of Devagiri, Southern Kalachuris, Pandyas of Madurai and the Western Chalukyas, and his move to full independence (sources vary between 1187 and 1193). Discovery lead; verify against inscriptions before promotion.",
+          "kn": "ಬಲ್ಲಾಳ IIನ ದೇವಗಿರಿ ಯಾದವರು, ದಕ್ಷಿಣ ಕಳಚೂರಿಗಳು, ಮಧುರೈ ಪಾಂಡ್ಯರು ಮತ್ತು ಪಶ್ಚಿಮ ಚಾಲುಕ್ಯರ ವಿರುದ್ಧದ ದಂಡಯಾತ್ರೆಗಳನ್ನು ಮತ್ತು ಪೂರ್ಣ ಸ್ವಾತಂತ್ರ್ಯದ ಕಡೆಗಿನ ಹೆಜ್ಜೆಯನ್ನು (ಆಕರಗಳು 1187 ಮತ್ತು 1193ರ ನಡುವೆ ಭಿನ್ನ) ದಾಖಲಿಸುತ್ತದೆ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-hoysala-kingdom-map",
+        "type": "geospatial-discovery-lead",
+        "title": {
+          "en": "Wikipedia: Hoysala Kingdom (territorial map)",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಹೊಯ್ಸಳ ರಾಜ್ಯ (ವ್ಯಾಪ್ತಿ ನಕ್ಷೆ)"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Hoysala_Kingdom",
+        "scope": {
+          "en": "Hosts a composite map titled \"Greatest extent of the Hoysala kingdom, c. 1050-1355\". It is a whole-dynasty composite, not a reign-specific boundary, so it is a comparison lead only until checked against a specialist historical atlas for a specific reign year.",
+          "kn": "ಸು. 1050-1355ರ ಹೊಯ್ಸಳ ರಾಜ್ಯದ ಗರಿಷ್ಠ ವ್ಯಾಪ್ತಿಯ ಸಂಯೋಜಿತ ನಕ್ಷೆಯನ್ನು ಹೊಂದಿದೆ. ಇದು ಇಡೀ ವಂಶದ ಸಂಯೋಜಿತ ನಕ್ಷೆ, ಒಂದು ಆಳ್ವಿಕೆಗೆ ನಿರ್ದಿಷ್ಟವಲ್ಲ; ನಿರ್ದಿಷ್ಟ ಆಳ್ವಿಕೆ-ವರ್ಷಕ್ಕಾಗಿ ವಿಶೇಷಜ್ಞ ಐತಿಹಾಸಿಕ ಭೂಪಟದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸುವವರೆಗೆ ಇದು ಹೋಲಿಕೆ ಸುಳಿವು ಮಾತ್ರ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-treaty-of-mangalore",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Treaty of Mangalore",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಮಂಗಳೂರು ಒಪ್ಪಂದ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Treaty_of_Mangalore",
+        "scope": {
+          "en": "Documents the 11 March 1784 treaty ending the Second Anglo-Mysore War, under which Tipu Sultan and the British East India Company restored all captured territories, forts and places to each other (status quo ante bellum). Discovery lead; verify against the treaty text before promotion.",
+          "kn": "11 ಮಾರ್ಚ್ 1784ರ ಎರಡನೇ ಆಂಗ್ಲ-ಮೈಸೂರು ಯುದ್ಧವನ್ನು ಕೊನೆಗೊಳಿಸಿದ ಒಪ್ಪಂದವನ್ನು ದಾಖಲಿಸುತ್ತದೆ; ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಮತ್ತು ಬ್ರಿಟಿಷ್ ಈಸ್ಟ್ ಇಂಡಿಯಾ ಕಂಪನಿ ವಶಪಡಿಸಿಕೊಂಡ ಎಲ್ಲಾ ಪ್ರದೇಶ, ಕೋಟೆ ಮತ್ತು ಸ್ಥಳಗಳನ್ನು ಪರಸ್ಪರ ಮರುಸ್ಥಾಪಿಸಿದರು (ಯುದ್ಧಪೂರ್ವ ಸ್ಥಿತಿ). ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಒಪ್ಪಂದ ಪಠ್ಯದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "src-wikipedia-maratha-mysore-wars",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Maratha-Mysore Wars",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಮರಾಠ-ಮೈಸೂರು ಯುದ್ಧಗಳು"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Maratha%E2%80%93Mysore_Wars",
+        "scope": {
+          "en": "Documents the Treaty of Gajendragad (April 1787), which ended the Maratha-Mysore War: Tipu Sultan ceded Badami and returned Adoni, Kittur and Nargund, fixing the Tungabhadra river as the wartime frontier between Maratha and Mysore territory. Discovery lead; verify against the treaty text before promotion.",
+          "kn": "1787ರ ಏಪ್ರಿಲ್‌ನ ಗಜೇಂದ್ರಗಡ ಒಪ್ಪಂದವನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ಇದು ಮರಾಠ-ಮೈಸೂರು ಯುದ್ಧವನ್ನು ಕೊನೆಗೊಳಿಸಿತು: ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಬಾದಾಮಿಯನ್ನು ಬಿಟ್ಟುಕೊಟ್ಟು ಅಡೋನಿ, ಕಿತ್ತೂರು ಮತ್ತು ನರಗುಂದವನ್ನು ಹಿಂದಿರುಗಿಸಿದನು, ತುಂಗಭದ್ರಾ ನದಿಯನ್ನು ಮರಾಠ ಮತ್ತು ಮೈಸೂರು ಪ್ರದೇಶಗಳ ನಡುವಿನ ಯುದ್ಧಕಾಲದ ಗಡಿಯನ್ನಾಗಿ ನಿಗದಿಪಡಿಸಿತು. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಒಪ್ಪಂದ ಪಠ್ಯದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-asi-central-protected-monuments-karnataka-pdf",
         "type": "official-protection-register",
         "title": {
@@ -84438,6 +84548,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Prototype polygon to be replaced"
+          },
+          {
+            "sourceId": "src-wikipedia-veera-ballala-ii",
+            "locator": "Campaigns against the Yadavas of Devagiri, Southern Kalachuris, Pandyas of Madurai and Western Chalukyas; independence dated 1187-1193 depending on source"
+          },
+          {
+            "sourceId": "src-wikipedia-hoysala-kingdom-map",
+            "locator": "\"Greatest extent of the Hoysala kingdom, c. 1050-1355\" map; whole-dynasty composite, not yet compared specifically against the 1187 extent"
           }
         ],
         "review": {
@@ -84546,6 +84664,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Schematic Hoysala comparison geometry"
+          },
+          {
+            "sourceId": "src-shastriya-kannada-vishnuvardhana",
+            "locator": "Belur Chennakeshava temple inscription of 1117 recording victory over the Cholas at Talakad"
+          },
+          {
+            "sourceId": "src-wikipedia-hoysala-kingdom-map",
+            "locator": "\"Greatest extent of the Hoysala kingdom, c. 1050-1355\" map; whole-dynasty composite, not yet compared specifically against the 1117 extent"
           }
         ],
         "review": {
@@ -84573,6 +84699,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Schematic Mysore comparison geometry"
+          },
+          {
+            "sourceId": "src-wikipedia-treaty-of-mangalore",
+            "locator": "11 March 1784 Treaty of Mangalore; mutual restoration of captured territory (status quo ante bellum)"
+          },
+          {
+            "sourceId": "src-wikipedia-maratha-mysore-wars",
+            "locator": "April 1787 Treaty of Gajendragad; Tungabhadra river fixed as the Maratha-Mysore wartime frontier, Badami ceded, Adoni/Kittur/Nargund returned"
           }
         ],
         "review": {
@@ -87007,16 +87141,16 @@
           "source-map-comparison"
         ],
         "completedEvidence": [
-          "temple-patronage-sites"
+          "temple-patronage-sites",
+          "regional-campaigns"
         ],
         "blockingEvidence": [
           "inscription-clusters",
-          "regional-campaigns",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Uses temple and reign context as a starter envelope; it is not a final administrative boundary.",
-          "kn": "ದೇವಾಲಯ ಮತ್ತು ಆಳ್ವಿಕೆ ಸಂದರ್ಭವನ್ನು ಪ್ರಾರಂಭಿಕ ವ್ಯಾಪ್ತಿಯಾಗಿ ಬಳಸುತ್ತದೆ; ಇದು ಅಂತಿಮ ಆಡಳಿತ ಗಡಿಯಲ್ಲ."
+          "en": "Uses temple and reign context as a starter envelope. Regional-campaign evidence is now located (wars against the Yadavas of Devagiri, Southern Kalachuris, Pandyas of Madurai and Western Chalukyas, and a move to full independence dated 1187-1193 depending on source); dated inscription clusters and a reign-specific source map are still missing, so this remains schematic, not a final administrative boundary.",
+          "kn": "ದೇವಾಲಯ ಮತ್ತು ಆಳ್ವಿಕೆ ಸಂದರ್ಭವನ್ನು ಪ್ರಾರಂಭಿಕ ವ್ಯಾಪ್ತಿಯಾಗಿ ಬಳಸುತ್ತದೆ. ಪ್ರಾದೇಶಿಕ ದಂಡಯಾತ್ರೆ ಸಾಕ್ಷ್ಯ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ (ದೇವಗಿರಿ ಯಾದವರು, ದಕ್ಷಿಣ ಕಳಚೂರಿಗಳು, ಮಧುರೈ ಪಾಂಡ್ಯರು ಮತ್ತು ಪಶ್ಚಿಮ ಚಾಲುಕ್ಯರ ವಿರುದ್ಧದ ಯುದ್ಧಗಳು, ಆಕರಕ್ಕೆ ಅನುಗುಣವಾಗಿ 1187-1193ರ ನಡುವೆ ಪೂರ್ಣ ಸ್ವಾತಂತ್ರ್ಯದ ಹೆಜ್ಜೆ); ದಿನಾಂಕಿತ ಶಾಸನ ಗುಚ್ಛಗಳು ಮತ್ತು ಆಳ್ವಿಕೆ-ನಿರ್ದಿಷ್ಟ ಆಕರ ನಕ್ಷೆ ಇನ್ನೂ ಕಾಣೆಯಾಗಿವೆ, ಆದ್ದರಿಂದ ಇದು ಅಂದಾಜಿನದ್ದೇ, ಅಂತಿಮ ಆಡಳಿತ ಗಡಿಯಲ್ಲ."
         },
         "citations": [
           {
@@ -87026,6 +87160,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Prototype polygon to be replaced"
+          },
+          {
+            "sourceId": "src-wikipedia-veera-ballala-ii",
+            "locator": "Campaigns against the Yadavas of Devagiri, Southern Kalachuris, Pandyas of Madurai and Western Chalukyas; independence dated 1187-1193 depending on source"
+          },
+          {
+            "sourceId": "src-wikipedia-hoysala-kingdom-map",
+            "locator": "\"Greatest extent of the Hoysala kingdom, c. 1050-1355\" map; whole-dynasty composite, not yet compared specifically against the 1187 extent"
           }
         ],
         "review": {
@@ -87210,15 +87352,15 @@
         ],
         "completedEvidence": [
           "capital-context",
-          "temple-patronage-sites"
+          "temple-patronage-sites",
+          "inscription-clusters"
         ],
         "blockingEvidence": [
-          "inscription-clusters",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Treats Belur and Halebidu as reign-linked centres while keeping the polygon schematic until inscription clusters and map comparisons are reviewed.",
-          "kn": "ಬೇಲೂರು ಮತ್ತು ಹಳೇಬೀಡನ್ನು ಆಳ್ವಿಕೆ-ಸಂಬಂಧಿತ ಕೇಂದ್ರಗಳಾಗಿ ಪರಿಗಣಿಸುತ್ತದೆ; ಶಾಸನ ಗುಚ್ಛಗಳು ಮತ್ತು ನಕ್ಷೆ ಹೋಲಿಕೆ ಪರಿಶೀಲನೆಯಾಗುವವರೆಗೆ ಬಹುಭುಜ ಅಂದಾಜಿನದ್ದೇ."
+          "en": "Treats Belur and Halebidu as reign-linked centres. Inscription-cluster evidence is now located: the Belur Chennakeshava temple inscription of 1117 records Vishnuvardhana's victory over the Cholas at Talakad and the Gangavadi/Talakad conquest that this extent centres on. A reign-specific source map is still missing (only a whole-dynasty composite map has been found), so the polygon remains schematic.",
+          "kn": "ಬೇಲೂರು ಮತ್ತು ಹಳೇಬೀಡನ್ನು ಆಳ್ವಿಕೆ-ಸಂಬಂಧಿತ ಕೇಂದ್ರಗಳಾಗಿ ಪರಿಗಣಿಸುತ್ತದೆ. ಶಾಸನ ಗುಚ್ಛ ಸಾಕ್ಷ್ಯ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: 1117ರ ಬೇಲೂರು ಚೆನ್ನಕೇಶವ ದೇವಾಲಯ ಶಾಸನವು ತಾಳಗಾಡಿನಲ್ಲಿ ಚೋಳರ ಮೇಲಿನ ವಿಷ್ಣುವರ್ಧನನ ಜಯ ಮತ್ತು ಈ ವ್ಯಾಪ್ತಿ ಕೇಂದ್ರೀಕರಿಸುವ ಗಂಗವಾಡಿ/ತಾಳಗಾಡು ವಿಜಯವನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ಆಳ್ವಿಕೆ-ನಿರ್ದಿಷ್ಟ ಆಕರ ನಕ್ಷೆ ಇನ್ನೂ ಕಾಣೆಯಾಗಿದೆ (ಇಡೀ ವಂಶದ ಸಂಯೋಜಿತ ನಕ್ಷೆ ಮಾತ್ರ ಸಿಕ್ಕಿದೆ), ಆದ್ದರಿಂದ ಬಹುಭುಜ ಅಂದಾಜಿನದ್ದೇ ಆಗಿ ಉಳಿದಿದೆ."
         },
         "citations": [
           {
@@ -87228,6 +87370,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Schematic Hoysala comparison geometry"
+          },
+          {
+            "sourceId": "src-shastriya-kannada-vishnuvardhana",
+            "locator": "Belur Chennakeshava temple inscription of 1117 recording victory over the Cholas at Talakad"
+          },
+          {
+            "sourceId": "src-wikipedia-hoysala-kingdom-map",
+            "locator": "\"Greatest extent of the Hoysala kingdom, c. 1050-1355\" map; whole-dynasty composite, not yet compared specifically against the 1117 extent"
           }
         ],
         "review": {
@@ -87260,16 +87410,16 @@
           "source-map-comparison"
         ],
         "completedEvidence": [
-          "capital-context"
+          "capital-context",
+          "wartime-frontiers",
+          "treaty-boundaries"
         ],
         "blockingEvidence": [
-          "wartime-frontiers",
-          "treaty-boundaries",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Separates the Srirangapatna-centred state from diplomatic links and wartime claims; treaty and campaign boundary evidence must be attached before promotion.",
-          "kn": "ಶ್ರೀರಂಗಪಟ್ಟಣ ಕೇಂದ್ರಿತ ರಾಜ್ಯವನ್ನು ರಾಜತಾಂತ್ರಿಕ ಕೊಂಡಿಗಳು ಮತ್ತು ಯುದ್ಧಕಾಲದ ಹಕ್ಕುಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ; ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ಒಪ್ಪಂದ ಮತ್ತು ದಂಡಯಾತ್ರೆ ಗಡಿ ಸಾಕ್ಷ್ಯಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
+          "en": "Separates the Srirangapatna-centred state from diplomatic links and wartime claims. Treaty-boundary evidence is now located: the 11 March 1784 Treaty of Mangalore restored all captured territory between Mysore and the British East India Company to a pre-war status quo. Wartime-frontier evidence is also located: the April 1787 Treaty of Gajendragad fixed the Tungabhadra river as the boundary with the Marathas after Tipu ceded Badami and returned Adoni, Kittur and Nargund. A dated, specialist source map for 1787 specifically is still missing, so the polygon remains schematic pending promotion.",
+          "kn": "ಶ್ರೀರಂಗಪಟ್ಟಣ ಕೇಂದ್ರಿತ ರಾಜ್ಯವನ್ನು ರಾಜತಾಂತ್ರಿಕ ಕೊಂಡಿಗಳು ಮತ್ತು ಯುದ್ಧಕಾಲದ ಹಕ್ಕುಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ. ಒಪ್ಪಂದ-ಗಡಿ ಸಾಕ್ಷ್ಯ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: 11 ಮಾರ್ಚ್ 1784ರ ಮಂಗಳೂರು ಒಪ್ಪಂದವು ಮೈಸೂರು ಮತ್ತು ಬ್ರಿಟಿಷ್ ಈಸ್ಟ್ ಇಂಡಿಯಾ ಕಂಪನಿಯ ನಡುವೆ ವಶಪಡಿಸಿಕೊಂಡ ಎಲ್ಲಾ ಪ್ರದೇಶವನ್ನು ಯುದ್ಧಪೂರ್ವ ಸ್ಥಿತಿಗೆ ಮರುಸ್ಥಾಪಿಸಿತು. ಯುದ್ಧಕಾಲದ ಗಡಿ ಸಾಕ್ಷ್ಯವೂ ಗುರುತಿಸಲಾಗಿದೆ: 1787ರ ಏಪ್ರಿಲ್‌ನ ಗಜೇಂದ್ರಗಡ ಒಪ್ಪಂದವು ಟಿಪ್ಪು ಬಾದಾಮಿಯನ್ನು ಬಿಟ್ಟುಕೊಟ್ಟು ಅಡೋನಿ, ಕಿತ್ತೂರು ಮತ್ತು ನರಗುಂದವನ್ನು ಹಿಂದಿರುಗಿಸಿದ ನಂತರ ತುಂಗಭದ್ರಾ ನದಿಯನ್ನು ಮರಾಠರೊಂದಿಗಿನ ಗಡಿಯನ್ನಾಗಿ ನಿಗದಿಪಡಿಸಿತು. 1787ಕ್ಕೆ ನಿರ್ದಿಷ್ಟವಾದ, ದಿನಾಂಕಿತ ವಿಶೇಷಜ್ಞ ಆಕರ ನಕ್ಷೆ ಇನ್ನೂ ಕಾಣೆಯಾಗಿದೆ, ಆದ್ದರಿಂದ ಉತ್ತೇಜನದವರೆಗೆ ಬಹುಭುಜ ಅಂದಾಜಿನದ್ದೇ ಆಗಿ ಉಳಿದಿದೆ."
         },
         "citations": [
           {
@@ -87279,6 +87429,14 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Schematic Mysore comparison geometry"
+          },
+          {
+            "sourceId": "src-wikipedia-treaty-of-mangalore",
+            "locator": "11 March 1784 Treaty of Mangalore; mutual restoration of captured territory (status quo ante bellum)"
+          },
+          {
+            "sourceId": "src-wikipedia-maratha-mysore-wars",
+            "locator": "April 1787 Treaty of Gajendragad; Tungabhadra river fixed as the Maratha-Mysore wartime frontier, Badami ceded, Adoni/Kittur/Nargund returned"
           }
         ],
         "review": {
