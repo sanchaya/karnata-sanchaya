@@ -17,7 +17,7 @@ This runbook covers the collections that moved from “missing” to “structur
 
 | Collection | Current count | Status |
 | --- | ---: | --- |
-| `genealogicalRelations` | 9 | Derived or secondary assertions; new Vengi and Tuluva-line proof packets are review-gated, not final family-tree proof |
+| `genealogicalRelations` | 23 | Derived or secondary assertions; the Hoysala, Wadiyar and Western Ganga long bridges are now split into individual-generation links (still needs-review), plus the Vengi and Tuluva-line proof packets — none are final family-tree proof |
 | `coinRecords` | 10 | Catalogue/image/metal/weight/findspot gates open; new Maski Ashokan-context and Hoysala catalogue proof packets keep images, weights and findspots unresolved until reviewed |
 | `manuscriptWitnesses` | 12 | Repository leads located for some works; new Kavirajamarga Parampare, Shabdamanidarpana/Sanchaya and Itihasa Darshana literature-heavy witness leads keep shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; not research-grade boundary corpus |
@@ -53,13 +53,15 @@ Minimum evidence per coin:
 - licensed image or a documented image restriction;
 - bilingual obverse and reverse notes.
 
+A first specialist-catalogue pass (Numista for Hoysala; CoinIndia/Sanjeev Kumar galleries for Tipu Sultan and Vijayanagara) has resolved dynasty/type-level metal, weight and diameter for all three first targets and added KM/Mitchiner catalogue-number citations. None are specimen-matched to a findspot or independently reviewed, so all three remain `needs-review` with the image gate still open.
+
 Current first targets:
 
 | Record | Next action |
 | --- | --- |
-| `coin-hoysala-belur-numismatic-lead` | Find catalogue specimen and plate for Hoysala coinage associated with the Belur/Halebidu zone. |
-| `coin-mysore-srirangapatna-tipu-lead` | Match Tipu-period Srirangapatna specimens to catalogue, metal, denomination and image rights. |
-| `coin-vijayanagara-hampi-gold-coinage-lead` | Attach item-level catalogue specimens and licensed images. |
+| `coin-hoysala-belur-numismatic-lead` | Dynasty-wide catalogue now located (gold fanam, copper kasu, silver tara/Veera Ballala III); still need a specimen matched to Belur specifically, a licensed image and independent review. |
+| `coin-mysore-srirangapatna-tipu-lead` | Patan-mint gold pagoda specimens now located with weight/diameter and KM numbers (AH1198 RY1, AH1200 RY4, AM1221/KM129); still need a licensed photograph and independent Kannada/Persian review. |
+| `coin-vijayanagara-hampi-gold-coinage-lead` | Type-level gold pagoda/varaha data now located (~3.38 g, 11-12 mm, Mitchiner numbers); still need a Hampi-mint-matched specimen, licensed image and independent review. |
 
 ### Genealogy and network maturity
 
@@ -73,13 +75,13 @@ Minimum evidence per relation:
 - explanation of whether the relation is direct proof, secondary synthesis or derived from reign order;
 - independent review before changing `evidenceLevel` to `primary` or confidence to `high`.
 
-Current first targets:
+A first pass has split all three long bridges into individual-generation links, adding new person records (Narasimha I for Hoysala; seven Wadiyar rulers between Chikka Devaraja and Krishnaraja Wadiyar III) and citing each generation to a specific secondary source. None are promoted — every new link stays `needs-review` pending independent review of the underlying inscriptions/primary genealogies.
 
-| Record | Next action |
-| --- | --- |
-| `genealogy-vishnuvardhana-ballala-ii-hoysala-line` | Split the long bridge into individual generations after locating Hoysala genealogy evidence. |
-| `genealogy-yaduraya-krishnaraja-iii-mysore-line` | Replace the long Wadiyar bridge with source-verified generations. |
-| `genealogy-durvinita-sripurusha-dynastic-line` | Resolve the intervening Western Ganga lineage from inscriptions or specialist chronology. |
+| Original bridge | What replaced it | Next action |
+| --- | --- | --- |
+| `genealogy-vishnuvardhana-ballala-ii-hoysala-line` | Two `parent-child` links via a new `person-narasimha-i` (Vishnuvardhana → Narasimha I → Ballala II), cited to the Yalladahalli record of c. 1145. | Independent review of the inscription text; the succession is described as contested (Ballala II is said to have deposed his father). |
+| `genealogy-yaduraya-krishnaraja-iii-mysore-line` | A shortened, still-`derived` bridge (Yaduraya → Chikka Devaraja, 1399-1673) plus eight source-cited links (Chikka Devaraja → Kanthirava Narasaraja II → Dodda Krishnaraja I → [adoption] Chamaraja Wodeyar VII → [sibling] Krishnaraja Wadiyar II → Nanjaraja Wodeyar → [sibling] Chamaraja Wodeyar VIII → [sibling] Chamaraja Wodeyar IX → Krishnaraja Wadiyar III). | The pre-1673 span still passes through several early collateral successions (nephews, cousins, a direct-line break) that need ruler-by-ruler primary-source review. |
+| `genealogy-durvinita-sripurusha-dynastic-line` | Six `succession-family-assertion` links across the full regnal sequence (Durvinita → Mushkara → Polavira → Srivikrama → Bhuvikrama → Shivamara I → Sripurusha). Kept as succession assertions rather than `parent-child` because competing Western Ganga chronologies disagree on exact family relations. | Resolve each link against Epigraphia Carnatica copper-plate genealogies rather than the discovery-lead Wikipedia list currently cited. |
 
 ### Boundary evidence maturity
 

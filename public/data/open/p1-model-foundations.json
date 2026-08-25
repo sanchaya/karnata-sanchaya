@@ -443,35 +443,65 @@
         }
       },
       {
-        "id": "genealogy-durvinita-sripurusha-dynastic-line",
+        "id": "genealogy-durvinita-mushkara-western-ganga",
         "name": {
-          "en": "Durvinita to Sripurusha Western Ganga dynastic-line assertion",
-          "kn": "ದುರ್ವಿನೀತರಿಂದ ಶ್ರೀಪುರುಷರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
+          "en": "Durvinita to Mushkara Western Ganga succession-family assertion",
+          "kn": "ದುರ್ವಿನೀತರಿಂದ ಮುಷ್ಕರರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
         },
-        "relationKind": "dynastic-claim",
+        "relationKind": "succession-family-assertion",
         "fromPersonId": "person-durvinita",
-        "toPersonId": "person-sripurusha",
+        "toPersonId": "person-mushkara",
         "polityId": "polity-western-ganga",
         "date": {
-          "from": 529,
-          "to": 788,
+          "from": 579,
+          "to": 604,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "low",
+        "derivation": {
+          "en": "Regnal-sequence link from the Western Ganga king list; secondary sources describe Mushkara as Durvinita's son, but this is not yet final family-tree evidence until the underlying copper-plate genealogy is independently reviewed for this atlas. Western Ganga regnal numbering varies between scholarly traditions.",
+          "kn": "ಪಶ್ಚಿಮ ಗಂಗ ಅರಸು ಪಟ್ಟಿಯಿಂದ ಆಳ್ವಿಕೆ-ಅನುಕ್ರಮ ಸಂಪರ್ಕ; ದ್ವಿತೀಯ ಆಕರಗಳು ಮುಷ್ಕರನನ್ನು ದುರ್ವಿನೀತನ ಮಗ ಎಂದು ವಿವರಿಸುತ್ತವೆ, ಆದರೆ ಆಧಾರವಾದ ತಾಮ್ರಪಟ ವಂಶಾವಳಿಯನ್ನು ಈ ಭೂಪಟಕ್ಕಾಗಿ ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸುವವರೆಗೆ ಇದು ಅಂತಿಮ ಕುಟುಂಬವೃಕ್ಷ ಸಾಕ್ಷ್ಯವಲ್ಲ. ಪಶ್ಚಿಮ ಗಂಗ ಆಳ್ವಿಕೆ ಸಂಖ್ಯಾಕ್ರಮ ವಿದ್ವತ್ ಸಂಪ್ರದಾಯಗಳ ನಡುವೆ ಭಿನ್ನವಾಗಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-sripurusha",
+            "locator": "Western Ganga succession list: Mushkara follows Durvinita, c. 579-604 CE, described as his son; verify against Epigraphia Carnatica copper-plate genealogies"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-mushkara-polavira-western-ganga",
+        "name": {
+          "en": "Mushkara to Polavira Western Ganga succession-family assertion",
+          "kn": "ಮುಷ್ಕರರಿಂದ ಪೋಲವೀರರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "succession-family-assertion",
+        "fromPersonId": "person-mushkara",
+        "toPersonId": "person-polavira",
+        "polityId": "polity-western-ganga",
+        "date": {
+          "from": 604,
+          "to": 629,
           "era": "CE",
           "precision": "circa"
         },
         "evidenceLevel": "derived",
         "confidence": "low",
         "derivation": {
-          "en": "Derived from separated reign anchors to make the genealogy graph explorable; it is not final family-tree evidence until the intervening lineage is resolved.",
-          "kn": "ವಿಭಿನ್ನ ಆಳ್ವಿಕೆ ಆಧಾರಗಳಿಂದ ಕುಟುಂಬವೃಕ್ಷ ಗ್ರಾಫ್ ಅನ್ವೇಷಣೆಗೆ ರೂಪಿಸಲಾಗಿದೆ; ಮಧ್ಯವರ್ತಿ ವಂಶರೇಖೆ ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಇದು ಅಂತಿಮ ಕುಟುಂಬವೃಕ್ಷ ಸಾಕ್ಷ್ಯವಲ್ಲ."
+          "en": "Regnal-sequence link only; Polavira is thinly attested in surviving inscriptions and the exact family relation to Mushkara requires specialist review before this can move beyond a sequence assertion.",
+          "kn": "ಆಳ್ವಿಕೆ-ಅನುಕ್ರಮ ಸಂಪರ್ಕ ಮಾತ್ರ; ಪೋಲವೀರ ಉಳಿದಿರುವ ಶಾಸನಗಳಲ್ಲಿ ವಿರಳವಾಗಿ ದೃಢಪಟ್ಟಿದ್ದಾನೆ, ಮುಷ್ಕರನೊಂದಿಗಿನ ನಿಖರ ಕುಟುಂಬ ಸಂಬಂಧಕ್ಕೆ ಇದು ಅನುಕ್ರಮ ನಿರೂಪಣೆಯನ್ನು ಮೀರುವ ಮೊದಲು ವಿಶೇಷಜ್ಞ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
         },
         "citations": [
           {
-            "sourceId": "src-asi-classical-age",
-            "locator": "Western Ganga chronology and Durvinita context"
-          },
-          {
             "sourceId": "src-wikipedia-sripurusha",
-            "locator": "Sripurusha succession list; replace with reviewed primary-source locator"
+            "locator": "Western Ganga succession list: Polavira follows Mushkara, c. 604-629 CE; item-level inscriptional evidence still to be located"
           }
         ],
         "review": {
@@ -481,31 +511,201 @@
         }
       },
       {
-        "id": "genealogy-vishnuvardhana-ballala-ii-hoysala-line",
+        "id": "genealogy-polavira-srivikrama-western-ganga",
         "name": {
-          "en": "Vishnuvardhana to Ballala II Hoysala dynastic-line assertion",
-          "kn": "ವಿಷ್ಣುವರ್ಧನರಿಂದ ಬಲ್ಲಾಳ IIರವರೆಗಿನ ಹೊಯ್ಸಳ ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
+          "en": "Polavira to Srivikrama Western Ganga succession-family assertion",
+          "kn": "ಪೋಲವೀರರಿಂದ ಶ್ರೀವಿಕ್ರಮರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
         },
-        "relationKind": "dynastic-claim",
+        "relationKind": "succession-family-assertion",
+        "fromPersonId": "person-polavira",
+        "toPersonId": "person-srivikrama",
+        "polityId": "polity-western-ganga",
+        "date": {
+          "from": 629,
+          "to": 654,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "derived",
+        "confidence": "low",
+        "derivation": {
+          "en": "Regnal-sequence link only; both rulers are thinly attested and the exact family relation requires specialist review before this can move beyond a sequence assertion.",
+          "kn": "ಆಳ್ವಿಕೆ-ಅನುಕ್ರಮ ಸಂಪರ್ಕ ಮಾತ್ರ; ಇಬ್ಬರೂ ಅರಸರು ವಿರಳವಾಗಿ ದೃಢಪಟ್ಟಿದ್ದಾರೆ, ನಿಖರ ಕುಟುಂಬ ಸಂಬಂಧಕ್ಕೆ ಇದು ಅನುಕ್ರಮ ನಿರೂಪಣೆಯನ್ನು ಮೀರುವ ಮೊದಲು ವಿಶೇಷಜ್ಞ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-sripurusha",
+            "locator": "Western Ganga succession list: Srivikrama follows Polavira, c. 629-654 CE; item-level inscriptional evidence still to be located"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-srivikrama-bhuvikrama-western-ganga",
+        "name": {
+          "en": "Srivikrama to Bhuvikrama Western Ganga succession-family assertion",
+          "kn": "ಶ್ರೀವಿಕ್ರಮರಿಂದ ಭುವಿಕ್ರಮರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "succession-family-assertion",
+        "fromPersonId": "person-srivikrama",
+        "toPersonId": "person-bhuvikrama",
+        "polityId": "polity-western-ganga",
+        "date": {
+          "from": 654,
+          "to": 679,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "low",
+        "derivation": {
+          "en": "Secondary sources describe Bhuvikrama (also called Shri-Vallabha) as son and successor of a Western Ganga predecessor in this span; few inscriptions from his reign survive and the exact chain needs specialist review.",
+          "kn": "ದ್ವಿತೀಯ ಆಕರಗಳು ಭುವಿಕ್ರಮನನ್ನು (ಶ್ರೀ-ವಲ್ಲಭ ಎಂದೂ ಕರೆಯುತ್ತಾರೆ) ಈ ಅವಧಿಯ ಪಶ್ಚಿಮ ಗಂಗ ಪೂರ್ವಾಧಿಕಾರಿಯ ಮಗ ಮತ್ತು ಉತ್ತರಾಧಿಕಾರಿ ಎಂದು ವಿವರಿಸುತ್ತವೆ; ಅವನ ಆಳ್ವಿಕೆಯ ಕೆಲವೇ ಶಾಸನಗಳು ಉಳಿದಿವೆ, ನಿಖರ ಸರಪಳಿಗೆ ವಿಶೇಷಜ್ಞ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-sripurusha",
+            "locator": "Bhuvikrama (Shri-Vallabha), c. 654-679 CE; listed in later Ganga genealogies and epigraphy"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-bhuvikrama-shivamara-i-western-ganga",
+        "name": {
+          "en": "Bhuvikrama to Shivamara I Western Ganga succession-family assertion",
+          "kn": "ಭುವಿಕ್ರಮರಿಂದ ಶಿವಮಾರ Iರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "succession-family-assertion",
+        "fromPersonId": "person-bhuvikrama",
+        "toPersonId": "person-shivamara-i",
+        "polityId": "polity-western-ganga",
+        "date": {
+          "from": 679,
+          "to": 726,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "low",
+        "derivation": {
+          "en": "Secondary sources describe Shivamara I as son and successor of Bhuvikrama; competing Western Ganga chronologies place Shivamara I's reign differently, so exact dates and the family link need specialist review before promotion.",
+          "kn": "ದ್ವಿತೀಯ ಆಕರಗಳು ಶಿವಮಾರ Iನನ್ನು ಭುವಿಕ್ರಮನ ಮಗ ಮತ್ತು ಉತ್ತರಾಧಿಕಾರಿ ಎಂದು ವಿವರಿಸುತ್ತವೆ; ಪೈಪೋಟಿಯ ಪಶ್ಚಿಮ ಗಂಗ ಕಾಲಕ್ರಮಗಳು ಶಿವಮಾರ Iನ ಆಳ್ವಿಕೆಯನ್ನು ಭಿನ್ನವಾಗಿ ಇರಿಸುತ್ತವೆ, ಆದ್ದರಿಂದ ನಿಖರ ದಿನಾಂಕ ಮತ್ತು ಕುಟುಂಬ ಸಂಪರ್ಕಕ್ಕೆ ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ವಿಶೇಷಜ್ಞ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-sripurusha",
+            "locator": "Shivamara I, c. 679-726 CE, described as son and successor of Bhuvikrama; regnal dates disputed across sources"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-shivamara-i-sripurusha-western-ganga",
+        "name": {
+          "en": "Shivamara I to Sripurusha Western Ganga succession-family assertion",
+          "kn": "ಶಿವಮಾರ Iರಿಂದ ಶ್ರೀಪುರುಷರವರೆಗಿನ ಪಶ್ಚಿಮ ಗಂಗ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "succession-family-assertion",
+        "fromPersonId": "person-shivamara-i",
+        "toPersonId": "person-sripurusha",
+        "polityId": "polity-western-ganga",
+        "date": {
+          "from": 726,
+          "to": 726,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "low",
+        "derivation": {
+          "en": "Sripurusha succeeded Shivamara I in 726 CE; the exact family relation (son versus a collateral successor) is described inconsistently across secondary sources and needs specialist Ganga-chronology review before promotion.",
+          "kn": "ಶ್ರೀಪುರುಷನು 726ರಲ್ಲಿ ಶಿವಮಾರ I ನಂತರ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು; ನಿಖರ ಕುಟುಂಬ ಸಂಬಂಧವನ್ನು (ಮಗನೋ ಅಥವಾ ಪಾರ್ಶ್ವ ಉತ್ತರಾಧಿಕಾರಿಯೋ) ದ್ವಿತೀಯ ಆಕರಗಳು ಅಸಮಂಜಸವಾಗಿ ವಿವರಿಸುತ್ತವೆ; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ವಿಶೇಷಜ್ಞ ಗಂಗ-ಕಾಲಕ್ರಮ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-sripurusha",
+            "locator": "Sripurusha, 13th Western Ganga king, r. 726-788 CE; succession from Shivamara I"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-vishnuvardhana-narasimha-i-hoysala",
+        "name": {
+          "en": "Vishnuvardhana to Narasimha I Hoysala succession-family assertion",
+          "kn": "ವಿಷ್ಣುವರ್ಧನರಿಂದ ನರಸಿಂಹ Iರವರೆಗಿನ ಹೊಯ್ಸಳ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
         "fromPersonId": "person-vishnuvardhana",
+        "toPersonId": "person-narasimha-i",
+        "polityId": "polity-hoysala",
+        "date": {
+          "from": 1152,
+          "to": 1152,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Narasimha I succeeded his father Vishnuvardhana c. 1152; the Yalladahalli record of c. 1145 already names Narasimha I as Hoysala monarch, suggesting Vishnuvardhana's reign ended slightly earlier than the round date used here. Independent review of the inscription text is still required before promotion.",
+          "kn": "ನರಸಿಂಹ I ತನ್ನ ತಂದೆ ವಿಷ್ಣುವರ್ಧನನ ನಂತರ ಸು. 1152ರಲ್ಲಿ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು; ಸು. 1145ರ ಯಲ್ಲದಹಳ್ಳಿ ದಾಖಲೆ ಈಗಾಗಲೇ ನರಸಿಂಹ Iನನ್ನು ಹೊಯ್ಸಳ ದೊರೆ ಎಂದು ಹೆಸರಿಸುತ್ತದೆ, ಇದು ವಿಷ್ಣುವರ್ಧನನ ಆಳ್ವಿಕೆ ಇಲ್ಲಿ ಬಳಸಿದ ಸುತ್ತು ದಿನಾಂಕಕ್ಕಿಂತ ಸ್ವಲ್ಪ ಮೊದಲೇ ಮುಗಿದಿರಬಹುದು ಎಂದು ಸೂಚಿಸುತ್ತದೆ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-narasimha-i",
+            "locator": "Narasimha I as son and successor of Vishnuvardhana c. 1152; cites the Yalladahalli record of c. 1145"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-narasimha-i-ballala-ii-hoysala",
+        "name": {
+          "en": "Narasimha I to Veera Ballala II Hoysala succession-family assertion",
+          "kn": "ನರಸಿಂಹ Iರಿಂದ ವೀರ ಬಲ್ಲಾಳ IIರವರೆಗಿನ ಹೊಯ್ಸಳ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-narasimha-i",
         "toPersonId": "person-ballala-ii",
         "polityId": "polity-hoysala",
         "date": {
-          "from": 1108,
-          "to": 1220,
+          "from": 1173,
+          "to": 1173,
           "era": "CE",
-          "precision": "range"
+          "precision": "circa"
         },
-        "evidenceLevel": "derived",
-        "confidence": "low",
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
         "derivation": {
-          "en": "Created as an explorable graph bridge between reviewed reign anchors; the intermediate parent-child sequence needs inscription or genealogy-source review before promotion.",
-          "kn": "ಪರಿಶೀಲಿತ ಆಳ್ವಿಕೆ ಆಧಾರಗಳ ನಡುವೆ ಗ್ರಾಫ್ ಅನ್ವೇಷಣೆಗೆ ರೂಪಿಸಿದ ಸೇತುವೆ; ಮಧ್ಯವರ್ತಿ ಪೋಷಕ-ಸಂತಾನ ಕ್ರಮಕ್ಕೆ ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಅಥವಾ ವಂಶಾವಳಿ ಆಕರ ಪರಿಶೀಲನೆ ಬೇಕು."
+          "en": "Veera Ballala II succeeded his father Narasimha I in 1173; secondary sources describe the succession as contested (Ballala II is described as having overthrown his father). Independent review of the inscriptional record is still required before promotion.",
+          "kn": "ವೀರ ಬಲ್ಲಾಳ II 1173ರಲ್ಲಿ ತನ್ನ ತಂದೆ ನರಸಿಂಹ I ನಂತರ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು; ದ್ವಿತೀಯ ಆಕರಗಳು ಈ ಉತ್ತರಾಧಿಕಾರವನ್ನು ವಿವಾದಾತ್ಮಕವೆಂದು ವಿವರಿಸುತ್ತವೆ (ಬಲ್ಲಾಳ II ತನ್ನ ತಂದೆಯನ್ನು ಪದಚ್ಯುತಗೊಳಿಸಿದನೆಂದು ವಿವರಿಸಲಾಗಿದೆ). ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ದಾಖಲೆಯ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
         },
         "citations": [
           {
-            "sourceId": "src-unesco-hoysala-dossier",
-            "locator": "Vishnuvardhana and Ballala II reign context; exact lineage proof pending"
+            "sourceId": "src-wikipedia-narasimha-i",
+            "locator": "Veera Ballala II as son of Narasimha I, acceding 22 July 1173; succession described as contested"
           }
         ],
         "review": {
@@ -515,31 +715,307 @@
         }
       },
       {
-        "id": "genealogy-yaduraya-krishnaraja-iii-mysore-line",
+        "id": "genealogy-yaduraya-chikkadevaraja-mysore-early-line",
         "name": {
-          "en": "Yaduraya to Krishnaraja Wadiyar III Mysore dynastic-line assertion",
-          "kn": "ಯದುರಾಯರಿಂದ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ IIIರವರೆಗಿನ ಮೈಸೂರು ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
+          "en": "Yaduraya to Chikka Devaraja Wadiyar early Mysore dynastic-line assertion",
+          "kn": "ಯದುರಾಯರಿಂದ ಚಿಕ್ಕ ದೇವರಾಜ ಒಡೆಯರ್‌ರವರೆಗಿನ ಆರಂಭಿಕ ಮೈಸೂರು ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
         },
         "relationKind": "dynastic-claim",
         "fromPersonId": "person-yaduraya",
-        "toPersonId": "person-krishnaraja-iii",
+        "toPersonId": "person-chikka-devaraja",
         "polityId": "polity-mysore",
         "date": {
           "from": 1399,
-          "to": 1868,
+          "to": 1673,
           "era": "CE",
           "precision": "range"
         },
         "evidenceLevel": "derived",
         "confidence": "low",
         "derivation": {
-          "en": "A long-span Wadiyar-line research bridge for the network UI; it must be broken into source-verified generations during P3 review.",
-          "kn": "ನೆಟ್‌ವರ್ಕ್ UIಗಾಗಿ ದೀರ್ಘಾವಧಿಯ ಒಡೆಯರ್ ವಂಶದ ಸಂಶೋಧನಾ ಸೇತುವೆ; P3 ಪರಿಶೀಲನೆಯಲ್ಲಿ ಇದನ್ನು ಆಕರ-ದೃಢೀಕೃತ ತಲೆಮಾರುಗಳಾಗಿ ವಿಭಜಿಸಬೇಕು."
+          "en": "Shortened research bridge covering the founder era to 1673, where a source-verified generation-by-generation chain now begins (see the linked succession-family assertions from Chikka Devaraja to Krishnaraja Wadiyar III). This span still passes through several early collateral successions (nephews, cousins and a documented direct-line break) that have not yet been individually sourced or reviewed for this atlas, so it is not final family-tree evidence.",
+          "kn": "ಸ್ಥಾಪಕ ಯುಗದಿಂದ 1673ರವರೆಗಿನ ಸಂಕ್ಷಿಪ್ತ ಸಂಶೋಧನಾ ಸೇತುವೆ; 1673ರ ನಂತರ ಆಕರ-ದೃಢೀಕೃತ ತಲೆಮಾರು-ತಲೆಮಾರಿನ ಸರಪಳಿ ಈಗ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ (ಚಿಕ್ಕ ದೇವರಾಜ ಒಡೆಯರ್‌ರಿಂದ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ IIIರವರೆಗಿನ ಸಂಪರ್ಕಿತ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆಗಳನ್ನು ನೋಡಿ). ಈ ಅವಧಿ ಹಲವಾರು ಆರಂಭಿಕ ಪಾರ್ಶ್ವ ಉತ್ತರಾಧಿಕಾರಗಳ (ಸೋದರಳಿಯರು, ಸೋದರಸಂಬಂಧಿಗಳು ಮತ್ತು ದಾಖಲಿತ ನೇರವಂಶ ವಿಚ್ಛೇದನ) ಮೂಲಕ ಹಾದುಹೋಗುತ್ತದೆ, ಇವನ್ನು ಈ ಭೂಪಟಕ್ಕಾಗಿ ಇನ್ನೂ ಪ್ರತ್ಯೇಕವಾಗಿ ಆಕರೀಕರಿಸಿ ಪರಿಶೀಲಿಸಿಲ್ಲ, ಆದ್ದರಿಂದ ಇದು ಅಂತಿಮ ಕುಟುಂಬವೃಕ್ಷ ಸಾಕ್ಷ್ಯವಲ್ಲ."
         },
         "citations": [
           {
             "sourceId": "src-asi-mysore-city",
-            "locator": "Mysore royal chronology and post-1799 restoration context"
+            "locator": "Mysore royal chronology; early Wadiyar succession (1399-1673) requires ruler-by-ruler primary-source review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-chikkadevaraja-kanthirava-narasaraja-ii-mysore",
+        "name": {
+          "en": "Chikka Devaraja to Kanthirava Narasaraja II Mysore succession-family assertion",
+          "kn": "ಚಿಕ್ಕ ದೇವರಾಜರಿಂದ ಕಂಠೀರವ ನರಸರಾಜ IIರವರೆಗಿನ ಮೈಸೂರು ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-chikka-devaraja",
+        "toPersonId": "person-kanthirava-narasaraja-ii",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1704,
+          "to": 1704,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Kanthirava Narasaraja II succeeded his father Chikka Devaraja Wadiyar on 30 November 1704. Independent review of the palace/inscriptional record is still required before promotion.",
+          "kn": "ಕಂಠೀರವ ನರಸರಾಜ II ತನ್ನ ತಂದೆ ಚಿಕ್ಕ ದೇವರಾಜ ಒಡೆಯರ್ ನಂತರ 1704ರ ನವೆಂಬರ್ 30ರಂದು ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಅರಮನೆ/ಶಾಸನ ದಾಖಲೆಯ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kanthirava-narasaraja-ii",
+            "locator": "Kanthirava Narasaraja II, 15th Maharaja of Mysore, son and successor of Chikka Devaraja, r. 30 Nov 1704 - March 1714"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-kanthirava-narasaraja-ii-dodda-krishnaraja-i-mysore",
+        "name": {
+          "en": "Kanthirava Narasaraja II to Dodda Krishnaraja I Mysore succession-family assertion",
+          "kn": "ಕಂಠೀರವ ನರಸರಾಜ IIರಿಂದ ದೊಡ್ಡ ಕೃಷ್ಣರಾಜ Iರವರೆಗಿನ ಮೈಸೂರು ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-kanthirava-narasaraja-ii",
+        "toPersonId": "person-dodda-krishnaraja-i",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1714,
+          "to": 1714,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Dodda Krishnaraja I was the first-born son of Kanthirava Narasaraja II by his second wife, and succeeded him in 1714. Independent review is still required before promotion.",
+          "kn": "ದೊಡ್ಡ ಕೃಷ್ಣರಾಜ I ಕಂಠೀರವ ನರಸರಾಜ IIನ ಎರಡನೇ ಪತ್ನಿಯಿಂದ ಜನಿಸಿದ ಪ್ರಥಮ ಪುತ್ರನಾಗಿದ್ದು, 1714ರಲ್ಲಿ ಅವನ ನಂತರ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-dodda-krishnaraja-i",
+            "locator": "Dodda Krishnaraja I, first-born son of Kanthirava Narasaraja II, r. 1714-1732"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-dodda-krishnaraja-i-chamaraja-wodeyar-vii-mysore",
+        "name": {
+          "en": "Dodda Krishnaraja I to Chamaraja Wodeyar VII Mysore adoption assertion",
+          "kn": "ದೊಡ್ಡ ಕೃಷ್ಣರಾಜ Iರಿಂದ ಚಾಮರಾಜ ಒಡೆಯರ್ VIIರವರೆಗಿನ ಮೈಸೂರು ದತ್ತು ನಿರೂಪಣೆ"
+        },
+        "relationKind": "adoption",
+        "fromPersonId": "person-dodda-krishnaraja-i",
+        "toPersonId": "person-chamaraja-wodeyar-vii",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1732,
+          "to": 1732,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Dodda Krishnaraja I's only son died in infancy, ending direct-line descent; Chamaraja Wodeyar VII succeeded him as an adopted heir in 1732. Independent review is still required before promotion.",
+          "kn": "ದೊಡ್ಡ ಕೃಷ್ಣರಾಜ Iರ ಏಕೈಕ ಪುತ್ರ ಶೈಶವಾವಸ್ಥೆಯಲ್ಲಿ ಮೃತನಾಗಿದ್ದರಿಂದ ನೇರವಂಶ ಕೊನೆಗೊಂಡಿತು; ಚಾಮರಾಜ ಒಡೆಯರ್ VII 1732ರಲ್ಲಿ ದತ್ತು ಉತ್ತರಾಧಿಕಾರಿಯಾಗಿ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-dodda-krishnaraja-i",
+            "locator": "Direct Wodeyar descent ended with Dodda Krishnaraja I; Chamaraja Wodeyar VII succeeded as adopted heir, r. 1732-1734"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-chamaraja-wodeyar-vii-krishnaraja-wadiyar-ii-mysore",
+        "name": {
+          "en": "Chamaraja Wodeyar VII to Krishnaraja Wadiyar II Mysore sibling succession assertion",
+          "kn": "ಚಾಮರಾಜ ಒಡೆಯರ್ VIIರಿಂದ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ IIರವರೆಗಿನ ಮೈಸೂರು ಸಹೋದರ ಉತ್ತರಾಧಿಕಾರ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-chamaraja-wodeyar-vii",
+        "toPersonId": "person-krishnaraja-wadiyar-ii",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1734,
+          "to": 1734,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "low",
+        "derivation": {
+          "en": "Krishnaraja Wadiyar II is recorded as the biological brother of his predecessor Chamaraja Wodeyar VII; both are described in secondary sources as adopted sons of Dodda Krishnaraja I, so the exact adoptive/biological family structure needs independent review before promotion.",
+          "kn": "ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ II ತನ್ನ ಪೂರ್ವಾಧಿಕಾರಿ ಚಾಮರಾಜ ಒಡೆಯರ್ VIIನ ಜೈವಿಕ ಸಹೋದರನೆಂದು ದಾಖಲಾಗಿದೆ; ಇಬ್ಬರನ್ನೂ ದ್ವಿತೀಯ ಆಕರಗಳು ದೊಡ್ಡ ಕೃಷ್ಣರಾಜ Iರ ದತ್ತು ಪುತ್ರರೆಂದು ವಿವರಿಸುತ್ತವೆ, ಆದ್ದರಿಂದ ನಿಖರ ದತ್ತು/ಜೈವಿಕ ಕುಟುಂಬ ರಚನೆಗೆ ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-krishnaraja-wadiyar-ii",
+            "locator": "Krishnaraja Wadiyar II, brother and successor of Chamaraja Wodeyar VII, r. 1734-1766; both described as adopted sons of Dodda Krishnaraja I"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-krishnaraja-wadiyar-ii-nanjaraja-wodeyar-mysore",
+        "name": {
+          "en": "Krishnaraja Wadiyar II to Nanjaraja Wodeyar Mysore succession-family assertion",
+          "kn": "ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ IIರಿಂದ ನಂಜರಾಜ ಒಡೆಯರ್‌ರವರೆಗಿನ ಮೈಸೂರು ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-krishnaraja-wadiyar-ii",
+        "toPersonId": "person-nanjaraja-wodeyar",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1766,
+          "to": 1766,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Nanjaraja Wodeyar was the eldest son of Krishnaraja Wadiyar II and succeeded him on his death in 1766, though Hyder Ali disputed effective control of the state around this succession. Independent review is still required before promotion.",
+          "kn": "ನಂಜರಾಜ ಒಡೆಯರ್ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ IIನ ಹಿರಿಯ ಪುತ್ರನಾಗಿದ್ದು, 1766ರಲ್ಲಿ ಅವನ ಮರಣದ ನಂತರ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು; ಈ ಉತ್ತರಾಧಿಕಾರದ ಸುತ್ತ ಹೈದರ್ ಅಲಿ ಪರಿಣಾಮಕಾರಿ ಆಡಳಿತವನ್ನು ವಿವಾದಿಸಿದನು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-nanjaraja-wodeyar",
+            "locator": "Nanjaraja Wodeyar, eldest son of Krishnaraja Wadiyar II, r. 25 Apr 1766 - 2 Aug 1770"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-nanjaraja-wodeyar-chamaraja-wodeyar-viii-mysore",
+        "name": {
+          "en": "Nanjaraja Wodeyar to Chamaraja Wodeyar VIII Mysore sibling succession assertion",
+          "kn": "ನಂಜರಾಜ ಒಡೆಯರ್‌ರಿಂದ ಚಾಮರಾಜ ಒಡೆಯರ್ VIIIರವರೆಗಿನ ಮೈಸೂರು ಸಹೋದರ ಉತ್ತರಾಧಿಕಾರ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-nanjaraja-wodeyar",
+        "toPersonId": "person-chamaraja-wodeyar-viii",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1770,
+          "to": 1770,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Chamaraja Wodeyar VIII was the younger brother of Nanjaraja Wodeyar and succeeded him in 1770. Independent review is still required before promotion.",
+          "kn": "ಚಾಮರಾಜ ಒಡೆಯರ್ VIII ನಂಜರಾಜ ಒಡೆಯರ್‌ನ ಕಿರಿಯ ಸಹೋದರನಾಗಿದ್ದು, 1770ರಲ್ಲಿ ಅವನ ನಂತರ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-chamaraja-wodeyar-ix",
+            "locator": "Chamaraja Wodeyar VIII, younger brother and successor of Nanjaraja Wodeyar, r. 1770-1776; also documents his own brother and successor Chamaraja Wodeyar IX"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-chamaraja-wodeyar-viii-chamaraja-wodeyar-ix-mysore",
+        "name": {
+          "en": "Chamaraja Wodeyar VIII to Chamaraja Wodeyar IX Mysore sibling succession assertion",
+          "kn": "ಚಾಮರಾಜ ಒಡೆಯರ್ VIIIರಿಂದ ಚಾಮರಾಜ ಒಡೆಯರ್ IXರವರೆಗಿನ ಮೈಸೂರು ಸಹೋದರ ಉತ್ತರಾಧಿಕಾರ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-chamaraja-wodeyar-viii",
+        "toPersonId": "person-chamaraja-wodeyar-ix",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1776,
+          "to": 1776,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Chamaraja Wodeyar IX was the younger brother of Chamaraja Wodeyar VIII and was adopted into the direct succession by Maharani Lakshmi Ammani Devi after his brother's death in 1776. Independent review is still required before promotion.",
+          "kn": "ಚಾಮರಾಜ ಒಡೆಯರ್ IX ಚಾಮರಾಜ ಒಡೆಯರ್ VIIIನ ಕಿರಿಯ ಸಹೋದರನಾಗಿದ್ದು, 1776ರಲ್ಲಿ ಸಹೋದರನ ಮರಣದ ನಂತರ ಮಹಾರಾಣಿ ಲಕ್ಷ್ಮಿ ಅಮ್ಮಣಿ ದೇವಿಯಿಂದ ನೇರ ಉತ್ತರಾಧಿಕಾರಕ್ಕೆ ದತ್ತು ಪಡೆಯಲಾಯಿತು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-chamaraja-wodeyar-ix",
+            "locator": "Chamaraja Wodeyar IX, younger brother of Chamaraja Wodeyar VIII, adopted into succession by Maharani Lakshmi Ammani Devi, r. 1776-1796"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-chamaraja-wodeyar-ix-krishnaraja-iii-mysore",
+        "name": {
+          "en": "Chamaraja Wodeyar IX to Krishnaraja Wadiyar III Mysore succession-family assertion",
+          "kn": "ಚಾಮರಾಜ ಒಡೆಯರ್ IXರಿಂದ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ IIIರವರೆಗಿನ ಮೈಸೂರು ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-chamaraja-wodeyar-ix",
+        "toPersonId": "person-krishnaraja-iii",
+        "polityId": "polity-mysore",
+        "date": {
+          "from": 1796,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Krishnaraja Wadiyar III was the biological son of Chamaraja Wodeyar IX, who died of smallpox in 1796; a regency and the fall of Tipu Sultan preceded Krishnaraja III's formal 1799 enthronement (see the linked 1799 capital-restoration event). Independent review is still required before promotion.",
+          "kn": "ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ III ಚಾಮರಾಜ ಒಡೆಯರ್ IXನ ಜೈವಿಕ ಪುತ್ರನಾಗಿದ್ದನು; ಈತ 1796ರಲ್ಲಿ ಸಿಡುಬಿನಿಂದ ಮೃತನಾದನು; ರಾಜಪ್ರತಿನಿಧಿ ಆಡಳಿತ ಮತ್ತು ಟಿಪ್ಪು ಸುಲ್ತಾನನ ಪತನದ ನಂತರ 1799ರಲ್ಲಿ ಕೃಷ್ಣರಾಜ IIIನ ಔಪಚಾರಿಕ ಪಟ್ಟಾಭಿಷೇಕ ನಡೆಯಿತು (ಸಂಪರ್ಕಿತ 1799ರ ರಾಜಧಾನಿ ಮರುಸ್ಥಾಪನೆ ಘಟನೆ ನೋಡಿ). ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-chamaraja-wodeyar-ix",
+            "locator": "Krishnaraja Wadiyar III as biological son of Chamaraja Wodeyar IX; enthroned 30 June 1799 after regency following his father's 1796 death"
+          },
+          {
+            "sourceId": "src-asi-mysore-city",
+            "locator": "Post-1799 Mysore political centre and restoration context"
           }
         ],
         "review": {
@@ -1439,15 +1915,15 @@
           "precision": "range"
         },
         "material": "gold",
-        "weightGrams": null,
-        "diameterMm": null,
+        "weightGrams": 3.38,
+        "diameterMm": 11.5,
         "obverse": {
-          "en": "Royal-symbol and gold-coinage lead associated with the Hampi imperial centre; exact catalogue specimens and plates must be matched.",
-          "kn": "ಹಂಪಿ ಸಾಮ್ರಾಜ್ಯ ಕೇಂದ್ರಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ರಾಜಚಿಹ್ನೆ ಮತ್ತು ಚಿನ್ನದ ನಾಣ್ಯಗಳ ದಾರಿ; ನಿಖರ ಪಟ್ಟಿ ಮಾದರಿ ಮತ್ತು ಫಲಕಗಳನ್ನು ಹೊಂದಿಸಬೇಕು."
+          "en": "Standard Vijayanagara gold pagoda/varaha type: ~3.38 g, 11-12 mm, showing Siva-Parvati seated facing or Vishnu-Lakshmi seated facing depending on ruler/series (Three-Swamy, Star or Gopuram pagoda series); Hampi held the empire’s central mint. This is dynasty/type-level catalogue data, not yet matched to one photographed specimen.",
+          "kn": "ವಿಜಯನಗರ ಚಿನ್ನದ ಪಗೋಡ/ವರಾಹ ಪ್ರಮಾಣಿತ ಬಗೆ: ~3.38 ಗ್ರಾಂ, 11-12 ಮಿ.ಮೀ, ಆಳ್ವಿಕೆಗಾರ/ಸರಣಿಗೆ ಅನುಗುಣವಾಗಿ ಶಿವ-ಪಾರ್ವತಿ ಅಥವಾ ವಿಷ್ಣು-ಲಕ್ಷ್ಮಿ ಆಸೀನ ಭಂಗಿ (ತ್ರಿ-ಸ್ವಾಮಿ, ಸ್ಟಾರ್ ಅಥವಾ ಗೋಪುರ ಪಗೋಡ ಸರಣಿ); ಹಂಪಿಯಲ್ಲಿ ಸಾಮ್ರಾಜ್ಯದ ಕೇಂದ್ರ ಟಂಕಶಾಲೆ ಇತ್ತು. ಇದು ವಂಶ/ಬಗೆ-ಮಟ್ಟದ ಪಟ್ಟಿ ದತ್ತಾಂಶ, ಇನ್ನೂ ಒಂದು ಛಾಯಾಚಿತ್ರಿತ ಮಾದರಿಗೆ ಹೊಂದಿಸಲಾಗಿಲ್ಲ."
         },
         "reverse": {
-          "en": "Legend, mint and denomination need item-level numismatic review.",
-          "kn": "ಲೇಖ, ಟಂಕಶಾಲೆ ಮತ್ತು ಮೌಲ್ಯಕ್ಕೆ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು."
+          "en": "Kannada/Devanagari legend recording the issuing ruler; exact ruler attribution, series (Three-Swamy/Star/Gopuram) and mint-mark for a Hampi-matched specimen still need item-level numismatic review.",
+          "kn": "ನೀಡುವ ಆಳ್ವಿಕೆಗಾರನನ್ನು ದಾಖಲಿಸುವ ಕನ್ನಡ/ದೇವನಾಗರಿ ಲೇಖ; ಹಂಪಿಗೆ ಹೊಂದಿಸಿದ ಮಾದರಿಗೆ ನಿಖರ ಆಳ್ವಿಕೆಗಾರ ಗುರುತು, ಸರಣಿ (ತ್ರಿ-ಸ್ವಾಮಿ/ಸ್ಟಾರ್/ಗೋಪುರ) ಮತ್ತು ಟಂಕಶಾಲೆ-ಗುರುತಿಗೆ ಇನ್ನೂ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು."
         },
         "findspot": {
           "placeId": "place-hampi",
@@ -1460,7 +1936,7 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
@@ -1469,7 +1945,7 @@
             "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -1479,6 +1955,10 @@
           {
             "sourceId": "src-unesco-hampi",
             "locator": "Hampi royal centre and material-culture context; numismatic catalogue item pending"
+          },
+          {
+            "sourceId": "src-coinindia-vijayanagara-gallery",
+            "locator": "Gold pagoda/varaha type data (~3.38 g, 11-12 mm; Siva-Parvati and Vishnu-Lakshmi obverse types; Mitchiner reference numbers); dynasty type-level reference, not a Hampi-mint-matched specimen"
           }
         ],
         "review": {
@@ -1566,16 +2046,16 @@
           "era": "CE",
           "precision": "range"
         },
-        "material": "unresolved",
+        "material": "gold",
         "weightGrams": null,
         "diameterMm": null,
         "obverse": {
-          "en": "Hoysala dynastic coinage lead associated with the Belur royal-patronage zone; exact catalogue specimen and emblem reading pending.",
-          "kn": "ಬೇಲೂರು ರಾಜಾಶ್ರಯ ವಲಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಹೊಯ್ಸಳ ವಂಶ ನಾಣ್ಯ ದಾರಿ; ನಿಖರ ಪಟ್ಟಿ ಮಾದರಿ ಮತ್ತು ಚಿಹ್ನೆ ಓದು ಬಾಕಿ."
+          "en": "A dynasty-wide numismatic catalogue is now identified: Hoysala coinage runs gold fanam (~0.35-0.4 g, ~8 mm; anonymous and Narasimha-attributed types), copper kasu (~2.64 g, ~15.7 mm) and silver tara (~0.25 g, ~8 mm, attributed to Veera Ballala III). No specimen or type in this catalogue is yet matched specifically to Belur; exact emblem reading and mint attribution remain pending.",
+          "kn": "ವಂಶ-ವ್ಯಾಪಿ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪಟ್ಟಿ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: ಹೊಯ್ಸಳ ನಾಣ್ಯಗಳಲ್ಲಿ ಚಿನ್ನದ ಫಣಂ (~0.35-0.4 ಗ್ರಾಂ, ~8 ಮಿ.ಮೀ; ಅನಾಮಧೇಯ ಮತ್ತು ನರಸಿಂಹ-ಗುರುತಿಸಿದ ಬಗೆಗಳು), ತಾಮ್ರದ ಕಾಸು (~2.64 ಗ್ರಾಂ, ~15.7 ಮಿ.ಮೀ) ಮತ್ತು ಬೆಳ್ಳಿಯ ತಾರಾ (~0.25 ಗ್ರಾಂ, ~8 ಮಿ.ಮೀ, ವೀರ ಬಲ್ಲಾಳ III ಗೆ ಆರೋಪಿತ) ಸೇರಿವೆ. ಈ ಪಟ್ಟಿಯ ಯಾವುದೇ ಮಾದರಿ ಅಥವಾ ಬಗೆ ಇನ್ನೂ ಬೇಲೂರಿಗೆ ನಿರ್ದಿಷ್ಟವಾಗಿ ಹೊಂದಿಸಲಾಗಿಲ್ಲ; ನಿಖರ ಚಿಹ್ನೆ ಓದು ಮತ್ತು ಟಂಕಶಾಲೆ ಗುರುತು ಇನ್ನೂ ಬಾಕಿ."
         },
         "reverse": {
-          "en": "Legend, denomination, mint and findspot must be resolved from a numismatic catalogue.",
-          "kn": "ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ನಾಣ್ಯಶಾಸ್ತ್ರ ಪಟ್ಟಿಯಿಂದ ನಿರ್ಧರಿಸಬೇಕು."
+          "en": "Legend, single-denomination weight/diameter for a Belur-matched specimen, mint and findspot must still be resolved from an item-level numismatic review rather than the dynasty-wide catalogue alone.",
+          "kn": "ಬೇಲೂರಿಗೆ ಹೊಂದಿಸಿದ ಮಾದರಿಯ ಲೇಖ, ಒಂದೇ-ಮೌಲ್ಯದ ತೂಕ/ವ್ಯಾಸ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ವಂಶ-ವ್ಯಾಪಿ ಪಟ್ಟಿಯೊಂದೇ ಅಲ್ಲದೆ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆಯಿಂದ ಇನ್ನೂ ನಿರ್ಧರಿಸಬೇಕು."
         },
         "findspot": {
           "placeId": "place-belur",
@@ -1588,13 +2068,13 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
           },
           "metal": {
-            "status": "unresolved"
+            "status": "located"
           },
           "weight": {
             "status": "unresolved"
@@ -1607,6 +2087,10 @@
           {
             "sourceId": "src-unesco-hoysala-dossier",
             "locator": "Belur-Halebidu royal centre and material-culture context; numismatic specimen pending"
+          },
+          {
+            "sourceId": "src-numista-hoysala-empire",
+            "locator": "Dynasty-wide type catalogue: gold fanam, copper kasu, silver tara (Veera Ballala III) with weight/diameter; not yet matched to a Belur-specific specimen"
           }
         ],
         "review": {
@@ -1630,16 +2114,16 @@
           "era": "CE",
           "precision": "range"
         },
-        "material": "unresolved",
-        "weightGrams": null,
-        "diameterMm": null,
+        "material": "gold",
+        "weightGrams": 3.43,
+        "diameterMm": 12,
         "obverse": {
-          "en": "Tipu-period Srirangapatna coinage is retained as a catalogue lead until specimen images, metal, denomination and mint details are attached.",
-          "kn": "ಮಾದರಿ ಚಿತ್ರಗಳು, ಲೋಹ, ಮೌಲ್ಯ ಮತ್ತು ಟಂಕಶಾಲೆ ವಿವರಗಳನ್ನು ಜೋಡಿಸುವವರೆಗೆ ಟಿಪ್ಪು ಕಾಲದ ಶ್ರೀರಂಗಪಟ್ಟಣ ನಾಣ್ಯಗಳನ್ನು ಪಟ್ಟಿ ದಾರಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+          "en": "Gold pagoda struck at the Patan (Srirangapatna) mint, catalogued specimens dated AH 1198 regnal-year 1 (3.40 g, 12 mm, unlisted in Krause-Mishler/KM), AH 1200 regnal-year 4 (3.44 g, 12 mm, unlisted in KM) and AM 1221 (3.43 g, 12 mm, KM 129); mint name Patan appears within the legend itself.",
+          "kn": "ಪಟಣ (ಶ್ರೀರಂಗಪಟ್ಟಣ) ಟಂಕಶಾಲೆಯಲ್ಲಿ ಟಂಕಿಸಿದ ಚಿನ್ನದ ಪಗೋಡ, ಪಟ್ಟಿಗತ ಮಾದರಿಗಳು: AH 1198 ಆಳ್ವಿಕೆ-ವರ್ಷ 1 (3.40 ಗ್ರಾಂ, 12 ಮಿ.ಮೀ, KM ಪಟ್ಟಿಯಲ್ಲಿಲ್ಲ), AH 1200 ಆಳ್ವಿಕೆ-ವರ್ಷ 4 (3.44 ಗ್ರಾಂ, 12 ಮಿ.ಮೀ, KM ಪಟ್ಟಿಯಲ್ಲಿಲ್ಲ) ಮತ್ತು AM 1221 (3.43 ಗ್ರಾಂ, 12 ಮಿ.ಮೀ, KM 129); ಟಂಕಶಾಲೆ ಹೆಸರು ಪಟಣ ಲೇಖದೊಳಗೇ ಕಾಣಿಸುತ್ತದೆ."
         },
         "reverse": {
-          "en": "Legend and regnal-date interpretation require item-level numismatic review.",
-          "kn": "ಲೇಖ ಮತ್ತು ಆಳ್ವಿಕೆ-ವರ್ಷ ವ್ಯಾಖ್ಯಾನಕ್ಕೆ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು."
+          "en": "Persian legend with AH/AM regnal date and mint name; copper denominations also catalogued at Patan-linked types (2-paisa, 23.32 g/33 mm, KM 124.3 var; paisa AM 1222, 11.14 g/23 mm, KM 123.5). A specific photographed specimen and independent Kannada/Persian review are still required before promotion.",
+          "kn": "AH/AM ಆಳ್ವಿಕೆ-ದಿನಾಂಕ ಮತ್ತು ಟಂಕಶಾಲೆ ಹೆಸರಿನೊಂದಿಗೆ ಪರ್ಷಿಯನ್ ಲೇಖ; ಪಟಣ-ಸಂಬಂಧಿತ ತಾಮ್ರ ಮೌಲ್ಯಗಳೂ ಪಟ್ಟಿಗತ (2-ಪೈಸ, 23.32 ಗ್ರಾಂ/33 ಮಿ.ಮೀ, KM 124.3 var; ಪೈಸ AM 1222, 11.14 ಗ್ರಾಂ/23 ಮಿ.ಮೀ, KM 123.5). ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ನಿರ್ದಿಷ್ಟ ಛಾಯಾಚಿತ್ರಿತ ಮಾದರಿ ಮತ್ತು ಸ್ವತಂತ್ರ ಕನ್ನಡ/ಪರ್ಷಿಯನ್ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಬೇಕು."
         },
         "findspot": {
           "placeId": "place-srirangapatna",
@@ -1652,16 +2136,16 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
           },
           "metal": {
-            "status": "unresolved"
+            "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -1671,6 +2155,10 @@
           {
             "sourceId": "src-unesco-srirangapatna",
             "locator": "Srirangapatna political centre through Tipu Sultan period; numismatic catalogue locator pending"
+          },
+          {
+            "sourceId": "src-coinindia-tipu-sultan-patan-mint",
+            "locator": "Patan mint gold pagoda specimens (AH1198 RY1, AH1200 RY4, AM1221/KM129) and copper 2-paisa/paisa specimens (KM124.3 var, KM123.5) with weight and diameter"
           }
         ],
         "review": {

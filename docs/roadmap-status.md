@@ -47,7 +47,7 @@ The bundled snapshot currently contains approximately:
 - 33 inscriptions, 25 literary works, 63 cultural records and 24 reign/period records;
 - 325 sources, 1,639 generated relationships, 139 places and 13 collaboration records;
 - 3,715 Patrika Sanchaya periodicals and 76 grouped publication-place anchors, all visibly `needs-review`;
-- 9 genealogy assertions, 10 coin records, 12 manuscript witnesses, 9 boundary-evidence packets, 25 inscription-edition packets and 12 script-evolution records, all review-gated;
+- 23 genealogy assertions (Hoysala, Wadiyar and Western Ganga long bridges now split into individual-generation links), 10 coin records, 12 manuscript witnesses, 9 boundary-evidence packets, 25 inscription-edition packets and 12 script-evolution records, all review-gated;
 - 12 local Epigraphia Carnatica Archive TXT records indexed as OCR discovery citations, with page-image review still required;
 - 33 Itihasa Darshana/Karnataka Parampare research volumes linked to 65 atlas review-lead groups across inscriptions, scripts, literature, manuscripts, freedom-movement, outside-Karnataka rule, ports, coinage and heritage source review; Karnataka Parampare leads now include OCR/page locator hints, with article/page review still required;
 - First source-volume extraction sprint adds review-gated records for Barkur, Ankola, Honnavar and Bhatkal port leads; Achyuta Devaraya and Chamarasa leads; Barkur/Badami inscription leads; Barkur, Badami, west-coast ports and Goa-transition events; and a Krishnadevaraya/Achyuta Devaraya coin-plate packet;
