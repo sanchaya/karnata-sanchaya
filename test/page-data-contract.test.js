@@ -46,6 +46,13 @@ test('the bundled dataset is a clean page-data release candidate', () => {
 })
 
 test('source-volume extraction sprint records remain citation-led and review-gated', () => {
+  const localArchiveSources=atlasData.sources.filter(item=>item.id.startsWith('src-ia-local-'))
+  assert.ok(localArchiveSources.length >= 12)
+  for (const source of localArchiveSources) {
+    assert.equal(source.repository?.platform, 'Internet Archive')
+    assert.ok(source.repository?.identifier?.includes('.vol'), `${source.id} must retain the Archive volume identifier from the offline folder name`)
+    assert.equal(source.review.status, 'needs-review')
+  }
   for (const id of ['src-ia-local-iisb-epigraphiacarnat0000unse-vol-7','src-ia-local-isb-epigraphiacarnat0000unse-vol-10']) {
     const source=atlasData.sources.find(item=>item.id===id)
     assert.equal(source?.repository?.platform, 'Internet Archive')
@@ -84,6 +91,11 @@ test('source-volume extraction sprint records remain citation-led and review-gat
   assert.equal(coin?.review.status, 'needs-review')
   assert.equal(coin?.image.status, 'missing')
   assert.ok(coin?.citations.some(citation=>citation.locator.includes('1499-1506')))
+  for (const id of ['culture-parampare-achyutaraya-temple-plate-lead','culture-parampare-daria-daulat-image-lead','culture-parampare-srirangapatna-gumbaz-image-lead','culture-parampare-chitradurga-fort-image-lead','culture-parampare-mysuru-palace-image-lead']) {
+    const item=atlasData.culturalHeritage.find(record=>record.id===id)
+    assert.equal(item?.review.status, 'needs-review')
+    assert.ok(item?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v2'), `${id} must cite Karnataka Parampare`)
+  }
 })
 
 test('local Epigraphia Carnatica text cache is indexed as review-only citations', () => {
