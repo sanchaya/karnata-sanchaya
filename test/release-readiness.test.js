@@ -462,3 +462,11 @@ test('guided tours cover public pages and the private admin workspace', () => {
   assert.doesNotMatch(tourSource, /guided-tour-backdrop/, 'the tour must not dim or block the application')
   assert.match(tourSource, /ArrowRight|ArrowLeft|Escape/, 'tour must support keyboard navigation')
 })
+
+test('admin Kannada search controls keep readable contrast', () => {
+  assert.match(adminSource, /search:'ಎಲ್ಲ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಹುಡುಕಿ'/, 'admin search label must exist in Kannada')
+  assert.match(adminSource, /searchPlaceholder:'ಹೆಸರು, ID, ಸ್ಥಿತಿ…'/, 'admin search placeholder must exist in Kannada')
+  assert.match(stylesSource, /\.admin-shell \.search\{color:var\(--sanchaya-ink\)\}/, 'admin search label must use dark readable text')
+  assert.match(stylesSource, /\.admin-shell \.search input[\s\S]*color:var\(--sanchaya-ink\)/, 'admin search input text must use dark readable text')
+  assert.match(stylesSource, /\.admin-shell \.search input::placeholder[\s\S]*opacity:1/, 'admin search placeholder must remain visible')
+})

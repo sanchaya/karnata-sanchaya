@@ -159,6 +159,11 @@
 /* Keep the people layer with the other sidebar controls instead of covering the map. */
 .layers .people-map-toggle input{accent-color:#b26a22}
 .map-layer-row{display:grid;gap:4px}.map-layer-row>label{display:flex;gap:9px;align-items:center;font-size:11px;margin:6px 0}.map-layer-suboption{margin:0 0 4px 24px!important;padding:5px 7px;border-left:2px solid #c8d0ff;border-radius:6px;background:#f8f9ff;color:var(--sanchaya-muted);font-weight:650}.map-layer-suboption input{accent-color:var(--sanchaya-blue)}.map-layer-review-note{display:block;margin-top:6px;color:var(--sanchaya-muted);font-size:9px;line-height:1.35}.map-only-controls .map-layer-row{min-width:0}.map-only-controls .map-layer-row>label{margin:0}.map-only-controls .map-layer-suboption{margin:2px 0 3px 18px!important;grid-template-columns:auto minmax(0,1fr)}.map-only-controls .map-layer-review-note{grid-column:1/-1}
+
+/* Admin search contrast: keep Kannada labels, typed text and placeholders readable. */
+.admin-shell .search{color:var(--sanchaya-ink)}
+.admin-shell .search input,.admin-shell input,.admin-shell select,.admin-shell textarea{background:#fff;color:var(--sanchaya-ink);caret-color:var(--sanchaya-blue)}
+.admin-shell .search input::placeholder,.admin-shell input::placeholder,.admin-shell textarea::placeholder{color:#6d7288;opacity:1}
 .kingdom-overlap-note{display:grid;gap:4px;margin:0 0 10px;padding:9px 10px;border:1px solid #d7c7a6;border-radius:8px;background:#fff9e9;color:var(--sanchaya-muted);font-size:11px}.kingdom-overlap-note strong{font-size:10px;color:#8b5a22;text-transform:uppercase;letter-spacing:.06em}.kingdom-overlap-note span{line-height:1.4}
 .external-context-boundary{mix-blend-mode:multiply}.event-track button.external-kingdom{background:#fbfbff}.legend-object-icon.external{background:#6b607e}
 /* Full-map mode uses fixed control lanes so overlay buttons do not collide. */
