@@ -4993,14 +4993,14 @@
           "precision": "year"
         },
         "itemEdition": {
-          "series": "UNESCO Hoysala dossier / epigraphic corpus lead",
-          "volume": null,
-          "number": null,
-          "locator": "Belur foundation and patronage inscription packet; item corpus locator pending",
-          "status": "provisional"
+          "series": "Epigraphia Carnatica",
+          "volume": "V, Part 1 (Hassan District)",
+          "number": "Bl. 68",
+          "locator": "Bl. 68; records Vishnuvardhana's consecration of the Vijayanarayana (Chennakeshava) temple at Velapura/Belur, his military conquests and queen Santala Devi; verify against the printed plate before promotion",
+          "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -5012,7 +5012,7 @@
         },
         "evidenceGates": {
           "itemEdition": {
-            "status": "provisional"
+            "status": "located"
           },
           "transcription": {
             "status": "unresolved"
@@ -5042,14 +5042,18 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Attach the Belur foundation inscription corpus item, printed-page locator, translation witness and monument-authority evidence.",
-            "kn": "ಬೇಲೂರು ಪ್ರತಿಷ್ಠಾಪನಾ ಶಾಸನದ ಕಾರ್ಪಸ್ ವಸ್ತು, ಮುದ್ರಿತ ಪುಟ ಸ್ಥಾನಸೂಚಿ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸ್ಮಾರಕ-ಪ್ರಾಧಿಕಾರ ಸಾಕ್ಷ್ಯವನ್ನು ಜೋಡಿಸಿ."
+            "en": "Item Bl. 68 is now located in Epigraphia Carnatica Vol. V Part 1; a reviewer must check the printed plate/page image, complete a line-aligned transcription and translation, and attach dated photographs.",
+            "kn": "ವಸ್ತು Bl. 68 ಈಗ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ V ಭಾಗ 1ರಲ್ಲಿ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕ/ಪುಟ ಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ, ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ಮತ್ತು ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
           }
         },
         "citations": [
           {
+            "sourceId": "src-archive-epigraphia-carnatica-vol5-hassan",
+            "locator": "Belur item Bl. 68: Vishnuvardhana's 1117 foundation of the Vijayanarayana/Chennakeshava temple, queen Santala Devi named"
+          },
+          {
             "sourceId": "src-unesco-hoysala-dossier",
-            "locator": "Belur Chennakeshava foundation and Hoysala heritage context; attach inscription corpus item"
+            "locator": "Belur Chennakeshava foundation and Hoysala heritage context"
           }
         ],
         "review": {
@@ -5480,9 +5484,9 @@
         },
         "itemEdition": {
           "series": "Epigraphia Carnatica",
-          "volume": null,
+          "volume": "II",
           "number": null,
-          "locator": "Shravanabelagola cluster review packet; split into item-level inscriptions before promotion",
+          "locator": "Umbrella index for the wider ~500-item Shravanabelagola corpus (EC Vol. II); the strongest items are now split into their own item-level packets (Nos. 175, 70 and 254 below) rather than left inside this cluster record",
           "status": "provisional"
         },
         "textWitness": {
@@ -5526,14 +5530,258 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Resolve the exact printed edition locator, line witness and image evidence before promotion.",
-            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ನಿಖರ ಮುದ್ರಿತ ಆವೃತ್ತಿ ಸ್ಥಾನಸೂಚಿ, ಸಾಲು ಸಾಕ್ಷ್ಯ ಮತ್ತು ಚಿತ್ರ ಸಾಕ್ಷ್ಯವನ್ನು ನಿರ್ಧರಿಸಿ."
+            "en": "This umbrella record now hands its three strongest items to dedicated item-level packets (Nos. 175, 70, 254); continue identifying and splitting out further Shravanabelagola items from EC Vol. II rather than adding new claims here.",
+            "kn": "ಈ ಸಾರಾಂಶ ದಾಖಲೆ ಈಗ ತನ್ನ ಮೂರು ಬಲಿಷ್ಠ ವಸ್ತುಗಳನ್ನು (ಸಂಖ್ಯೆ 175, 70, 254) ಪ್ರತ್ಯೇಕ ವಸ್ತು-ಮಟ್ಟದ ಕಡತಗಳಿಗೆ ಹಸ್ತಾಂತರಿಸುತ್ತದೆ; ಇಲ್ಲಿ ಹೊಸ ಹಕ್ಕುಗಳನ್ನು ಸೇರಿಸುವ ಬದಲು EC ಸಂಪುಟ IIರಿಂದ ಮತ್ತಷ್ಟು ಶ್ರವಣಬೆಳಗೊಳ ವಸ್ತುಗಳನ್ನು ಗುರುತಿಸಿ ಪ್ರತ್ಯೇಕಿಸುವುದನ್ನು ಮುಂದುವರಿಸಿ."
           }
         },
         "citations": [
           {
             "sourceId": "src-epigraphia-carnatica",
-            "locator": "Shravanabelagola inscription corpus lead; item-level separation pending"
+            "locator": "Shravanabelagola inscription corpus lead; item-level separation ongoing"
+          },
+          {
+            "sourceId": "src-archive-epigraphia-carnatica-vol2",
+            "locator": "Epigraphia Carnatica Vol. II digitized text; source for the split item-level packets"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-shravanabelagola-gommateshwara-chavundaraya",
+        "name": {
+          "en": "Shravanabelagola Gommateshwara-Chavundaraya commissioning inscription edition packet",
+          "kn": "ಶ್ರವಣಬೆಳಗೊಳ ಗೊಮ್ಮಟೇಶ್ವರ-ಚಾವುಂಡರಾಯ ನಿರ್ಮಾಣ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-shravanabelagola",
+        "editionKind": "item-edition-review",
+        "language": "Kannada / Tamil / Marathi",
+        "script": "Old Kannada",
+        "date": {
+          "from": 981,
+          "to": 983,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": "II",
+          "number": "175",
+          "locator": "No. 175 (Kannada); companion trilingual texts at Nos. 176 (Tamil) and 179 (Marathi), engraved at the sides of the Gommateshwara colossus, all recording the same fact of Chavundaraya's commissioning; verify against the printed plates before promotion",
+          "status": "located"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "located"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "sourceUrl",
+            "imageWitness"
+          ],
+          "nextAction": {
+            "en": "Item Nos. 175/176/179 are now located; a reviewer must check the printed plates, complete line-aligned transcription and translation for each language, and attach dated photographs of the colossus inscriptions.",
+            "kn": "ವಸ್ತು ಸಂಖ್ಯೆ 175/176/179 ಈಗ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕಗಳನ್ನು ಪರಿಶೀಲಿಸಿ, ಪ್ರತಿ ಭಾಷೆಗೂ ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ಮತ್ತು ಮೂರ್ತಿ ಶಾಸನಗಳ ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-epigraphia-carnatica-vol2",
+            "locator": "EC II Nos. 175/176/179: trilingual inscriptions on the Gommateshwara statue recording Chavundaraya (minister of Ganga king Rachamalla) as its commissioner, c. 981-983 CE"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-shravanabelagola-gangaraja-basti",
+        "name": {
+          "en": "Shravanabelagola Ganga-Raja basti inscription edition packet",
+          "kn": "ಶ್ರವಣಬೆಳಗೊಳ ಗಂಗರಾಜ ಬಸದಿ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-shravanabelagola",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 1138,
+          "to": 1138,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": "II",
+          "number": "70",
+          "locator": "No. 70 (alt. catalogued as No. 64); records that Ganga-Raja, general of the Hoysala king Vishnuvardhana, had the basti erected for his mother Pochawa; verify against the printed plate before promotion",
+          "status": "located"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "located"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "normal",
+          "scriptPhaseIds": [],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "sourceUrl",
+            "imageWitness"
+          ],
+          "nextAction": {
+            "en": "Item No. 70 is now located; a reviewer must check the printed plate, complete a line-aligned transcription and translation, and attach dated photographs.",
+            "kn": "ವಸ್ತು ಸಂಖ್ಯೆ 70 ಈಗ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕವನ್ನು ಪರಿಶೀಲಿಸಿ, ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ಮತ್ತು ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-epigraphia-carnatica-vol2",
+            "locator": "EC II No. 70 (alt. 64): Ganga-Raja, Vishnuvardhana's general, erects a basti for his mother Pochawa, c. 1138"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-inscription-shravanabelagola-panditarya-epitaph",
+        "name": {
+          "en": "Shravanabelagola Panditarya epitaph inscription edition packet",
+          "kn": "ಶ್ರವಣಬೆಳಗೊಳ ಪಂಡಿತಾರ್ಯ ಸಮಾಧಿ ಶಾಸನ ಆವೃತ್ತಿ ಕಡತ"
+        },
+        "inscriptionId": "inscription-shravanabelagola",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 1398,
+          "to": 1398,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": "II",
+          "number": "254",
+          "locator": "No. 254 (alt. catalogued as No. 105); epitaph of the Jain teacher Panditarya, stating he performed the Gommateshwara anointing ceremony (mahamastakabhisheka) seven times; verify against the printed plate before promotion",
+          "status": "located"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "located"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "normal",
+          "scriptPhaseIds": [],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "sourceUrl",
+            "imageWitness"
+          ],
+          "nextAction": {
+            "en": "Item No. 254 is now located; a reviewer must check the printed plate, complete a line-aligned transcription and translation, and attach dated photographs.",
+            "kn": "ವಸ್ತು ಸಂಖ್ಯೆ 254 ಈಗ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ ಫಲಕವನ್ನು ಪರಿಶೀಲಿಸಿ, ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ಮತ್ತು ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-archive-epigraphia-carnatica-vol2",
+            "locator": "EC II No. 254 (alt. 105): epitaph of Jain teacher Panditarya, records seven Gommateshwara anointing ceremonies, dated 1398"
           }
         ],
         "review": {
@@ -5562,11 +5810,11 @@
           "series": "South Indian Inscriptions",
           "volume": "XVIII",
           "number": "112",
-          "locator": "S.I.I. XVIII No. 112; verify line, image and relocation metadata",
+          "locator": "S.I.I. XVIII No. 112; an undated Vikramaditya VI-period record naming the Jatachola-lineage family of Jomma, his son Dasa (m. Chaudabbarasi) and Dasa's children Attiraja and Chanda; verify line, image and relocation metadata against the printed plate",
           "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -5608,14 +5856,18 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Use the located S.I.I. XVIII No. 112 witness to complete line transcription, translation review and image/licence evidence.",
-            "kn": "ಗುರುತಿಸಲಾದ S.I.I. XVIII No. 112 ಸಾಕ್ಷ್ಯದಿಂದ ಸಾಲು ಲಿಪ್ಯಂತರ, ಅನುವಾದ ವಿಮರ್ಶೆ ಮತ್ತು ಚಿತ್ರ/ಪರವಾನಗಿ ಸಾಕ್ಷ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ."
+            "en": "Use the located S.I.I. XVIII No. 112 witness (now confirmed via the digitized text, naming Attiraja) to complete line transcription, translation review and image/licence evidence against the printed plate.",
+            "kn": "ಗುರುತಿಸಲಾದ S.I.I. XVIII No. 112 ಸಾಕ್ಷ್ಯದಿಂದ (ಈಗ ಡಿಜಿಟಲೀಕೃತ ಪಠ್ಯದ ಮೂಲಕ ದೃಢಪಟ್ಟಿದೆ, ಅತ್ತಿರಾಜನನ್ನು ಹೆಸರಿಸುತ್ತದೆ) ಮುದ್ರಿತ ಫಲಕದ ವಿರುದ್ಧ ಸಾಲು ಲಿಪ್ಯಂತರ, ಅನುವಾದ ವಿಮರ್ಶೆ ಮತ್ತು ಚಿತ್ರ/ಪರವಾನಗಿ ಸಾಕ್ಷ್ಯವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ."
           }
         },
         "citations": [
           {
+            "sourceId": "src-archive-sii-vol18",
+            "locator": "S.I.I. XVIII No. 112 (digitized text); names Attiraja and Chanda as children of Dasa and Chaudabbarasi, of the Jatachola/Jomma lineage"
+          },
+          {
             "sourceId": "src-ignca-muktesvara-epigraphy",
-            "locator": "Inscription I; S.I.I. XVIII No. 112; attach reviewed transcription, translation and image set"
+            "locator": "Inscription I; S.I.I. XVIII No. 112 locator lead"
           }
         ],
         "review": {

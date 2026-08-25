@@ -21,7 +21,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `coinRecords` | 10 | Catalogue/image/metal/weight/findspot gates open; new Maski Ashokan-context and Hoysala catalogue proof packets keep images, weights and findspots unresolved until reviewed |
 | `manuscriptWitnesses` | 12 | Repository leads located for some works; new Kavirajamarga Parampare, Shabdamanidarpana/Sanchaya and Itihasa Darshana literature-heavy witness leads keep shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; the three Hoysala/Tipu first-target packets now have sourced inscription, campaign and treaty evidence for some gates, each still blocked on a reign-specific source map; not research-grade boundary corpus |
-| `inscriptionEditions` | 25 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
+| `inscriptionEditions` | 28 | Item-edition queue started; locator-review metadata added; three new item-level Shravanabelagola packets and a located Belur (Bl. 68) and Muktesvara (S.I.I. XVIII No. 112) record; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 12 | Public explorer now covers Ashokan/Satavahana Brahmi, Kadamba/Proto-Kannada, Badami Chalukya, Rashtrakuta, Kalyani Chalukya-Hoysala, Vijayanagara-Nayaka/Telugu-Kannada divergence and modern print phases; all still review-gated |
 | Research-volume source links | 33 linked volumes / 65 link groups | Itihasa Darshana plus Karnataka Parampare source leads now route to inscription, script, literature, manuscript, freedom-movement, outside-Karnataka rule, ports, coinage and heritage review targets; Parampare links include OCR/page locator hints but still require page-image review |
@@ -133,13 +133,15 @@ Minimum evidence per edition:
 - authority coordinate or documented unresolved coordinate;
 - present condition, managing authority and dated licensed photographs.
 
+A first pass located real item-level Epigraphia Carnatica / South Indian Inscriptions numbers via the digitized volumes on the Internet Archive. All records stay `needs-review`: locating an item number only advances the `itemEdition`/text-witness `originalStatus` gate, not transcription, translation, photographs or independent review.
+
 Current first targets:
 
-| Record | Next action |
-| --- | --- |
-| `edition-inscription-muktesvara-attiraja-review-packet` | Attach reviewed transcription, translation and image set to the located S.I.I. XVIII no. 112 record. |
-| `edition-inscription-shravanabelagola-cluster` | Split the cluster into item-level records before promotion. |
-| `edition-inscription-belur-foundation` | Match Belur foundation records to exact corpus items and photographs. |
+| Record | What's now located | Next action |
+| --- | --- | --- |
+| `edition-inscription-muktesvara-attiraja-review-packet` | The digitized S.I.I. XVIII No. 112 text is confirmed and names Attiraja (son of Dasa and Chaudabbarasi, Jatachola/Jomma lineage), matching the record's subject. | Check the printed plate, complete a line-aligned transcription and translation, and attach dated licensed photographs. |
+| `edition-inscription-shravanabelagola-cluster` | Split into three item-level packets sourced from the digitized EC Vol. II text: `edition-inscription-shravanabelagola-gommateshwara-chavundaraya` (Nos. 175/176/179, trilingual Gommateshwara commissioning inscription), `edition-inscription-shravanabelagola-gangaraja-basti` (No. 70, Ganga-Raja's 1138 basti for his mother Pochawa) and `edition-inscription-shravanabelagola-panditarya-epitaph` (No. 254, the 1398 Panditarya epitaph). The umbrella cluster record stays as an index for the ~500-item corpus. | Continue identifying further Shravanabelagola items from EC Vol. II and splitting them out; check printed plates and complete transcription/translation for the three new items. |
+| `edition-inscription-belur-foundation` | Matched to Epigraphia Carnatica Vol. V Part 1 (Hassan district) item **Bl. 68**, which records Vishnuvardhana's 1117 consecration of the Vijayanarayana/Chennakeshava temple and names queen Santala Devi. `itemEdition.status` moved from `provisional` to `located`. | Check the printed plate, complete transcription/translation and attach dated licensed photographs before promotion. |
 
 ### Manuscript and Sanchaya maturity
 
