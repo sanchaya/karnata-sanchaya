@@ -244,6 +244,55 @@ export const sourceVolumeExtractionEvents = [
     citations: [c('src-karnataka-parampare-v2', 'OCR lines around 3228-3232: Goa, Bahmani and Portuguese transition; printed page and authority review required')],
     review,
   },
+  {
+    id: 'event-parampare-v1-rashtrakuta-political-history-lead',
+    type: 'campaign',
+    name: n('Karnataka Parampare Rashtrakuta political-history article lead', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ ರಾಷ್ಟ್ರಕೂಟ ರಾಜಕೀಯ ಇತಿಹಾಸ ಲೇಖನ ದಾರಿ'),
+    date: d(753, 982, 'range'),
+    year: 753,
+    location: { type: 'Point', coordinates: [77.29, 17.17], precision: 'approximate' },
+    summary: n('Volume 1 has a located article/OCR cluster for Malkhed-centred Rashtrakuta political history. This record routes that article lead to later campaign, capital and boundary review.', 'ಸಂಪುಟ ೧ರಲ್ಲಿ ಮಳಖೇಡ ಕೇಂದ್ರಿತ ರಾಷ್ಟ್ರಕೂಟ ರಾಜಕೀಯ ಇತಿಹಾಸಕ್ಕೆ ಲೇಖನ/OCR ಗುಚ್ಛ ಪತ್ತೆಯಾಗಿದೆ. ಈ ದಾಖಲೆ ಆ ಲೇಖನ ದಾರಿಯನ್ನು ಮುಂದಿನ ದಂಡಯಾತ್ರೆ, ರಾಜಧಾನಿ ಮತ್ತು ಗಡಿ ಪರಿಶೀಲನೆಗೆ ಕೊಂಡೊಯ್ಯುತ್ತದೆ.'),
+    participants: [
+      { polityId: 'polity-rashtrakuta', role: 'imperial-polity', outcome: 'article-review-lead' },
+    ],
+    peopleIds: ['person-dantidurga', 'person-amoghavarsha-i', 'person-govinda-iii'],
+    destinationPlaceId: 'place-manyakheta',
+    citations: [c('src-karnataka-parampare-v1', 'Printed pp. 279-289; OCR lines around 654 and 14891-15030; page-image review required')],
+    review,
+  },
+  {
+    id: 'event-parampare-v1-goa-kadamba-article-lead',
+    type: 'capital-relocation',
+    name: n('Karnataka Parampare Goa Kadamba article lead', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ ಗೋವೆಯ ಕದಂಬರ ಲೇಖನ ದಾರಿ'),
+    date: d(966, 1340, 'range'),
+    year: 1054,
+    location: { type: 'Point', coordinates: [73.91, 15.50], precision: 'approximate' },
+    summary: n('Volume 1 has a small-dynasties article locator for the Goa Kadambas. It can refine the existing Gopakapattana and dynasty-branch packets after page review.', 'ಸಂಪುಟ ೧ರಲ್ಲಿ ಗೋವೆಯ ಕದಂಬರಿಗಾಗಿ ಸಣ್ಣ ವಂಶಗಳ ಲೇಖನ ಸ್ಥಾನಸೂಚಿ ಇದೆ. ಪುಟ ಪರಿಶೀಲನೆಯ ನಂತರ ಇದು ಗೋಪಕಪಟ್ಟಣ ಮತ್ತು ವಂಶ-ಶಾಖೆ ಕಡತಗಳನ್ನು ನಿಖರಗೊಳಿಸಬಹುದು.'),
+    participants: [
+      { polityId: 'external-polity-goa-kadamba', role: 'ruling-polity', outcome: 'article-review-lead' },
+      { polityId: 'polity-kadamba', role: 'lineage-context', outcome: 'branch-context' },
+    ],
+    peopleIds: ['person-shasthadeva-goa-kadamba'],
+    destinationPlaceId: 'place-gopakapattana',
+    citations: [c('src-karnataka-parampare-v1', 'Printed pp. 354-374; OCR lines around 702 and 18603-18941; page-image review required')],
+    review,
+  },
+  {
+    id: 'event-parampare-v1-devagiri-yadava-article-lead',
+    type: 'kingdom-foundation',
+    name: n('Karnataka Parampare Devagiri Yadava article lead', 'ಕರ್ನಾಟಕ ಪರಂಪರೆ ದೇವಗಿರಿಯ ಯಾದವರ ಲೇಖನ ದಾರಿ'),
+    date: d(1185, 1318, 'range'),
+    year: 1185,
+    location: { type: 'Point', coordinates: [75.22, 19.94], precision: 'approximate' },
+    summary: n('Volume 1 has a Devagiri Yadava article locator. It should be used to review the Seuna/Yadava naming, capital and Kannada-origin framing without settling those questions automatically.', 'ಸಂಪುಟ ೧ರಲ್ಲಿ ದೇವಗಿರಿಯ ಯಾದವರ ಲೇಖನ ಸ್ಥಾನಸೂಚಿ ಇದೆ. ಸೇವುಣ/ಯಾದವ ಹೆಸರಿಕೆ, ರಾಜಧಾನಿ ಮತ್ತು ಕನ್ನಡ-ಮೂಲ ಚೌಕಟ್ಟನ್ನು ಪರಿಶೀಲಿಸಲು ಇದನ್ನು ಬಳಸಬೇಕು; ಆ ಪ್ರಶ್ನೆಗಳನ್ನು ಸ್ವಯಂ ಅಂತಿಮಗೊಳಿಸಬಾರದು.'),
+    participants: [
+      { polityId: 'external-polity-sevuna-devagiri', role: 'ruling-polity', outcome: 'article-review-lead' },
+    ],
+    peopleIds: ['person-bhillama-v-sevuna'],
+    destinationPlaceId: 'place-devagiri',
+    citations: [c('src-karnataka-parampare-v1', 'Printed pp. 478-484; OCR lines around 800 and 24680-24827; page-image review required')],
+    review,
+  },
 ]
 
 export const sourceVolumeExtractionInscriptions = [
@@ -327,6 +376,24 @@ export const sourceVolumeExtractionInscriptionEditions = [
 ]
 
 export const sourceVolumeExtractionCoinRecords = [
+  {
+    id: 'coin-parampare-western-ganga-gold-plate-lead',
+    name: n('Western Ganga gold coin image-plate lead', 'ಪಶ್ಚಿಮ ಗಂಗರ ಚಿನ್ನದ ನಾಣ್ಯ ಚಿತ್ರ-ಫಲಕ ದಾರಿ'),
+    coinKind: 'dynastic-coinage-lead',
+    polityId: 'polity-western-ganga',
+    placeId: 'place-talakad',
+    date: d(350, 1000, 'range'),
+    material: 'gold',
+    weightGrams: null,
+    diameterMm: null,
+    obverse: n('Karnataka Parampare Volume 1 image-list lead for Western Ganga gold coins; no catalogue specimen has been matched yet.', 'ಪಶ್ಚಿಮ ಗಂಗರ ಚಿನ್ನದ ನಾಣ್ಯಗಳಿಗಾಗಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರ ಚಿತ್ರಪಟ್ಟಿ ದಾರಿ; ಇನ್ನೂ catalogue ಮಾದರಿ ಹೊಂದಿಸಲಾಗಿಲ್ಲ.'),
+    reverse: n('Legend, denomination, mint, weight and findspot remain unresolved until a numismatic catalogue and plate image are reviewed.', 'ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ಮತ್ತು ಫಲಕಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಬಗೆಹರಿದಿಲ್ಲ.'),
+    findspot: { placeId: 'place-talakad', certainty: 'regional-context' },
+    image: { status: 'missing', license: null, url: null },
+    evidenceGates: { catalogue: { status: 'unresolved' }, image: { status: 'provisional' }, metal: { status: 'located' }, weight: { status: 'unresolved' }, findspot: { status: 'provisional' } },
+    citations: [c('src-karnataka-parampare-v1', 'Image-list OCR line around 1073 and plate locator around 32907; page-image review required')],
+    review,
+  },
   {
     id: 'coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead',
     name: n('Krishnadevaraya and Achyuta Devaraya gold coin plate lead', 'ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಅಚ್ಯುತ ದೇವರಾಯ ಚಿನ್ನದ ನಾಣ್ಯ ಫಲಕ ದಾರಿ'),

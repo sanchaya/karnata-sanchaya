@@ -18,7 +18,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | Collection | Current count | Status |
 | --- | ---: | --- |
 | `genealogicalRelations` | 7 | Derived or secondary assertions; not final family-tree proof |
-| `coinRecords` | 7 | Catalogue/image/metal/weight/findspot gates open; Karnataka Parampare coin-plate lead added for Krishnadevaraya/Achyuta Devaraya |
+| `coinRecords` | 8 | Catalogue/image/metal/weight/findspot gates open; Karnataka Parampare coin-plate leads added for Western Ganga and Krishnadevaraya/Achyuta Devaraya gold coins |
 | `manuscriptWitnesses` | 7 | Repository leads located for some works; shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 7 | Schematic evidence packets, not research-grade boundary corpus |
 | `inscriptionEditions` | 23 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
@@ -114,6 +114,8 @@ The Evidence Workflow includes a `sourceLinks` stream for these discovery links.
 The first source-volume extraction sprint converts the strongest Karnataka Parampare and offline Archive identifier leads into normal atlas candidate records. This batch adds four place leads, two people leads, four event leads, two inscription leads, three inscription-edition packets and one coin-plate packet. The offline folder names are treated as Internet Archive identifiers in source records, but the extracted records remain `needs-review` until the page image, printed locator and item-level citation are confirmed.
 
 The second extraction sprint registers all 12 offline Epigraphia Carnatica folder names as Internet Archive identifiers and adds five Parampare image/caption leads for Achyutaraya-period Hampi, Daria Daulat Bagh, Srirangapatna Gumbaz, Chitradurga Fort and Mysuru Palace. These enrich exploration and reviewer triage without replacing existing authority-backed heritage records.
+
+The third extraction sprint adds Volume 1 article-review event leads for Rashtrakuta political history, Goa Kadambas and Devagiri Yadavas, plus a Western Ganga gold-coin image-plate packet. These records make the topics visible in timeline/search while preserving the next action: locate page image, printed article range and item-level evidence.
 
 Minimum evidence per edition:
 

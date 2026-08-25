@@ -75,6 +75,11 @@ test('source-volume extraction sprint records remain citation-led and review-gat
     assert.equal(event?.review.status, 'needs-review')
     assert.ok(event?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v2'), `${id} must cite Karnataka Parampare`)
   }
+  for (const id of ['event-parampare-v1-rashtrakuta-political-history-lead','event-parampare-v1-goa-kadamba-article-lead','event-parampare-v1-devagiri-yadava-article-lead']) {
+    const event=atlasData.events.find(item=>item.id===id)
+    assert.equal(event?.review.status, 'needs-review')
+    assert.ok(event?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v1'), `${id} must cite Karnataka Parampare Volume 1`)
+  }
   for (const id of ['inscription-parampare-barkur-harihara-lead','inscription-parampare-badami-chamarasa-lead']) {
     const inscription=atlasData.inscriptions.find(item=>item.id===id)
     assert.equal(inscription?.review.status, 'needs-review')
@@ -91,6 +96,10 @@ test('source-volume extraction sprint records remain citation-led and review-gat
   assert.equal(coin?.review.status, 'needs-review')
   assert.equal(coin?.image.status, 'missing')
   assert.ok(coin?.citations.some(citation=>citation.locator.includes('1499-1506')))
+  const gangaCoin=atlasData.coinRecords.find(item=>item.id==='coin-parampare-western-ganga-gold-plate-lead')
+  assert.equal(gangaCoin?.review.status, 'needs-review')
+  assert.equal(gangaCoin?.image.status, 'missing')
+  assert.ok(gangaCoin?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v1'))
   for (const id of ['culture-parampare-achyutaraya-temple-plate-lead','culture-parampare-daria-daulat-image-lead','culture-parampare-srirangapatna-gumbaz-image-lead','culture-parampare-chitradurga-fort-image-lead','culture-parampare-mysuru-palace-image-lead']) {
     const item=atlasData.culturalHeritage.find(record=>record.id===id)
     assert.equal(item?.review.status, 'needs-review')

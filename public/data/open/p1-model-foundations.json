@@ -1436,6 +1436,70 @@
         }
       },
       {
+        "id": "coin-parampare-western-ganga-gold-plate-lead",
+        "name": {
+          "en": "Western Ganga gold coin image-plate lead",
+          "kn": "ಪಶ್ಚಿಮ ಗಂಗರ ಚಿನ್ನದ ನಾಣ್ಯ ಚಿತ್ರ-ಫಲಕ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-western-ganga",
+        "placeId": "place-talakad",
+        "date": {
+          "from": 350,
+          "to": 1000,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Karnataka Parampare Volume 1 image-list lead for Western Ganga gold coins; no catalogue specimen has been matched yet.",
+          "kn": "ಪಶ್ಚಿಮ ಗಂಗರ ಚಿನ್ನದ ನಾಣ್ಯಗಳಿಗಾಗಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಸಂಪುಟ ೧ರ ಚಿತ್ರಪಟ್ಟಿ ದಾರಿ; ಇನ್ನೂ catalogue ಮಾದರಿ ಹೊಂದಿಸಲಾಗಿಲ್ಲ."
+        },
+        "reverse": {
+          "en": "Legend, denomination, mint, weight and findspot remain unresolved until a numismatic catalogue and plate image are reviewed.",
+          "kn": "ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ಮತ್ತು ಫಲಕಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-talakad",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "provisional"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Image-list OCR line around 1073 and plate locator around 32907; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
         "name": {
           "en": "Krishnadevaraya and Achyuta Devaraya gold coin plate lead",
