@@ -2680,6 +2680,62 @@
         "polityId": "polity-kadamba"
       },
       {
+        "id": "person-bhagiratha",
+        "name": {
+          "en": "Bhagiratha",
+          "kn": "ಭಗೀರಥ"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda inscription and Kadamba genealogy"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        },
+        "polityId": "polity-kadamba"
+      },
+      {
+        "id": "person-raghu-kadamba",
+        "name": {
+          "en": "Raghu",
+          "kn": "ರಘು"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda inscription and Kadamba genealogy"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        },
+        "polityId": "polity-kadamba"
+      },
+      {
         "id": "person-kakusthavarma",
         "name": {
           "en": "Kakusthavarma",
@@ -39436,6 +39492,28 @@
         }
       },
       {
+        "id": "src-wikipedia-kadamba-talagunda-succession",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Kadamba succession (Bhageerath, Raghu, Kakusthavarma)",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಕದಂಬ ಉತ್ತರಾಧಿಕಾರ (ಭಗೀರಥ, ರಘು, ಕಾಕುಸ್ಥವರ್ಮ)"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Bhageerath",
+        "scope": {
+          "en": "Cross-verification discovery lead for the Talagunda pillar-inscription genealogy: Kangavarma succeeded by his son Bhageerath (c. 385-410), then Bhageerath's son Raghu (died childless fighting the Pallavas), then Raghu's younger brother Kakusthavarma. Verify against the inscription text and specialist Kadamba chronology before promotion.",
+          "kn": "ತಾಳಗುಂದ ಸ್ತಂಭ ಶಾಸನದ ವಂಶಾವಳಿಗೆ ಅಡ್ಡ-ಪರಿಶೀಲನಾ ಅನ್ವೇಷಣಾ ಸುಳಿವು: ಕಂಗವರ್ಮನ ನಂತರ ಅವನ ಮಗ ಭಗೀರಥ (ಸು. 385-410), ನಂತರ ಭಗೀರಥನ ಮಗ ರಘು (ಪಲ್ಲವರ ವಿರುದ್ಧ ಹೋರಾಡುತ್ತಾ ನಿಸ್ಸಂತಾನನಾಗಿ ಮೃತ), ನಂತರ ರಘುವಿನ ಕಿರಿಯ ಸಹೋದರ ಕಾಕುಸ್ಥವರ್ಮ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯ ಮತ್ತು ವಿಶೇಷಜ್ಞ ಕದಂಬ ಕಾಲಕ್ರಮದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-numista-rashtrakuta-dynasty",
         "type": "numismatic-catalogue",
         "title": {
@@ -49192,6 +49270,52 @@
       {
         "id": "rel-person-kangavarma-polity",
         "fromId": "person-kangavarma",
+        "type": "governed-or-represented",
+        "toId": "polity-kadamba",
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda inscription and Kadamba genealogy"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-person-bhagiratha-polity",
+        "fromId": "person-bhagiratha",
+        "type": "governed-or-represented",
+        "toId": "polity-kadamba",
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda inscription and Kadamba genealogy"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-person-raghu-kadamba-polity",
+        "fromId": "person-raghu-kadamba",
         "type": "governed-or-represented",
         "toId": "polity-kadamba",
         "date": {
@@ -83929,13 +84053,13 @@
         "confidence": "medium"
       },
       {
-        "id": "rel-genealogy-mayurasharma-kakusthavarma-dynastic-line",
+        "id": "rel-genealogy-mayurasharma-kangavarma-kadamba",
         "fromId": "person-mayurasharma",
-        "type": "genealogy-dynastic-claim",
-        "toId": "person-kakusthavarma",
+        "type": "genealogy-parent-child",
+        "toId": "person-kangavarma",
         "date": {
-          "from": 345,
-          "to": 455,
+          "from": 360,
+          "to": 360,
           "era": "CE",
           "precision": "circa"
         },
@@ -83954,7 +84078,97 @@
           "reviewer": null,
           "updatedAt": "2026-08-23"
         },
-        "sourceRecordId": "genealogy-mayurasharma-kakusthavarma-dynastic-line",
+        "sourceRecordId": "genealogy-mayurasharma-kangavarma-kadamba",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
+      },
+      {
+        "id": "rel-genealogy-kangavarma-bhagiratha-kadamba",
+        "fromId": "person-kangavarma",
+        "type": "genealogy-parent-child",
+        "toId": "person-bhagiratha",
+        "date": {
+          "from": 385,
+          "to": 385,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-wikipedia-kadamba-talagunda-succession",
+            "locator": "Bhageerath, son and successor of Kangavarma, described as sole lord of the Kadamba country"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        },
+        "sourceRecordId": "genealogy-kangavarma-bhagiratha-kadamba",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
+      },
+      {
+        "id": "rel-genealogy-bhagiratha-raghu-kadamba",
+        "fromId": "person-bhagiratha",
+        "type": "genealogy-parent-child",
+        "toId": "person-raghu-kadamba",
+        "date": {
+          "from": 410,
+          "to": 410,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-wikipedia-kadamba-talagunda-succession",
+            "locator": "Raghu, son and successor of Bhagiratha, died childless fighting the Pallavas"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        },
+        "sourceRecordId": "genealogy-bhagiratha-raghu-kadamba",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
+      },
+      {
+        "id": "rel-genealogy-raghu-kakusthavarma-kadamba",
+        "fromId": "person-raghu-kadamba",
+        "type": "genealogy-sibling",
+        "toId": "person-kakusthavarma",
+        "date": {
+          "from": 430,
+          "to": 430,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-wikipedia-kadamba-talagunda-succession",
+            "locator": "Kakusthavarma, younger brother and successor of Raghu, earlier crown prince under Bhagiratha"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        },
+        "sourceRecordId": "genealogy-raghu-kakusthavarma-kadamba",
         "evidenceLevel": "secondary",
         "confidence": "medium"
       },
@@ -86988,26 +87202,26 @@
         }
       },
       {
-        "id": "genealogy-mayurasharma-kakusthavarma-dynastic-line",
+        "id": "genealogy-mayurasharma-kangavarma-kadamba",
         "name": {
-          "en": "Mayurasharma to Kakusthavarma Kadamba dynastic-line assertion",
-          "kn": "ಮಯೂರಶರ್ಮರಿಂದ ಕಾಕುಸ್ಥವರ್ಮರವರೆಗಿನ ಕದಂಬ ವಂಶರೇಖೆ ನಿರೂಪಣೆ"
+          "en": "Mayurasharma to Kangavarma Kadamba succession-family assertion",
+          "kn": "ಮಯೂರಶರ್ಮರಿಂದ ಕಂಗವರ್ಮರವರೆಗಿನ ಕದಂಬ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
         },
-        "relationKind": "dynastic-claim",
+        "relationKind": "parent-child",
         "fromPersonId": "person-mayurasharma",
-        "toPersonId": "person-kakusthavarma",
+        "toPersonId": "person-kangavarma",
         "polityId": "polity-kadamba",
         "date": {
-          "from": 345,
-          "to": 455,
+          "from": 360,
+          "to": 360,
           "era": "CE",
           "precision": "circa"
         },
         "evidenceLevel": "secondary",
         "confidence": "medium",
         "derivation": {
-          "en": "Seeded from the Talagunda genealogy context as a dynastic-line claim; each parent-child step still needs inscription-level proof review.",
-          "kn": "ತಾಳಗುಂದ ವಂಶಾವಳಿ ಸಂದರ್ಭದಿಂದ ವಂಶರೇಖೆ ಹೇಳಿಕೆಯಾಗಿ ಸೇರಿಸಲಾಗಿದೆ; ಪ್ರತಿಯೊಂದು ಪೋಷಕ-ಸಂತಾನ ಹಂತಕ್ಕೂ ಶಾಸನಮಟ್ಟದ ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನೆ ಬೇಕು."
+          "en": "The Talagunda pillar inscription records the Kadamba genealogy; secondary sources describe Kangavarma as son and successor of the founder Mayurasharma, c. 360 CE. Independent review of the inscription text is still required before promotion.",
+          "kn": "ತಾಳಗುಂದ ಸ್ತಂಭ ಶಾಸನ ಕದಂಬ ವಂಶಾವಳಿಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ; ದ್ವಿತೀಯ ಆಕರಗಳು ಕಂಗವರ್ಮನನ್ನು ಸ್ಥಾಪಕ ಮಯೂರಶರ್ಮನ ಮಗ ಮತ್ತು ಉತ್ತರಾಧಿಕಾರಿ ಎಂದು ವಿವರಿಸುತ್ತವೆ, ಸು. ಕ್ರಿ.ಶ. 360. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
         },
         "citations": [
           {
@@ -87017,6 +87231,120 @@
           {
             "sourceId": "src-asi-classical-age",
             "locator": "Kadamba genealogy and Mayurasharma-Kakusthavarma context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-kangavarma-bhagiratha-kadamba",
+        "name": {
+          "en": "Kangavarma to Bhagiratha Kadamba succession-family assertion",
+          "kn": "ಕಂಗವರ್ಮರಿಂದ ಭಗೀರಥರವರೆಗಿನ ಕದಂಬ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-kangavarma",
+        "toPersonId": "person-bhagiratha",
+        "polityId": "polity-kadamba",
+        "date": {
+          "from": 385,
+          "to": 385,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Bhagiratha succeeded his father Kangavarma c. 385 CE; the Talagunda inscription describes him as sole lord of the Kadamba country. Independent review of the inscription text is still required before promotion.",
+          "kn": "ಭಗೀರಥ ತನ್ನ ತಂದೆ ಕಂಗವರ್ಮನ ನಂತರ ಸು. ಕ್ರಿ.ಶ. 385ರಲ್ಲಿ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು; ತಾಳಗುಂದ ಶಾಸನ ಅವನನ್ನು ಕದಂಬ ದೇಶದ ಏಕೈಕ ಒಡೆಯನೆಂದು ವಿವರಿಸುತ್ತದೆ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-wikipedia-kadamba-talagunda-succession",
+            "locator": "Bhageerath, son and successor of Kangavarma, described as sole lord of the Kadamba country"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-bhagiratha-raghu-kadamba",
+        "name": {
+          "en": "Bhagiratha to Raghu Kadamba succession-family assertion",
+          "kn": "ಭಗೀರಥರಿಂದ ರಘುರವರೆಗಿನ ಕದಂಬ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-bhagiratha",
+        "toPersonId": "person-raghu-kadamba",
+        "polityId": "polity-kadamba",
+        "date": {
+          "from": 410,
+          "to": 410,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Raghu succeeded his father Bhagiratha c. 410 CE and later died childless fighting the Pallavas. Independent review of the inscription text is still required before promotion.",
+          "kn": "ರಘು ತನ್ನ ತಂದೆ ಭಗೀರಥನ ನಂತರ ಸು. ಕ್ರಿ.ಶ. 410ರಲ್ಲಿ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು; ನಂತರ ಪಲ್ಲವರ ವಿರುದ್ಧ ಹೋರಾಡುತ್ತಾ ನಿಸ್ಸಂತಾನನಾಗಿ ಮೃತನಾದನು. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-wikipedia-kadamba-talagunda-succession",
+            "locator": "Raghu, son and successor of Bhagiratha, died childless fighting the Pallavas"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "genealogy-raghu-kakusthavarma-kadamba",
+        "name": {
+          "en": "Raghu to Kakusthavarma Kadamba sibling succession assertion",
+          "kn": "ರಘುರಿಂದ ಕಾಕುಸ್ಥವರ್ಮರವರೆಗಿನ ಕದಂಬ ಸಹೋದರ ಉತ್ತರಾಧಿಕಾರ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "sibling",
+        "fromPersonId": "person-raghu-kadamba",
+        "toPersonId": "person-kakusthavarma",
+        "polityId": "polity-kadamba",
+        "date": {
+          "from": 430,
+          "to": 430,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Kakusthavarma was Raghu's younger brother and had already served as crown prince under their father Bhagiratha; he succeeded Raghu after Raghu died childless. The Talagunda inscription hails Kakusthavarma as the ornament of the Kadamba family. Independent review of the inscription text is still required before promotion.",
+          "kn": "ಕಾಕುಸ್ಥವರ್ಮ ರಘುವಿನ ಕಿರಿಯ ಸಹೋದರನಾಗಿದ್ದು, ಈಗಾಗಲೇ ತಂದೆ ಭಗೀರಥನ ಕಾಲದಲ್ಲಿ ಯುವರಾಜನಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸಿದ್ದನು; ರಘು ನಿಸ್ಸಂತಾನನಾಗಿ ಮೃತನಾದ ನಂತರ ಅಧಿಕಾರಕ್ಕೆ ಬಂದನು. ತಾಳಗುಂದ ಶಾಸನ ಕಾಕುಸ್ಥವರ್ಮನನ್ನು ಕದಂಬ ಕುಟುಂಬದ ಆಭರಣವೆಂದು ಹೊಗಳುತ್ತದೆ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Talagunda pillar inscription and Kadamba genealogy context"
+          },
+          {
+            "sourceId": "src-wikipedia-kadamba-talagunda-succession",
+            "locator": "Kakusthavarma, younger brother and successor of Raghu, earlier crown prince under Bhagiratha"
           }
         ],
         "review": {
