@@ -1810,16 +1810,16 @@
           "era": "CE",
           "precision": "range"
         },
-        "material": "unresolved",
-        "weightGrams": null,
-        "diameterMm": null,
+        "material": "gold",
+        "weightGrams": 3.96,
+        "diameterMm": 14.45,
         "obverse": {
-          "en": "Garuda or dynastic emblem reported in secondary numismatic descriptions; specimen image pending.",
-          "kn": "ದ್ವಿತೀಯ ನಾಣ್ಯಶಾಸ್ತ್ರ ವಿವರಣೆಗಳಲ್ಲಿ ಗರುಡ ಅಥವಾ ವಂಶ ಚಿಹ್ನೆ ವರದಿಯಾಗಿದೆ; ಮಾದರಿ ಚಿತ್ರ ಬಾಕಿ."
+          "en": "Catalogued anonymous gold gadyana (~3.96 g, 14.45 mm, c. 900-1100): Garuda seated cross-legged in padmasana with anjalimudra (folded hands) within a floral whorl, the Rashtrakuta dynastic emblem; reverse shows a temple with a crescent above. Dynasty/type-level catalogue data, not yet matched to a Manyakheta-specific specimen.",
+          "kn": "ಪಟ್ಟಿಗತ ಅನಾಮಧೇಯ ಚಿನ್ನದ ಗದ್ಯಾಣ (~3.96 ಗ್ರಾಂ, 14.45 ಮಿ.ಮೀ, ಸು. 900-1100): ಹೂವಿನ ಸುತ್ತಳತೆಯೊಳಗೆ ಪದ್ಮಾಸನದಲ್ಲಿ ಅಂಜಲಿಮುದ್ರೆಯೊಂದಿಗೆ ಕುಳಿತ ಗರುಡ, ರಾಷ್ಟ್ರಕೂಟ ವಂಶ ಚಿಹ್ನೆ; ಹಿಂಭಾಗದಲ್ಲಿ ಮೇಲೆ ಅರ್ಧಚಂದ್ರನೊಂದಿಗೆ ದೇವಾಲಯ. ವಂಶ/ಬಗೆ-ಮಟ್ಟದ ಪಟ್ಟಿ ದತ್ತಾಂಶ, ಇನ್ನೂ ಮಾನ್ಯಖೇಟ-ನಿರ್ದಿಷ್ಟ ಮಾದರಿಗೆ ಹೊಂದಿಸಲಾಗಿಲ್ಲ."
         },
         "reverse": {
-          "en": "Legend, mint and denomination unresolved.",
-          "kn": "ಲೇಖ, ಟಂಕಶಾಲೆ ಮತ್ತು ಮೌಲ್ಯ ನಿರ್ಣಯವಾಗಿಲ್ಲ."
+          "en": "Also minted in silver damma denominations (c. 0.37-0.82 g); legend, mint and denomination for a Manyakheta-matched specimen still require item-level numismatic review.",
+          "kn": "ಬೆಳ್ಳಿಯ ದಮ್ಮ ಮೌಲ್ಯಗಳಲ್ಲೂ (ಸು. 0.37-0.82 ಗ್ರಾಂ) ಟಂಕಿಸಲಾಗಿದೆ; ಮಾನ್ಯಖೇಟ-ಹೊಂದಿಸಿದ ಮಾದರಿಯ ಲೇಖ, ಟಂಕಶಾಲೆ ಮತ್ತು ಮೌಲ್ಯಕ್ಕೆ ಇನ್ನೂ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
         },
         "findspot": {
           "placeId": "place-manyakheta",
@@ -1832,16 +1832,16 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
           },
           "metal": {
-            "status": "unresolved"
+            "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -1851,6 +1851,10 @@
           {
             "sourceId": "src-asi-rashtrakutas",
             "locator": "Numismatic lead; catalogue item and plate required"
+          },
+          {
+            "sourceId": "src-numista-rashtrakuta-dynasty",
+            "locator": "Anonymous gold gadyana type data (3.96 g, 14.45 mm) and silver damma denominations; dynasty type-level reference, not a Manyakheta-matched specimen"
           }
         ],
         "review": {
@@ -1874,16 +1878,16 @@
           "era": "CE",
           "precision": "range"
         },
-        "material": "unresolved",
-        "weightGrams": null,
+        "material": "gold",
+        "weightGrams": 3.79,
         "diameterMm": null,
         "obverse": {
-          "en": "Kannada-inscription claim is retained as a lead only until a catalogue specimen is matched.",
-          "kn": "ಪಟ್ಟಿ ಮಾದರಿಯೊಂದಿಗೆ ಹೊಂದಿಸುವವರೆಗೆ ಕನ್ನಡ ಲಿಪಿ ಹೇಳಿಕೆಯನ್ನು ಕೇವಲ ದಾರಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+          "en": "Catalogued gold padmatanka/gadyana types confirm bilingual Kannada and Nagari legend content across several Seuna/Yadava rulers (Bhillama V, Singhana II, Krishna, Mahadeva, Ramadeva), typically ~3.8 g; the Bhillama V type is catalogued at 3.79 g. Dynasty/type-level catalogue data, not yet matched to a Devagiri-specimen with a confirmed Kannada-script reading.",
+          "kn": "ಪಟ್ಟಿಗತ ಚಿನ್ನದ ಪದ್ಮಟಂಕ/ಗದ್ಯಾಣ ಬಗೆಗಳು ಹಲವಾರು ಸೇವುಣ/ಯಾದವ ಆಳ್ವಿಕೆಗಾರರಲ್ಲಿ (ಭಿಲ್ಲಮ V, ಸಿಂಘಣ II, ಕೃಷ್ಣ, ಮಹಾದೇವ, ರಾಮದೇವ) ದ್ವಿಭಾಷಾ ಕನ್ನಡ ಮತ್ತು ದೇವನಾಗರಿ ಲೇಖ ವಿಷಯವನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಸು. 3.8 ಗ್ರಾಂನಲ್ಲಿ ದೃಢಪಡಿಸುತ್ತವೆ; ಭಿಲ್ಲಮ V ಬಗೆ 3.79 ಗ್ರಾಂ ಎಂದು ಪಟ್ಟಿಮಾಡಲಾಗಿದೆ. ವಂಶ/ಬಗೆ-ಮಟ್ಟದ ಪಟ್ಟಿ ದತ್ತಾಂಶ, ಇನ್ನೂ ದೃಢಪಡಿಸಿದ ಕನ್ನಡ-ಲಿಪಿ ಓದುವಿಕೆಯ ದೇವಗಿರಿ-ಮಾದರಿಗೆ ಹೊಂದಿಸಲಾಗಿಲ್ಲ."
         },
         "reverse": {
-          "en": "Iconography and denomination unresolved.",
-          "kn": "ರೂಪಕ ಮತ್ತು ಮೌಲ್ಯ ನಿರ್ಣಯವಾಗಿಲ್ಲ."
+          "en": "Devanagari legend is confirmed on several specimens (e.g. Singhana III/Kamwaladevi); the specific Kannada-script legend claim for this lead still needs item-level numismatic review against a photographed specimen.",
+          "kn": "ಹಲವಾರು ಮಾದರಿಗಳಲ್ಲಿ (ಉದಾ. ಸಿಂಘಣ III/ಕಮ್ವಲದೇವಿ) ದೇವನಾಗರಿ ಲೇಖ ದೃಢಪಟ್ಟಿದೆ; ಈ ದಾರಿಯ ನಿರ್ದಿಷ್ಟ ಕನ್ನಡ-ಲಿಪಿ ಲೇಖ ಹಕ್ಕಿಗೆ ಛಾಯಾಚಿತ್ರಿತ ಮಾದರಿಯ ವಿರುದ್ಧ ಇನ್ನೂ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
         },
         "findspot": {
           "placeId": "place-devagiri",
@@ -1896,16 +1900,16 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
           },
           "metal": {
-            "status": "unresolved"
+            "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -1914,7 +1918,11 @@
         "citations": [
           {
             "sourceId": "src-shastriya-kannada-sevuna-devagiri",
-            "locator": "Kannada inscriptions and coins mentioned; specimen proof pending"
+            "locator": "Kannada and Nagari legend content on Seuna/Yadava padmatanka coins; specimen-level Kannada reading still pending"
+          },
+          {
+            "sourceId": "src-numista-yadava-dynasty",
+            "locator": "Bhillama V padmatanka gold type (3.79 g) and other Seuna/Yadava ruler coin types with weight/diameter"
           }
         ],
         "review": {
@@ -2006,16 +2014,16 @@
           "era": "CE",
           "precision": "range"
         },
-        "material": "unresolved",
-        "weightGrams": null,
+        "material": "gold",
+        "weightGrams": 3.7,
         "diameterMm": null,
         "obverse": {
-          "en": "Varaha emblem tradition is retained as a coinage/artifact lead until a specific specimen, seal or inscriptional witness is identified.",
-          "kn": "ನಿಖರ ನಾಣ್ಯ ಮಾದರಿ, ಮುದ್ರೆ ಅಥವಾ ಶಾಸನ ಸಾಕ್ಷಿ ಗುರುತಿಸುವವರೆಗೆ ವರಾಹ ಚಿಹ್ನೆ ಪರಂಪರೆಯನ್ನು ನಾಣ್ಯ/ವಸ್ತು ದಾರಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ."
+          "en": "Catalogued Badami Chalukya gold gadyana (~3.7 g, c. 700-900), called honnu in Kannada with fana/quarter-fana fractions; a gold coin recorded in Pattadakal-area records under the name gadyana later came to be called varaha after the boar (Varaha) emblem shown on the obverse, facing right within a floral scroll with lotus, crescent and sun. Dynasty/type-level catalogue data, not yet matched to a specific Aihole/Badami specimen.",
+          "kn": "ಪಟ್ಟಿಗತ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಚಿನ್ನದ ಗದ್ಯಾಣ (~3.7 ಗ್ರಾಂ, ಸು. 700-900), ಕನ್ನಡದಲ್ಲಿ ಹೊನ್ನು ಎಂದು ಕರೆಯಲ್ಪಡುತ್ತದೆ, ಫಣ/ಕಾಲು-ಫಣ ಭಿನ್ನರಾಶಿಗಳೊಂದಿಗೆ; ಪಟ್ಟದಕಲ್ಲು-ಪ್ರದೇಶದ ದಾಖಲೆಗಳಲ್ಲಿ ಗದ್ಯಾಣ ಎಂದು ದಾಖಲಾದ ಚಿನ್ನದ ನಾಣ್ಯ ನಂತರ ಮುಖಭಾಗದಲ್ಲಿ ತೋರಿಸಿದ ವರಾಹ ಚಿಹ್ನೆಯ ಕಾರಣ ವರಾಹ ಎಂದು ಕರೆಯಲ್ಪಟ್ಟಿತು, ಹೂವಿನ ಸುರುಳಿ, ಕಮಲ, ಅರ್ಧಚಂದ್ರ ಮತ್ತು ಸೂರ್ಯನೊಂದಿಗೆ ಬಲಕ್ಕೆ ಮುಖಮಾಡಿ. ವಂಶ/ಬಗೆ-ಮಟ್ಟದ ಪಟ್ಟಿ ದತ್ತಾಂಶ, ಇನ್ನೂ ನಿರ್ದಿಷ್ಟ ಐಹೊಳೆ/ಬಾದಾಮಿ ಮಾದರಿಗೆ ಹೊಂದಿಸಲಾಗಿಲ್ಲ."
         },
         "reverse": {
-          "en": "Object class, legend and denomination remain unresolved.",
-          "kn": "ವಸ್ತು ವರ್ಗ, ಲೇಖ ಮತ್ತು ಮೌಲ್ಯ ಇನ್ನೂ ನಿರ್ಧಾರವಾಗಿಲ್ಲ."
+          "en": "Object class (coin, not seal), legend and mint for an Aihole-matched specimen still require item-level numismatic review; auction specimens of comparable type show weights around 3.7-3.85 g.",
+          "kn": "ವಸ್ತು ವರ್ಗ (ನಾಣ್ಯ, ಮುದ್ರೆಯಲ್ಲ), ಲೇಖ ಮತ್ತು ಟಂಕಶಾಲೆಗೆ ಐಹೊಳೆ-ಹೊಂದಿಸಿದ ಮಾದರಿಗೆ ಇನ್ನೂ ವಸ್ತುಮಟ್ಟದ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಿಶೀಲನೆ ಅಗತ್ಯ; ಹೋಲಿಸಬಹುದಾದ ಬಗೆಯ ಹರಾಜು ಮಾದರಿಗಳು ಸು. 3.7-3.85 ಗ್ರಾಂ ತೂಕ ತೋರಿಸುತ್ತವೆ."
         },
         "findspot": {
           "placeId": "place-aihole-meguti",
@@ -2028,16 +2036,16 @@
         },
         "evidenceGates": {
           "catalogue": {
-            "status": "unresolved"
+            "status": "located"
           },
           "image": {
             "status": "unresolved"
           },
           "metal": {
-            "status": "unresolved"
+            "status": "located"
           },
           "weight": {
-            "status": "unresolved"
+            "status": "located"
           },
           "findspot": {
             "status": "provisional"
@@ -2047,6 +2055,10 @@
           {
             "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
             "locator": "Aihole-Badami-Pattadakal Chalukya material-culture and iconographic context"
+          },
+          {
+            "sourceId": "src-numista-chalukya-dynasty",
+            "locator": "Badami Chalukya gold gadyana type (3.7 g, c. 700-900); dynasty type-level reference, not an Aihole-matched specimen"
           }
         ],
         "review": {
