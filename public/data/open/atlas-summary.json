@@ -39492,6 +39492,28 @@
         }
       },
       {
+        "id": "src-wikipedia-aihole-inscription",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Aihole inscription",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಐಹೊಳೆ ಶಾಸನ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Aihole_inscription",
+        "scope": {
+          "en": "Documents the 634-635 CE Aihole prasasti of Ravikirti, which gives the Badami Chalukya genealogy: Pulakeshin I (grandfather) - Kirttivarman I (father, r. 566-592/597) - Pulakeshin II. Discovery lead; verify against the inscription text itself (already the atlas's inscription-aihole record) before promotion.",
+          "kn": "634-635ರ ರವಿಕೀರ್ತಿಯ ಐಹೊಳೆ ಪ್ರಶಸ್ತಿಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ಇದು ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ವಂಶಾವಳಿಯನ್ನು ನೀಡುತ್ತದೆ: ಪುಲಕೇಶಿ I (ಅಜ್ಜ) - ಕೀರ್ತಿವರ್ಮ I (ತಂದೆ, ಆ. 566-592/597) - ಪುಲಕೇಶಿ II. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ವಿರುದ್ಧ (ಈಗಾಗಲೇ ಭೂಪಟದ inscription-aihole ದಾಖಲೆ) ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-kadamba-talagunda-succession",
         "type": "discovery-lead",
         "title": {
@@ -83989,6 +84011,10 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Badami Chalukya dynastic sequence; family relation requires specialist locator"
+          },
+          {
+            "sourceId": "src-wikipedia-aihole-inscription",
+            "locator": "Aihole prasasti genealogy: Pulakeshin I grandfather, Kirtivarman I father, of Pulakeshin II"
           }
         ],
         "review": {
@@ -83997,8 +84023,8 @@
           "updatedAt": "2026-08-23"
         },
         "sourceRecordId": "genealogy-pulakeshin-i-kirtivarman-i",
-        "evidenceLevel": "derived",
-        "confidence": "low"
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
       },
       {
         "id": "rel-genealogy-kirtivarman-i-pulakeshin-ii",
@@ -84015,6 +84041,10 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Chalukya reign sequence; genealogy proof pending"
+          },
+          {
+            "sourceId": "src-wikipedia-aihole-inscription",
+            "locator": "Aihole prasasti: Pulakeshin II named as son of Kirtivarman I"
           }
         ],
         "review": {
@@ -84023,8 +84053,8 @@
           "updatedAt": "2026-08-23"
         },
         "sourceRecordId": "genealogy-kirtivarman-i-pulakeshin-ii",
-        "evidenceLevel": "derived",
-        "confidence": "low"
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
       },
       {
         "id": "rel-genealogy-vijayanagara-harihara-bukka-brothers",
@@ -87115,16 +87145,20 @@
           "era": "CE",
           "precision": "circa"
         },
-        "evidenceLevel": "derived",
-        "confidence": "low",
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
         "derivation": {
-          "en": "Seeded from adjacent reign periods and conventional dynasty lists; not yet a reviewed family-tree proof packet.",
-          "kn": "ಅನುಕ್ರಮ ಆಳ್ವಿಕೆ ಅವಧಿ ಮತ್ತು ಸಾಮಾನ್ಯ ವಂಶಪಟ್ಟಿಯಿಂದ ರೂಪಿಸಲಾದ ಬೀಜ ದಾಖಲೆ; ಇದು ಇನ್ನೂ ಪರಿಶೀಲಿತ ಕುಟುಂಬವೃಕ್ಷ ಸಾಕ್ಷ್ಯವಲ್ಲ."
+          "en": "The 634-635 CE Aihole prasasti of Ravikirti (inscription-aihole in this atlas) gives the Badami Chalukya genealogy naming Pulakeshin I as grandfather and Kirtivarman I as father of Pulakeshin II, confirming this parent-child link. Independent review of the inscription text is still required before promotion.",
+          "kn": "634-635ರ ರವಿಕೀರ್ತಿಯ ಐಹೊಳೆ ಪ್ರಶಸ್ತಿ (ಈ ಭೂಪಟದಲ್ಲಿ inscription-aihole) ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ವಂಶಾವಳಿಯನ್ನು ನೀಡುತ್ತದೆ, ಪುಲಕೇಶಿ IIನ ಅಜ್ಜ ಪುಲಕೇಶಿ I ಮತ್ತು ತಂದೆ ಕೀರ್ತಿವರ್ಮ I ಎಂದು ಹೆಸರಿಸಿ ಈ ಪೋಷಕ-ಸಂತಾನ ಸಂಪರ್ಕವನ್ನು ದೃಢಪಡಿಸುತ್ತದೆ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
         },
         "citations": [
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Badami Chalukya dynastic sequence; family relation requires specialist locator"
+          },
+          {
+            "sourceId": "src-wikipedia-aihole-inscription",
+            "locator": "Aihole prasasti genealogy: Pulakeshin I grandfather, Kirtivarman I father, of Pulakeshin II"
           }
         ],
         "review": {
@@ -87149,16 +87183,20 @@
           "era": "CE",
           "precision": "circa"
         },
-        "evidenceLevel": "derived",
-        "confidence": "low",
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
         "derivation": {
-          "en": "Derived from reign sequence until the underlying inscription/genealogical text is reviewed.",
-          "kn": "ಮೂಲ ಶಾಸನ/ವಂಶವಿವರಣೆ ಪರಿಶೀಲನೆಯಾಗುವವರೆಗೆ ಆಳ್ವಿಕೆ ಅನುಕ್ರಮದಿಂದ ರೂಪಿಸಲಾಗಿದೆ."
+          "en": "The 634-635 CE Aihole prasasti of Ravikirti (inscription-aihole in this atlas) names Pulakeshin II as son of Kirtivarman I, confirming this parent-child link. Independent review of the inscription text is still required before promotion.",
+          "kn": "634-635ರ ರವಿಕೀರ್ತಿಯ ಐಹೊಳೆ ಪ್ರಶಸ್ತಿ (ಈ ಭೂಪಟದಲ್ಲಿ inscription-aihole) ಪುಲಕೇಶಿ IIನನ್ನು ಕೀರ್ತಿವರ್ಮ Iನ ಮಗ ಎಂದು ಹೆಸರಿಸಿ ಈ ಪೋಷಕ-ಸಂತಾನ ಸಂಪರ್ಕವನ್ನು ದೃಢಪಡಿಸುತ್ತದೆ. ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಪಠ್ಯದ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಅಗತ್ಯ."
         },
         "citations": [
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Chalukya reign sequence; genealogy proof pending"
+          },
+          {
+            "sourceId": "src-wikipedia-aihole-inscription",
+            "locator": "Aihole prasasti: Pulakeshin II named as son of Kirtivarman I"
           }
         ],
         "review": {
