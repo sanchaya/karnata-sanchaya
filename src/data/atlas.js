@@ -22,7 +22,7 @@ import { dictionaryMartyrCandidateMeta, dictionaryMartyrCandidates } from './dic
 import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
 import { administrativeDivisions, feudatoryRelations, karnataReachEvents, karnataReachHeritage, karnataReachPeople, karnataReachPlaces, karnataReachPolities, karnataReachSources, openDatasetCatalogue, scriptEvolution } from './research-foundations.js'
 import { boundaryEvidence, coinRecords, genealogicalRelations, inscriptionEditions, manuscriptWitnesses } from './p1-model-foundations.js'
-import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionHeritage, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
+import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionHeritage, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionManuscriptWitnesses, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
 import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js'
 import { applyExternalCapitalLinks } from './external-capitals.js'
 
@@ -202,6 +202,7 @@ appendUniqueById(atlasData.events, karnataReachEvents)
 appendUniqueById(atlasData.events, sourceVolumeExtractionEvents)
 appendUniqueById(atlasData.inscriptions, sourceVolumeExtractionInscriptions)
 appendUniqueById(atlasData.inscriptionEditions, sourceVolumeExtractionInscriptionEditions)
+appendUniqueById(atlasData.manuscriptWitnesses, sourceVolumeExtractionManuscriptWitnesses)
 appendUniqueById(atlasData.coinRecords, sourceVolumeExtractionCoinRecords)
 applyPaleographyMaturitySprint(atlasData, appendUniqueById)
 appendUniqueById(atlasData.sources, [{
