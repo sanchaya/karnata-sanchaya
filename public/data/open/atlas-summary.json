@@ -39576,6 +39576,28 @@
         }
       },
       {
+        "id": "src-wikipedia-kaidala-chennakeshava",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Kaidala Chennakeshava Temple discovery lead",
+          "kn": "ಕೈದಾಳ ಚೆನ್ನಕೇಶವ ದೇವಾಲಯ ಅನ್ವೇಷಣಾ ಸುಳಿವು"
+        },
+        "authors": [
+          "Web discovery aggregation"
+        ],
+        "year": null,
+        "url": "https://www.tripoto.com/tumkur/trips/chenna-keshava-temple-kaidala-tumkur-947359",
+        "scope": {
+          "en": "Documents the Chennakeshava temple at Kaidala village (Tumkur district), built 1150-1151 CE by the local chief Samanta/Gule Bachi, a subordinate of the Hoysala king Narasimha I; two Hale Kannada stone inscriptions at the adjacent Gangadhareshwara temple record the foundation, along with a Narayana temple. Discovery lead aggregated from multiple secondary web sources; verify against Epigraphia Carnatica (Tumkur district) and the inscription text itself before promotion.",
+          "kn": "ಕೈದಾಳ ಗ್ರಾಮದ (ತುಮಕೂರು ಜಿಲ್ಲೆ) ಚೆನ್ನಕೇಶವ ದೇವಾಲಯವನ್ನು ದಾಖಲಿಸುತ್ತದೆ, 1150-1151ರಲ್ಲಿ ಸ್ಥಳೀಯ ಮುಖಂಡ ಸಾಮಂತ/ಗುಳೆ ಬಚ್ಚಿ, ಹೊಯ್ಸಳ ಅರಸ ನರಸಿಂಹ Iನ ಅಧೀನ, ಕಟ್ಟಿಸಿದ್ದು; ಪಕ್ಕದ ಗಂಗಾಧರೇಶ್ವರ ದೇವಾಲಯದಲ್ಲಿನ ಎರಡು ಹಳೆಗನ್ನಡ ಶಿಲಾಶಾಸನಗಳು ಈ ಸ್ಥಾಪನೆಯನ್ನು, ನಾರಾಯಣ ದೇವಾಲಯದೊಂದಿಗೆ, ದಾಖಲಿಸುತ್ತವೆ. ಹಲವಾರು ದ್ವಿತೀಯ ಜಾಲ ಆಕರಗಳಿಂದ ಸಂಗ್ರಹಿಸಿದ ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ (ತುಮಕೂರು ಜಿಲ್ಲೆ) ಮತ್ತು ಶಾಸನ ಪಠ್ಯದ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-battle-of-raichur",
         "type": "discovery-lead",
         "title": {
@@ -78987,6 +79009,69 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Tumakuru district chapter: foundation stones and civic history to be located"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-tumakuru-kaidala-chennakeshava-foundation-polity-1",
+        "fromId": "district-history-tumakuru-kaidala-chennakeshava-foundation",
+        "type": "district-history-polity-context",
+        "toId": "polity-western-ganga",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kaidala-chennakeshava",
+            "locator": "Chennakeshava temple built 1150-1151 CE by Samanta Bachi, subordinate of Hoysala king Narasimha I; two Hale Kannada inscriptions at the Gangadhareshwara temple"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Tumakuru district chapter: foundation-stone and locality-history context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-tumakuru-kaidala-chennakeshava-foundation-polity-2",
+        "fromId": "district-history-tumakuru-kaidala-chennakeshava-foundation",
+        "type": "district-history-polity-context",
+        "toId": "polity-hoysala",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kaidala-chennakeshava",
+            "locator": "Chennakeshava temple built 1150-1151 CE by Samanta Bachi, subordinate of Hoysala king Narasimha I; two Hale Kannada inscriptions at the Gangadhareshwara temple"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Tumakuru district chapter: foundation-stone and locality-history context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-tumakuru-kaidala-chennakeshava-foundation-polity-3",
+        "fromId": "district-history-tumakuru-kaidala-chennakeshava-foundation",
+        "type": "district-history-polity-context",
+        "toId": "polity-mysore",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kaidala-chennakeshava",
+            "locator": "Chennakeshava temple built 1150-1151 CE by Samanta Bachi, subordinate of Hoysala king Narasimha I; two Hale Kannada inscriptions at the Gangadhareshwara temple"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Tumakuru district chapter: foundation-stone and locality-history context"
           }
         ],
         "review": {

@@ -338,13 +338,16 @@ test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated'
     assert.equal(atlasData.reigns.find(item => item.id === id)?.review.status, 'needs-review')
   }
   assert.equal(atlasData.people.filter(item => !(item.citations || []).length).length, 0)
-  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 36)
+  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 37)
   const sanganakallu = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-ballari-sanganakallu-kupgal-neolithic-complex')
   assert.equal(sanganakallu?.location.precision, 'approximate')
   assert.equal(sanganakallu?.evidenceBasis, 'archaeological-report')
   const kolarCapital = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-kolar-kuvalala-western-ganga-capital')
   assert.equal(kolarCapital?.location.precision, 'approximate')
   assert.equal(kolarCapital?.category, 'urban-foundation')
+  const kaidalaTemple = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-tumakuru-kaidala-chennakeshava-foundation')
+  assert.equal(kaidalaTemple?.location.precision, 'approximate')
+  assert.equal(kaidalaTemple?.category, 'foundation-stone')
   for (const id of ['extent-kadamba-core-prototype','extent-western-ganga-core-prototype','extent-hoysala-ballala-ii-1187','extent-vijayanagara-krishnadevaraya-core-1520']) {
     const extent = atlasData.territorialExtents.find(item => item.id === id)
     assert.equal(extent?.confidence, 'medium')
