@@ -18,6 +18,7 @@ A Kannada-first React/Vite atlas for exploring Karnataka's history through a tim
 - Event-driven chronology through 1956 with battles, campaigns, invasions, accessions and democratic reorganisation
 - District deep-history explorer with 31 district research scopes for prehistoric places, settlement origins, foundation stones and locality histories; indicative leads remain visibly needs-review
 - Karnataka and Wider India map scopes with selectable campaign routes and event narratives
+- External kingdom context includes map-ready capital/context-centre links for all 52 external polities, kept review-gated until source-specific capital evidence is verified
 - Sanchaya-branded light interface using the visual tokens and official mark from fonts.sanchaya.net
 - Sanchaya-approved accounts for students, researchers, teachers, historians and the public
 - Optional encrypted institution-ID verification and a verified badge

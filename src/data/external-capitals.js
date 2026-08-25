@@ -1,0 +1,111 @@
+const n=(en,kn)=>({en,kn})
+const c=(sourceId,locator)=>({sourceId,locator})
+const review={status:'needs-review',reviewer:null,updatedAt:'2026-08-25'}
+
+const place=(id,en,kn,lng,lat,kind='historical-capital')=>({
+  id:`place-${id}`,
+  name:n(en,kn),
+  kind,
+  location:{type:'Point',coordinates:[lng,lat],precision:'approximate'},
+  citations:[c('src-prototype-boundaries','External-polity capital/context-centre seed; verify against polity-specific historical sources before promotion')],
+  review:{...review}
+})
+
+export const externalCapitalPlaces=[
+  place('kannauj','Kannauj','ಕನ್ನೌಜ್',79.92,27.05),
+  place('kanchipuram','Kanchipuram','ಕಾಂಚಿಪುರಂ',79.70,12.84),
+  place('thanjavur','Thanjavur','ತಂಜಾವೂರು',79.13,10.79),
+  place('madurai','Madurai','ಮದುರೈ',78.12,9.93),
+  place('mahodayapuram','Mahodayapuram / Kodungallur','ಮಹೋದಯಪುರಂ / ಕೊಡുങ്ങಲ್ಲೂರು',76.20,10.20),
+  place('cuttack','Cuttack','ಕಟಕ್',85.88,20.46),
+  place('delhi','Delhi','ದೆಹಲಿ',77.21,28.61),
+  place('bidar','Bidar','ಬೀದರ್',77.52,17.91),
+  place('vijayapura','Vijayapura / Bijapur','ವಿಜಯಪುರ / ಬಿಜಾಪುರ',75.71,16.83),
+  place('deccan-successor-courts','Deccan successor courts context centre','ದಖ್ಖನ್ ಉತ್ತರಾಧಿಕಾರಿ ಅರಮನೆಗಳ ಸಂದರ್ಭ ಕೇಂದ್ರ',76.80,17.20,'context-centre'),
+  place('pune','Pune','ಪುಣೆ',73.85,18.52),
+  place('hyderabad','Hyderabad','ಹೈದರಾಬಾದ್',78.49,17.39),
+  place('thiruvananthapuram','Thiruvananthapuram','ತಿರುವನಂತಪುರಂ',76.94,8.52),
+  place('changan','Chang’an / Xi’an','ಚಾಂಗ್‌ಆನ್ / ಶಿಯನ್',108.94,34.34),
+  place('beijing','Beijing','ಬೀಜಿಂಗ್',116.41,39.90),
+  place('kolkata','Calcutta / Kolkata','ಕಲ್ಕತ್ತಾ / ಕೋಲ್ಕತ್ತಾ',88.36,22.57),
+  place('new-delhi','New Delhi','ನವ ದೆಹಲಿ',77.21,28.61),
+  place('samarkand','Samarkand','ಸಮರ್ಕಂದ್',67.00,39.65),
+  place('paris','Paris','ಪ್ಯಾರಿಸ್',2.35,48.86),
+  place('munger','Munger / Monghyr','ಮುಂಗೇರ್',86.47,25.37),
+  place('warangal','Warangal','ವಾರಂಗಲ್',79.59,17.97),
+  place('dhara','Dhara / Dhar','ಧಾರಾ / ಧಾರ್',75.30,22.60),
+  place('pataliputra','Pataliputra / Patna','ಪಾಟಲಿಪುತ್ರ / ಪಾಟ್ನಾ',85.14,25.61),
+  place('indrapura-champa','Indrapura, Champa context','ಇಂದ್ರಪುರ, ಚಂಪಾ ಸಂದರ್ಭ',108.25,15.88,'context-centre'),
+  place('kaifeng','Kaifeng','ಕೈಫೆಂಗ್',114.31,34.80),
+  place('lumbini','Lumbini','ಲುಂಬಿನಿ',83.28,27.48,'sacred-landscape-centre'),
+  place('peshawar','Peshawar / Purushapura','ಪೇಶಾವರ್ / ಪುರುಷಪುರ',71.52,34.02),
+  place('takuapa-port','Takuapa port','ತಕುವಾಪಾ ಬಂದರು',98.35,8.98,'historical-port'),
+  place('polonnaruwa','Polonnaruwa','ಪೊಲೊನ್ನರುವ',81.00,7.94),
+  place('bujang-valley','Bujang Valley / Old Kedah','ಬುಜಾಂಗ್ ಕಣಿವೆ / ಪ್ರಾಚೀನ ಕೆದಾಹ್',100.45,5.70,'historical-port-region'),
+  place('temasek','Temasek / Singapore','ತೆಮಾಸೆಕ್ / ಸಿಂಗಪುರ',103.85,1.29,'historical-port'),
+  place('nagapattinam','Nagapattinam maritime context centre','ನಾಗಪಟ್ಟಣಂ ಸಮುದ್ರ ಸಂದರ್ಭ ಕೇಂದ್ರ',79.84,10.77,'context-centre'),
+  place('ullal','Ullal','ಉಳ್ಳಾಲ',74.85,12.80,'historical-port-capital'),
+]
+
+export const externalCapitalIds={
+  'external-polity-harsha':'place-kannauj',
+  'external-polity-pallava':'place-kanchipuram',
+  'external-polity-chola':'place-thanjavur',
+  'external-polity-seuna':'place-devagiri',
+  'external-polity-pandya':'place-madurai',
+  'external-polity-chera':'place-mahodayapuram',
+  'external-polity-eastern-ganga':'place-cuttack',
+  'external-polity-gajapati':'place-cuttack',
+  'external-polity-delhi-sultanate':'place-delhi',
+  'external-polity-mughal-empire':'place-delhi',
+  'external-polity-bahmani':'place-bidar',
+  'external-polity-adil-shahi':'place-vijayapura',
+  'external-polity-chitradurga-nayaka':'place-chitradurga-fort',
+  'external-polity-deccan-sultanates':'place-deccan-successor-courts',
+  'external-polity-maratha-confederacy':'place-pune',
+  'external-polity-hyderabad-state':'place-hyderabad',
+  'external-polity-travancore':'place-thiruvananthapuram',
+  'external-polity-madurai-nayak':'place-madurai',
+  'external-polity-thanjavur-maratha':'place-thanjavur',
+  'external-polity-tang-china':'place-changan',
+  'external-polity-ming-china':'place-beijing',
+  'external-polity-portuguese-india':'place-goa',
+  'external-polity-british-east-india-company':'place-kolkata',
+  'external-polity-british-india':'place-new-delhi',
+  'external-polity-india':'place-new-delhi',
+  'external-polity-timurid-empire':'place-samarkand',
+  'external-polity-zand-iran':'place-shiraz',
+  'external-polity-ottoman-empire':'place-istanbul',
+  'external-polity-kingdom-france':'place-paris',
+  'external-polity-gurjara-pratihara':'place-kannauj',
+  'external-polity-pala':'place-munger',
+  'external-polity-kakatiya':'place-warangal',
+  'external-polity-paramara':'place-dhara',
+  'external-polity-maurya':'place-pataliputra',
+  'external-polity-champa':'place-indrapura-champa',
+  'external-polity-ayyavole-guild':'place-aihole',
+  'external-polity-song-china':'place-kaifeng',
+  'external-polity-shakya-lumbini':'place-lumbini',
+  'external-polity-gandhara':'place-peshawar',
+  'external-polity-takuapa-port':'place-takuapa-port',
+  'external-polity-barus-port':'place-lobu-tua',
+  'external-polity-sri-lanka':'place-polonnaruwa',
+  'external-polity-old-kedah':'place-bujang-valley',
+  'external-polity-temasek-singapore':'place-temasek',
+  'external-polity-south-asian-merchant-network':'place-nagapattinam',
+  'external-polity-kittur':'place-kittur',
+  'external-polity-karnata-tirhut':'place-simraungarh',
+  'external-polity-eastern-chalukya-vengi':'place-vengi',
+  'external-polity-goa-kadamba':'place-gopakapattana',
+  'external-polity-sevuna-devagiri':'place-devagiri',
+  'external-polity-ullal-chowta':'place-ullal',
+  'external-polity-keladi-nayaka':'place-keladi',
+}
+
+export function applyExternalCapitalLinks(atlasData,appendUniqueById){
+  appendUniqueById(atlasData.places,externalCapitalPlaces)
+  atlasData.externalPolities.forEach(polity=>{
+    const capitalId=externalCapitalIds[polity.id]
+    if(capitalId)polity.capitalId=capitalId
+  })
+}

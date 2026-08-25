@@ -232,8 +232,8 @@ const externallyGovernedPhases=atlasData.externalGovernancePhases.map(phase=>({
   rulerNames:atlasData.people.filter(person=>person.polityId===phase.governingPolityId).map(person=>person.name),literature:[],
 }))
 const contextualExternalKingdoms=atlasData.externalPolities.filter(polity=>polity.date&&polity.extent).map(polity=>({
-  ...polity,type:'external-context',start:polity.date.from,end:polity.date.to,capitalId:null,
-  capitalName:polity.capital||{en:'Contextual centre',kn:'ಸಂದರ್ಭ ಕೇಂದ್ರ'},
+  ...polity,type:'external-context',start:polity.date.from,end:polity.date.to,capitalId:polity.capitalId||null,
+  capitalName:placeById.get(polity.capitalId)?.name||polity.capital||{en:'Contextual centre',kn:'ಸಂದರ್ಭ ಕೇಂದ್ರ'},
   polygon:polity.extent.map(([lng,lat])=>[lat,lng]),
   extent:{type:'Polygon',coordinates:polity.extent,precision:'schematic-context'},
   rulers:[],rulerNames:[],literature:[],
