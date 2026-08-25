@@ -182,6 +182,14 @@ Current first targets:
 | --- | --- | --- |
 | `manuscript-kumaravyasa-bharata-sanchaya-witness-lead` | The Kuvempu/Masti Venkatesha Iyengar Government-of-Mysore critical edition (676 pp., freely downloadable) plus the Murty Classical Library of India scholarly bilingual translation (Harvard University Press) as an edition-comparison witness. `editionComparison` moved to `located`; `access.status` moved to `public`. | Formal copyright/licence status of the Mysore-era edition is not independently confirmed (`license` stays `provisional`); independent scholarly review still required. |
 | `manuscript-torave-ramayana-sanchaya-witness-lead` | A 1977 Kannada Sahitya Parishat print edition, Volume 2, freely downloadable on the Internet Archive. `editionComparison` moved to `located`; `access.status` moved to `public`; `completeness` set to `fragmentary` since only Volume 2 has been found so far. | Locate Volume 1; confirm licence status; independent scholarly review. |
+
+A second pass extended the same treatment to two more witness leads and corrected a second dead repository link:
+
+| Record | What's now located | Still open |
+| --- | --- | --- |
+| `manuscript-kavirajamarga-sanchaya-witness-lead` | R.V.S. Sundaram's verse-by-verse English/modern-Kannada translation of Kavirajamarga, freely downloadable on the Internet Archive. `editionComparison` moved to `located`; `access.status` moved to `public`. | Confirm licence status; independent scholarly review. |
+| `manuscript-vikramarjuna-vijaya-sanchaya-witness-lead` | The Kuvempu-edited 1969 Mysore University edition (492 pp.), scanned by Servants of Knowledge, freely downloadable on the Internet Archive. `editionComparison` moved to `located`; `access.status` moved to `public`; `completeness` set to `complete`. | Confirm licence status; independent scholarly review. |
+| `manuscript-adipurana-printed-edition-lead` | Nothing new — the cited CESCK catalogue URL also no longer resolves (same dead-link issue found for Vaddaradhane), so `repositoryRecord` was downgraded from `located` to `provisional` and `access.status` to `unresolved`. | Re-locate a working CESCK (or successor) manuscript catalogue. |
 | `manuscript-vaddaradhane-palm-leaf-witness-lead` | Nothing new — the cited CESCK catalogue URL (cesck.uni-mysore.ac.in) no longer resolves (checked 2026-08-25), so `repositoryRecord` was downgraded from `located` to `provisional` and `access.status` to `unresolved` rather than left pointing at a dead link. | Re-locate a working CESCK (or successor) manuscript catalogue before the shelfmark for the 1434 witness can be resolved. |
 
 ### Script evolution maturity

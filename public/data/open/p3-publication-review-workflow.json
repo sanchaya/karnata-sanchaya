@@ -10466,8 +10466,8 @@
         "workId": "work-kavirajamarga",
         "witnessKind": "digital-edition-lead",
         "repository": {
-          "en": "Sanchaya / Kannada digital text projects",
-          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+          "en": "R.V.S. Sundaram verse-by-verse translation, digitized on the Internet Archive; the Sanchaya digital-text-project claim in the original lead could not be verified (sanchaya.org blocks automated access)",
+          "kn": "ಆರ್.ವಿ.ಎಸ್. ಸುಂದರಂ ಸಾಲುವಾರು ಅನುವಾದ, ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನಲ್ಲಿ ಡಿಜಿಟಲೀಕೃತ; ಮೂಲ ದಾರಿಯ ಸಂಚಯ ಡಿಜಿಟಲ್-ಪಠ್ಯ-ಯೋಜನೆ ಹಕ್ಕನ್ನು ಪರಿಶೀಲಿಸಲಾಗಲಿಲ್ಲ (sanchaya.org ಸ್ವಯಂಚಾಲಿತ ಪ್ರವೇಶವನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ)"
         },
         "shelfmark": null,
         "date": {
@@ -10480,27 +10480,31 @@
         "script": "Kannada",
         "completeness": "unknown",
         "access": {
-          "status": "linked-lead",
-          "url": "https://sanchaya.org"
+          "status": "public",
+          "url": "https://archive.org/details/KavirajamargamR.V.S.Sundaram"
         },
         "evidenceGates": {
           "repositoryRecord": {
             "status": "located"
           },
           "shelfmark": {
-            "status": "unresolved"
+            "status": "not-applicable"
           },
           "editionComparison": {
-            "status": "unresolved"
+            "status": "located"
           },
           "license": {
-            "status": "unresolved"
+            "status": "provisional"
           }
         },
         "citations": [
           {
             "sourceId": "src-gazetteer-karnataka-1983",
-            "locator": "Work context; manuscript witness locator pending"
+            "locator": "Work context"
+          },
+          {
+            "sourceId": "src-archive-kavirajamarga-sundaram",
+            "locator": "R.V.S. Sundaram verse-by-verse English/modern-Kannada translation, freely downloadable"
           }
         ],
         "review": {
@@ -10518,8 +10522,8 @@
         "workId": "work-vikramarjuna-vijaya",
         "witnessKind": "digital-edition-lead",
         "repository": {
-          "en": "Sanchaya / Kannada digital text projects",
-          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+          "en": "Mysore University 1969 edition (ed. Kuvempu), digitized on the Internet Archive by Servants of Knowledge; the Sanchaya digital-text-project claim in the original lead could not be verified (sanchaya.org blocks automated access)",
+          "kn": "ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾಲಯದ 1969ರ ಆವೃತ್ತಿ (ಸಂ. ಕುವೆಂಪು), ಸರ್ವೆಂಟ್ಸ್ ಆಫ್ ನಾಲೆಡ್ಜ್‌ನಿಂದ ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನಲ್ಲಿ ಡಿಜಿಟಲೀಕೃತ; ಮೂಲ ದಾರಿಯ ಸಂಚಯ ಡಿಜಿಟಲ್-ಪಠ್ಯ-ಯೋಜನೆ ಹಕ್ಕನ್ನು ಪರಿಶೀಲಿಸಲಾಗಲಿಲ್ಲ (sanchaya.org ಸ್ವಯಂಚಾಲಿತ ಪ್ರವೇಶವನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ)"
         },
         "shelfmark": null,
         "date": {
@@ -10530,29 +10534,33 @@
         },
         "language": "Kannada",
         "script": "Kannada",
-        "completeness": "unknown",
+        "completeness": "complete",
         "access": {
-          "status": "linked-lead",
-          "url": "https://sanchaya.org"
+          "status": "public",
+          "url": "https://archive.org/details/bmshri.pampabharatamemb0000kvpu"
         },
         "evidenceGates": {
           "repositoryRecord": {
             "status": "located"
           },
           "shelfmark": {
-            "status": "unresolved"
+            "status": "not-applicable"
           },
           "editionComparison": {
-            "status": "unresolved"
+            "status": "located"
           },
           "license": {
-            "status": "unresolved"
+            "status": "provisional"
           }
         },
         "citations": [
           {
             "sourceId": "src-gazetteer-karnataka-1983",
-            "locator": "Pampa and court context; edition witness pending"
+            "locator": "Pampa and court context"
+          },
+          {
+            "sourceId": "src-archive-vikramarjuna-vijaya-kuvempu",
+            "locator": "Kuvempu-edited Mysore University edition, 1969, 492 pp., freely downloadable"
           }
         ],
         "review": {
@@ -10570,8 +10578,8 @@
         "workId": "work-adipurana",
         "witnessKind": "printed-edition",
         "repository": {
-          "en": "Centre of Excellence for Studies in Classical Kannada catalogue lead",
-          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಅಧ್ಯಯನ ಉತ್ಕೃಷ್ಟತಾ ಕೇಂದ್ರದ ಪಟ್ಟಿಸುಳಿವು"
+          "en": "Centre of Excellence for Studies in Classical Kannada catalogue lead; the cited cesck.uni-mysore.ac.in URL no longer resolves (checked 2026-08-25), so the repository record itself needs re-locating",
+          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಅಧ್ಯಯನ ಉತ್ಕೃಷ್ಟತಾ ಕೇಂದ್ರದ ಪಟ್ಟಿಸುಳಿವು; ಉಲ್ಲೇಖಿಸಿದ cesck.uni-mysore.ac.in URL ಇನ್ನು ಪರಿಹರಿಸುವುದಿಲ್ಲ (2026-08-25ರಂದು ಪರಿಶೀಲಿಸಲಾಗಿದೆ), ಆದ್ದರಿಂದ ಪಟ್ಟಿ ದಾಖಲೆಯನ್ನೇ ಮರುಗುರುತಿಸಬೇಕು"
         },
         "shelfmark": null,
         "date": {
@@ -10584,12 +10592,12 @@
         "script": "Kannada",
         "completeness": "unknown",
         "access": {
-          "status": "linked-lead",
-          "url": "https://cesck.uni-mysore.ac.in"
+          "status": "unresolved",
+          "url": null
         },
         "evidenceGates": {
           "repositoryRecord": {
-            "status": "located"
+            "status": "provisional"
           },
           "shelfmark": {
             "status": "unresolved"
@@ -10604,7 +10612,7 @@
         "citations": [
           {
             "sourceId": "src-cesck-adipurana",
-            "locator": "Palm-leaf and paper manuscripts; first publication 1900 by S. G. Narasimhachar; later editions listed"
+            "locator": "Palm-leaf and paper manuscripts; first publication 1900 by S. G. Narasimhachar; later editions listed; catalogue URL dead as of 2026-08-25, repository re-verification needed"
           }
         ],
         "review": {
