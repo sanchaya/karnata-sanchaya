@@ -42,6 +42,11 @@ test('public navigation keeps the complete release route set and admin private',
 test('navigation separates historical exploration from project utilities', () => {
   assert.match(appSource, /const primaryNavItems=/, 'historical exploration routes must remain grouped together')
   assert.match(appSource, /const utilityNavItems=/, 'about, research and contribution routes must share a utility group')
+  const primaryNavBlock = appSource.match(/const primaryNavItems=\[(.*?)\]\n  const utilityNavItems=/s)?.[1] || ''
+  assert.match(primaryNavBlock, /\['districts'/, 'district work must keep one visible District Atlas entry')
+  assert.doesNotMatch(primaryNavBlock, /\['district-history'/, 'deep-history must be folded into the District Atlas tab')
+  assert.doesNotMatch(primaryNavBlock, /\['inscriptions'/, 'district inscription audits must be folded into the District Atlas tab')
+  assert.match(appSource, /function DistrictHub/, 'the District Atlas hub must gather the district sections without dropping legacy routes')
   assert.match(appSource, /className="header-utility-nav"/, 'utility routes must be available in the desktop header')
   assert.match(appSource, /className="nav-utility-link"|navLink\(item,'nav-utility-link'\)/, 'utility routes must remain available in the responsive menu')
   const publicHeader = appSource.slice(appSource.indexOf('<header><div className="sanchaya-product-brand"'), appSource.indexOf('<nav id="primary-navigation"'))

@@ -106,7 +106,7 @@ const seoPages={
   epigraphy:{kn:['ಕರ್ನಾಟಕ ಶಾಸನ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಶಾಸನಗಳು, ಲಿಪಿಗಳು, ಭಾಷೆಗಳು, ಪಠ್ಯಗಳು, ಅನುವಾದ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಅನ್ವೇಷಿಸಿ.'],en:['Karnataka Epigraphy Explorer · Karnataka Historical Atlas','Explore Karnataka inscriptions, scripts, languages, editions, translations and review status.']},
   people:{kn:['ವ್ಯಕ್ತಿಗಳ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಅರಸರು, ರಾಣಿಯರು, ಕವಿಗಳು, ವಿದ್ವಾಂಸರು, ಯೋಧರು, ಕಾಯಕಜೀವಿಗಳು ಮತ್ತು ಜನಸಮುದಾಯದ ಪ್ರಮುಖ ವ್ಯಕ್ತಿಗಳನ್ನು ಕಾಲ ಮತ್ತು ಸ್ಥಳದೊಂದಿಗೆ ಅನ್ವೇಷಿಸಿ.'],en:['People Explorer · Karnataka Historical Atlas','Explore rulers, queens, poets, scholars, soldiers, working people and community figures through time and place.']},
   freedom:{kn:['ಕರ್ನಾಟಕದ ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟಗಾರರು, ಘಟನೆಗಳು, ಬಂಧನ, ಸೆರೆವಾಸ, ಪ್ರತಿರೋಧ, ಹುತಾತ್ಮತೆ ಮತ್ತು ಜಿಲ್ಲಾವಾರು ಸಾಕ್ಷ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.'],en:["Karnataka's Freedom Movement · Karnataka Historical Atlas",'Explore Karnataka freedom fighters, events, arrests, imprisonment, resistance, martyrdom and district evidence.']},
-  districts:{kn:['ಜಿಲ್ಲಾ ಪರಂಪರೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಜಿಲ್ಲಾವಾರು ದೇವಾಲಯ, ಬಸದಿ, ದರ್ಗಾ, ಚರ್ಚ್, ಮಠ, ಕೋಟೆ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪದ ದಾಖಲೆಗಳು.'],en:['District Heritage · Karnataka Historical Atlas','District-level records of Karnataka temples, basadis, dargahs, churches, monasteries, forts and architecture.']},
+  districts:{kn:['ಜಿಲ್ಲಾ ಸಮಗ್ರ ಅಟ್ಲಸ್ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಜಿಲ್ಲಾವಾರು ಸ್ಥಳೀಯ ಇತಿಹಾಸ, ಪರಂಪರೆ ತಾಣಗಳು, ಶಾಸನ ಪರಿಶೀಲನೆ ಮತ್ತು ಆಮದು ಮಾಡಿದ ಸ್ಮಾರಕ ಪಟ್ಟಿಗಳನ್ನು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ ಅನ್ವೇಷಿಸಿ.'],en:['District Atlas · Karnataka Historical Atlas','Explore district-level local history, heritage sites, inscription review and imported monument inventories in one workspace.']},
   'district-history':{kn:['ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಪೂರ್ವೈತಿಹಾಸಿಕ ತಾಣಗಳು, ವಸತಿ ಮೂಲಗಳು, ಸ್ಥಾಪನಾ ಶಿಲೆಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ಇತಿಹಾಸದ ಸಂಶೋಧನಾ ಅಭ್ಯರ್ಥಿಗಳು.'],en:['District Deep History · Karnataka Historical Atlas','Research leads for prehistoric places, settlement origins, foundation stones and locality histories across Karnataka.']},
   inscriptions:{kn:['ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಜಿಲ್ಲಾವಾರು ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳು, ಸಂಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನಾ ಪ್ರಗತಿ.'],en:['District Inscription Audits · Karnataka Historical Atlas','District inscription candidates, corpus locators and evidence-verification progress.']},
   coins:{kn:['ನಾಣ್ಯ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕ ಮತ್ತು ಕರ್ಣಾಟ ಸಂಬಂಧಿತ ನಾಣ್ಯ ದಾರಿಗಳನ್ನು ಪಟ್ಟಿ, ಚಿತ್ರ, ಲೋಹ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಸಾಕ್ಷ್ಯಗಳೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ.'],en:['Coin Explorer · Karnataka Historical Atlas','Explore Karnataka and Karnata-related coin leads with catalogue, image, metal, weight and findspot evidence gates.']},
@@ -662,6 +662,38 @@ function InscriptionAuditSection({locale,t,onChooseInscription,districtGeojson})
   </section>
 }
 
+function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInscription}){
+  const districtScopes=atlasData.districtHistoryResearch.filter(record=>record.recordKind==='district-scope').length
+  const mappedLeads=atlasData.districtHistoryResearch.filter(record=>record.recordKind==='candidate'&&record.location?.coordinates).length
+  const heritageSites=atlasData.heritageAudits.reduce((total,audit)=>total+audit.prioritySites.length,0)
+  const inscriptionCandidates=atlasData.inscriptionAudits.reduce((total,audit)=>total+audit.priorityCandidates.length,0)
+  return <div className="portal-page district-hub" id="districts">
+    <section className="district-hub-intro">
+      <div>
+        <p className="eyebrow">{locale==='kn'?'ಒಂದು ಜಿಲ್ಲಾ ಕಾರ್ಯಸ್ಥಳ':'One district workspace'}</p>
+        <h2>{locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಅಟ್ಲಸ್':'District Atlas'}</h2>
+        <p>{locale==='kn'?'ಸ್ಥಳೀಯ ಇತಿಹಾಸ, ಪರಂಪರೆ ತಾಣಗಳು, ಶಾಸನ ಪರಿಶೀಲನೆ ಮತ್ತು ಆಮದು ಮಾಡಿದ ಸ್ಮಾರಕ ಪಟ್ಟಿಗಳನ್ನು ಬೇರೆ ಬೇರೆ ಟ್ಯಾಬ್‌ಗಳಲ್ಲಿ ಹುಡುಕಬೇಕಾಗಿಲ್ಲ. ಹಳೆಯ ಕೊಂಡಿಗಳು ಕೆಲಸ ಮಾಡುತ್ತವೆ; ಎಲ್ಲಾ ಜಿಲ್ಲಾ ಕೆಲಸ ಈಗ ಇಲ್ಲೇ ಸೇರುತ್ತದೆ.':'Local history, heritage sites, inscription review and imported monument inventories no longer need separate tabs. Older links still work; the district work now gathers here.'}</p>
+      </div>
+      <div className="district-hub-stats" aria-label={locale==='kn'?'ಜಿಲ್ಲಾ ಅಂಕಿಅಂಶಗಳು':'District statistics'}>
+        <span><b>{districtScopes}</b>{locale==='kn'?'ಜಿಲ್ಲಾ ವ್ಯಾಪ್ತಿಗಳು':'district scopes'}</span>
+        <span><b>{mappedLeads}</b>{locale==='kn'?'ನಕ್ಷೆಗೊಳಿಸಿದ ಇತಿಹಾಸ ಸುಳಿವುಗಳು':'mapped history leads'}</span>
+        <span><b>{heritageSites}</b>{locale==='kn'?'ಪರಂಪರೆ ಅಭ್ಯರ್ಥಿಗಳು':'heritage candidates'}</span>
+        <span><b>{inscriptionCandidates}</b>{locale==='kn'?'ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳು':'inscription candidates'}</span>
+      </div>
+      <nav className="district-hub-jump" aria-label={locale==='kn'?'ಜಿಲ್ಲಾ ವಿಭಾಗಗಳು':'District sections'}>
+        <a href="#district-history">{locale==='kn'?'ಸ್ಥಳೀಯ ಇತಿಹಾಸ':'Local history'}</a>
+        <a href="#district-audit">{locale==='kn'?'ಪರಂಪರೆ ತಾಣಗಳು':'Heritage sites'}</a>
+        <a href="#inscription-audit">{locale==='kn'?'ಶಾಸನ ಪರಿಶೀಲನೆ':'Inscription review'}</a>
+        <a href="#district-inventory">{locale==='kn'?'ಸ್ಮಾರಕ ಪಟ್ಟಿ':'Monument inventory'}</a>
+      </nav>
+    </section>
+    <Suspense fallback={<PortalFallback/>}><DistrictHistoryExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>
+    <DistrictAuditSection locale={locale} t={t} districtGeojson={districtGeojson}/>
+    <InscriptionAuditSection locale={locale} t={t} districtGeojson={districtGeojson} onChooseInscription={onChooseInscription}/>
+    <div id="district-inventory"><HeritageInventorySection locale={locale} t={t}/></div>
+  </div>
+}
+
 export default function App(){
   const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','community','profile','about']
   const normalizeView=hash=>hash==='history'?'district-history':hash
@@ -819,9 +851,10 @@ export default function App(){
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['districts',t.districtHeritagePage],['district-history',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ':'District deep history'],['inscriptions',locale==='kn'?'ಜಿಲ್ಲಾ ಶಾಸನ':'District inscriptions']]
+  const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['districts',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಅಟ್ಲಸ್':'District atlas']]
   const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]
-  const navLink=([key,label],className='')=><a key={key} className={`${className} ${view===key?'active':''}`.trim()} aria-current={view===key?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(key===view){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
+  const isNavActive=key=>key==='districts'?['districts','district-history','inscriptions'].includes(view):view===key
+  const navLink=([key,label],className='')=><a key={key} className={`${className} ${isNavActive(key)?'active':''}`.trim()} aria-current={isNavActive(key)?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(isNavActive(key)){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
   const renderMapLayerControl=([key,label])=><div className={`map-layer-row map-layer-row-${key}`} key={key}><label className={key==='people'?'people-map-toggle':''}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key]}))}/><span>{label}</span></label>{key==='inscriptions'&&layers.inscriptions&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label>}{key==='researchCandidates'&&layers.researchCandidates&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllReviewCandidates} onChange={event=>setShowAllReviewCandidates(event.target.checked)}/><span>{t.showAllReviewCandidates}</span></label>}</div>
   if(admin)return <Suspense fallback={<PortalFallback/>}><Admin onClose={closeAdmin} locale={locale} onLocaleChange={changeLocale}/></Suspense>
@@ -875,9 +908,9 @@ export default function App(){
     </main>}
     {view==='research'&&<Suspense fallback={<PortalFallback/>}><ResourcesCollaborations locale={locale} methodCards={t.cards}/></Suspense>}
     {view==='relations'&&<Suspense fallback={<PortalFallback/>}><GlobalRelationsExplorer locale={locale} mapTheme={mapTheme} setMapTheme={setMapTheme} onOpenAtlas={item=>{if(item.kind==='event'){const event=events.find(record=>record.id===item.id);if(event)chooseEvent(event)}else{const territory=territorialExtents.find(record=>record.id===item.id);if(territory)chooseTerritory(territory)}navigateView('atlas')}}/></Suspense>}
-    {view==='inscriptions'&&<div className="portal-page" id="inscriptions"><InscriptionAuditSection locale={locale} t={t} districtGeojson={districtGeojson} onChooseInscription={item=>{chooseInscription(item);navigateView('atlas')}}/></div>}
-    {view==='districts'&&<div className="portal-page" id="districts"><DistrictAuditSection locale={locale} t={t} districtGeojson={districtGeojson}/><HeritageInventorySection locale={locale} t={t}/></div>}
-    {view==='district-history'&&<Suspense fallback={<PortalFallback/>}><DistrictHistoryExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>}
+    {view==='inscriptions'&&<DistrictHub locale={locale} t={t} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme} onChooseInscription={item=>{chooseInscription(item);navigateView('atlas')}}/>}
+    {view==='districts'&&<DistrictHub locale={locale} t={t} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme} onChooseInscription={item=>{chooseInscription(item);navigateView('atlas')}}/>}
+    {view==='district-history'&&<DistrictHub locale={locale} t={t} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme} onChooseInscription={item=>{chooseInscription(item);navigateView('atlas')}}/>}
     {view==='people'&&<Suspense fallback={<PortalFallback/>}><PeopleExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme} onOpenAtlas={person=>{choosePerson(person);navigateView('atlas')}}/></Suspense>}
     {view==='freedom'&&<Suspense fallback={<PortalFallback/>}><FreedomMovementExplorer locale={locale} districtGeojson={districtGeojson} mapTheme={mapTheme} setMapTheme={setMapTheme}/></Suspense>}
     {view==='literature'&&<Suspense fallback={<PortalFallback/>}><LiteratureEpigraphyExplorer kind="literature" locale={locale} mapTheme={mapTheme} onOpenAtlas={item=>{chooseWork(item);navigateView('atlas')}}/></Suspense>}
