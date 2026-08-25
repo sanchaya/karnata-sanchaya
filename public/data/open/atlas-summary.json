@@ -4854,6 +4854,62 @@
         }
       },
       {
+        "id": "person-saluva-timmarusu",
+        "name": {
+          "en": "Saluva Timmarusu (Timmarasu)",
+          "kn": "ಸಾಳುವ ತಿಮ್ಮರಸು"
+        },
+        "date": {
+          "from": 1500,
+          "to": 1524,
+          "era": "CE",
+          "precision": "range"
+        },
+        "roles": [
+          "administrator"
+        ],
+        "polityId": "polity-vijayanagara",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-battle-of-raichur",
+            "locator": "Chief minister and commander of Krishnadevaraya, led Vijayanagara forces at the Battle of Raichur, 1520, assisted by Portuguese gunners under Christovao de Figueiredo"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "person-ismail-adil-shah",
+        "name": {
+          "en": "Ismail Adil Shah",
+          "kn": "ಇಸ್ಮಾಯಿಲ್ ಆದಿಲ್ ಶಾ"
+        },
+        "date": {
+          "from": 1510,
+          "to": 1534,
+          "era": "CE",
+          "precision": "range"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "polityId": "external-polity-adil-shahi",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-battle-of-raichur",
+            "locator": "Sultan of Bijapur (Adil Shahi), defeated by Krishnadevaraya at the Battle of Raichur, 1520, after which he abandoned further conquest plans"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
         "id": "person-onake-obavva",
         "name": {
           "en": "Onake Obavva",
@@ -39520,6 +39576,28 @@
         }
       },
       {
+        "id": "src-wikipedia-battle-of-raichur",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Battle of Raichur",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ರಾಯಚೂರು ಯುದ್ಧ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Raichur",
+        "scope": {
+          "en": "Documents the 19 May 1520 Battle of Raichur: Krishnadevaraya, commanded in the field by his chief minister Saluva Timmarusu and assisted by Portuguese gunners under Christovao de Figueiredo, defeated Ismail Adil Shah of Bijapur (Adil Shahi), who abandoned further conquest plans afterward. Discovery lead; verify against Portuguese/court chronicle sources before promotion.",
+          "kn": "19 ಮೇ 1520ರ ರಾಯಚೂರು ಯುದ್ಧವನ್ನು ದಾಖಲಿಸುತ್ತದೆ: ಕೃಷ್ಣದೇವರಾಯ, ಅವನ ಮುಖ್ಯಮಂತ್ರಿ ಸಾಳುವ ತಿಮ್ಮರಸುವಿನ ನೇತೃತ್ವದಲ್ಲಿ ಮತ್ತು ಕ್ರಿಸ್ಟೊವಾವ್ ಡಿ ಫಿಗುಯೆರೆಡೊ ನೇತೃತ್ವದ ಪೋರ್ಚುಗೀಸ್ ಫಿರಂಗಿದಾರರ ಸಹಾಯದಿಂದ, ಬಿಜಾಪುರದ (ಆದಿಲ್ ಶಾಹಿ) ಇಸ್ಮಾಯಿಲ್ ಆದಿಲ್ ಶಾನನ್ನು ಸೋಲಿಸಿದನು, ಅವನು ನಂತರ ಮತ್ತಷ್ಟು ವಿಜಯದ ಯೋಜನೆಗಳನ್ನು ಕೈಬಿಟ್ಟನು. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಪೋರ್ಚುಗೀಸ್/ಆಸ್ಥಾನ ವೃತ್ತಾಂತ ಆಕರಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-archive-ajitapurana-sannayya-ramagauda",
         "type": "digitized-print-edition",
         "title": {
@@ -51309,6 +51387,52 @@
           {
             "sourceId": "src-wikipedia-tripartite-struggle",
             "locator": "Pala-installed vassal ruler of Kannauj; defeated by Nagabhata II, later submitted to Govinda III"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "rel-person-saluva-timmarusu-polity",
+        "fromId": "person-saluva-timmarusu",
+        "type": "community-associated-with",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1500,
+          "to": 1524,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-battle-of-raichur",
+            "locator": "Chief minister and commander of Krishnadevaraya, led Vijayanagara forces at the Battle of Raichur, 1520, assisted by Portuguese gunners under Christovao de Figueiredo"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "rel-person-ismail-adil-shah-polity",
+        "fromId": "person-ismail-adil-shah",
+        "type": "governed-or-represented",
+        "toId": "external-polity-adil-shahi",
+        "date": {
+          "from": 1510,
+          "to": 1534,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-battle-of-raichur",
+            "locator": "Sultan of Bijapur (Adil Shahi), defeated by Krishnadevaraya at the Battle of Raichur, 1520, after which he abandoned further conquest plans"
           }
         ],
         "review": {
