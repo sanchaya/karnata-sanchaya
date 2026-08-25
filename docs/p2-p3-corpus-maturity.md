@@ -20,7 +20,7 @@ This runbook covers the collections that moved from “missing” to “structur
 | `genealogicalRelations` | 23 | Derived or secondary assertions; the Hoysala, Wadiyar and Western Ganga long bridges are now split into individual-generation links (still needs-review), plus the Vengi and Tuluva-line proof packets — none are final family-tree proof |
 | `coinRecords` | 10 | Catalogue/image/metal/weight/findspot gates open; new Maski Ashokan-context and Hoysala catalogue proof packets keep images, weights and findspots unresolved until reviewed |
 | `manuscriptWitnesses` | 12 | Repository leads located for some works; new Kavirajamarga Parampare, Shabdamanidarpana/Sanchaya and Itihasa Darshana literature-heavy witness leads keep shelfmark, licence and edition comparison mostly open |
-| `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; not research-grade boundary corpus |
+| `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; the three Hoysala/Tipu first-target packets now have sourced inscription, campaign and treaty evidence for some gates, each still blocked on a reign-specific source map; not research-grade boundary corpus |
 | `inscriptionEditions` | 25 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 12 | Public explorer now covers Ashokan/Satavahana Brahmi, Kadamba/Proto-Kannada, Badami Chalukya, Rashtrakuta, Kalyani Chalukya-Hoysala, Vijayanagara-Nayaka/Telugu-Kannada divergence and modern print phases; all still review-gated |
@@ -95,13 +95,15 @@ Minimum evidence per boundary packet:
 - inscription clusters and administrative-unit evidence;
 - explicit blocking evidence list until the geometry is ready.
 
+A first sourcing pass has closed several of the requiredEvidence gates below with real citations (a specific dated inscription, campaign lists, treaty text). Each record still keeps at least one blocking gate — a reign/year-specific source map has not been found for any of the three, so `geometryStatus` stays `schematic` and `review.status` stays `needs-review` for all.
+
 Current first targets:
 
-| Record | Next action |
-| --- | --- |
-| `boundary-evidence-hoysala-vishnuvardhana-1117` | Attach inscription clusters and compare Belur/Halebidu-centred source maps. |
-| `boundary-evidence-hoysala-ballala-ii-1187` | Resolve regional campaigns and inscription distribution before widening confidence. |
-| `boundary-evidence-mysore-tipu-sultan-1787` | Add treaty boundary and wartime frontier evidence; keep diplomatic links separate from territory. |
+| Record | What's now located | Still blocking |
+| --- | --- | --- |
+| `boundary-evidence-hoysala-vishnuvardhana-1117` | Inscription-cluster evidence: the Belur Chennakeshava temple inscription of 1117 records Vishnuvardhana's victory over the Cholas at Talakad, the conquest this extent centres on. | A reign-specific source map (only a whole-dynasty "greatest extent" composite has been found). |
+| `boundary-evidence-hoysala-ballala-ii-1187` | Regional-campaign evidence: wars against the Yadavas of Devagiri, Southern Kalachuris, Pandyas of Madurai and Western Chalukyas, and a move to full independence dated 1187-1193 depending on source. | Dated inscription clusters specific to this reign, and a reign-specific source map. |
+| `boundary-evidence-mysore-tipu-sultan-1787` | Treaty-boundary evidence (the 1784 Treaty of Mangalore's status-quo-ante restoration) and wartime-frontier evidence (the April 1787 Treaty of Gajendragad fixing the Tungabhadra river as the Maratha-Mysore boundary after Tipu ceded Badami). | A dated, specialist source map specific to 1787. |
 
 ### Inscription edition maturity
 
