@@ -5552,6 +5552,71 @@
         }
       },
       {
+        "id": "person-achyuta-devaraya",
+        "name": {
+          "en": "Achyuta Devaraya",
+          "kn": "ಅಚ್ಯುತ ದೇವರಾಯ"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "date": {
+          "from": 1529,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityId": "polity-vijayanagara",
+        "description": {
+          "en": "Vijayanagara ruler added from the Karnataka Parampare coin-plate lead; dates and numismatic association require catalogue review.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ ನಾಣ್ಯ-ಫಲಕ ದಾರಿಯಿಂದ ಸೇರಿಸಿದ ವಿಜಯನಗರ ಅರಸು; ದಿನಾಂಕ ಮತ್ತು ನಾಣ್ಯ ಸಂಬಂಧಕ್ಕೆ catalogue ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR locator for Krishnadevaraya and Achyuta Devaraya gold coins; specimen catalogue required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "person-chamarasa-vijayanagara-officer",
+        "name": {
+          "en": "Chamarasa, Vijayanagara officer lead",
+          "kn": "ವಿಜಯನಗರ ಅಧಿಕಾರಿಯಾದ ಚಾಮರಸ ದಾರಿ"
+        },
+        "roles": [
+          "administrator",
+          "military-leader"
+        ],
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "polityId": "polity-vijayanagara",
+        "description": {
+          "en": "Review-gated lead from Karnataka Parampare OCR for a Chamarasa associated with Badami fort work around 1340.",
+          "kn": "ಸು. 1340ರ ಬಾದಾಮಿ ಕೋಟೆ ಕಾರ್ಯದೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಚಾಮರಸ ಕುರಿತು ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ನಿಂದ ಬಂದ ಪರಿಶೀಲನೆ-ಬಾಕಿ ದಾರಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around Vijayanagara rise chapter: Chamarasa and Badami fort; verify page image and inscription reference"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "person-ff-3",
         "name": {
           "en": "Rani Abbakka Chowta",
@@ -23461,6 +23526,154 @@
         }
       },
       {
+        "id": "place-barkur",
+        "name": {
+          "en": "Barkur / Barakuru",
+          "kn": "ಬಾರಕೂರು"
+        },
+        "kind": "historical-port-fort",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.745,
+            13.478
+          ],
+          "precision": "approximate"
+        },
+        "geographicScope": {
+          "region": "Coastal Karnataka",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "ಭಾರತ"
+          },
+          "outsideKarnataka": false,
+          "outsideIndia": false
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Vijayanagara chapter OCR locator: Barkur fort and west-coast political context; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-ankola-port-lead",
+        "name": {
+          "en": "Ankola coastal port lead",
+          "kn": "ಅಂಕೋಲಾ ಕರಾವಳಿ ಬಂದರು ದಾರಿ"
+        },
+        "kind": "historical-port-lead",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.3,
+            14.67
+          ],
+          "precision": "approximate"
+        },
+        "geographicScope": {
+          "region": "Uttara Kannada coast",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "ಭಾರತ"
+          },
+          "outsideKarnataka": false,
+          "outsideIndia": false
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around the Vijayanagara west-coast port list; harbour identity needs review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-honnavar-port-lead",
+        "name": {
+          "en": "Honnavar coastal port lead",
+          "kn": "ಹೊನ್ನಾವರ ಕರಾವಳಿ ಬಂದರು ದಾರಿ"
+        },
+        "kind": "historical-port-lead",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.445,
+            14.28
+          ],
+          "precision": "approximate"
+        },
+        "geographicScope": {
+          "region": "Uttara Kannada coast",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "ಭಾರತ"
+          },
+          "outsideKarnataka": false,
+          "outsideIndia": false
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around the Vijayanagara west-coast port list; harbour identity needs review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "place-bhatkal-port-lead",
+        "name": {
+          "en": "Bhatkal coastal port lead",
+          "kn": "ಭಟ್ಕಳ ಕರಾವಳಿ ಬಂದರು ದಾರಿ"
+        },
+        "kind": "historical-port-lead",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.57,
+            13.99
+          ],
+          "precision": "approximate"
+        },
+        "geographicScope": {
+          "region": "Uttara Kannada coast",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "ಭಾರತ"
+          },
+          "outsideKarnataka": false,
+          "outsideIndia": false
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around the Vijayanagara west-coast port list; harbour identity needs review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "place-kalsi-ashokan-edicts",
         "name": {
           "en": "Kalsi Ashokan rock edict site",
@@ -30238,6 +30451,242 @@
         }
       },
       {
+        "id": "event-parampare-barkur-fort-lead",
+        "type": "campaign",
+        "name": {
+          "en": "Harihara I and the Barkur fort lead",
+          "kn": "ಹರಿಹರ I ಮತ್ತು ಬಾರಕೂರು ಕೋಟೆ ದಾರಿ"
+        },
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "year": 1336,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.745,
+            13.478
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Karnataka Parampare OCR gives a lead for Harihara I fortification activity at Barkur during the early Vijayanagara expansion phase. It needs page-image and inscription-reference review.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ಆರಂಭಿಕ ವಿಜಯನಗರ ವಿಸ್ತರಣೆಯ ಅವಧಿಯಲ್ಲಿ ಹರಿಹರ Iನ ಬಾರಕೂರು ಕೋಟೆ ಕಾರ್ಯದ ದಾರಿಯನ್ನು ನೀಡುತ್ತದೆ. ಪುಟಚಿತ್ರ ಮತ್ತು ಶಾಸನ-ಉಲ್ಲೇಖ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "expanding-polity",
+            "outcome": "coastal-fort-lead"
+          }
+        ],
+        "peopleIds": [
+          "person-harihara-i"
+        ],
+        "destinationPlaceId": "place-barkur",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 1987-1992: Barkur fort and early Vijayanagara authority; printed page to be reconciled"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "event-parampare-badami-fort-chamarasa-lead",
+        "type": "campaign",
+        "name": {
+          "en": "Chamarasa and the Badami fort lead",
+          "kn": "ಚಾಮರಸ ಮತ್ತು ಬಾದಾಮಿ ಕೋಟೆ ದಾರಿ"
+        },
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "year": 1340,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.68,
+            15.92
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Karnataka Parampare OCR gives a lead for Chamarasa building or strengthening the Badami fort in the early Vijayanagara period; exact inscription/page evidence is still unresolved.",
+          "kn": "ಆರಂಭಿಕ ವಿಜಯನಗರ ಅವಧಿಯಲ್ಲಿ ಚಾಮರಸನು ಬಾದಾಮಿ ಕೋಟೆಯನ್ನು ಕಟ್ಟಿದ ಅಥವಾ ಬಲಪಡಿಸಿದ ದಾರಿಯನ್ನು ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ನೀಡುತ್ತದೆ; ನಿಖರ ಶಾಸನ/ಪುಟ ಸಾಕ್ಷ್ಯ ಇನ್ನೂ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "regional-authority",
+            "outcome": "northern-frontier-fort-lead"
+          }
+        ],
+        "peopleIds": [
+          "person-chamarasa-vijayanagara-officer"
+        ],
+        "destinationPlaceId": "place-badami",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around 1340 Badami fort passage; verify against printed page and inscription source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "event-parampare-vijayanagara-west-coast-ports-lead",
+        "type": "trade-contact",
+        "name": {
+          "en": "Vijayanagara west-coast port reach lead",
+          "kn": "ವಿಜಯನಗರ ಪಶ್ಚಿಮ ಕರಾವಳಿ ಬಂದರು ವ್ಯಾಪ್ತಿ ದಾರಿ"
+        },
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "year": 1520,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.57,
+            13.99
+          ],
+          "precision": "approximate"
+        },
+        "route": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              74.3,
+              14.67
+            ],
+            [
+              74.445,
+              14.28
+            ],
+            [
+              74.57,
+              13.99
+            ],
+            [
+              74.856,
+              12.914
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "summary": {
+          "en": "Karnataka Parampare OCR lists west-coast ports such as Ankola, Honnavar, Bhatkal, Mangaluru and Barkur in Vijayanagara context; each harbour and date needs source-by-source review.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ವಿಜಯನಗರ ಸಂದರ್ಭದಲ್ಲಿನ ಅಂಕೋಲಾ, ಹೊನ್ನಾವರ, ಭಟ್ಕಳ, ಮಂಗಳೂರು ಮತ್ತು ಬಾರಕೂರು ಮುಂತಾದ ಪಶ್ಚಿಮ ಕರಾವಳಿ ಬಂದರುಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ; ಪ್ರತಿಯೊಂದು ಬಂದರು ಮತ್ತು ದಿನಾಂಕಕ್ಕೆ ಆಕರವಾರು ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "inland-empire-with-coastal-links",
+            "outcome": "port-network-lead"
+          },
+          {
+            "polityId": "external-polity-portuguese-india",
+            "role": "later-coastal-trade-context",
+            "outcome": "context-only"
+          }
+        ],
+        "peopleIds": [
+          "person-krishnadevaraya"
+        ],
+        "placeIds": [
+          "place-ankola-port-lead",
+          "place-honnavar-port-lead",
+          "place-bhatkal-port-lead",
+          "place-mangaluru",
+          "place-barkur"
+        ],
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3591-3593: west-coast port list and Vijayanagara reach; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "event-parampare-goa-portuguese-transition-lead",
+        "type": "regime-change",
+        "name": {
+          "en": "Goa transition from Karnataka-linked rule to Portuguese control lead",
+          "kn": "ಕರ್ನಾಟಕ-ಸಂಬಂಧಿತ ಆಳ್ವಿಕೆಯಿಂದ ಪೋರ್ಚುಗೀಸ್ ಗೋವಾ ಪರಿವರ್ತನೆ ದಾರಿ"
+        },
+        "date": {
+          "from": 1510,
+          "to": 1510,
+          "era": "CE",
+          "precision": "year"
+        },
+        "year": 1510,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            73.82,
+            15.49
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Karnataka Parampare OCR gives a lead for Goa moving from long Karnataka-linked royal control through Bahmani/Deccan conflict into Portuguese rule in 1510. This remains a synthesis lead until exact pages and authorities are checked.",
+          "kn": "ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ಗೋವಾ ದೀರ್ಘ ಕರ್ನಾಟಕ-ಸಂಬಂಧಿತ ರಾಜಕೀಯ ನಿಯಂತ್ರಣದಿಂದ ಬಹಮನಿ/ದಖ್ಖನ್ ಸಂಘರ್ಷದ ಮೂಲಕ 1510ರಲ್ಲಿ ಪೋರ್ಚುಗೀಸ್ ಆಳ್ವಿಕೆಗೆ ಹೋದ ದಾರಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ. ನಿಖರ ಪುಟಗಳು ಮತ್ತು authorityಗಳು ಪರಿಶೀಲನೆಯವರೆಗೆ ಇದು ಸಂಕ್ಷೇಪ ದಾರಿ ಮಾತ್ರ."
+        },
+        "participants": [
+          {
+            "polityId": "external-polity-goa-kadamba",
+            "role": "earlier-karnataka-linked-context",
+            "outcome": "context-only"
+          },
+          {
+            "polityId": "external-polity-bahmani",
+            "role": "intervening-deccan-power",
+            "outcome": "context-only"
+          },
+          {
+            "polityId": "external-polity-portuguese-india",
+            "role": "incoming-power",
+            "outcome": "goa-control-lead"
+          }
+        ],
+        "destinationPlaceId": "place-goa",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3228-3232: Goa, Bahmani and Portuguese transition; printed page and authority review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "event-brahmagiri-chandravalli-archaeological-sequence",
         "type": "cultural-contact",
         "name": {
@@ -33429,6 +33878,80 @@
           "updatedAt": "2026-07-26"
         },
         "districtAuditId": "audit-vijayanagara"
+      },
+      {
+        "id": "inscription-parampare-barkur-harihara-lead",
+        "name": {
+          "en": "Barkur Harihara I inscription lead",
+          "kn": "ಬಾರಕೂರು ಹರಿಹರ I ಶಾಸನ ದಾರಿ"
+        },
+        "date": {
+          "from": 1339,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "placeId": "place-barkur",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-udupi",
+        "languages": [
+          "unresolved"
+        ],
+        "scripts": [
+          "unresolved"
+        ],
+        "description": {
+          "en": "Karnataka Parampare OCR lead for inscriptions around Barkur and early Vijayanagara coastal authority; item number and text need review.",
+          "kn": "ಬಾರಕೂರು ಮತ್ತು ಆರಂಭಿಕ ವಿಜಯನಗರ ಕರಾವಳಿ ಅಧಿಕಾರಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಶಾಸನಗಳ ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ದಾರಿ; ವಸ್ತು ಸಂಖ್ಯೆ ಮತ್ತು ಪಠ್ಯ ಪರಿಶೀಲನೆ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 1987-1992; identify exact printed page, inscription number and edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "inscription-parampare-badami-chamarasa-lead",
+        "name": {
+          "en": "Badami Chamarasa fort inscription lead",
+          "kn": "ಬಾದಾಮಿ ಚಾಮರಸ ಕೋಟೆ ಶಾಸನ ದಾರಿ"
+        },
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "placeId": "place-badami",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-bagalkote",
+        "languages": [
+          "unresolved"
+        ],
+        "scripts": [
+          "unresolved"
+        ],
+        "description": {
+          "en": "Karnataka Parampare OCR lead for a Badami fort inscription connected with Chamarasa; exact edition locator still required.",
+          "kn": "ಚಾಮರಸನೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಬಾದಾಮಿ ಕೋಟೆ ಶಾಸನಕ್ಕಾಗಿ ಕರ್ನಾಟಕ ಪರಂಪರೆ OCR ದಾರಿ; ನಿಖರ ಆವೃತ್ತಿ ಸ್ಥಾನಸೂಚಿ ಇನ್ನೂ ಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around 1340 Badami fort passage; identify exact inscription edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
       },
       {
         "id": "inscription-kandahar-bilingual-edict",
@@ -44213,6 +44736,66 @@
         }
       },
       {
+        "id": "src-ia-local-iisb-epigraphiacarnat0000unse-vol-7",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 7",
+          "kn": "Epigraphia Carnatica Volume 7"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/iisb.epigraphiacarnat0000unse.vol.7",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "iisb.epigraphiacarnat0000unse.vol.7",
+          "fullTextUrl": "https://archive.org/download/iisb.epigraphiacarnat0000unse.vol.7/iisb.epigraphiacarnat0000unse.vol.7_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 7. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 7ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "7",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "src-ia-local-isb-epigraphiacarnat0000unse-vol-10",
+        "type": "digitised-epigraphical-volume",
+        "title": {
+          "en": "Epigraphia Carnatica Volume 10",
+          "kn": "Epigraphia Carnatica Volume 10"
+        },
+        "authors": [
+          "Mysore Archaeological Department",
+          "B. Lewis Rice et al."
+        ],
+        "publisher": "Mysuru Rajya Sarkara / Mysore Archaeological Department",
+        "year": null,
+        "url": "https://archive.org/details/isb.epigraphiacarnat0000unse.vol.10",
+        "repository": {
+          "platform": "Internet Archive",
+          "identifier": "isb.epigraphiacarnat0000unse.vol.10",
+          "fullTextUrl": "https://archive.org/download/isb.epigraphiacarnat0000unse.vol.10/isb.epigraphiacarnat0000unse.vol.10_djvu.txt"
+        },
+        "scope": {
+          "en": "Offline folder name is treated as the Internet Archive identifier for Epigraphia Carnatica Volume 10. OCR is discovery-only until the printed page image is checked.",
+          "kn": "Epigraphia Carnatica Volume 10ಗಾಗಿ offline folder ಹೆಸರನ್ನು Internet Archive identifier ಆಗಿ ಪರಿಗಣಿಸಲಾಗಿದೆ. ಮುದ್ರಿತ ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆಯವರೆಗೆ OCR ಅನ್ವೇಷಣಾ ದಾರಿ ಮಾತ್ರ."
+        },
+        "volume": "10",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "src-patrika-sanchaya-kannada",
         "type": "periodical-catalogue",
         "title": {
@@ -47548,6 +48131,52 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-person-achyuta-devaraya-polity",
+        "fromId": "person-achyuta-devaraya",
+        "type": "governed-or-represented",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1529,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR locator for Krishnadevaraya and Achyuta Devaraya gold coins; specimen catalogue required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-chamarasa-vijayanagara-officer-polity",
+        "fromId": "person-chamarasa-vijayanagara-officer",
+        "type": "military-or-resistance-associated-with",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around Vijayanagara rise chapter: Chamarasa and Badami fort; verify page image and inscription reference"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -59135,6 +59764,52 @@
         }
       },
       {
+        "id": "rel-inscription-parampare-barkur-harihara-lead-attests",
+        "fromId": "inscription-parampare-barkur-harihara-lead",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1339,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 1987-1992; identify exact printed page, inscription number and edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-inscription-parampare-badami-chamarasa-lead-attests",
+        "fromId": "inscription-parampare-badami-chamarasa-lead",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around 1340 Badami fort passage; identify exact inscription edition"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-inscription-kandahar-bilingual-edict-attests",
         "fromId": "inscription-kandahar-bilingual-edict",
         "type": "attests",
@@ -63106,6 +63781,167 @@
         }
       },
       {
+        "id": "rel-event-parampare-barkur-fort-lead-participant-1",
+        "fromId": "event-parampare-barkur-fort-lead",
+        "type": "participant-expanding-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 1987-1992: Barkur fort and early Vijayanagara authority; printed page to be reconciled"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-badami-fort-chamarasa-lead-participant-1",
+        "fromId": "event-parampare-badami-fort-chamarasa-lead",
+        "type": "participant-regional-authority",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around 1340 Badami fort passage; verify against printed page and inscription source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-vijayanagara-west-coast-ports-lead-participant-1",
+        "fromId": "event-parampare-vijayanagara-west-coast-ports-lead",
+        "type": "participant-inland-empire-with-coastal-links",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3591-3593: west-coast port list and Vijayanagara reach; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-vijayanagara-west-coast-ports-lead-participant-2",
+        "fromId": "event-parampare-vijayanagara-west-coast-ports-lead",
+        "type": "participant-later-coastal-trade-context",
+        "toId": "external-polity-portuguese-india",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3591-3593: west-coast port list and Vijayanagara reach; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-goa-portuguese-transition-lead-participant-1",
+        "fromId": "event-parampare-goa-portuguese-transition-lead",
+        "type": "participant-earlier-karnataka-linked-context",
+        "toId": "external-polity-goa-kadamba",
+        "date": {
+          "from": 1510,
+          "to": 1510,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3228-3232: Goa, Bahmani and Portuguese transition; printed page and authority review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-goa-portuguese-transition-lead-participant-2",
+        "fromId": "event-parampare-goa-portuguese-transition-lead",
+        "type": "participant-intervening-deccan-power",
+        "toId": "external-polity-bahmani",
+        "date": {
+          "from": 1510,
+          "to": 1510,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3228-3232: Goa, Bahmani and Portuguese transition; printed page and authority review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-goa-portuguese-transition-lead-participant-3",
+        "fromId": "event-parampare-goa-portuguese-transition-lead",
+        "type": "participant-incoming-power",
+        "toId": "external-polity-portuguese-india",
+        "date": {
+          "from": 1510,
+          "to": 1510,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3228-3232: Goa, Bahmani and Portuguese transition; printed page and authority review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-event-brahmagiri-chandravalli-archaeological-sequence-participant-1",
         "fromId": "event-brahmagiri-chandravalli-archaeological-sequence",
         "type": "participant-historical-context",
@@ -64503,6 +65339,75 @@
         }
       },
       {
+        "id": "rel-person-harihara-i-event-parampare-barkur-fort-lead",
+        "fromId": "person-harihara-i",
+        "type": "associated-with-event",
+        "toId": "event-parampare-barkur-fort-lead",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 1987-1992: Barkur fort and early Vijayanagara authority; printed page to be reconciled"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-chamarasa-vijayanagara-officer-event-parampare-badami-fort-chamarasa-lead",
+        "fromId": "person-chamarasa-vijayanagara-officer",
+        "type": "associated-with-event",
+        "toId": "event-parampare-badami-fort-chamarasa-lead",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around 1340 Badami fort passage; verify against printed page and inscription source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-person-krishnadevaraya-event-parampare-vijayanagara-west-coast-ports-lead",
+        "fromId": "person-krishnadevaraya",
+        "type": "associated-with-event",
+        "toId": "event-parampare-vijayanagara-west-coast-ports-lead",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3591-3593: west-coast port list and Vijayanagara reach; page-image review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-person-ashoka-event-ashokan-edicts-karnataka",
         "fromId": "person-ashoka",
         "type": "associated-with-event",
@@ -65429,6 +66334,75 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-event-parampare-barkur-fort-lead-destination",
+        "fromId": "event-parampare-barkur-fort-lead",
+        "type": "reached-destination",
+        "toId": "place-barkur",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 1987-1992: Barkur fort and early Vijayanagara authority; printed page to be reconciled"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-badami-fort-chamarasa-lead-destination",
+        "fromId": "event-parampare-badami-fort-chamarasa-lead",
+        "type": "reached-destination",
+        "toId": "place-badami",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR locator around 1340 Badami fort passage; verify against printed page and inscription source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-event-parampare-goa-portuguese-transition-lead-destination",
+        "fromId": "event-parampare-goa-portuguese-transition-lead",
+        "type": "reached-destination",
+        "toId": "place-goa",
+        "date": {
+          "from": 1510,
+          "to": 1510,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "OCR lines around 3228-3232: Goa, Bahmani and Portuguese transition; printed page and authority review required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -77644,6 +78618,52 @@
         }
       },
       {
+        "id": "rel-coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead-polity",
+        "fromId": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
+        "type": "coinage-of",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1509,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR lines around 1499-1506; plate pages around 632-633 need page-image review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead-place",
+        "fromId": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
+        "type": "coin-findspot-context",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1509,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR lines around 1499-1506; plate pages around 632-633 need page-image review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
         "id": "rel-manuscript-kavirajamarga-sanchaya-witness-lead-work",
         "fromId": "manuscript-kavirajamarga-sanchaya-witness-lead",
         "type": "manuscript-witness-for",
@@ -78451,6 +79471,75 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-edition-source-volume-barkur-harihara-lead-inscription",
+        "fromId": "edition-source-volume-barkur-harihara-lead",
+        "type": "edition-for-inscription",
+        "toId": "inscription-parampare-barkur-harihara-lead",
+        "date": {
+          "from": 1339,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v2; OCR locator around Barkur/Harihara passage"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-edition-source-volume-badami-chamarasa-lead-inscription",
+        "fromId": "edition-source-volume-badami-chamarasa-lead",
+        "type": "edition-for-inscription",
+        "toId": "inscription-parampare-badami-chamarasa-lead",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v2; OCR locator around Badami fort/Chamarasa passage"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-edition-source-volume-belur-hoysala-vol7-lead-inscription",
+        "fromId": "edition-source-volume-belur-hoysala-vol7-lead",
+        "type": "edition-for-inscription",
+        "toId": "inscription-belur-foundation",
+        "date": {
+          "from": 1117,
+          "to": 1117,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-local-iisb-epigraphiacarnat0000unse-vol-7",
+            "locator": "OCR discovery only: archive-hint-belur-hoysala; page image and item number required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       },
       {
@@ -80294,6 +81383,70 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
+        "name": {
+          "en": "Krishnadevaraya and Achyuta Devaraya gold coin plate lead",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಅಚ್ಯುತ ದೇವರಾಯ ಚಿನ್ನದ ನಾಣ್ಯ ಫಲಕ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-vijayanagara",
+        "placeId": "place-hampi",
+        "date": {
+          "from": 1509,
+          "to": 1542,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Karnataka Parampare image-list lead for gold coins associated with Krishnadevaraya and Achyuta Devaraya; catalogue specimen unresolved.",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಅಚ್ಯುತ ದೇವರಾಯರೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಚಿನ್ನದ ನಾಣ್ಯಗಳ ಕರ್ನಾಟಕ ಪರಂಪರೆ ಚಿತ್ರಪಟ್ಟಿ ದಾರಿ; catalogue ಮಾದರಿ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "reverse": {
+          "en": "Legend, denomination, mint and findspot remain unresolved until a numismatic catalogue is matched.",
+          "kn": "ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ಹೊಂದುವವರೆಗೆ ಲೇಖ, ಮೌಲ್ಯ, ಟಂಕಶಾಲೆ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಬಗೆಹರಿದಿಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-hampi",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "provisional"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Image-list OCR lines around 1499-1506; plate pages around 632-633 need page-image review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],
@@ -82283,6 +83436,249 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "edition-source-volume-barkur-harihara-lead",
+        "name": {
+          "en": "Barkur Harihara I inscription edition lead",
+          "kn": "ಬಾರಕೂರು ಹರಿಹರ I ಶಾಸನ ಆವೃತ್ತಿ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-parampare-barkur-harihara-lead",
+        "editionKind": "item-edition-review",
+        "language": "unresolved",
+        "script": "unresolved",
+        "date": {
+          "from": 1339,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "2",
+          "number": "unresolved",
+          "locator": "OCR lines around 1987-1992; printed page and inscription number unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-vijayanagara-kannada-nagari-mixed-phase"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Resolve the Barkur inscription number, page image and line witness before linking this to coastal authority.",
+            "kn": "ಕರಾವಳಿ ಅಧಿಕಾರಕ್ಕೆ ಜೋಡಿಸುವ ಮೊದಲು ಬಾರಕೂರು ಶಾಸನ ಸಂಖ್ಯೆ, ಪುಟಚಿತ್ರ ಮತ್ತು ಸಾಲು ಸಾಕ್ಷ್ಯವನ್ನು ನಿರ್ಧರಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v2; OCR locator around Barkur/Harihara passage"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-source-volume-badami-chamarasa-lead",
+        "name": {
+          "en": "Badami Chamarasa fort inscription edition lead",
+          "kn": "ಬಾದಾಮಿ ಚಾಮರಸ ಕೋಟೆ ಶಾಸನ ಆವೃತ್ತಿ ದಾರಿ"
+        },
+        "inscriptionId": "inscription-parampare-badami-chamarasa-lead",
+        "editionKind": "item-edition-review",
+        "language": "unresolved",
+        "script": "unresolved",
+        "date": {
+          "from": 1340,
+          "to": 1340,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Karnataka Parampare",
+          "volume": "2",
+          "number": "unresolved",
+          "locator": "OCR locator for Badami fort/Chamarasa passage; printed page and inscription number unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-vijayanagara-kannada-nagari-mixed-phase"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Find the exact Badami fort inscription edition and page image before promotion.",
+            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ನಿಖರ ಬಾದಾಮಿ ಕೋಟೆ ಶಾಸನ ಆವೃತ್ತಿ ಮತ್ತು ಪುಟಚಿತ್ರವನ್ನು ಪತ್ತೆಹಚ್ಚಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-parampare-v2",
+            "locator": "Archive identifier sanchaya.karnatakaparampa0000_v2; OCR locator around Badami fort/Chamarasa passage"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-source-volume-belur-hoysala-vol7-lead",
+        "name": {
+          "en": "Belur / Hoysala Epigraphia Carnatica Vol. 7 lead",
+          "kn": "ಬೇಲೂರು / ಹೊಯ್ಸಳ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಕ ಸಂಪುಟ 7 ದಾರಿ"
+        },
+        "inscriptionId": "inscription-belur-foundation",
+        "editionKind": "item-edition-review",
+        "language": "unresolved",
+        "script": "unresolved",
+        "date": {
+          "from": 1117,
+          "to": 1117,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica",
+          "volume": "7",
+          "number": "unresolved",
+          "locator": "Internet Archive identifier iisb.epigraphiacarnat0000unse.vol.7; OCR first line 2191 for Belur/Hoysala hint",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "high",
+          "scriptPhaseIds": [
+            "script-medieval-kannada-temple-epigraphy"
+          ],
+          "requiredLocators": [
+            "archiveIdentifier",
+            "articleOrItemTitle",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Use the IA identifier folder to locate the printed EC item number, page image and text witness.",
+            "kn": "IA identifier folder ಬಳಸಿ ಮುದ್ರಿತ EC ವಸ್ತು ಸಂಖ್ಯೆ, ಪುಟಚಿತ್ರ ಮತ್ತು ಪಠ್ಯ ಸಾಕ್ಷ್ಯವನ್ನು ಪತ್ತೆಹಚ್ಚಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-local-iisb-epigraphiacarnat0000unse-vol-7",
+            "locator": "OCR discovery only: archive-hint-belur-hoysala; page image and item number required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-25"
         }
       }
     ],

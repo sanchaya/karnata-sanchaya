@@ -45,6 +45,47 @@ test('the bundled dataset is a clean page-data release candidate', () => {
   }
 })
 
+test('source-volume extraction sprint records remain citation-led and review-gated', () => {
+  for (const id of ['src-ia-local-iisb-epigraphiacarnat0000unse-vol-7','src-ia-local-isb-epigraphiacarnat0000unse-vol-10']) {
+    const source=atlasData.sources.find(item=>item.id===id)
+    assert.equal(source?.repository?.platform, 'Internet Archive')
+    assert.ok(source?.repository?.identifier?.includes('epigraphiacarnat'), `${id} must retain the Archive identifier from the offline folder name`)
+    assert.equal(source?.review.status, 'needs-review')
+  }
+  for (const id of ['place-barkur','place-ankola-port-lead','place-honnavar-port-lead','place-bhatkal-port-lead']) {
+    const place=placeById.get(id)
+    assert.ok(place, `${id} must be present`)
+    assert.equal(place.review.status, 'needs-review')
+    assert.ok(place.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v2'), `${id} must cite the source-volume lead`)
+  }
+  for (const id of ['person-achyuta-devaraya','person-chamarasa-vijayanagara-officer']) {
+    const person=atlasData.people.find(item=>item.id===id)
+    assert.equal(person?.review.status, 'needs-review')
+    assert.ok(person?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v2'), `${id} must cite Karnataka Parampare`)
+  }
+  for (const id of ['event-parampare-barkur-fort-lead','event-parampare-badami-fort-chamarasa-lead','event-parampare-vijayanagara-west-coast-ports-lead','event-parampare-goa-portuguese-transition-lead']) {
+    const event=atlasData.events.find(item=>item.id===id)
+    assert.equal(event?.review.status, 'needs-review')
+    assert.ok(event?.citations.some(citation=>citation.sourceId==='src-karnataka-parampare-v2'), `${id} must cite Karnataka Parampare`)
+  }
+  for (const id of ['inscription-parampare-barkur-harihara-lead','inscription-parampare-badami-chamarasa-lead']) {
+    const inscription=atlasData.inscriptions.find(item=>item.id===id)
+    assert.equal(inscription?.review.status, 'needs-review')
+    assert.ok(districtAuditIds.has(inscription?.districtAuditId), `${id} must be assigned to a district audit`)
+  }
+  for (const id of ['edition-source-volume-barkur-harihara-lead','edition-source-volume-badami-chamarasa-lead','edition-source-volume-belur-hoysala-vol7-lead']) {
+    const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
+    assert.equal(edition?.review.status, 'needs-review')
+    assert.equal(edition?.locatorReview.priority, 'high')
+    assert.ok(edition?.locatorReview.requiredLocators.includes('archiveIdentifier'))
+    assert.equal(edition?.itemEdition.status, 'provisional')
+  }
+  const coin=atlasData.coinRecords.find(item=>item.id==='coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead')
+  assert.equal(coin?.review.status, 'needs-review')
+  assert.equal(coin?.image.status, 'missing')
+  assert.ok(coin?.citations.some(citation=>citation.locator.includes('1499-1506')))
+})
+
 test('local Epigraphia Carnatica text cache is indexed as review-only citations', () => {
   assert.ok(atlasData.epigraphiaArchiveTexts.length >= 12)
   const volumes = new Set(atlasData.epigraphiaArchiveTexts.map(record => record.volume))

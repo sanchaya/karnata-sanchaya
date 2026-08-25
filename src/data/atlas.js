@@ -22,6 +22,7 @@ import { dictionaryMartyrCandidateMeta, dictionaryMartyrCandidates } from './dic
 import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
 import { administrativeDivisions, feudatoryRelations, karnataReachEvents, karnataReachHeritage, karnataReachPeople, karnataReachPlaces, karnataReachPolities, karnataReachSources, openDatasetCatalogue, scriptEvolution } from './research-foundations.js'
 import { boundaryEvidence, coinRecords, genealogicalRelations, inscriptionEditions, manuscriptWitnesses } from './p1-model-foundations.js'
+import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -189,10 +190,17 @@ appendUniqueById(atlasData.events, freedomMovementEventLeads)
 appendUniqueById(atlasData.sources, freedomFighterSources)
 appendUniqueById(atlasData.sources, freedomMovementResearchSources)
 appendUniqueById(atlasData.sources, karnataReachSources)
+appendUniqueById(atlasData.sources, sourceVolumeExtractionSources)
 appendUniqueById(atlasData.externalPolities, karnataReachPolities)
 appendUniqueById(atlasData.places, karnataReachPlaces)
+appendUniqueById(atlasData.places, sourceVolumeExtractionPlaces)
 appendUniqueById(atlasData.people, karnataReachPeople)
+appendUniqueById(atlasData.people, sourceVolumeExtractionPeople)
 appendUniqueById(atlasData.events, karnataReachEvents)
+appendUniqueById(atlasData.events, sourceVolumeExtractionEvents)
+appendUniqueById(atlasData.inscriptions, sourceVolumeExtractionInscriptions)
+appendUniqueById(atlasData.inscriptionEditions, sourceVolumeExtractionInscriptionEditions)
+appendUniqueById(atlasData.coinRecords, sourceVolumeExtractionCoinRecords)
 appendUniqueById(atlasData.sources, [{
   id:'src-patrika-sanchaya-kannada',
   type:'periodical-catalogue',
@@ -284,7 +292,11 @@ appendUniqueById(atlasData.works, [{
   review:review('needs-review'),
 }])
 appendUniqueById(atlasData.inscriptions, additionalInscriptions)
-atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||null})
+const sourceVolumeInscriptionDistrictAssignments={
+  'inscription-parampare-barkur-harihara-lead':'audit-udupi',
+  'inscription-parampare-badami-chamarasa-lead':'audit-bagalkote',
+}
+atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||sourceVolumeInscriptionDistrictAssignments[record.id]||null})
 // Cross-border Kannada inscription leads are kept in a synthetic research audit
 // so they enter the same evidence workflow without being misassigned to a
 // Karnataka district. They are not claims of territorial control.

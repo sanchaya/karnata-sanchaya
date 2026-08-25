@@ -18,10 +18,10 @@ This runbook covers the collections that moved from “missing” to “structur
 | Collection | Current count | Status |
 | --- | ---: | --- |
 | `genealogicalRelations` | 7 | Derived or secondary assertions; not final family-tree proof |
-| `coinRecords` | 6 | Catalogue/image/metal/weight/findspot gates open |
+| `coinRecords` | 7 | Catalogue/image/metal/weight/findspot gates open; Karnataka Parampare coin-plate lead added for Krishnadevaraya/Achyuta Devaraya |
 | `manuscriptWitnesses` | 7 | Repository leads located for some works; shelfmark, licence and edition comparison mostly open |
 | `boundaryEvidence` | 7 | Schematic evidence packets, not research-grade boundary corpus |
-| `inscriptionEditions` | 20 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
+| `inscriptionEditions` | 23 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
 | `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
 | Research-volume source links | 33 linked volumes / 65 link groups | Itihasa Darshana plus Karnataka Parampare source leads now route to inscription, script, literature, manuscript, freedom-movement, outside-Karnataka rule, ports, coinage and heritage review targets; Parampare links include OCR/page locator hints but still require page-image review |
@@ -110,6 +110,8 @@ The local Epigraphia Carnatica TXT cache is indexed in `epigraphiaArchiveTexts`.
 Itihasa Darshana volumes now carry `contentReview.atlasLinks` on the source records. These links connect volume-level OCR signals to existing atlas targets such as inscription-edition packets, script-evolution phases, Kannada literary works, manuscript witnesses and selected freedom-movement source leads. Karnataka Parampare volumes 1 and 2 have completed a first metadata/OCR locator screening pass: they now carry article or plate leads for Rashtrakutas, Goa Kadambas, Devagiri Yadavas, Vijayanagara origins, coastal ports/Goa, Vijayanagara coin plates and later heritage records. They are routing aids only: reviewers must identify the article title, printed page, quotation or summary, and target-record fit before using either series as a record citation.
 
 The Evidence Workflow includes a `sourceLinks` stream for these discovery links. It currently creates assignable tasks for Epigraphia OCR locator hints and research-volume article/page review groups, so reviewers can close the gap between a volume-level discovery signal and a record-level citation.
+
+The first source-volume extraction sprint converts the strongest Karnataka Parampare and offline Archive identifier leads into normal atlas candidate records. This batch adds four place leads, two people leads, four event leads, two inscription leads, three inscription-edition packets and one coin-plate packet. The offline folder names are treated as Internet Archive identifiers in source records, but the extracted records remain `needs-review` until the page image, printed locator and item-level citation are confirmed.
 
 Minimum evidence per edition:
 

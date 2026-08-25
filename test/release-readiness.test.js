@@ -29,6 +29,7 @@ const freedomStylesSource = await readFile(new URL('../src/freedom-movement.css'
 const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.meta.url), 'utf8')
 const packageSource = await readFile(new URL('../package.json', import.meta.url), 'utf8')
 const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
+const atlasSource = await readFile(new URL('../src/data/atlas.js', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'community', 'profile', 'about']
@@ -53,6 +54,14 @@ test('public navigation reports the depth of the published research dataset', ()
   assert.match(appSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
+})
+
+test('source-volume extraction sprint is assembled into the atlas dataset', () => {
+  assert.match(atlasSource, /source-volume-extraction\.js/, 'source-volume extraction records must be imported into the atlas bundle')
+  for (const collection of ['sourceVolumeExtractionSources','sourceVolumeExtractionPlaces','sourceVolumeExtractionPeople','sourceVolumeExtractionEvents','sourceVolumeExtractionInscriptions','sourceVolumeExtractionInscriptionEditions','sourceVolumeExtractionCoinRecords']) {
+    assert.match(atlasSource, new RegExp(collection), `${collection} must be appended into the atlas dataset`)
+  }
+  assert.match(atlasSource, /sourceVolumeInscriptionDistrictAssignments/, 'source-volume inscription leads must retain district audit assignments')
 })
 
 test('coin explorer is public, searchable and evidence-gated', () => {
