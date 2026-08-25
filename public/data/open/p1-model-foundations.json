@@ -2666,8 +2666,8 @@
         "workId": "work-vaddaradhane",
         "witnessKind": "physical-manuscript",
         "repository": {
-          "en": "Centre of Excellence for Studies in Classical Kannada catalogue lead",
-          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಅಧ್ಯಯನ ಉತ್ಕೃಷ್ಟತಾ ಕೇಂದ್ರದ ಪಟ್ಟಿಸುಳಿವು"
+          "en": "Centre of Excellence for Studies in Classical Kannada catalogue lead; the cited cesck.uni-mysore.ac.in URL no longer resolves (checked 2026-08-25), so the repository record itself needs re-locating before the shelfmark can be resolved",
+          "kn": "ಶಾಸ್ತ್ರೀಯ ಕನ್ನಡ ಅಧ್ಯಯನ ಉತ್ಕೃಷ್ಟತಾ ಕೇಂದ್ರದ ಪಟ್ಟಿಸುಳಿವು; ಉಲ್ಲೇಖಿಸಿದ cesck.uni-mysore.ac.in URL ಇನ್ನು ಪರಿಹರಿಸುವುದಿಲ್ಲ (2026-08-25ರಂದು ಪರಿಶೀಲಿಸಲಾಗಿದೆ), ಆದ್ದರಿಂದ ಶೆಲ್ಫ್‌ಮಾರ್ಕ್ ಪರಿಹರಿಸುವ ಮೊದಲು ಪಟ್ಟಿ ದಾಖಲೆಯನ್ನೇ ಮರುಗುರುತಿಸಬೇಕು"
         },
         "shelfmark": null,
         "date": {
@@ -2680,12 +2680,12 @@
         "script": "Kannada",
         "completeness": "unknown",
         "access": {
-          "status": "linked-lead",
-          "url": "https://cesck.uni-mysore.ac.in"
+          "status": "unresolved",
+          "url": null
         },
         "evidenceGates": {
           "repositoryRecord": {
-            "status": "located"
+            "status": "provisional"
           },
           "shelfmark": {
             "status": "unresolved"
@@ -2700,7 +2700,7 @@
         "citations": [
           {
             "sourceId": "src-cesck-vaddaradhane",
-            "locator": "Seven palm-leaf manuscripts including a 1434 witness; complete text edited by D. L. Narasimhachar, 1949"
+            "locator": "Seven palm-leaf manuscripts including a 1434 witness; complete text edited by D. L. Narasimhachar, 1949; catalogue URL dead as of 2026-08-25, repository re-verification needed"
           }
         ],
         "review": {
@@ -2718,8 +2718,8 @@
         "workId": "work-kumaravyasa-bharata",
         "witnessKind": "digital-edition-lead",
         "repository": {
-          "en": "Sanchaya / Kannada digital text projects",
-          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+          "en": "Government of Mysore critical print edition (ed. Kuvempu / Masti Venkatesha Iyengar), digitized on the Internet Archive; the Sanchaya digital-text-project claim in the original lead could not be verified (sanchaya.org blocks automated access)",
+          "kn": "ಮೈಸೂರು ಸರ್ಕಾರದ ವಿಮರ್ಶಾತ್ಮಕ ಮುದ್ರಿತ ಆವೃತ್ತಿ (ಸಂ. ಕುವೆಂಪು / ಮಾಸ್ತಿ ವೆಂಕಟೇಶ ಅಯ್ಯಂಗಾರ್), ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನಲ್ಲಿ ಡಿಜಿಟಲೀಕೃತ; ಮೂಲ ದಾರಿಯ ಸಂಚಯ ಡಿಜಿಟಲ್-ಪಠ್ಯ-ಯೋಜನೆ ಹಕ್ಕನ್ನು ಪರಿಶೀಲಿಸಲಾಗಲಿಲ್ಲ (sanchaya.org ಸ್ವಯಂಚಾಲಿತ ಪ್ರವೇಶವನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ)"
         },
         "shelfmark": null,
         "date": {
@@ -2732,27 +2732,35 @@
         "script": "Kannada",
         "completeness": "unknown",
         "access": {
-          "status": "linked-lead",
-          "url": "https://sanchaya.org"
+          "status": "public",
+          "url": "https://archive.org/details/gss.kumaravyasamahak0000kuve"
         },
         "evidenceGates": {
           "repositoryRecord": {
             "status": "located"
           },
           "shelfmark": {
-            "status": "unresolved"
+            "status": "not-applicable"
           },
           "editionComparison": {
-            "status": "unresolved"
+            "status": "located"
           },
           "license": {
-            "status": "unresolved"
+            "status": "provisional"
           }
         },
         "citations": [
           {
             "sourceId": "src-gazetteer-karnataka-1983",
-            "locator": "Kumaravyasa and Vijayanagara-period Kannada literary context; digital witness locator pending"
+            "locator": "Kumaravyasa and Vijayanagara-period Kannada literary context"
+          },
+          {
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition, freely downloadable, 676 pages"
+          },
+          {
+            "sourceId": "src-murty-classical-library-kannada-mahabharata",
+            "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
           }
         ],
         "review": {
@@ -2770,8 +2778,8 @@
         "workId": "work-torave-ramayana",
         "witnessKind": "digital-edition-lead",
         "repository": {
-          "en": "Sanchaya / Kannada digital text projects",
-          "kn": "ಸಂಚಯ / ಕನ್ನಡ ಡಿಜಿಟಲ್ ಪಠ್ಯ ಯೋಜನೆಗಳು"
+          "en": "Kannada Sahitya Parishat print edition (1977), Volume 2 digitized on the Internet Archive; Volume 1 not yet located; the Sanchaya digital-text-project claim in the original lead could not be verified (sanchaya.org blocks automated access)",
+          "kn": "ಕನ್ನಡ ಸಾಹಿತ್ಯ ಪರಿಷತ್ತಿನ ಮುದ್ರಿತ ಆವೃತ್ತಿ (1977), ಸಂಪುಟ 2 ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನಲ್ಲಿ ಡಿಜಿಟಲೀಕೃತ; ಸಂಪುಟ 1 ಇನ್ನೂ ಪತ್ತೆಯಾಗಿಲ್ಲ; ಮೂಲ ದಾರಿಯ ಸಂಚಯ ಡಿಜಿಟಲ್-ಪಠ್ಯ-ಯೋಜನೆ ಹಕ್ಕನ್ನು ಪರಿಶೀಲಿಸಲಾಗಲಿಲ್ಲ (sanchaya.org ಸ್ವಯಂಚಾಲಿತ ಪ್ರವೇಶವನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತದೆ)"
         },
         "shelfmark": null,
         "date": {
@@ -2782,29 +2790,33 @@
         },
         "language": "Kannada",
         "script": "Kannada",
-        "completeness": "unknown",
+        "completeness": "fragmentary",
         "access": {
-          "status": "linked-lead",
-          "url": "https://sanchaya.org"
+          "status": "public",
+          "url": "https://archive.org/details/toraveramayanavo0000kuma"
         },
         "evidenceGates": {
           "repositoryRecord": {
             "status": "located"
           },
           "shelfmark": {
-            "status": "unresolved"
+            "status": "not-applicable"
           },
           "editionComparison": {
-            "status": "unresolved"
+            "status": "located"
           },
           "license": {
-            "status": "unresolved"
+            "status": "provisional"
           }
         },
         "citations": [
           {
             "sourceId": "src-gazetteer-karnataka-1983",
-            "locator": "Torave Ramayana literary context; Sanchaya witness and edition comparison pending"
+            "locator": "Torave Ramayana literary context"
+          },
+          {
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2, freely downloadable; Volume 1 still to be located"
           }
         ],
         "review": {
