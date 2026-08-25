@@ -94,9 +94,13 @@ test('script evolution explorer is public, searchable and evidence-gated', () =>
   assert.match(scriptSource, /atlasData\.scriptEvolution\.map/, 'the page must derive records from the script evolution collection')
   assert.match(scriptSource, /sampleInscriptionIds/, 'script phases must expose sample inscriptions')
   assert.match(scriptSource, /predecessorIds/, 'script phases must expose predecessor links')
+  assert.match(scriptSource, /morphologicalStage/, 'script phases must expose broad morphological eras')
+  assert.match(scriptSource, /dynasticClassification/, 'script phases must expose dynastic classification')
+  assert.match(scriptSource, /visualTraits/, 'script phases must expose visible paleographic traits')
   assert.match(scriptSource, /href="#evidence"/, 'script packets must link back to the evidence workflow')
   assert.match(scriptSource, /href="#epigraphy"/, 'script packets must link to epigraphy records')
   assert.match(scriptStylesSource, /\.script-workspace/, 'script explorer needs a dedicated timeline/detail layout')
+  assert.match(scriptStylesSource, /\.script-classification/, 'script explorer needs a visible classification panel')
 })
 
 test('public open dataset packets are generated during static builds', () => {

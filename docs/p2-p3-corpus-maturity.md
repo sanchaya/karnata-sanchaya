@@ -17,13 +17,13 @@ This runbook covers the collections that moved from “missing” to “structur
 
 | Collection | Current count | Status |
 | --- | ---: | --- |
-| `genealogicalRelations` | 7 | Derived or secondary assertions; not final family-tree proof |
-| `coinRecords` | 8 | Catalogue/image/metal/weight/findspot gates open; Karnataka Parampare coin-plate leads added for Western Ganga and Krishnadevaraya/Achyuta Devaraya gold coins |
-| `manuscriptWitnesses` | 7 | Repository leads located for some works; shelfmark, licence and edition comparison mostly open |
-| `boundaryEvidence` | 7 | Schematic evidence packets, not research-grade boundary corpus |
+| `genealogicalRelations` | 9 | Derived or secondary assertions; new Vengi and Tuluva-line proof packets are review-gated, not final family-tree proof |
+| `coinRecords` | 10 | Catalogue/image/metal/weight/findspot gates open; new Maski Ashokan-context and Hoysala catalogue proof packets keep images, weights and findspots unresolved until reviewed |
+| `manuscriptWitnesses` | 9 | Repository leads located for some works; new Kavirajamarga Parampare and Shabdamanidarpana/Sanchaya witness leads keep shelfmark, licence and edition comparison mostly open |
+| `boundaryEvidence` | 9 | Schematic evidence packets, including new Chalukya inscription-cluster and Keladi coastal-interior administrative packets; not research-grade boundary corpus |
 | `inscriptionEditions` | 23 | Item-edition queue started; locator-review metadata added; transcription, translation, photographs and coordinates mostly open |
 | `epigraphiaArchiveTexts` | 12 | Local Epigraphia Carnatica TXT cache indexed as OCR discovery citations; page-image review still required |
-| `scriptEvolution` | 6 | Public explorer now covers early, medieval, Vijayanagara and print phases; all still review-gated |
+| `scriptEvolution` | 12 | Public explorer now covers Ashokan/Satavahana Brahmi, Kadamba/Proto-Kannada, Badami Chalukya, Rashtrakuta, Kalyani Chalukya-Hoysala, Vijayanagara-Nayaka/Telugu-Kannada divergence and modern print phases; all still review-gated |
 | Research-volume source links | 33 linked volumes / 65 link groups | Itihasa Darshana plus Karnataka Parampare source leads now route to inscription, script, literature, manuscript, freedom-movement, outside-Karnataka rule, ports, coinage and heritage review targets; Parampare links include OCR/page locator hints but still require page-image review |
 
 ## Promotion rule
@@ -117,6 +117,8 @@ The second extraction sprint registers all 12 offline Epigraphia Carnatica folde
 
 The third extraction sprint adds Volume 1 article-review event leads for Rashtrakuta political history, Goa Kadambas and Devagiri Yadavas, plus a Western Ganga gold-coin image-plate packet. These records make the topics visible in timeline/search while preserving the next action: locate page image, printed article range and item-level evidence.
 
+The fourth maturity sprint expands the palaeography layer into a full chronological and morphological classification. It adds Maski and Brahmagiri Ashokan Brahmi inscription packets, a Satavahana context polity, Badami Chalukya and Rashtrakuta sub-stages, Kalyani Chalukya-Hoysala ornate Middle Kannada, Vijayanagara-Nayaka standardisation, Telugu-Kannada differentiation, palm-leaf influence and modern print-standard Kannada. The same sprint adds new review-gated coin, genealogy, samanta, boundary, district-history, manuscript and source-volume routing records.
+
 Minimum evidence per edition:
 
 - edition series, volume, item number and page/line locator;
@@ -171,12 +173,13 @@ Current first targets:
 
 | Record | Next action |
 | --- | --- |
-| `script-southern-brahmi-kadamba-transition` | Attach item-level Talagunda and Halmidi edition locators and palaeographic references. |
-| `script-old-kannada-epigraphic-phase` | Add more sample inscriptions beyond Halmidi and Shravanabelagola, with exact corpus locators. |
-| `script-early-kannada-verse-transition` | Resolve Kappe Arabhatta, Begur and Atakur locators against printed editions, line numbers and image witnesses. |
-| `script-medieval-kannada-temple-epigraphy` | Attach Lakkundi, Belur and Muktesvara editions, translations, plate/page references and monument links. |
-| `script-vijayanagara-kannada-nagari-mixed-phase` | Split Hampi/Vijayanagara witnesses by script, language and medium once item-level corpus records are available. |
-| `script-modern-kannada-print-transition` | Connect manuscript, print and Patrika Sanchaya witnesses with source runs and licence notes. |
+| `script-ashokan-satavahana-brahmi-root` | Verify Maski and Brahmagiri item editions, exact coordinates and specialist palaeographic references; keep this as root-script comparison, not a Kannada-script claim. |
+| `script-southern-brahmi-kadamba-transition` | Attach item-level Talagunda and Halmidi edition locators and palaeographic references for Kadamba/Proto-Kannada divergence. |
+| `script-badami-chalukya-rounded-transition` | Resolve Aihole and Kappe Arabhatta page/plate/line locators and compare rounded letterforms, matras and vattakshara structures. |
+| `script-rashtrakuta-uniform-old-kannada` | Resolve Atakur and Begur locators and verify wider, more uniform Old Kannada letter bodies and emerging talekattu evidence. |
+| `script-kalyani-chalukya-hoysala-ornate-middle-kannada` | Attach Lakkundi, Belur and Muktesvara editions, translations, plate/page references and monument links for circular forms, loops and talekattu. |
+| `script-vijayanagara-nayaka-standardising-kannada` | Split Vijayanagara and successor Nayaka witnesses by script, language and medium; document Telugu-Kannada divergence only from item-level records. |
+| `script-mysore-wodeyar-print-standard-kannada` | Connect Mysore, Mangaluru/Basel Mission, Bangalore print and Patrika Sanchaya witnesses with source runs, type specimens and licence notes. |
 
 ## Reviewer operations
 

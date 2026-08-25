@@ -23,6 +23,7 @@ import { freedomMovementEventLeads } from './freedom-movement-event-leads.js'
 import { administrativeDivisions, feudatoryRelations, karnataReachEvents, karnataReachHeritage, karnataReachPeople, karnataReachPlaces, karnataReachPolities, karnataReachSources, openDatasetCatalogue, scriptEvolution } from './research-foundations.js'
 import { boundaryEvidence, coinRecords, genealogicalRelations, inscriptionEditions, manuscriptWitnesses } from './p1-model-foundations.js'
 import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionHeritage, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
+import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js'
 import { applyExternalCapitalLinks } from './external-capitals.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
@@ -202,6 +203,7 @@ appendUniqueById(atlasData.events, sourceVolumeExtractionEvents)
 appendUniqueById(atlasData.inscriptions, sourceVolumeExtractionInscriptions)
 appendUniqueById(atlasData.inscriptionEditions, sourceVolumeExtractionInscriptionEditions)
 appendUniqueById(atlasData.coinRecords, sourceVolumeExtractionCoinRecords)
+applyPaleographyMaturitySprint(atlasData, appendUniqueById)
 appendUniqueById(atlasData.sources, [{
   id:'src-patrika-sanchaya-kannada',
   type:'periodical-catalogue',
@@ -296,6 +298,8 @@ appendUniqueById(atlasData.inscriptions, additionalInscriptions)
 const sourceVolumeInscriptionDistrictAssignments={
   'inscription-parampare-barkur-harihara-lead':'audit-udupi',
   'inscription-parampare-badami-chamarasa-lead':'audit-bagalkote',
+  'inscription-maski-minor-rock-edict':'audit-raichur',
+  'inscription-brahmagiri-minor-rock-edict':'audit-chitradurga',
 }
 atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||sourceVolumeInscriptionDistrictAssignments[record.id]||null})
 // Cross-border Kannada inscription leads are kept in a synthetic research audit

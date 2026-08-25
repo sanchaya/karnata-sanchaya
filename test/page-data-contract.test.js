@@ -323,7 +323,7 @@ test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated'
     assert.equal(atlasData.reigns.find(item => item.id === id)?.review.status, 'needs-review')
   }
   assert.equal(atlasData.people.filter(item => !(item.citations || []).length).length, 0)
-  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 33)
+  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 34)
   for (const id of ['extent-kadamba-core-prototype','extent-western-ganga-core-prototype','extent-hoysala-ballala-ii-1187','extent-vijayanagara-krishnadevaraya-core-1520']) {
     const extent = atlasData.territorialExtents.find(item => item.id === id)
     assert.equal(extent?.confidence, 'medium')
@@ -409,7 +409,7 @@ test('missing-feature foundations are linked, bilingual and review-gated', () =>
     assert.ok(atlasData.scriptEvolution.some(item => item.id === id), `${id} must remain in the script evolution queue`)
     assert.ok(atlasData.relationships.some(relation => relation.fromId === id), `${id} must remain linked into the research graph`)
   }
-  assert.deepEqual(atlasData.scriptEvolution.find(item => item.id === 'script-modern-kannada-print-transition')?.predecessorIds, ['script-vijayanagara-kannada-nagari-mixed-phase'])
+  assert.deepEqual(atlasData.scriptEvolution.find(item => item.id === 'script-modern-kannada-print-transition')?.predecessorIds, ['script-vijayanagara-nayaka-standardising-kannada'])
   assert.ok(atlasData.relationships.some(item => item.type === 'feudatory-overlord'))
   assert.ok(atlasData.relationships.some(item => item.type === 'administrative-division-of'))
   assert.ok(atlasData.relationships.some(item => item.type === 'script-sample-inscription'))
@@ -487,10 +487,10 @@ test('international research additions keep attested links separate from unresol
 })
 
 test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
-  assert.ok(atlasData.genealogicalRelations.length >= 7)
-  assert.ok(atlasData.coinRecords.length >= 6)
-  assert.ok(atlasData.manuscriptWitnesses.length >= 7)
-  assert.ok(atlasData.boundaryEvidence.length >= 7)
+  assert.ok(atlasData.genealogicalRelations.length >= 9)
+  assert.ok(atlasData.coinRecords.length >= 10)
+  assert.ok(atlasData.manuscriptWitnesses.length >= 9)
+  assert.ok(atlasData.boundaryEvidence.length >= 9)
   assert.ok(atlasData.inscriptionEditions.length >= 20)
   for (const item of atlasData.genealogicalRelations) {
     assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
@@ -544,4 +544,29 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
     assert.equal(edition?.locatorReview.priority, 'high', `${id} must stay prioritized for the script-evolution maturity path`)
     assert.ok(edition?.locatorReview.scriptPhaseIds.length > 0, `${id} must remain linked to a script phase`)
   }
+})
+
+test('full paleographic classification covers dynastic and morphological stages', () => {
+  const required = [
+    'script-ashokan-satavahana-brahmi-root',
+    'script-southern-brahmi-kadamba-transition',
+    'script-badami-chalukya-rounded-transition',
+    'script-rashtrakuta-uniform-old-kannada',
+    'script-kalyani-chalukya-hoysala-ornate-middle-kannada',
+    'script-vijayanagara-nayaka-standardising-kannada',
+    'script-mysore-wodeyar-print-standard-kannada',
+  ]
+  for (const id of required) {
+    const phase = atlasData.scriptEvolution.find(item => item.id === id)
+    assert.ok(phase, `${id} must be present`)
+    assert.ok(phase.morphologicalStage, `${id} needs a broad morphological era`)
+    assert.ok(phase.dynasticClassification?.length, `${id} needs dynastic classification`)
+    assert.ok(phase.evidenceMedium?.length, `${id} needs evidence-medium labels`)
+    assert.ok(phase.visualTraits?.length, `${id} needs visual traits`)
+    assert.ok(bilingual(phase.morphologyNote), `${id} needs a bilingual morphology note`)
+  }
+  const stages = new Set(atlasData.scriptEvolution.map(item => item.morphologicalStage).filter(Boolean))
+  for (const stage of ['Early Brahmi Derivative','Early / Archaic Kannada','Medieval / Middle Kannada','Modern Kannada']) assert.ok(stages.has(stage), `${stage} must be represented`)
+  assert.ok(atlasData.scriptEvolution.some(item => item.visualTraits?.includes('palm-leaf-rounded-curves')), 'modern phase must capture palm-leaf influence')
+  assert.ok(atlasData.scriptEvolution.some(item => item.visualTraits?.includes('differentiated-kannada-telugu-ligatures')), 'modern phase must capture Kannada/Telugu differentiation')
 })
