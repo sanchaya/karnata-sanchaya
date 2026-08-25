@@ -161,6 +161,14 @@ const districtHistoryCandidates=[
     evidenceBasis:'district-research-scope',citations:[{sourceId:'src-gazetteer-karnataka-1983',locator:'Kolar district chapter: identify and verify prehistoric and early-settlement references'}],review:{...review}
   },
   {
+    id:'district-history-kolar-kuvalala-western-ganga-capital',recordKind:'candidate',districtId:'audit-kolar',district:n('Kolar','ಕೋಲಾರ'),
+    name:n('Kolar (Kuvalala/Kolahalapura) as the founding Western Ganga capital','ಕೋಲಾರ (ಕುವಲಾಲ/ಕೋಲಾಹಲಪುರ) ಪಶ್ಚಿಮ ಗಂಗ ಸ್ಥಾಪಕ ರಾಜಧಾನಿ'),category:'urban-foundation',
+    date:{from:350,to:370,era:'CE',precision:'circa'},location:{type:'Point',coordinates:[78.1298,13.1367],precision:'approximate'},
+    description:n('Ancient inscriptions name Kolar Kuvalala, Kolala or Kolahalapura; the Western Ganga dynasty\'s founder Konganivarman Madhava (person-kongunivarma in this atlas) is said to have built it as his capital c. 350 CE, and later Ganga rulers carried the title Kuvalala-puravareshvara ("lord of Kuvalala/Kolar"). This is a settlement/dynastic-origin lead, not a claim about any single excavated monument.','ಪ್ರಾಚೀನ ಶಾಸನಗಳು ಕೋಲಾರವನ್ನು ಕುವಲಾಲ, ಕೋಲಾಲ ಅಥವಾ ಕೋಲಾಹಲಪುರ ಎಂದು ಹೆಸರಿಸುತ್ತವೆ; ಪಶ್ಚಿಮ ಗಂಗ ವಂಶದ ಸ್ಥಾಪಕ ಕೊಂಗಣಿವರ್ಮ ಮಾಧವ (ಈ ಭೂಪಟದಲ್ಲಿ person-kongunivarma) ಇದನ್ನು ಸು. ಕ್ರಿ.ಶ. 350ರಲ್ಲಿ ತನ್ನ ರಾಜಧಾನಿಯಾಗಿ ಕಟ್ಟಿದನೆಂದು ಹೇಳಲಾಗುತ್ತದೆ, ನಂತರದ ಗಂಗ ಅರಸರು ಕುವಲಾಲ-ಪುರವರೇಶ್ವರ ("ಕುವಲಾಲ/ಕೋಲಾರದ ಒಡೆಯ") ಬಿರುದನ್ನು ಹೊಂದಿದ್ದರು. ಇದು ವಸತಿ/ವಂಶ-ಮೂಲ ದಾರಿ, ಯಾವುದೇ ಒಂದು ಉತ್ಖನನ ಸ್ಮಾರಕದ ಹಕ್ಕಲ್ಲ.'),
+    researchNote:n('Resolve the exact inscriptional locator for the Kuvalala-puravareshvara title and the earliest dated Ganga-era reference to Kolar before promoting beyond this settlement-origin lead; keep separate from the later Kolar Gold Fields mining-archaeology lead (Chigaragunta radiocarbon evidence).','ಈ ವಸತಿ-ಮೂಲ ದಾರಿಯನ್ನು ಉತ್ತೇಜಿಸುವ ಮೊದಲು ಕುವಲಾಲ-ಪುರವರೇಶ್ವರ ಬಿರುದಿನ ನಿಖರ ಶಾಸನ ಸ್ಥಾನಸೂಚಿ ಮತ್ತು ಕೋಲಾರದ ಆರಂಭಿಕ ದಿನಾಂಕಿತ ಗಂಗ-ಕಾಲದ ಉಲ್ಲೇಖವನ್ನು ನಿರ್ಧರಿಸಿ; ನಂತರದ ಕೋಲಾರ ಚಿನ್ನದ ಗಣಿ ಗಣಿಗಾರಿಕೆ-ಪುರಾತತ್ತ್ವ ದಾರಿಯಿಂದ (ಚಿಗರಗುಂಟ ರೇಡಿಯೊಕಾರ್ಬನ್ ಸಾಕ್ಷ್ಯ) ಪ್ರತ್ಯೇಕವಾಗಿ ಇರಿಸಿ.'),
+    evidenceBasis:'gazetteer',citations:[{sourceId:'src-wikipedia-kolar-karnataka',locator:'Kolar named Kuvalala/Kolala/Kolahalapura in ancient inscriptions; founded by Konganivarman Madhava c. 350 CE as Western Ganga capital; title Kuvalala-puravareshvara'},{sourceId:'src-gazetteer-karnataka-1983',locator:'Kolar district chapter: Western Ganga dynastic-capital context'}],review:{...review}
+  },
+  {
     id:'district-history-tumakuru-foundation-stones',recordKind:'candidate',districtId:'audit-tumakuru',district:n('Tumakuru','ತುಮಕೂರು'),
     name:n('Tumakuru foundation-stone and locality-history intake','ತುಮಕೂರು ಸ್ಥಾಪನಾ ಶಿಲೆ ಮತ್ತು ಸ್ಥಳೀಯ ಇತಿಹಾಸ ಸ್ವೀಕೃತಿ'),category:'foundation-stone',
     date:{from:null,to:null,era:'CE',precision:'unknown'},location:{type:'Point',coordinates:[77.1010,13.3379],precision:'district-centroid'},

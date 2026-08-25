@@ -39514,6 +39514,28 @@
         }
       },
       {
+        "id": "src-wikipedia-kolar-karnataka",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Kolar, Karnataka",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಕೋಲಾರ, ಕರ್ನಾಟಕ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Kolar,_Karnataka",
+        "scope": {
+          "en": "Documents Kolar's ancient names (Kuvalala, Kolala, Kolahalapura) and its founding as the Western Ganga capital by Konganivarman Madhava c. 350 CE, with later Ganga rulers holding the title Kuvalala-puravareshvara; also documents c. 4000 years of gold-mining archaeology at the Kolar Gold Fields (Chigaragunta radiocarbon evidence, c. 2600 years BP). Discovery lead; verify against inscriptions and archaeological reports before promotion.",
+          "kn": "ಕೋಲಾರದ ಪ್ರಾಚೀನ ಹೆಸರುಗಳನ್ನು (ಕುವಲಾಲ, ಕೋಲಾಲ, ಕೋಲಾಹಲಪುರ) ಮತ್ತು ಕೊಂಗಣಿವರ್ಮ ಮಾಧವನಿಂದ ಸು. ಕ್ರಿ.ಶ. 350ರಲ್ಲಿ ಪಶ್ಚಿಮ ಗಂಗ ರಾಜಧಾನಿಯಾಗಿ ಸ್ಥಾಪನೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ನಂತರದ ಗಂಗ ಅರಸರು ಕುವಲಾಲ-ಪುರವರೇಶ್ವರ ಬಿರುದು ಹೊಂದಿದ್ದರು; ಕೋಲಾರ ಚಿನ್ನದ ಗಣಿಗಳಲ್ಲಿ ಸು. 4000 ವರ್ಷಗಳ ಚಿನ್ನ-ಗಣಿಗಾರಿಕೆ ಪುರಾತತ್ತ್ವವನ್ನೂ (ಚಿಗರಗುಂಟ ರೇಡಿಯೊಕಾರ್ಬನ್ ಸಾಕ್ಷ್ಯ, ಸು. 2600 ವರ್ಷ BP) ದಾಖಲಿಸುತ್ತದೆ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಮತ್ತು ಪುರಾತತ್ತ್ವ ವರದಿಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-archive-kavirajamarga-sundaram",
         "type": "digitized-print-edition",
         "title": {
@@ -78652,6 +78674,90 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Kolar district chapter: identify and verify prehistoric and early-settlement references"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kolar-kuvalala-western-ganga-capital-polity-1",
+        "fromId": "district-history-kolar-kuvalala-western-ganga-capital",
+        "type": "district-history-polity-context",
+        "toId": "polity-western-ganga",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kolar-karnataka",
+            "locator": "Kolar named Kuvalala/Kolala/Kolahalapura in ancient inscriptions; founded by Konganivarman Madhava c. 350 CE as Western Ganga capital; title Kuvalala-puravareshvara"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kolar district chapter: Western Ganga dynastic-capital context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kolar-kuvalala-western-ganga-capital-polity-2",
+        "fromId": "district-history-kolar-kuvalala-western-ganga-capital",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-chola",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kolar-karnataka",
+            "locator": "Kolar named Kuvalala/Kolala/Kolahalapura in ancient inscriptions; founded by Konganivarman Madhava c. 350 CE as Western Ganga capital; title Kuvalala-puravareshvara"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kolar district chapter: Western Ganga dynastic-capital context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kolar-kuvalala-western-ganga-capital-polity-3",
+        "fromId": "district-history-kolar-kuvalala-western-ganga-capital",
+        "type": "district-history-polity-context",
+        "toId": "polity-mysore",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kolar-karnataka",
+            "locator": "Kolar named Kuvalala/Kolala/Kolahalapura in ancient inscriptions; founded by Konganivarman Madhava c. 350 CE as Western Ganga capital; title Kuvalala-puravareshvara"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kolar district chapter: Western Ganga dynastic-capital context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kolar-kuvalala-western-ganga-capital-event-1",
+        "fromId": "district-history-kolar-kuvalala-western-ganga-capital",
+        "type": "district-history-event-context",
+        "toId": "event-chola-gangavadi",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-kolar-karnataka",
+            "locator": "Kolar named Kuvalala/Kolala/Kolahalapura in ancient inscriptions; founded by Konganivarman Madhava c. 350 CE as Western Ganga capital; title Kuvalala-puravareshvara"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kolar district chapter: Western Ganga dynastic-capital context"
           }
         ],
         "review": {
