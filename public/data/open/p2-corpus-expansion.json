@@ -2574,8 +2574,8 @@
               "kn": "ಸನ್ನತಿ, ಕಲಬುರಗಿ ಜಿಲ್ಲೆ"
             },
             "date": {
-              "from": 265,
-              "to": 238,
+              "from": 261,
+              "to": 256,
               "era": "BCE",
               "precision": "range"
             },
@@ -2590,7 +2590,7 @@
             "citations": [
               {
                 "sourceId": "src-ignca-sannati-ashoka",
-                "locator": "IGNCA exhibition identifies the Sannati rock edict and the Kanaganahalli “Raya Asoko” portrait label"
+                "locator": "IGNCA exhibition identifies the Sannati rock edict and the Kanaganahalli “Raya Asoko” portrait label; date reconciled to c. 261-256 BCE, matching the standard Major Rock Edict corpus (issued in regnal years 8-13 of a reign beginning c. 269 BCE) since the item edition identifies the Sannati fragments as Major Rock Edicts XII and XIV rather than an open full-reign span"
               },
               {
                 "sourceId": "src-asi-hampi-ashokan-edicts",
@@ -2628,7 +2628,7 @@
         "citations": [
           {
             "sourceId": "src-ignca-sannati-ashoka",
-            "locator": "IGNCA exhibition identifies the Sannati rock edict and the Kanaganahalli “Raya Asoko” portrait label"
+            "locator": "IGNCA exhibition identifies the Sannati rock edict and the Kanaganahalli “Raya Asoko” portrait label; date reconciled to c. 261-256 BCE, matching the standard Major Rock Edict corpus (issued in regnal years 8-13 of a reign beginning c. 269 BCE) since the item edition identifies the Sannati fragments as Major Rock Edicts XII and XIV rather than an open full-reign span"
           },
           {
             "sourceId": "src-asi-hampi-ashokan-edicts",
