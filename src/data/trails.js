@@ -108,4 +108,132 @@ export const trails=[
       narrative('events','event-independence','1947ರಲ್ಲಿ ಭಾರತ ಸ್ವಾತಂತ್ರ್ಯ ಪಡೆಯಿತು. ಈ ಘಟನೆಯು ಎಲ್ಲ ಹೋರಾಟದ ಪಥಗಳ ಏಕೀಕೃತ ಗುರಿಯಾಗಿತ್ತು.','In 1947 India gained independence — the shared goal that united every path of struggle.'),
     ],
   },
+  {
+    id:'trail-western-ganga',
+    slug:'western-ganga-talakad',
+    era:'classical',
+    yearRange:{from:350,to:1004,era:'CE'},
+    title:name('ಪಶ್ಚಿಮ ಗಂಗರು: ತಲಕಾಡು ಮತ್ತು ಜೈನ ಪರಂಪರೆ','Western Ganga: Talakad and a Jain Legacy'),
+    summary:name(
+      'ಆರುನೂರು ವರ್ಷಗಳ ಕಾಲ ದಕ್ಷಿಣ ಕರ್ನಾಟಕವನ್ನು ಆಳಿದ ಪಶ್ಚಿಮ ಗಂಗರ ಕಥೆ — ತಲಕಾಡಿನ ರಾಜಧಾನಿ, ದುರ್ವಿನೀತನಂತಹ ವಿದ್ವಾಂಸ ಅರಸರು, ಶ್ರವಣಬೆಳಗೊಳದ ಗೊಮ್ಮಟೇಶ್ವರ ಮತ್ತು ಅಂತಿಮವಾಗಿ ಚೋಳರ ಎದುರು ಅಧಿಕಾರ ಕಳೆದುಕೊಂಡ ಬಗೆ.',
+      'Six centuries of Western Ganga rule in southern Karnataka: the capital at Talakad, scholar-kings like Durvinita, the Gommateshwara monument at Shravanabelagola, and the dynasty’s eventual eclipse by the Cholas.'
+    ),
+    stops:[
+      narrative('events','event-western-ganga-power-emerges','ಸು. 350ರಲ್ಲಿ ಕೊಂಗಣಿವರ್ಮನಿಂದ ಪಶ್ಚಿಮ ಗಂಗರ ಆಳ್ವಿಕೆ ದಕ್ಷಿಣ ಕರ್ನಾಟಕದಲ್ಲಿ ಆರಂಭವಾಯಿತು ಎಂದು ಸಾಂಪ್ರದಾಯಿಕವಾಗಿ ಇರಿಸಲಾಗುತ್ತದೆ; ಆರಂಭಿಕ ಕಾಲಕ್ರಮ ಇನ್ನೂ ಅಂದಾಜಿನದು.','Western Ganga rule in southern Karnataka is conventionally placed as beginning around 350 CE under Kongunivarma; the early chronology remains approximate.'),
+      narrative('people','person-kongunivarma','ಕೊಂಗಣಿವರ್ಮ ಪಶ್ಚಿಮ ಗಂಗ ವಂಶದ ಸ್ಥಾಪಕ ಎಂದು ಪರಿಗಣಿತನಾಗಿದ್ದಾನೆ; ಈ ದೀರ್ಘಕಾಲದ ಪ್ರಾದೇಶಿಕ ಶಕ್ತಿಯ ಮೊದಲ ಹೆಜ್ಜೆ ಇಲ್ಲಿಂದ ಆರಂಭ.','Kongunivarma is regarded as the founder of the Western Ganga line — the first step of a regional power that would endure for six centuries.'),
+      narrative('places','place-talakad','ತಲಕಾಡು ಪಶ್ಚಿಮ ಗಂಗರ ರಾಜಧಾನಿಗಳಲ್ಲಿ ಒಂದಾಗಿತ್ತು. ಕಾವೇರಿ ನದಿಯ ದಡದಲ್ಲಿರುವ ಈ ಸ್ಥಳ ಇಂದಿಗೂ ಗಂಗರ ಆಳ್ವಿಕೆಯ ಸ್ಮರಣೆಯನ್ನು ಹೊತ್ತಿದೆ.','Talakad, on the banks of the Kaveri, served as one of the Western Ganga capitals and still carries the memory of their rule.'),
+      narrative('people','person-durvinita','ದುರ್ವಿನೀತ ಗಂಗ ವಂಶದ ಅತ್ಯಂತ ಪ್ರಸಿದ್ಧ ಅರಸರಲ್ಲಿ ಒಬ್ಬ — ಆಡಳಿತಗಾರನಷ್ಟೇ ಅಲ್ಲ, ವ್ಯಾಕರಣ ಮತ್ತು ಸಾಹಿತ್ಯದ ವಿದ್ವಾಂಸನಾಗಿಯೂ ಸಂಪ್ರದಾಯದಲ್ಲಿ ಸ್ಮರಿಸಲ್ಪಡುತ್ತಾನೆ.','Durvinita is remembered as one of the most celebrated Ganga rulers — not only an administrator but, in tradition, a scholar of grammar and literature.'),
+      narrative('inscriptions','inscription-shravanabelagola','ಶ್ರವಣಬೆಳಗೊಳ ಶಾಸನ ಸಮೂಹ (ಸು. 981) ಪಶ್ಚಿಮ ಗಂಗರ ಜೈನ ಆಶ್ರಯದ ಪ್ರಮುಖ ಸಾಕ್ಷ್ಯ. ಈ ಶಾಸನಗಳು ಗಂಗ ಆಡಳಿತ ಮತ್ತು ಜೈನ ಧರ್ಮದ ನಡುವಿನ ನಿಕಟ ಸಂಬಂಧವನ್ನು ದಾಖಲಿಸುತ್ತವೆ.','The Shravanabelagola inscription cluster (c. 981) is key evidence of Western Ganga patronage of Jainism, recording the close relationship between Ganga rule and the Jain tradition.'),
+      narrative('culturalHeritage','culture-gommateshwara-shravanabelagola-981','ಗೊಮ್ಮಟೇಶ್ವರನ (ಬಾಹುಬಲಿ) ಏಕಶಿಲಾ ಮೂರ್ತಿ ಸು. 981ರಲ್ಲಿ ಸ್ಥಾಪಿತವಾಯಿತು — ಗಂಗ ಆಶ್ರಯದ ಅಡಿಯಲ್ಲಿ ರೂಪುಗೊಂಡ ಜೈನ ಶಿಲ್ಪಕಲೆಯ ಅತ್ಯುನ್ನತ ಸಾಧನೆ, ಇಂದಿಗೂ ಜೀವಂತ ಆರಾಧನಾ ಸಂಪ್ರದಾಯ.','The monolithic Gommateshwara (Bahubali) monument, raised around 981 CE, is the towering achievement of Jain sculpture under Ganga patronage — and remains a living tradition of worship today.'),
+      narrative('people','person-rachamalla-iv','ರಾಚಮಲ್ಲ IV ಗಂಗ ವಂಶದ ಕೊನೆಯ ಹಂತದ ಅರಸರಲ್ಲಿ ಒಬ್ಬ, ಚೋಳರ ಒತ್ತಡ ಹೆಚ್ಚುತ್ತಿದ್ದ ಕಾಲಘಟ್ಟದಲ್ಲಿ ಆಳಿದನು.','Rachamalla IV ruled in the dynasty’s later phase, as Chola pressure on the Ganga heartland steadily grew.'),
+      narrative('events','event-chola-gangavadi','1004ರ ಸುಮಾರಿಗೆ ಚೋಳರ ದಂಡಯಾತ್ರೆಗಳು ಗಂಗವಾಡಿಯನ್ನು (ಗಂಗರ ರಾಜ್ಯ) ಆಕ್ರಮಿಸಿ, ಆರುನೂರು ವರ್ಷಗಳ ಪಶ್ಚಿಮ ಗಂಗ ಸ್ವತಂತ್ರ ಆಳ್ವಿಕೆಯನ್ನು ಕೊನೆಗೊಳಿಸಿದವು.','Around 1004, Chola campaigns overran Gangavadi (the Ganga territory), ending six centuries of independent Western Ganga rule.'),
+    ],
+  },
+  {
+    id:'trail-badami-chalukya',
+    slug:'badami-chalukya-vatapi',
+    era:'classical',
+    yearRange:{from:543,to:757,era:'CE'},
+    title:name('ಬಾದಾಮಿ ಚಾಲುಕ್ಯರು: ವಾತಾಪಿಯ ಸಾಮ್ರಾಜ್ಯ','Badami Chalukya: The Vatapi Empire'),
+    summary:name(
+      'ವಾತಾಪಿಯಲ್ಲಿ (ಬಾದಾಮಿ) ಜನಿಸಿ ಎರಡು ಶತಮಾನಗಳ ಕಾಲ ದಖ್ಖನ್‌ ಮೇಲೆ ಆಳ್ವಿಕೆ ನಡೆಸಿದ ಚಾಲುಕ್ಯರ ಕಥೆ — ಎರಡನೇ ಪುಲಕೇಶಿಯ ಸಾಮ್ರಾಜ್ಯ ವಿಸ್ತರಣೆ, ಚೀನೀ ಯಾತ್ರಿಕ ಷುವಾನ್‌ಜಾಂಗನ ಸಾಕ್ಷ್ಯ, ಮತ್ತು ಐಹೊಳೆ-ಬಾದಾಮಿ-ಪಟ್ಟದಕಲ್ಲಿನ ವಾಸ್ತುಶಿಲ್ಪ ಪ್ರಯೋಗಗಳು.',
+      'Born at Vatapi (Badami), the Chalukyas ruled the Deccan for two centuries — Pulakeshin II’s imperial reach, the eyewitness account of the Chinese pilgrim Xuanzang, and the architectural experiments of Aihole, Badami and Pattadakal.'
+    ),
+    stops:[
+      narrative('events','event-pulakeshin-i-vatapi','ಸು. 543ರಲ್ಲಿ ಮೊದಲ ಪುಲಕೇಶಿ ವಾತಾಪಿಯಲ್ಲಿ (ಇಂದಿನ ಬಾದಾಮಿ) ಚಾಲುಕ್ಯ ಆಳ್ವಿಕೆಯನ್ನು ಸ್ಥಾಪಿಸಿದನು — ಪಟ್ಟಾಭಿಷೇಕದ ವರ್ಷ ಸಾಂಪ್ರದಾಯಿಕ ಅಂದಾಜಿನದು.','Around 543 CE, Pulakeshin I established Chalukya rule at Vatapi, present-day Badami; the accession year is a conventional estimate.'),
+      narrative('people','person-kirtivarman-i','ಕೀರ್ತಿವರ್ಮ I ವಾತಾಪಿ ಚಾಲುಕ್ಯ ಶಕ್ತಿಯನ್ನು ಬಲಪಡಿಸಿ, ನಂತರ ಸಾಮ್ರಾಜ್ಯ ಮಟ್ಟಕ್ಕೆ ಏರಲಿರುವ ವಂಶಕ್ಕೆ ಭದ್ರ ಬುನಾದಿ ಹಾಕಿದನು.','Kirtivarman I consolidated Chalukya power at Vatapi, laying the groundwork for the imperial expansion that would follow.'),
+      narrative('events','event-pulakeshin-ii-accession','ಸು. 610ರಲ್ಲಿ ಎರಡನೇ ಪುಲಕೇಶಿ ವಾತಾಪಿಯ ಸಿಂಹಾಸನವನ್ನೇರಿದನು. ಈ ಆಳ್ವಿಕೆಯೇ ಚಾಲುಕ್ಯರನ್ನು ದಖ್ಖನ್‌ನ ಅತ್ಯಂತ ಶಕ್ತಿಶಾಲಿ ಸಾಮ್ರಾಜ್ಯವಾಗಿ ರೂಪಿಸಿತು.','Around 610 CE, Pulakeshin II ascended the Vatapi throne — the reign that would turn the Chalukyas into the Deccan’s most formidable power.'),
+      narrative('events','event-xuanzang-chalukya-realm','641ರಲ್ಲಿ ಚೀನೀ ಬೌದ್ಧ ಯಾತ್ರಿಕ ಷುವಾನ್‌ಜಾಂಗ್ ಎರಡನೇ ಪುಲಕೇಶಿಯ ರಾಜ್ಯವನ್ನು ಕಣ್ಣಾರೆ ಕಂಡು ದಾಖಲಿಸಿದನು, ಹರ್ಷನೂ ಈ ಜನರನ್ನು ಅಧೀನಪಡಿಸಿಕೊಳ್ಳಲಾಗಲಿಲ್ಲ ಎಂದು ಬರೆದನು — ಚಾಲುಕ್ಯ ಶಕ್ತಿಯ ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಾಕ್ಷ್ಯ.','In 641, the Chinese Buddhist pilgrim Xuanzang recorded Pulakeshin II’s realm at first hand, noting that even Harsha had failed to subdue its people — a rare international eyewitness to Chalukya power.'),
+      narrative('inscriptions','inscription-aihole','ಐಹೊಳೆ ಶಾಸನ (634) ರವಿಕೀರ್ತಿ ರಚಿಸಿದ ಎರಡನೇ ಪುಲಕೇಶಿಯ ಪ್ರಶಸ್ತಿ. ಇದು ಚಾಲುಕ್ಯ ಇತಿಹಾಸದ ಅತ್ಯಂತ ಮುಖ್ಯ ಆಕರಗಳಲ್ಲಿ ಒಂದು.','The Aihole inscription (634) is Ravikirti’s eulogy of Pulakeshin II — one of the single most important sources for Chalukya history.'),
+      narrative('culturalHeritage','culture-aihole-meguti-jain-temple','ಈ ಶಾಸನ ಕೆತ್ತಲ್ಪಟ್ಟಿರುವುದು ಐಹೊಳೆಯ ಮೇಗುತಿ ಜೈನ ದೇವಾಲಯದಲ್ಲಿ — ರವಿಕೀರ್ತಿಯೇ ನಿರ್ಮಿಸಿದ ಈ ದೇವಾಲಯ ರಾಜಾಶ್ರಯ ಮತ್ತು ಧಾರ್ಮಿಕ ಸಹಿಷ್ಣುತೆ ಎರಡನ್ನೂ ತೋರಿಸುತ್ತದೆ.','That inscription is carved on the Meguti Jain Temple at Aihole, built by Ravikirti himself — a single monument that shows both royal patronage and religious plurality.'),
+      narrative('culturalHeritage','culture-badami-cave-temples','ಬಾದಾಮಿಯ ಗುಹಾ ದೇವಾಲಯಗಳು ಶೈವ, ವೈಷ್ಣವ ಮತ್ತು ಜೈನ ಸಂಪ್ರದಾಯಗಳನ್ನು ಒಂದೇ ಬಂಡೆಯಲ್ಲಿ ಕೆತ್ತಿದ ರಾಜಧಾನಿಯ ಸ್ಮಾರಕಗಳು — ಚಾಲುಕ್ಯ ಶಿಲ್ಪಕಲೆಯ ಆರಂಭಿಕ ಪ್ರಯೋಗಶಾಲೆ.','The Badami cave temples — Shaiva, Vaishnava and Jain shrines cut from a single cliff at the capital itself — were the Chalukyas’ early laboratory for temple sculpture.'),
+      narrative('culturalHeritage','culture-virupaksha-temple-victory-740','ಎರಡನೇ ವಿಕ್ರಮಾದಿತ್ಯ ಮತ್ತು ರಾಣಿ ಲೋಕಮಹಾದೇವಿಯ ಆಶ್ರಯದಲ್ಲಿ ಪಟ್ಟದಕಲ್ಲಿನಲ್ಲಿ ಸು. 740ರಲ್ಲಿ ನಿರ್ಮಿತವಾದ ವಿರೂಪಾಕ್ಷ ದೇವಾಲಯ ಪಲ್ಲವರ ಮೇಲಿನ ಗೆಲುವಿನ ಸ್ಮಾರಕ.','Built at Pattadakal around 740 under Vikramaditya II and Queen Lokamahadevi, the Virupaksha Temple stands as a victory monument commemorating triumph over the Pallavas.'),
+      narrative('culturalHeritage','culture-pattadakal-sacred-architecture','ಪಟ್ಟದಕಲ್ಲು ಉತ್ತರ ಮತ್ತು ದಕ್ಷಿಣ ಭಾರತೀಯ ವಾಸ್ತುಶೈಲಿಗಳನ್ನು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ ಸಂಯೋಜಿಸಿದ ಚಾಲುಕ್ಯ ಪ್ರಯೋಗದ ಪರಾಕಾಷ್ಠೆ — ಈ ಪಟ್ಟಾಭಿಷೇಕ ನಗರವೇ ವಂಶದ ವಾಸ್ತು ಪರಂಪರೆಯ ಸಾರಾಂಶ.','Pattadakal, where northern and southern Indian temple styles meet side by side, is the culmination of Chalukya architectural experiment — a coronation city that distills the dynasty’s entire built legacy.'),
+    ],
+  },
+  {
+    id:'trail-kalyani-chalukya',
+    slug:'kalyani-chalukya',
+    era:'medieval',
+    yearRange:{from:973,to:1196,era:'CE'},
+    title:name('ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರು: ಪುನರುತ್ಥಾನದ ಸಾಮ್ರಾಜ್ಯ','Kalyani Chalukya: An Empire Restored'),
+    summary:name(
+      'ರಾಷ್ಟ್ರಕೂಟರನ್ನು ಸೋಲಿಸಿ ತೈಲಪ II ಸ್ಥಾಪಿಸಿದ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಸಾಮ್ರಾಜ್ಯ — ವಿಕ್ರಮಾದಿತ್ಯ VI ಅಡಿಯಲ್ಲಿ ಇಟಗಿ, ಲಕ್ಕುಂಡಿಯಂತಹ ವಾಸ್ತು ಕೇಂದ್ರಗಳ ಉಚ್ಛ್ರಾಯ, ಮತ್ತು ದೇವಗಿರಿಯಂತಹ ಸಾಮಂತ ರಾಜ್ಯಗಳ ಸ್ವತಂತ್ರವಾಗುವಿಕೆಯೊಂದಿಗೆ ಸಾಮ್ರಾಜ್ಯದ ಛಿದ್ರೀಕರಣ.',
+      'Tailapa II founded the Kalyani Chalukya empire by overthrowing the Rashtrakutas — its architectural high point under Vikramaditya VI at Itagi and Lakkundi, and the empire’s eventual fragmentation as vassals like Devagiri broke away.'
+    ),
+    stops:[
+      narrative('events','event-kalyani-chalukya-restoration','973ರಲ್ಲಿ ತೈಲಪ II ಕೊನೆಯ ರಾಷ್ಟ್ರಕೂಟ ಅರಸನನ್ನು ಸೋಲಿಸಿ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ವಂಶವನ್ನು ಸ್ಥಾಪಿಸಿದನು — ಚಾಲುಕ್ಯ ಅಧಿಕಾರದ ಎರಡನೇ ಪುನರುತ್ಥಾನ.','In 973, Tailapa II overthrew the last Rashtrakuta ruler and founded the Kalyani Chalukya line — the second great restoration of Chalukya power.'),
+      narrative('places','place-kalyani','ಕಲ್ಯಾಣಿ (ಬಸವಕಲ್ಯಾಣ) ಈ ಪುನಃಸ್ಥಾಪಿತ ಸಾಮ್ರಾಜ್ಯದ ರಾಜಧಾನಿಯಾಯಿತು — ಎರಡು ಶತಮಾನಗಳ ಕಾಲ ಪಶ್ಚಿಮ ದಖ್ಖನ್‌ನ ರಾಜಕೀಯ ಕೇಂದ್ರ.','Kalyani (Basavakalyana) became the capital of this restored empire — the political centre of the western Deccan for two centuries.'),
+      narrative('people','person-satyashraya','ಸತ್ಯಾಶ್ರಯ ತೈಲಪ IIನ ಉತ್ತರಾಧಿಕಾರಿಯಾಗಿ ಆಳಿ, ಚೋಳರ ಒತ್ತಡದ ನಡುವೆಯೂ ಸಾಮ್ರಾಜ್ಯವನ್ನು ಭದ್ರಪಡಿಸಿದನು.','Satyashraya succeeded Tailapa II and held the young empire together against mounting Chola pressure.'),
+      narrative('people','person-someshvara-i','ಸೋಮೇಶ್ವರ I ಆಳ್ವಿಕೆಯಲ್ಲಿ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರ ಶಕ್ತಿ ಮತ್ತಷ್ಟು ಬಲಗೊಂಡಿತು, ಮುಂದೆ ಬರಲಿರುವ ವಿಕ್ರಮಾದಿತ್ಯ VIನ ಸುವರ್ಣಯುಗಕ್ಕೆ ದಾರಿ ಮಾಡಿಕೊಟ್ಟಿತು.','Under Someshvara I, Kalyani Chalukya power grew stronger still, setting the stage for the golden age to come under Vikramaditya VI.'),
+      narrative('people','person-vikramaditya-vi','ವಿಕ್ರಮಾದಿತ್ಯ VI (ಸು. 1076–1126) ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರ ಅತ್ಯಂತ ಪ್ರಸಿದ್ಧ ಅರಸ. ಅವನ ಸುದೀರ್ಘ ಆಳ್ವಿಕೆಯಲ್ಲಿ ಸಾಹಿತ್ಯ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪ ಎರಡೂ ಉಚ್ಛ್ರಾಯ ಸ್ಥಿತಿ ತಲುಪಿದವು.','Vikramaditya VI (r. c. 1076–1126) was the most celebrated Kalyani Chalukya ruler; his long reign saw both literature and architecture reach a peak.'),
+      narrative('culturalHeritage','culture-itagi-mahadeva-1112','1112ರಲ್ಲಿ ನಿರ್ಮಿತವಾದ ಇಟಗಿಯ ಮಹಾದೇವ ದೇವಾಲಯ ವಿಕ್ರಮಾದಿತ್ಯ VIನ ಒಬ್ಬ ಸೇನಾಧಿಪತಿಯ ಆಶ್ರಯದಲ್ಲಿ ಎದ್ದು ನಿಂತಿತು — ಅಲಂಕೃತ ಕಂಬಗಳ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಶೈಲಿಯ ಉತ್ಕೃಷ್ಟ ಉದಾಹರಣೆ.','The Mahadeva Temple at Itagi, raised in 1112 under the patronage of one of Vikramaditya VI’s commanders, is a superb example of the ornate-pillared Kalyani Chalukya style.'),
+      narrative('culturalHeritage','culture-lakkundi-kashivishveshvara','ಲಕ್ಕುಂಡಿಯ ಕಾಶಿವಿಶ್ವೇಶ್ವರ ದೇವಾಲಯ, ಬ್ರಹ್ಮ ಜಿನಾಲಯ ಮತ್ತು ಮುಸುಕಿನ ಬಾವಿ ಒಂದೇ ಪಟ್ಟಣದಲ್ಲಿ ಶೈವ, ಜೈನ ಮತ್ತು ನಾಗರಿಕ ವಾಸ್ತುಶಿಲ್ಪವನ್ನು ಒಟ್ಟಿಗೆ ತೋರಿಸುತ್ತವೆ — ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಕಾಲದ ಧಾರ್ಮಿಕ ಸಹಬಾಳ್ವೆಯ ಸಾಕ್ಷ್ಯ.','At Lakkundi, the Kashivishveshvara Temple, the Brahma Jinalaya and the Musukina Bavi stepwell together show Shaiva, Jain and civic architecture side by side — evidence of the religious coexistence of the Kalyani Chalukya period.'),
+      narrative('events','event-sevuna-devagiri-independent-power','1185ರ ಸುಮಾರಿಗೆ ದೇವಗಿರಿಯ ಸೇವುಣ/ಯಾದವರಂತಹ ಸಾಮಂತರು ಸ್ವತಂತ್ರ ಅಧಿಕಾರವನ್ನು ಘೋಷಿಸಿಕೊಂಡರು — ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಸಾಮ್ರಾಜ್ಯದ ಛಿದ್ರೀಕರಣದ ಆರಂಭ.','Around 1185, vassals such as the Seuna/Yadavas of Devagiri asserted independent power — the beginning of the Kalyani Chalukya empire’s fragmentation.'),
+    ],
+  },
+  {
+    id:'trail-mysore-wadiyar',
+    slug:'kingdom-of-mysore',
+    era:'modern',
+    yearRange:{from:1399,to:1947,era:'CE'},
+    title:name('ಮೈಸೂರು ಸಂಸ್ಥಾನ: ಒಡೆಯರು, ಹೈದರ್ ಮತ್ತು ಟಿಪ್ಪು','Kingdom of Mysore: Wadiyars, Hyder and Tipu'),
+    summary:name(
+      'ಯದುರಾಯನಿಂದ 1947ರ ಸೇರ್ಪಡೆಯವರೆಗಿನ ಐದೂವರೆ ಶತಮಾನಗಳ ಕಥೆ — ಒಡೆಯರ ಸಂಸ್ಥಾನ, ಹೈದರ್ ಅಲಿ ಮತ್ತು ಟಿಪ್ಪು ಸುಲ್ತಾನರ ಆಂಗ್ಲೋ-ಮೈಸೂರು ಯುದ್ಧಗಳು, ಮತ್ತು ಶ್ರೀರಂಗಪಟ್ಟಣದಿಂದ ಆಧುನಿಕ ಮೈಸೂರು ಅರಮನೆಯವರೆಗಿನ ಪ್ರಯಾಣ.',
+      'Five and a half centuries from Yaduraya to the 1947 accession — the Wadiyar kingdom, the Anglo-Mysore Wars of Hyder Ali and Tipu Sultan, and the journey from Srirangapatna to the modern Mysuru Palace.'
+    ),
+    stops:[
+      narrative('people','person-yaduraya','ಯದುರಾಯ 1399ರಲ್ಲಿ ಮೈಸೂರು ಸಂಸ್ಥಾನದ ಒಡೆಯರ ವಂಶವನ್ನು ಸ್ಥಾಪಿಸಿದನು — ಐದೂವರೆ ಶತಮಾನಗಳ ಆಳ್ವಿಕೆಯ ಆರಂಭ.','Yaduraya founded the Wadiyar dynasty of the Kingdom of Mysore in 1399 — the start of five and a half centuries of rule.'),
+      narrative('places','place-mysuru','ಮೈಸೂರು ಈ ದೀರ್ಘಕಾಲದ ಸಂಸ್ಥಾನದ ರಾಜಧಾನಿಯಾಗಿ ಉಳಿಯಿತು, ಒಡೆಯರಿಂದ ಹಿಡಿದು ಹೈದರ್-ಟಿಪ್ಪು ಅವಧಿ ಮತ್ತು ಆಧುನಿಕ ಕಾಲದವರೆಗೂ.','Mysuru remained the seat of this long-lived kingdom, from the Wadiyars through the Hyder–Tipu interlude to the modern era.'),
+      narrative('people','person-chikka-devaraja','ಚಿಕ್ಕ ದೇವರಾಜ ಒಡೆಯರ್ ಆಳ್ವಿಕೆಯಲ್ಲಿ ಸಂಸ್ಥಾನದ ಆಡಳಿತ ಮತ್ತು ಸೈನಿಕ ಶಕ್ತಿ ಬಲಗೊಂಡು, ಮುಂದಿನ ವಿಸ್ತರಣೆಗೆ ಬುನಾದಿ ಹಾಕಿತು.','Under Chikka Devaraja Wadiyar, the kingdom’s administration and military strength grew, laying the foundation for later expansion.'),
+      narrative('culturalHeritage','culture-mysuru-dasara-continuing','ಸು. 1610ರಿಂದ ಆರಂಭಿಸಲ್ಪಟ್ಟ ಮೈಸೂರು ದಸರಾ ರಾಜೋತ್ಸವ ಇಂದಿಗೂ ಮುಂದುವರಿದ ಜೀವಂತ ಸಂಪ್ರದಾಯ — ಒಡೆಯರ ಆಳ್ವಿಕೆಯ ಸಾಂಸ್ಕೃತಿಕ ಮುಂದುವರಿಕೆಯ ಅತ್ಯುತ್ತಮ ಉದಾಹರಣೆ.','Begun around 1610, the Mysuru Dasara royal celebration is a living tradition that continues today — the clearest thread of cultural continuity across Wadiyar rule.'),
+      narrative('people','person-hyder-ali','ಹೈದರ್ ಅಲಿ 18ನೇ ಶತಮಾನದ ಮಧ್ಯಭಾಗದಲ್ಲಿ ಮೈಸೂರು ಸೇನೆಯ ಮೂಲಕ ಅಧಿಕಾರವನ್ನು ವಶಪಡಿಸಿಕೊಂಡು, ಒಡೆಯರ ಹೆಸರಿನಲ್ಲೇ ಆಡಳಿತ ನಡೆಸಿ ಸಂಸ್ಥಾನವನ್ನು ಪ್ರಾದೇಶಿಕ ಶಕ್ತಿಯಾಗಿ ಪರಿವರ್ತಿಸಿದನು.','In the mid-18th century, Hyder Ali seized power through the Mysore army, ruling in the Wadiyars’ name while turning the kingdom into a formidable regional power.'),
+      narrative('people','person-tipu-sultan','ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ತಂದೆಯ ನಂತರ ಅಧಿಕಾರ ವಹಿಸಿ, ಬ್ರಿಟಿಷ್ ಈಸ್ಟ್ ಇಂಡಿಯಾ ಕಂಪನಿಯ ವಿರುದ್ಧ ನಾಲ್ಕು ಆಂಗ್ಲೋ-ಮೈಸೂರು ಯುದ್ಧಗಳಲ್ಲಿ ಹೋರಾಡಿದನು.','Tipu Sultan succeeded his father and fought the British East India Company across four Anglo-Mysore Wars.'),
+      narrative('culturalHeritage','culture-srirangapatna-fort','ಶ್ರೀರಂಗಪಟ್ಟಣದ ದ್ವೀಪ ಕೋಟೆ ಟಿಪ್ಪುವಿನ ರಾಜಧಾನಿ ಮತ್ತು ಕೊನೆಯ ಆಂಗ್ಲೋ-ಮೈಸೂರು ಯುದ್ಧದ (1799) ರಣರಂಗವಾಗಿತ್ತು. ದರಿಯಾ ದೌಲತ್ ಬಾಗ್ ಅರಮನೆ ಈ ಅವಧಿಯ ಕಲಾಪ್ರೌಢಿಮೆಯನ್ನೂ ತೋರಿಸುತ್ತದೆ.','The island fortifications of Srirangapatna were Tipu’s capital and the battleground of the final Anglo-Mysore War (1799); the Daria Daulat Bagh palace nearby shows the artistic refinement of the same period.'),
+      narrative('culturalHeritage','culture-srirangapatna-gumbaz','1799ರ ಶ್ರೀರಂಗಪಟ್ಟಣ ಪತನದಲ್ಲಿ ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಯುದ್ಧರಂಗದಲ್ಲೇ ಮಡಿದನು. ಗುಂಬಜ್ ಸಮಾಧಿ ಸ್ಮಾರಕ ಹೈದರ್-ಟಿಪ್ಪು ಅಧ್ಯಾಯದ ಅಂತ್ಯವನ್ನು ಗುರುತಿಸುತ್ತದೆ.','Tipu Sultan died fighting when Srirangapatna fell in 1799; the Gumbaz mausoleum marks the close of the Hyder–Tipu chapter.'),
+      narrative('people','person-krishnaraja-iii','ಟಿಪ್ಪುವಿನ ಪತನದ ನಂತರ ಬ್ರಿಟಿಷರು ಒಡೆಯರ ವಂಶವನ್ನು ಪುನಃಸ್ಥಾಪಿಸಿದರು; ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ III ಈ ಪುನಃಸ್ಥಾಪಿತ ಸಂಸ್ಥಾನದ ಪ್ರಮುಖ ಆಡಳಿತಗಾರರಲ್ಲಿ ಒಬ್ಬ.','After Tipu’s fall, the British restored the Wadiyar dynasty; Krishnaraja Wadiyar III was among the notable rulers of this restored kingdom.'),
+      narrative('culturalHeritage','culture-mysuru-palace-1912','1912ರಲ್ಲಿ ಪೂರ್ಣಗೊಂಡ ಮೈಸೂರು ಅರಮನೆ ಇಂಡೊ-ಸಾರಸೆನಿಕ್ ಶೈಲಿಯ ಒಡೆಯರ ಆಡಳಿತದ ಆಧುನಿಕ ಸಂಕೇತ — ಇಂದಿಗೂ ದಸರಾ ಆಚರಣೆಯ ಕೇಂದ್ರ.','Completed in 1912, the Indo-Saracenic Mysuru Palace became the modern symbol of Wadiyar rule — and remains the centre of Dasara celebrations today.'),
+      narrative('events','event-mysore-accession','1947ರ ಆಗಸ್ಟ್ 9ರಂದು ಮಹಾರಾಜ ಜಯಚಾಮರಾಜೇಂದ್ರ ಒಡೆಯರ್ ಸೇರ್ಪಡೆ ಪತ್ರಕ್ಕೆ ಸಹಿ ಮಾಡಿದರು, ಐದೂವರೆ ಶತಮಾನಗಳ ಸ್ವತಂತ್ರ ಸಂಸ್ಥಾನದ ಇತಿಹಾಸವನ್ನು ಸ್ವತಂತ್ರ ಭಾರತದೊಂದಿಗೆ ಬೆಸೆದರು.','On 9 August 1947, Maharaja Jayachamarajendra Wadiyar signed the Instrument of Accession, joining five and a half centuries of independent kingdom history to independent India.'),
+    ],
+  },
+  {
+    id:'trail-kannada-beyond-karnataka',
+    slug:'kannada-beyond-karnataka',
+    era:'medieval',
+    yearRange:{from:624,to:1196,era:'CE'},
+    title:name('ಕರ್ನಾಟಕದಾಚೆಗಿನ ಕನ್ನಡ ಆಳ್ವಿಕೆ','Kannada Rule Beyond Karnataka'),
+    summary:name(
+      'ಕರ್ನಾಟಕ ಮೂಲದ ವಂಶಗಳ ಶಾಖೆಗಳು ವೇಂಗಿ, ಗೋವಾ, ದೇವಗಿರಿ ಮತ್ತು ದೂರದ ತಿರಹುತಿನಲ್ಲೂ (ಇಂದಿನ ನೇಪಾಳ) ಆಳ್ವಿಕೆ ನಡೆಸಿದ ದಾಖಲೆಗಳು — ಪ್ರತಿಯೊಂದೂ ವಿಭಿನ್ನ ಮಟ್ಟದ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಚರ್ಚೆಯನ್ನು ಹೊಂದಿದೆ.',
+      'Records of Karnataka-origin dynasties establishing rule far beyond the home region — in Vengi, Goa, Devagiri, and as far as Tirhut in present-day Nepal — each carrying a different level of evidence and scholarly debate.'
+    ),
+    stops:[
+      narrative('events','event-eastern-chalukya-vengi-foundation','624ರಲ್ಲಿ ಎರಡನೇ ಪುಲಕೇಶಿಯ ಪೂರ್ವ ದಖ್ಖನ್ ದಂಡಯಾತ್ರೆಯ ನಂತರ, ಆತನ ಸಹೋದರ ಕುಬ್ಜ ವಿಷ್ಣುವರ್ಧನನನ್ನು ವೇಂಗಿಯಲ್ಲಿ ಇರಿಸಲಾಯಿತು. ಈ ಶಾಖೆ ನಂತರ ಸ್ವತಂತ್ರ ಪೂರ್ವ ಚಾಲುಕ್ಯ ರಾಜ್ಯವಾಗಿ ಬೆಳೆಯಿತು.','After Pulakeshin II’s eastern Deccan campaign in 624, his brother Kubja Vishnuvardhana was placed in Vengi; the branch later grew into the autonomous Eastern Chalukya kingdom.'),
+      narrative('people','person-kubja-vishnuvardhana','ಕುಬ್ಜ ವಿಷ್ಣುವರ್ಧನ ವೇಂಗಿಯ ಪೂರ್ವ ಚಾಲುಕ್ಯರ ಸ್ಥಾಪಕ ಆಡಳಿತಗಾರ — ಬಾದಾಮಿಯಿಂದ ಕರಾವಳಿ ಆಂಧ್ರಕ್ಕೆ ಚಾಲುಕ್ಯ ವಂಶದ ವಿಸ್ತರಣೆಯ ಪ್ರತ್ಯಕ್ಷ ಸಾಕ್ಷ್ಯ.','Kubja Vishnuvardhana, the founding ruler of the Eastern Chalukyas of Vengi, is direct evidence of the Chalukya lineage’s reach from Badami to coastal Andhra.'),
+      narrative('events','event-goa-kadamba-gopakapattana','1054ರಲ್ಲಿ ಗೋವಾ ಕದಂಬರು ಗೋಪಕಪಟ್ಟಣವನ್ನು ರಾಜಧಾನಿ ಮತ್ತು ವ್ಯಾಪಾರ ಬಂದರಾಗಿ ಬೆಳೆಸಿದರು — ಬನವಾಸಿಯ ಕದಂಬ ವಂಶಸ್ಥರೇ ಕೊಂಕಣ ಕರಾವಳಿಯನ್ನೂ ತಲುಪಿದ ಸಾಕ್ಷ್ಯ.','In 1054, the Goa Kadambas developed Gopakapattana as a capital and trading port — evidence that the Kadamba lineage of Banavasi reached the Konkan coast as well.'),
+      narrative('people','person-shasthadeva-goa-kadamba','ಷಷ್ಠದೆವ ಗೋವಾ ಕದಂಬರ ಪ್ರಮುಖ ಅರಸ; ನಿಖರ ಆಳ್ವಿಕೆ ಕಾಲಕ್ರಮ ಇನ್ನೂ ಶಾಸನಮಟ್ಟದ ಪರಿಶೀಲನೆ ಬಯಸುತ್ತದೆ.','Shasthadeva was a key Goa Kadamba ruler; the exact reign chronology still awaits inscription-level review.'),
+      narrative('events','event-sevuna-devagiri-independent-power','1185ರ ಸುಮಾರಿಗೆ ದೇವಗಿರಿಯ ಸೇವುಣ/ಯಾದವರು ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರಿಂದ ಸ್ವತಂತ್ರರಾದರು. ಕನ್ನಡ ವಿದ್ವತ್ ಸಾಹಿತ್ಯ ಇವರನ್ನು ಕನ್ನಡ-ಮೂಲದವರೆಂದು ಓದಿದರೆ, ಮಹಾರಾಷ್ಟ್ರ ಗೆಜೆಟಿಯರ್‌ಗಳು ಇವರನ್ನು ಯಾದವರೆಂದು ಚೌಕಟ್ಟುಗೊಳಿಸುತ್ತವೆ — ಗುರುತು ಇನ್ನೂ ಪರಿಶೀಲನೆ-ಬಾಕಿ.','Around 1185, the Seuna/Yadavas of Devagiri broke free of Kalyani Chalukya overlordship. Kannada scholarship reads them as Kannada-origin rulers, while Maharashtra gazetteers frame them as Yadavas — the identity remains genuinely needs-review.'),
+      narrative('people','person-bhillama-v-sevuna','ಐದನೇ ಭಿಲ್ಲಮ ದೇವಗಿರಿಯಲ್ಲಿ ಸ್ವತಂತ್ರ ಅಧಿಕಾರ ಸ್ಥಾಪನೆಯೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಅರಸ; ಈ ದಾಖಲೆಯ ವಂಶಮೂಲ ಚೌಕಟ್ಟು ಇನ್ನೂ ಚರ್ಚೆಯಲ್ಲಿದೆ.','Bhillama V is the ruler associated with the assertion of independent power at Devagiri; the dynasty’s origin framing remains an open scholarly question.'),
+      narrative('events','event-nanyadeva-founds-simraungarh','1097ರಲ್ಲಿ ನಾನ್ಯದೆವನು ದೂರದ ತಿರಹುತಿನಲ್ಲಿ (ಇಂದಿನ ನೇಪಾಳ) ಸಿಮ್ರೌನಗಢ ರಾಜಧಾನಿಯನ್ನು ಸ್ಥಾಪಿಸಿದನು. ನಂತರದ ವಿದ್ವತ್ ಸಾಹಿತ್ಯ ಈತನನ್ನು ಕರ್ನಾಟಕ/ಕರ್ಣಾಟ ಮೂಲದವನೆಂದು ಸಂಬಂಧಿಸುತ್ತದೆ.','In 1097, Nanyadeva founded a capital at Simraungarh in distant Tirhut (present-day Nepal); later scholarship associates him with Karnataka/Karnata origin.'),
+      narrative('events','event-nanyadeva-nepal-valley-claim','ನಂತರದ ವಂಶಾವಳಿಗಳು ನಾನ್ಯದೆವ ಕಾಠ್ಮಂಡು ಕಣಿವೆಯನ್ನೂ ಗೆದ್ದನೆಂದು ಹೇಳುತ್ತವೆ, ಆದರೆ ವಿದ್ವತ್ ಚರ್ಚೆ ಈ ಜಯ ಕಾಲಕ್ರಮವನ್ನು ಅವಿಶ್ವಾಸನೀಯವೆಂದು ಪರಿಗಣಿಸುತ್ತದೆ. ಈ ಪಥ ಸಾಧ್ಯ ಸಾಕ್ಷ್ಯ ಮತ್ತು ವಿವಾದಿತ ಪರಂಪರೆಯ ನಡುವಿನ ವ್ಯತ್ಯಾಸವನ್ನೇ ಕೊನೆಯ ಪಾಠವಾಗಿ ಬಿಡುತ್ತದೆ.','Later chronicles claim Nanyadeva also conquered the Kathmandu Valley, but scholarly discussion treats this conquest chronology as unreliable — this trail closes on the very distinction between attested reach and contested tradition.'),
+    ],
+  },
+  {
+    id:'trail-formation-of-karnataka',
+    slug:'formation-of-karnataka',
+    era:'modern',
+    yearRange:{from:1947,to:1973,era:'CE'},
+    title:name('ಸೇರ್ಪಡೆಯಿಂದ ಕರ್ನಾಟಕದವರೆಗೆ','From Accession to Karnataka'),
+    summary:name(
+      '1947ರ ಸ್ವಾತಂತ್ರ್ಯ ಮತ್ತು ಮೈಸೂರು ಸೇರ್ಪಡೆಯಿಂದ 1973ರ ಕರ್ನಾಟಕ ಎಂಬ ಹೆಸರು ಅಂಗೀಕಾರದವರೆಗಿನ ಸಂವಿಧಾನಾತ್ಮಕ ಪಥ — ಸ್ವಾತಂತ್ರ್ಯ ಹೋರಾಟ ಮುಗಿದಲ್ಲಿಂದ ಆಧುನಿಕ ರಾಜ್ಯದ ಆರಂಭ.',
+      'The constitutional path from 1947 independence and the Mysore accession to the adoption of the name Karnataka in 1973 — picking up where the freedom struggle ended, at the birth of the modern state.'
+    ),
+    stops:[
+      narrative('people','person-jayachamarajendra','ಜಯಚಾಮರಾಜೇಂದ್ರ ಒಡೆಯರ್ ಮೈಸೂರು ಸಂಸ್ಥಾನದ ಕೊನೆಯ ಆಡಳಿತಗಾರ ಮಹಾರಾಜರಾಗಿ, ಸಂಸ್ಥಾನವನ್ನು ಸ್ವತಂತ್ರ ಭಾರತದೊಂದಿಗೆ ಬೆಸೆಯುವ ಸಂವಿಧಾನಾತ್ಮಕ ಪಥವನ್ನು ಮುನ್ನಡೆಸಿದರು.','Jayachamarajendra Wadiyar, the last ruling Maharaja of Mysore, led the kingdom through the constitutional path that joined it to independent India.'),
+      narrative('events','event-mysore-accession','1947ರ ಆಗಸ್ಟ್ 9ರಂದು ಮೈಸೂರು ಮಹಾರಾಜರು ಸೇರ್ಪಡೆ ಪತ್ರಕ್ಕೆ ಸಹಿ ಮಾಡಿ ಸಂಸ್ಥಾನವನ್ನು ಸ್ವತಂತ್ರ ಭಾರತದೊಂದಿಗೆ ಬೆಸೆದರು.','On 9 August 1947 the Maharaja of Mysore signed the Instrument of Accession, joining the kingdom to independent India.'),
+      narrative('events','event-independence','1947ರಲ್ಲಿ ಭಾರತ ಸ್ವಾತಂತ್ರ್ಯ ಪಡೆದು ಬ್ರಿಟಿಷ್ ಪರಮಾಧಿಕಾರ ಕೊನೆಗೊಂಡಿತು — ಎಲ್ಲ ಸಂಸ್ಥಾನಗಳಿಗೂ ಹೊಸ ಸಂವಿಧಾನಾತ್ಮಕ ಪ್ರಶ್ನೆಗಳನ್ನು ತೆರೆಯಿತು.','India gained independence in 1947, ending British paramountcy and opening new constitutional questions for every princely state.'),
+      narrative('events','event-constitution-republic','1950ರಲ್ಲಿ ಭಾರತದ ಸಂವಿಧಾನ ಜಾರಿಗೆ ಬಂದು ಭಾರತ ಗಣರಾಜ್ಯವಾಯಿತು; ಮೈಸೂರು ಭಾಗ B ರಾಜ್ಯವಾಯಿತು.','In 1950, the Constitution of India came into force and India became a republic; Mysore became a Part B state.'),
+      narrative('events','event-unified-mysore-state','1956ರ ರಾಜ್ಯ ಪುನರ್‌ರಚನೆ ಕಾಯ್ದೆಯಡಿ ಕನ್ನಡ ಬಹುಸಂಖ್ಯಾತ ಪ್ರದೇಶಗಳನ್ನು ಒಟ್ಟುಗೂಡಿಸಿ ವಿಶಾಲ ಮೈಸೂರು ರಾಜ್ಯ ರೂಪುಗೊಂಡಿತು — ಭಾಷಾವಾರು ಏಕೀಕರಣದ ಫಲ.','The States Reorganisation Act of 1956 brought Kannada-majority regions together into an enlarged Mysore State — the result of linguistic unification.'),
+      narrative('events','event-karnataka-name-adopted','1973ರ ನವೆಂಬರ್ 1ರಂದು ಮೈಸೂರು ರಾಜ್ಯಕ್ಕೆ ಕರ್ನಾಟಕ ಎಂಬ ಹೆಸರು ಬಂತು. ಇದು ಹೊಸ ರಾಜ್ಯದ ಸ್ಥಾಪನೆಯಲ್ಲ, 1956ರಲ್ಲಿ ಒಂದುಗೂಡಿದ ರಾಜ್ಯದ ಆಧುನಿಕ ಹೆಸರಾಂತರ — 1947ರಿಂದ ಆರಂಭವಾದ ಪಥದ ಮುಕ್ತಾಯ.','On 1 November 1973, Mysore State was renamed Karnataka. This was not the founding of a new state but the modern naming of the state unified in 1956 — the close of the path that began in 1947.'),
+    ],
+  },
 ]
