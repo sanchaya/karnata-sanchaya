@@ -132,8 +132,8 @@ export const paleographyMaturityInscriptions = [
     districtAuditId: 'audit-chitradurga',
     languages: ['Prakrit'],
     scripts: ['Ashokan Brahmi'],
-    description: n('A Karnataka Ashokan Brahmi sample for comparing straight strokes, angular intersections and early inscriptional ductus before Kadamba/Old Kannada divergence.', 'ಕದಂಬ/ಹಳೆಗನ್ನಡ ವಿಭಜನೆಯ ಮೊದಲು ನೇರ ರೇಖೆಗಳು, ಕೋನೀಯ ಜೋಡಣೆಗಳು ಮತ್ತು ಆರಂಭಿಕ ಶಾಸನ ಲಿಪಿಚಲನೆಯನ್ನು ಹೋಲಿಸಲು ಕರ್ನಾಟಕದ ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮಾದರಿ.'),
-    citations: [c('src-asi-hampi-ashokan-edicts', 'Brahmagiri Asokan edict context; exact edition and line locator pending')],
+    description: n('A Karnataka Ashokan Brahmi sample for comparing straight strokes, angular intersections and early inscriptional ductus before Kadamba/Old Kannada divergence. A separate discovery lead associates the word "Isila" in this edict with the early Kannada linguistic record and dates the inscription to 252 BCE (a looser estimate than the 260-250 BCE circa range used here); the Ashokan-edict identity and the Isila lexical claim should be reviewed as two distinct questions against the primary edition, not conflated.', 'ಕದಂಬ/ಹಳೆಗನ್ನಡ ವಿಭಜನೆಯ ಮೊದಲು ನೇರ ರೇಖೆಗಳು, ಕೋನೀಯ ಜೋಡಣೆಗಳು ಮತ್ತು ಆರಂಭಿಕ ಶಾಸನ ಲಿಪಿಚಲನೆಯನ್ನು ಹೋಲಿಸಲು ಕರ್ನಾಟಕದ ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮಾದರಿ. ಪ್ರತ್ಯೇಕ ಅನ್ವೇಷಣಾ ಸುಳಿವು ಈ ಶಾಸನದಲ್ಲಿನ "ಇಸಿಲ" ಪದವನ್ನು ಆರಂಭಿಕ ಕನ್ನಡ ಭಾಷಾ ದಾಖಲೆಯೊಂದಿಗೆ ಜೋಡಿಸುತ್ತದೆ ಮತ್ತು ಶಾಸನವನ್ನು 252 BCEಗೆ ದಿನಾಂಕಿಸುತ್ತದೆ (ಇಲ್ಲಿ ಬಳಸಿದ 260-250 BCE ಸು. ವ್ಯಾಪ್ತಿಗಿಂತ ಸಡಿಲ ಅಂದಾಜು); ಅಶೋಕ-ಶಾಸನ ಗುರುತು ಮತ್ತು ಇಸಿಲ ಭಾಷಾ ಹಕ್ಕನ್ನು ಮೂಲ ಆವೃತ್ತಿಯ ವಿರುದ್ಧ ಎರಡು ಪ್ರತ್ಯೇಕ ಪ್ರಶ್ನೆಗಳಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು, ಬೆರೆಸಬಾರದು.'),
+    citations: [c('src-asi-hampi-ashokan-edicts', 'Brahmagiri Asokan edict context; exact edition and line locator pending'), c('src-wikipedia-kannada-inscriptions', 'Isila word association and 252 BCE dating claim; verify against the primary edition')],
     review,
   },
 ]
@@ -375,42 +375,10 @@ export const boundaryMaturityEvidence = [
   ),
 ]
 
-export const districtHistorySourceBackedCandidates = [
-  {
-    id: 'district-history-chitradurga-brahmagiri-ashokan-edict',
-    recordKind: 'candidate',
-    districtId: 'audit-chitradurga',
-    district: n('Chitradurga', 'ಚಿತ್ರದುರ್ಗ'),
-    name: n('Brahmagiri Ashokan edict deep-history packet', 'ಬ್ರಹ್ಮಗಿರಿ ಅಶೋಕ ಶಾಸನ ಸಮಗ್ರ ಇತಿಹಾಸ ಕಡತ'),
-    category: 'prehistoric-landscape',
-    date: d(260, 250, 'circa', 'BCE'),
-    location: { type: 'Point', coordinates: [76.82, 14.82], precision: 'approximate' },
-    description: n('Adds a source-backed Chitradurga district deep-history lead connected to the Ashokan Brahmi script root phase.', 'ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮೂಲ ಲಿಪಿ ಹಂತಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಚಿತ್ರದುರ್ಗ ಜಿಲ್ಲೆಯ ಆಕರಸಹಿತ ಸಮಗ್ರ ಇತಿಹಾಸ ದಾರಿಯನ್ನು ಸೇರಿಸುತ್ತದೆ.'),
-    researchNote: n('Confirm exact protected location, edition, line readings and relation to nearby archaeological landscapes before promotion.', 'ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ನಿಖರ ಸಂರಕ್ಷಿತ ಸ್ಥಳ, ಆವೃತ್ತಿ, ಸಾಲು ಓದುಗಳು ಮತ್ತು ಸಮೀಪದ ಪುರಾತತ್ತ್ವ ಭೂದೃಶ್ಯಗಳ ಸಂಬಂಧವನ್ನು ದೃಢಪಡಿಸಿ.'),
-    evidenceBasis: 'archaeological-report',
-    citations: [c('src-asi-hampi-ashokan-edicts', 'Brahmagiri Asokan edict review lead')],
-    placeIds: ['place-brahmagiri-rock-edict'],
-    inscriptionIds: ['inscription-brahmagiri-minor-rock-edict'],
-    review,
-  },
-  {
-    id: 'district-history-raichur-maski-ashokan-edict',
-    recordKind: 'candidate',
-    districtId: 'audit-raichur',
-    district: n('Raichur', 'ರಾಯಚೂರು'),
-    name: n('Maski Ashokan edict deep-history packet', 'ಮಸ್ಕಿ ಅಶೋಕ ಶಾಸನ ಸಮಗ್ರ ಇತಿಹಾಸ ಕಡತ'),
-    category: 'prehistoric-landscape',
-    date: d(260, 250, 'circa', 'BCE'),
-    location: { type: 'Point', coordinates: [76.653, 15.955], precision: 'approximate' },
-    description: n('Adds a source-backed Raichur district deep-history lead connected to the Maski edict, Ashokan Brahmi and early Deccan epigraphy.', 'ಮಸ್ಕಿ ಶಾಸನ, ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮತ್ತು ಆರಂಭಿಕ ದಖ್ಖನ್ ಶಾಸನ ಪರಂಪರೆಗೆ ಸಂಬಂಧಿಸಿದ ರಾಯಚೂರು ಜಿಲ್ಲೆಯ ಆಕರಸಹಿತ ದಾರಿಯನ್ನು ಸೇರಿಸುತ್ತದೆ.'),
-    researchNote: n('Coordinate, protection status, present condition, text and Kannada translation still need independent review.', 'ನಿರ್ದೇಶಾಂಕ, ಸಂರಕ್ಷಣಾ ಸ್ಥಿತಿ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ, ಪಾಠ ಮತ್ತು ಕನ್ನಡ ಅನುವಾದಕ್ಕೆ ಇನ್ನೂ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು.'),
-    evidenceBasis: 'archaeological-report',
-    citations: [c('src-asi-maski-monograph', 'Maski monograph review lead'), c('src-falk-maski-critical-reading', 'Critical reading comparison lead')],
-    placeIds: ['place-maski-rock-edict'],
-    inscriptionIds: ['inscription-maski-minor-rock-edict'],
-    review,
-  },
-]
+// The Brahmagiri and Maski "Ashokan edict deep-history packet" entries formerly here duplicated the
+// canonical inscription-brahmagiri-minor-rock-edict / inscription-maski-minor-rock-edict records at the
+// same place and date, producing a redundant timeline dot for each with no additional evidence. Removed.
+export const districtHistorySourceBackedCandidates = []
 
 export const manuscriptWitnessMaturityRecords = [
   {

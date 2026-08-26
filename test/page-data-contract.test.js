@@ -338,7 +338,7 @@ test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated'
     assert.equal(atlasData.reigns.find(item => item.id === id)?.review.status, 'needs-review')
   }
   assert.equal(atlasData.people.filter(item => !(item.citations || []).length).length, 0)
-  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 39)
+  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 38)
   const sanganakallu = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-ballari-sanganakallu-kupgal-neolithic-complex')
   assert.equal(sanganakallu?.location.precision, 'approximate')
   assert.equal(sanganakallu?.evidenceBasis, 'archaeological-report')

@@ -36223,13 +36223,17 @@
           "Ashokan Brahmi"
         ],
         "description": {
-          "en": "A Karnataka Ashokan Brahmi sample for comparing straight strokes, angular intersections and early inscriptional ductus before Kadamba/Old Kannada divergence.",
-          "kn": "ಕದಂಬ/ಹಳೆಗನ್ನಡ ವಿಭಜನೆಯ ಮೊದಲು ನೇರ ರೇಖೆಗಳು, ಕೋನೀಯ ಜೋಡಣೆಗಳು ಮತ್ತು ಆರಂಭಿಕ ಶಾಸನ ಲಿಪಿಚಲನೆಯನ್ನು ಹೋಲಿಸಲು ಕರ್ನಾಟಕದ ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮಾದರಿ."
+          "en": "A Karnataka Ashokan Brahmi sample for comparing straight strokes, angular intersections and early inscriptional ductus before Kadamba/Old Kannada divergence. A separate discovery lead associates the word \"Isila\" in this edict with the early Kannada linguistic record and dates the inscription to 252 BCE (a looser estimate than the 260-250 BCE circa range used here); the Ashokan-edict identity and the Isila lexical claim should be reviewed as two distinct questions against the primary edition, not conflated.",
+          "kn": "ಕದಂಬ/ಹಳೆಗನ್ನಡ ವಿಭಜನೆಯ ಮೊದಲು ನೇರ ರೇಖೆಗಳು, ಕೋನೀಯ ಜೋಡಣೆಗಳು ಮತ್ತು ಆರಂಭಿಕ ಶಾಸನ ಲಿಪಿಚಲನೆಯನ್ನು ಹೋಲಿಸಲು ಕರ್ನಾಟಕದ ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮಾದರಿ. ಪ್ರತ್ಯೇಕ ಅನ್ವೇಷಣಾ ಸುಳಿವು ಈ ಶಾಸನದಲ್ಲಿನ \"ಇಸಿಲ\" ಪದವನ್ನು ಆರಂಭಿಕ ಕನ್ನಡ ಭಾಷಾ ದಾಖಲೆಯೊಂದಿಗೆ ಜೋಡಿಸುತ್ತದೆ ಮತ್ತು ಶಾಸನವನ್ನು 252 BCEಗೆ ದಿನಾಂಕಿಸುತ್ತದೆ (ಇಲ್ಲಿ ಬಳಸಿದ 260-250 BCE ಸು. ವ್ಯಾಪ್ತಿಗಿಂತ ಸಡಿಲ ಅಂದಾಜು); ಅಶೋಕ-ಶಾಸನ ಗುರುತು ಮತ್ತು ಇಸಿಲ ಭಾಷಾ ಹಕ್ಕನ್ನು ಮೂಲ ಆವೃತ್ತಿಯ ವಿರುದ್ಧ ಎರಡು ಪ್ರತ್ಯೇಕ ಪ್ರಶ್ನೆಗಳಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು, ಬೆರೆಸಬಾರದು."
         },
         "citations": [
           {
             "sourceId": "src-asi-hampi-ashokan-edicts",
             "locator": "Brahmagiri Asokan edict context; exact edition and line locator pending"
+          },
+          {
+            "sourceId": "src-wikipedia-kannada-inscriptions",
+            "locator": "Isila word association and 252 BCE dating claim; verify against the primary edition"
           }
         ],
         "review": {
@@ -64094,6 +64098,10 @@
           {
             "sourceId": "src-asi-hampi-ashokan-edicts",
             "locator": "Brahmagiri Asokan edict context; exact edition and line locator pending"
+          },
+          {
+            "sourceId": "src-wikipedia-kannada-inscriptions",
+            "locator": "Isila word association and 252 BCE dating claim; verify against the primary edition"
           }
         ],
         "review": {
@@ -79823,217 +79831,6 @@
         }
       },
       {
-        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-place-1",
-        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
-        "type": "district-history-place-context",
-        "toId": "place-brahmagiri-rock-edict",
-        "citations": [
-          {
-            "sourceId": "src-asi-hampi-ashokan-edicts",
-            "locator": "Brahmagiri Asokan edict review lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-place-2",
-        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
-        "type": "district-history-place-context",
-        "toId": "place-chitradurga-fort",
-        "citations": [
-          {
-            "sourceId": "src-asi-hampi-ashokan-edicts",
-            "locator": "Brahmagiri Asokan edict review lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-polity-1",
-        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-chitradurga-nayaka",
-        "citations": [
-          {
-            "sourceId": "src-asi-hampi-ashokan-edicts",
-            "locator": "Brahmagiri Asokan edict review lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-polity-2",
-        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
-        "type": "district-history-polity-context",
-        "toId": "polity-mysore",
-        "citations": [
-          {
-            "sourceId": "src-asi-hampi-ashokan-edicts",
-            "locator": "Brahmagiri Asokan edict review lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-chitradurga-brahmagiri-ashokan-edict-event-1",
-        "fromId": "district-history-chitradurga-brahmagiri-ashokan-edict",
-        "type": "district-history-event-context",
-        "toId": "event-chitradurga-nayaka-governance",
-        "citations": [
-          {
-            "sourceId": "src-asi-hampi-ashokan-edicts",
-            "locator": "Brahmagiri Asokan edict review lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-raichur-maski-ashokan-edict-place-1",
-        "fromId": "district-history-raichur-maski-ashokan-edict",
-        "type": "district-history-place-context",
-        "toId": "place-maski-rock-edict",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-raichur-maski-ashokan-edict-polity-1",
-        "fromId": "district-history-raichur-maski-ashokan-edict",
-        "type": "district-history-polity-context",
-        "toId": "polity-vijayanagara",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-raichur-maski-ashokan-edict-polity-2",
-        "fromId": "district-history-raichur-maski-ashokan-edict",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-bahmani",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-raichur-maski-ashokan-edict-polity-3",
-        "fromId": "district-history-raichur-maski-ashokan-edict",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-adil-shahi",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-raichur-maski-ashokan-edict-person-1",
-        "fromId": "district-history-raichur-maski-ashokan-edict",
-        "type": "district-history-person-context",
-        "toId": "person-krishnadevaraya",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
-        "id": "rel-district-history-raichur-maski-ashokan-edict-event-1",
-        "fromId": "district-history-raichur-maski-ashokan-edict",
-        "type": "district-history-event-context",
-        "toId": "event-raichur-1520",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        }
-      },
-      {
         "id": "rel-district-history-v022-bagalkote-place-1",
         "fromId": "district-history-v022-bagalkote",
         "type": "district-history-place-context",
@@ -80365,6 +80162,74 @@
           {
             "sourceId": "src-v022-district-audit-provenance",
             "locator": "audit-chikkaballapur / candidate-chikkaballapur-1; see embedded audit citations and coordinate source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-30"
+        }
+      },
+      {
+        "id": "rel-district-history-v022-chitradurga-place-1",
+        "fromId": "district-history-v022-chitradurga",
+        "type": "district-history-place-context",
+        "toId": "place-chitradurga-fort",
+        "citations": [
+          {
+            "sourceId": "src-v022-district-audit-provenance",
+            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-30"
+        }
+      },
+      {
+        "id": "rel-district-history-v022-chitradurga-polity-1",
+        "fromId": "district-history-v022-chitradurga",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-chitradurga-nayaka",
+        "citations": [
+          {
+            "sourceId": "src-v022-district-audit-provenance",
+            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-30"
+        }
+      },
+      {
+        "id": "rel-district-history-v022-chitradurga-polity-2",
+        "fromId": "district-history-v022-chitradurga",
+        "type": "district-history-polity-context",
+        "toId": "polity-mysore",
+        "citations": [
+          {
+            "sourceId": "src-v022-district-audit-provenance",
+            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-30"
+        }
+      },
+      {
+        "id": "rel-district-history-v022-chitradurga-event-1",
+        "fromId": "district-history-v022-chitradurga",
+        "type": "district-history-event-context",
+        "toId": "event-chitradurga-nayaka-governance",
+        "citations": [
+          {
+            "sourceId": "src-v022-district-audit-provenance",
+            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
           }
         ],
         "review": {
