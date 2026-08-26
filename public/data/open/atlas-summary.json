@@ -39604,6 +39604,28 @@
         }
       },
       {
+        "id": "src-wikipedia-western-ganga-administration",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Western Ganga administration",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಪಶ್ಚಿಮ ಗಂಗ ಆಡಳಿತ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Western_Ganga_administration",
+        "scope": {
+          "en": "Documents the Western Ganga administrative hierarchy: Rashtra (district) subdivided into Visaya/Nadu (province, roughly 1000 villages) and Desa; from 725 CE the core territory was known as Gangavadi-96000 (Shannavati Sahasra Vishaya, \"96 Nadus\"), covering roughly modern Mysuru, Mandya and Chamarajanagar districts. Discovery lead; verify against inscriptional administrative records before promotion.",
+          "kn": "ಪಶ್ಚಿಮ ಗಂಗ ಆಡಳಿತ ಶ್ರೇಣಿಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ: ರಾಷ್ಟ್ರ (ಜಿಲ್ಲೆ) ವಿಷಯ/ನಾಡು (ಪ್ರಾಂತ, ಸು. 1000 ಗ್ರಾಮಗಳು) ಮತ್ತು ದೇಶವಾಗಿ ಉಪವಿಭಜಿತ; 725ರಿಂದ ಮೂಲ ಪ್ರದೇಶವನ್ನು ಗಂಗವಾಡಿ-96000 (ಷಣ್ಣವತಿ ಸಹಸ್ರ ವಿಷಯ, \"96 ನಾಡುಗಳು\") ಎಂದು ಕರೆಯಲಾಗುತ್ತಿತ್ತು, ಇಂದಿನ ಮೈಸೂರು, ಮಂಡ್ಯ ಮತ್ತು ಚಾಮರಾಜನಗರ ಜಿಲ್ಲೆಗಳನ್ನು ಸುಮಾರಾಗಿ ಒಳಗೊಂಡಿತ್ತು. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಆಡಳಿತ ದಾಖಲೆಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-begur-inscriptions",
         "type": "discovery-lead",
         "title": {
@@ -86380,6 +86402,10 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Prototype polygon to be replaced"
+          },
+          {
+            "sourceId": "src-wikipedia-western-ganga-administration",
+            "locator": "Rashtra-Visaya/Nadu-Desa administrative hierarchy; Gangavadi-96000 (96 Nadus) from 725 CE"
           }
         ],
         "review": {
@@ -89231,15 +89257,15 @@
           "source-map-comparison"
         ],
         "completedEvidence": [
-          "inscription-distribution-lead"
+          "inscription-distribution-lead",
+          "administrative-units"
         ],
         "blockingEvidence": [
-          "administrative-units",
           "source-map-comparison"
         ],
         "methodology": {
-          "en": "Uses Talakad and reign-linked inscription leads as a first comparison layer; province and inscription distribution need formal review before boundary promotion.",
-          "kn": "ತಳಕಾಡು ಮತ್ತು ಆಳ್ವಿಕೆ-ಸಂಬಂಧಿತ ಶಾಸನ ದಾರಿಗಳನ್ನು ಮೊದಲ ಹೋಲಿಕೆ ಪದರವಾಗಿ ಬಳಸುತ್ತದೆ; ಗಡಿ ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ಪ್ರಾಂತ ಮತ್ತು ಶಾಸನ ವಿತರಣೆಯ ಅಧಿಕೃತ ಪರಿಶೀಲನೆ ಬೇಕು."
+          "en": "Uses Talakad and reign-linked inscription leads as a first comparison layer. Administrative-unit evidence is now located: the Rashtra (district) - Visaya/Nadu (province, ~1000 villages) - Desa hierarchy, with the core territory known as Gangavadi-96000 (Shannavati Sahasra Vishaya, \"96 Nadus\") from 725 CE onward, covering roughly modern Mysuru, Mandya and Chamarajanagar districts. A reign/period-specific source map is still missing, so the polygon remains schematic.",
+          "kn": "ತಳಕಾಡು ಮತ್ತು ಆಳ್ವಿಕೆ-ಸಂಬಂಧಿತ ಶಾಸನ ದಾರಿಗಳನ್ನು ಮೊದಲ ಹೋಲಿಕೆ ಪದರವಾಗಿ ಬಳಸುತ್ತದೆ. ಆಡಳಿತ-ಘಟಕ ಸಾಕ್ಷ್ಯ ಈಗ ಗುರುತಿಸಲಾಗಿದೆ: ರಾಷ್ಟ್ರ (ಜಿಲ್ಲೆ) - ವಿಷಯ/ನಾಡು (ಪ್ರಾಂತ, ಸು. 1000 ಗ್ರಾಮಗಳು) - ದೇಶ ಶ್ರೇಣಿ, 725ರಿಂದ ಗಂಗವಾಡಿ-96000 (ಷಣ್ಣವತಿ ಸಹಸ್ರ ವಿಷಯ, \"96 ನಾಡುಗಳು\") ಎಂದು ಕರೆಯಲ್ಪಟ್ಟ ಮೂಲ ಪ್ರದೇಶ, ಇಂದಿನ ಮೈಸೂರು, ಮಂಡ್ಯ ಮತ್ತು ಚಾಮರಾಜನಗರ ಜಿಲ್ಲೆಗಳನ್ನು ಸುಮಾರಾಗಿ ಒಳಗೊಂಡಿತ್ತು. ಆಳ್ವಿಕೆ/ಅವಧಿ-ನಿರ್ದಿಷ್ಟ ಆಕರ ನಕ್ಷೆ ಇನ್ನೂ ಕಾಣೆಯಾಗಿದೆ, ಆದ್ದರಿಂದ ಬಹುಭುಜ ಅಂದಾಜಿನದ್ದೇ ಆಗಿ ಉಳಿದಿದೆ."
         },
         "citations": [
           {
@@ -89249,6 +89275,10 @@
           {
             "sourceId": "src-prototype-boundaries",
             "locator": "Prototype polygon to be replaced"
+          },
+          {
+            "sourceId": "src-wikipedia-western-ganga-administration",
+            "locator": "Rashtra-Visaya/Nadu-Desa administrative hierarchy; Gangavadi-96000 (96 Nadus) from 725 CE"
           }
         ],
         "review": {
