@@ -39576,6 +39576,28 @@
         }
       },
       {
+        "id": "src-wikipedia-siddhesvara-temple-haveri",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Siddhesvara Temple, Haveri",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಸಿದ್ಧೇಶ್ವರ ದೇವಾಲಯ, ಹಾವೇರಿ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Siddhesvara_Temple",
+        "scope": {
+          "en": "Documents the soapstone Siddhesvara Temple at Haveri, an example of Western Chalukyan art with 11th-century core construction and 12th-century additions; an Old Kannada grant inscription on an interior beam is dated 1087 CE and a stone inscription outside is dated 1108 CE. Discovery lead; verify against Epigraphia Carnatica/Indica and ASI protection records before promotion.",
+          "kn": "ಹಾವೇರಿಯ ಸಿದ್ಧೇಶ್ವರ ದೇವಾಲಯ, ಪಶ್ಚಿಮ ಚಾಲುಕ್ಯ ಶೈಲಿಯ ಶಿಲ್ಪಕಲೆಯ ಉದಾಹರಣೆ, 11ನೇ ಶತಮಾನದ ಮೂಲ ನಿರ್ಮಾಣ ಮತ್ತು 12ನೇ ಶತಮಾನದ ಸೇರ್ಪಡೆಗಳೊಂದಿಗೆ; ಒಳಗಿನ ತೊಲೆಯ ಮೇಲಿನ ಹಳೆಗನ್ನಡ ದಾನ ಶಾಸನ 1087ರ ದಿನಾಂಕ, ಹೊರಗಿನ ಶಿಲಾಶಾಸನ 1108ರ ದಿನಾಂಕ ಹೊಂದಿದೆ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ/ಇಂಡಿಕಾ ಮತ್ತು ASI ಸಂರಕ್ಷಣಾ ದಾಖಲೆಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-punch-marked-coins",
         "type": "discovery-lead",
         "title": {
@@ -79425,6 +79447,69 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Haveri district chapter: temple settlements and inscription references to locate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-haveri-siddheshwara-temple-polity-1",
+        "fromId": "district-history-haveri-siddheshwara-temple",
+        "type": "district-history-polity-context",
+        "toId": "polity-rashtrakuta",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-siddhesvara-temple-haveri",
+            "locator": "Siddheshwara temple, Haveri: 1087 CE beam inscription, 1108 CE stone inscription, Western Chalukya architecture"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Haveri district chapter: temple-settlement context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-haveri-siddheshwara-temple-polity-2",
+        "fromId": "district-history-haveri-siddheshwara-temple",
+        "type": "district-history-polity-context",
+        "toId": "polity-kalyani-chalukya",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-siddhesvara-temple-haveri",
+            "locator": "Siddheshwara temple, Haveri: 1087 CE beam inscription, 1108 CE stone inscription, Western Chalukya architecture"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Haveri district chapter: temple-settlement context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-haveri-siddheshwara-temple-polity-3",
+        "fromId": "district-history-haveri-siddheshwara-temple",
+        "type": "district-history-polity-context",
+        "toId": "polity-hoysala",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-siddhesvara-temple-haveri",
+            "locator": "Siddheshwara temple, Haveri: 1087 CE beam inscription, 1108 CE stone inscription, Western Chalukya architecture"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Haveri district chapter: temple-settlement context"
           }
         ],
         "review": {
