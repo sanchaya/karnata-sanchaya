@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import { atlasData } from '../src/data/atlas.js'
 import { inscriptionsForMap } from '../src/map-record-visibility.js'
 import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from '../src/timeline-record-visibility.js'
+import { compactTimelineStories } from '../src/timeline-story-utils.js'
 
 test('every historical event has the fields required by the timeline and map detail', () => {
   for (const event of atlasData.events) {
@@ -88,4 +89,18 @@ test('primary atlas event timeline requires a Karnataka polity or explicit Karna
   assert.ok(primary.some(record => record.id === 'event-bahmani-foundation'))
   assert.ok(primary.some(record => record.id === 'event-independence'))
   assert.ok(!primary.some(record => record.id === 'event-madurai-thanjavur-invasion-lead'))
+})
+
+test('event rail compacts duplicate inscription stories and sorts chronologically', () => {
+  const stories = [
+    { id: 'later', name: { en: 'Later event', kn: 'ನಂತರದ ಘಟನೆ' }, year: 500, date: { from: 500, to: 500, era: 'CE' }, coords: [14, 75], storyKind: 'event', storyCategory: 'history', type: 'campaign' },
+    { id: 'halmidi-event', name: { en: 'Halmidi inscription records early Kannada', kn: 'ಹಲ್ಮಿಡಿ ಶಾಸನ' }, year: 450, date: { from: 450, to: 450, era: 'CE' }, coords: [13.18, 75.86], storyKind: 'event', storyCategory: 'history', type: 'inscription', destinationPlaceId: 'place-halmidi' },
+    { id: 'halmidi', name: { en: 'Halmidi inscription', kn: 'ಹಲ್ಮಿಡಿ ಶಾಸನ' }, year: 450, date: { from: 450, to: 450, era: 'CE' }, coords: [13.18, 75.86], storyKind: 'inscription', storyCategory: 'inscriptions', placeId: 'place-halmidi' },
+    { id: 'earlier', name: { en: 'Earlier event', kn: 'ಹಿಂದಿನ ಘಟನೆ' }, year: 345, date: { from: 345, to: 345, era: 'CE' }, coords: [14.54, 75.01], storyKind: 'event', storyCategory: 'political', type: 'kingdom-foundation' },
+  ]
+  const compacted = compactTimelineStories(stories)
+  assert.deepEqual(compacted.map(story => story.id), ['earlier', 'halmidi', 'later'])
+  const halmidi = compacted.find(story => story.id === 'halmidi')
+  assert.equal(halmidi.timelineGroupCount, 2)
+  assert.deepEqual(halmidi.timelineGroupIds.sort(), ['halmidi', 'halmidi-event'])
 })
