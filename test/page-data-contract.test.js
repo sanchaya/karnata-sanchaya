@@ -338,7 +338,7 @@ test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated'
     assert.equal(atlasData.reigns.find(item => item.id === id)?.review.status, 'needs-review')
   }
   assert.equal(atlasData.people.filter(item => !(item.citations || []).length).length, 0)
-  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 38)
+  assert.equal(atlasData.districtHistoryResearch.filter(item => item.recordKind === 'candidate').length, 39)
   const sanganakallu = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-ballari-sanganakallu-kupgal-neolithic-complex')
   assert.equal(sanganakallu?.location.precision, 'approximate')
   assert.equal(sanganakallu?.evidenceBasis, 'archaeological-report')
@@ -351,6 +351,9 @@ test('Atlas v0.22 research wave keeps expanded coverage linked and review-gated'
   const siddheshwaraTemple = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-haveri-siddheshwara-temple')
   assert.equal(siddheshwaraTemple?.location.precision, 'approximate')
   assert.equal(siddheshwaraTemple?.category, 'settlement-origin')
+  const harihareshwaraTemple = atlasData.districtHistoryResearch.find(item => item.id === 'district-history-davanagere-harihareshwara-temple')
+  assert.equal(harihareshwaraTemple?.location.precision, 'approximate')
+  assert.equal(harihareshwaraTemple?.category, 'urban-foundation')
   for (const id of ['extent-kadamba-core-prototype','extent-western-ganga-core-prototype','extent-hoysala-ballala-ii-1187','extent-vijayanagara-krishnadevaraya-core-1520']) {
     const extent = atlasData.territorialExtents.find(item => item.id === id)
     assert.equal(extent?.confidence, 'medium')

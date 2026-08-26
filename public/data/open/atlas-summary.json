@@ -3353,6 +3353,34 @@
         "polityId": "polity-hoysala"
       },
       {
+        "id": "person-narasimha-ii",
+        "name": {
+          "en": "Vira Narasimha II",
+          "kn": "ವೀರ ನರಸಿಂಹ II"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala ruler, capital and patronage context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        },
+        "polityId": "polity-hoysala"
+      },
+      {
         "id": "person-narasimha-iii",
         "name": {
           "en": "Narasimha III",
@@ -39604,6 +39632,28 @@
         }
       },
       {
+        "id": "src-wikipedia-harihareshwara-temple",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Harihareshwara Temple, Harihar",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ಹರಿಹರೇಶ್ವರ ದೇವಾಲಯ, ಹರಿಹರ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Harihareshwara_Temple",
+        "scope": {
+          "en": "Documents the Harihareshwara temple at Harihar (Davanagere district), built c. 1223-1224 CE by Polalva, a commander/minister of the Hoysala king Vira Narasimha II, with 1268 CE additions by Soma, a commander of Narasimha III; a smaller 5th-century temple preceded it. Discovery lead; verify against Epigraphia Carnatica and ASI protection records before promotion.",
+          "kn": "ಹರಿಹರ (ದಾವಣಗೆರೆ ಜಿಲ್ಲೆ) ಹರಿಹರೇಶ್ವರ ದೇವಾಲಯವನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ಹೊಯ್ಸಳ ಅರಸ ವೀರ ನರಸಿಂಹ IIನ ಸೇನಾಪತಿ/ಮಂತ್ರಿ ಪೊಲಾಳ್ವನಿಂದ ಸು. 1223-1224ರಲ್ಲಿ ಕಟ್ಟಲ್ಪಟ್ಟಿತು, 1268ರಲ್ಲಿ ನರಸಿಂಹ IIIನ ಸೇನಾಪತಿ ಸೋಮನಿಂದ ಸೇರ್ಪಡೆಗಳು; ಇದಕ್ಕೂ ಮೊದಲು 5ನೇ ಶತಮಾನದ ಸಣ್ಣ ದೇವಾಲಯವಿತ್ತು. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮತ್ತು ASI ಸಂರಕ್ಷಣಾ ದಾಖಲೆಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-western-ganga-administration",
         "type": "discovery-lead",
         "title": {
@@ -50316,6 +50366,29 @@
       {
         "id": "rel-person-ballala-ii-polity",
         "fromId": "person-ballala-ii",
+        "type": "governed-or-represented",
+        "toId": "polity-hoysala",
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "citations": [
+          {
+            "sourceId": "src-unesco-hoysala-dossier",
+            "locator": "Hoysala ruler, capital and patronage context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-person-narasimha-ii-polity",
+        "fromId": "person-narasimha-ii",
         "type": "governed-or-represented",
         "toId": "polity-hoysala",
         "date": {
@@ -79678,6 +79751,69 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Davanagere district chapter: settlement, market and civic-history references to locate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-davanagere-harihareshwara-temple-polity-1",
+        "fromId": "district-history-davanagere-harihareshwara-temple",
+        "type": "district-history-polity-context",
+        "toId": "polity-kalyani-chalukya",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-harihareshwara-temple",
+            "locator": "Harihareshwara temple, Harihar: built c. 1223-1224 CE by Polalva under Vira Narasimha II; 1268 CE additions by Soma under Narasimha III"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Davanagere district chapter: urban-foundation and temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-davanagere-harihareshwara-temple-polity-2",
+        "fromId": "district-history-davanagere-harihareshwara-temple",
+        "type": "district-history-polity-context",
+        "toId": "polity-vijayanagara",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-harihareshwara-temple",
+            "locator": "Harihareshwara temple, Harihar: built c. 1223-1224 CE by Polalva under Vira Narasimha II; 1268 CE additions by Soma under Narasimha III"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Davanagere district chapter: urban-foundation and temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-district-history-davanagere-harihareshwara-temple-polity-3",
+        "fromId": "district-history-davanagere-harihareshwara-temple",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-chitradurga-nayaka",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-harihareshwara-temple",
+            "locator": "Harihareshwara temple, Harihar: built c. 1223-1224 CE by Polalva under Vira Narasimha II; 1268 CE additions by Soma under Narasimha III"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Davanagere district chapter: urban-foundation and temple context"
           }
         ],
         "review": {
