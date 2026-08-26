@@ -99,8 +99,10 @@ test('script evolution explorer is public, searchable and evidence-gated', () =>
   assert.match(scriptSource, /visualTraits/, 'script phases must expose visible paleographic traits')
   assert.match(scriptSource, /href="#evidence"/, 'script packets must link back to the evidence workflow')
   assert.match(scriptSource, /href="#epigraphy"/, 'script packets must link to epigraphy records')
+  assert.match(scriptStylesSource, /\.app-shell main\.script-page\{display:block;height:auto/, 'script explorer must not inherit the atlas fixed map-grid main layout')
   assert.match(scriptStylesSource, /\.script-workspace/, 'script explorer needs a dedicated timeline/detail layout')
   assert.match(scriptStylesSource, /\.script-classification/, 'script explorer needs a visible classification panel')
+  assert.match(scriptStylesSource, /@media\(max-width:560px\).*\.script-stats\{grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/s, 'script explorer needs compact mobile stats and responsive layout')
 })
 
 test('public open dataset packets are generated during static builds', () => {
@@ -134,7 +136,8 @@ test('tablet layouts preserve maps, readable cards and non-obstructing controls'
   assert.match(coinStylesSource, /@media\(max-width:1100px\)[\s\S]*\.coin-workspace\{grid-template-columns:280px minmax\(0,1fr\) 280px/, 'coin explorer must fit landscape tablets without horizontal page overflow')
   assert.match(coinStylesSource, /@media\(min-width:721px\) and \(max-width:900px\)/, 'coin explorer needs a tablet portrait layout between desktop and phone')
   assert.match(coinStylesSource, /\.coin-detail\{position:static;grid-column:1\/-1/, 'coin details must not cover the map on tablet portrait screens')
-  assert.match(scriptStylesSource, /@media\(max-width:860px\)[\s\S]*\.script-workspace\{display:grid;grid-template-columns:1fr/, 'script evolution must collapse to one readable column on narrow tablets and phones')
+  assert.match(scriptStylesSource, /\.app-shell main\.script-page\{display:block;height:auto/, 'script evolution must not inherit the atlas fixed-height map shell')
+  assert.match(scriptStylesSource, /@media\(max-width:980px\)[\s\S]*\.script-workspace\{grid-template-columns:1fr;min-height:0/, 'script evolution must collapse to one readable column on narrow tablets and phones')
   assert.match(evidenceStylesSource, /\.evidence-page\{display:block!important[\s\S]*overflow-x:hidden/, 'evidence workflow must prevent board scrolling from widening the full phone page')
   assert.match(evidenceStylesSource, /\.evidence-board\{display:grid[\s\S]*max-width:100%;overflow-x:auto;contain:inline-size/, 'evidence workflow board scrolling must remain inside the board')
   assert.match(tabletStylesSource, /\.evidence-board \{ grid-template-columns: repeat\(5, minmax\(340px, 62vw\)\)/, 'evidence workflow columns must stay horizontally reviewable on tablets')
