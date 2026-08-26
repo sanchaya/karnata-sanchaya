@@ -186,7 +186,7 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
     ],
     evidence:[
       tourStep('.evidence-procedure','ಪರಿಶೀಲನಾ ವಿಧಾನ · ಕೆಲಸದ ಕ್ರಮ ತಿಳಿಯಿರಿ','Follow the evidence gates from assignment to transcription, translation, review and publication.'),
-      tourStep('.evidence-promotion-sprint','v0.23 ಪ್ರಚಾರ ಹಂತ · ಏಳು ಆದ್ಯತೆಯ ದಾಖಲೆಗಳನ್ನು ನೋಡಿ','Compare all seven publication gates for the records closest to promotion, then open only their outstanding tasks.'),
+      tourStep('.evidence-promotion-sprint',`v${atlasData.meta.schemaVersion} ಪ್ರಚಾರ ಹಂತ · ಏಳು ಆದ್ಯತೆಯ ದಾಖಲೆಗಳನ್ನು ನೋಡಿ`,'Compare all seven publication gates for the records closest to promotion, then open only their outstanding tasks.'),
       tourStep('.evidence-toolbar','ಕಾರ್ಯ ಶೋಧಕಗಳು · ನಿಮ್ಮ ಪಾಸ್ ಆಯ್ಕೆಮಾಡಿ','Filter the queue by domain, field, state and priority.'),
       tourStep('.evidence-board','ಪರಿಶೀಲನಾ ಫಲಕ · ಬಾಕಿ ಕೆಲಸ ನಿರ್ವಹಿಸಿ','Each column is a human-review state. Load more items as you work through the queue.'),
     ],
