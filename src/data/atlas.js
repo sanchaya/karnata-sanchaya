@@ -25,6 +25,7 @@ import { boundaryEvidence, coinRecords, genealogicalRelations, inscriptionEditio
 import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, sourceVolumeExtractionHeritage, sourceVolumeExtractionInscriptionEditions, sourceVolumeExtractionInscriptions, sourceVolumeExtractionManuscriptWitnesses, sourceVolumeExtractionPeople, sourceVolumeExtractionPlaces, sourceVolumeExtractionSources } from './source-volume-extraction.js'
 import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js'
 import { applyExternalCapitalLinks } from './external-capitals.js'
+import { p2ClosureRecords } from './p2-research-graph-closure.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -254,6 +255,7 @@ appendUniqueById(atlasData.inscriptionEditions, sourceVolumeExtractionInscriptio
 appendUniqueById(atlasData.manuscriptWitnesses, sourceVolumeExtractionManuscriptWitnesses)
 appendUniqueById(atlasData.coinRecords, sourceVolumeExtractionCoinRecords)
 applyPaleographyMaturitySprint(atlasData, appendUniqueById)
+for (const [collection, records] of Object.entries(p2ClosureRecords)) appendUniqueById(atlasData[collection], records)
 appendUniqueById(atlasData.sources, [{
   id:'src-patrika-sanchaya-kannada',
   type:'periodical-catalogue',

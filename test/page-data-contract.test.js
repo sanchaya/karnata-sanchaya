@@ -517,11 +517,13 @@ test('international research additions keep attested links separate from unresol
 })
 
 test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
-  assert.ok(atlasData.genealogicalRelations.length >= 9)
-  assert.ok(atlasData.coinRecords.length >= 10)
-  assert.ok(atlasData.manuscriptWitnesses.length >= 9)
-  assert.ok(atlasData.boundaryEvidence.length >= 9)
-  assert.ok(atlasData.inscriptionEditions.length >= 20)
+  assert.ok(atlasData.genealogicalRelations.length >= 28)
+  assert.ok(atlasData.feudatoryRelations.length >= 9)
+  assert.ok(atlasData.administrativeDivisions.length >= 6)
+  assert.ok(atlasData.coinRecords.length >= 12)
+  assert.ok(atlasData.manuscriptWitnesses.length >= 16)
+  assert.ok(atlasData.boundaryEvidence.length >= 11)
+  assert.ok(atlasData.inscriptionEditions.length >= 30)
   for (const item of atlasData.genealogicalRelations) {
     assert.ok(personIds.has(item.fromPersonId), `${item.id} has an unknown source person`)
     assert.ok(personIds.has(item.toPersonId), `${item.id} has an unknown target person`)
@@ -591,6 +593,53 @@ test('P2 corpus expansion seeds are explicit, linked and review-gated', () => {
   }
   const muktesvara=atlasData.inscriptionEditions.find(item=>item.id==='edition-inscription-muktesvara-attiraja-review-packet')
   assert.equal(muktesvara?.textWitness.originalStatus, 'located')
+})
+
+test('P2 research graph closure broadens every remaining material stream without promoting leads', () => {
+  for (const id of ['genealogy-tailapa-ii-satyashraya-kalyani-chalukya','genealogy-someshvara-i-vikramaditya-vi-kalyani-chalukya']) {
+    const relation=atlasData.genealogicalRelations.find(item=>item.id===id)
+    assert.equal(relation?.review.status, 'needs-review')
+    assert.equal(relation?.evidenceLevel, 'secondary')
+    assert.ok(atlasData.relationships.some(item=>item.sourceRecordId===id), `${id} must feed the public graph`)
+  }
+  for (const id of ['feudatory-chitradurga-nayaka-vijayanagara-successor','feudatory-bahmani-adil-shahi-successor']) {
+    const relation=atlasData.feudatoryRelations.find(item=>item.id===id)
+    assert.equal(relation?.review.status, 'needs-review')
+    assert.ok(relation.placeIds.length > 0)
+  }
+  for (const id of ['admin-kalyani-chalukya-lakkundi-zone','admin-bahmani-bidar-kalaburagi-zone']) {
+    const division=atlasData.administrativeDivisions.find(item=>item.id===id)
+    assert.equal(division?.review.status, 'needs-review')
+    assert.equal(division?.geometry.precision, 'schematic')
+  }
+  for (const id of ['boundary-evidence-kalyani-chalukya-lakkundi-zone','boundary-evidence-bahmani-northern-karnataka-zone']) {
+    const packet=atlasData.boundaryEvidence.find(item=>item.id===id)
+    assert.equal(packet?.review.status, 'needs-review')
+    assert.ok(packet?.blockingEvidence.length > 0)
+  }
+  for (const id of ['coin-kadamba-banavasi-lion-type-lead','coin-bahmani-bidar-kalaburagi-mint-lead']) {
+    const coin=atlasData.coinRecords.find(item=>item.id===id)
+    assert.equal(coin?.review.status, 'needs-review')
+    assert.equal(coin?.image.status, 'missing')
+    assert.equal(coin?.evidenceGates.catalogue.status, 'unresolved')
+  }
+  for (const id of ['manuscript-gadayuddha-routledge-translation-lead','manuscript-vaddaradhane-repository-recovery-lead']) {
+    const witness=atlasData.manuscriptWitnesses.find(item=>item.id===id)
+    assert.equal(witness?.review.status, 'needs-review')
+    assert.ok(workIds.has(witness.workId))
+  }
+  for (const id of ['edition-inscription-gudnapur-kadamba-review-packet','edition-inscription-doddahundi-nishidhi-review-packet']) {
+    const edition=atlasData.inscriptionEditions.find(item=>item.id===id)
+    assert.equal(edition?.review.status, 'needs-review')
+    assert.equal(edition?.itemEdition.status, 'provisional')
+    assert.ok(edition?.locatorReview.requiredLocators.includes('pageImageUrl'))
+  }
+  for (const id of ['district-history-bagalkote-badami-aihole-pattadakal-cultural-zone','district-history-gadag-lakkundi-kalyani-chalukya-zone','district-history-koppal-itagi-mahadeva-temple-lead','district-history-bidar-mahmud-gawan-madrasa-lead','district-history-kalaburagi-bahmani-fort-masjid-lead','district-history-chitradurga-fort-nayaka-obavva-lead']) {
+    const record=atlasData.districtHistoryResearch.find(item=>item.id===id)
+    assert.equal(record?.review.status, 'needs-review')
+    assert.equal(record?.location.precision, 'approximate')
+    assert.ok(record?.citations.length > 0)
+  }
 })
 
 test('full paleographic classification covers dynastic and morphological stages', () => {

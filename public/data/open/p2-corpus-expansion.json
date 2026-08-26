@@ -6295,6 +6295,170 @@
           "reviewer": null,
           "updatedAt": "2026-08-25"
         }
+      },
+      {
+        "id": "edition-inscription-gudnapur-kadamba-review-packet",
+        "name": {
+          "en": "Gudnapur Kadamba inscription edition review packet",
+          "kn": "ಗುಡ್ನಾಪುರ ಕದಂಬ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-gudnapur",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit / Kannada",
+        "script": "Southern Brahmi / early Kannada",
+        "date": {
+          "from": 450,
+          "to": 500,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica / Kadamba corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Gudnapur Kadamba record; exact volume, item and plate unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "normal",
+          "scriptPhaseIds": [
+            "script-southern-brahmi-kadamba-transition"
+          ],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Confirm printed page/plate, line text, translation witness, coordinates and photographs before promotion.",
+            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ/ಫಲಕ, ಸಾಲು ಪಠ್ಯ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ, ನಿರ್ದೇಶಾಂಕ ಮತ್ತು ಛಾಯಾಚಿತ್ರಗಳನ್ನು ದೃಢಪಡಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Locate Gudnapur Kadamba inscription volume, item number, printed page and plate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "edition-inscription-doddahundi-nishidhi-review-packet",
+        "name": {
+          "en": "Doddahundi nishidhi inscription edition review packet",
+          "kn": "ದೊಡ್ಡಹುಂಡಿ ನಿಷಿಧಿ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-doddahundi-nishidhi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 900,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica / Mysore district corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Doddahundi Western Ganga nishidhi record; exact item unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "normal",
+          "scriptPhaseIds": [
+            "script-rashtrakuta-uniform-old-kannada"
+          ],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Confirm printed page/plate, line text, translation witness, coordinates and photographs before promotion.",
+            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ/ಫಲಕ, ಸಾಲು ಪಠ್ಯ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ, ನಿರ್ದೇಶಾಂಕ ಮತ್ತು ಛಾಯಾಚಿತ್ರಗಳನ್ನು ದೃಢಪಡಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Locate Doddahundi nishidhi item number, printed page, translation and image witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
       }
     ],
     "epigraphiaArchiveTexts": [
@@ -75055,7 +75219,7 @@
         }
       },
       {
-        "id": "district-history-v022-bagalkote",
+        "id": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
         "recordKind": "candidate",
         "districtId": "audit-bagalkote",
         "district": {
@@ -75063,57 +75227,388 @@
           "kn": "ಬಾಗಲಕೋಟೆ"
         },
         "name": {
-          "en": "Pattadakal temples district-history packet",
-          "kn": "ಪಟ್ಟದಕಲ್ಲಿನ ದೇವಾಲಯಗಳು ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
+          "en": "Badami-Aihole-Pattadakal early Chalukya cultural zone",
+          "kn": "ಬಾದಾಮಿ-ಐಹೊಳೆ-ಪಟ್ಟದಕಲ್ಲು ಆರಂಭಿಕ ಚಾಲುಕ್ಯ ಸಾಂಸ್ಕೃತಿಕ ವಲಯ"
         },
-        "category": "regional-memory",
+        "category": "settlement-origin",
         "date": {
-          "from": 800,
-          "to": 800,
+          "from": 543,
+          "to": 757,
           "era": "CE",
-          "precision": "circa"
+          "precision": "range"
         },
         "location": {
           "type": "Point",
           "coordinates": [
-            75.814638888889,
-            15.951333333333
+            75.82,
+            15.95
           ],
           "precision": "approximate"
         },
         "description": {
-          "en": "Candidate packet linking Pattadakal temples to settlement, governance, inscription and material-history questions.",
-          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಪಟ್ಟದಕಲ್ಲಿನ ದೇವಾಲಯಗಳುವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
+          "en": "A district-level research packet linking the early Chalukya capital, temple laboratory and coronation/ritual centre as one source-backed cultural landscape.",
+          "kn": "ಆರಂಭಿಕ ಚಾಲುಕ್ಯ ರಾಜಧಾನಿ, ದೇವಾಲಯ ಪ್ರಯೋಗಭೂಮಿ ಮತ್ತು ಪಟ್ಟಾಭಿಷೇಕ/ಆಚಾರ ಕೇಂದ್ರವನ್ನು ಒಂದೇ ಆಕರ-ಆಧಾರಿತ ಸಾಂಸ್ಕೃತಿಕ ಭೂದೃಶ್ಯವಾಗಿ ಜೋಡಿಸುವ ಜಿಲ್ಲಾ ಸಂಶೋಧನಾ ಕಡತ."
         },
         "researchNote": {
-          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
-          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
+          "en": "Split Badami, Aihole and Pattadakal into separate site-level records with monument IDs, inscription locators and dated photographs before promotion.",
+          "kn": "ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಬಾದಾಮಿ, ಐಹೊಳೆ ಮತ್ತು ಪಟ್ಟದಕಲ್ಲನ್ನು ಸ್ಮಾರಕ ID, ಶಾಸನ ಸ್ಥಾನಸೂಚಿ ಮತ್ತು ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳೊಂದಿಗೆ ಪ್ರತ್ಯೇಕ ತಾಣ-ಮಟ್ಟದ ದಾಖಲೆಗಳಾಗಿ ಬೇರ್ಪಡಿಸಿ."
         },
-        "evidenceBasis": "district-research-scope",
+        "evidenceBasis": "gazetteer",
         "citations": [
           {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bagalkote / candidate-bagalkote-1; see embedded audit citations and coordinate source"
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
           }
         ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        },
         "placeIds": [
+          "place-badami",
+          "place-aihole",
           "place-pattadakal"
         ],
         "polityIds": [
           "polity-badami-chalukya"
         ],
         "peopleIds": [
+          "person-pulakeshin-ii",
           "person-vikramaditya-ii",
           "person-lokamahadevi"
         ],
         "eventIds": [
           "event-vikramaditya-takes-kanchi"
         ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-gadag-lakkundi-kalyani-chalukya-zone",
+        "recordKind": "candidate",
+        "districtId": "audit-gadag",
+        "district": {
+          "en": "Gadag",
+          "kn": "ಗದಗ"
+        },
+        "name": {
+          "en": "Lakkundi Kalyani Chalukya temple-inscription zone",
+          "kn": "ಲಕ್ಕುಂಡಿ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ದೇವಾಲಯ-ಶಾಸನ ವಲಯ"
+        },
+        "category": "foundation-stone",
+        "date": {
+          "from": 1000,
+          "to": 1150,
+          "era": "CE",
+          "precision": "range"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.7187,
+            15.3897
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "A district candidate for Lakkundi’s temple, stepwell and inscription landscape under Kalyani Chalukya and related patronage.",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಮತ್ತು ಸಂಬಂಧಿತ ಆಶ್ರಯದಡಿ ಲಕ್ಕುಂಡಿಯ ದೇವಾಲಯ, ಬಾವಿ ಮತ್ತು ಶಾಸನ ಭೂದೃಶ್ಯಕ್ಕೆ ಜಿಲ್ಲಾ ಅಭ್ಯರ್ಥಿ."
+        },
+        "researchNote": {
+          "en": "Resolve individual temple inscriptions and patron names before treating this as a publication-ready locality history.",
+          "kn": "ಇದನ್ನು ಪ್ರಕಟಣೆಗೆ ಸಿದ್ಧ ಸ್ಥಳೀಯ ಇತಿಹಾಸವೆಂದು ಪರಿಗಣಿಸುವ ಮೊದಲು ಪ್ರತ್ಯೇಕ ದೇವಾಲಯ ಶಾಸನಗಳು ಮತ್ತು ಆಶ್ರಯದಾರರ ಹೆಸರುಗಳನ್ನು ನಿರ್ಧರಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage revival and temple landscape lead"
+          }
+        ],
+        "placeIds": [
+          "place-lakkundi-kashivishveshvara",
+          "place-lakkundi-brahma-jinalaya",
+          "place-lakkundi-stepwell"
+        ],
+        "polityIds": [
+          "polity-kalyani-chalukya"
+        ],
+        "peopleIds": [
+          "person-vikramaditya-vi"
+        ],
+        "eventIds": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "recordKind": "candidate",
+        "districtId": "audit-koppal",
+        "district": {
+          "en": "Koppal",
+          "kn": "ಕೊಪ್ಪಳ"
+        },
+        "name": {
+          "en": "Itagi Mahadeva Temple inscription-patronage lead",
+          "kn": "ಇಟಗಿ ಮಹಾದೇವ ದೇವಾಲಯ ಶಾಸನ-ಆಶ್ರಯ ದಾರಿ"
+        },
+        "category": "foundation-stone",
+        "date": {
+          "from": 1112,
+          "to": 1112,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.9468,
+            15.1078
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "A district candidate for the Kalyani Chalukya-period Mahadeva temple at Itagi and its inscription/patronage evidence.",
+          "kn": "ಇಟಗಿಯ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಕಾಲದ ಮಹಾದೇವ ದೇವಾಲಯ ಮತ್ತು ಅದರ ಶಾಸನ/ಆಶ್ರಯ ಸಾಕ್ಷ್ಯಕ್ಕೆ ಜಿಲ್ಲಾ ಅಭ್ಯರ್ಥಿ."
+        },
+        "researchNote": {
+          "en": "Confirm inscription number, patron identity, ASI/protection status and current condition before promotion.",
+          "kn": "ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಶಾಸನ ಸಂಖ್ಯೆ, ಆಶ್ರಯದಾರ ಗುರುತು, ASI/ಸಂರಕ್ಷಣಾ ಸ್ಥಿತಿ ಮತ್ತು ಪ್ರಸ್ತುತ ಸ್ಥಿತಿಯನ್ನು ದೃಢಪಡಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "placeIds": [
+          "place-itagi-mahadeva",
+          "place-hampi"
+        ],
+        "polityIds": [
+          "polity-kalyani-chalukya",
+          "polity-vijayanagara"
+        ],
+        "peopleIds": [
+          "person-harihara-i",
+          "person-bukka-i"
+        ],
+        "eventIds": [
+          "event-vijayanagara-foundation"
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-bidar-mahmud-gawan-madrasa-lead",
+        "recordKind": "candidate",
+        "districtId": "audit-bidar",
+        "district": {
+          "en": "Bidar",
+          "kn": "ಬೀದರ್"
+        },
+        "name": {
+          "en": "Mahmud Gawan Madrasa and Bahmani Bidar knowledge centre",
+          "kn": "ಮಹಮೂದ್ ಗವಾನ್ ಮದರಸಾ ಮತ್ತು ಬಹಮನಿ ಬೀದರ್ ಜ್ಞಾನ ಕೇಂದ್ರ"
+        },
+        "category": "urban-foundation",
+        "date": {
+          "from": 1472,
+          "to": 1472,
+          "era": "CE",
+          "precision": "year"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            77.5203,
+            17.914
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "A district candidate for Bidar’s Bahmani-era educational and architectural landscape centred on the Mahmud Gawan Madrasa.",
+          "kn": "ಮಹಮೂದ್ ಗವಾನ್ ಮದರಸಾ ಕೇಂದ್ರಿತ ಬೀದರ್‌ನ ಬಹಮನಿ ಕಾಲದ ಶಿಕ್ಷಣ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪ ಭೂದೃಶ್ಯಕ್ಕೆ ಜಿಲ್ಲಾ ಅಭ್ಯರ್ಥಿ."
+        },
+        "researchNote": {
+          "en": "Attach Persian/Arabic inscription locators, conservation status and dated photographs before promotion.",
+          "kn": "ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಪರ್ಷಿಯನ್/ಅರಬಿ ಶಾಸನ ಸ್ಥಾನಸೂಚಿ, ಸಂರಕ್ಷಣಾ ಸ್ಥಿತಿ ಮತ್ತು ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-bidar-madrasa",
+            "locator": "Mahmud Gawan Madrasa heritage record"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for Bidar"
+          }
+        ],
+        "placeIds": [
+          "place-bidar-mahmud-gawan"
+        ],
+        "polityIds": [
+          "external-polity-bahmani",
+          "external-polity-adil-shahi"
+        ],
+        "peopleIds": [],
+        "eventIds": [
+          "event-bahmani-foundation"
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-kalaburagi-bahmani-fort-masjid-lead",
+        "recordKind": "candidate",
+        "districtId": "audit-kalaburagi",
+        "district": {
+          "en": "Kalaburagi",
+          "kn": "ಕಲಬುರಗಿ"
+        },
+        "name": {
+          "en": "Kalaburagi Bahmani fort and Jama Masjid urban lead",
+          "kn": "ಕಲಬುರಗಿ ಬಹಮನಿ ಕೋಟೆ ಮತ್ತು ಜಾಮಾ ಮಸೀದಿ ನಗರ ದಾರಿ"
+        },
+        "category": "urban-foundation",
+        "date": {
+          "from": 1347,
+          "to": 1367,
+          "era": "CE",
+          "precision": "range"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.8211,
+            17.3381
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "A district candidate for the Bahmani capital landscape at Kalaburagi, including the fort and Jama Masjid.",
+          "kn": "ಕೋಟೆ ಮತ್ತು ಜಾಮಾ ಮಸೀದಿಯನ್ನು ಒಳಗೊಂಡ ಕಲಬುರಗಿಯ ಬಹಮನಿ ರಾಜಧಾನಿ ಭೂದೃಶ್ಯಕ್ಕೆ ಜಿಲ್ಲಾ ಅಭ್ಯರ್ಥಿ."
+        },
+        "researchNote": {
+          "en": "Resolve fort-phase evidence, mosque inscription locators, conservation status and current photographs before promotion.",
+          "kn": "ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಕೋಟೆ ಹಂತದ ಸಾಕ್ಷ್ಯ, ಮಸೀದಿ ಶಾಸನ ಸ್ಥಾನಸೂಚಿ, ಸಂರಕ್ಷಣಾ ಸ್ಥಿತಿ ಮತ್ತು ಪ್ರಸ್ತುತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ನಿರ್ಧರಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi heritage and Jama Masjid context"
+          }
+        ],
+        "placeIds": [
+          "place-kalaburagi-jama-masjid"
+        ],
+        "polityIds": [
+          "external-polity-bahmani",
+          "polity-rashtrakuta"
+        ],
+        "peopleIds": [],
+        "eventIds": [
+          "event-bahmani-foundation"
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-chitradurga-fort-nayaka-obavva-lead",
+        "recordKind": "candidate",
+        "districtId": "audit-chitradurga",
+        "district": {
+          "en": "Chitradurga",
+          "kn": "ಚಿತ್ರದುರ್ಗ"
+        },
+        "name": {
+          "en": "Chitradurga Fort Nayaka and Onake Obavva memory lead",
+          "kn": "ಚಿತ್ರದುರ್ಗ ಕೋಟೆ ನಾಯಕರು ಮತ್ತು ಒನಕೆ ಓಬವ್ವ ಸ್ಮೃತಿ ದಾರಿ"
+        },
+        "category": "regional-memory",
+        "date": {
+          "from": 1565,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.398,
+            14.2154
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "A district candidate linking the Nayaka fort landscape and the Onake Obavva memory tradition without treating oral memory alone as final evidence.",
+          "kn": "ಮೌಖಿಕ ಸ್ಮೃತಿಯನ್ನು ಅಂತಿಮ ಸಾಕ್ಷ್ಯವೆಂದು ಪರಿಗಣಿಸದೆ ನಾಯಕ ಕೋಟೆ ಭೂದೃಶ್ಯ ಮತ್ತು ಒನಕೆ ಓಬವ್ವ ಸ್ಮೃತಿ ಸಂಪ್ರದಾಯವನ್ನು ಜೋಡಿಸುವ ಜಿಲ್ಲಾ ಅಭ್ಯರ್ಥಿ."
+        },
+        "researchNote": {
+          "en": "Attach fort-phase records, gazetteer references, local memorial documentation and independent Kannada review before promotion.",
+          "kn": "ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಕೋಟೆ ಹಂತದ ದಾಖಲೆಗಳು, ಗೆಜೆಟಿಯರ್ ಉಲ್ಲೇಖಗಳು, ಸ್ಥಳೀಯ ಸ್ಮಾರಕ ದಾಖಲೆ ಮತ್ತು ಸ್ವತಂತ್ರ ಕನ್ನಡ ಪರಿಶೀಲನೆ ಸೇರಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga Fort heritage context"
+          },
+          {
+            "sourceId": "src-karnataka-tourism-onake-obavva",
+            "locator": "Onake Obavva memory lead"
+          }
+        ],
+        "placeIds": [
+          "place-chitradurga-fort"
+        ],
+        "polityIds": [
+          "external-polity-chitradurga-nayaka",
+          "polity-mysore"
+        ],
+        "peopleIds": [],
+        "eventIds": [
+          "event-chitradurga-nayaka-governance"
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
         "connectionNote": {
           "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
           "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
@@ -75242,67 +75737,6 @@
         }
       },
       {
-        "id": "district-history-v022-bidar",
-        "recordKind": "candidate",
-        "districtId": "audit-bidar",
-        "district": {
-          "en": "Bidar",
-          "kn": "ಬೀದರ್"
-        },
-        "name": {
-          "en": "Bidar Fort district-history packet",
-          "kn": "ಬೀದರ್ ಕೋಟೆ ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
-        },
-        "category": "regional-memory",
-        "date": {
-          "from": null,
-          "to": null,
-          "era": "CE",
-          "precision": "unknown"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            77.52666667,
-            17.92444444
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Candidate packet linking Bidar Fort to settlement, governance, inscription and material-history questions.",
-          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಬೀದರ್ ಕೋಟೆವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
-        },
-        "researchNote": {
-          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
-          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
-        },
-        "evidenceBasis": "district-research-scope",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bidar / candidate-bidar-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        },
-        "placeIds": [],
-        "polityIds": [
-          "external-polity-bahmani",
-          "external-polity-adil-shahi"
-        ],
-        "peopleIds": [],
-        "eventIds": [
-          "event-bahmani-foundation"
-        ],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
         "id": "district-history-v022-chamarajanagar",
         "recordKind": "candidate",
         "districtId": "audit-chamarajanagar",
@@ -75423,69 +75857,6 @@
         }
       },
       {
-        "id": "district-history-v022-chitradurga",
-        "recordKind": "candidate",
-        "districtId": "audit-chitradurga",
-        "district": {
-          "en": "Chitradurga",
-          "kn": "ಚಿತ್ರದುರ್ಗ"
-        },
-        "name": {
-          "en": "Chitradurga Fort district-history packet",
-          "kn": "ಚಿತ್ರದುರ್ಗ ಕೋಟೆ ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
-        },
-        "category": "regional-memory",
-        "date": {
-          "from": null,
-          "to": null,
-          "era": "CE",
-          "precision": "unknown"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            76.3953,
-            14.2152
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Candidate packet linking Chitradurga Fort to settlement, governance, inscription and material-history questions.",
-          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಚಿತ್ರದುರ್ಗ ಕೋಟೆವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
-        },
-        "researchNote": {
-          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
-          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
-        },
-        "evidenceBasis": "district-research-scope",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        },
-        "placeIds": [
-          "place-chitradurga-fort"
-        ],
-        "polityIds": [
-          "external-polity-chitradurga-nayaka",
-          "polity-mysore"
-        ],
-        "peopleIds": [],
-        "eventIds": [
-          "event-chitradurga-nayaka-governance"
-        ],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
         "id": "district-history-v022-dakshina-kannada",
         "recordKind": "candidate",
         "districtId": "audit-dakshina-kannada",
@@ -75545,69 +75916,6 @@
           "event-alupa-coastal-polity-attested",
           "event-keladi-nayaka-governance"
         ],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
-        "id": "district-history-v022-gadag",
-        "recordKind": "candidate",
-        "districtId": "audit-gadag",
-        "district": {
-          "en": "Gadag",
-          "kn": "ಗದಗ"
-        },
-        "name": {
-          "en": "Lakkundi temple and basadi landscape district-history packet",
-          "kn": "ಲಕ್ಕುಂಡಿ ದೇವಾಲಯ ಮತ್ತು ಬಸದಿ ಭೂದೃಶ್ಯ ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
-        },
-        "category": "settlement-origin",
-        "date": {
-          "from": null,
-          "to": null,
-          "era": "CE",
-          "precision": "unknown"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            75.71833333,
-            15.38972222
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Candidate packet linking Lakkundi temple and basadi landscape to settlement, governance, inscription and material-history questions.",
-          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಲಕ್ಕುಂಡಿ ದೇವಾಲಯ ಮತ್ತು ಬಸದಿ ಭೂದೃಶ್ಯವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
-        },
-        "researchNote": {
-          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
-          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
-        },
-        "evidenceBasis": "district-research-scope",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-gadag / candidate-gadag-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        },
-        "placeIds": [
-          "place-lakkundi-kashivishveshvara",
-          "place-lakkundi-brahma-jinalaya"
-        ],
-        "polityIds": [
-          "polity-kalyani-chalukya"
-        ],
-        "peopleIds": [
-          "person-vikramaditya-vi"
-        ],
-        "eventIds": [],
         "connectionNote": {
           "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
           "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
@@ -75681,69 +75989,6 @@
         }
       },
       {
-        "id": "district-history-v022-kalaburagi",
-        "recordKind": "candidate",
-        "districtId": "audit-kalaburagi",
-        "district": {
-          "en": "Kalaburagi",
-          "kn": "ಕಲಬುರಗಿ"
-        },
-        "name": {
-          "en": "Khwaja Bande Nawaz Dargah district-history packet",
-          "kn": "ಖ್ವಾಜಾ ಬಂದೆ ನವಾಜ್ ದರ್ಗಾ ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
-        },
-        "category": "settlement-origin",
-        "date": {
-          "from": null,
-          "to": null,
-          "era": "CE",
-          "precision": "unknown"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            76.8509,
-            17.344
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Candidate packet linking Khwaja Bande Nawaz Dargah to settlement, governance, inscription and material-history questions.",
-          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಖ್ವಾಜಾ ಬಂದೆ ನವಾಜ್ ದರ್ಗಾವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
-        },
-        "researchNote": {
-          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
-          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
-        },
-        "evidenceBasis": "district-research-scope",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-kalaburagi / candidate-kalaburagi-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        },
-        "placeIds": [
-          "place-kalaburagi-jama-masjid"
-        ],
-        "polityIds": [
-          "polity-rashtrakuta",
-          "external-polity-bahmani"
-        ],
-        "peopleIds": [],
-        "eventIds": [
-          "event-bahmani-foundation"
-        ],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
         "id": "district-history-v022-kodagu",
         "recordKind": "candidate",
         "districtId": "audit-kodagu",
@@ -75796,71 +76041,6 @@
         ],
         "peopleIds": [],
         "eventIds": [],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
-        "id": "district-history-v022-koppal",
-        "recordKind": "candidate",
-        "districtId": "audit-koppal",
-        "district": {
-          "en": "Koppal",
-          "kn": "ಕೊಪ್ಪಳ"
-        },
-        "name": {
-          "en": "Anegundi fort landscape district-history packet",
-          "kn": "ಆನೆಗುಂದಿ ಕೋಟೆ ಭೂದೃಶ್ಯ ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
-        },
-        "category": "regional-memory",
-        "date": {
-          "from": null,
-          "to": null,
-          "era": "CE",
-          "precision": "unknown"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            76.4821673,
-            15.3539114
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Candidate packet linking Anegundi fort landscape to settlement, governance, inscription and material-history questions.",
-          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಆನೆಗುಂದಿ ಕೋಟೆ ಭೂದೃಶ್ಯವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
-        },
-        "researchNote": {
-          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
-          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
-        },
-        "evidenceBasis": "district-research-scope",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-koppal / candidate-koppal-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        },
-        "placeIds": [
-          "place-hampi"
-        ],
-        "polityIds": [
-          "polity-vijayanagara"
-        ],
-        "peopleIds": [
-          "person-harihara-i",
-          "person-bukka-i"
-        ],
-        "eventIds": [
-          "event-vijayanagara-foundation"
-        ],
         "connectionNote": {
           "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
           "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
@@ -77117,6 +77297,134 @@
           "reviewer": null,
           "updatedAt": "2026-08-25"
         }
+      },
+      {
+        "id": "coin-kadamba-banavasi-lion-type-lead",
+        "name": {
+          "en": "Kadamba Banavasi lion-type coinage lead",
+          "kn": "ಕದಂಬ ಬನವಾಸಿ ಸಿಂಹ-ಬಗೆ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-kadamba",
+        "placeId": "place-banavasi",
+        "date": {
+          "from": 345,
+          "to": 540,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": null,
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "A Banavasi-linked Kadamba coinage lead for future catalogue matching; emblem, metal, denomination and specimen identity are deliberately unresolved until a numismatic catalogue item is attached.",
+          "kn": "ಭವಿಷ್ಯದ catalogue ಹೊಂದಾಣಿಕೆಗೆ ಬನವಾಸಿ-ಸಂಬಂಧಿತ ಕದಂಬ ನಾಣ್ಯ ದಾರಿ; ಚಿಹ್ನೆ, ಲೋಹ, ಮೌಲ್ಯ ಮತ್ತು ಮಾದರಿ ಗುರುತನ್ನು ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ವಸ್ತು ಸೇರಿಸುವವರೆಗೆ ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಬಗೆಹರಿಸಿಲ್ಲ."
+        },
+        "reverse": {
+          "en": "Reverse legend and mint/finding context are unknown. Use this packet to collect museum, catalogue and plate evidence before any visual claim is published.",
+          "kn": "ಹಿಂಭಾಗದ ಲೇಖ ಮತ್ತು ಟಂಕಶಾಲೆ/ಪತ್ತೆ ಸಂದರ್ಭ ತಿಳಿದಿಲ್ಲ. ಯಾವುದೇ ದೃಶ್ಯ ಹಕ್ಕು ಪ್ರಕಟಿಸುವ ಮೊದಲು ಸಂಗ್ರಹಾಲಯ, catalogue ಮತ್ತು ಫಲಕ ಸಾಕ್ಷ್ಯ ಸಂಗ್ರಹಿಸಲು ಈ ಕಡತವನ್ನು ಬಳಸಿ."
+        },
+        "findspot": {
+          "placeId": "place-banavasi",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-banavasi",
+            "locator": "Banavasi Kadamba capital context; numismatic catalogue item required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "coin-bahmani-bidar-kalaburagi-mint-lead",
+        "name": {
+          "en": "Bahmani Bidar-Kalaburagi mint-context coinage lead",
+          "kn": "ಬಹಮನಿ ಬೀದರ್-ಕಲಬುರಗಿ ಟಂಕಶಾಲೆ-ಸಂದರ್ಭ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "mint-record",
+        "polityId": "external-polity-bahmani",
+        "placeId": "place-bidar-mahmud-gawan",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": null,
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "A mint-context packet for Bahmani northern Karnataka coinage; ruler, mint name, metal and denomination must be matched to a catalogue specimen before display as a coin type.",
+          "kn": "ಬಹಮನಿ ಉತ್ತರ ಕರ್ನಾಟಕ ನಾಣ್ಯಗಳಿಗೆ ಟಂಕಶಾಲೆ-ಸಂದರ್ಭ ಕಡತ; ಅರಸು, ಟಂಕಶಾಲೆ ಹೆಸರು, ಲೋಹ ಮತ್ತು ಮೌಲ್ಯವನ್ನು coin type ಆಗಿ ತೋರಿಸುವ ಮೊದಲು catalogue ಮಾದರಿಯೊಂದಿಗೆ ಹೊಂದಿಸಬೇಕು."
+        },
+        "reverse": {
+          "en": "Legend and date system are unresolved. Persian/Arabic epigraphic leads are present, but they do not substitute for a numismatic specimen.",
+          "kn": "ಲೇಖ ಮತ್ತು ದಿನಾಂಕ ಪದ್ಧತಿ ಬಗೆಹರಿದಿಲ್ಲ. ಪರ್ಷಿಯನ್/ಅರಬಿ ಶಾಸನ ದಾರಿಗಳಿವೆ, ಆದರೆ ಅವು ನಾಣ್ಯಶಾಸ್ತ್ರ ಮಾದರಿಯ ಬದಲು ಅಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-bidar-mahmud-gawan",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Northern Karnataka Persianate record context; numismatic catalogue specimen required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
       }
     ],
     "manuscriptWitnesses": [
@@ -77866,6 +78174,110 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-gadayuddha-routledge-translation-lead",
+        "name": {
+          "en": "Gadayuddha translation and edition-comparison lead",
+          "kn": "ಗದಾಯುದ್ಧ ಅನುವಾದ ಮತ್ತು ಆವೃತ್ತಿ-ಹೋಲಿಕೆ ದಾರಿ"
+        },
+        "workId": "work-gadayuddha",
+        "witnessKind": "printed-edition",
+        "repository": {
+          "en": "Published English translation and study lead for Ranna’s Gadayuddha; use for edition comparison only until the Kannada source edition and manuscript lineage are entered.",
+          "kn": "ರನ್ನನ ಗದಾಯುದ್ಧದ ಪ್ರಕಟಿತ ಇಂಗ್ಲಿಷ್ ಅನುವಾದ ಮತ್ತು ಅಧ್ಯಯನ ದಾರಿ; ಕನ್ನಡ ಆಕರ ಆವೃತ್ತಿ ಮತ್ತು ಹಸ್ತಪ್ರತಿ ವಂಶಾವಳಿ ನಮೂದಿಸುವವರೆಗೆ ಆವೃತ್ತಿ-ಹೋಲಿಕೆಗೆ ಮಾತ್ರ ಬಳಸಿ."
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 982,
+          "to": 982,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "restricted",
+          "url": "https://www.routledge.com/Ranna-Gadayuddham-The-Duel-of-the-Maces/Kittel/p/book/9781032215746"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "Translation/study lead; Kannada base edition and manuscript witness still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "manuscript-vaddaradhane-repository-recovery-lead",
+        "name": {
+          "en": "Vaddaradhane repository-recovery witness lead",
+          "kn": "ವಡ್ಡಾರಾಧನೆ repository ಮರುಗುರುತು ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-vaddaradhane",
+        "witnessKind": "catalogue-entry",
+        "repository": {
+          "en": "Recovery packet for the earlier dead CESCK catalogue lead; retain the work in the manuscript queue while a current repository or printed edition is found.",
+          "kn": "ಹಿಂದಿನ dead CESCK catalogue ದಾರಿಗೆ ಮರುಗುರುತು ಕಡತ; ಪ್ರಸ್ತುತ repository ಅಥವಾ ಮುದ್ರಿತ ಆವೃತ್ತಿ ಸಿಗುವವರೆಗೆ ಕೃತಿಯನ್ನು ಹಸ್ತಪ್ರತಿ ಸರದಿಯಲ್ಲಿ ಉಳಿಸಿ."
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1434,
+          "to": 1434,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "unresolved",
+          "url": null
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "provisional"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-cesck-vaddaradhane",
+            "locator": "Dead-link recovery queue; find a working catalogue or edition witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
