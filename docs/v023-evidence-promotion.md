@@ -1,6 +1,6 @@
 # Atlas v0.23 — evidence promotion sprint
 
-Updated: 2026-08-24
+Updated: 2026-08-26
 
 This milestone converts the P1 inscription queue into seven publication packets. It does not replace fieldwork or independent review. A record remains `needs-review` until all seven evidence gates are verified and a reviewer other than the contributor records the decision.
 
@@ -22,6 +22,16 @@ The `#evidence` page now includes a reviewer operations panel above the permanen
 - saved assignment status history from MariaDB.
 
 This panel helps coordinate work, but it does not publish records. A completed task is evidence that the workflow item was handled. Promotion still requires the historical record itself to have all gates verified, an independent reviewer decision, validation and inclusion in an approved static release.
+
+## Source-citation gate added on 2026-08-26
+
+Reviewers previously saw only a status, an assignee/reviewer name and a free-text review note per task — the underlying source material a contributor was relying on was never captured or shown, so there was nothing to independently check against. Every evidence task now carries its own permanent citation list:
+
+- A task card shows every attached source as a clickable link (title, URL, page/locator, and who added it) directly beneath its required-fields list, so a reviewer can confirm the material before approving.
+- An approved contributor, reviewer or administrator can add a citation from the same card; each addition is a new permanent MariaDB row and never replaces or removes a citation added earlier, so the reference trail only grows.
+- The server refuses to move a task to `awaiting-review` or `complete` until it has at least one citation, alongside the existing independent-reviewer requirement.
+
+This closes a real gap in the workflow, but it does not change the completion rule below: a citation being present is not the same as a source being verified.
 
 ## Current readiness
 

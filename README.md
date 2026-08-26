@@ -141,7 +141,7 @@ The admin workspace remains available only by opening `#admin` directly for main
 
 Use the **Resources & collaborations management** shortcuts in the admin toolbar to maintain source metadata and collaboration records. Source fields include authors/organizations, publisher or repository, DOI, ISBN, URL and review state; collaboration records include entity type, public stage, scope and bilingual descriptions. Export and review the complete JSON before publishing.
 
-Open `#evidence` to operate the current evidence board. The board now includes reviewer assignments, review notes, saved status history, a reviewer operations summary and a ready-for-promotion queue. A completed assignment is still only a workflow signal; publication requires an independently reviewed evidence packet, validation, a permanent MariaDB revision and a deliberate static release.
+Open `#evidence` to operate the current evidence board. The board now includes reviewer assignments, review notes, saved status history, source citations, a reviewer operations summary and a ready-for-promotion queue. Every task shows its attached source citations directly on the card and requires at least one before it can move to awaiting-review or complete; citations are permanent and additive, so submitting a new one never removes an earlier one. A completed assignment is still only a workflow signal; publication requires an independently reviewed evidence packet, validation, a permanent MariaDB revision and a deliberate static release.
 
 ## Research citations
 
