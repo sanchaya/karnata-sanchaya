@@ -74958,8 +74958,8 @@
           "precision": "district-centroid"
         },
         "description": {
-          "en": "An intake record for town formation, market history, civic foundations and nearby temple settlements in Davanagere district.",
-          "kn": "ದಾವಣಗೆರೆ ಜಿಲ್ಲೆಯ ಪಟ್ಟಣ ರೂಪುಗೊಳ್ಳುವಿಕೆ, ಮಾರುಕಟ್ಟೆ ಇತಿಹಾಸ, ನಾಗರಿಕ ಸ್ಥಾಪನೆ ಮತ್ತು ಸಮೀಪದ ದೇವಾಲಯ ವಸತಿಗಳ ಸ್ವೀಕೃತಿ ದಾಖಲೆ."
+          "en": "An intake record for town formation, market history, civic foundations and nearby temple settlements in Davanagere district. The Harihareshwara temple item-level lead is now split into its own record below.",
+          "kn": "ದಾವಣಗೆರೆ ಜಿಲ್ಲೆಯ ಪಟ್ಟಣ ರೂಪುಗೊಳ್ಳುವಿಕೆ, ಮಾರುಕಟ್ಟೆ ಇತಿಹಾಸ, ನಾಗರಿಕ ಸ್ಥಾಪನೆ ಮತ್ತು ಸಮೀಪದ ದೇವಾಲಯ ವಸತಿಗಳ ಸ್ವೀಕೃತಿ ದಾಖಲೆ. ಹರಿಹರೇಶ್ವರ ದೇವಾಲಯ ವಸ್ತು-ಮಟ್ಟದ ದಾರಿಯನ್ನು ಈಗ ಕೆಳಗಿನ ಪ್ರತ್ಯೇಕ ದಾಖಲೆಗೆ ವಿಭಜಿಸಲಾಗಿದೆ."
         },
         "researchNote": {
           "en": "Separate modern civic foundation stones from medieval temple or inscription evidence, with custodians and photographs recorded for each.",
@@ -74970,6 +74970,70 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Davanagere district chapter: settlement, market and civic-history references to locate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        },
+        "placeIds": [],
+        "polityIds": [
+          "polity-kalyani-chalukya",
+          "polity-vijayanagara",
+          "external-polity-chitradurga-nayaka"
+        ],
+        "peopleIds": [],
+        "eventIds": [],
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-davanagere-harihareshwara-temple",
+        "recordKind": "candidate",
+        "districtId": "audit-davanagere",
+        "district": {
+          "en": "Davanagere",
+          "kn": "ದಾವಣಗೆರೆ"
+        },
+        "name": {
+          "en": "Harihareshwara Temple, Harihar: Hoysala foundation",
+          "kn": "ಹರಿಹರ ಹರಿಹರೇಶ್ವರ ದೇವಾಲಯ: ಹೊಯ್ಸಳ ಸ್ಥಾಪನೆ"
+        },
+        "category": "urban-foundation",
+        "date": {
+          "from": 1223,
+          "to": 1268,
+          "era": "CE",
+          "precision": "range"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.80194,
+            14.51167
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "The Harihareshwara temple at Harihar, dedicated to a fused Shiva-Vishnu form, was built c. 1223-1224 CE by Polalva, a commander/minister of the Hoysala king Vira Narasimha II (person-narasimha-ii in this atlas); Soma, a commander under Narasimha III, made additions in 1268 CE. A smaller temple on the site is said to date to the 5th century. The town of Harihar takes its name from the temple deity. Coordinates follow the Wikipedia infobox and are not independently field-verified.",
+          "kn": "ಶಿವ-ವಿಷ್ಣು ಸಂಯೋಜಿತ ರೂಪಕ್ಕೆ ಸಮರ್ಪಿತವಾದ ಹರಿಹರದ ಹರಿಹರೇಶ್ವರ ದೇವಾಲಯವನ್ನು ಹೊಯ್ಸಳ ಅರಸ ವೀರ ನರಸಿಂಹ IIನ (ಈ ಭೂಪಟದಲ್ಲಿ person-narasimha-ii) ಸೇನಾಪತಿ/ಮಂತ್ರಿ ಪೊಲಾಳ್ವ ಸು. 1223-1224ರಲ್ಲಿ ಕಟ್ಟಿಸಿದನು; ನರಸಿಂಹ IIIನ ಸೇನಾಪತಿ ಸೋಮ 1268ರಲ್ಲಿ ಸೇರ್ಪಡೆಗಳನ್ನು ಮಾಡಿದನು. ತಾಣದಲ್ಲಿ ಒಂದು ಸಣ್ಣ ದೇವಾಲಯ 5ನೇ ಶತಮಾನದ್ದೆಂದು ಹೇಳಲಾಗುತ್ತದೆ. ಹರಿಹರ ಪಟ್ಟಣಕ್ಕೆ ದೇವಾಲಯದ ದೇವರ ಹೆಸರೇ ಇಡಲಾಗಿದೆ. ನಿರ್ದೇಶಾಂಕಗಳು ವಿಕಿಪೀಡಿಯ ಮಾಹಿತಿ ಪೆಟ್ಟಿಗೆಯನ್ನು ಅನುಸರಿಸುತ್ತವೆ ಮತ್ತು ಸ್ವತಂತ್ರವಾಗಿ ಕ್ಷೇತ್ರ-ಪರಿಶೀಲಿಸಿಲ್ಲ."
+        },
+        "researchNote": {
+          "en": "Resolve the exact Epigraphia Carnatica item number for the temple's foundation and 1268 CE addition inscriptions, ASI protection/monument number, and confirm the claimed 5th-century predecessor temple against an archaeological source before promoting beyond this urban-foundation lead.",
+          "kn": "ದೇವಾಲಯದ ಸ್ಥಾಪನಾ ಮತ್ತು 1268ರ ಸೇರ್ಪಡೆ ಶಾಸನಗಳ ನಿಖರ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ವಸ್ತು ಸಂಖ್ಯೆ, ASI ಸಂರಕ್ಷಣಾ/ಸ್ಮಾರಕ ಸಂಖ್ಯೆಯನ್ನು ನಿರ್ಧರಿಸಿ, ಮತ್ತು ಈ ನಗರ-ಸ್ಥಾಪನಾ ದಾರಿಯನ್ನು ಮೀರಿ ಉತ್ತೇಜಿಸುವ ಮೊದಲು 5ನೇ ಶತಮಾನದ ಪೂರ್ವಸೂರಿ ದೇವಾಲಯದ ಹಕ್ಕನ್ನು ಪುರಾತತ್ತ್ವ ಆಕರದ ವಿರುದ್ಧ ದೃಢಪಡಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-harihareshwara-temple",
+            "locator": "Harihareshwara temple, Harihar: built c. 1223-1224 CE by Polalva under Vira Narasimha II; 1268 CE additions by Soma under Narasimha III"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Davanagere district chapter: urban-foundation and temple context"
           }
         ],
         "review": {
