@@ -24,7 +24,8 @@ Existing administrator dataset snapshots are not overwritten during deployment. 
 - Administrators approve accounts and appoint `reviewer`, `verification-officer` or `exporter` roles from the live administration API.
 - Reviewers process `/api/reviews/queue`; a reviewer cannot approve their own contribution, and Kannada translations require all six scholarly checks.
 - Evidence assignments are permanent MariaDB rows at `/api/evidence/assignments`; the browser is only a view/editor for the live service and does not become the source of truth.
-- Evidence assignment history, reviewer notes and ready-for-promotion counts are live workflow aids. They help reviewers coordinate P1/P2 work but do not publish records without a validated dataset revision and approved static release.
+- Every evidence task requires at least one source citation, added at `POST /api/evidence/assignments/:taskId/citations` and stored as its own permanent `evidence_task_citations` row. The server rejects a move to `awaiting-review` or `complete` (HTTP 422) until a task has one. Citations are add-only: there is no update or replace endpoint, so submitting a new reference never overwrites or removes one already recorded against that task.
+- Evidence assignment history, reviewer notes, source citations and ready-for-promotion counts are live workflow aids. They help reviewers coordinate P1/P2 work but do not publish records without a validated dataset revision and approved static release.
 - Keep at least two qualified reviewers active before accepting public submissions. Review the release-readiness panel before every publication.
 
 ## Release to the static site
