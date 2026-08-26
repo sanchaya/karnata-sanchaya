@@ -79831,88 +79831,579 @@
         }
       },
       {
-        "id": "rel-district-history-v022-bagalkote-place-1",
-        "fromId": "district-history-v022-bagalkote",
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-place-1",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
+        "type": "district-history-place-context",
+        "toId": "place-badami",
+        "citations": [
+          {
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-place-2",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
+        "type": "district-history-place-context",
+        "toId": "place-aihole",
+        "citations": [
+          {
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-place-3",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
         "type": "district-history-place-context",
         "toId": "place-pattadakal",
         "citations": [
           {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bagalkote / candidate-bagalkote-1; see embedded audit citations and coordinate source"
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-07-30"
+          "updatedAt": "2026-08-26"
         }
       },
       {
-        "id": "rel-district-history-v022-bagalkote-polity-1",
-        "fromId": "district-history-v022-bagalkote",
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-polity-1",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
         "type": "district-history-polity-context",
         "toId": "polity-badami-chalukya",
         "citations": [
           {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bagalkote / candidate-bagalkote-1; see embedded audit citations and coordinate source"
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-07-30"
+          "updatedAt": "2026-08-26"
         }
       },
       {
-        "id": "rel-district-history-v022-bagalkote-person-1",
-        "fromId": "district-history-v022-bagalkote",
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-person-1",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
+        "type": "district-history-person-context",
+        "toId": "person-pulakeshin-ii",
+        "citations": [
+          {
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-person-2",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
         "type": "district-history-person-context",
         "toId": "person-vikramaditya-ii",
         "citations": [
           {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bagalkote / candidate-bagalkote-1; see embedded audit citations and coordinate source"
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-07-30"
+          "updatedAt": "2026-08-26"
         }
       },
       {
-        "id": "rel-district-history-v022-bagalkote-person-2",
-        "fromId": "district-history-v022-bagalkote",
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-person-3",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
         "type": "district-history-person-context",
         "toId": "person-lokamahadevi",
         "citations": [
           {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bagalkote / candidate-bagalkote-1; see embedded audit citations and coordinate source"
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-07-30"
+          "updatedAt": "2026-08-26"
         }
       },
       {
-        "id": "rel-district-history-v022-bagalkote-event-1",
-        "fromId": "district-history-v022-bagalkote",
+        "id": "rel-district-history-bagalkote-badami-aihole-pattadakal-cultural-zone-event-1",
+        "fromId": "district-history-bagalkote-badami-aihole-pattadakal-cultural-zone",
         "type": "district-history-event-context",
         "toId": "event-vikramaditya-takes-kanchi",
         "citations": [
           {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bagalkote / candidate-bagalkote-1; see embedded audit citations and coordinate source"
+            "sourceId": "src-unesco-aihole-badami-pattadakal-tentative",
+            "locator": "Aihole-Badami-Pattadakal cultural landscape and temple-architecture evolution lead"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-07-30"
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-gadag-lakkundi-kalyani-chalukya-zone-place-1",
+        "fromId": "district-history-gadag-lakkundi-kalyani-chalukya-zone",
+        "type": "district-history-place-context",
+        "toId": "place-lakkundi-kashivishveshvara",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage revival and temple landscape lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-gadag-lakkundi-kalyani-chalukya-zone-place-2",
+        "fromId": "district-history-gadag-lakkundi-kalyani-chalukya-zone",
+        "type": "district-history-place-context",
+        "toId": "place-lakkundi-brahma-jinalaya",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage revival and temple landscape lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-gadag-lakkundi-kalyani-chalukya-zone-place-3",
+        "fromId": "district-history-gadag-lakkundi-kalyani-chalukya-zone",
+        "type": "district-history-place-context",
+        "toId": "place-lakkundi-stepwell",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage revival and temple landscape lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-gadag-lakkundi-kalyani-chalukya-zone-polity-1",
+        "fromId": "district-history-gadag-lakkundi-kalyani-chalukya-zone",
+        "type": "district-history-polity-context",
+        "toId": "polity-kalyani-chalukya",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage revival and temple landscape lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-gadag-lakkundi-kalyani-chalukya-zone-person-1",
+        "fromId": "district-history-gadag-lakkundi-kalyani-chalukya-zone",
+        "type": "district-history-person-context",
+        "toId": "person-vikramaditya-vi",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage revival and temple landscape lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-place-1",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-place-context",
+        "toId": "place-itagi-mahadeva",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-place-2",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-place-context",
+        "toId": "place-hampi",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-polity-1",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-polity-context",
+        "toId": "polity-kalyani-chalukya",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-polity-2",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-polity-context",
+        "toId": "polity-vijayanagara",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-person-1",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-person-context",
+        "toId": "person-harihara-i",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-person-2",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-person-context",
+        "toId": "person-bukka-i",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-koppal-itagi-mahadeva-temple-lead-event-1",
+        "fromId": "district-history-koppal-itagi-mahadeva-temple-lead",
+        "type": "district-history-event-context",
+        "toId": "event-vijayanagara-foundation",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-koppal",
+            "locator": "Koppal district heritage lead for Itagi/Mahadeva temple context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bidar-mahmud-gawan-madrasa-lead-place-1",
+        "fromId": "district-history-bidar-mahmud-gawan-madrasa-lead",
+        "type": "district-history-place-context",
+        "toId": "place-bidar-mahmud-gawan",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-bidar-madrasa",
+            "locator": "Mahmud Gawan Madrasa heritage record"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for Bidar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bidar-mahmud-gawan-madrasa-lead-polity-1",
+        "fromId": "district-history-bidar-mahmud-gawan-madrasa-lead",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-bahmani",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-bidar-madrasa",
+            "locator": "Mahmud Gawan Madrasa heritage record"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for Bidar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bidar-mahmud-gawan-madrasa-lead-polity-2",
+        "fromId": "district-history-bidar-mahmud-gawan-madrasa-lead",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-adil-shahi",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-bidar-madrasa",
+            "locator": "Mahmud Gawan Madrasa heritage record"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for Bidar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-bidar-mahmud-gawan-madrasa-lead-event-1",
+        "fromId": "district-history-bidar-mahmud-gawan-madrasa-lead",
+        "type": "district-history-event-context",
+        "toId": "event-bahmani-foundation",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-bidar-madrasa",
+            "locator": "Mahmud Gawan Madrasa heritage record"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for Bidar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kalaburagi-bahmani-fort-masjid-lead-place-1",
+        "fromId": "district-history-kalaburagi-bahmani-fort-masjid-lead",
+        "type": "district-history-place-context",
+        "toId": "place-kalaburagi-jama-masjid",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi heritage and Jama Masjid context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kalaburagi-bahmani-fort-masjid-lead-polity-1",
+        "fromId": "district-history-kalaburagi-bahmani-fort-masjid-lead",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-bahmani",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi heritage and Jama Masjid context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kalaburagi-bahmani-fort-masjid-lead-polity-2",
+        "fromId": "district-history-kalaburagi-bahmani-fort-masjid-lead",
+        "type": "district-history-polity-context",
+        "toId": "polity-rashtrakuta",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi heritage and Jama Masjid context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-kalaburagi-bahmani-fort-masjid-lead-event-1",
+        "fromId": "district-history-kalaburagi-bahmani-fort-masjid-lead",
+        "type": "district-history-event-context",
+        "toId": "event-bahmani-foundation",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi heritage and Jama Masjid context"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-fort-nayaka-obavva-lead-place-1",
+        "fromId": "district-history-chitradurga-fort-nayaka-obavva-lead",
+        "type": "district-history-place-context",
+        "toId": "place-chitradurga-fort",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga Fort heritage context"
+          },
+          {
+            "sourceId": "src-karnataka-tourism-onake-obavva",
+            "locator": "Onake Obavva memory lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-fort-nayaka-obavva-lead-polity-1",
+        "fromId": "district-history-chitradurga-fort-nayaka-obavva-lead",
+        "type": "district-history-polity-context",
+        "toId": "external-polity-chitradurga-nayaka",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga Fort heritage context"
+          },
+          {
+            "sourceId": "src-karnataka-tourism-onake-obavva",
+            "locator": "Onake Obavva memory lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-fort-nayaka-obavva-lead-polity-2",
+        "fromId": "district-history-chitradurga-fort-nayaka-obavva-lead",
+        "type": "district-history-polity-context",
+        "toId": "polity-mysore",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga Fort heritage context"
+          },
+          {
+            "sourceId": "src-karnataka-tourism-onake-obavva",
+            "locator": "Onake Obavva memory lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-district-history-chitradurga-fort-nayaka-obavva-lead-event-1",
+        "fromId": "district-history-chitradurga-fort-nayaka-obavva-lead",
+        "type": "district-history-event-context",
+        "toId": "event-chitradurga-nayaka-governance",
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga Fort heritage context"
+          },
+          {
+            "sourceId": "src-karnataka-tourism-onake-obavva",
+            "locator": "Onake Obavva memory lead"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       },
       {
@@ -80035,57 +80526,6 @@
         }
       },
       {
-        "id": "rel-district-history-v022-bidar-polity-1",
-        "fromId": "district-history-v022-bidar",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-bahmani",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bidar / candidate-bidar-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-bidar-polity-2",
-        "fromId": "district-history-v022-bidar",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-adil-shahi",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bidar / candidate-bidar-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-bidar-event-1",
-        "fromId": "district-history-v022-bidar",
-        "type": "district-history-event-context",
-        "toId": "event-bahmani-foundation",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-bidar / candidate-bidar-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
         "id": "rel-district-history-v022-chamarajanagar-polity-1",
         "fromId": "district-history-v022-chamarajanagar",
         "type": "district-history-polity-context",
@@ -80162,74 +80602,6 @@
           {
             "sourceId": "src-v022-district-audit-provenance",
             "locator": "audit-chikkaballapur / candidate-chikkaballapur-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-place-1",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-place-context",
-        "toId": "place-chitradurga-fort",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-polity-1",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-chitradurga-nayaka",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-polity-2",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-polity-context",
-        "toId": "polity-mysore",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-chitradurga-event-1",
-        "fromId": "district-history-v022-chitradurga",
-        "type": "district-history-event-context",
-        "toId": "event-chitradurga-nayaka-governance",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
           }
         ],
         "review": {
@@ -80332,74 +80704,6 @@
           {
             "sourceId": "src-v022-district-audit-provenance",
             "locator": "audit-dakshina-kannada / candidate-dakshina-kannada-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-gadag-place-1",
-        "fromId": "district-history-v022-gadag",
-        "type": "district-history-place-context",
-        "toId": "place-lakkundi-kashivishveshvara",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-gadag / candidate-gadag-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-gadag-place-2",
-        "fromId": "district-history-v022-gadag",
-        "type": "district-history-place-context",
-        "toId": "place-lakkundi-brahma-jinalaya",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-gadag / candidate-gadag-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-gadag-polity-1",
-        "fromId": "district-history-v022-gadag",
-        "type": "district-history-polity-context",
-        "toId": "polity-kalyani-chalukya",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-gadag / candidate-gadag-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-gadag-person-1",
-        "fromId": "district-history-v022-gadag",
-        "type": "district-history-person-context",
-        "toId": "person-vikramaditya-vi",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-gadag / candidate-gadag-1; see embedded audit citations and coordinate source"
           }
         ],
         "review": {
@@ -80528,74 +80832,6 @@
         }
       },
       {
-        "id": "rel-district-history-v022-kalaburagi-place-1",
-        "fromId": "district-history-v022-kalaburagi",
-        "type": "district-history-place-context",
-        "toId": "place-kalaburagi-jama-masjid",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-kalaburagi / candidate-kalaburagi-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-kalaburagi-polity-1",
-        "fromId": "district-history-v022-kalaburagi",
-        "type": "district-history-polity-context",
-        "toId": "polity-rashtrakuta",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-kalaburagi / candidate-kalaburagi-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-kalaburagi-polity-2",
-        "fromId": "district-history-v022-kalaburagi",
-        "type": "district-history-polity-context",
-        "toId": "external-polity-bahmani",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-kalaburagi / candidate-kalaburagi-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-kalaburagi-event-1",
-        "fromId": "district-history-v022-kalaburagi",
-        "type": "district-history-event-context",
-        "toId": "event-bahmani-foundation",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-kalaburagi / candidate-kalaburagi-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
         "id": "rel-district-history-v022-kodagu-polity-1",
         "fromId": "district-history-v022-kodagu",
         "type": "district-history-polity-context",
@@ -80604,91 +80840,6 @@
           {
             "sourceId": "src-v022-district-audit-provenance",
             "locator": "audit-kodagu / candidate-kodagu-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-koppal-place-1",
-        "fromId": "district-history-v022-koppal",
-        "type": "district-history-place-context",
-        "toId": "place-hampi",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-koppal / candidate-koppal-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-koppal-polity-1",
-        "fromId": "district-history-v022-koppal",
-        "type": "district-history-polity-context",
-        "toId": "polity-vijayanagara",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-koppal / candidate-koppal-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-koppal-person-1",
-        "fromId": "district-history-v022-koppal",
-        "type": "district-history-person-context",
-        "toId": "person-harihara-i",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-koppal / candidate-koppal-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-koppal-person-2",
-        "fromId": "district-history-v022-koppal",
-        "type": "district-history-person-context",
-        "toId": "person-bukka-i",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-koppal / candidate-koppal-1; see embedded audit citations and coordinate source"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
-        }
-      },
-      {
-        "id": "rel-district-history-v022-koppal-event-1",
-        "fromId": "district-history-v022-koppal",
-        "type": "district-history-event-context",
-        "toId": "event-vijayanagara-foundation",
-        "citations": [
-          {
-            "sourceId": "src-v022-district-audit-provenance",
-            "locator": "audit-koppal / candidate-koppal-1; see embedded audit citations and coordinate source"
           }
         ],
         "review": {
@@ -83070,6 +83221,190 @@
         }
       },
       {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-successor-overlord",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-successor",
+        "type": "feudatory-overlord",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1565,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga fort and Nayaka context; item-level political source still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-successor-subordinate",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-successor",
+        "type": "feudatory-subordinate",
+        "toId": "external-polity-chitradurga-nayaka",
+        "date": {
+          "from": 1565,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga fort and Nayaka context; item-level political source still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-successor-place-1",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-successor",
+        "type": "feudatory-place-context",
+        "toId": "place-chitradurga-fort",
+        "date": {
+          "from": 1565,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga fort and Nayaka context; item-level political source still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-chitradurga-nayaka-vijayanagara-successor-place-2",
+        "fromId": "feudatory-chitradurga-nayaka-vijayanagara-successor",
+        "type": "feudatory-place-context",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1565,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga fort and Nayaka context; item-level political source still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-bahmani-adil-shahi-successor-overlord",
+        "fromId": "feudatory-bahmani-adil-shahi-successor",
+        "type": "feudatory-overlord",
+        "toId": "external-polity-bahmani",
+        "date": {
+          "from": 1490,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-deccan-courts",
+            "locator": "Bahmani successor-state context; verify exact break-up sequence and documentary locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-bahmani-adil-shahi-successor-subordinate",
+        "fromId": "feudatory-bahmani-adil-shahi-successor",
+        "type": "feudatory-subordinate",
+        "toId": "external-polity-adil-shahi",
+        "date": {
+          "from": 1490,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-deccan-courts",
+            "locator": "Bahmani successor-state context; verify exact break-up sequence and documentary locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-bahmani-adil-shahi-successor-place-1",
+        "fromId": "feudatory-bahmani-adil-shahi-successor",
+        "type": "feudatory-place-context",
+        "toId": "place-kalaburagi-jama-masjid",
+        "date": {
+          "from": 1490,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-deccan-courts",
+            "locator": "Bahmani successor-state context; verify exact break-up sequence and documentary locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-feudatory-bahmani-adil-shahi-successor-place-2",
+        "fromId": "feudatory-bahmani-adil-shahi-successor",
+        "type": "feudatory-place-context",
+        "toId": "place-gol-gumbaz",
+        "date": {
+          "from": 1490,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-deccan-courts",
+            "locator": "Bahmani successor-state context; verify exact break-up sequence and documentary locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
         "id": "rel-admin-tirhut-simraungarh-karnata-zone-polity",
         "fromId": "admin-tirhut-simraungarh-karnata-zone",
         "type": "administrative-division-of",
@@ -83228,6 +83563,179 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-admin-kalyani-chalukya-lakkundi-zone-polity",
+        "fromId": "admin-kalyani-chalukya-lakkundi-zone",
+        "type": "administrative-division-of",
+        "toId": "polity-kalyani-chalukya",
+        "date": {
+          "from": 973,
+          "to": 1189,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; add inscription-level administrative locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-admin-kalyani-chalukya-lakkundi-zone-place-1",
+        "fromId": "admin-kalyani-chalukya-lakkundi-zone",
+        "type": "administrative-place-context",
+        "toId": "place-lakkundi-kashivishveshvara",
+        "date": {
+          "from": 973,
+          "to": 1189,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; add inscription-level administrative locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-admin-kalyani-chalukya-lakkundi-zone-place-2",
+        "fromId": "admin-kalyani-chalukya-lakkundi-zone",
+        "type": "administrative-place-context",
+        "toId": "place-lakkundi-brahma-jinalaya",
+        "date": {
+          "from": 973,
+          "to": 1189,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; add inscription-level administrative locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-admin-kalyani-chalukya-lakkundi-zone-place-3",
+        "fromId": "admin-kalyani-chalukya-lakkundi-zone",
+        "type": "administrative-place-context",
+        "toId": "place-kalyani",
+        "date": {
+          "from": 973,
+          "to": 1189,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; add inscription-level administrative locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-admin-bahmani-bidar-kalaburagi-zone-polity",
+        "fromId": "admin-bahmani-bidar-kalaburagi-zone",
+        "type": "administrative-division-of",
+        "toId": "external-polity-bahmani",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi Bahmani centre context"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic and Persian epigraphic leads for Bidar/Shahpur/Gogi/Sagar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-admin-bahmani-bidar-kalaburagi-zone-place-1",
+        "fromId": "admin-bahmani-bidar-kalaburagi-zone",
+        "type": "administrative-place-context",
+        "toId": "place-kalaburagi-jama-masjid",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi Bahmani centre context"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic and Persian epigraphic leads for Bidar/Shahpur/Gogi/Sagar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-admin-bahmani-bidar-kalaburagi-zone-place-2",
+        "fromId": "admin-bahmani-bidar-kalaburagi-zone",
+        "type": "administrative-place-context",
+        "toId": "place-bidar-mahmud-gawan",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi Bahmani centre context"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic and Persian epigraphic leads for Bidar/Shahpur/Gogi/Sagar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       },
       {
@@ -85453,6 +85961,58 @@
         "confidence": "medium"
       },
       {
+        "id": "rel-genealogy-tailapa-ii-satyashraya-kalyani-chalukya",
+        "fromId": "person-tailapa-ii",
+        "type": "genealogy-parent-child",
+        "toId": "person-satyashraya",
+        "date": {
+          "from": 997,
+          "to": 997,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kalyani Chalukya dynastic sequence; replace with inscription-level genealogy locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "sourceRecordId": "genealogy-tailapa-ii-satyashraya-kalyani-chalukya",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
+      },
+      {
+        "id": "rel-genealogy-someshvara-i-vikramaditya-vi-kalyani-chalukya",
+        "fromId": "person-someshvara-i",
+        "type": "genealogy-parent-child",
+        "toId": "person-vikramaditya-vi",
+        "date": {
+          "from": 1076,
+          "to": 1076,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Vikramaditya VI accession and dynastic context; primary genealogy locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        },
+        "sourceRecordId": "genealogy-someshvara-i-vikramaditya-vi-kalyani-chalukya",
+        "evidenceLevel": "secondary",
+        "confidence": "medium"
+      },
+      {
         "id": "rel-coin-rashtrakuta-garuda-type-lead-polity",
         "fromId": "coin-rashtrakuta-garuda-type-lead",
         "type": "coinage-of",
@@ -85977,6 +86537,98 @@
         }
       },
       {
+        "id": "rel-coin-kadamba-banavasi-lion-type-lead-polity",
+        "fromId": "coin-kadamba-banavasi-lion-type-lead",
+        "type": "coinage-of",
+        "toId": "polity-kadamba",
+        "date": {
+          "from": 345,
+          "to": 540,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-banavasi",
+            "locator": "Banavasi Kadamba capital context; numismatic catalogue item required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-coin-kadamba-banavasi-lion-type-lead-place",
+        "fromId": "coin-kadamba-banavasi-lion-type-lead",
+        "type": "coin-findspot-context",
+        "toId": "place-banavasi",
+        "date": {
+          "from": 345,
+          "to": 540,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-banavasi",
+            "locator": "Banavasi Kadamba capital context; numismatic catalogue item required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-coin-bahmani-bidar-kalaburagi-mint-lead-polity",
+        "fromId": "coin-bahmani-bidar-kalaburagi-mint-lead",
+        "type": "coinage-of",
+        "toId": "external-polity-bahmani",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Northern Karnataka Persianate record context; numismatic catalogue specimen required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-coin-bahmani-bidar-kalaburagi-mint-lead-place",
+        "fromId": "coin-bahmani-bidar-kalaburagi-mint-lead",
+        "type": "coin-findspot-context",
+        "toId": "place-bidar-mahmud-gawan",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Northern Karnataka Persianate record context; numismatic catalogue specimen required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
         "id": "rel-manuscript-kavirajamarga-sanchaya-witness-lead-work",
         "fromId": "manuscript-kavirajamarga-sanchaya-witness-lead",
         "type": "manuscript-witness-for",
@@ -86319,6 +86971,52 @@
         }
       },
       {
+        "id": "rel-manuscript-gadayuddha-routledge-translation-lead-work",
+        "fromId": "manuscript-gadayuddha-routledge-translation-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-gadayuddha",
+        "date": {
+          "from": 982,
+          "to": 982,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "Translation/study lead; Kannada base edition and manuscript witness still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-manuscript-vaddaradhane-repository-recovery-lead-work",
+        "fromId": "manuscript-vaddaradhane-repository-recovery-lead",
+        "type": "manuscript-witness-for",
+        "toId": "work-vaddaradhane",
+        "date": {
+          "from": 1434,
+          "to": 1434,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-cesck-vaddaradhane",
+            "locator": "Dead-link recovery queue; find a working catalogue or edition witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
         "id": "rel-boundary-evidence-vijayanagara-krishnadevaraya-core-1520-extent",
         "fromId": "boundary-evidence-vijayanagara-krishnadevaraya-core-1520",
         "type": "boundary-evidence-for",
@@ -86603,6 +87301,56 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-boundary-evidence-kalyani-chalukya-lakkundi-zone-extent",
+        "fromId": "boundary-evidence-kalyani-chalukya-lakkundi-zone",
+        "type": "boundary-evidence-for",
+        "toId": "extent-kalyani-chalukya-core-prototype",
+        "date": {
+          "from": 1050,
+          "to": 1120,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; source-map and inscription-cluster review pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-boundary-evidence-bahmani-northern-karnataka-zone-extent",
+        "fromId": "boundary-evidence-bahmani-northern-karnataka-zone",
+        "type": "boundary-evidence-for",
+        "toId": "extent-raichur-doab-contested-1347-1520",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Bahmani capital context"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for northern Karnataka"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       },
       {
@@ -87275,6 +88023,52 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-edition-inscription-gudnapur-kadamba-review-packet-inscription",
+        "fromId": "edition-inscription-gudnapur-kadamba-review-packet",
+        "type": "edition-for-inscription",
+        "toId": "inscription-gudnapur",
+        "date": {
+          "from": 450,
+          "to": 500,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Locate Gudnapur Kadamba inscription volume, item number, printed page and plate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "rel-edition-inscription-doddahundi-nishidhi-review-packet-inscription",
+        "fromId": "edition-inscription-doddahundi-nishidhi-review-packet",
+        "type": "edition-for-inscription",
+        "toId": "inscription-doddahundi-nishidhi",
+        "date": {
+          "from": 900,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Locate Doddahundi nishidhi item number, printed page, translation and image witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       },
       {
@@ -87983,6 +88777,78 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "feudatory-chitradurga-nayaka-vijayanagara-successor",
+        "name": {
+          "en": "Chitradurga Nayakas in the Vijayanagara successor order — research packet",
+          "kn": "ವಿಜಯನಗರಾನಂತರ ಕ್ರಮದಲ್ಲಿನ ಚಿತ್ರದುರ್ಗ ನಾಯಕರು — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "polity-vijayanagara",
+        "subordinatePolityId": "external-polity-chitradurga-nayaka",
+        "relationKind": "successor-feudatory",
+        "date": {
+          "from": 1565,
+          "to": 1779,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-chitradurga-fort",
+          "place-hampi"
+        ],
+        "confidence": "low",
+        "description": {
+          "en": "Connects Chitradurga fort power into the samanta/successor graph while keeping its changing autonomy separate from direct Vijayanagara administration.",
+          "kn": "ಚಿತ್ರದುರ್ಗ ಕೋಟೆ ಅಧಿಕಾರವನ್ನು ಸಾಮಂತ/ಉತ್ತರಾಧಿಕಾರಿ ಗ್ರಾಫ್‌ಗೆ ಜೋಡಿಸುತ್ತದೆ; ಅದರ ಬದಲಾಗುವ ಸ್ವಾಯತ್ತತೆಯನ್ನು ನೇರ ವಿಜಯನಗರ ಆಡಳಿತದಿಂದ ಪ್ರತ್ಯೇಕವಾಗಿಡುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-chitradurga",
+            "locator": "Chitradurga fort and Nayaka context; item-level political source still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "feudatory-bahmani-adil-shahi-successor",
+        "name": {
+          "en": "Adil Shahi successor state from Bahmani political order — research packet",
+          "kn": "ಬಹಮನಿ ರಾಜಕೀಯ ಕ್ರಮದಿಂದ ಆದಿಲ್ ಶಾಹಿ ಉತ್ತರಾಧಿಕಾರಿ ರಾಜ್ಯ — ಸಂಶೋಧನಾ ಕಡತ"
+        },
+        "overlordPolityId": "external-polity-bahmani",
+        "subordinatePolityId": "external-polity-adil-shahi",
+        "relationKind": "successor-feudatory",
+        "date": {
+          "from": 1490,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-kalaburagi-jama-masjid",
+          "place-gol-gumbaz"
+        ],
+        "confidence": "medium",
+        "description": {
+          "en": "Models the Deccan successor-state break-up so Raichur, Bidar and Vijayapura relations can be explored without implying one continuous administrative unit.",
+          "kn": "ರಾಯಚೂರು, ಬೀದರ್ ಮತ್ತು ವಿಜಯಪುರ ಸಂಬಂಧಗಳನ್ನು ಒಂದೇ ನಿರಂತರ ಆಡಳಿತ ಘಟಕವೆಂದು ತೋರಿಸದೆ ಅನ್ವೇಷಿಸಲು ದಖ್ಖನ್ ಉತ್ತರಾಧಿಕಾರಿ ರಾಜ್ಯಗಳ ವಿಭಜನೆಯನ್ನು ಮಾದರಿಗೊಳಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-cambridge-deccan-courts",
+            "locator": "Bahmani successor-state context; verify exact break-up sequence and documentary locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
@@ -88898,6 +89764,74 @@
           "reviewer": null,
           "updatedAt": "2026-08-25"
         }
+      },
+      {
+        "id": "genealogy-tailapa-ii-satyashraya-kalyani-chalukya",
+        "name": {
+          "en": "Tailapa II to Satyashraya Kalyani Chalukya succession-family assertion",
+          "kn": "ತೈಲಪ IIರಿಂದ ಸತ್ಯಾಶ್ರಯರವರೆಗಿನ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-tailapa-ii",
+        "toPersonId": "person-satyashraya",
+        "polityId": "polity-kalyani-chalukya",
+        "date": {
+          "from": 997,
+          "to": 997,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "This closes a visible graph gap between the Kalyani Chalukya founder and his successor. It is retained as secondary evidence until the relevant inscriptional genealogy and specialist chronology are reviewed item by item.",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಸ್ಥಾಪಕ ಮತ್ತು ಅವನ ಉತ್ತರಾಧಿಕಾರಿಯ ನಡುವಿನ ಕಾಣುವ ಗ್ರಾಫ್ ಖಾಲಿಯನ್ನು ಇದು ಮುಚ್ಚುತ್ತದೆ. ಸಂಬಂಧಿತ ಶಾಸನ ವಂಶಾವಳಿ ಮತ್ತು ವಿಶೇಷಜ್ಞ ಕಾಲಕ್ರಮವನ್ನು ವಸ್ತುವಾರು ಪರಿಶೀಲಿಸುವವರೆಗೆ ಇದನ್ನು ದ್ವಿತೀಯ ಸಾಕ್ಷ್ಯವಾಗಿಯೇ ಉಳಿಸಲಾಗಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kalyani Chalukya dynastic sequence; replace with inscription-level genealogy locator"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "genealogy-someshvara-i-vikramaditya-vi-kalyani-chalukya",
+        "name": {
+          "en": "Someshvara I to Vikramaditya VI Kalyani Chalukya succession-family assertion",
+          "kn": "ಸೋಮೇಶ್ವರ Iರಿಂದ ವಿಕ್ರಮಾದಿತ್ಯ VIರವರೆಗಿನ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಉತ್ತರಾಧಿಕಾರ-ಕುಟುಂಬ ನಿರೂಪಣೆ"
+        },
+        "relationKind": "parent-child",
+        "fromPersonId": "person-someshvara-i",
+        "toPersonId": "person-vikramaditya-vi",
+        "polityId": "polity-kalyani-chalukya",
+        "date": {
+          "from": 1076,
+          "to": 1076,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "evidenceLevel": "secondary",
+        "confidence": "medium",
+        "derivation": {
+          "en": "Vikramaditya VI is modelled as a source-backed family assertion rather than a final proof packet; the accession involved rivalry and must be checked against Chalukya inscriptions before promotion.",
+          "kn": "ವಿಕ್ರಮಾದಿತ್ಯ VIನನ್ನು ಅಂತಿಮ proof packet ಆಗಿ ಅಲ್ಲ, ಆಕರ-ಆಧಾರಿತ ಕುಟುಂಬ ನಿರೂಪಣೆಯಾಗಿ ಮಾದರಿಗೊಳಿಸಲಾಗಿದೆ; ಪಟ್ಟಾಭಿಷೇಕದಲ್ಲಿ ಸ್ಪರ್ಧೆ ಇದ್ದುದರಿಂದ ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಚಾಲುಕ್ಯ ಶಾಸನಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲನೆ ಅಗತ್ಯ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Vikramaditya VI accession and dynastic context; primary genealogy locator pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
       }
     ],
     "administrativeDivisions": [
@@ -89117,6 +90051,123 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "admin-kalyani-chalukya-lakkundi-zone",
+        "name": {
+          "en": "Kalyani Chalukya Lakkundi administrative-artistic zone",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಲಕ್ಕುಂಡಿ ಆಡಳಿತ-ಕಲಾ ವಲಯ"
+        },
+        "polityId": "polity-kalyani-chalukya",
+        "divisionKind": "administrative-zone",
+        "date": {
+          "from": 973,
+          "to": 1189,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-lakkundi-kashivishveshvara",
+          "place-lakkundi-brahma-jinalaya",
+          "place-kalyani"
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              75.2,
+              14.8
+            ],
+            [
+              76.3,
+              14.8
+            ],
+            [
+              76.45,
+              15.8
+            ],
+            [
+              75.15,
+              15.85
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "description": {
+          "en": "A study envelope for Lakkundi and Gadag-region temple, inscription and administrative evidence under the Kalyani Chalukyas; not a fixed historical border.",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರ ಕಾಲದ ಲಕ್ಕುಂಡಿ ಮತ್ತು ಗದಗ ಪ್ರದೇಶದ ದೇವಾಲಯ, ಶಾಸನ ಮತ್ತು ಆಡಳಿತ ಸಾಕ್ಷ್ಯಗಳ ಅಧ್ಯಯನ ವ್ಯಾಪ್ತಿ; ಇದು ಸ್ಥಿರ ಐತಿಹಾಸಿಕ ಗಡಿಯಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; add inscription-level administrative locators"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "admin-bahmani-bidar-kalaburagi-zone",
+        "name": {
+          "en": "Bahmani Bidar-Kalaburagi northern Karnataka zone",
+          "kn": "ಬಹಮನಿ ಬೀದರ್-ಕಲಬುರಗಿ ಉತ್ತರ ಕರ್ನಾಟಕ ವಲಯ"
+        },
+        "polityId": "external-polity-bahmani",
+        "divisionKind": "administrative-zone",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeIds": [
+          "place-kalaburagi-jama-masjid",
+          "place-bidar-mahmud-gawan"
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              76.25,
+              16.8
+            ],
+            [
+              77.95,
+              16.8
+            ],
+            [
+              78.05,
+              18.35
+            ],
+            [
+              76.15,
+              18.3
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "description": {
+          "en": "A northern Karnataka study zone for Bahmani capitals, forts, madrasas and Persianate inscriptions. It must be reconciled with dated governors, taraf divisions and district evidence.",
+          "kn": "ಬಹಮನಿ ರಾಜಧಾನಿಗಳು, ಕೋಟೆಗಳು, ಮದರಸಗಳು ಮತ್ತು ಪರ್ಷಿಯನ್ ಶಾಸನಗಳಿಗಾಗಿ ಉತ್ತರ ಕರ್ನಾಟಕದ ಅಧ್ಯಯನ ವಲಯ. ದಿನಾಂಕಿತ ಆಡಳಿತಾಧಿಕಾರಿಗಳು, ತರಫ್ ವಿಭಾಗಗಳು ಮತ್ತು ಜಿಲ್ಲಾ ಸಾಕ್ಷ್ಯದೊಂದಿಗೆ ಇದನ್ನು ಹೊಂದಿಸಬೇಕು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Kalaburagi Bahmani centre context"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic and Persian epigraphic leads for Bidar/Shahpur/Gogi/Sagar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
@@ -89618,6 +90669,104 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "boundary-evidence-kalyani-chalukya-lakkundi-zone",
+        "name": {
+          "en": "Evidence packet for Kalyani Chalukya Lakkundi zone",
+          "kn": "ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ ಲಕ್ಕುಂಡಿ ವಲಯದ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-kalyani-chalukya-core-prototype",
+        "polityId": "polity-kalyani-chalukya",
+        "evidenceKind": "administrative-unit",
+        "date": {
+          "from": 1050,
+          "to": 1120,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "inscription-clusters",
+          "administrative-units",
+          "temple-patronage-sites",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "temple-patronage-sites"
+        ],
+        "blockingEvidence": [
+          "inscription-clusters",
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Lakkundi is now represented as an administrative-artistic comparison zone, but the boundary packet still lacks dated inscription clusters and administrative-unit locators, so the core extent remains schematic.",
+          "kn": "ಲಕ್ಕುಂಡಿಯನ್ನು ಈಗ ಆಡಳಿತ-ಕಲಾ ಹೋಲಿಕೆ ವಲಯವಾಗಿ ತೋರಿಸಲಾಗಿದೆ; ಆದರೆ ದಿನಾಂಕಿತ ಶಾಸನ ಗುಚ್ಛಗಳು ಮತ್ತು ಆಡಳಿತ ಘಟಕ ಸ್ಥಾನಸೂಚಿಗಳು ಇಲ್ಲದಿರುವುದರಿಂದ ಮೂಲ ವ್ಯಾಪ್ತಿ ಇನ್ನೂ ಅಂದಾಜಿನದ್ದೇ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-lakkundi",
+            "locator": "Lakkundi heritage context; source-map and inscription-cluster review pending"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "boundary-evidence-bahmani-northern-karnataka-zone",
+        "name": {
+          "en": "Evidence packet for Bahmani northern Karnataka administrative zone",
+          "kn": "ಬಹಮನಿ ಉತ್ತರ ಕರ್ನಾಟಕ ಆಡಳಿತ ವಲಯದ ಸಾಕ್ಷ್ಯ ಕಡತ"
+        },
+        "extentId": "extent-raichur-doab-contested-1347-1520",
+        "polityId": "external-polity-bahmani",
+        "evidenceKind": "administrative-unit",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "confidence": "medium",
+        "geometryStatus": "schematic",
+        "requiredEvidence": [
+          "capital-context",
+          "administrative-units",
+          "inscription-clusters",
+          "source-map-comparison"
+        ],
+        "completedEvidence": [
+          "capital-context",
+          "inscription-clusters"
+        ],
+        "blockingEvidence": [
+          "administrative-units",
+          "source-map-comparison"
+        ],
+        "methodology": {
+          "en": "Bidar and Kalaburagi context is linked, and Persian/Arabic inscription leads exist, but taraf-level administrative geography and source-map comparison remain open before this can become boundary evidence.",
+          "kn": "ಬೀದರ್ ಮತ್ತು ಕಲಬುರಗಿ ಸಂದರ್ಭ ಜೋಡಿಸಲಾಗಿದೆ, ಪರ್ಷಿಯನ್/ಅರಬಿ ಶಾಸನ ದಾರಿಗಳಿವೆ; ಆದರೆ ಇದು ಗಡಿ ಸಾಕ್ಷ್ಯವಾಗಲು ತರಫ್-ಮಟ್ಟದ ಆಡಳಿತ ಭೂಗೋಳ ಮತ್ತು ಆಕರ-ನಕ್ಷೆ ಹೋಲಿಕೆ ಇನ್ನೂ ಬಾಕಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-kalaburagi",
+            "locator": "Bahmani capital context"
+          },
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Arabic/Persian inscription leads for northern Karnataka"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
@@ -90292,6 +91441,134 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "coin-kadamba-banavasi-lion-type-lead",
+        "name": {
+          "en": "Kadamba Banavasi lion-type coinage lead",
+          "kn": "ಕದಂಬ ಬನವಾಸಿ ಸಿಂಹ-ಬಗೆ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-kadamba",
+        "placeId": "place-banavasi",
+        "date": {
+          "from": 345,
+          "to": 540,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": null,
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "A Banavasi-linked Kadamba coinage lead for future catalogue matching; emblem, metal, denomination and specimen identity are deliberately unresolved until a numismatic catalogue item is attached.",
+          "kn": "ಭವಿಷ್ಯದ catalogue ಹೊಂದಾಣಿಕೆಗೆ ಬನವಾಸಿ-ಸಂಬಂಧಿತ ಕದಂಬ ನಾಣ್ಯ ದಾರಿ; ಚಿಹ್ನೆ, ಲೋಹ, ಮೌಲ್ಯ ಮತ್ತು ಮಾದರಿ ಗುರುತನ್ನು ನಾಣ್ಯಶಾಸ್ತ್ರ catalogue ವಸ್ತು ಸೇರಿಸುವವರೆಗೆ ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಬಗೆಹರಿಸಿಲ್ಲ."
+        },
+        "reverse": {
+          "en": "Reverse legend and mint/finding context are unknown. Use this packet to collect museum, catalogue and plate evidence before any visual claim is published.",
+          "kn": "ಹಿಂಭಾಗದ ಲೇಖ ಮತ್ತು ಟಂಕಶಾಲೆ/ಪತ್ತೆ ಸಂದರ್ಭ ತಿಳಿದಿಲ್ಲ. ಯಾವುದೇ ದೃಶ್ಯ ಹಕ್ಕು ಪ್ರಕಟಿಸುವ ಮೊದಲು ಸಂಗ್ರಹಾಲಯ, catalogue ಮತ್ತು ಫಲಕ ಸಾಕ್ಷ್ಯ ಸಂಗ್ರಹಿಸಲು ಈ ಕಡತವನ್ನು ಬಳಸಿ."
+        },
+        "findspot": {
+          "placeId": "place-banavasi",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-karnataka-tourism-banavasi",
+            "locator": "Banavasi Kadamba capital context; numismatic catalogue item required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "coin-bahmani-bidar-kalaburagi-mint-lead",
+        "name": {
+          "en": "Bahmani Bidar-Kalaburagi mint-context coinage lead",
+          "kn": "ಬಹಮನಿ ಬೀದರ್-ಕಲಬುರಗಿ ಟಂಕಶಾಲೆ-ಸಂದರ್ಭ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "mint-record",
+        "polityId": "external-polity-bahmani",
+        "placeId": "place-bidar-mahmud-gawan",
+        "date": {
+          "from": 1347,
+          "to": 1527,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": null,
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "A mint-context packet for Bahmani northern Karnataka coinage; ruler, mint name, metal and denomination must be matched to a catalogue specimen before display as a coin type.",
+          "kn": "ಬಹಮನಿ ಉತ್ತರ ಕರ್ನಾಟಕ ನಾಣ್ಯಗಳಿಗೆ ಟಂಕಶಾಲೆ-ಸಂದರ್ಭ ಕಡತ; ಅರಸು, ಟಂಕಶಾಲೆ ಹೆಸರು, ಲೋಹ ಮತ್ತು ಮೌಲ್ಯವನ್ನು coin type ಆಗಿ ತೋರಿಸುವ ಮೊದಲು catalogue ಮಾದರಿಯೊಂದಿಗೆ ಹೊಂದಿಸಬೇಕು."
+        },
+        "reverse": {
+          "en": "Legend and date system are unresolved. Persian/Arabic epigraphic leads are present, but they do not substitute for a numismatic specimen.",
+          "kn": "ಲೇಖ ಮತ್ತು ದಿನಾಂಕ ಪದ್ಧತಿ ಬಗೆಹರಿದಿಲ್ಲ. ಪರ್ಷಿಯನ್/ಅರಬಿ ಶಾಸನ ದಾರಿಗಳಿವೆ, ಆದರೆ ಅವು ನಾಣ್ಯಶಾಸ್ತ್ರ ಮಾದರಿಯ ಬದಲು ಅಲ್ಲ."
+        },
+        "findspot": {
+          "placeId": "place-bidar-mahmud-gawan",
+          "certainty": "regional-context"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "unresolved"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "unresolved"
+          },
+          "weight": {
+            "status": "unresolved"
+          },
+          "findspot": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ei-bidar-1931-36",
+            "locator": "Northern Karnataka Persianate record context; numismatic catalogue specimen required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
@@ -91042,6 +92319,110 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "manuscript-gadayuddha-routledge-translation-lead",
+        "name": {
+          "en": "Gadayuddha translation and edition-comparison lead",
+          "kn": "ಗದಾಯುದ್ಧ ಅನುವಾದ ಮತ್ತು ಆವೃತ್ತಿ-ಹೋಲಿಕೆ ದಾರಿ"
+        },
+        "workId": "work-gadayuddha",
+        "witnessKind": "printed-edition",
+        "repository": {
+          "en": "Published English translation and study lead for Ranna’s Gadayuddha; use for edition comparison only until the Kannada source edition and manuscript lineage are entered.",
+          "kn": "ರನ್ನನ ಗದಾಯುದ್ಧದ ಪ್ರಕಟಿತ ಇಂಗ್ಲಿಷ್ ಅನುವಾದ ಮತ್ತು ಅಧ್ಯಯನ ದಾರಿ; ಕನ್ನಡ ಆಕರ ಆವೃತ್ತಿ ಮತ್ತು ಹಸ್ತಪ್ರತಿ ವಂಶಾವಳಿ ನಮೂದಿಸುವವರೆಗೆ ಆವೃತ್ತಿ-ಹೋಲಿಕೆಗೆ ಮಾತ್ರ ಬಳಸಿ."
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 982,
+          "to": 982,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "restricted",
+          "url": "https://www.routledge.com/Ranna-Gadayuddham-The-Duel-of-the-Maces/Kittel/p/book/9781032215746"
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "located"
+          },
+          "shelfmark": {
+            "status": "not-applicable"
+          },
+          "editionComparison": {
+            "status": "located"
+          },
+          "license": {
+            "status": "provisional"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "Translation/study lead; Kannada base edition and manuscript witness still required"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "manuscript-vaddaradhane-repository-recovery-lead",
+        "name": {
+          "en": "Vaddaradhane repository-recovery witness lead",
+          "kn": "ವಡ್ಡಾರಾಧನೆ repository ಮರುಗುರುತು ಪಠ್ಯಸಾಕ್ಷಿ ದಾರಿ"
+        },
+        "workId": "work-vaddaradhane",
+        "witnessKind": "catalogue-entry",
+        "repository": {
+          "en": "Recovery packet for the earlier dead CESCK catalogue lead; retain the work in the manuscript queue while a current repository or printed edition is found.",
+          "kn": "ಹಿಂದಿನ dead CESCK catalogue ದಾರಿಗೆ ಮರುಗುರುತು ಕಡತ; ಪ್ರಸ್ತುತ repository ಅಥವಾ ಮುದ್ರಿತ ಆವೃತ್ತಿ ಸಿಗುವವರೆಗೆ ಕೃತಿಯನ್ನು ಹಸ್ತಪ್ರತಿ ಸರದಿಯಲ್ಲಿ ಉಳಿಸಿ."
+        },
+        "shelfmark": null,
+        "date": {
+          "from": 1434,
+          "to": 1434,
+          "era": "CE",
+          "precision": "year"
+        },
+        "language": "Kannada",
+        "script": "Kannada",
+        "completeness": "unknown",
+        "access": {
+          "status": "unresolved",
+          "url": null
+        },
+        "evidenceGates": {
+          "repositoryRecord": {
+            "status": "provisional"
+          },
+          "shelfmark": {
+            "status": "unresolved"
+          },
+          "editionComparison": {
+            "status": "unresolved"
+          },
+          "license": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-cesck-vaddaradhane",
+            "locator": "Dead-link recovery queue; find a working catalogue or edition witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
@@ -93338,6 +94719,170 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "edition-inscription-gudnapur-kadamba-review-packet",
+        "name": {
+          "en": "Gudnapur Kadamba inscription edition review packet",
+          "kn": "ಗುಡ್ನಾಪುರ ಕದಂಬ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-gudnapur",
+        "editionKind": "item-edition-review",
+        "language": "Sanskrit / Kannada",
+        "script": "Southern Brahmi / early Kannada",
+        "date": {
+          "from": 450,
+          "to": 500,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica / Kadamba corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Gudnapur Kadamba record; exact volume, item and plate unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "normal",
+          "scriptPhaseIds": [
+            "script-southern-brahmi-kadamba-transition"
+          ],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Confirm printed page/plate, line text, translation witness, coordinates and photographs before promotion.",
+            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ/ಫಲಕ, ಸಾಲು ಪಠ್ಯ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ, ನಿರ್ದೇಶಾಂಕ ಮತ್ತು ಛಾಯಾಚಿತ್ರಗಳನ್ನು ದೃಢಪಡಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Locate Gudnapur Kadamba inscription volume, item number, printed page and plate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
+        }
+      },
+      {
+        "id": "edition-inscription-doddahundi-nishidhi-review-packet",
+        "name": {
+          "en": "Doddahundi nishidhi inscription edition review packet",
+          "kn": "ದೊಡ್ಡಹುಂಡಿ ನಿಷಿಧಿ ಶಾಸನ ಆವೃತ್ತಿ ಪರಿಶೀಲನಾ ಕಡತ"
+        },
+        "inscriptionId": "inscription-doddahundi-nishidhi",
+        "editionKind": "item-edition-review",
+        "language": "Kannada",
+        "script": "Old Kannada",
+        "date": {
+          "from": 900,
+          "to": 950,
+          "era": "CE",
+          "precision": "range"
+        },
+        "itemEdition": {
+          "series": "Epigraphia Carnatica / Mysore district corpus lead",
+          "volume": null,
+          "number": null,
+          "locator": "Doddahundi Western Ganga nishidhi record; exact item unresolved",
+          "status": "provisional"
+        },
+        "textWitness": {
+          "originalStatus": "unresolved",
+          "transliterationStatus": "unresolved",
+          "translationStatus": "unresolved",
+          "lineAlignment": "not-started"
+        },
+        "photographSet": {
+          "status": "missing",
+          "license": null,
+          "itemCount": 0
+        },
+        "evidenceGates": {
+          "itemEdition": {
+            "status": "provisional"
+          },
+          "transcription": {
+            "status": "unresolved"
+          },
+          "translation": {
+            "status": "unresolved"
+          },
+          "photographs": {
+            "status": "unresolved"
+          },
+          "authorityCoordinate": {
+            "status": "unresolved"
+          }
+        },
+        "locatorReview": {
+          "status": "open",
+          "priority": "normal",
+          "scriptPhaseIds": [
+            "script-rashtrakuta-uniform-old-kannada"
+          ],
+          "requiredLocators": [
+            "series",
+            "volume",
+            "inscriptionNumber",
+            "printedPageOrPlate",
+            "pageImageUrl",
+            "sourceQuotationOrSummary"
+          ],
+          "nextAction": {
+            "en": "Confirm printed page/plate, line text, translation witness, coordinates and photographs before promotion.",
+            "kn": "ಪ್ರಚಾರಕ್ಕಿಂತ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ/ಫಲಕ, ಸಾಲು ಪಠ್ಯ, ಅನುವಾದ ಸಾಕ್ಷ್ಯ, ನಿರ್ದೇಶಾಂಕ ಮತ್ತು ಛಾಯಾಚಿತ್ರಗಳನ್ನು ದೃಢಪಡಿಸಿ."
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-epigraphia-carnatica",
+            "locator": "Locate Doddahundi nishidhi item number, printed page, translation and image witness"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-26"
         }
       }
     ],
