@@ -2066,8 +2066,8 @@
               "kn": "ಬ್ರಹ್ಮಗಿರಿ, ಚಿತ್ರದುರ್ಗ ಜಿಲ್ಲೆ"
             },
             "date": {
-              "from": 252,
-              "to": 252,
+              "from": 260,
+              "to": 250,
               "era": "BCE",
               "precision": "circa"
             },
@@ -2082,12 +2082,12 @@
             "citations": [
               {
                 "sourceId": "src-wikipedia-kannada-inscriptions",
-                "locator": "Kannada inscriptions: Brahmagiri rock inscription, 252 BCE, word Isila"
+                "locator": "Kannada inscriptions: Brahmagiri rock inscription and the word Isila; date reconciled to c. 260-250 BCE to match the canonical inscription-brahmagiri-minor-rock-edict record (a separate secondary source dates it to 252 BCE)"
               }
             ],
             "researchNote": {
-              "en": "The page associates the word Isila with the early Kannada linguistic record; model the Ashokan edict and the lexical claim separately and verify against the primary edition.",
-              "kn": "ಪುಟವು “ಇಸಿಲ” ಪದವನ್ನು ಆರಂಭಿಕ ಕನ್ನಡ ಭಾಷಾ ದಾಖಲೆಯೊಂದಿಗೆ ಜೋಡಿಸುತ್ತದೆ; ಅಶೋಕ ಶಾಸನ ಮತ್ತು ಪದದ ಭಾಷಾ ಹೇಳಿಕೆಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಮಾದರಿಗೊಳಿಸಿ ಮೂಲ ಆವೃತ್ತಿಯಿಂದ ಪರಿಶೀಲಿಸಬೇಕು."
+              "en": "This evidence-promotion candidate tracks the Isila word-association claim; its date was corrected to match the canonical inscription record to avoid conflicting timeline entries for the same edict. The Ashokan-edict identity and the Isila lexical claim remain two distinct questions to verify against the primary edition.",
+              "kn": "ಈ ಸಾಕ್ಷ್ಯ-ಉತ್ತೇಜನ ಅಭ್ಯರ್ಥಿ ಇಸಿಲ ಪದ-ಸಂಬಂಧ ಹಕ್ಕನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ; ಅದೇ ಶಾಸನಕ್ಕೆ ಸಂಘರ್ಷದ ಕಾಲರೇಖೆ ದಾಖಲೆಗಳನ್ನು ತಪ್ಪಿಸಲು ಪ್ರಾಮಾಣಿಕ ಶಾಸನ ದಾಖಲೆಗೆ ಹೊಂದಿಸಲು ಇದರ ದಿನಾಂಕವನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ. ಅಶೋಕ-ಶಾಸನ ಗುರುತು ಮತ್ತು ಇಸಿಲ ಭಾಷಾ ಹಕ್ಕು ಮೂಲ ಆವೃತ್ತಿಯ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಬೇಕಾದ ಎರಡು ಪ್ರತ್ಯೇಕ ಪ್ರಶ್ನೆಗಳಾಗಿ ಉಳಿಯುತ್ತವೆ."
             },
             "review": {
               "status": "needs-review",
@@ -2973,10 +2973,10 @@
               "kn": "ಮಸ್ಕಿ, ರಾಯಚೂರು ಜಿಲ್ಲೆ"
             },
             "date": {
-              "from": 269,
-              "to": 232,
+              "from": 260,
+              "to": 250,
               "era": "BCE",
-              "precision": "range"
+              "precision": "circa"
             },
             "languages": [
               "Prakrit"
@@ -2989,7 +2989,7 @@
             "citations": [
               {
                 "sourceId": "src-asi-maski-monograph",
-                "locator": "Maski edict and discovery account; Ashoka c. 269–232 BCE"
+                "locator": "Maski edict and discovery account; date reconciled to c. 260-250 BCE to match the canonical inscription-maski-minor-rock-edict record (Ashoka's reign spans a looser 269-232 BCE and should not be used as the edict's own date)"
               },
               {
                 "sourceId": "src-asi-hampi-ashokan-edicts",
@@ -3017,8 +3017,8 @@
               }
             ],
             "researchNote": {
-              "en": "The record is securely important but remains a candidate until the public atlas supports BCE inscription rendering and site coordinates are authority-checked.",
-              "kn": "ಈ ಶಾಸನದ ಮಹತ್ವ ಸ್ಪಷ್ಟವಾಗಿದೆ; ಆದರೆ ಸಾರ್ವಜನಿಕ ಭೂಪಟದಲ್ಲಿ ಕ್ರಿ.ಪೂ. ಶಾಸನ ಪ್ರದರ್ಶನ ಮತ್ತು ಅಧಿಕೃತ ನಿರ್ದೇಶಾಂಕ ಪರಿಶೀಲನೆ ಸಿದ್ಧವಾಗುವವರೆಗೆ ಅಭ್ಯರ್ಥಿಯಾಗಿಯೇ ಉಳಿಯುತ್ತದೆ."
+              "en": "This evidence-promotion candidate tracks the Maski edict's independent-review gates; its date was corrected to match the canonical, transcription-verified inscription record and avoid conflicting timeline entries for the same edict.",
+              "kn": "ಈ ಸಾಕ್ಷ್ಯ-ಉತ್ತೇಜನ ಅಭ್ಯರ್ಥಿ ಮಸ್ಕಿ ಶಾಸನದ ಸ್ವತಂತ್ರ-ಪರಿಶೀಲನಾ ಹಂತಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ; ಅದೇ ಶಾಸನಕ್ಕೆ ಸಂಘರ್ಷದ ಕಾಲರೇಖೆ ದಾಖಲೆಗಳನ್ನು ತಪ್ಪಿಸಲು ಮತ್ತು ಲಿಪ್ಯಂತರ-ದೃಢಪಡಿಸಿದ ಪ್ರಾಮಾಣಿಕ ಶಾಸನ ದಾಖಲೆಗೆ ಹೊಂದಿಸಲು ಇದರ ದಿನಾಂಕವನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ."
             },
             "review": {
               "status": "needs-review",

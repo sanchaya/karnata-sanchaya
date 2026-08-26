@@ -2065,8 +2065,8 @@
               "kn": "ಬ್ರಹ್ಮಗಿರಿ, ಚಿತ್ರದುರ್ಗ ಜಿಲ್ಲೆ"
             },
             "date": {
-              "from": 252,
-              "to": 252,
+              "from": 260,
+              "to": 250,
               "era": "BCE",
               "precision": "circa"
             },
@@ -2081,12 +2081,12 @@
             "citations": [
               {
                 "sourceId": "src-wikipedia-kannada-inscriptions",
-                "locator": "Kannada inscriptions: Brahmagiri rock inscription, 252 BCE, word Isila"
+                "locator": "Kannada inscriptions: Brahmagiri rock inscription and the word Isila; date reconciled to c. 260-250 BCE to match the canonical inscription-brahmagiri-minor-rock-edict record (a separate secondary source dates it to 252 BCE)"
               }
             ],
             "researchNote": {
-              "en": "The page associates the word Isila with the early Kannada linguistic record; model the Ashokan edict and the lexical claim separately and verify against the primary edition.",
-              "kn": "ಪುಟವು “ಇಸಿಲ” ಪದವನ್ನು ಆರಂಭಿಕ ಕನ್ನಡ ಭಾಷಾ ದಾಖಲೆಯೊಂದಿಗೆ ಜೋಡಿಸುತ್ತದೆ; ಅಶೋಕ ಶಾಸನ ಮತ್ತು ಪದದ ಭಾಷಾ ಹೇಳಿಕೆಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಮಾದರಿಗೊಳಿಸಿ ಮೂಲ ಆವೃತ್ತಿಯಿಂದ ಪರಿಶೀಲಿಸಬೇಕು."
+              "en": "This evidence-promotion candidate tracks the Isila word-association claim; its date was corrected to match the canonical inscription record to avoid conflicting timeline entries for the same edict. The Ashokan-edict identity and the Isila lexical claim remain two distinct questions to verify against the primary edition.",
+              "kn": "ಈ ಸಾಕ್ಷ್ಯ-ಉತ್ತೇಜನ ಅಭ್ಯರ್ಥಿ ಇಸಿಲ ಪದ-ಸಂಬಂಧ ಹಕ್ಕನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ; ಅದೇ ಶಾಸನಕ್ಕೆ ಸಂಘರ್ಷದ ಕಾಲರೇಖೆ ದಾಖಲೆಗಳನ್ನು ತಪ್ಪಿಸಲು ಪ್ರಾಮಾಣಿಕ ಶಾಸನ ದಾಖಲೆಗೆ ಹೊಂದಿಸಲು ಇದರ ದಿನಾಂಕವನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ. ಅಶೋಕ-ಶಾಸನ ಗುರುತು ಮತ್ತು ಇಸಿಲ ಭಾಷಾ ಹಕ್ಕು ಮೂಲ ಆವೃತ್ತಿಯ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಬೇಕಾದ ಎರಡು ಪ್ರತ್ಯೇಕ ಪ್ರಶ್ನೆಗಳಾಗಿ ಉಳಿಯುತ್ತವೆ."
             },
             "review": {
               "status": "needs-review",
@@ -2972,10 +2972,10 @@
               "kn": "ಮಸ್ಕಿ, ರಾಯಚೂರು ಜಿಲ್ಲೆ"
             },
             "date": {
-              "from": 269,
-              "to": 232,
+              "from": 260,
+              "to": 250,
               "era": "BCE",
-              "precision": "range"
+              "precision": "circa"
             },
             "languages": [
               "Prakrit"
@@ -2988,7 +2988,7 @@
             "citations": [
               {
                 "sourceId": "src-asi-maski-monograph",
-                "locator": "Maski edict and discovery account; Ashoka c. 269–232 BCE"
+                "locator": "Maski edict and discovery account; date reconciled to c. 260-250 BCE to match the canonical inscription-maski-minor-rock-edict record (Ashoka's reign spans a looser 269-232 BCE and should not be used as the edict's own date)"
               },
               {
                 "sourceId": "src-asi-hampi-ashokan-edicts",
@@ -3016,8 +3016,8 @@
               }
             ],
             "researchNote": {
-              "en": "The record is securely important but remains a candidate until the public atlas supports BCE inscription rendering and site coordinates are authority-checked.",
-              "kn": "ಈ ಶಾಸನದ ಮಹತ್ವ ಸ್ಪಷ್ಟವಾಗಿದೆ; ಆದರೆ ಸಾರ್ವಜನಿಕ ಭೂಪಟದಲ್ಲಿ ಕ್ರಿ.ಪೂ. ಶಾಸನ ಪ್ರದರ್ಶನ ಮತ್ತು ಅಧಿಕೃತ ನಿರ್ದೇಶಾಂಕ ಪರಿಶೀಲನೆ ಸಿದ್ಧವಾಗುವವರೆಗೆ ಅಭ್ಯರ್ಥಿಯಾಗಿಯೇ ಉಳಿಯುತ್ತದೆ."
+              "en": "This evidence-promotion candidate tracks the Maski edict's independent-review gates; its date was corrected to match the canonical, transcription-verified inscription record and avoid conflicting timeline entries for the same edict.",
+              "kn": "ಈ ಸಾಕ್ಷ್ಯ-ಉತ್ತೇಜನ ಅಭ್ಯರ್ಥಿ ಮಸ್ಕಿ ಶಾಸನದ ಸ್ವತಂತ್ರ-ಪರಿಶೀಲನಾ ಹಂತಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ; ಅದೇ ಶಾಸನಕ್ಕೆ ಸಂಘರ್ಷದ ಕಾಲರೇಖೆ ದಾಖಲೆಗಳನ್ನು ತಪ್ಪಿಸಲು ಮತ್ತು ಲಿಪ್ಯಂತರ-ದೃಢಪಡಿಸಿದ ಪ್ರಾಮಾಣಿಕ ಶಾಸನ ದಾಖಲೆಗೆ ಹೊಂದಿಸಲು ಇದರ ದಿನಾಂಕವನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ."
             },
             "review": {
               "status": "needs-review",
@@ -75055,146 +75055,6 @@
         }
       },
       {
-        "id": "district-history-chitradurga-brahmagiri-ashokan-edict",
-        "recordKind": "candidate",
-        "districtId": "audit-chitradurga",
-        "district": {
-          "en": "Chitradurga",
-          "kn": "ಚಿತ್ರದುರ್ಗ"
-        },
-        "name": {
-          "en": "Brahmagiri Ashokan edict deep-history packet",
-          "kn": "ಬ್ರಹ್ಮಗಿರಿ ಅಶೋಕ ಶಾಸನ ಸಮಗ್ರ ಇತಿಹಾಸ ಕಡತ"
-        },
-        "category": "prehistoric-landscape",
-        "date": {
-          "from": 260,
-          "to": 250,
-          "era": "BCE",
-          "precision": "circa"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            76.82,
-            14.82
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Adds a source-backed Chitradurga district deep-history lead connected to the Ashokan Brahmi script root phase.",
-          "kn": "ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮೂಲ ಲಿಪಿ ಹಂತಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಚಿತ್ರದುರ್ಗ ಜಿಲ್ಲೆಯ ಆಕರಸಹಿತ ಸಮಗ್ರ ಇತಿಹಾಸ ದಾರಿಯನ್ನು ಸೇರಿಸುತ್ತದೆ."
-        },
-        "researchNote": {
-          "en": "Confirm exact protected location, edition, line readings and relation to nearby archaeological landscapes before promotion.",
-          "kn": "ಉತ್ತೇಜನಕ್ಕೂ ಮೊದಲು ನಿಖರ ಸಂರಕ್ಷಿತ ಸ್ಥಳ, ಆವೃತ್ತಿ, ಸಾಲು ಓದುಗಳು ಮತ್ತು ಸಮೀಪದ ಪುರಾತತ್ತ್ವ ಭೂದೃಶ್ಯಗಳ ಸಂಬಂಧವನ್ನು ದೃಢಪಡಿಸಿ."
-        },
-        "evidenceBasis": "archaeological-report",
-        "citations": [
-          {
-            "sourceId": "src-asi-hampi-ashokan-edicts",
-            "locator": "Brahmagiri Asokan edict review lead"
-          }
-        ],
-        "placeIds": [
-          "place-brahmagiri-rock-edict",
-          "place-chitradurga-fort"
-        ],
-        "inscriptionIds": [
-          "inscription-brahmagiri-minor-rock-edict"
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        },
-        "polityIds": [
-          "external-polity-chitradurga-nayaka",
-          "polity-mysore"
-        ],
-        "peopleIds": [],
-        "eventIds": [
-          "event-chitradurga-nayaka-governance"
-        ],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
-        "id": "district-history-raichur-maski-ashokan-edict",
-        "recordKind": "candidate",
-        "districtId": "audit-raichur",
-        "district": {
-          "en": "Raichur",
-          "kn": "ರಾಯಚೂರು"
-        },
-        "name": {
-          "en": "Maski Ashokan edict deep-history packet",
-          "kn": "ಮಸ್ಕಿ ಅಶೋಕ ಶಾಸನ ಸಮಗ್ರ ಇತಿಹಾಸ ಕಡತ"
-        },
-        "category": "prehistoric-landscape",
-        "date": {
-          "from": 260,
-          "to": 250,
-          "era": "BCE",
-          "precision": "circa"
-        },
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            76.653,
-            15.955
-          ],
-          "precision": "approximate"
-        },
-        "description": {
-          "en": "Adds a source-backed Raichur district deep-history lead connected to the Maski edict, Ashokan Brahmi and early Deccan epigraphy.",
-          "kn": "ಮಸ್ಕಿ ಶಾಸನ, ಅಶೋಕ ಬ್ರಾಹ್ಮಿ ಮತ್ತು ಆರಂಭಿಕ ದಖ್ಖನ್ ಶಾಸನ ಪರಂಪರೆಗೆ ಸಂಬಂಧಿಸಿದ ರಾಯಚೂರು ಜಿಲ್ಲೆಯ ಆಕರಸಹಿತ ದಾರಿಯನ್ನು ಸೇರಿಸುತ್ತದೆ."
-        },
-        "researchNote": {
-          "en": "Coordinate, protection status, present condition, text and Kannada translation still need independent review.",
-          "kn": "ನಿರ್ದೇಶಾಂಕ, ಸಂರಕ್ಷಣಾ ಸ್ಥಿತಿ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ, ಪಾಠ ಮತ್ತು ಕನ್ನಡ ಅನುವಾದಕ್ಕೆ ಇನ್ನೂ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು."
-        },
-        "evidenceBasis": "archaeological-report",
-        "citations": [
-          {
-            "sourceId": "src-asi-maski-monograph",
-            "locator": "Maski monograph review lead"
-          },
-          {
-            "sourceId": "src-falk-maski-critical-reading",
-            "locator": "Critical reading comparison lead"
-          }
-        ],
-        "placeIds": [
-          "place-maski-rock-edict"
-        ],
-        "inscriptionIds": [
-          "inscription-maski-minor-rock-edict"
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-25"
-        },
-        "polityIds": [
-          "polity-vijayanagara",
-          "external-polity-bahmani",
-          "external-polity-adil-shahi"
-        ],
-        "peopleIds": [
-          "person-krishnadevaraya"
-        ],
-        "eventIds": [
-          "event-raichur-1520"
-        ],
-        "connectionNote": {
-          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
-          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
-        }
-      },
-      {
         "id": "district-history-v022-bagalkote",
         "recordKind": "candidate",
         "districtId": "audit-bagalkote",
@@ -75557,6 +75417,69 @@
           "person-tipu-sultan"
         ],
         "eventIds": [],
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-v022-chitradurga",
+        "recordKind": "candidate",
+        "districtId": "audit-chitradurga",
+        "district": {
+          "en": "Chitradurga",
+          "kn": "ಚಿತ್ರದುರ್ಗ"
+        },
+        "name": {
+          "en": "Chitradurga Fort district-history packet",
+          "kn": "ಚಿತ್ರದುರ್ಗ ಕೋಟೆ ಜಿಲ್ಲಾ ಇತಿಹಾಸ ಪ್ಯಾಕೆಟ್"
+        },
+        "category": "regional-memory",
+        "date": {
+          "from": null,
+          "to": null,
+          "era": "CE",
+          "precision": "unknown"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.3953,
+            14.2152
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "Candidate packet linking Chitradurga Fort to settlement, governance, inscription and material-history questions.",
+          "kn": "ವಸತಿ, ಆಡಳಿತ, ಶಾಸನ ಮತ್ತು ವಸ್ತು ಇತಿಹಾಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಚಿತ್ರದುರ್ಗ ಕೋಟೆವನ್ನು ಜೋಡಿಸುವ ಅಭ್ಯರ್ಥಿ ಪ್ಯಾಕೆಟ್."
+        },
+        "researchNote": {
+          "en": "Retains the existing audit provenance. Promote only after an authority record, dated evidence, present condition and site-level citation are matched.",
+          "kn": "ಈಗಿರುವ ಪರಿಶೀಲನಾ ಮೂಲವನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಪ್ರಾಧಿಕಾರ ದಾಖಲೆ, ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ, ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ ಮತ್ತು ತಾಣಮಟ್ಟದ ಉಲ್ಲೇಖ ಹೊಂದಿಸಿದ ನಂತರ ಮಾತ್ರ ಉತ್ತೇಜಿಸಿ."
+        },
+        "evidenceBasis": "district-research-scope",
+        "citations": [
+          {
+            "sourceId": "src-v022-district-audit-provenance",
+            "locator": "audit-chitradurga / candidate-chitradurga-1; see embedded audit citations and coordinate source"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-30"
+        },
+        "placeIds": [
+          "place-chitradurga-fort"
+        ],
+        "polityIds": [
+          "external-polity-chitradurga-nayaka",
+          "polity-mysore"
+        ],
+        "peopleIds": [],
+        "eventIds": [
+          "event-chitradurga-nayaka-governance"
+        ],
         "connectionNote": {
           "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
           "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
