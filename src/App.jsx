@@ -697,9 +697,11 @@ function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInsc
   </div>
 }
 
+const districtSectionRoutes={'district-audit':'districts','inscription-audit':'districts','district-inventory':'districts'}
+
 export default function App(){
   const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','community','profile','about']
-  const normalizeView=hash=>hash==='history'?'district-history':hash
+  const normalizeView=hash=>hash==='history'?'district-history':districtSectionRoutes[hash]||hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
   const [admin,setAdmin]=useState(()=>window.location.hash.slice(1)==='admin')
@@ -758,6 +760,7 @@ export default function App(){
   // that used to make the epigraphy explorer hide Bengaluru after login.
   useEffect(()=>{let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/auth/me`,{credentials:'include'}).then(response=>response.ok?response.json():null).then(data=>{if(active&&data?.user)setCommunityUser(data.user)}).catch(()=>{});return()=>{active=false}},[])
   useEffect(()=>{const syncHash=()=>{const rawHash=window.location.hash.slice(1);const hash=normalizeView(rawHash);setAdmin(rawHash==='admin');if(rawHash==='history')window.history.replaceState(null,'','#district-history');if(publicViews.includes(hash))setView(hash);else if(hash!=='admin')setView('atlas')};if(window.location.hash.slice(1)==='history')window.history.replaceState(null,'','#district-history');window.addEventListener('hashchange',syncHash);return()=>window.removeEventListener('hashchange',syncHash)},[])
+  useEffect(()=>{const rawHash=window.location.hash.slice(1);if(rawHash==='district-history'||districtSectionRoutes[rawHash])requestAnimationFrame(()=>document.getElementById(rawHash)?.scrollIntoView({block:'start'}))},[view])
   useEffect(()=>{setMobileNavOpen(false)},[view])
   useEffect(()=>{const [title,description]=seoPages[view]?.[locale]||seoPages.atlas[locale];document.documentElement.lang=locale;document.title=title;const descriptionMeta=document.querySelector('meta[name="description"]');if(descriptionMeta)descriptionMeta.setAttribute('content',description);const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.setAttribute('content',title);const ogDescription=document.querySelector('meta[property="og:description"]');if(ogDescription)ogDescription.setAttribute('content',description);let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.append(canonical)}canonical.href=`${window.location.origin}${window.location.pathname}`},[view,locale])
   const t=messages[locale]

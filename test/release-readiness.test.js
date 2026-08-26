@@ -36,7 +36,10 @@ test('public navigation keeps the complete release route set and admin private',
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
-  assert.match(appSource, /hash==='history'\?'district-history':hash/, 'legacy history links must resolve to district history')
+  assert.match(appSource, /hash==='history'\?'district-history':districtSectionRoutes\[hash\]\|\|hash/, 'legacy history links must resolve to district history')
+  for (const section of ['district-audit', 'inscription-audit', 'district-inventory']) {
+    assert.match(appSource, new RegExp(`['"]${section}['"]:\\s*['"]districts['"]`), `${section} must stay inside the District Atlas instead of falling back to the main atlas`)
+  }
 })
 
 test('navigation separates historical exploration from project utilities', () => {
