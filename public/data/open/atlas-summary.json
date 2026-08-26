@@ -4910,6 +4910,34 @@
         }
       },
       {
+        "id": "person-husain-nizam-shah-i",
+        "name": {
+          "en": "Husain Nizam Shah I",
+          "kn": "ಹುಸೇನ್ ನಿಜಾಮ್ ಶಾ I"
+        },
+        "date": {
+          "from": 1553,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "roles": [
+          "ruler"
+        ],
+        "polityId": "external-polity-deccan-sultanates",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-battle-of-talikota",
+            "locator": "Sultan of Ahmadnagar (Nizam Shahi); part of the four-sultanate coalition (Bijapur, Golconda, Ahmadnagar, Bidar) at Talikota, 23 January 1565; Rama Raya was beheaded by him or on his order after the battle"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
         "id": "person-onake-obavva",
         "name": {
           "en": "Onake Obavva",
@@ -39576,6 +39604,28 @@
         }
       },
       {
+        "id": "src-wikipedia-battle-of-talikota",
+        "type": "discovery-lead",
+        "title": {
+          "en": "Wikipedia: Battle of Talikota",
+          "kn": "ವಿಕಿಪೀಡಿಯ: ತಾಳಿಕೋಟೆ ಯುದ್ಧ"
+        },
+        "authors": [
+          "Wikipedia contributors"
+        ],
+        "year": null,
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Talikota",
+        "scope": {
+          "en": "Documents the 23 January 1565 battle: a coalition of the Bijapur, Golconda, Ahmadnagar and Bidar sultanates defeated Vijayanagara's field army; Rama Raya was beheaded by (or on the order of) Husain Nizam Shah I of Ahmadnagar; the capital city was sacked over five months and never reoccupied. Discovery lead; verify against court chronicles and specialist Deccan histories before promotion.",
+          "kn": "23 ಜನವರಿ 1565ರ ಯುದ್ಧವನ್ನು ದಾಖಲಿಸುತ್ತದೆ: ಬಿಜಾಪುರ, ಗೋಲ್ಕೊಂಡ, ಅಹಮದ್ ನಗರ ಮತ್ತು ಬೀದರ್ ಸುಲ್ತಾನರ ಒಕ್ಕೂಟ ವಿಜಯನಗರದ ಸೇನೆಯನ್ನು ಸೋಲಿಸಿತು; ರಾಮರಾಯನನ್ನು ಅಹಮದ್‌ನಗರದ ಹುಸೇನ್ ನಿಜಾಮ್ ಶಾ I ಶಿರಚ್ಛೇದ ಮಾಡಿದನು (ಅಥವಾ ಅವನ ಆದೇಶದ ಮೇಲೆ); ರಾಜಧಾನಿಯನ್ನು ಐದು ತಿಂಗಳ ಕಾಲ ಲೂಟಿ ಮಾಡಲಾಯಿತು ಮತ್ತು ಮತ್ತೆಂದೂ ಪುನರ್ ವಸತಿಯಾಗಲಿಲ್ಲ. ಅನ್ವೇಷಣಾ ಸುಳಿವು; ಪ್ರಚಾರಕ್ಕೂ ಮೊದಲು ಆಸ್ಥಾನ ವೃತ್ತಾಂತ ಮತ್ತು ವಿಶೇಷಜ್ಞ ದಖ್ಖನ್ ಇತಿಹಾಸಗಳ ವಿರುದ್ಧ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "src-wikipedia-siddhesvara-temple-haveri",
         "type": "discovery-lead",
         "title": {
@@ -51499,6 +51549,29 @@
           {
             "sourceId": "src-wikipedia-battle-of-raichur",
             "locator": "Sultan of Bijapur (Adil Shahi), defeated by Krishnadevaraya at the Battle of Raichur, 1520, after which he abandoned further conquest plans"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "rel-person-husain-nizam-shah-i-polity",
+        "fromId": "person-husain-nizam-shah-i",
+        "type": "governed-or-represented",
+        "toId": "external-polity-deccan-sultanates",
+        "date": {
+          "from": 1553,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-battle-of-talikota",
+            "locator": "Sultan of Ahmadnagar (Nizam Shahi); part of the four-sultanate coalition (Bijapur, Golconda, Ahmadnagar, Bidar) at Talikota, 23 January 1565; Rama Raya was beheaded by him or on his order after the battle"
           }
         ],
         "review": {
