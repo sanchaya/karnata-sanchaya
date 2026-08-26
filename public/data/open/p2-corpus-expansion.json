@@ -74830,8 +74830,8 @@
           "precision": "district-centroid"
         },
         "description": {
-          "en": "A research intake linking temple settlements, inscription contexts and regional routes in Haveri district without asserting a single origin date.",
-          "kn": "ಹಾವೇರಿ ಜಿಲ್ಲೆಯ ದೇವಾಲಯ ವಸತಿ, ಶಾಸನ ಸಂದರ್ಭ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಮಾರ್ಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಂಶೋಧನಾ ಸ್ವೀಕೃತಿ; ಒಂದೇ ಮೂಲ ದಿನಾಂಕವನ್ನು ಹಕ್ಕುಸ್ಥಾಪಿಸುವುದಿಲ್ಲ."
+          "en": "A research intake linking temple settlements, inscription contexts and regional routes in Haveri district without asserting a single origin date. The Siddheshwara temple item-level lead is now split into its own record below.",
+          "kn": "ಹಾವೇರಿ ಜಿಲ್ಲೆಯ ದೇವಾಲಯ ವಸತಿ, ಶಾಸನ ಸಂದರ್ಭ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಮಾರ್ಗಗಳನ್ನು ಸಂಪರ್ಕಿಸುವ ಸಂಶೋಧನಾ ಸ್ವೀಕೃತಿ; ಒಂದೇ ಮೂಲ ದಿನಾಂಕವನ್ನು ಹಕ್ಕುಸ್ಥಾಪಿಸುವುದಿಲ್ಲ. ಸಿದ್ಧೇಶ್ವರ ದೇವಾಲಯ ವಸ್ತು-ಮಟ್ಟದ ದಾರಿಯನ್ನು ಈಗ ಕೆಳಗಿನ ಪ್ರತ್ಯೇಕ ದಾಖಲೆಗೆ ವಿಭಜಿಸಲಾಗಿದೆ."
         },
         "researchNote": {
           "en": "Prioritise item-level temple and inscription records, then map the settlement context separately.",
@@ -74842,6 +74842,70 @@
           {
             "sourceId": "src-gazetteer-karnataka-1983",
             "locator": "Haveri district chapter: temple settlements and inscription references to locate"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        },
+        "placeIds": [],
+        "polityIds": [
+          "polity-rashtrakuta",
+          "polity-kalyani-chalukya",
+          "polity-hoysala"
+        ],
+        "peopleIds": [],
+        "eventIds": [],
+        "connectionNote": {
+          "en": "These links identify the district’s wider historical context. They do not assign construction or patronage to a person without monument-specific evidence.",
+          "kn": "ಈ ಕೊಂಡಿಗಳು ಜಿಲ್ಲೆಯ ವಿಶಾಲ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭವನ್ನು ಗುರುತಿಸುತ್ತವೆ. ಸ್ಮಾರಕ-ನಿರ್ದಿಷ್ಟ ಸಾಕ್ಷ್ಯವಿಲ್ಲದೆ ಯಾವುದೇ ವ್ಯಕ್ತಿಗೆ ನಿರ್ಮಾಣ ಅಥವಾ ಆಶ್ರಯವನ್ನು ನಿಗದಿಪಡಿಸುವುದಿಲ್ಲ."
+        }
+      },
+      {
+        "id": "district-history-haveri-siddheshwara-temple",
+        "recordKind": "candidate",
+        "districtId": "audit-haveri",
+        "district": {
+          "en": "Haveri",
+          "kn": "ಹಾವೇರಿ"
+        },
+        "name": {
+          "en": "Siddheshwara Temple, Haveri: Western Chalukya inscription site",
+          "kn": "ಹಾವೇರಿ ಸಿದ್ಧೇಶ್ವರ ದೇವಾಲಯ: ಪಶ್ಚಿಮ ಚಾಲುಕ್ಯ ಶಾಸನ ತಾಣ"
+        },
+        "category": "settlement-origin",
+        "date": {
+          "from": 1087,
+          "to": 1108,
+          "era": "CE",
+          "precision": "range"
+        },
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.41083,
+            14.79056
+          ],
+          "precision": "approximate"
+        },
+        "description": {
+          "en": "The soapstone Siddheshwara temple at Haveri, an ornate Western Chalukya construction with an 11th-century core and 12th-century additions, unusually facing west. An Old Kannada grant inscription on an interior beam is dated 1087 CE and a stone inscription outside is dated 1108 CE; a further inscription dates to 1109 CE. Coordinates follow the Wikipedia infobox and are not independently field-verified.",
+          "kn": "ಹಾವೇರಿಯ ಸಿದ್ಧೇಶ್ವರ ದೇವಾಲಯ, 11ನೇ ಶತಮಾನದ ಮೂಲ ಮತ್ತು 12ನೇ ಶತಮಾನದ ಸೇರ್ಪಡೆಗಳೊಂದಿಗೆ ಅಲಂಕೃತ ಪಶ್ಚಿಮ ಚಾಲುಕ್ಯ ನಿರ್ಮಾಣ, ಅಸಾಮಾನ್ಯವಾಗಿ ಪಶ್ಚಿಮಾಭಿಮುಖ. ಒಳಗಿನ ತೊಲೆಯ ಮೇಲಿನ ಹಳೆಗನ್ನಡ ದಾನ ಶಾಸನ 1087ರ ದಿನಾಂಕ, ಹೊರಗಿನ ಶಿಲಾಶಾಸನ 1108ರ ದಿನಾಂಕ ಹೊಂದಿದೆ; ಮತ್ತೊಂದು ಶಾಸನ 1109ರ ದಿನಾಂಕ ಹೊಂದಿದೆ. ನಿರ್ದೇಶಾಂಕಗಳು ವಿಕಿಪೀಡಿಯ ಮಾಹಿತಿ ಪೆಟ್ಟಿಗೆಯನ್ನು ಅನುಸರಿಸುತ್ತವೆ ಮತ್ತು ಸ್ವತಂತ್ರವಾಗಿ ಕ್ಷೇತ್ರ-ಪರಿಶೀಲಿಸಿಲ್ಲ."
+        },
+        "researchNote": {
+          "en": "Resolve the exact Epigraphia Carnatica/Indica item numbers for the 1087 and 1108 CE inscriptions, ASI protection/monument number, and field-verified coordinates before promoting beyond this settlement-origin lead.",
+          "kn": "1087 ಮತ್ತು 1108ರ ಶಾಸನಗಳ ನಿಖರ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ/ಇಂಡಿಕಾ ವಸ್ತು ಸಂಖ್ಯೆಗಳು, ASI ಸಂರಕ್ಷಣಾ/ಸ್ಮಾರಕ ಸಂಖ್ಯೆ, ಮತ್ತು ಕ್ಷೇತ್ರ-ಪರಿಶೀಲಿತ ನಿರ್ದೇಶಾಂಕಗಳನ್ನು ಈ ವಸತಿ-ಮೂಲ ದಾರಿಯನ್ನು ಮೀರಿ ಉತ್ತೇಜಿಸುವ ಮೊದಲು ನಿರ್ಧರಿಸಿ."
+        },
+        "evidenceBasis": "gazetteer",
+        "citations": [
+          {
+            "sourceId": "src-wikipedia-siddhesvara-temple-haveri",
+            "locator": "Siddheshwara temple, Haveri: 1087 CE beam inscription, 1108 CE stone inscription, Western Chalukya architecture"
+          },
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Haveri district chapter: temple-settlement context"
           }
         ],
         "review": {
