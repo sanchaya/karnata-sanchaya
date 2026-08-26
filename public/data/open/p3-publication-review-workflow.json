@@ -4674,19 +4674,19 @@
         "script": "Old Kannada",
         "date": {
           "from": 890,
-          "to": 890,
+          "to": 900,
           "era": "CE",
           "precision": "circa"
         },
         "itemEdition": {
-          "series": "Epigraphia Carnatica / article corpus lead",
-          "volume": null,
-          "number": null,
-          "locator": "Begur record with early Bengaluru place-name; exact item locator pending",
-          "status": "provisional"
+          "series": "Epigraphia Carnatica",
+          "volume": "IX, Supplement",
+          "number": "Bg. 174",
+          "locator": "Bangalore inscription no. 174, c. 900 CE: earliest known written reference to \"Bengaluru\" (bengulura kalage, the Bengaluru battle), commemorating Pervvonashetti and Buttanapati, sons of the chieftain Nagattara; stone housed at the Panchalingeshwara/Nageshvara temple, Begur; verify against the printed EC volume before promotion",
+          "status": "located"
         },
         "textWitness": {
-          "originalStatus": "unresolved",
+          "originalStatus": "located",
           "transliterationStatus": "unresolved",
           "translationStatus": "unresolved",
           "lineAlignment": "not-started"
@@ -4698,7 +4698,7 @@
         },
         "evidenceGates": {
           "itemEdition": {
-            "status": "provisional"
+            "status": "located"
           },
           "transcription": {
             "status": "unresolved"
@@ -4728,14 +4728,18 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Resolve the Begur inscription edition pages, inscription number, image witness and line-aligned Old Kannada text.",
-            "kn": "ಬೇಗೂರು ಶಾಸನದ ಆವೃತ್ತಿ ಪುಟಗಳು, ಶಾಸನ ಸಂಖ್ಯೆ, ಚಿತ್ರ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಸಾಲು-ಹೊಂದಿದ ಹಳೆಗನ್ನಡ ಪಾಠವನ್ನು ನಿರ್ಧರಿಸಿ."
+            "en": "Item Bg. 174 is now located; a reviewer must check the printed EC volume/page image, complete a line-aligned transcription and translation, and attach dated photographs of the stone at the Panchalingeshwara temple.",
+            "kn": "ವಸ್ತು Bg. 174 ಈಗ ಗುರುತಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರು ಮುದ್ರಿತ EC ಸಂಪುಟ/ಪುಟ ಚಿತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ, ಸಾಲು-ಹೊಂದಿಸಿದ ಲಿಪ್ಯಂತರ ಮತ್ತು ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ಪಂಚಲಿಂಗೇಶ್ವರ ದೇವಾಲಯದ ಶಿಲೆಯ ದಿನಾಂಕಿತ ಛಾಯಾಚಿತ್ರಗಳನ್ನು ಜೋಡಿಸಬೇಕು."
           }
         },
         "citations": [
           {
+            "sourceId": "src-wikipedia-begur-inscriptions",
+            "locator": "EC IX Supplement, Bg. 174: earliest written reference to Bengaluru, c. 900 CE"
+          },
+          {
             "sourceId": "src-epigraphia-atakur-begur",
-            "locator": "Begur inscription and Bengaluru place-name discussion; resolve edition pages"
+            "locator": "Begur inscription and Bengaluru place-name discussion"
           }
         ],
         "review": {
@@ -4764,7 +4768,7 @@
           "series": "Epigraphia Carnatica / article corpus lead",
           "volume": null,
           "number": null,
-          "locator": "Atakur hero-stone record associated with Krishna III and Kali; item locator pending",
+          "locator": "Dated Saka 872 (949-950 CE); hero-stone at the Chelleshvara temple, Atakur village (c. 23 km from Mandya), recording the fight between the hound Kali and a wild boar alongside Krishna III's victory over the Cholas at the Battle of Takkolam. Likely part of Epigraphia Carnatica Vol. XIV (supplementary Mysore/Mandya-district inscriptions, \"Md\" taluk prefix); exact item number not yet confirmed",
           "status": "provisional"
         },
         "textWitness": {
@@ -4810,14 +4814,14 @@
             "imageWitness"
           ],
           "nextAction": {
-            "en": "Resolve the Atakur hero-stone item number, printed pages, translation witness and photograph/licence status.",
-            "kn": "ಆತಕೂರು ವೀರಗಲ್ಲಿನ ವಸ್ತು ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟಗಳು, ಅನುವಾದ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಛಾಯಾಚಿತ್ರ/ಪರವಾನಗಿ ಸ್ಥಿತಿಯನ್ನು ನಿರ್ಧರಿಸಿ."
+            "en": "Confirm the Atakur hero-stone's exact Epigraphia Carnatica Vol. XIV (\"Md\" taluk) item number, printed pages, translation witness and photograph/licence status.",
+            "kn": "ಆತಕೂರು ವೀರಗಲ್ಲಿನ ನಿಖರ ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಸಂಪುಟ XIV (\"Md\" ತಾಲೂಕು) ವಸ್ತು ಸಂಖ್ಯೆ, ಮುದ್ರಿತ ಪುಟಗಳು, ಅನುವಾದ ಸಾಕ್ಷ್ಯ ಮತ್ತು ಛಾಯಾಚಿತ್ರ/ಪರವಾನಗಿ ಸ್ಥಿತಿಯನ್ನು ದೃಢಪಡಿಸಿ."
           }
         },
         "citations": [
           {
             "sourceId": "src-epigraphia-atakur-begur",
-            "locator": "Atakur inscription discussion; resolve corpus item number and translation witness"
+            "locator": "Atakur inscription discussion; content and date located, exact EC item number still to be confirmed"
           }
         ],
         "review": {
