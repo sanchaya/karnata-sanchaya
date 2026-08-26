@@ -74,7 +74,7 @@ const connectionColors={trade:'#16867a','trade-diplomacy':'#257d9a',diplomacy:'#
 const connectionCategory=event=>{const kind=event.reach?.relationKind;if(['merchant-guild-presence','overseas-commerce'].includes(kind))return'trade';if(kind==='diplomacy-and-commerce')return'trade-diplomacy';if(kind==='diplomacy')return'diplomacy';if(kind==='diplomatic-visit-and-travel-account')return'knowledge-diplomacy';if(['battle','war','invasion','campaign'].includes(event.type))return'military';return'other'}
 const connectionDash={trade:'4 7','trade-diplomacy':'9 5',diplomacy:'3 6','knowledge-diplomacy':'11 5 2 5',military:'8 7',other:'6 6'}
 const eventYearLabel=(event,locale)=>`${event.date.precision==='circa'?(locale==='kn'?'ಸು. ':'c. '):''}${event.year}`
-const evidenceDateLabel=(date,locale)=>date.precision==='century'?`${date.from}${locale==='kn'?'ನೇ ಶತಮಾನ':'th century'} ${date.era}`:`${date.from}${date.to!==date.from?`–${date.to}`:''} ${date.era}`
+const evidenceDateLabel=(date,locale)=>`${date.from}${date.to!==date.from?`–${date.to}`:''} ${date.era}`
 const cultureColors={architecture:'#7a4aa5','visual-art':'#c05c78',literature:'#355fa8',performance:'#dc7a28',music:'#16867a',celebration:'#d09222','religious-tradition':'#9a4f35',craft:'#537a42','games-sports':'#1c8b8b'}
 const personRoleColors={queen:'#a43d72',patron:'#a43d72','community-hero':'#a83e32',defender:'#a83e32','resistance-leader':'#a83e32','resistance-fighter':'#a83e32','community-leader':'#b06a1f',artisan:'#537a42',washerman:'#537a42',boatman:'#16867a','vachana-poet':'#8b5aa5','religious-figure':'#8b5aa5',explorer:'#16867a',traveller:'#16867a',scholar:'#355fa8',administrator:'#657084','military-leader':'#703e82',soldier:'#703e82',lieutenant:'#703e82',ruler:'#315f91','foreign-monarch':'#315f91'}
 const personRoleLabels={queen:{en:'Queen',kn:'ರಾಣಿ'},patron:{en:'Patron',kn:'ಆಶ್ರಯದಾತೆ'},'community-hero':{en:'Community hero',kn:'ಜನಸಮುದಾಯದ ವೀರ ವ್ಯಕ್ತಿ'},defender:{en:'Defender',kn:'ರಕ್ಷಕಿ'},'resistance-leader':{en:'Resistance leader',kn:'ಪ್ರತಿರೋಧ ನಾಯಕಿ'},'resistance-fighter':{en:'Resistance fighter',kn:'ಪ್ರತಿರೋಧ ಹೋರಾಟಗಾರ'},'community-leader':{en:'Community leader',kn:'ಜನನಾಯಕ'},artisan:{en:'Artisan',kn:'ಕಾಯಕಜೀವಿ'},washerman:{en:'Washerman',kn:'ಮಡಿವಾಳ'},boatman:{en:'Boatman',kn:'ಅಂಬಿಗ'},'vachana-poet':{en:'Vachana poet',kn:'ವಚನಕಾರ'},'religious-figure':{en:'Religious figure',kn:'ಧಾರ್ಮಿಕ ವ್ಯಕ್ತಿ'},explorer:{en:'Explorer / traveller',kn:'ಅನ್ವೇಷಕ / ಪ್ರವಾಸಿಗ'},traveller:{en:'Traveller',kn:'ಪ್ರವಾಸಿಗ'},scholar:{en:'Scholar',kn:'ವಿದ್ವಾಂಸ'},administrator:{en:'Administrator',kn:'ಆಡಳಿತಗಾರ'},'military-leader':{en:'Military leader',kn:'ಸೇನಾನಾಯಕ'},soldier:{en:'Soldier',kn:'ಸೈನಿಕ'},lieutenant:{en:'Lieutenant',kn:'ಸೇನಾಧಿಕಾರಿ'},ruler:{en:'Ruler',kn:'ಅರಸು'},'foreign-monarch':{en:'Foreign monarch',kn:'ವಿದೇಶಿ ರಾಜ'}}
@@ -326,7 +326,7 @@ const timelineStories=[
   ...personStories,
   ...districtHistoryStories,
   ...bceResearchStories,
-].sort((a,b)=>a.year-b.year)
+].filter(record=>Number.isFinite(record.year)).sort((a,b)=>a.year-b.year)
 const firstTimelineStory=timelineStories.find(story=>story.coords)||timelineStories[0]
 const heritageAuthorityTags=site=>{
   const verification=site.verification||{}
