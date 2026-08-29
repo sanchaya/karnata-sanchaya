@@ -546,3 +546,61 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Archaeological Survey of Mysore Annual Report for the Year 1943" (1946).
+const SRC_MAD_AR_1943 = 'src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-j9t4'
+
+karnatakaArchaeologyMiningInscriptions.push(
+  {
+    id: 'inscription-karch-mad1943-kasipura-ravivarma-kadamba-plate',
+    name: n('Kashipura copper-plate grant of the Kadamba king Ravivarma (c. 500 CE)', 'ಕಾಶಿಪುರ ತಾಮ್ರಶಾಸನ, ಕದಂಬ ಅರಸ ರವಿವರ್ಮ (ಸು. 500)'),
+    date: d(490, 510, 'circa'),
+    placeId: 'place-davanagere',
+    polityId: 'polity-kadamba',
+    districtAuditId: 'audit-davanagere',
+    languages: ['Sanskrit'],
+    scripts: ['Kannada'],
+    description: n('A three-plate copper grant (lion seal, 7x2 inches) found in the possession of Ankalappala Mahadevappa at Kashipura, Mayakonda hobli, Davanagere taluk -- the report identifies it as the earliest copper-plate grant collected that year, belonging to the Kadamba king Ravivarma (Ravimaharaja), c. 500 CE. The Sanskrit text (in Kannada script) invokes the Kadambas\' self-description as an ashvamedha-purified lineage of the Manavya gotra and Haritiputras, devoted to Svami Mahasena (Kartikeya) and the Matrigana; it records land grants in the villages Durmmaya, Anegallu and others to a Brahmana of the Atreya gotra devoted to Trilochanasvamin (Shiva), with the customary curse-verses against violators of the grant.', 'ಸಿಂಹ ಮುದ್ರೆಯ ಮೂರು-ಫಲಕಗಳ ತಾಮ್ರಶಾಸನ (7x2 ಇಂಚು), ದಾವಣಗೆರೆ ತಾಲ್ಲೂಕಿನ ಮಾಯಕೊಂಡ ಹೋಬಳಿಯ ಕಾಶಿಪುರದಲ್ಲಿ ಅಂಕಳಪ್ಪಳ ಮಹಾದೇವಪ್ಪನ ಬಳಿ ಪತ್ತೆಯಾಗಿತ್ತು -- ವರದಿ ಇದನ್ನು ಆ ವರ್ಷ ಸಂಗ್ರಹಿಸಿದ ಅತ್ಯಂತ ಹಳೆಯ ತಾಮ್ರಶಾಸನ ಎಂದು ಗುರುತಿಸುತ್ತದೆ, ಕದಂಬ ಅರಸ ರವಿವರ್ಮ (ರವಿಮಹಾರಾಜ)ನದ್ದು, ಸು. 500. ಸಂಸ್ಕೃತ ಪಠ್ಯ (ಕನ್ನಡ ಲಿಪಿಯಲ್ಲಿ) ಕದಂಬರನ್ನು ಮಾನವ್ಯ ಗೋತ್ರ ಮತ್ತು ಹಾರೀತಿಪುತ್ರರ, ಸ್ವಾಮಿ ಮಹಾಸೇನ (ಕಾರ್ತಿಕೇಯ) ಮತ್ತು ಮಾತೃಗಣಕ್ಕೆ ಸಮರ್ಪಿತ, ಅಶ್ವಮೇಧ-ಪವಿತ್ರೀಕೃತ ವಂಶವೆಂದು ವರ್ಣಿಸುತ್ತದೆ; ದುರ್ಮ್ಮಾಯ, ಅನೆಗಲ್ಲು ಮತ್ತು ಇತರ ಗ್ರಾಮಗಳ ಭೂಮಿ ದಾನವನ್ನು ತ್ರಿಲೋಚನಸ್ವಾಮಿ (ಶಿವ)ಗೆ ಸಮರ್ಪಿತ ಆತ್ರೇಯ ಗೋತ್ರದ ಬ್ರಾಹ್ಮಣನಿಗೆ, ಅನುದಾನ ಉಲ್ಲಂಘಿಸುವವರ ವಿರುದ್ಧ ವಾಡಿಕೆಯ ಶಾಪ-ಶ್ಲೋಕಗಳೊಂದಿಗೆ ದಾಖಲಿಸುತ್ತದೆ.'),
+    citations: [c(SRC_MAD_AR_1943, 'Part I Epigraphy summary (p. 2) and Part VI Inscriptions No. 1, Chitaldrug District, Davangere Taluk (Plate VII.1): full Sanskrit/Kannada-script text transcribed')],
+    review,
+  },
+  {
+    id: 'inscription-karch-mad1943-yellambalasi-sripurusha-viragal',
+    name: n('Ganga hero-stone (viragal) of Sripurusha\'s time at Yellambalasi', 'ಎಲ್ಲಂಬಲಸಿಯ ಶ್ರೀಪುರುಷನ ಕಾಲದ ಗಂಗ ವೀರಗಲ್ಲು'),
+    date: d(726, 788, 'range'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-western-ganga',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Listed among the important lithic records collected in 1943: a Western Ganga hero-stone (viragal, commemorating a warrior\'s death in battle) from Yellambalasi, Kadur taluk, dated to the time of the Ganga king Sripurusha (r. c. 726-788 CE). The summary confirms the record\'s existence, date-attribution and monument type; the commemorated warrior\'s name and the battle context are not given in this summary and require the full edited text.', '1943ರಲ್ಲಿ ಸಂಗ್ರಹಿಸಿದ ಪ್ರಮುಖ ಶಿಲಾಶಾಸನಗಳಲ್ಲಿ ಪಟ್ಟಿಗತ: ಕದೂರು ತಾಲ್ಲೂಕಿನ ಎಲ್ಲಂಬಲಸಿಯ ಒಂದು ಪಶ್ಚಿಮ ಗಂಗ ವೀರಗಲ್ಲು (ಯುದ್ಧದಲ್ಲಿ ವೀರ ಮರಣವನ್ನು ಸ್ಮರಿಸುವ ಶಿಲೆ), ಗಂಗ ಅರಸ ಶ್ರೀಪುರುಷನ (ಆ. ಸು. 726-788) ಕಾಲಕ್ಕೆ ದಿನಾಂಕಿತ. ಸಾರಾಂಶ ದಾಖಲೆಯ ಅಸ್ತಿತ್ವ, ದಿನಾಂಕ-ಆರೋಪಣೆ ಮತ್ತು ಸ್ಮಾರಕ ಬಗೆಯನ್ನು ಖಚಿತಪಡಿಸುತ್ತದೆ; ಸ್ಮರಿಸಲಾದ ವೀರನ ಹೆಸರು ಮತ್ತು ಯುದ್ಧ ಸಂದರ್ಭ ಈ ಸಾರಾಂಶದಲ್ಲಿ ನೀಡಿಲ್ಲ ಮತ್ತು ಪೂರ್ಣ ಸಂಪಾದಿತ ಪಠ್ಯ ಬೇಕು.'),
+    citations: [c(SRC_MAD_AR_1943, 'Part I, Epigraphy summary (p. 3), item 1: "A Ganga viragal of the time of Sripurusha at Yellambalasi, Kadur taluk"')],
+    review,
+  },
+  {
+    id: 'inscription-karch-mad1943-panditarahalli-vinayaditya-hoysala',
+    name: n('Vinayaditya Hoysala inscription at Panditarahalli, an early Hoysala history source', 'ಪಂಡಿತರಹಳ್ಳಿ ವಿನಯಾದಿತ್ಯ ಹೊಯ್ಸಳ ಶಾಸನ, ಆರಂಭಿಕ ಹೊಯ್ಸಳ ಇತಿಹಾಸದ ಆಕರ'),
+    date: d(1047, 1098, 'range'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-hoysala',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('An inscription of the early Hoysala ruler Vinayaditya (r. c. 1047-1098 CE, among the first Hoysala chiefs to expand beyond the dynasty\'s original hill-territory) found at Panditarahalli, listed among the important 1943 finds and explicitly flagged by the department as "useful for the study of early Hoysala history" -- a period for which inscriptional evidence is comparatively sparse next to the later, better-documented reigns of Vishnuvardhana and Ballala II.', 'ಆರಂಭಿಕ ಹೊಯ್ಸಳ ಅರಸ ವಿನಯಾದಿತ್ಯನ (ಆ. ಸು. 1047-1098, ವಂಶದ ಮೂಲ ಬೆಟ್ಟ-ಪ್ರದೇಶವನ್ನು ಮೀರಿ ವಿಸ್ತರಿಸಿದ ಮೊದಲ ಹೊಯ್ಸಳ ಮುಖಂಡರಲ್ಲಿ ಒಬ್ಬ) ಒಂದು ಶಾಸನ, ಪಂಡಿತರಹಳ್ಳಿಯಲ್ಲಿ ಪತ್ತೆಯಾಗಿತ್ತು, 1943ರ ಪ್ರಮುಖ ಶೋಧನೆಗಳಲ್ಲಿ ಪಟ್ಟಿಗತ ಮತ್ತು ಇಲಾಖೆಯಿಂದ ಸ್ಪಷ್ಟವಾಗಿ "ಆರಂಭಿಕ ಹೊಯ್ಸಳ ಇತಿಹಾಸ ಅಧ್ಯಯನಕ್ಕೆ ಉಪಯುಕ್ತ" ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ -- ನಂತರದ, ಚೆನ್ನಾಗಿ ದಾಖಲಾದ ವಿಷ್ಣುವರ್ಧನ ಮತ್ತು ಬಲ್ಲಾಳ IIನ ಆಳ್ವಿಕೆಗಳಿಗೆ ಹೋಲಿಸಿದರೆ ಶಾಸನ ಸಾಕ್ಷ್ಯ ತುಲನಾತ್ಮಕವಾಗಿ ವಿರಳವಾಗಿರುವ ಅವಧಿ.'),
+    citations: [c(SRC_MAD_AR_1943, 'Part I, Epigraphy summary (p. 3), item 2: "An inscription of Vinayaditya Hoysala at Panditarahalli...useful for the study of early Hoysala history"')],
+    review,
+  },
+  {
+    id: 'inscription-karch-mad1943-hiremagalur-janamejaya-pillar-brahmi',
+    name: n('Janamejaya pillar at Hiremagalur with previously unnoticed Brahmi and Kannada inscriptions', 'ಹಿರೇಮಗಳೂರಿನ ಜನಮೇಜಯ ಸ್ತಂಭ, ಈ ಮೊದಲು ಗಮನಿಸದ ಬ್ರಾಹ್ಮಿ ಮತ್ತು ಕನ್ನಡ ಶಾಸನಗಳೊಂದಿಗೆ'),
+    date: d(1, 500, 'range'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-kadamba',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['unresolved'],
+    scripts: ['Brahmi', 'Kannada'],
+    description: n('The so-called "Janamejaya pillar" at Hiremagalur, Chikmagalur taluk (Kadur district in the 1943 administrative division), reported as bearing Brahmi and Kannada inscriptions "which had not been noticed up to now" -- flagged by the department as under active study at the time of the report. A Brahmi-script inscription at a site otherwise associated with early historic and Kadamba-period Karnataka would be a significant paleographic data point; the specific readings were not yet published in this report and the outcome of the department\'s study has not been traced.', 'ಹಿರೇಮಗಳೂರಿನ (1943ರ ಆಡಳಿತ ವಿಭಾಗದಲ್ಲಿ ಕದೂರು ಜಿಲ್ಲೆ) ಚಿಕ್ಕಮಗಳೂರು ತಾಲ್ಲೂಕಿನ "ಜನಮೇಜಯ ಸ್ತಂಭ" ಎಂದು ಕರೆಯಲ್ಪಡುವ ಸ್ತಂಭ, "ಇದುವರೆಗೆ ಗಮನಿಸದ" ಬ್ರಾಹ್ಮಿ ಮತ್ತು ಕನ್ನಡ ಶಾಸನಗಳನ್ನು ಹೊಂದಿದೆಯೆಂದು ವರದಿಯಾಗಿದೆ -- ವರದಿಯ ಸಮಯದಲ್ಲಿ ಸಕ್ರಿಯ ಅಧ್ಯಯನದಲ್ಲಿದೆಯೆಂದು ಇಲಾಖೆ ಗುರುತಿಸುತ್ತದೆ. ಇತರೆಡೆ ಆರಂಭಿಕ ಚಾರಿತ್ರಿಕ ಮತ್ತು ಕದಂಬ-ಕಾಲದ ಕರ್ನಾಟಕದೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ತಾಣದಲ್ಲಿ ಬ್ರಾಹ್ಮಿ-ಲಿಪಿಯ ಶಾಸನ ಮಹತ್ವದ ಲಿಪಿಶಾಸ್ತ್ರೀಯ ಸಾಕ್ಷ್ಯ ಬಿಂದುವಾಗಬಹುದು; ನಿರ್ದಿಷ್ಟ ಓದುಗಳನ್ನು ಈ ವರದಿಯಲ್ಲಿ ಇನ್ನೂ ಪ್ರಕಟಿಸಿಲ್ಲ ಮತ್ತು ಇಲಾಖೆಯ ಅಧ್ಯಯನದ ಫಲಿತಾಂಶವನ್ನು ಪತ್ತೆಹಚ್ಚಲಾಗಿಲ್ಲ.'),
+    citations: [c(SRC_MAD_AR_1943, 'Part I, Epigraphy summary (p. 3), item 3: Janamejaya pillar, Hiremagalur, Chikmagalur taluk, Kadur district -- "records are being studied"')],
+    review,
+  },
+)
