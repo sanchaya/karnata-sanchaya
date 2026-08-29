@@ -1,0 +1,121 @@
+// Item-level facts mined from the OCR text of books in the Internet Archive KarnatakaArchaeology
+// collection (see scripts/import-karnataka-archaeology.mjs and src/data/karnataka-archaeology.generated.js
+// for the underlying discovery leads). Each record here cites a specific catalogue number/page from a
+// named volume rather than a bare OCR term match, but remains a review-gated lead: OCR quality on these
+// scans is uneven and every entry still needs an independent page-image check before promotion.
+const n = (en, kn) => ({ en, kn })
+const d = (from, to, precision = 'range') => ({ from, to, era: 'CE', precision })
+const c = (sourceId, locator) => ({ sourceId, locator })
+const review = { status: 'needs-review', reviewer: null, updatedAt: '2026-08-29' }
+
+// Source: "Inscriptions At Vijayanagara (Hampi)" - Inscriptions of Karnataka Vol. I,
+// Vijayanagara Research Centre Series No. 8 (Directorate of Archaeology and Museums, Mysore, 1995),
+// eds. Channabasappa S. Patil and Vinoda C. Patil.
+const SRC_HAMPI_VOL1_SERIES8 = 'src-ia-karnataka-archaeology-damh-inscriptionsatvi0000chan-vol-i-ser-8'
+
+export const karnatakaArchaeologyMiningInscriptions = [
+  {
+    id: 'inscription-karch-hampi-vol1-no113-kampiladeva-trikuta-lingas',
+    name: n('Trikuta temple linga-installation inscription of Vira Kampiladeva', 'ತ್ರಿಕೂಟ ದೇವಾಲಯ ವೀರ ಕಂಪಿಲದೇವ ಲಿಂಗ ಸ್ಥಾಪನಾ ಶಾಸನ'),
+    date: d(1300, 1399, 'century'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as No. 113: a pillar inscription in the Trikuta temple recording that Vira Kampiladeva, son of Mummadi-Singeya-Nayaka and a devotee of Sangameshvaradeva, installed lingas in memory of his mother Mada-Nayakiti, his father Singeya-Nayaka and one Perumeya-Nayaka. Pre-dates Vijayanagara proper (Kampili chiefdom era); item number, exact findspot map-grid and page image still need independent verification.', 'ಸಂಖ್ಯೆ 113ರಂತೆ ಪಟ್ಟಿಗತ: ತ್ರಿಕೂಟ ದೇವಾಲಯದ ಒಂದು ಕಂಬ ಶಾಸನ, ಮುಮ್ಮಡಿ-ಸಿಂಗೆಯ-ನಾಯಕನ ಪುತ್ರ ಮತ್ತು ಸಂಗಮೇಶ್ವರದೇವನ ಭಕ್ತ ವೀರ ಕಂಪಿಲದೇವ, ತನ್ನ ತಾಯಿ ಮಡ-ನಾಯಕಿತಿ, ತಂದೆ ಸಿಂಗೆಯ-ನಾಯಕ ಮತ್ತು ಪೆರುಮೆಯ-ನಾಯಕನ ಸ್ಮರಣಾರ್ಥ ಲಿಂಗಗಳನ್ನು ಸ್ಥಾಪಿಸಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ. ವಿಜಯನಗರಕ್ಕೂ ಮುಂಚಿನದು (ಕಂಪಿಲಿ ಪಾಳೆಯಗಾರಿಕೆ ಕಾಲ); ವಸ್ತು ಸಂಖ್ಯೆ, ನಿಖರ ಪತ್ತೆಸ್ಥಳ ನಕ್ಷೆ-ಚೌಕ ಮತ್ತು ಪುಟಚಿತ್ರ ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 113 (p. 33): pillar inscription at the Trikuta temple; also cross-referenced in ARIE 1934-35 No. B 353 and VPR 1983-84 No. 1')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no267-virupaksha-iii-canal',
+    name: n('Undated canal-construction inscription of Virupaksha III', 'ವಿರೂಪಾಕ್ಷ III ಕಾಲುವೆ ನಿರ್ಮಾಣ ಶಾಸನ (ದಿನಾಂಕವಿಲ್ಲ)'),
+    date: d(1465, 1485, 'range'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as No. 267, the editors note it is the only inscription in the volume referring to a king named Virupaksha; it records that Hegade Hitalabagila Basavanna-anna built a canal by royal order. Since two Vijayanagara kings bore this name (Virupaksha II, r. 1404-1406; Virupaksha III, r. 1465-1485), the editors attribute it to Virupaksha III on internal grounds, but the inscription itself carries no date.', 'ಸಂಖ್ಯೆ 267ರಂತೆ ಪಟ್ಟಿಗತ; ಸಂಪಾದಕರ ಪ್ರಕಾರ ಇದು ಈ ಸಂಪುಟದಲ್ಲಿ ವಿರೂಪಾಕ್ಷ ಎಂಬ ಅರಸನನ್ನು ಉಲ್ಲೇಖಿಸುವ ಏಕೈಕ ಶಾಸನ; ಹೆಗಡೆ ಹಿಟ್ಟಲಬಾಗಿಲ ಬಸವಣ್ಣ-ಅಣ್ಣ ರಾಜಾಜ್ಞೆಯಂತೆ ಕಾಲುವೆ ನಿರ್ಮಿಸಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ. ಈ ಹೆಸರಿನ ಇಬ್ಬರು ವಿಜಯನಗರ ಅರಸರಿದ್ದುದರಿಂದ (ವಿರೂಪಾಕ್ಷ II, ಆ. 1404-1406; ವಿರೂಪಾಕ್ಷ III, ಆ. 1465-1485), ಸಂಪಾದಕರು ಆಂತರಿಕ ಆಧಾರದ ಮೇಲೆ ವಿರೂಪಾಕ್ಷ IIIಗೆ ಆರೋಪಿಸುತ್ತಾರೆ, ಆದರೆ ಶಾಸನದಲ್ಲಿಯೇ ದಿನಾಂಕವಿಲ್ಲ.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 267, discussed in the volume introduction (p. 22): undated, attributed to Virupaksha III on internal grounds only')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no104-106-krishnadevaraya-coronation-debate',
+    name: n('Krishnadevaraya coronation-date inscriptions (Nos. 104, 106, 70)', 'ಕೃಷ್ಣದೇವರಾಯ ಪಟ್ಟಾಭಿಷೇಕ ದಿನಾಂಕ ಶಾಸನಗಳು (ಸಂಖ್ಯೆ 104, 106, 70)'),
+    date: d(1510, 1510, 'year'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('A historiographically significant cluster the editors flag directly: the traditionally cited coronation date of Krishnadevaraya (8 August 1509, derived from the Vijayanagara Samrajyamu report of 1604) is contradicted by three inscriptions recording a donation to the god Virupaksha on the occasion of the king\'s coronation. Nos. 104 and 106 (Saka 1430, Magha su. 14 = 24 January 1510) and No. 70, discovered later at Singanayakanahalli (Saka 1431, same tithi), together suggest a coronation date of 24 January 1510 — a full inscriptional record the editors say "scholars have not taken seriously." Recorded here as an open historiographical question, not a settled date.', 'ಸಂಪಾದಕರೇ ನೇರವಾಗಿ ಗುರುತಿಸುವ ಇತಿಹಾಸಶಾಸ್ತ್ರೀಯವಾಗಿ ಮಹತ್ವದ ಗುಂಪು: ಕೃಷ್ಣದೇವರಾಯನ ಸಾಂಪ್ರದಾಯಿಕವಾಗಿ ಉಲ್ಲೇಖಿತ ಪಟ್ಟಾಭಿಷೇಕ ದಿನಾಂಕ (8 ಆಗಸ್ಟ್ 1509, 1604ರ ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯಂ ವರದಿಯಿಂದ) ಮೂರು ಶಾಸನಗಳಿಂದ ವಿರೋಧಿಸಲ್ಪಟ್ಟಿದೆ, ಅವು ರಾಜನ ಪಟ್ಟಾಭಿಷೇಕ ಸಂದರ್ಭದಲ್ಲಿ ವಿರೂಪಾಕ್ಷ ದೇವರಿಗೆ ದಾನ ದಾಖಲಿಸುತ್ತವೆ. ಸಂಖ್ಯೆ 104 ಮತ್ತು 106 (ಶಕ 1430, ಮಾಘ ಶು. 14 = 24 ಜನವರಿ 1510) ಮತ್ತು ನಂತರ ಸಿಂಗನಾಯಕನಹಳ್ಳಿಯಲ್ಲಿ ಪತ್ತೆಯಾದ ಸಂಖ್ಯೆ 70 (ಶಕ 1431, ಅದೇ ತಿಥಿ) ಒಟ್ಟಾಗಿ 24 ಜನವರಿ 1510ರ ಪಟ್ಟಾಭಿಷೇಕ ದಿನಾಂಕವನ್ನು ಸೂಚಿಸುತ್ತವೆ — ಸಂಪಾದಕರ ಪ್ರಕಾರ "ವಿದ್ವಾಂಸರು ಗಂಭೀರವಾಗಿ ಪರಿಗಣಿಸಿಲ್ಲ." ಇಲ್ಲಿ ಒಂದು ಮುಕ್ತ ಇತಿಹಾಸಶಾಸ್ತ್ರೀಯ ಪ್ರಶ್ನೆಯಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ, ಇತ್ಯರ್ಥವಾದ ದಿನಾಂಕವಲ್ಲ.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'Volume introduction (p. 23) discussing Nos. 104, 106 and 70 against the traditional 8 August 1509 coronation date from the Vijayanagara Samrajyamu (1604)')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no188-achyutadevaraya-vitthaladeva-grant',
+    name: n('Achyutadevaraya village grant to Vitthaladeva (1531)', 'ವಿಠ್ಠಲದೇವನಿಗೆ ಅಚ್ಯುತದೇವರಾಯನ ಗ್ರಾಮ ಅನುದಾನ ಶಾಸನ (1531)'),
+    date: d(1531, 1531, 'year'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as No. 188, on the south base of the central shrine of the Vitthala temple: dated Saka 1453, Khara, Jyeshtha su. 15 (30 May 1531, a Tuesday, though the editors note the weekday is not verifiable). Records a grant of a village by Achyutadevaraya for offerings to the god Vitthaladeva.', 'ಸಂಖ್ಯೆ 188ರಂತೆ ಪಟ್ಟಿಗತ, ವಿಠ್ಠಲ ದೇವಾಲಯದ ಗರ್ಭಗುಡಿಯ ದಕ್ಷಿಣ ಪೀಠದ ಮೇಲೆ: ಶಕ 1453, ಖರ, ಜ್ಯೇಷ್ಠ ಶು. 15 (30 ಮೇ 1531, ಮಂಗಳವಾರ, ಆದರೂ ಸಂಪಾದಕರ ಪ್ರಕಾರ ವಾರ ಪರಿಶೀಲನಾರ್ಹವಲ್ಲ) ದಿನಾಂಕಿತ. ಅಚ್ಯುತದೇವರಾಯ ವಿಠ್ಠಲದೇವ ದೇವರ ನೈವೇದ್ಯಕ್ಕಾಗಿ ಒಂದು ಗ್ರಾಮವನ್ನು ಅನುದಾನವಾಗಿ ನೀಡಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 188 (p. 54): also cross-referenced in ARE 1903-04 No. 3 of 1904, SII IX.ii No. 534, and Filliozat 1988 No. V')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no189-190-achyutadevaraya-vitthalasvami-gifts',
+    name: n('Achyutadevaraya-era treasury gifts to the Vitthala temple (1534, 1536)', 'ವಿಠ್ಠಲ ದೇವಾಲಯಕ್ಕೆ ಅಚ್ಯುತದೇವರಾಯ ಕಾಲದ ಖಜಾನೆ ಕಾಣಿಕೆಗಳು (1534, 1536)'),
+    date: d(1534, 1536, 'range'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Two related entries at the same shrine base: No. 189 (Saka 1456 = 10 December 1534) records a money gift to the Vittaleshvara temple treasury for daily offerings, made by Varadappa-Nayaka son of Tiruvengala-Nayaka for the merit of Achyutadevaraya and Chikkaraya. No. 190 (Saka 1458 = 31 May 1536) records a gift of 200 varahas to the same treasury by Hiriya-Tirumala-Nayaka for the same merit.', 'ಅದೇ ಗರ್ಭಗುಡಿ ಪೀಠದ ಎರಡು ಸಂಬಂಧಿತ ನಮೂದುಗಳು: ಸಂಖ್ಯೆ 189 (ಶಕ 1456 = 10 ಡಿಸೆಂಬರ್ 1534) ವಿಠ್ಠಲೇಶ್ವರ ದೇವಾಲಯದ ಖಜಾನೆಗೆ ದೈನಂದಿನ ನೈವೇದ್ಯಕ್ಕಾಗಿ ತಿರುವೆಂಗಳ-ನಾಯಕನ ಪುತ್ರ ವರದಪ್ಪ-ನಾಯಕನಿಂದ ಹಣ ಕಾಣಿಕೆಯನ್ನು, ಅಚ್ಯುತದೇವರಾಯ ಮತ್ತು ಚಿಕ್ಕರಾಯನ ಪುಣ್ಯಕ್ಕಾಗಿ ದಾಖಲಿಸುತ್ತದೆ. ಸಂಖ್ಯೆ 190 (ಶಕ 1458 = 31 ಮೇ 1536) ಅದೇ ಖಜಾನೆಗೆ ಹಿರಿಯ-ತಿರುಮಲ-ನಾಯಕನಿಂದ 200 ವರಹ ಕಾಣಿಕೆಯನ್ನು, ಅದೇ ಪುಣ್ಯಕ್ಕಾಗಿ ದಾಖಲಿಸುತ್ತದೆ.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 189 (p. 54, ARE 1903-04 No. 4 of 1904, SII IX.ii No. 570, Filliozat 1988 No. X) and No. 190 (ARE 1903-04 No. 5 of 1904, SII IX.ii No. 574, Filliozat 1988 No. XII)')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no196-vyasatirtha-narasimha-installation',
+    name: n('Vyasatirtha\'s installation of Yoga-Varada Narasimha in the Vitthala temple courtyard (1532)', 'ವಿಠ್ಠಲ ದೇವಾಲಯ ಅಂಗಳದಲ್ಲಿ ವ್ಯಾಸತೀರ್ಥರಿಂದ ಯೋಗ-ವರದ ನರಸಿಂಹ ಪ್ರತಿಷ್ಠಾಪನೆ (1532)'),
+    date: d(1532, 1532, 'year'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('Catalogued as No. 196, on a stone pedestal behind the Vitthala temple\'s central shrine: a Sanskrit/Nagari record dated Saka 1454 (19 July 1532, though the editors flag the weekday as inconsistent) stating that the image of the god Yoga-Varada Narasimha was set up in the courtyard of the Vitthala temple by the Madhva teacher Vyasatirtha.', 'ಸಂಖ್ಯೆ 196ರಂತೆ ಪಟ್ಟಿಗತ, ವಿಠ್ಠಲ ದೇವಾಲಯದ ಗರ್ಭಗುಡಿಯ ಹಿಂದಿನ ಶಿಲಾ ಪೀಠದ ಮೇಲೆ: ಶಕ 1454 (19 ಜುಲೈ 1532, ಆದರೂ ಸಂಪಾದಕರು ವಾರದ ಅಸಂಗತತೆಯನ್ನು ಗುರುತಿಸುತ್ತಾರೆ) ದಿನಾಂಕಿತ ಸಂಸ್ಕೃತ/ನಾಗರಿ ದಾಖಲೆ, ಮಾಧ್ವ ಗುರು ವ್ಯಾಸತೀರ್ಥರಿಂದ ಯೋಗ-ವರದ ನರಸಿಂಹ ದೇವರ ವಿಗ್ರಹವನ್ನು ವಿಠ್ಠಲ ದೇವಾಲಯದ ಅಂಗಳದಲ್ಲಿ ಸ್ಥಾಪಿಸಲಾಯಿತೆಂದು ಹೇಳುತ್ತದೆ.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 196 (p. 55-56): also cross-referenced in ARSIE 1922-23 No. 710 of 1922 and Filliozat 1988 No. VII')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no197-krishnaraya-hundred-pillared-mandapa',
+    name: n('Krishnadevaraya-era record in the hundred-pillared mandapa, Vitthala temple (1516-17)', 'ವಿಠ್ಠಲ ದೇವಾಲಯ ನೂರುಕಂಬಗಳ ಮಂಟಪದಲ್ಲಿ ಕೃಷ್ಣದೇವರಾಯ ಕಾಲದ ಶಾಸನ (1516-17)'),
+    date: d(1516, 1517, 'range'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as No. 197, on the north wall of the hundred-pillared mandapa of the Vitthala temple, attributed to "Vijayanagara; Krishnaraya-Maharaya" and dated Saka 1438, Dhatu (= 1516-17 CE). Full transaction text not yet transcribed from the OCR sample; requires page-image review to establish grant particulars.', 'ಸಂಖ್ಯೆ 197ರಂತೆ ಪಟ್ಟಿಗತ, ವಿಠ್ಠಲ ದೇವಾಲಯದ ನೂರುಕಂಬಗಳ ಮಂಟಪದ ಉತ್ತರ ಗೋಡೆಯ ಮೇಲೆ, "ವಿಜಯನಗರ; ಕೃಷ್ಣರಾಯ-ಮಹಾರಾಯ"ಗೆ ಆರೋಪಿತ ಮತ್ತು ಶಕ 1438, ಧಾತು (= 1516-17) ದಿನಾಂಕಿತ. OCR ಮಾದರಿಯಿಂದ ಪೂರ್ಣ ವ್ಯವಹಾರ ಪಠ್ಯ ಇನ್ನೂ ಲಿಪ್ಯಂತರಿಸಿಲ್ಲ; ಅನುದಾನ ವಿವರಗಳನ್ನು ನಿರ್ಧರಿಸಲು ಪುಟಚಿತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 197 (p. 56): item number and date only; full text pending page-image review')],
+    review,
+  },
+  {
+    id: 'inscription-karch-hampi-vol1-no338-krishnaraya-ramachandra-grant',
+    name: n('Krishnadevaraya land grant to the Ramachandra (Hazara Rama) temple (1513)', 'ರಾಮಚಂದ್ರ (ಹಜಾರ ರಾಮ) ದೇವಾಲಯಕ್ಕೆ ಕೃಷ್ಣದೇವರಾಯನ ಭೂಮಿ ಅನುದಾನ ಶಾಸನ (1513)'),
+    date: d(1513, 1513, 'year'),
+    placeId: 'place-hampi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-vijayanagara',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as No. 338, on the south wall of the north-east mandapa of the Ramachandra (Hazara Rama) temple: dated Saka 1435, Srimukha, Chaitra su. 5 (12 March 1513), attributed to Krishnaraya. Records the king\'s grant of six villages (Volakote, Taliru, Yittage, Muddapura, Kutukanahalli and Jayanira across several simes) for the service of the god Ramachandra, for the merit of his father Narasana-Nayaka-Vodeya and mother Nagaji-amma.', 'ಸಂಖ್ಯೆ 338ರಂತೆ ಪಟ್ಟಿಗತ, ರಾಮಚಂದ್ರ (ಹಜಾರ ರಾಮ) ದೇವಾಲಯದ ಈಶಾನ್ಯ ಮಂಟಪದ ದಕ್ಷಿಣ ಗೋಡೆಯ ಮೇಲೆ: ಶಕ 1435, ಶ್ರೀಮುಖ, ಚೈತ್ರ ಶು. 5 (12 ಮಾರ್ಚ್ 1513) ದಿನಾಂಕಿತ, ಕೃಷ್ಣರಾಯನಿಗೆ ಆರೋಪಿತ. ರಾಮಚಂದ್ರ ದೇವರ ಸೇವೆಗಾಗಿ, ತಂದೆ ನರಸನ-ನಾಯಕ-ವೊಡೆಯ ಮತ್ತು ತಾಯಿ ನಾಗಜಿ-ಅಮ್ಮನ ಪುಣ್ಯಕ್ಕಾಗಿ, ರಾಜನು ಆರು ಗ್ರಾಮಗಳನ್ನು (ವೊಲಕೋಟೆ, ತಳಿರು, ಯಿತ್ತಗೆ, ಮುದ್ದಪುರ, ಕುತುಕನಹಳ್ಳಿ, ಜಯನಿರ) ಅನುದಾನವಾಗಿ ನೀಡಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ.'),
+    citations: [c(SRC_HAMPI_VOL1_SERIES8, 'No. 338 (p. 97): also cross-referenced in ARSIE 1889 No. 24, SII IV No. 253, and S. Rajasekhara 1992 No. 5')],
+    review,
+  },
+]
