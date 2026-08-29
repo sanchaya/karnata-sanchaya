@@ -604,3 +604,48 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Annual Report of the Mysore Archaeological Department for the Year 1945" (1946).
+const SRC_MAD_AR_1945 = 'src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945'
+
+karnatakaArchaeologyMiningInscriptions.push(
+  {
+    id: 'inscription-karch-mad1945-sibi-harihararayapura-plate',
+    name: n('Sibi renamed Harihararayapura by grant of Harihara II (1403)', 'ಹರಿಹರ IIನ ಅನುದಾನದಿಂದ ಸಿಬಿ ಹರಿಹರರಾಯಪುರ ಎಂದು ಮರುನಾಮಕರಣ (1403)'),
+    date: d(1403, 1403, 'year'),
+    placeId: 'place-tumakuru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-tumakuru',
+    languages: ['Sanskrit', 'Kannada'],
+    scripts: ['Nagari', 'Kannada'],
+    description: n('Catalogued as inscription No. Sira 95, a copper-plate grant concerning Sibi (about 16 miles north of Tumkur), issued by Harihararaya (Harihara II), son of Bukka, dated 1403 CE. Records that the town, originally named Sibir, was converted into an agrahara and renamed Harihararayapura by the minister Krugappadeva; the grant endowed roughly 80 gifts to local Brahmans in the name of a temple of Ishvara called Chandramauli. Notably, at the time of this grant the well-known Narasimha temple at the same site does not appear to have existed yet, since the grant makes no mention of it.', 'ಸಿರ 95 ಸಂಖ್ಯೆಯ ಶಾಸನವಾಗಿ ಪಟ್ಟಿಗತ, ಸಿಬಿಗೆ (ತುಮಕೂರಿನ ಸುಮಾರು 16 ಮೈಲಿ ಉತ್ತರಕ್ಕೆ) ಸಂಬಂಧಿಸಿದ ತಾಮ್ರಶಾಸನ, ಬುಕ್ಕನ ಮಗ ಹರಿಹರರಾಯ (ಹರಿಹರ II)ನಿಂದ ನೀಡಲ್ಪಟ್ಟಿದ್ದು, 1403 ದಿನಾಂಕಿತ. ಮೂಲತಃ ಸಿಬಿರ್ ಎಂದು ಹೆಸರಿಸಲಾದ ಪಟ್ಟಣವನ್ನು ಅಗ್ರಹಾರವಾಗಿ ಪರಿವರ್ತಿಸಿ ಮಂತ್ರಿ ಕ್ರುಗಪ್ಪದೇವನಿಂದ ಹರಿಹರರಾಯಪುರ ಎಂದು ಮರುನಾಮಕರಣ ಮಾಡಲಾಯಿತೆಂದು ದಾಖಲಿಸುತ್ತದೆ; ಅನುದಾನ ಚಂದ್ರಮೌಳಿ ಎಂಬ ಈಶ್ವರ ದೇವಾಲಯದ ಹೆಸರಿನಲ್ಲಿ ಸ್ಥಳೀಯ ಬ್ರಾಹ್ಮಣರಿಗೆ ಸುಮಾರು 80 ಕಾಣಿಕೆಗಳನ್ನು ನೀಡಿತು. ಗಮನಾರ್ಹವಾಗಿ, ಈ ಅನುದಾನದ ಸಮಯದಲ್ಲಿ ಅದೇ ತಾಣದ ಪ್ರಸಿದ್ಧ ನರಸಿಂಹ ದೇವಾಲಯ ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿ ಇರಲಿಲ್ಲವೆಂದು ತೋರುತ್ತದೆ, ಏಕೆಂದರೆ ಅನುದಾನ ಅದನ್ನು ಉಲ್ಲೇಖಿಸುವುದಿಲ್ಲ.'),
+    citations: [c(SRC_MAD_AR_1945, 'Inscription No. Sira 95 (p. 59), discussed under "Sibi -- Situation and antiquity"')],
+    review,
+  },
+  {
+    id: 'inscription-karch-mad1945-venkatapati-raya-plates',
+    name: n('Venkatapati Raya copper plates of the 16th century', 'ವೆಂಕಟಪತಿ ರಾಯನ 16ನೇ ಶತಮಾನದ ತಾಮ್ರಶಾಸನಗಳು'),
+    date: d(1585, 1614, 'range'),
+    placeId: 'place-mysuru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-mysuru',
+    languages: ['unresolved'],
+    scripts: ['unresolved'],
+    description: n('Among about 60 inscriptions and old documents collected and studied by the department in 1945: a set of copper plates issued during the reign of the Aravidu Vijayanagara king Venkatapati Raya (16th century CE), which the report states "throws valuable light on the history of the period." The department also received, in the same year, about 34 sannads (grant deeds, mostly 18th-19th century) from the Sringeri Mutt and several from the Nallur mosque near Chennagiri referencing grants by both Bijapur Sultans and Mysore kings -- evidence of continuous, religiously mixed royal patronage documentation spanning the Vijayanagara-to-Mysore-Kingdom transition.', '1945ರಲ್ಲಿ ಇಲಾಖೆ ಸಂಗ್ರಹಿಸಿ ಅಧ್ಯಯನ ಮಾಡಿದ ಸುಮಾರು 60 ಶಾಸನಗಳು ಮತ್ತು ಹಳೆಯ ದಾಖಲೆಗಳಲ್ಲಿ: ಅರವಿಡು ವಿಜಯನಗರ ಅರಸ ವೆಂಕಟಪತಿ ರಾಯನ (16ನೇ ಶತಮಾನ) ಆಳ್ವಿಕೆಯಲ್ಲಿ ನೀಡಲಾದ ತಾಮ್ರಫಲಕಗಳ ಒಂದು ಸೆಟ್, ವರದಿ ಇದನ್ನು "ಆ ಅವಧಿಯ ಇತಿಹಾಸಕ್ಕೆ ಮೌಲ್ಯಯುತ ಬೆಳಕು ಚೆಲ್ಲುತ್ತದೆ" ಎಂದು ಹೇಳುತ್ತದೆ. ಅದೇ ವರ್ಷ ಇಲಾಖೆ ಶೃಂಗೇರಿ ಮಠದಿಂದ ಸುಮಾರು 34 ಸನದುಗಳನ್ನೂ (ಹೆಚ್ಚಾಗಿ 18-19ನೇ ಶತಮಾನ), ಚೆನ್ನಗಿರಿ ಬಳಿಯ ನಲ್ಲೂರು ಮಸೀದಿಯಿಂದ ಬಿಜಾಪುರ ಸುಲ್ತಾನರು ಮತ್ತು ಮೈಸೂರು ಅರಸರಿಬ್ಬರ ಅನುದಾನಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಹಲವನ್ನೂ ಪಡೆಯಿತು -- ವಿಜಯನಗರದಿಂದ ಮೈಸೂರು ಸಂಸ್ಥಾನಕ್ಕೆ ಪರಿವರ್ತನೆಯ ಅವಧಿಯುದ್ದಕ್ಕೂ ನಿರಂತರ, ಧಾರ್ಮಿಕವಾಗಿ ಮಿಶ್ರಿತ ರಾಜ ಪೋಷಣಾ ದಾಖಲಾತಿಯ ಸಾಕ್ಷ್ಯ.'),
+    citations: [c(SRC_MAD_AR_1945, 'Part I, Epigraphy summary (p. 2): Venkatapati Raya copper plates, Sringeri Mutt sannads, and Nallur mosque grant deeds')],
+    review,
+  },
+  {
+    id: 'inscription-karch-mad1945-tirumalaraya-renukacharya-plates',
+    name: n('Tirumalaraya copper-plate grant possibly marking his coronation date (1571)', 'ತಿರುಮಲರಾಯನ ಪಟ್ಟಾಭಿಷೇಕ ದಿನಾಂಕವಾಗಿರಬಹುದಾದ ತಾಮ್ರಶಾಸನ (1571)'),
+    date: d(1571, 1571, 'year'),
+    placeId: 'place-tumakuru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-tumakuru',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('A 5-plate Sanskrit copper-plate grant (each plate 9.75 x 7.25 inches, Nagari script except the king\'s Kannada-script signature "Sri Virupaksha"), sent to the department by Renukacharya of Bangalore for deciphering. Issued by the Aravidu king Tirumalaraya (Tirumala Deva Raya) at the request of Karehalli Bairegauda and Krishnappa Nayaka, dated Saka 1493, Karttika su. 12 (1571 CE) -- the same date as a companion grant, "Tumkur No. 1," to different donees. The department\'s note explicitly raises the possibility that this shared date marks Tirumalaraya\'s coronation, though the record itself does not say so; Tirumalaraya is independently known to have acceded after May 1570, while Sadasiva Raya was reportedly still living.', '5-ಫಲಕಗಳ ಸಂಸ್ಕೃತ ತಾಮ್ರಶಾಸನ (ಪ್ರತಿ ಫಲಕ 9.75 x 7.25 ಇಂಚು, ರಾಜನ ಕನ್ನಡ-ಲಿಪಿಯ ಸಹಿ "ಶ್ರೀ ವಿರೂಪಾಕ್ಷ" ಹೊರತುಪಡಿಸಿ ನಾಗರಿ ಲಿಪಿಯಲ್ಲಿ), ಬೆಂಗಳೂರಿನ ರೇಣುಕಾಚಾರ್ಯರಿಂದ ಲಿಪ್ಯಂತರಕ್ಕಾಗಿ ಇಲಾಖೆಗೆ ಕಳುಹಿಸಲ್ಪಟ್ಟಿತು. ಅರವಿಡು ಅರಸ ತಿರುಮಲರಾಯ (ತಿರುಮಲ ದೇವರಾಯ)ನಿಂದ ಕರೆಹಳ್ಳಿ ಬೈರೇಗೌಡ ಮತ್ತು ಕೃಷ್ಣಪ್ಪ ನಾಯಕರ ಮನವಿಯಂತೆ ನೀಡಲ್ಪಟ್ಟಿದ್ದು, ಶಕ 1493, ಕಾರ್ತಿಕ ಶು. 12 (1571) ದಿನಾಂಕಿತ -- ಬೇರೆ ದಾನಿತರಿಗೆ ನೀಡಲಾದ ಸಹವರ್ತಿ ಅನುದಾನ "ತುಮಕೂರು ಸಂಖ್ಯೆ 1"ರ ಅದೇ ದಿನಾಂಕ. ಇಲಾಖೆಯ ಟಿಪ್ಪಣಿ ಈ ಹಂಚಿದ ದಿನಾಂಕ ತಿರುಮಲರಾಯನ ಪಟ್ಟಾಭಿಷೇಕವನ್ನು ಸೂಚಿಸಬಹುದೆಂಬ ಸಾಧ್ಯತೆಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಎತ್ತುತ್ತದೆ, ಆದರೂ ದಾಖಲೆ ಸ್ವತಃ ಹಾಗೆ ಹೇಳುವುದಿಲ್ಲ; ತಿರುಮಲರಾಯ 1570 ಮೇ ನಂತರ ಪಟ್ಟವೇರಿದನೆಂದು ಸ್ವತಂತ್ರವಾಗಿ ತಿಳಿದಿದೆ, ಆ ವೇಳೆಗೆ ಸದಾಶಿವರಾಯ ಇನ್ನೂ ಜೀವಂತವಿದ್ದನೆಂದು ವರದಿಯಾಗಿದೆ.'),
+    citations: [c(SRC_MAD_AR_1945, 'Part VI record (pp. 106-107), sent by Mr. Renukacharya of Bangalore; cross-referenced against companion grant "Tumkur No. 1 (H.C. XII)"')],
+    review,
+  },
+)
