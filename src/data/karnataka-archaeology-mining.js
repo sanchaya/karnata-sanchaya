@@ -268,3 +268,62 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Vijayanagara Inscriptions" Volume II (Directorate of Archaeology and Museums, 1986),
+// eds. D.R. Bhat (organised by district and taluk, catalogue numbers prefixed "KN").
+const SRC_VIJAYANAGARA_INSC_VOL2 = 'src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-ii'
+
+karnatakaArchaeologyMiningInscriptions.push(
+  {
+    id: 'inscription-karch-vinsc2-kn428-ambale-narasimha-spurious',
+    name: n('Ambale Narasimha grant record flagged as likely spurious (KN 428)', 'ಅಂಬಲೆ ನರಸಿಂಹ ಅನುದಾನ ದಾಖಲೆ, ಕೃತಕವೆಂದು ಗುರುತಿಸಲಾಗಿದೆ (KN 428)'),
+    date: d(1404, 1584, 'range'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('Catalogued as KN 428 (Ambale, Chikkamagalur taluk; two copper plates in the possession of Gopalakrishna-bhatta): records that an Aravidu king Ranga-bhupala installed his son Narasimha on the throne, who then visited Belur and made grants there. The editors flag this as most likely a spurious record: the given date (Saka 1327 = 1404 CE) is far too early for any known Aravidu ruler of this name, and no son of Sriranga I named Narasimha is otherwise attested; the editors suggest the intended date may be Saka 1506 (1584 CE) or Saka 1527 (1527... recte c. 1605), but Sriranga I is independently known to have had no issue at all. Recorded here as a documented case of a doubtful/forged inscription, not a verified royal act.', 'KN 428ರಂತೆ ಪಟ್ಟಿಗತ (ಅಂಬಲೆ, ಚಿಕ್ಕಮಗಳೂರು ತಾಲ್ಲೂಕು; ಗೋಪಾಲಕೃಷ್ಣ-ಭಟ್ಟರ ಬಳಿ ಎರಡು ತಾಮ್ರಫಲಕಗಳು): ಅರವಿಡು ಅರಸ ರಂಗ-ಭೂಪಾಲ ತನ್ನ ಮಗ ನರಸಿಂಹನನ್ನು ಸಿಂಹಾಸನದಲ್ಲಿ ಕೂರಿಸಿದನೆಂದೂ, ಅವನು ಬೇಲೂರಿಗೆ ಭೇಟಿ ನೀಡಿ ಅಲ್ಲಿ ಅನುದಾನ ನೀಡಿದನೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ. ಸಂಪಾದಕರು ಇದನ್ನು ಬಹುಶಃ ಕೃತಕ ದಾಖಲೆಯೆಂದು ಗುರುತಿಸುತ್ತಾರೆ: ನೀಡಲಾದ ದಿನಾಂಕ (ಶಕ 1327 = 1404) ಈ ಹೆಸರಿನ ಯಾವುದೇ ತಿಳಿದ ಅರವಿಡು ಅರಸನಿಗೆ ಬಹಳ ಮುಂಚಿನದು, ಮತ್ತು ಶ್ರೀರಂಗ Iಗೆ ನರಸಿಂಹ ಎಂಬ ಮಗ ಇದ್ದುದು ಬೇರೆಲ್ಲಿಯೂ ದೃಢಪಟ್ಟಿಲ್ಲ; ಸಂಪಾದಕರು ಉದ್ದೇಶಿತ ದಿನಾಂಕ ಶಕ 1506 (1584) ಅಥವಾ ಶಕ 1527 ಆಗಿರಬಹುದೆಂದು ಸೂಚಿಸುತ್ತಾರೆ, ಆದರೆ ಶ್ರೀರಂಗ Iಗೆ ಮಕ್ಕಳೇ ಇರಲಿಲ್ಲವೆಂದು ಸ್ವತಂತ್ರವಾಗಿ ತಿಳಿದಿದೆ. ಇಲ್ಲಿ ಒಂದು ದಾಖಲಿತ ಸಂಶಯಾಸ್ಪದ/ಕೃತಕ ಶಾಸನ ಪ್ರಕರಣವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ, ಪರಿಶೀಲಿತ ರಾಜಕೀಯ ಕಾರ್ಯವಲ್ಲ.'),
+    citations: [c(SRC_VIJAYANAGARA_INSC_VOL2, 'KN 428 (Ambale, Chikkamagalur taluk; MAR 1930 No. 4): editors\' own dating analysis concludes the record is most likely spurious')],
+    review,
+  },
+  {
+    id: 'inscription-karch-vinsc2-kn432-achyutadevaraya-khandya-grant',
+    name: n('Achyutadevaraya land grant at Khandya, ruling "from Hampe Hastinavati" (1539)', 'ಖಂಡ್ಯದಲ್ಲಿ ಅಚ್ಯುತದೇವರಾಯನ ಭೂಮಿ ಅನುದಾನ, "ಹಂಪೆ ಹಸ್ತಿನಾವತಿ"ಯಿಂದ ಆಳ್ವಿಕೆ (1539)'),
+    date: d(1539, 1539, 'year'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as KN 432 (on a stone south of the main entrance in the Markandeshvara temple prakara, Khandya): dated Saka 1461, Vilambi, Phalguna su. 14 (3 January 1539, Friday), attributed to Tuluva Achyutadevaraya, styled as "ruling from Hampe Hastinavati" (Hampi). Records a grant of two villages, Hunasevalli and Kategara, yielding 280 and 450 khandugas of rice respectively, to the gods Janardana and Markandeshvara of Khandya, assigned as an amara-magani to Raghupatiraja-vodeya son of Mallaraja-vodeya.', 'KN 432ರಂತೆ ಪಟ್ಟಿಗತ (ಖಂಡ್ಯದ ಮಾರ್ಕಂಡೇಶ್ವರ ದೇವಾಲಯ ಪ್ರಾಕಾರದ ಮುಖ್ಯ ಪ್ರವೇಶದ ದಕ್ಷಿಣಕ್ಕಿರುವ ಶಿಲೆಯ ಮೇಲೆ): ಶಕ 1461, ವಿಲಂಬಿ, ಫಾಲ್ಗುಣ ಶು. 14 (3 ಜನವರಿ 1539, ಶುಕ್ರವಾರ) ದಿನಾಂಕಿತ, ತುಳುವ ಅಚ್ಯುತದೇವರಾಯನಿಗೆ ಆರೋಪಿತ, "ಹಂಪೆ ಹಸ್ತಿನಾವತಿ" (ಹಂಪಿ) ಯಿಂದ ಆಳ್ವಿಕೆ ನಡೆಸುತ್ತಿರುವನೆಂದು ವಿವರಿಸಲಾಗಿದೆ. ಖಂಡ್ಯದ ಜನಾರ್ದನ ಮತ್ತು ಮಾರ್ಕಂಡೇಶ್ವರ ದೇವರುಗಳಿಗೆ, ಕ್ರಮವಾಗಿ 280 ಮತ್ತು 450 ಖಂಡುಗ ಅಕ್ಕಿ ಇಳುವರಿಯ ಹುಣಸೆವಳ್ಳಿ ಮತ್ತು ಕಟೆಗಾರ ಎಂಬ ಎರಡು ಗ್ರಾಮಗಳ ಅನುದಾನವನ್ನು, ಮಲ್ಲರಾಜ-ವೊಡೆಯನ ಮಗ ರಘುಪತಿರಾಜ-ವೊಡೆಯನಿಗೆ ಅಮರ-ಮಾಗಣಿಯಾಗಿ ನೀಡಿದ್ದನ್ನು ದಾಖಲಿಸುತ್ತದೆ.'),
+    citations: [c(SRC_VIJAYANAGARA_INSC_VOL2, 'KN 432 (Khandya, EC VI Cm.80)')],
+    review,
+  },
+  {
+    id: 'inscription-karch-vinsc2-kn433-venkatapati-khandya-grant',
+    name: n('Aravidu Venkatapati grant at Khandya, still styled "from Hampe Hastinavati" (1587)', 'ಖಂಡ್ಯದಲ್ಲಿ ಅರವಿಡು ವೆಂಕಟಪತಿಯ ಅನುದಾನ, ಇನ್ನೂ "ಹಂಪೆ ಹಸ್ತಿನಾವತಿ"ಯಿಂದ ಎಂದು ವಿವರಿಸಲಾಗಿದೆ (1587)'),
+    date: d(1587, 1587, 'year'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as KN 433, on another stone at the same Khandya site: dated Saka 1509, Sarvajitu, Bhadrapada su. 15, a recorded lunar eclipse (6 September 1587), attributed to Aravidu Venkatapati (I), still styled "ruling from Hampe Hastinavati" -- notable since this is more than two decades after the 1565 Battle of Talikota, showing the Aravidu successor state continuing to claim Hampi/Vijayanagara association in its formal royal style. Records a grant of 200 varahas from temple revenues of Janardana, Markandeshvara and Narasimha of Khandya for the talavarike (watch/guard duty), by Krishnappa-nayaka son of Venkatappa and grandson of Erakrishnappa-nayaka.', 'KN 433ರಂತೆ ಪಟ್ಟಿಗತ, ಅದೇ ಖಂಡ್ಯ ತಾಣದ ಇನ್ನೊಂದು ಶಿಲೆಯ ಮೇಲೆ: ಶಕ 1509, ಸರ್ವಜಿತು, ಭಾದ್ರಪದ ಶು. 15, ದಾಖಲಾದ ಚಂದ್ರಗ್ರಹಣ (6 ಸೆಪ್ಟೆಂಬರ್ 1587) ದಿನಾಂಕಿತ, ಅರವಿಡು ವೆಂಕಟಪತಿ (I)ಗೆ ಆರೋಪಿತ, ಇನ್ನೂ "ಹಂಪೆ ಹಸ್ತಿನಾವತಿಯಿಂದ ಆಳ್ವಿಕೆ" ಎಂದು ವಿವರಿಸಲಾಗಿದೆ -- 1565ರ ತಾಳಿಕೋಟೆ ಕದನದ ಎರಡು ದಶಕಗಳಿಗಿಂತ ಹೆಚ್ಚು ನಂತರವೂ ಅರವಿಡು ಉತ್ತರಾಧಿಕಾರಿ ರಾಜ್ಯ ತನ್ನ ಔಪಚಾರಿಕ ರಾಜ ಬಿರುದಿನಲ್ಲಿ ಹಂಪಿ/ವಿಜಯನಗರ ಸಂಬಂಧವನ್ನು ಮುಂದುವರಿಸಿದ್ದನ್ನು ತೋರಿಸುತ್ತದೆ ಎಂಬ ಕಾರಣಕ್ಕೆ ಗಮನಾರ್ಹ. ಖಂಡ್ಯದ ಜನಾರ್ದನ, ಮಾರ್ಕಂಡೇಶ್ವರ ಮತ್ತು ನರಸಿಂಹ ದೇವಾಲಯ ಆದಾಯದಿಂದ ತಳವಾರಿಕೆಗಾಗಿ (ಕಾವಲು ಕರ್ತವ್ಯ) 200 ವರಹ ಅನುದಾನವನ್ನು, ವೆಂಕಟಪ್ಪನ ಮಗ ಮತ್ತು ಎರಕೃಷ್ಣಪ್ಪ-ನಾಯಕನ ಮೊಮ್ಮಗ ಕೃಷ್ಣಪ್ಪ-ನಾಯಕನಿಂದ ನೀಡಲಾಗಿದೆ.'),
+    citations: [c(SRC_VIJAYANAGARA_INSC_VOL2, 'KN 433 (Khandya, EC VI Cm.79)')],
+    review,
+  },
+  {
+    id: 'inscription-karch-vinsc2-kn431-srirangaraya-iii-kalasapura-grant',
+    name: n('Aravidu Srirangaraya III grant at Kalasapura (1663)', 'ಅರವಿಡು ಶ್ರೀರಂಗರಾಯ IIIನ ಕಳಸಾಪುರ ಅನುದಾನ (1663)'),
+    date: d(1663, 1663, 'year'),
+    placeId: 'place-chikkamagaluru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-chikkamagaluru',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('Catalogued as KN 431, on a stone at Kalasapura: dated Saka 1585, Sobhakrit, Ashvija (September-October 1663 CE), attributed to Aravidu Srirangaraya III -- among the last titular Vijayanagara emperors, nearly a century after Talikota. Records a grant of the village Kalasahalli in Kalasapura-sthala, for the car-festival services of the god Chellanarayana of Kalasapura, made by Ramanarajayadeva-maharaja after petitioning the king. A rare dated attestation of the reduced, still-functioning Aravidu court this late in its history.', 'KN 431ರಂತೆ ಪಟ್ಟಿಗತ, ಕಳಸಾಪುರದ ಒಂದು ಶಿಲೆಯ ಮೇಲೆ: ಶಕ 1585, ಶೋಭಕೃತ್, ಆಶ್ವಿಜ (ಸೆಪ್ಟೆಂಬರ್-ಅಕ್ಟೋಬರ್ 1663) ದಿನಾಂಕಿತ, ಅರವಿಡು ಶ್ರೀರಂಗರಾಯ IIIಗೆ ಆರೋಪಿತ -- ತಾಳಿಕೋಟೆಯ ಸುಮಾರು ಒಂದು ಶತಮಾನದ ನಂತರವೂ, ಕೊನೆಯ ಬಿರುದಿನ ವಿಜಯನಗರ ಚಕ್ರವರ್ತಿಗಳಲ್ಲಿ ಒಬ್ಬ. ಕಳಸಾಪುರ-ಸ್ಥಳದ ಕಳಸಹಳ್ಳಿ ಗ್ರಾಮದ ಅನುದಾನವನ್ನು, ಕಳಸಾಪುರದ ಚೆಲ್ಲನಾರಾಯಣ ದೇವರ ರಥೋತ್ಸವ ಸೇವೆಗಳಿಗಾಗಿ, ರಾಜನಿಗೆ ಮನವಿ ಸಲ್ಲಿಸಿದ ನಂತರ ರಾಮನರಾಜಯದೇವ-ಮಹಾರಾಜನಿಂದ ನೀಡಲಾಗಿದೆ. ಈ ತಡವಾದ ಹಂತದಲ್ಲಿ ಇನ್ನೂ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದ್ದ ಸಂಕುಚಿತ ಅರವಿಡು ಆಸ್ಥಾನದ ಅಪರೂಪದ ದಿನಾಂಕಿತ ಸಾಕ್ಷ್ಯ.'),
+    citations: [c(SRC_VIJAYANAGARA_INSC_VOL2, 'KN 431 (Kalasapura, EC VI Cm.153)')],
+    review,
+  },
+)
