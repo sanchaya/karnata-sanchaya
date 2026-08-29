@@ -1,10 +1,14 @@
 #!/usr/bin/env node
+import { existsSync } from 'node:fs'
 import { readdir, readFile, stat, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const output = new URL('../src/data/karnataka-archaeology.generated.js', import.meta.url)
 const rows = Number(process.env.KARCH_ROWS || process.argv[2] || 200)
-const textSampleRows = Number(process.env.KARCH_TEXT_SAMPLE_ROWS || 40)
+// Every item is re-sampled and re-matched against the current locatorTargets list on each
+// run by default (see the "always re-sample" note in discover()) so that a newly added
+// locator target retroactively applies to books already in the collection.
+const textSampleRows = Number(process.env.KARCH_TEXT_SAMPLE_ROWS || 200)
 const concurrency = Number(process.env.KARCH_CONCURRENCY || 6)
 const localArchiveDir = process.env.KARCH_LOCAL_ARCHIVE_DIR || ''
 const includeNetwork = process.env.KARCH_INCLUDE_NETWORK === '1' || !localArchiveDir
@@ -24,6 +28,8 @@ const locatorTargets = [
   { id: 'archive-hint-mysore-archaeology-department', label: n('Mysore Archaeological Department report lead', 'ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ'), terms: ['mysore archaeological department', 'annual report', 'ಮೈಸೂರು ಪುರಾತತ್ವ'], anchorTerms: ['mysore archaeological department', 'ಮೈಸೂರು ಪುರಾತತ್ವ'], targetRecordIds: ['polity-mysore', 'place-mysuru'] },
   { id: 'archive-hint-epigraphia-carnatica-mandya', label: n('Epigraphia Carnatica Mysore/Mandya lead', 'ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ'), terms: ['epigraphia carnatica', 'mandya', 'mysore district'], anchorTerms: ['epigraphia carnatica'], targetRecordIds: ['polity-hoysala', 'place-mysuru'] },
   { id: 'archive-hint-ballari-stone-age', label: n('Ballari stone-age lead', 'ಬಳ್ಳಾರಿ ಶಿಲಾಯುಗ ದಾರಿ'), terms: ['ballary', 'ballari', 'stone age', 'sanganakallu'], anchorTerms: ['ballary', 'ballari'], targetRecordIds: ['deep-chronology-ballari-sanganakallu-kupgal-neolithic'] },
+  { id: 'archive-hint-mysore-wodeyar-history', label: n('Wodeyars of Mysore dynastic-history lead', 'ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ'), terms: ['wodeyar', 'wadiyar', 'wadeyar', 'yaduraya', 'ಒಡೆಯರ್'], anchorTerms: ['wodeyar', 'wadiyar', 'wadeyar', 'ಒಡೆಯರ್'], targetRecordIds: ['polity-mysore', 'person-yaduraya', 'place-mysuru'] },
+  { id: 'archive-hint-tipu-sultan-life', label: n('Tipu Sultan life and achievements lead', 'ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ'), terms: ['tipu sultan', 'tippu sultan', 'srirangapatna', 'seringapatam'], anchorTerms: ['tipu sultan', 'tippu sultan'], targetRecordIds: ['person-tipu-sultan', 'culture-srirangapatna-fort', 'polity-mysore'] },
 ]
 
 const review = { status: 'needs-review', reviewer: null, updatedAt: new Date().toISOString().slice(0, 10) }
@@ -62,10 +68,33 @@ const locatorCandidates = text => {
   }).filter(Boolean).sort((a, b) => b.matchCount - a.matchCount).slice(0, 6)
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url, { headers: { 'User-Agent': 'karnata-sanchaya-archaeology-import/0.1' } })
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`)
-  return response.json()
+async function fetchJson(url, attempts = 3) {
+  let lastError
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, { headers: { 'User-Agent': 'karnata-sanchaya-archaeology-import/0.1' }, signal: AbortSignal.timeout(20000) })
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`)
+      return await response.json()
+    } catch (error) {
+      lastError = error
+      if (attempt < attempts) await new Promise(resolve => setTimeout(resolve, 500 * attempt))
+    }
+  }
+  throw lastError
+}
+
+// Loads the previously generated output (if any) so a re-run can fall back to a prior
+// capture instead of silently dropping an identifier on a transient fetch failure, and
+// so already-sampled OCR locator signals survive even if this run's sample budget
+// (KARCH_TEXT_SAMPLE_ROWS) doesn't reach that identifier again.
+async function loadPrevious() {
+  const recordsByIdentifier = new Map()
+  const sourcesById = new Map()
+  if (!existsSync(output)) return { recordsByIdentifier, sourcesById }
+  const previous = await import(`${output.href}?t=${Date.now()}`)
+  for (const record of previous.karnatakaArchaeologyTexts || []) if (record.archiveIdentifier) recordsByIdentifier.set(record.archiveIdentifier, record)
+  for (const source of previous.karnatakaArchaeologySources || []) sourcesById.set(source.id, source)
+  return { recordsByIdentifier, sourcesById }
 }
 
 async function mapLimit(items, limit, worker) {
@@ -98,8 +127,12 @@ async function discoverIdentifiers() {
 
 async function discover() {
   const localRecords = localArchiveDir ? await discoverLocal(localArchiveDir) : []
-  if (!includeNetwork) return localRecords
-  const identifiers = await discoverIdentifiers()
+  if (!includeNetwork) return { records: localRecords, sources: [] }
+  const { recordsByIdentifier: previousByIdentifier, sourcesById: previousSourcesById } = await loadPrevious()
+  const discovered = await discoverIdentifiers()
+  // Union with previously-captured identifiers so an item that drops out of this run's
+  // search/seed results (e.g. transient indexing gaps) is never silently forgotten.
+  const identifiers = [...new Set([...discovered, ...previousByIdentifier.keys()])]
   const metadataRows = await mapLimit(identifiers, concurrency, async identifier => {
     try {
       return { identifier, metadata: await fetchJson(`https://archive.org/metadata/${identifier}`) }
@@ -109,15 +142,58 @@ async function discover() {
   })
   const records = []
   const sources = []
-  const usable = metadataRows.filter(item => item.metadata?.metadata)
-  for (let index = 0; index < usable.length; index += 1) {
-    const { identifier, metadata } = usable[index]
+  let carriedOver = 0
+  let sampledCount = 0
+  for (const { identifier, metadata, error } of metadataRows) {
+    const previousRecord = previousByIdentifier.get(identifier)
+    if (!metadata?.metadata) {
+      if (previousRecord) {
+        records.push(previousRecord)
+        const previousSource = previousSourcesById.get(previousRecord.citation?.sourceId)
+        if (previousSource) sources.push(previousSource)
+        carriedOver += 1
+        console.warn(`Carried over previously-captured record for ${identifier} (fresh fetch failed: ${error})`)
+      } else {
+        console.warn(`Skipping ${identifier}: metadata fetch failed and no previous capture exists (${error})`)
+      }
+      continue
+    }
     const title = metadata.metadata.title || identifier
     const textFiles = (metadata.files || []).filter(file => file.name?.endsWith('.txt') && ['DjVuTXT', 'Text', 'Plain Text'].includes(file.format || 'DjVuTXT'))
-    if (!textFiles.length) continue
+    if (!textFiles.length) {
+      if (previousRecord) { records.push(previousRecord); const previousSource = previousSourcesById.get(previousRecord.citation?.sourceId); if (previousSource) sources.push(previousSource); carriedOver += 1 }
+      continue
+    }
     const textFile = textFiles.find(file => /_djvu\.txt$/i.test(file.name)) || textFiles[0]
-    const shouldSampleText = textSampleRows > 0 && index < textSampleRows
-    const text = shouldSampleText ? await fetch(fileUrl(identifier, textFile.name), { headers: { 'User-Agent': 'karnata-sanchaya-archaeology-import/0.1' }, signal: AbortSignal.timeout(20000) }).then(response => response.ok ? response.text() : '').catch(error => { console.warn(`OCR text fetch failed for ${identifier} (continuing without a sample): ${error.message}`); return '' }) : ''
+    // Always re-sample within budget (never skip because a prior run already sampled it):
+    // locatorTargets evolves over time, and a book sampled before a new target was added
+    // must still be re-matched against the current target list, not frozen at its old result.
+    const shouldSampleText = textSampleRows > 0 && sampledCount < textSampleRows
+    if (shouldSampleText) sampledCount += 1
+    const previouslySampled = previousRecord?.ocrSignalStatus === 'sampled' && previousRecord.locatorCandidates
+    let locatorResult
+    let ocrSignalStatus
+    if (shouldSampleText) {
+      const text = await fetch(fileUrl(identifier, textFile.name), { headers: { 'User-Agent': 'karnata-sanchaya-archaeology-import/0.1' }, signal: AbortSignal.timeout(20000) }).then(response => response.ok ? response.text() : '').catch(fetchError => { console.warn(`OCR text fetch failed for ${identifier} (continuing without a sample): ${fetchError.message}`); return '' })
+      if (text) {
+        locatorResult = locatorCandidates(text)
+        ocrSignalStatus = 'sampled'
+      } else if (previouslySampled) {
+        // This run's text fetch failed transiently; fall back to the last successful sample
+        // rather than regressing a previously-populated locator-candidate list to empty.
+        locatorResult = previousRecord.locatorCandidates
+        ocrSignalStatus = previousRecord.ocrSignalStatus
+      } else {
+        locatorResult = []
+        ocrSignalStatus = 'not-sampled'
+      }
+    } else if (previouslySampled) {
+      locatorResult = previousRecord.locatorCandidates
+      ocrSignalStatus = previousRecord.ocrSignalStatus
+    } else {
+      locatorResult = []
+      ocrSignalStatus = 'not-sampled'
+    }
     const documentKind = documentKindFor(title)
     const creators = normaliseArray(metadata.metadata.creator).map(String)
     const year = Number(metadata.metadata.year || String(metadata.metadata.date || '').slice(0, 4)) || null
@@ -147,12 +223,13 @@ async function discover() {
       sourceCollections: normaliseArray(metadata.metadata.collection).filter(value => collections.includes(value) || value === 'ServantsOfKnowledge' || value === 'JaiGyan'),
       itemUrl,
       textFile: { name: textFile.name, url: fileUrl(identifier, textFile.name), format: textFile.format || 'DjVuTXT', size: Number(textFile.size) || null },
-      ocrSignalStatus: shouldSampleText ? 'sampled' : 'not-sampled',
-      locatorCandidates: locatorCandidates(text),
+      ocrSignalStatus,
+      locatorCandidates: locatorResult,
       citation: { sourceId, locator: `${identifier}/${textFile.name}; OCR discovery only, verify against page image before citation` },
       review,
     })
   }
+  if (carriedOver) console.log(`Carried over ${carriedOver} previously-captured record(s) that could not be freshly refreshed this run.`)
   return { records: [...localRecords, ...records].sort((a, b) => a.title.localeCompare(b.title)), sources }
 }
 

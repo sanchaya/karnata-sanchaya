@@ -28,7 +28,130 @@ export const karnatakaArchaeologyTexts = [
       "size": 490259
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "seringapatam",
+          "tipu",
+          "tippu"
+        ],
+        "matchCount": 99,
+        "firstOcrLine": 26,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "harihara",
+          "bukka",
+          "vijayanagara",
+          "krishnadevaraya"
+        ],
+        "matchCount": 50,
+        "firstOcrLine": 1758,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tipu sultan",
+          "tippu sultan"
+        ],
+        "matchCount": 15,
+        "firstOcrLine": 73,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mandya",
+          "mysore district",
+          "epigraphia carnatica"
+        ],
+        "matchCount": 13,
+        "firstOcrLine": 67,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wadiyar"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 469,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-j9t4",
       "locator": "damh.archaeologicalsu0000unse_j9t4/damh.archaeologicalsu0000unse_j9t4_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -36,7 +159,168 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-annualreportmyso0000unse1941",
+    "name": {
+      "en": "Annual Report - Mysore Archaeological Department 1941",
+      "kn": "Annual Report - Mysore Archaeological Department 1941"
+    },
+    "archiveIdentifier": "damh.annualreportmyso0000unse1941",
+    "title": "Annual Report - Mysore Archaeological Department 1941",
+    "creators": [],
+    "year": 1942,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.annualreportmyso0000unse1941",
+    "textFile": {
+      "name": "damh.annualreportmyso0000unse1941_djvu.txt",
+      "url": "https://archive.org/download/damh.annualreportmyso0000unse1941/damh.annualreportmyso0000unse1941_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 677885
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tipu",
+          "seringapatam",
+          "tippu",
+          "fanam",
+          "pagoda"
+        ],
+        "matchCount": 236,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "harihara",
+          "bukka",
+          "vijayanagara"
+        ],
+        "matchCount": 186,
+        "firstOcrLine": 374,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tipu sultan",
+          "tippu sultan"
+        ],
+        "matchCount": 42,
+        "firstOcrLine": 792,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mysore district",
+          "epigraphia carnatica",
+          "mandya"
+        ],
+        "matchCount": 14,
+        "firstOcrLine": 253,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar",
+          "wadiyar",
+          "wadeyar"
+        ],
+        "matchCount": 8,
+        "firstOcrLine": 666,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-annualreportmyso0000unse1941",
+      "locator": "damh.annualreportmyso0000unse1941/damh.annualreportmyso0000unse1941_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -63,7 +347,131 @@ export const karnatakaArchaeologyTexts = [
       "size": 577529
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tippu",
+          "seringapatam",
+          "pagoda",
+          "srirangapatna"
+        ],
+        "matchCount": 116,
+        "firstOcrLine": 35,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "harihara",
+          "vijayanagara",
+          "bukka",
+          "hampi"
+        ],
+        "matchCount": 98,
+        "firstOcrLine": 193,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mysore district",
+          "mandya",
+          "epigraphia carnatica"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 533,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tippu sultan",
+          "srirangapatna"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 9174,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 5829,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse1931",
       "locator": "damh.annualreportofmy0000unse1931/damh.annualreportofmy0000unse1931_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -71,7 +479,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -98,7 +506,130 @@ export const karnatakaArchaeologyTexts = [
       "size": 349089
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tipu",
+          "seringapatam",
+          "tippu",
+          "fanam"
+        ],
+        "matchCount": 98,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "harihara",
+          "bukka"
+        ],
+        "matchCount": 58,
+        "firstOcrLine": 625,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mandya",
+          "mysore district",
+          "epigraphia carnatica"
+        ],
+        "matchCount": 22,
+        "firstOcrLine": 235,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tippu sultan",
+          "tipu sultan"
+        ],
+        "matchCount": 9,
+        "firstOcrLine": 185,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wadiyar",
+          "wadeyar"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 4246,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945",
       "locator": "damh.annualreportofmy0000unse_1945/damh.annualreportofmy0000unse_1945_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -106,7 +637,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -133,7 +664,130 @@ export const karnatakaArchaeologyTexts = [
       "size": 660265
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "harihara",
+          "vijayanagara",
+          "bukka",
+          "hampi",
+          "ಹಂಪಿ"
+        ],
+        "matchCount": 107,
+        "firstOcrLine": 152,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tippu",
+          "seringapatam",
+          "pagoda"
+        ],
+        "matchCount": 102,
+        "firstOcrLine": 16,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mysore district",
+          "epigraphia carnatica",
+          "mandya"
+        ],
+        "matchCount": 7,
+        "firstOcrLine": 433,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tippu sultan"
+        ],
+        "matchCount": 5,
+        "firstOcrLine": 10935,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 5281,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-c0a4",
       "locator": "damh.archaeologicalsu0000unse_c0a4/damh.archaeologicalsu0000unse_c0a4_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -141,7 +795,225 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-dasara850000unse-85",
+    "name": {
+      "en": "Dasara - 85",
+      "kn": "Dasara - 85"
+    },
+    "archiveIdentifier": "damh.dasara850000unse_85",
+    "title": "Dasara - 85",
+    "creators": [],
+    "year": 1985,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.dasara850000unse_85",
+    "textFile": {
+      "name": "damh.dasara850000unse_85_djvu.txt",
+      "url": "https://archive.org/download/damh.dasara850000unse_85/damh.dasara850000unse_85_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 162222
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tippu",
+          "srirangapatna",
+          "haidar",
+          "haider"
+        ],
+        "matchCount": 227,
+        "firstOcrLine": 47,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "srirangapatna",
+          "tippu sultan"
+        ],
+        "matchCount": 48,
+        "firstOcrLine": 124,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wadiyar",
+          "yaduraya"
+        ],
+        "matchCount": 45,
+        "firstOcrLine": 362,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "vijayanagar",
+          "hampi",
+          "krishnadevaraya",
+          "harihara",
+          "bukka"
+        ],
+        "matchCount": 28,
+        "firstOcrLine": 62,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-dasara850000unse-85",
+      "locator": "damh.dasara850000unse_85/damh.dasara850000unse_85_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-dasara85nenapina0000unse",
+    "name": {
+      "en": "Dasara - 85 - Nenapina Sanchike",
+      "kn": "Dasara - 85 - Nenapina Sanchike"
+    },
+    "archiveIdentifier": "damh.dasara85nenapina0000unse",
+    "title": "Dasara - 85 - Nenapina Sanchike",
+    "creators": [],
+    "year": 1985,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.dasara85nenapina0000unse",
+    "textFile": {
+      "name": "damh.dasara85nenapina0000unse_djvu.txt",
+      "url": "https://archive.org/download/damh.dasara85nenapina0000unse/damh.dasara85nenapina0000unse_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 443940
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 24,
+        "firstOcrLine": 327,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ"
+        ],
+        "matchCount": 15,
+        "firstOcrLine": 78,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-dasara85nenapina0000unse",
+      "locator": "damh.dasara85nenapina0000unse/damh.dasara85nenapina0000unse_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -168,7 +1040,107 @@ export const karnatakaArchaeologyTexts = [
       "size": 989862
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "seringapatam",
+          "tipu",
+          "tippu"
+        ],
+        "matchCount": 178,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "harihara",
+          "bukka",
+          "vijayanagar",
+          "vijayanagara"
+        ],
+        "matchCount": 57,
+        "firstOcrLine": 7370,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tipu sultan",
+          "tippu sultan"
+        ],
+        "matchCount": 47,
+        "firstOcrLine": 1165,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mandya",
+          "mysore district",
+          "epigraphia carnatica"
+        ],
+        "matchCount": 30,
+        "firstOcrLine": 10,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v14",
       "locator": "damh.epigraphiacarnat0000unse_v14/damh.epigraphiacarnat0000unse_v14_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -176,7 +1148,490 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-epigraphicalstud0000drbr",
+    "name": {
+      "en": "Epigraphical Studies",
+      "kn": "Epigraphical Studies"
+    },
+    "archiveIdentifier": "damh.epigraphicalstud0000drbr",
+    "title": "Epigraphical Studies",
+    "creators": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1997,
+    "documentKind": "research-journal",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.epigraphicalstud0000drbr",
+    "textFile": {
+      "name": "damh.epigraphicalstud0000drbr_djvu.txt",
+      "url": "https://archive.org/download/damh.epigraphicalstud0000drbr/damh.epigraphicalstud0000drbr_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 1116911
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tipu",
+          "tippu",
+          "haidar",
+          "seringapatam"
+        ],
+        "matchCount": 113,
+        "firstOcrLine": 35,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "hampi",
+          "harihara",
+          "vijayanagar",
+          "bukka"
+        ],
+        "matchCount": 94,
+        "firstOcrLine": 468,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "annual report",
+          "mysore archaeological department"
+        ],
+        "matchCount": 15,
+        "firstOcrLine": 1337,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "tipu sultan",
+          "tippu sultan",
+          "seringapatam"
+        ],
+        "matchCount": 7,
+        "firstOcrLine": 5579,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica",
+          "mysore district"
+        ],
+        "matchCount": 4,
+        "firstOcrLine": 14090,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 20492,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-epigraphicalstud0000drbr",
+      "locator": "damh.epigraphicalstud0000drbr/damh.epigraphicalstud0000drbr_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-historyofwodeyar0000asat",
+    "name": {
+      "en": "History Of The Wodeyars Of Mysore (1610 - 1748)",
+      "kn": "History Of The Wodeyars Of Mysore (1610 - 1748)"
+    },
+    "archiveIdentifier": "damh.historyofwodeyar0000asat",
+    "title": "History Of The Wodeyars Of Mysore (1610 - 1748)",
+    "creators": [
+      "A. Satyanarayana"
+    ],
+    "year": 1996,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.historyofwodeyar0000asat",
+    "textFile": {
+      "name": "damh.historyofwodeyar0000asat_djvu.txt",
+      "url": "https://archive.org/download/damh.historyofwodeyar0000asat/damh.historyofwodeyar0000asat_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 758547
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "srirangapatna",
+          "haidar",
+          "tipu",
+          "haider"
+        ],
+        "matchCount": 1625,
+        "firstOcrLine": 4,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar",
+          "yaduraya",
+          "wadeyar"
+        ],
+        "matchCount": 969,
+        "firstOcrLine": 133,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "srirangapatna",
+          "tipu sultan"
+        ],
+        "matchCount": 265,
+        "firstOcrLine": 234,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "vijayanagara",
+          "hampi",
+          "harihara",
+          "bukka"
+        ],
+        "matchCount": 234,
+        "firstOcrLine": 294,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mandya",
+          "epigraphia carnatica"
+        ],
+        "matchCount": 23,
+        "firstOcrLine": 839,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mysore archaeological department"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 929,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat",
+      "locator": "damh.historyofwodeyar0000asat/damh.historyofwodeyar0000asat_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-indexannualrepor0000mhkr-1929",
+    "name": {
+      "en": "Index - Annual Reports - 1906 - 1922",
+      "kn": "Index - Annual Reports - 1906 - 1922"
+    },
+    "archiveIdentifier": "damh.indexannualrepor0000mhkr_1929",
+    "title": "Index - Annual Reports - 1906 - 1922",
+    "creators": [
+      "M. H. Krishna Iyenger"
+    ],
+    "year": 1929,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.indexannualrepor0000mhkr_1929",
+    "textFile": {
+      "name": "damh.indexannualrepor0000mhkr_1929_djvu.txt",
+      "url": "https://archive.org/download/damh.indexannualrepor0000mhkr_1929/damh.indexannualrepor0000mhkr_1929_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 598002
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tippu",
+          "seringapatam",
+          "haidar",
+          "tipu",
+          "pagoda",
+          "haider",
+          "fanam"
+        ],
+        "matchCount": 218,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar",
+          "harihara",
+          "bukka",
+          "vijayanagara",
+          "hampi"
+        ],
+        "matchCount": 156,
+        "firstOcrLine": 182,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tippu sultan",
+          "tipu sultan"
+        ],
+        "matchCount": 18,
+        "firstOcrLine": 15724,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-indexannualrepor0000mhkr-1929",
+      "locator": "damh.indexannualrepor0000mhkr_1929/damh.indexannualrepor0000mhkr_1929_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -205,7 +1660,104 @@ export const karnatakaArchaeologyTexts = [
       "size": 213900
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "hampi",
+          "harihara",
+          "bukka",
+          "vijayanagar",
+          "krishnadevaraya"
+        ],
+        "matchCount": 263,
+        "firstOcrLine": 8,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tippu",
+          "pagoda"
+        ],
+        "matchCount": 18,
+        "firstOcrLine": 18,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 65,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "tippu sultan"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 589,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-inscriptionsatvi0000chan-vol-i-ser-8",
       "locator": "damh.inscriptionsatvi0000chan_vol_I_ser_8/damh.inscriptionsatvi0000chan_vol_I_ser_8_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -213,7 +1765,276 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-inscriptionsofko0000chan-vol-iii",
+    "name": {
+      "en": "Inscriptions Of Koppal District - Volum III",
+      "kn": "Inscriptions Of Koppal District - Volum III"
+    },
+    "archiveIdentifier": "damh.inscriptionsofko0000chan_vol_iii",
+    "title": "Inscriptions Of Koppal District - Volum III",
+    "creators": [
+      "Channabasappa S Patil"
+    ],
+    "year": 1998,
+    "documentKind": "epigraphy-corpus",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.inscriptionsofko0000chan_vol_iii",
+    "textFile": {
+      "name": "damh.inscriptionsofko0000chan_vol_iii_djvu.txt",
+      "url": "https://archive.org/download/damh.inscriptionsofko0000chan_vol_iii/damh.inscriptionsofko0000chan_vol_iii_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 229336
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "harihara",
+          "hampi"
+        ],
+        "matchCount": 84,
+        "firstOcrLine": 63,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "haidar",
+          "tipu",
+          "haider",
+          "pagoda"
+        ],
+        "matchCount": 43,
+        "firstOcrLine": 49,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "tipu sultan"
+        ],
+        "matchCount": 5,
+        "firstOcrLine": 649,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica",
+          "mandya"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 96,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-inscriptionsofko0000chan-vol-iii",
+      "locator": "damh.inscriptionsofko0000chan_vol_iii/damh.inscriptionsofko0000chan_vol_iii_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-internationalcon0000unse-2010",
+    "name": {
+      "en": "International Confrence on Life and Achievements of Tipu Sultan",
+      "kn": "International Confrence on Life and Achievements of Tipu Sultan"
+    },
+    "archiveIdentifier": "damh.internationalcon0000unse_2010",
+    "title": "International Confrence on Life and Achievements of Tipu Sultan",
+    "creators": [],
+    "year": 2010,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.internationalcon0000unse_2010",
+    "textFile": {
+      "name": "damh.internationalcon0000unse_2010_djvu.txt",
+      "url": "https://archive.org/download/damh.internationalcon0000unse_2010/damh.internationalcon0000unse_2010_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 115634
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "tipu",
+          "mysore",
+          "tippu",
+          "haider",
+          "haidar",
+          "srirangapatna",
+          "pagoda"
+        ],
+        "matchCount": 489,
+        "firstOcrLine": 9,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "tipu sultan",
+          "tippu sultan",
+          "srirangapatna"
+        ],
+        "matchCount": 130,
+        "firstOcrLine": 9,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar"
+        ],
+        "matchCount": 11,
+        "firstOcrLine": 1953,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "vijayanagar"
+        ],
+        "matchCount": 5,
+        "firstOcrLine": 1248,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-internationalcon0000unse-2010",
+      "locator": "damh.internationalcon0000unse_2010/damh.internationalcon0000unse_2010_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -248,7 +2069,153 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-karnatakashasana0000chan-sam-2",
+    "name": {
+      "en": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu",
+      "kn": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu"
+    },
+    "archiveIdentifier": "damh.karnatakashasana0000chan_sam_2",
+    "title": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu",
+    "creators": [
+      "Channabasappa S. Patil"
+    ],
+    "year": 1997,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.karnatakashasana0000chan_sam_2",
+    "textFile": {
+      "name": "damh.karnatakashasana0000chan_sam_2_djvu.txt",
+      "url": "https://archive.org/download/damh.karnatakashasana0000chan_sam_2/damh.karnatakashasana0000chan_sam_2_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 829908
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ"
+        ],
+        "matchCount": 121,
+        "firstOcrLine": 83,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-karnatakashasana0000chan-sam-2",
+      "locator": "damh.karnatakashasana0000chan_sam_2/damh.karnatakashasana0000chan_sam_2_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-prachinakarnatak0000srin",
+    "name": {
+      "en": "Prachina Karnatakada Adalita Paribhashakosha",
+      "kn": "Prachina Karnatakada Adalita Paribhashakosha"
+    },
+    "archiveIdentifier": "damh.prachinakarnatak0000srin",
+    "title": "Prachina Karnatakada Adalita Paribhashakosha",
+    "creators": [
+      "Srinivasa Ritti"
+    ],
+    "year": 2000,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.prachinakarnatak0000srin",
+    "textFile": {
+      "name": "damh.prachinakarnatak0000srin_djvu.txt",
+      "url": "https://archive.org/download/damh.prachinakarnatak0000srin/damh.prachinakarnatak0000srin_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 1197647
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "ವಿಜಯನಗರ",
+          "hampi"
+        ],
+        "matchCount": 14,
+        "firstOcrLine": 252,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 481,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-prachinakarnatak0000srin",
+      "locator": "damh.prachinakarnatak0000srin/damh.prachinakarnatak0000srin_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -285,7 +2252,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -314,7 +2281,81 @@ export const karnatakaArchaeologyTexts = [
       "size": 2100971
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "tipu",
+          "mysore",
+          "seringapatam",
+          "haidar",
+          "fanam"
+        ],
+        "matchCount": 319,
+        "firstOcrLine": 809,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tipu sultan"
+        ],
+        "matchCount": 46,
+        "firstOcrLine": 837,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagar"
+        ],
+        "matchCount": 7,
+        "firstOcrLine": 1639,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-cambridgehistory0005hhdo",
       "locator": "damh.cambridgehistory0005hhdo/damh.cambridgehistory0005hhdo_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -322,7 +2363,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -382,6 +2423,29 @@ export const karnatakaArchaeologyTexts = [
         }
       },
       {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "seringapatam",
+          "tipu sultan"
+        ],
+        "matchCount": 72,
+        "firstOcrLine": 67,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
         "id": "archive-hint-vijayanagara-studies",
         "label": {
           "en": "Vijayanagara Adhyayana research lead",
@@ -403,6 +2467,28 @@ export const karnatakaArchaeologyTexts = [
           "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
           "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
         }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 460,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
       }
     ],
     "citation": {
@@ -412,7 +2498,92 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-vijayanagarainsc0000drbr-vol-ii",
+    "name": {
+      "en": "Vijayanagara Inscriptions - Volume II",
+      "kn": "Vijayanagara Inscriptions - Volume II"
+    },
+    "archiveIdentifier": "damh.vijayanagarainsc0000drbr_vol_ii",
+    "title": "Vijayanagara Inscriptions - Volume II",
+    "creators": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1986,
+    "documentKind": "epigraphy-corpus",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_ii",
+    "textFile": {
+      "name": "damh.vijayanagarainsc0000drbr_vol_ii_djvu.txt",
+      "url": "https://archive.org/download/damh.vijayanagarainsc0000drbr_vol_ii/damh.vijayanagarainsc0000drbr_vol_ii_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 813221
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "harihara",
+          "vijayanagara",
+          "bukka",
+          "hampi"
+        ],
+        "matchCount": 529,
+        "firstOcrLine": 123,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 4,
+        "firstOcrLine": 179,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-ii",
+      "locator": "damh.vijayanagarainsc0000drbr_vol_ii/damh.vijayanagarainsc0000drbr_vol_ii_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -441,7 +2612,104 @@ export const karnatakaArchaeologyTexts = [
       "size": 781830
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "harihara",
+          "bukka",
+          "krishnadevaraya",
+          "hampi"
+        ],
+        "matchCount": 484,
+        "firstOcrLine": 40,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mysore district",
+          "mandya",
+          "epigraphia carnatica"
+        ],
+        "matchCount": 91,
+        "firstOcrLine": 132,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "haidar"
+        ],
+        "matchCount": 75,
+        "firstOcrLine": 54,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "wodeyar"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 14600,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iii",
       "locator": "damh.vijayanagarainsc0000drbr_vol_iii/damh.vijayanagarainsc0000drbr_vol_iii_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -449,7 +2717,181 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-vijayanagarainsc0000drbr-vol-iv",
+    "name": {
+      "en": "Vijayanagara Inscriptions - Volume IV",
+      "kn": "Vijayanagara Inscriptions - Volume IV"
+    },
+    "archiveIdentifier": "damh.vijayanagarainsc0000drbr_vol_iv",
+    "title": "Vijayanagara Inscriptions - Volume IV",
+    "creators": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1996,
+    "documentKind": "epigraphy-corpus",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_iv",
+    "textFile": {
+      "name": "damh.vijayanagarainsc0000drbr_vol_iv_djvu.txt",
+      "url": "https://archive.org/download/damh.vijayanagarainsc0000drbr_vol_iv/damh.vijayanagarainsc0000drbr_vol_iv_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 797623
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "vijayanagara",
+          "harihara",
+          "bukka",
+          "hampi",
+          "vijayanagar",
+          "krishnadevaraya"
+        ],
+        "matchCount": 547,
+        "firstOcrLine": 148,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "tippu",
+          "mysore",
+          "pagoda"
+        ],
+        "matchCount": 14,
+        "firstOcrLine": 163,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 363,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iv",
+      "locator": "damh.vijayanagarainsc0000drbr_vol_iv/damh.vijayanagarainsc0000drbr_vol_iv_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-damh-vijayanagaradaha0000chan-sam-1",
+    "name": {
+      "en": "Vijayanagarada (Hampeya) Shasanagalu",
+      "kn": "Vijayanagarada (Hampeya) Shasanagalu"
+    },
+    "archiveIdentifier": "damh.vijayanagaradaha0000chan_sam_1",
+    "title": "Vijayanagarada (Hampeya) Shasanagalu",
+    "creators": [
+      "Channabasappa S Patila"
+    ],
+    "year": 1996,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/damh.vijayanagaradaha0000chan_sam_1",
+    "textFile": {
+      "name": "damh.vijayanagaradaha0000chan_sam_1_djvu.txt",
+      "url": "https://archive.org/download/damh.vijayanagaradaha0000chan_sam_1/damh.vijayanagaradaha0000chan_sam_1_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 432420
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ"
+        ],
+        "matchCount": 172,
+        "firstOcrLine": 7,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-damh-vijayanagaradaha0000chan-sam-1",
+      "locator": "damh.vijayanagaradaha0000chan_sam_1/damh.vijayanagaradaha0000chan_sam_1_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -524,6 +2966,28 @@ export const karnatakaArchaeologyTexts = [
           "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
           "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
         }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 3462,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
       }
     ],
     "citation": {
@@ -533,7 +2997,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -562,7 +3026,59 @@ export const karnatakaArchaeologyTexts = [
       "size": 1410169
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "hampi",
+          "harihara",
+          "krishnadevaraya"
+        ],
+        "matchCount": 991,
+        "firstOcrLine": 44,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 4,
+        "firstOcrLine": 3961,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
       "locator": "asi.ka.vijayanagaraadhy0000drrg/asi.ka.vijayanagaraadhy0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -570,7 +3086,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -599,7 +3115,127 @@ export const karnatakaArchaeologyTexts = [
       "size": 1702808
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "harihara",
+          "hampi"
+        ],
+        "matchCount": 1376,
+        "firstOcrLine": 4,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tipu",
+          "haider"
+        ],
+        "matchCount": 20,
+        "firstOcrLine": 50,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್",
+          "wodeyar"
+        ],
+        "matchCount": 8,
+        "firstOcrLine": 1055,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 4375,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "tipu sultan"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 16251,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
       "locator": "asi.ka.vijayanagaraadhy0000unse/asi.ka.vijayanagaraadhy0000unse_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -607,7 +3243,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -685,6 +3321,28 @@ export const karnatakaArchaeologyTexts = [
           "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
           "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
         }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 19102,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
       }
     ],
     "citation": {
@@ -694,7 +3352,96 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-asi-ka-vijayanagaraadhy0000-13drrg",
+    "name": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-13",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-13"
+    },
+    "archiveIdentifier": "asi.ka.vijayanagaraadhy0000.13drrg",
+    "title": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-13",
+    "creators": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2008,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/asi.ka.vijayanagaraadhy0000.13drrg",
+    "textFile": {
+      "name": "asi.ka.vijayanagaraadhy0000.13drrg_djvu.txt",
+      "url": "https://archive.org/download/asi.ka.vijayanagaraadhy0000.13drrg/asi.ka.vijayanagaraadhy0000.13drrg_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 2027251
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "hampi",
+          "krishnadevaraya",
+          "harihara"
+        ],
+        "matchCount": 1320,
+        "firstOcrLine": 4,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 17062,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg",
+      "locator": "asi.ka.vijayanagaraadhy0000.13drrg/asi.ka.vijayanagaraadhy0000.13drrg_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -755,6 +3502,28 @@ export const karnatakaArchaeologyTexts = [
         }
       },
       {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 13,
+        "firstOcrLine": 2352,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
         "id": "archive-hint-epigraphia-carnatica-mandya",
         "label": {
           "en": "Epigraphia Carnatica Mysore/Mandya lead",
@@ -783,7 +3552,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -840,6 +3609,28 @@ export const karnatakaArchaeologyTexts = [
         }
       },
       {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 5,
+        "firstOcrLine": 720,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
         "id": "archive-hint-epigraphia-carnatica-mandya",
         "label": {
           "en": "Epigraphia Carnatica Mysore/Mandya lead",
@@ -868,7 +3659,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -897,7 +3688,58 @@ export const karnatakaArchaeologyTexts = [
       "size": 1728783
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagar",
+          "vijayanagara",
+          "hampi",
+          "krishnadevaraya"
+        ],
+        "matchCount": 1176,
+        "firstOcrLine": 12,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 4,
+        "firstOcrLine": 2047,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
       "locator": "asi.ka.vijayanagaraadhysamputa-16.0000drrg/asi.ka.vijayanagaraadhysamputa-16.0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -905,7 +3747,272 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+    "name": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17"
+    },
+    "archiveIdentifier": "asi.ka.vijayanagaraadhysamputa-17.0000drrg",
+    "title": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17",
+    "creators": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2013,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-17.0000drrg",
+    "textFile": {
+      "name": "asi.ka.vijayanagaraadhysamputa-17.0000drrg_djvu.txt",
+      "url": "https://archive.org/download/asi.ka.vijayanagaraadhysamputa-17.0000drrg/asi.ka.vijayanagaraadhysamputa-17.0000drrg_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 1286682
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "hampi",
+          "krishnadevaraya"
+        ],
+        "matchCount": 786,
+        "firstOcrLine": 15,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 38,
+        "firstOcrLine": 5453,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "tipu"
+        ],
+        "matchCount": 19,
+        "firstOcrLine": 63,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 3163,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+      "locator": "asi.ka.vijayanagaraadhysamputa-17.0000drrg/asi.ka.vijayanagaraadhysamputa-17.0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-asi-ka-vijayanagaraadhysamputa-18-0000drrg",
+    "name": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-18",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-18"
+    },
+    "archiveIdentifier": "asi.ka.vijayanagaraadhysamputa-18.0000drrg",
+    "title": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-18",
+    "creators": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2014,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-18.0000drrg",
+    "textFile": {
+      "name": "asi.ka.vijayanagaraadhysamputa-18.0000drrg_djvu.txt",
+      "url": "https://archive.org/download/asi.ka.vijayanagaraadhysamputa-18.0000drrg/asi.ka.vijayanagaraadhysamputa-18.0000drrg_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 1280556
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "harihara",
+          "hampi",
+          "vijayanagar",
+          "krishnadevaraya",
+          "bukka"
+        ],
+        "matchCount": 839,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 886,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಮೈಸೂರು ಪುರಾತತ್ವ"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 6495,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 4232,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-18-0000drrg",
+      "locator": "asi.ka.vijayanagaraadhysamputa-18.0000drrg/asi.ka.vijayanagaraadhysamputa-18.0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -934,7 +4041,102 @@ export const karnatakaArchaeologyTexts = [
       "size": 1430914
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagar",
+          "vijayanagara",
+          "hampi",
+          "krishnadevaraya",
+          "harihara"
+        ],
+        "matchCount": 1127,
+        "firstOcrLine": 7,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 15,
+        "firstOcrLine": 5009,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಮೈಸೂರು ಪುರಾತತ್ವ",
+          "annual report"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 1527,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 4974,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
       "locator": "asi.ka.vijayanagaraadhy-samputa-19.0000drrg/asi.ka.vijayanagaraadhy-samputa-19.0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -942,7 +4144,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -971,7 +4173,55 @@ export const karnatakaArchaeologyTexts = [
       "size": 730240
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "hampi"
+        ],
+        "matchCount": 340,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 22,
+        "firstOcrLine": 3423,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
       "locator": "asi.ka.vijayanagaraadha0000.2mlsh/asi.ka.vijayanagaraadha0000.2mlsh_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -979,7 +4229,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1008,7 +4258,81 @@ export const karnatakaArchaeologyTexts = [
       "size": 1354442
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "krishnadevaraya",
+          "hampi",
+          "vijayanagar"
+        ],
+        "matchCount": 942,
+        "firstOcrLine": 5,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "mysore district",
+          "epigraphia carnatica",
+          "mandya"
+        ],
+        "matchCount": 4,
+        "firstOcrLine": 7738,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 4462,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
       "locator": "asi.ka.vijayanagaraadhysamputa-20.0000drrg/asi.ka.vijayanagaraadhysamputa-20.0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -1016,7 +4340,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1073,6 +4397,28 @@ export const karnatakaArchaeologyTexts = [
           "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
           "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
         }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 5806,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
       }
     ],
     "citation": {
@@ -1082,7 +4428,164 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-asi-ka-vijayanagaradhya0000tven",
+    "name": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-22",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-22"
+    },
+    "archiveIdentifier": "asi.ka.vijayanagaradhya0000tven",
+    "title": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-22",
+    "creators": [
+      "ಟಿ. ವೆಂಕಟೇಶ್"
+    ],
+    "year": 2020,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/asi.ka.vijayanagaradhya0000tven",
+    "textFile": {
+      "name": "asi.ka.vijayanagaradhya0000tven_djvu.txt",
+      "url": "https://archive.org/download/asi.ka.vijayanagaradhya0000tven/asi.ka.vijayanagaradhya0000tven_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 1427536
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "hampi",
+          "krishnadevaraya"
+        ],
+        "matchCount": 1106,
+        "firstOcrLine": 16,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-haidar-tipu-coinage",
+        "label": {
+          "en": "Haidar Ali / Tipu Sultan coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ / ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "coin-mysore-srirangapatna-tipu-lead",
+          "coin-haidar-ali-bahaduri-pagoda-lead",
+          "person-hyder-ali",
+          "person-tipu-sultan"
+        ],
+        "matchedTerms": [
+          "mysore",
+          "haidar",
+          "tipu",
+          "tippu"
+        ],
+        "matchCount": 53,
+        "firstOcrLine": 34,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "annual report",
+          "mysore archaeological department"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 4435,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 4223,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-tipu-sultan-life",
+        "label": {
+          "en": "Tipu Sultan life and achievements lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಜೀವನ ಮತ್ತು ಸಾಧನೆಗಳ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "person-tipu-sultan",
+          "culture-srirangapatna-fort",
+          "polity-mysore"
+        ],
+        "matchedTerms": [
+          "tippu sultan"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 5528,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaradhya0000tven",
+      "locator": "asi.ka.vijayanagaradhya0000tven/asi.ka.vijayanagaradhya0000tven_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1111,7 +4614,58 @@ export const karnatakaArchaeologyTexts = [
       "size": 686987
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "harihara",
+          "bukka"
+        ],
+        "matchCount": 320,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 6204,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mlsh",
       "locator": "asi.ka.vijayanagaraadha0000mlsh/asi.ka.vijayanagaraadha0000mlsh_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -1119,7 +4673,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1148,7 +4702,77 @@ export const karnatakaArchaeologyTexts = [
       "size": 554477
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar"
+        ],
+        "matchCount": 211,
+        "firstOcrLine": 1,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "annual report",
+          "mysore archaeological department"
+        ],
+        "matchCount": 8,
+        "firstOcrLine": 396,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 398,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr",
       "locator": "asi.ka.vijayanagaraadha0000.4mvkr/asi.ka.vijayanagaraadha0000.4mvkr_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -1156,7 +4780,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1265,7 +4889,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1365,6 +4989,28 @@ export const karnatakaArchaeologyTexts = [
           "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
           "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
         }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 6161,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
       }
     ],
     "citation": {
@@ -1374,7 +5020,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1403,7 +5049,79 @@ export const karnatakaArchaeologyTexts = [
       "size": 833594
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "hampi",
+          "vijayanagar"
+        ],
+        "matchCount": 659,
+        "firstOcrLine": 4,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "annual report",
+          "mysore archaeological department"
+        ],
+        "matchCount": 4,
+        "firstOcrLine": 219,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica",
+          "mandya"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 223,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
       "locator": "asi.ka.vijayanagaraadhysam-7.0000krra/asi.ka.vijayanagaraadhysam-7.0000krra_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -1411,7 +5129,7 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1440,7 +5158,101 @@ export const karnatakaArchaeologyTexts = [
       "size": 950137
     },
     "ocrSignalStatus": "sampled",
-    "locatorCandidates": [],
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "harihara",
+          "hampi",
+          "vijayanagar"
+        ],
+        "matchCount": 618,
+        "firstOcrLine": 18,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "annual report",
+          "ಮೈಸೂರು ಪುರಾತತ್ವ"
+        ],
+        "matchCount": 6,
+        "firstOcrLine": 232,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 3,
+        "firstOcrLine": 236,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 1724,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
     "citation": {
       "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
       "locator": "asi.ka.vijayanagaraadhysamputa-8.0000drrg/asi.ka.vijayanagaraadhysamputa-8.0000drrg_djvu.txt; OCR discovery only, verify against page image before citation"
@@ -1448,7 +5260,140 @@ export const karnatakaArchaeologyTexts = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "archive-karch-asi-ka-vijayanagaraadhy0000krra",
+    "name": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-9",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-9"
+    },
+    "archiveIdentifier": "asi.ka.vijayanagaraadhy0000krra",
+    "title": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-9",
+    "creators": [
+      "ಕೆ. ಆರ್. ರಾಮಕೃಷ್ಣ"
+    ],
+    "year": 2004,
+    "documentKind": "archaeology-report",
+    "sourceCollections": [
+      "KarnatakaArchaeology",
+      "ServantsOfKnowledge",
+      "JaiGyan"
+    ],
+    "itemUrl": "https://archive.org/details/asi.ka.vijayanagaraadhy0000krra",
+    "textFile": {
+      "name": "asi.ka.vijayanagaraadhy0000krra_djvu.txt",
+      "url": "https://archive.org/download/asi.ka.vijayanagaraadhy0000krra/asi.ka.vijayanagaraadhy0000krra_djvu.txt",
+      "format": "DjVuTXT",
+      "size": 1231068
+    },
+    "ocrSignalStatus": "sampled",
+    "locatorCandidates": [
+      {
+        "id": "archive-hint-vijayanagara-studies",
+        "label": {
+          "en": "Vijayanagara Adhyayana research lead",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಶೋಧನಾ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-vijayanagara",
+          "place-hampi",
+          "person-krishnadevaraya",
+          "culture-hampi-vittala-complex"
+        ],
+        "matchedTerms": [
+          "ವಿಜಯನಗರ",
+          "ಹಂಪಿ",
+          "vijayanagara",
+          "vijayanagar",
+          "bukka",
+          "hampi",
+          "harihara"
+        ],
+        "matchCount": 900,
+        "firstOcrLine": 18,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-archaeology-department",
+        "label": {
+          "en": "Mysore Archaeological Department report lead",
+          "kn": "ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆ ವರದಿ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "annual report",
+          "mysore archaeological department",
+          "ಮೈಸೂರು ಪುರಾತತ್ವ"
+        ],
+        "matchCount": 7,
+        "firstOcrLine": 2686,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-epigraphia-carnatica-mandya",
+        "label": {
+          "en": "Epigraphia Carnatica Mysore/Mandya lead",
+          "kn": "ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ ಮೈಸೂರು/ಮಂಡ್ಯ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-hoysala",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "epigraphia carnatica"
+        ],
+        "matchCount": 2,
+        "firstOcrLine": 14106,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      },
+      {
+        "id": "archive-hint-mysore-wodeyar-history",
+        "label": {
+          "en": "Wodeyars of Mysore dynastic-history lead",
+          "kn": "ಮೈಸೂರು ಒಡೆಯರ್ ವಂಶ ಚರಿತ್ರೆ ದಾರಿ"
+        },
+        "targetRecordIds": [
+          "polity-mysore",
+          "person-yaduraya",
+          "place-mysuru"
+        ],
+        "matchedTerms": [
+          "ಒಡೆಯರ್"
+        ],
+        "matchCount": 1,
+        "firstOcrLine": 10540,
+        "status": "needs-page-image-review",
+        "reviewNote": {
+          "en": "OCR term match only; verify against the printed page and item locator before using as evidence.",
+          "kn": "OCR ಪದ ಹೊಂದಾಣಿಕೆ ಮಾತ್ರ; ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸುವ ಮೊದಲು ಮುದ್ರಿತ ಪುಟ ಮತ್ತು ಕಡತ ಸ್ಥಾನಸೂಚಿಯನ್ನು ಪರಿಶೀಲಿಸಿ."
+        }
+      }
+    ],
+    "citation": {
+      "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000krra",
+      "locator": "asi.ka.vijayanagaraadhy0000krra/asi.ka.vijayanagaraadhy0000krra_djvu.txt; OCR discovery only, verify against page image before citation"
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   }
 ]
@@ -1472,43 +5417,21 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr",
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
     "type": "digitised-archive-item",
     "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-4",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-4"
-    },
-    "authors": [
-      "ಪ್ರೊ ಎಂ. ವಿ. ಕೃಷ್ಣಪ್ಪ"
-    ],
-    "year": 1999,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000.4mvkr",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-8",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-8"
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17"
     },
     "authors": [
       "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
     ],
-    "year": 2003,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-8.0000drrg",
+    "year": 2013,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-17.0000drrg",
     "scope": {
       "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
       "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
@@ -1516,161 +5439,7 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20"
-    },
-    "authors": [
-      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-    ],
-    "year": 2017,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-20.0000drrg",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-7",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-7"
-    },
-    "authors": [
-      "ಕೆ. ಆರ್. ರಾಮಕೃಷ್ಣ"
-    ],
-    "year": 2003,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysam-7.0000krra",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-10",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-10"
-    },
-    "authors": [
-      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-    ],
-    "year": 2005,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000drrg",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mvkr",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-6",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-6"
-    },
-    "authors": [
-      "ಪ್ರೊ ಎಂ. ವಿ. ಕೃಷ್ಣಪ್ಪ"
-    ],
-    "year": 2001,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000mvkr",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-1-dvde",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-1",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-1"
-    },
-    "authors": [
-      "ಡಿ. ವಿ .ದೇವರಾಜ್"
-    ],
-    "year": 1996,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000.1.dvde",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-14-0000drrg",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14"
-    },
-    "authors": [
-      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-    ],
-    "year": 2010,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-14.0000drrg",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-19",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-19"
-    },
-    "authors": [
-      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-    ],
-    "year": 2014,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy-samputa-19.0000drrg",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1692,65 +5461,21 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-5-0000prom",
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-14-0000drrg",
     "type": "digitised-archive-item",
     "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-5",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-5"
-    },
-    "authors": [
-      "ಪ್ರೊ ಎಂ. ವಿ. ಕೃಷ್ಣಪ್ಪ"
-    ],
-    "year": 2000,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-5.0000prom",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-12-0000drrg",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-12",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-12"
-    },
-    "authors": [
-      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-    ],
-    "year": 2007,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-12.0000drrg",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-15",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-15"
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14"
     },
     "authors": [
       "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
     ],
     "year": 2010,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000.15unse",
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-14.0000drrg",
     "scope": {
       "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
       "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
@@ -1758,21 +5483,21 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
     "type": "digitised-archive-item",
     "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-16",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-16"
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-19",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-19"
     },
     "authors": [
       "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
     ],
-    "year": 2012,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-16.0000drrg",
+    "year": 2014,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy-samputa-19.0000drrg",
     "scope": {
       "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
       "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
@@ -1780,7 +5505,161 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-1-dvde",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-1",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-1"
+    },
+    "authors": [
+      "ಡಿ. ವಿ .ದೇವರಾಜ್"
+    ],
+    "year": 1996,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000.1.dvde",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mvkr",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-6",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-6"
+    },
+    "authors": [
+      "ಪ್ರೊ ಎಂ. ವಿ. ಕೃಷ್ಣಪ್ಪ"
+    ],
+    "year": 2001,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000mvkr",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-7",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-7"
+    },
+    "authors": [
+      "ಕೆ. ಆರ್. ರಾಮಕೃಷ್ಣ"
+    ],
+    "year": 2003,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysam-7.0000krra",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-10",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-10"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2005,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-8",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-8"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2003,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-8.0000drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-13",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-13"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2008,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000.13drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-18-0000drrg",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-18",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-18"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2014,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-18.0000drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1802,21 +5681,21 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
-    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000krra",
     "type": "digitised-archive-item",
     "title": {
-      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11",
-      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11"
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-9",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-9"
     },
     "authors": [
-      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+      "ಕೆ. ಆರ್. ರಾಮಕೃಷ್ಣ"
     ],
-    "year": 2006,
-    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000unse",
+    "year": 2004,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000krra",
     "scope": {
       "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
       "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
@@ -1824,7 +5703,139 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaradhya0000tven",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-22",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-22"
+    },
+    "authors": [
+      "ಟಿ. ವೆಂಕಟೇಶ್"
+    ],
+    "year": 2020,
+    "url": "https://archive.org/details/asi.ka.vijayanagaradhya0000tven",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-4",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-4"
+    },
+    "authors": [
+      "ಪ್ರೊ ಎಂ. ವಿ. ಕೃಷ್ಣಪ್ಪ"
+    ],
+    "year": 1999,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000.4mvkr",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-5-0000prom",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-5",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-5"
+    },
+    "authors": [
+      "ಪ್ರೊ ಎಂ. ವಿ. ಕೃಷ್ಣಪ್ಪ"
+    ],
+    "year": 2000,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-5.0000prom",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-12-0000drrg",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-12",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-12"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2007,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-12.0000drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-16",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-16"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2012,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-16.0000drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-15",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-15"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2010,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000.15unse",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1846,117 +5857,7 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-j9t4",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": " Archaeological Survey Of Mysore Annual Report-1943",
-      "kn": " Archaeological Survey Of Mysore Annual Report-1943"
-    },
-    "authors": [
-      "Unknown / uncredited"
-    ],
-    "year": 1943,
-    "url": "https://archive.org/details/damh.archaeologicalsu0000unse_j9t4",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse1931",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "Annual Report Of The Mysore Archaeological Department - 1931",
-      "kn": "Annual Report Of The Mysore Archaeological Department - 1931"
-    },
-    "authors": [
-      "Unknown / uncredited"
-    ],
-    "year": 1935,
-    "url": "https://archive.org/details/damh.annualreportofmy0000unse1931",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-damh-stoneagecultures0000bend",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "Stone age  cultures of Ballary",
-      "kn": "Stone age  cultures of Ballary"
-    },
-    "authors": [
-      "Bendapudi Subbarao "
-    ],
-    "year": null,
-    "url": "https://archive.org/details/damh.stoneagecultures0000bend",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "Annual Report Of The Mysore Archaeological Department -1945",
-      "kn": "Annual Report Of The Mysore Archaeological Department -1945"
-    },
-    "authors": [
-      "Unknown / uncredited"
-    ],
-    "year": 1946,
-    "url": "https://archive.org/details/damh.annualreportofmy0000unse_1945",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
-    }
-  },
-  {
-    "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v14",
-    "type": "digitised-archive-item",
-    "title": {
-      "en": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts",
-      "kn": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts"
-    },
-    "authors": [
-      "Unknown / uncredited"
-    ],
-    "year": 1943,
-    "url": "https://archive.org/details/damh.epigraphiacarnat0000unse_v14",
-    "scope": {
-      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-    },
-    "review": {
-      "status": "needs-review",
-      "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -1978,21 +5879,21 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
-    "id": "src-ia-karnataka-archaeology-damh-karnatakacivilse0000unse-1977",
+    "id": "src-ia-karnataka-archaeology-damh-indexannualrepor0000mhkr-1929",
     "type": "digitised-archive-item",
     "title": {
-      "en": "Karnataka Civil Services Rules - 1977",
-      "kn": "Karnataka Civil Services Rules - 1977"
+      "en": "Index - Annual Reports - 1906 - 1922",
+      "kn": "Index - Annual Reports - 1906 - 1922"
     },
     "authors": [
-      "Unknown / uncredited"
+      "M. H. Krishna Iyenger"
     ],
-    "year": 1977,
-    "url": "https://archive.org/details/damh.karnatakacivilse0000unse_1977",
+    "year": 1929,
+    "url": "https://archive.org/details/damh.indexannualrepor0000mhkr_1929",
     "scope": {
       "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
       "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
@@ -2000,21 +5901,153 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
-    "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iii",
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
     "type": "digitised-archive-item",
     "title": {
-      "en": "Vijayanagara Inscriptions - Volume III",
-      "kn": "Vijayanagara Inscriptions - Volume III"
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20"
     },
     "authors": [
-      "Dr. B. R. Gopal"
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
     ],
-    "year": 1990,
-    "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_iii",
+    "year": 2017,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-20.0000drrg",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-vijayanagaradaha0000chan-sam-1",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Vijayanagarada (Hampeya) Shasanagalu",
+      "kn": "Vijayanagarada (Hampeya) Shasanagalu"
+    },
+    "authors": [
+      "Channabasappa S Patila"
+    ],
+    "year": 1996,
+    "url": "https://archive.org/details/damh.vijayanagaradaha0000chan_sam_1",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11",
+      "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11"
+    },
+    "authors": [
+      "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+    ],
+    "year": 2006,
+    "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000unse",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-karnatakashasana0000chan-sam-2",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu",
+      "kn": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu"
+    },
+    "authors": [
+      "Channabasappa S. Patil"
+    ],
+    "year": 1997,
+    "url": "https://archive.org/details/damh.karnatakashasana0000chan_sam_2",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-j9t4",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": " Archaeological Survey Of Mysore Annual Report-1943",
+      "kn": " Archaeological Survey Of Mysore Annual Report-1943"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1943,
+    "url": "https://archive.org/details/damh.archaeologicalsu0000unse_j9t4",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Annual Report Of The Mysore Archaeological Department -1945",
+      "kn": "Annual Report Of The Mysore Archaeological Department -1945"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1946,
+    "url": "https://archive.org/details/damh.annualreportofmy0000unse_1945",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v14",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts",
+      "kn": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1943,
+    "url": "https://archive.org/details/damh.epigraphiacarnat0000unse_v14",
     "scope": {
       "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
       "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
@@ -2022,7 +6055,29 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-inscriptionsofko0000chan-vol-iii",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Inscriptions Of Koppal District - Volum III",
+      "kn": "Inscriptions Of Koppal District - Volum III"
+    },
+    "authors": [
+      "Channabasappa S Patil"
+    ],
+    "year": 1998,
+    "url": "https://archive.org/details/damh.inscriptionsofko0000chan_vol_iii",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -2044,7 +6099,7 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
     }
   },
   {
@@ -2066,7 +6121,293 @@ export const karnatakaArchaeologySources = [
     "review": {
       "status": "needs-review",
       "reviewer": null,
-      "updatedAt": "2026-08-28"
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-ii",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Vijayanagara Inscriptions - Volume II",
+      "kn": "Vijayanagara Inscriptions - Volume II"
+    },
+    "authors": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1986,
+    "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_ii",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-epigraphicalstud0000drbr",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Epigraphical Studies",
+      "kn": "Epigraphical Studies"
+    },
+    "authors": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1997,
+    "url": "https://archive.org/details/damh.epigraphicalstud0000drbr",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (research journal). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (research journal). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-dasara850000unse-85",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Dasara - 85",
+      "kn": "Dasara - 85"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1985,
+    "url": "https://archive.org/details/damh.dasara850000unse_85",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iv",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Vijayanagara Inscriptions - Volume IV",
+      "kn": "Vijayanagara Inscriptions - Volume IV"
+    },
+    "authors": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1996,
+    "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_iv",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-annualreportmyso0000unse1941",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Annual Report - Mysore Archaeological Department 1941",
+      "kn": "Annual Report - Mysore Archaeological Department 1941"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1942,
+    "url": "https://archive.org/details/damh.annualreportmyso0000unse1941",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "History Of The Wodeyars Of Mysore (1610 - 1748)",
+      "kn": "History Of The Wodeyars Of Mysore (1610 - 1748)"
+    },
+    "authors": [
+      "A. Satyanarayana"
+    ],
+    "year": 1996,
+    "url": "https://archive.org/details/damh.historyofwodeyar0000asat",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-prachinakarnatak0000srin",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Prachina Karnatakada Adalita Paribhashakosha",
+      "kn": "Prachina Karnatakada Adalita Paribhashakosha"
+    },
+    "authors": [
+      "Srinivasa Ritti"
+    ],
+    "year": 2000,
+    "url": "https://archive.org/details/damh.prachinakarnatak0000srin",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-internationalcon0000unse-2010",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "International Confrence on Life and Achievements of Tipu Sultan",
+      "kn": "International Confrence on Life and Achievements of Tipu Sultan"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 2010,
+    "url": "https://archive.org/details/damh.internationalcon0000unse_2010",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-dasara85nenapina0000unse",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Dasara - 85 - Nenapina Sanchike",
+      "kn": "Dasara - 85 - Nenapina Sanchike"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1985,
+    "url": "https://archive.org/details/damh.dasara85nenapina0000unse",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-stoneagecultures0000bend",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Stone age  cultures of Ballary",
+      "kn": "Stone age  cultures of Ballary"
+    },
+    "authors": [
+      "Bendapudi Subbarao "
+    ],
+    "year": null,
+    "url": "https://archive.org/details/damh.stoneagecultures0000bend",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse1931",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Annual Report Of The Mysore Archaeological Department - 1931",
+      "kn": "Annual Report Of The Mysore Archaeological Department - 1931"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1935,
+    "url": "https://archive.org/details/damh.annualreportofmy0000unse1931",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-karnatakacivilse0000unse-1977",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Karnataka Civil Services Rules - 1977",
+      "kn": "Karnataka Civil Services Rules - 1977"
+    },
+    "authors": [
+      "Unknown / uncredited"
+    ],
+    "year": 1977,
+    "url": "https://archive.org/details/damh.karnatakacivilse0000unse_1977",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
+    }
+  },
+  {
+    "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iii",
+    "type": "digitised-archive-item",
+    "title": {
+      "en": "Vijayanagara Inscriptions - Volume III",
+      "kn": "Vijayanagara Inscriptions - Volume III"
+    },
+    "authors": [
+      "Dr. B. R. Gopal"
+    ],
+    "year": 1990,
+    "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_iii",
+    "scope": {
+      "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+      "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+    },
+    "review": {
+      "status": "needs-review",
+      "reviewer": null,
+      "updatedAt": "2026-08-29"
     }
   }
 ]
