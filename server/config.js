@@ -3,6 +3,10 @@ import { fileURLToPath } from 'node:url'
 
 const serverDir=path.dirname(fileURLToPath(import.meta.url))
 const rootDir=path.resolve(serverDir,'..')
+// Load .env into process.env for direct `node server/*.js` / `npm run ...` invocations. Node does
+// not overwrite variables already set (e.g. by systemd's EnvironmentFile= or `docker run -e`), and
+// this is a silent no-op when no .env file exists, so it is safe across every deployment path.
+try { process.loadEnvFile(path.join(rootDir,'.env')) } catch {}
 const required=(name,value)=>{if(!value)throw new Error(`${name} is required`);return value}
 
 export const config={
