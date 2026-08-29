@@ -123,7 +123,7 @@ async function discover() {
     if (!textFiles.length) continue
     const textFile = textFiles.find(file => /_djvu\.txt$/i.test(file.name)) || textFiles[0]
     const shouldSampleText = textSampleRows > 0 && index < textSampleRows
-    const text = shouldSampleText ? await fetch(fileUrl(candidate.identifier, textFile.name)).then(response => response.ok ? response.text() : '') : ''
+    const text = shouldSampleText ? await fetch(fileUrl(candidate.identifier, textFile.name), { signal: AbortSignal.timeout(20000) }).then(response => response.ok ? response.text() : '').catch(error => { console.warn(`OCR text fetch failed for ${candidate.identifier} (continuing without a sample): ${error.message}`); return '' }) : ''
     const ocrSignals = signalCounts(text)
     const sourceCollections = normaliseArray(metadata.metadata?.collection || candidate.collection).filter(value => collections.includes(value))
     records.push({
