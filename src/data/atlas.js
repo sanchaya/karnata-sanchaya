@@ -176,7 +176,8 @@ export const atlasData = {
     ['chikkamagaluru','Chikkamagaluru','ಚಿಕ್ಕಮಗಳೂರು',13.3161,75.7720],
     ['mandya','Mandya','ಮಂಡ್ಯ',12.5242,76.8958],['kolar','Kolar','ಕೋಲಾರ',13.1367,78.1298],
     ['anantapur','Anantapur, Andhra Pradesh','ಅನಂತಪುರ, ಆಂಧ್ರ ಪ್ರದೇಶ',14.6819,77.6006],['tadipatri','Tadipatri, Andhra Pradesh','ತಾಡಿಪತ್ರಿ, ಆಂಧ್ರ ಪ್ರದೇಶ',14.9089,78.0089],
-    ['amritapura-amritesvara','Amritesvara Temple, Amritapura','ಅಮೃತಾಪುರದ ಅಮೃತೇಶ್ವರ ದೇವಾಲಯ',13.7378,75.7842,'monument'],['bhadravati-lakshminarasimha','Lakshminarasimha Temple, Bhadravati','ಭದ್ರಾವತಿಯ ಲಕ್ಷ್ಮೀನರಸಿಂಹ ದೇವಾಲಯ',13.8462,75.7042,'monument']
+    ['amritapura-amritesvara','Amritesvara Temple, Amritapura','ಅಮೃತಾಪುರದ ಅಮೃತೇಶ್ವರ ದೇವಾಲಯ',13.7378,75.7842,'monument'],['bhadravati-lakshminarasimha','Lakshminarasimha Temple, Bhadravati','ಭದ್ರಾವತಿಯ ಲಕ್ಷ್ಮೀನರಸಿಂಹ ದೇವಾಲಯ',13.8462,75.7042,'monument'],
+    ['tumakuru','Tumakuru','ತುಮಕೂರು',13.3392,77.1139]
   ].map(([id,en,kn,lat,lng,kind='settlement']) => ({ id:`place-${id}`, name:name(en,kn), kind, location:{ type:'Point', coordinates:[lng,lat], precision:'approximate' }, citations:[], review:review('needs-review') })),
   polities: [
     ['kadamba','Kadamba','ಕದಂಬ',345,540,'place-banavasi','#8d4d2f','An early indigenous dynasty of Karnataka, associated with Banavasi and the development of Kannada administration.',[[15.9,73.8],[16.1,75.4],[15,76.2],[13.7,75.8],[13.1,74.4],[14.2,73.7]]],
