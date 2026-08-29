@@ -5,9 +5,14 @@ The live portal is one same-origin service: Express serves the built React appli
 ## Initial setup
 
 1. Copy `.env.example` to `.env` and set strong unique database passwords, the public HTTPS `APP_ORIGIN`, and a key generated with `openssl rand -base64 32`. Keep this file outside version control and back up the encryption key separately.
-2. Start MariaDB and the portal with `docker compose up -d --build`, or run MariaDB independently, then `npm run db:migrate`, `npm run db:sync-dataset`, `npm run build`, and `npm start`.
-3. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
-4. Schedule `npm run privacy:cleanup` daily. Schedule `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` daily; it creates a compressed MariaDB dump, an encrypted private-upload archive and SHA-256 checksums under `/var/backups/karnataka-atlas`. Copy that directory to separate durable storage and test restoration before inviting contributors.
+2. MariaDB's `max_allowed_packet` must be at least 32M before running `db:sync-dataset` (see below); a fresh install's default (sometimes 1M-4M on minimal distro packages) is too small for the bundled dataset (~10MB and growing) and the sync will fail with `ECONNRESET`.
+3. Start MariaDB and the portal with `docker compose up -d --build`, or run MariaDB independently, then `npm run db:migrate`, `npm run db:sync-dataset`, `npm run build`, and `npm start`.
+4. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
+5. Schedule `npm run privacy:cleanup` daily. Schedule `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` daily; it creates a compressed MariaDB dump, an encrypted private-upload archive and SHA-256 checksums under `/var/backups/karnataka-atlas`. Copy that directory to separate durable storage and test restoration before inviting contributors.
+
+### Setting `max_allowed_packet`
+
+Check the current value on the MariaDB host: `mysql -u root -p -e "SHOW VARIABLES LIKE 'max_allowed_packet';"`. If it is below 32M, add `max_allowed_packet = 64M` under `[mysqld]` in the server's config (commonly `/etc/mysql/mariadb.conf.d/50-server.cnf` on Debian/Ubuntu) and `sudo systemctl restart mariadb`. `SET GLOBAL max_allowed_packet = 67108864;` is a faster way to unblock a one-off `db:sync-dataset` run but reverts on the next MariaDB restart, so still make the config-file change for a permanent fix.
 
 ## Updating an existing installation
 

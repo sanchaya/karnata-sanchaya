@@ -8,7 +8,7 @@ The live service listens only on loopback (default `127.0.0.1:8787`). Nginx owns
 
 - Debian/Ubuntu-style Linux with systemd and an existing Nginx installation.
 - Node.js 20.19+ or 22.12+ and npm (the range required by the current Vite toolchain).
-- MariaDB already created and reachable by the database settings supplied to the script.
+- MariaDB already created and reachable by the database settings supplied to the script, with `max_allowed_packet` set to at least 32M (`SHOW VARIABLES LIKE 'max_allowed_packet';`) -- a fresh install's default is often too small for the bundled dataset (~10MB and growing) and `db:sync-dataset` will fail with `ECONNRESET` otherwise. See "Setting max_allowed_packet" in `docs/live-deployment.md`.
 - DNS `A`/`AAAA` records for the hostname pointing to this server.
 - Ports 80 and 443 reachable through the firewall.
 - Certbot installed if using the Let’s Encrypt option.
