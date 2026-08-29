@@ -21,6 +21,16 @@ try{
   })
   const indexSummary=`Refreshed ${result.indexes.records} research index records, ${result.indexes.links} links and ${result.indexes.gates} evidence gates.`
   console.log(result.changed?`Created MariaDB dataset revision ${result.revision}; added ${result.added} and enriched ${result.updated} repository seed records. ${indexSummary}`:`MariaDB dataset revision ${result.revision} already contains the repository seed. ${indexSummary}`)
+}catch(error){
+  if(error.code==='ECONNRESET'||error.errno===1153){
+    console.error(`db:sync-dataset failed writing the dataset to MariaDB (${error.code||error.errno}).`)
+    console.error(`This almost always means the server's max_allowed_packet is smaller than the ~10MB dataset payload.`)
+    console.error(`Check it with: mysql -u root -p -e "SHOW VARIABLES LIKE 'max_allowed_packet';"`)
+    console.error(`See "Setting max_allowed_packet" in docs/live-deployment.md for how to raise it, then re-run: npm run db:sync-dataset`)
+    process.exitCode=1
+  } else {
+    throw error
+  }
 }finally{
   await closeDatabase()
 }
