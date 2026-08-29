@@ -437,3 +437,40 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Annual Report of the Mysore Archaeological Department for the Year 1931"
+// (Mysore Archaeological Survey, 1935) -- Part II monument studies.
+const SRC_MAD_AR_1931 = 'src-ia-karnataka-archaeology-damh-annualreportofmy0000unse1931'
+
+export const karnatakaArchaeologyMiningCulturalHeritage = [
+  {
+    id: 'culture-karch-amritesvara-temple-amritapura',
+    name: n('Amriteshvara Temple, Amritapura', 'ಅಮೃತಾಪುರದ ಅಮೃತೇಶ್ವರ ದೇವಾಲಯ'),
+    category: 'architecture',
+    date: d(1196, 1196, 'year'),
+    polityIds: ['polity-hoysala'],
+    placeIds: ['place-amritapura-amritesvara'],
+    peopleIds: [],
+    relatedWorkIds: [],
+    traditionTags: ['Shaiva', 'Hoysala', 'ekakuta', 'temple'],
+    continuity: 'material-survival',
+    description: n('A well-preserved single-shrine (ekakuta) Hoysala temple at Amritapura (Tarikere taluk, Chikkamagaluru district), studied in detail by the Mysore Archaeological Department across 28 headings covering its plan, sculpture and inscriptions. Of about ten inscriptions in the temple and its compound, the oldest -- on a slab set up southeast of the temple -- claims to be composed by the celebrated Kannada poet Janna and was set up in 1196 CE when the temple was consecrated. The temple was built by the Hoysala officer (dandanayaka) Amriteshvara in the reign of Ballala II; the report\'s architectural analysis suggests the core shrine, sukhanasi and navaranga date to 1196, with the mukhamantapa added around 1206. Further grants to the temple are recorded in 1206, 1210 and, under the Vijayanagara rulers, in 1547 CE.', 'ಚಿಕ್ಕಮಗಳೂರು ಜಿಲ್ಲೆಯ ತರೀಕೆರೆ ತಾಲ್ಲೂಕಿನ ಅಮೃತಾಪುರದ ಒಂದು ಸುಸ್ಥಿತಿಯ ಏಕಕೂಟ ಹೊಯ್ಸಳ ದೇವಾಲಯ, ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆಯಿಂದ 28 ಶೀರ್ಷಿಕೆಗಳಡಿ ವಿವರವಾಗಿ ಅಧ್ಯಯನ ಮಾಡಲಾಗಿದೆ, ಅದರ ಯೋಜನೆ, ಶಿಲ್ಪ ಮತ್ತು ಶಾಸನಗಳನ್ನು ಒಳಗೊಂಡಂತೆ. ದೇವಾಲಯ ಮತ್ತು ಅದರ ಆವರಣದಲ್ಲಿನ ಸುಮಾರು ಹತ್ತು ಶಾಸನಗಳಲ್ಲಿ, ದೇವಾಲಯದ ಆಗ್ನೇಯಕ್ಕಿರುವ ಶಿಲಾಫಲಕದ ಮೇಲಿನ ಅತ್ಯಂತ ಹಳೆಯದು ಪ್ರಸಿದ್ಧ ಕನ್ನಡ ಕವಿ ಜನ್ನನ ರಚನೆಯೆಂದು ಹೇಳಿಕೊಳ್ಳುತ್ತದೆ ಮತ್ತು ದೇವಾಲಯ ಪ್ರತಿಷ್ಠಾಪನೆಯಾದ 1196ರಲ್ಲಿ ಸ್ಥಾಪಿಸಲಾಯಿತು. ದೇವಾಲಯವನ್ನು ಬಲ್ಲಾಳ IIನ ಆಳ್ವಿಕೆಯಲ್ಲಿ ಹೊಯ್ಸಳ ಅಧಿಕಾರಿ (ದಂಡನಾಯಕ) ಅಮೃತೇಶ್ವರ ಕಟ್ಟಿಸಿದನು; ವರದಿಯ ವಾಸ್ತುಶಿಲ್ಪ ವಿಶ್ಲೇಷಣೆಯ ಪ್ರಕಾರ ಮುಖ್ಯ ಗರ್ಭಗುಡಿ, ಸುಖನಾಸಿ ಮತ್ತು ನವರಂಗ 1196ರದ್ದು, ಮುಖಮಂಟಪ ಸುಮಾರು 1206ರಲ್ಲಿ ಸೇರಿಸಲಾಯಿತು. ದೇವಾಲಯಕ್ಕೆ ಹೆಚ್ಚಿನ ಅನುದಾನಗಳು 1206, 1210 ಮತ್ತು ವಿಜಯನಗರ ಅರಸರ ಕಾಲದಲ್ಲಿ 1547ರಲ್ಲಿ ದಾಖಲಾಗಿವೆ.'),
+    citations: [c(SRC_MAD_AR_1931, 'Part II, "Amritapura -- Amritesvara Temple, History" (pp. 11 ff.): full 28-heading architectural and epigraphical study')],
+    review,
+  },
+  {
+    id: 'culture-karch-lakshminarasimha-temple-bhadravati',
+    name: n('Lakshminarasimha Temple, Bhadravati', 'ಭದ್ರಾವತಿಯ ಲಕ್ಷ್ಮೀನರಸಿಂಹ ದೇವಾಲಯ'),
+    category: 'architecture',
+    date: d(1225, 1275, 'range'),
+    polityIds: ['polity-hoysala'],
+    placeIds: ['place-bhadravati-lakshminarasimha'],
+    peopleIds: [],
+    relatedWorkIds: [],
+    traditionTags: ['Vaishnava', 'Hoysala', 'trikutachala', 'temple', 'unfinished'],
+    continuity: 'material-survival',
+    description: n('A trikutachala (three-shrined) Hoysala temple at Bhadravati (historically Benkipura), on the north bank of the Bhadra river, with three towered garbhagrihas and sukhanasis opening into a common navaranga, raised on an elephant-supported star-shaped platform. The Mysore Archaeological Department report dates construction to about the middle of the 13th century CE, probably under Someshvara or Narasimha III, but notes the temple was clearly left unfinished: the basement mouldings are roughly shaped and unsculptured, and most wall-sculpture panels on the south cell were never carved. Two inscriptions survive: a six-line Hoysala-period record on the navaranga\'s eastern beam recording a late-Hoysala gift, and a separate Vijayanagara-period inscription outside the temple\'s north-east wall.', 'ಭದ್ರಾ ನದಿಯ ಉತ್ತರ ದಡದಲ್ಲಿರುವ ಭದ್ರಾವತಿಯ (ಚಾರಿತ್ರಿಕವಾಗಿ ಬೆಂಕಿಪುರ) ಒಂದು ತ್ರಿಕೂಟಾಚಲ (ಮೂರು-ಗುಡಿಗಳ) ಹೊಯ್ಸಳ ದೇವಾಲಯ, ಮೂರು ಗೋಪುರಯುಕ್ತ ಗರ್ಭಗುಡಿ ಮತ್ತು ಸುಖನಾಸಿಗಳು ಸಾಮಾನ್ಯ ನವರಂಗಕ್ಕೆ ತೆರೆದುಕೊಳ್ಳುತ್ತವೆ, ಆನೆ-ಆಧಾರಿತ ನಕ್ಷತ್ರಾಕಾರದ ಪೀಠದ ಮೇಲೆ ಎತ್ತರಿಸಲಾಗಿದೆ. ಮೈಸೂರು ಪುರಾತತ್ವ ಇಲಾಖೆಯ ವರದಿ ನಿರ್ಮಾಣವನ್ನು 13ನೇ ಶತಮಾನದ ಮಧ್ಯಭಾಗಕ್ಕೆ, ಬಹುಶಃ ಸೋಮೇಶ್ವರ ಅಥವಾ ನರಸಿಂಹ IIIನ ಕಾಲಕ್ಕೆ ದಿನಾಂಕಿಸುತ್ತದೆ, ಆದರೆ ದೇವಾಲಯ ಸ್ಪಷ್ಟವಾಗಿ ಅಪೂರ್ಣವಾಗಿ ಬಿಡಲಾಗಿತ್ತೆಂದು ಗಮನಿಸುತ್ತದೆ: ಪೀಠದ ಅಚ್ಚುಗಳು ಒರಟಾಗಿ ರೂಪುಗೊಂಡು ಕೆತ್ತದೆ ಬಿಡಲಾಗಿದ್ದು, ದಕ್ಷಿಣ ಗುಡಿಯ ಹೆಚ್ಚಿನ ಗೋಡೆ-ಶಿಲ್ಪ ಫಲಕಗಳನ್ನು ಎಂದೂ ಕೆತ್ತಲಾಗಿಲ್ಲ. ಎರಡು ಶಾಸನಗಳು ಉಳಿದಿವೆ: ನವರಂಗದ ಪೂರ್ವ ತೊಲೆಯ ಮೇಲಿನ ಆರು-ಸಾಲಿನ ಹೊಯ್ಸಳ-ಕಾಲದ ದಾಖಲೆ ತಡವಾದ-ಹೊಯ್ಸಳ ಕಾಣಿಕೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ಮತ್ತು ದೇವಾಲಯದ ಈಶಾನ್ಯ ಗೋಡೆಯ ಹೊರಗಿನ ಪ್ರತ್ಯೇಕ ವಿಜಯನಗರ-ಕಾಲದ ಶಾಸನ.'),
+    citations: [c(SRC_MAD_AR_1931, 'Part II, "Bhadravati -- Lakshminarasimha Temple, Situation/History/General Description" (pp. 1-3)')],
+    review,
+  },
+]
