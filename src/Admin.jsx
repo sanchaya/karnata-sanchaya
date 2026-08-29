@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { atlasData, collectionLabels } from './data/atlas'
 import { hasValidationErrors, validateAtlas } from './data/validate'
+import { translationGlossary } from './data/translation-glossary'
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
 
@@ -79,6 +80,8 @@ Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntr
 Object.assign(adminText.kn,{sourceUsage:'ಉಲ್ಲೇಖ ಬಳಕೆ',sourceUsageNote:'ಈ ಆಕರವನ್ನು ಬಳಸುವ ದಾಖಲೆಗಳು ಮತ್ತು ಸ್ಥಾನಸೂಚಿಗಳನ್ನು ಇಲ್ಲಿ ನೋಡಿ. ದಾಖಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ಉಲ್ಲೇಖ ತಿದ್ದುಪಡಿ ಮಾಡಿ ಅಥವಾ ಹೊಸ ಆಕರ ಸೇರಿಸಿ.',noSourceUsage:'ಈ ಆಕರವನ್ನು ಇನ್ನೂ ಯಾವುದೇ ದಾಖಲೆ ಜೋಡಿಸಿಲ್ಲ.'})
 Object.assign(adminText.kn,{sourceReviewTitle:'ಆಕರ ಪರಿಶೀಲನಾ ಪಟ್ಟಿ',citedSources:'ಉಲ್ಲೇಖಿತ ಆಕರಗಳು',unlinkedSources:'ಜೋಡಿಸದ ಆಕರಗಳು',pendingSources:'ಪರಿಶೀಲನೆ ಬಾಕಿ',sourceLinks:'ಬಳಕೆಗಳು',openSource:'ಆಕರ ತೆರೆಯಿರಿ',englishScope:'ಆಕರದ ಇಂಗ್ಲಿಷ್ ವ್ಯಾಪ್ತಿ',kannadaScope:'ಆಕರದ ಕನ್ನಡ ವ್ಯಾಪ್ತಿ',archiveId:'ಆರ್ಕೈವ್ ಗುರುತು',alternateUrls:'ಪರ್ಯಾಯ URLಗಳು (ಪ್ರತಿ ಸಾಲಿಗೆ ಒಂದು)'})
 Object.assign(adminText.en,{sourceReviewTitle:'Reference review register',citedSources:'Cited sources',unlinkedSources:'Unlinked sources',pendingSources:'Awaiting review',sourceLinks:'uses',openSource:'Open source',englishScope:'English evidence scope',kannadaScope:'Kannada evidence scope',archiveId:'Archive identifier',alternateUrls:'Alternate URLs (one per line)'})
+Object.assign(adminText.kn,{translationIssuesTitle:'ಅನುವಾದ ಸಂಗತತೆ',translationIssuesIntro:'ಗ್ಲಾಸರಿಯ ವಿರುದ್ಧ ಸ್ವಯಂಚಾಲಿತ ಪರಿಶೀಲನೆ ಹಿಡಿದ ದಾಖಲೆಗಳು',translationIssuesNone:'ಯಾವುದೇ ಗ್ಲಾಸರಿ ಸಂಗತತೆ ಸಮಸ್ಯೆ ಪತ್ತೆಯಾಗಿಲ್ಲ.',fixRecord:'ತಿದ್ದುಪಡಿ ಮಾಡಿ →',glossaryTitle:'ಇಂಗ್ಲಿಷ್ → ಕನ್ನಡ ಗ್ಲಾಸರಿ',glossaryIntro:'ಪದೇಪದೇ ಬಳಸುವ ಪದಗಳಿಗೆ ಪ್ರಮಾಣಿತ ಅನುವಾದ; ಹೊಸ ದ್ವಿಭಾಷಾ ಪಠ್ಯ ಬರೆಯುವಾಗ ಸಂಗತತೆಗಾಗಿ ಬಳಸಿ.',glossaryTerm:'ಇಂಗ್ಲಿಷ್ ಪದ',glossaryKn:'ಪ್ರಮಾಣಿತ ಕನ್ನಡ',glossaryNote:'ಟಿಪ್ಪಣಿ'})
+Object.assign(adminText.en,{translationIssuesTitle:'Translation consistency',translationIssuesIntro:'Records flagged by an automated check against the glossary below',translationIssuesNone:'No glossary consistency issues detected.',fixRecord:'Fix →',glossaryTitle:'English → Kannada glossary',glossaryIntro:'Standard translations for recurring terms; consult this when writing new bilingual content to stay consistent.',glossaryTerm:'English term',glossaryKn:'Standard Kannada',glossaryNote:'Note'})
 Object.assign(adminText.kn,{releaseTitle:'ಲೈವ್ ಸಮುದಾಯ ಹಸ್ತಾಂತರ',releaseIntro:'ಮಾರಿಯಾDB ಕಾರ್ಯಕ್ಷೇತ್ರ ಮತ್ತು ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆಯ ಸ್ಥಿತಿ',pendingAccounts:'ಅನುಮೋದನೆ ಬಾಕಿ ಖಾತೆಗಳು',submittedContributions:'ವಿಮರ್ಶೆ ಬಾಕಿ ಕೊಡುಗೆಗಳು',pendingVerifications:'ID ಪರಿಶೀಲನೆ ಬಾಕಿ',appointedReviewers:'ನೇಮಕಗೊಂಡ ಪರಿಶೀಲಕರು',latestRevision:'ಕೊನೆಯ MariaDB ಆವೃತ್ತಿ',lastPublished:'ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆ',notPublished:'ಇನ್ನೂ ಸ್ಥಿರ ಪ್ರಕಟಣೆ ಇಲ್ಲ'})
 Object.assign(adminText.en,{releaseTitle:'Live community handoff',releaseIntro:'MariaDB workspace and latest static-publication status',pendingAccounts:'Accounts awaiting approval',submittedContributions:'Contributions awaiting review',pendingVerifications:'ID verifications pending',appointedReviewers:'Appointed reviewers',latestRevision:'Latest MariaDB revision',lastPublished:'Latest static publication',notPublished:'No static publication yet'})
 
@@ -116,6 +119,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   },[])
   useEffect(()=>{if(connection!=='ready')return;let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/release-readiness`,{credentials:'include'}).then(response=>response.ok?response.json():Promise.reject(new Error('Unable to load release-readiness status.'))).then(value=>{if(active)setReadiness(value)}).catch(()=>{if(active)setReadiness(null)});return()=>{active=false}},[connection])
   const issues = useMemo(()=>validateAtlas(data),[data])
+  const translationIssues = useMemo(()=>issues.filter(issue=>issue.message.includes('(glossary:')),[issues])
   const filtered = useMemo(() => (data[collection] || []).filter(record => JSON.stringify(record).toLowerCase().includes(query.toLowerCase())),[data,collection,query])
   const sourceUsageById = useMemo(()=>new Map((data.sources||[]).map(source=>[source.id,Object.entries(data).flatMap(([key,records])=>Array.isArray(records)?records.filter(record=>record?.id!==source.id).flatMap(record=>collectSourceUses(record,source.id).map(use=>({collection:key,id:record.id,...use}))):[])])),[data])
   const sourceReviewSummary = useMemo(()=>{const records=data.sources||[];const cited=records.filter(source=>(sourceUsageById.get(source.id)||[]).length>0).length;const pending=records.filter(source=>recordProgress(source)==='pending').length;return {total:records.length,cited,pending,unlinked:records.length-cited}},[data.sources,sourceUsageById])
@@ -196,6 +200,17 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       <div className="admin-progress-head"><div><p className="eyebrow">{t.progressTitle}</p><h2 id="admin-progress-title">{t.progressIntro}</h2></div><strong>{progress.percent}% {t.coverage}</strong></div>
       <div className="admin-stat-grid"><article><b>{progress.total}</b><span>{t.dataPoints}</span></article><article className="verified"><b>{progress.verified}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>
       <div className="admin-progress-table"><div className="admin-progress-table-title">{t.collectionProgress}</div>{progress.rows.map(row=><div className="admin-progress-row" key={row.key}><span>{t.collections[row.key]||row.key}</span><div className="admin-progress-bar"><i style={{width:`${row.total?Math.round(row.verified/row.total*100):0}%`}}></i></div><b>{row.verified}/{row.total}</b><small>{row.total?Math.round(row.verified/row.total*100):0}%</small></div>)}</div>
+    </section>
+    <section className="admin-translation-glossary" aria-labelledby="admin-translation-title">
+      <div><p className="eyebrow">{t.translationIssuesTitle}</p><h2 id="admin-translation-title">{t.translationIssuesIntro}</h2></div>
+      {translationIssues.length
+        ? <ul className="admin-translation-issue-list">{translationIssues.map((issue,index)=><li key={`${issue.collection}-${issue.id}-${index}`}><span><strong>{t.collections[issue.collection]||issue.collection}</strong> · <code>{issue.id}</code></span><small>{issue.message}</small><button type="button" onClick={()=>{const record=(data[issue.collection]||[]).find(item=>item.id===issue.id);if(record){selectCollection(issue.collection);selectRecord(record)}}}>{t.fixRecord}</button></li>)}</ul>
+        : <p className="admin-translation-none">{t.translationIssuesNone}</p>}
+      <details className="admin-glossary-reference">
+        <summary>{t.glossaryTitle}</summary>
+        <p className="admin-glossary-intro">{t.glossaryIntro}</p>
+        <table className="admin-glossary-table"><thead><tr><th>{t.glossaryTerm}</th><th>{t.glossaryKn}</th><th>{t.glossaryNote}</th></tr></thead><tbody>{translationGlossary.map(entry=><tr key={entry.id}><td>{entry.en}</td><td lang="kn">{entry.kn}{entry.altKn?.length?<small> ({entry.altKn.join(', ')})</small>:null}</td><td>{entry.note}</td></tr>)}</tbody></table>
+      </details>
     </section>
     {readiness&&<section className="admin-release-readiness" aria-labelledby="admin-release-title"><div><p className="eyebrow">{t.releaseTitle}</p><h2 id="admin-release-title">{t.releaseIntro}</h2></div><div className="admin-readiness-grid"><span><b>{readiness.community.pendingAccounts}</b>{t.pendingAccounts}</span><span><b>{readiness.community.submittedContributions}</b>{t.submittedContributions}</span><span><b>{readiness.community.pendingVerifications}</b>{t.pendingVerifications}</span><span><b>{readiness.community.appointedReviewers}</b>{t.appointedReviewers}</span><span><b>{readiness.dataset.revision}</b>{t.latestRevision}</span><span><b>{readiness.published.publishedAt?new Date(readiness.published.publishedAt).toLocaleDateString(locale==='kn'?'kn-IN':'en-IN'):t.notPublished}</b>{t.lastPublished}</span></div></section>}
     <main className="admin-main">

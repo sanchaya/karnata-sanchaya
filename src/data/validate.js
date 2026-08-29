@@ -1,3 +1,5 @@
+import { checkTranslationGlossary } from './translation-glossary.js'
+
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
 const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','epigraphiaArchiveTexts','karnatakaArchaeologyTexts','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const PERSON_ROLES=['ruler','queen','foreign-monarch','patron','poet','author','vachana-poet','scholar','administrator','military-leader','diplomat','religious-figure','explorer','traveller','community-hero','community-leader','defender','resistance-leader','resistance-fighter','freedom-fighter','organiser','social-reformer','cultural-organiser','journalist','lieutenant','soldier','artisan','washerman','boatman','actor','film-director','screenwriter','artist','theatre-director','minister']
@@ -503,6 +505,7 @@ export function validateAtlas(data) {
   const sourceIds = new Set((data.sources || []).map(source => source.id))
   COLLECTIONS.forEach(collection => (data[collection] || []).forEach(record => {
     const id = record.id || ''
+    checkTranslationGlossary(record).forEach(issue => add('warning',collection,id,issue.path,issue.message))
     ;(record.citations || []).forEach((item, index) => {
       if (!sourceIds.has(item.sourceId)) add('error',collection,id,`citations.${index}.sourceId`,`Unknown source: ${item.sourceId}`)
     })
