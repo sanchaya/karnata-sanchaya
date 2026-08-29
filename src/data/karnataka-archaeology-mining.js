@@ -399,3 +399,41 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Vijayanagara Inscriptions" Volume IV (Directorate of Archaeology and Museums, 1996),
+// eds. D.R. Bhat -- catalogue numbers prefixed "AP". Unlike Volumes II and III, this volume covers
+// Anantapur and Chittoor districts of present-day Andhra Pradesh (Vijayanagara territory outside
+// modern Karnataka), so its records are marked outsideKarnataka rather than assigned a district audit.
+const SRC_VIJAYANAGARA_INSC_VOL4 = 'src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iv'
+const andhraScope = n => ({ region: 'Rayalaseema, Andhra Pradesh', countryCode: 'IN', countryName: n('India', 'ಭಾರತ'), outsideKarnataka: true, outsideIndia: false })
+
+karnatakaArchaeologyMiningInscriptions.push(
+  {
+    id: 'inscription-karch-vinsc4-ap209-439-sambati-tipparaju-forgery',
+    name: n('Sambati Tipparaju dyagara records identified as forgeries (AP 209, 439)', 'ಸಂಬತಿ ತಿಪ್ಪರಾಜು ದ್ಯಾಗಾರ ದಾಖಲೆಗಳು ಕೃತಕವೆಂದು ಗುರುತಿಸಲಾಗಿದೆ (AP 209, 439)'),
+    date: d(1187, 1187, 'circa'),
+    placeId: 'place-anantapur',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: null,
+    geographicScope: andhraScope(n),
+    languages: ['unresolved'],
+    scripts: ['unresolved'],
+    description: n('Catalogued as AP 209 and AP 439, both from Anantapur district: two copper-plate records dealing with the appointment of dyagars (village accountants) of villages founded by named individuals, both referring to a chief Sambati Tipparaju and bearing the identical date Saka 1109, Ashvija su. 10. The volume\'s editors state plainly: "Apparently, the date is wrong and both of them are clear forgeries." Recorded as a documented case study in the volume\'s own critical apparatus for detecting forged Vijayanagara-era land grants, not as evidence of Sambati Tipparaju\'s actual historical activity.', 'AP 209 ಮತ್ತು AP 439ರಂತೆ ಪಟ್ಟಿಗತ, ಎರಡೂ ಅನಂತಪುರ ಜಿಲ್ಲೆಯಿಂದ: ಹೆಸರಿಸಿದ ವ್ಯಕ್ತಿಗಳು ಸ್ಥಾಪಿಸಿದ ಗ್ರಾಮಗಳ ದ್ಯಾಗಾರ (ಗ್ರಾಮ ಲೆಕ್ಕಿಗ) ನೇಮಕವನ್ನು ಕುರಿತ ಎರಡು ತಾಮ್ರಶಾಸನಗಳು, ಎರಡೂ ಮುಖ್ಯ ಸಂಬತಿ ತಿಪ್ಪರಾಜುವನ್ನು ಉಲ್ಲೇಖಿಸುತ್ತ ಒಂದೇ ದಿನಾಂಕ ಶಕ 1109, ಆಶ್ವಿಜ ಶು. 10 ಹೊಂದಿವೆ. ಸಂಪುಟದ ಸಂಪಾದಕರು ಸ್ಪಷ್ಟವಾಗಿ ಹೇಳುತ್ತಾರೆ: "ಸ್ಪಷ್ಟವಾಗಿ, ದಿನಾಂಕ ತಪ್ಪು ಮತ್ತು ಇವೆರಡೂ ಸ್ಪಷ್ಟ ಕೃತಕ ದಾಖಲೆಗಳು." ಸಂಬತಿ ತಿಪ್ಪರಾಜುವಿನ ನಿಜವಾದ ಚಾರಿತ್ರಿಕ ಚಟುವಟಿಕೆಯ ಸಾಕ್ಷ್ಯವಾಗಿ ಅಲ್ಲ, ಬದಲಿಗೆ ಕೃತಕ ವಿಜಯನಗರ-ಕಾಲದ ಭೂಮಿ ಅನುದಾನಗಳನ್ನು ಪತ್ತೆಹಚ್ಚುವ ಸಂಪುಟದ ಸ್ವಂತ ವಿಮರ್ಶಾತ್ಮಕ ವಿಧಾನದ ದಾಖಲಿತ ನಿದರ್ಶನವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ.'),
+    citations: [c(SRC_VIJAYANAGARA_INSC_VOL4, 'AP 209 and AP 439 (Anantapur district), discussed in the volume\'s Political History introduction (p. xxvii): editors explicitly call both "clear forgeries"')],
+    review,
+  },
+  {
+    id: 'inscription-karch-vinsc4-ap420-421-saluva-timma-tadapatri',
+    name: n('Saluva Timmayya\'s Tadapatri temple construction records (1509)', 'ಸಾಳುವ ತಿಮ್ಮಯ್ಯನ ತಾಡಪತ್ರಿ ದೇವಾಲಯ ನಿರ್ಮಾಣ ದಾಖಲೆಗಳು (1509)'),
+    date: d(1509, 1509, 'year'),
+    placeId: 'place-tadipatri',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: null,
+    geographicScope: andhraScope(n),
+    languages: ['unresolved'],
+    scripts: ['unresolved'],
+    description: n('Catalogued as AP 420 and AP 421, two Tadapatri epigraphs dated 1509 CE (February and May respectively) naming mahapradhana Saluva Timmayya (Saluva Timma). AP 421 states that he built a bhoga-mantapa, tower and enclosure wall for the Ramesvara temple at Tadapatri and granted a village to the deity. The volume\'s editors connect this minister to the Vijayanagara succession-crisis story recorded by the Portuguese chronicler Fernao Nunes: ordered by the regent to blind Krishnadevaraya\'s young nephew (Vira Narasimha\'s son) to remove a rival claimant, Timma is said to have instead blinded a she-goat and presented it as false proof of compliance. The inscriptions independently corroborate Timma\'s historical position and activity at Tadapatri in this period, though not the anecdote itself.', 'AP 420 ಮತ್ತು AP 421ರಂತೆ ಪಟ್ಟಿಗತ, 1509 (ಫೆಬ್ರವರಿ ಮತ್ತು ಮೇ) ದಿನಾಂಕಿತ ಎರಡು ತಾಡಪತ್ರಿ ಶಾಸನಗಳು, ಮಹಾಪ್ರಧಾನ ಸಾಳುವ ತಿಮ್ಮಯ್ಯ (ಸಾಳುವ ತಿಮ್ಮ)ನನ್ನು ಹೆಸರಿಸುತ್ತವೆ. AP 421ರ ಪ್ರಕಾರ ಅವನು ತಾಡಪತ್ರಿಯ ರಾಮೇಶ್ವರ ದೇವಾಲಯಕ್ಕೆ ಭೋಗ-ಮಂಟಪ, ಗೋಪುರ ಮತ್ತು ಆವರಣ ಗೋಡೆಯನ್ನು ಕಟ್ಟಿಸಿ ದೇವರಿಗೆ ಒಂದು ಗ್ರಾಮವನ್ನು ಅನುದಾನ ನೀಡಿದನು. ಪೋರ್ಚುಗೀಸ್ ಚರಿತ್ರಕಾರ ಫೆರ್ನಾವೊ ನೂನಿಸ್ ದಾಖಲಿಸಿದ ವಿಜಯನಗರ ಉತ್ತರಾಧಿಕಾರ-ಬಿಕ್ಕಟ್ಟಿನ ಕಥೆಯೊಂದಿಗೆ ಸಂಪುಟದ ಸಂಪಾದಕರು ಈ ಮಂತ್ರಿಯನ್ನು ಜೋಡಿಸುತ್ತಾರೆ: ಸ್ಪರ್ಧಿ ಹಕ್ಕುದಾರನನ್ನು ತೆಗೆದುಹಾಕಲು ಕೃಷ್ಣದೇವರಾಯನ ಎಳೆಯ ಸೋದರಳಿಯ (ವೀರ ನರಸಿಂಹನ ಮಗ)ನನ್ನು ಕುರುಡುಗೊಳಿಸಲು ರಾಜಪ್ರತಿನಿಧಿಯಿಂದ ಆಜ್ಞಾಪಿತನಾದ ತಿಮ್ಮ, ಬದಲಿಗೆ ಒಂದು ಹೆಣ್ಣು ಮೇಕೆಯನ್ನು ಕುರುಡುಗೊಳಿಸಿ ಸುಳ್ಳು ಸಾಕ್ಷ್ಯವಾಗಿ ತೋರಿಸಿದನೆಂದು ಹೇಳಲಾಗುತ್ತದೆ. ಶಾಸನಗಳು ಈ ಅವಧಿಯಲ್ಲಿ ತಾಡಪತ್ರಿಯಲ್ಲಿ ತಿಮ್ಮನ ಚಾರಿತ್ರಿಕ ಸ್ಥಾನ ಮತ್ತು ಚಟುವಟಿಕೆಯನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ದೃಢಪಡಿಸುತ್ತವೆ, ಆದರೆ ಕಥೆಯನ್ನಲ್ಲ.'),
+    citations: [c(SRC_VIJAYANAGARA_INSC_VOL4, 'AP 420 and AP 421 (Tadapatri, Anantapur district), discussed in the volume\'s Political History introduction (p. xxxv), cross-referenced with C.P. Brown\'s translation of the Nunes chronicle')],
+    review,
+  },
+)

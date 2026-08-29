@@ -174,7 +174,8 @@ export const atlasData = {
     ['kalaburagi-jama-masjid','Jama Masjid, Kalaburagi','ಕಲಬುರಗಿಯ ಜಾಮಾ ಮಸೀದಿ',17.3381,76.8211,'monument'],['bidar-mahmud-gawan','Mahmud Gawan Madrasa','ಮಹಮೂದ್ ಗವಾನ್ ಮದರಸಾ',17.9140,77.5203,'monument'],['gol-gumbaz','Gol Gumbaz','ಗೋಲ್ ಗುಂಬಜ್',16.8305,75.7360,'monument'],['ibrahim-rauza','Ibrahim Rauza','ಇಬ್ರಾಹಿಂ ರೌಜಾ',16.8335,75.7178,'monument'],['chitradurga-fort','Chitradurga Fort','ಚಿತ್ರದುರ್ಗ ಕೋಟೆ',14.2154,76.3980,'monument'],
     ['koppal','Koppal (Kupana)','ಕೊಪ್ಪಳ (ಕುಪಣ)',15.3547,76.1541],
     ['chikkamagaluru','Chikkamagaluru','ಚಿಕ್ಕಮಗಳೂರು',13.3161,75.7720],
-    ['mandya','Mandya','ಮಂಡ್ಯ',12.5242,76.8958],['kolar','Kolar','ಕೋಲಾರ',13.1367,78.1298]
+    ['mandya','Mandya','ಮಂಡ್ಯ',12.5242,76.8958],['kolar','Kolar','ಕೋಲಾರ',13.1367,78.1298],
+    ['anantapur','Anantapur, Andhra Pradesh','ಅನಂತಪುರ, ಆಂಧ್ರ ಪ್ರದೇಶ',14.6819,77.6006],['tadipatri','Tadipatri, Andhra Pradesh','ತಾಡಿಪತ್ರಿ, ಆಂಧ್ರ ಪ್ರದೇಶ',14.9089,78.0089]
   ].map(([id,en,kn,lat,lng,kind='settlement']) => ({ id:`place-${id}`, name:name(en,kn), kind, location:{ type:'Point', coordinates:[lng,lat], precision:'approximate' }, citations:[], review:review('needs-review') })),
   polities: [
     ['kadamba','Kadamba','ಕದಂಬ',345,540,'place-banavasi','#8d4d2f','An early indigenous dynasty of Karnataka, associated with Banavasi and the development of Kannada administration.',[[15.9,73.8],[16.1,75.4],[15,76.2],[13.7,75.8],[13.1,74.4],[14.2,73.7]]],
