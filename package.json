@@ -11,6 +11,7 @@
     "db:sync-dataset": "node scripts/sync-dataset.mjs",
     "import:patrika": "node scripts/import-patrika.mjs",
     "import:epigraphia-archive": "node scripts/import-epigraphia-archive.mjs",
+    "import:karnataka-archaeology": "node scripts/import-karnataka-archaeology.mjs",
     "audit:freedom-fighters": "node scripts/audit-freedom-fighters.mjs",
     "extract:martyrs-karnataka": "node scripts/extract-dictionary-martyrs-karnataka.mjs",
     "admin:create": "node server/create-admin.js",

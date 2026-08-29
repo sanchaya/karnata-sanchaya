@@ -117,7 +117,7 @@ async function discover() {
     if (!textFiles.length) continue
     const textFile = textFiles.find(file => /_djvu\.txt$/i.test(file.name)) || textFiles[0]
     const shouldSampleText = textSampleRows > 0 && index < textSampleRows
-    const text = shouldSampleText ? await fetch(fileUrl(identifier, textFile.name), { headers: { 'User-Agent': 'karnata-sanchaya-archaeology-import/0.1' } }).then(response => response.ok ? response.text() : '') : ''
+    const text = shouldSampleText ? await fetch(fileUrl(identifier, textFile.name), { headers: { 'User-Agent': 'karnata-sanchaya-archaeology-import/0.1' }, signal: AbortSignal.timeout(20000) }).then(response => response.ok ? response.text() : '').catch(error => { console.warn(`OCR text fetch failed for ${identifier} (continuing without a sample): ${error.message}`); return '' }) : ''
     const documentKind = documentKindFor(title)
     const creators = normaliseArray(metadata.metadata.creator).map(String)
     const year = Number(metadata.metadata.year || String(metadata.metadata.date || '').slice(0, 4)) || null
@@ -134,7 +134,7 @@ async function discover() {
         `Digitised item from the Karnataka Archaeology collection on the Internet Archive (${documentKind.replace(/-/g, ' ')}). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.`,
         `ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (${documentKind.replace(/-/g, ' ')}). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ.`,
       ),
-      review: review('needs-review'),
+      review,
     })
     records.push({
       id: `archive-karch-${slug(identifier)}`,
