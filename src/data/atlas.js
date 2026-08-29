@@ -27,6 +27,7 @@ import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, source
 import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js'
 import { applyExternalCapitalLinks } from './external-capitals.js'
 import { p2ClosureRecords } from './p2-research-graph-closure.js'
+import { karnatakaArchaeologyMiningInscriptions } from './karnataka-archaeology-mining.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -374,11 +375,13 @@ appendUniqueById(atlasData.works, [{
   review:review('needs-review'),
 }])
 appendUniqueById(atlasData.inscriptions, additionalInscriptions)
+appendUniqueById(atlasData.inscriptions, karnatakaArchaeologyMiningInscriptions)
 const sourceVolumeInscriptionDistrictAssignments={
   'inscription-parampare-barkur-harihara-lead':'audit-udupi',
   'inscription-parampare-badami-chamarasa-lead':'audit-bagalkote',
   'inscription-maski-minor-rock-edict':'audit-raichur',
   'inscription-brahmagiri-minor-rock-edict':'audit-chitradurga',
+  ...Object.fromEntries(karnatakaArchaeologyMiningInscriptions.map(record=>[record.id,record.districtAuditId])),
 }
 atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||sourceVolumeInscriptionDistrictAssignments[record.id]||null})
 // Cross-border Kannada inscription leads are kept in a synthetic research audit
