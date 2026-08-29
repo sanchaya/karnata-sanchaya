@@ -192,3 +192,79 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Supplementary Inscriptions in the Mysore and Mandya Districts" - Epigraphia Carnatica
+// Vol. XIV (Mysore Archaeological Survey, 1943), published by Dr. M.H. Krishna. These are copper-plate
+// royal grants: the opening Sanskrit invocation and dynastic genealogy are legible in the OCR sample,
+// but the specific grant terms (village boundaries, donee, purpose) further down each dense Sanskrit
+// plate text are not yet reliably transcribed and need a qualified reviewer, not just an item-level
+// identification.
+const SRC_EC_VOL14 = 'src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v14'
+
+karnatakaArchaeologyMiningInscriptions.push(
+  {
+    id: 'inscription-karch-ec14-no126-immadi-devaraya-kadasir-plates',
+    name: n('Kadasir copper-plate grant of Immadi Devaraya (1447)', 'ಇಮ್ಮಡಿ ದೇವರಾಯನ ಕಡಸೂರು ತಾಮ್ರಶಾಸನ (1447)'),
+    date: d(1447, 1447, 'year'),
+    placeId: 'place-mysuru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-mysuru',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('Catalogued as No. 126: a Nagari-script copper-plate grant dated Saka 1369 (1447 CE), in the possession of the archaka Gundayya of the same temple. The opening Sanskrit invocation and dynastic genealogy (Sangama - Bukka - Harihareshvara - Pratapadevaraya) are legible in the OCR sample and confirm this as a Vijayanagara Sangama-dynasty grant issued in the name of Immadi Devaraya; the specific village, boundaries and donee named later in the plate text require a qualified Sanskrit/epigraphy reviewer to transcribe reliably from the scan.', 'ಸಂಖ್ಯೆ 126ರಂತೆ ಪಟ್ಟಿಗತ: ಶಕ 1369 (1447) ದಿನಾಂಕಿತ ನಾಗರಿ-ಲಿಪಿಯ ತಾಮ್ರಶಾಸನ, ಅದೇ ದೇವಾಲಯದ ಅರ್ಚಕ ಗುಂಡಯ್ಯನ ಬಳಿ ಇದೆ. ಆರಂಭಿಕ ಸಂಸ್ಕೃತ ಮಂಗಳಾಚರಣೆ ಮತ್ತು ವಂಶಾವಳಿ (ಸಂಗಮ - ಬುಕ್ಕ - ಹರಿಹರೇಶ್ವರ - ಪ್ರತಾಪದೇವರಾಯ) OCR ಮಾದರಿಯಲ್ಲಿ ಓದಬಲ್ಲಂತಿದ್ದು ಇದು ಇಮ್ಮಡಿ ದೇವರಾಯನ ಹೆಸರಿನಲ್ಲಿ ನೀಡಲಾದ ವಿಜಯನಗರ ಸಂಗಮ ವಂಶದ ಅನುದಾನವೆಂದು ಖಚಿತಪಡಿಸುತ್ತದೆ; ಫಲಕ ಪಠ್ಯದ ನಂತರದ ಭಾಗದಲ್ಲಿನ ನಿರ್ದಿಷ್ಟ ಗ್ರಾಮ, ಎಲ್ಲೆಗಳು ಮತ್ತು ದಾನಿತನನ್ನು ವಿಶ್ವಾಸಾರ್ಹವಾಗಿ ಲಿಪ್ಯಂತರಿಸಲು ಅರ್ಹ ಸಂಸ್ಕೃತ/ಶಾಸನಶಾಸ್ತ್ರ ಪರಿಶೀಲಕರು ಬೇಕು.'),
+    citations: [c(SRC_EC_VOL14, 'No. 126 (p. 24): item identification and genealogical opening only; full grant terms pending transcription review')],
+    review,
+  },
+  {
+    id: 'inscription-karch-ec14-no128-harihara-triyambakapura-plates',
+    name: n('Triyambakapura copper-plate grant of Harihara (1510)', 'ಹರಿಹರನ ತ್ರಿಯಂಬಕಪುರ ತಾಮ್ರಶಾಸನ (1510)'),
+    date: d(1510, 1510, 'year'),
+    placeId: 'place-mysuru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-mysuru',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('Catalogued as No. 128: a 3-plate Nagari-script grant dated Saka 1432 (1510 CE), in the possession of the same archaka Gundayya as No. 126. Item identification, plate count and date are confirmed from the OCR sample; specific grant terms require translation review.', 'ಸಂಖ್ಯೆ 128ರಂತೆ ಪಟ್ಟಿಗತ: ಶಕ 1432 (1510) ದಿನಾಂಕಿತ 3-ಫಲಕಗಳ ನಾಗರಿ-ಲಿಪಿಯ ಅನುದಾನ, ಸಂಖ್ಯೆ 126ರಂತೆ ಅದೇ ಅರ್ಚಕ ಗುಂಡಯ್ಯನ ಬಳಿ. ವಸ್ತು ಗುರುತು, ಫಲಕ ಸಂಖ್ಯೆ ಮತ್ತು ದಿನಾಂಕ OCR ಮಾದರಿಯಿಂದ ಖಚಿತಪಡಿಸಲಾಗಿದೆ; ನಿರ್ದಿಷ್ಟ ಅನುದಾನ ಷರತ್ತುಗಳಿಗೆ ಅನುವಾದ ಪರಿಶೀಲನೆ ಬೇಕು.'),
+    citations: [c(SRC_EC_VOL14, 'No. 128 (p. 25): item identification only; full grant terms pending transcription review')],
+    review,
+  },
+  {
+    id: 'inscription-karch-ec14-no129-krishnaraya-kedihalli-plates',
+    name: n('Kedihalli copper-plate grant of Krishnadevaraya (1526)', 'ಕೃಷ್ಣದೇವರಾಯನ ಕೆಡಿಹಳ್ಳಿ ತಾಮ್ರಶಾಸನ (1526)'),
+    date: d(1526, 1526, 'year'),
+    placeId: 'place-mysuru',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-mysuru',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('Catalogued as No. 129: a 3-plate Nagari-script grant dated Saka 1448 (1526 CE), attributed to "Krishnaraya" and in the possession of the same archaka Gundayya. The date falls within Krishnadevaraya\'s reign (1509-1529), making this plausibly one of his grants, though independent confirmation against the full plate text (not yet transcribed from OCR) is needed before treating the attribution as settled.', 'ಸಂಖ್ಯೆ 129ರಂತೆ ಪಟ್ಟಿಗತ: ಶಕ 1448 (1526) ದಿನಾಂಕಿತ 3-ಫಲಕಗಳ ನಾಗರಿ-ಲಿಪಿಯ ಅನುದಾನ, "ಕೃಷ್ಣರಾಯ"ಗೆ ಆರೋಪಿತ, ಅದೇ ಅರ್ಚಕ ಗುಂಡಯ್ಯನ ಬಳಿ. ದಿನಾಂಕ ಕೃಷ್ಣದೇವರಾಯನ ಆಳ್ವಿಕೆಯೊಳಗೆ (1509-1529) ಬರುತ್ತದೆ, ಇದು ಸಂಭವನೀಯವಾಗಿ ಅವನ ಅನುದಾನಗಳಲ್ಲಿ ಒಂದಾಗಿರಬಹುದು, ಆದರೂ ಪೂರ್ಣ ಫಲಕ ಪಠ್ಯದ (OCRನಿಂದ ಇನ್ನೂ ಲಿಪ್ಯಂತರಿಸಿಲ್ಲ) ವಿರುದ್ಧ ಸ್ವತಂತ್ರ ದೃಢೀಕರಣ ಬೇಕು.'),
+    citations: [c(SRC_EC_VOL14, 'No. 129 (p. 27): item identification only; attribution to Krishnadevaraya plausible from regnal dates but not independently confirmed')],
+    review,
+  },
+  {
+    id: 'inscription-karch-ec14-no155-chamaraja-wodeyar-honnalagere-plates',
+    name: n('Honnalagere copper-plate grant of Chamaraja Wodeyar (1622)', 'ಚಾಮರಾಜ ಒಡೆಯರ್ ಹೊನ್ನಲಗೆರೆ ತಾಮ್ರಶಾಸನ (1622)'),
+    date: d(1622, 1622, 'year'),
+    placeId: 'place-mysuru',
+    polityId: 'polity-mysore',
+    districtAuditId: 'audit-mysuru',
+    languages: ['Sanskrit'],
+    scripts: ['Nagari'],
+    description: n('Catalogued as No. 155: a 3-plate Nagara-script grant dated Saka 1544 (1622 CE), by a Mysore Wodeyar king recorded as "Chamaraja Vadeyar," in the possession of Pandit Anandalvar at Bangalore. Which of the several Chamaraja Wodeyars held the throne in 1622 (early Mysore Kingdom, pre-Srirangapatna-capital period) is not yet cross-checked against the reign chronology in this atlas; item identification and date are confirmed, full grant terms are not.', 'ಸಂಖ್ಯೆ 155ರಂತೆ ಪಟ್ಟಿಗತ: ಶಕ 1544 (1622) ದಿನಾಂಕಿತ 3-ಫಲಕಗಳ ನಾಗರ-ಲಿಪಿಯ ಅನುದಾನ, "ಚಾಮರಾಜ ವಡೆಯರ್" ಎಂದು ದಾಖಲಾದ ಮೈಸೂರು ಒಡೆಯರ್ ಅರಸನಿಂದ, ಬೆಂಗಳೂರಿನ ಪಂಡಿತ ಆನಂದಾಳ್ವಾರ್ ಬಳಿ ಇದೆ. 1622ರಲ್ಲಿ (ಶ್ರೀರಂಗಪಟ್ಟಣ-ರಾಜಧಾನಿಗೂ ಮೊದಲಿನ ಆರಂಭಿಕ ಮೈಸೂರು ರಾಜ್ಯ) ಸಿಂಹಾಸನದಲ್ಲಿದ್ದ ಹಲವಾರು ಚಾಮರಾಜ ಒಡೆಯರ್‌ಗಳಲ್ಲಿ ಯಾರೆಂಬುದನ್ನು ಈ ಭೂಪಟದ ಆಳ್ವಿಕೆ ಕಾಲಾನುಕ್ರಮದೊಂದಿಗೆ ಇನ್ನೂ ಪರಿಶೀಲಿಸಿಲ್ಲ; ವಸ್ತು ಗುರುತು ಮತ್ತು ದಿನಾಂಕ ಖಚಿತವಾಗಿದೆ, ಪೂರ್ಣ ಅನುದಾನ ಷರತ್ತುಗಳಲ್ಲ.'),
+    citations: [c(SRC_EC_VOL14, 'No. 155 (p. 88): item identification only; specific Chamaraja Wodeyar not yet cross-checked')],
+    review,
+  },
+  {
+    id: 'inscription-karch-ec14-no115-chikkadevaraja-devanagara-plates',
+    name: n('Devanagara Agrahara copper-plate grant of Chikkadevaraja Wodeyar (1673)', 'ಚಿಕ್ಕದೇವರಾಜ ಒಡೆಯರ್ ದೇವನಗರ ಅಗ್ರಹಾರ ತಾಮ್ರಶಾಸನ (1673)'),
+    date: d(1673, 1673, 'year'),
+    placeId: 'place-mysuru',
+    polityId: 'polity-mysore',
+    districtAuditId: 'audit-mysuru',
+    languages: ['Sanskrit', 'Kannada'],
+    scripts: ['Nagari', 'Kannada'],
+    description: n('Catalogued as No. 115: a 10-plate grant (Varaha seal) dated Saka 1595 (1673 CE), in the possession of Gundalapandit Lakshmanacharyar, establishing the Devanagara agrahara under Chikkadevaraja Wodeyar (r. 1673-1704). The opening Sanskrit invocation traces a full mythic-to-historical Yadu-lineage genealogy of the Mysore Wodeyars down through Bettada Chamaraja to the grant; specific village boundaries and the agrahara\'s Brahmin-settlement terms further in the plate text still require translation review.', 'ಸಂಖ್ಯೆ 115ರಂತೆ ಪಟ್ಟಿಗತ: ಶಕ 1595 (1673) ದಿನಾಂಕಿತ 10-ಫಲಕಗಳ ಅನುದಾನ (ವರಾಹ ಮುದ್ರೆ), ಗುಂಡಲಪಂಡಿತ ಲಕ್ಷ್ಮಣಾಚಾರ್ಯರ ಬಳಿ ಇದೆ, ಚಿಕ್ಕದೇವರಾಜ ಒಡೆಯರ್ (ಆ. 1673-1704) ಕಾಲದಲ್ಲಿ ದೇವನಗರ ಅಗ್ರಹಾರವನ್ನು ಸ್ಥಾಪಿಸುತ್ತದೆ. ಆರಂಭಿಕ ಸಂಸ್ಕೃತ ಮಂಗಳಾಚರಣೆ ಮೈಸೂರು ಒಡೆಯರ್‌ಗಳ ಪೌರಾಣಿಕ-ಚಾರಿತ್ರಿಕ ಯದು-ವಂಶಾವಳಿಯನ್ನು ಬೆಟ್ಟದ ಚಾಮರಾಜನಿಂದ ಈ ಅನುದಾನದವರೆಗೆ ಗುರುತಿಸುತ್ತದೆ; ಫಲಕ ಪಠ್ಯದ ಮುಂದಿನ ಭಾಗದಲ್ಲಿನ ನಿರ್ದಿಷ್ಟ ಗ್ರಾಮ ಎಲ್ಲೆಗಳು ಮತ್ತು ಅಗ್ರಹಾರದ ಬ್ರಾಹ್ಮಣ-ವಸತಿ ಷರತ್ತುಗಳಿಗೆ ಇನ್ನೂ ಅನುವಾದ ಪರಿಶೀಲನೆ ಬೇಕು.'),
+    citations: [c(SRC_EC_VOL14, 'No. 115 (p. 103): item identification and dynastic genealogy confirmed; full grant terms pending transcription review')],
+    review,
+  },
+)
