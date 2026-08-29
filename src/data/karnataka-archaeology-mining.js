@@ -649,3 +649,23 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "History of the Wodeyars of Mysore (1610-1748)" by [author initials indistinct in OCR]
+// (1996), a scholarly monograph rather than a primary-source catalogue.
+const SRC_WODEYAR_HISTORY = 'src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-tradition-of-alamelamma',
+  name: n('The tradition of Alamelamma\'s curse', 'ಅಲಮೇಲಮ್ಮನ ಶಾಪದ ಸಂಪ್ರದಾಯ'),
+  category: 'religious-tradition',
+  date: d(1610, 1610, 'circa'),
+  polityIds: ['polity-mysore'],
+  placeIds: ['place-talakad'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['Dasara', 'royal-legend', 'curse-tradition', 'Talakad'],
+  continuity: 'continuing-practice',
+  description: n('A widely-held Mysore royal-family tradition, given a dedicated chapter in this monograph: on Raja Wodeyar\'s capture of Srirangapatna (1610), Alamelamma -- wife of the deposed Vijayanagara viceroy Tirumala -- fled with palace jewels to Talakad. When Raja Wodeyar\'s agents demanded the goddess Ranganayaki\'s jewels back by threat of force, she is said to have drowned herself in the Kaveri whirl at Malangi, pronouncing a three-part curse: that Talakad be buried in sand, that Malangi become a whirlpool, and that the Mysore kings be denied male heirs. Raja Wodeyar had a golden image of Alamelamma made and propitiated with expiatory rites, a special Dasara worship maintained ever since. The book notes the tradition is uncorroborated by any contemporary evidence, but observes that Mysore succession did in fact become erratic after Raja Wodeyar\'s death (his first three sons predeceased him; the line required repeated adoption from collateral branches thereafter) -- which sustained the legend\'s popular currency into the present.', 'ಈ ಗ್ರಂಥದಲ್ಲಿ ಪ್ರತ್ಯೇಕ ಅಧ್ಯಾಯವಾಗಿ ನೀಡಲಾದ, ಮೈಸೂರು ರಾಜಮನೆತನದಲ್ಲಿ ವ್ಯಾಪಕವಾಗಿ ಹರಡಿರುವ ಸಂಪ್ರದಾಯ: ರಾಜ ಒಡೆಯರ್ ಶ್ರೀರಂಗಪಟ್ಟಣವನ್ನು ವಶಪಡಿಸಿಕೊಂಡಾಗ (1610), ಪದಚ್ಯುತ ವಿಜಯನಗರ ಪ್ರಾಂತಾಧಿಪತಿ ತಿರುಮಲನ ಪತ್ನಿ ಅಲಮೇಲಮ್ಮ ಅರಮನೆಯ ಆಭರಣಗಳೊಂದಿಗೆ ತಳಕಾಡಿಗೆ ಓಡಿಹೋದಳು. ರಾಜ ಒಡೆಯರ್‌ನ ಪ್ರತಿನಿಧಿಗಳು ಬಲಪ್ರಯೋಗದ ಬೆದರಿಕೆಯೊಂದಿಗೆ ರಂಗನಾಯಕಿ ದೇವಿಯ ಆಭರಣಗಳನ್ನು ಹಿಂತಿರುಗಿಸಲು ಒತ್ತಾಯಿಸಿದಾಗ, ಅವಳು ಮಳಂಗಿಯ ಕಾವೇರಿ ಸುಳಿಯಲ್ಲಿ ಮುಳುಗಿ ಆತ್ಮಹತ್ಯೆ ಮಾಡಿಕೊಂಡಳೆಂದೂ, ಮೂರು-ಭಾಗದ ಶಾಪವನ್ನು ನುಡಿದಳೆಂದೂ ಹೇಳಲಾಗುತ್ತದೆ: ತಳಕಾಡು ಮರಳಿನಡಿ ಹೂಳಲಿ, ಮಳಂಗಿ ಸುಳಿಯಾಗಲಿ, ಮೈಸೂರು ಅರಸರಿಗೆ ಗಂಡು ಮಕ್ಕಳಿಲ್ಲದಿರಲಿ. ರಾಜ ಒಡೆಯರ್ ಅಲಮೇಲಮ್ಮನ ಚಿನ್ನದ ವಿಗ್ರಹ ಮಾಡಿಸಿ ಪ್ರಾಯಶ್ಚಿತ್ತ ವಿಧಿಗಳಿಂದ ಶಾಂತಗೊಳಿಸಿದನು, ಅಂದಿನಿಂದ ವಿಶೇಷ ದಸರಾ ಪೂಜೆ ಮುಂದುವರಿದಿದೆ. ಈ ಸಂಪ್ರದಾಯಕ್ಕೆ ಯಾವುದೇ ಸಮಕಾಲೀನ ಸಾಕ್ಷ್ಯದ ದೃಢೀಕರಣವಿಲ್ಲವೆಂದು ಗ್ರಂಥ ಗಮನಿಸುತ್ತದೆ, ಆದರೆ ರಾಜ ಒಡೆಯರ್‌ನ ಮರಣದ ನಂತರ ಮೈಸೂರು ಉತ್ತರಾಧಿಕಾರ ನಿಜವಾಗಿಯೂ ಅನಿಯಮಿತವಾಯಿತೆಂದು (ಅವನ ಮೊದಲ ಮೂವರು ಪುತ್ರರು ಅವನಿಗಿಂತ ಮೊದಲೇ ಮರಣಹೊಂದಿದರು; ನಂತರ ಪಾರ್ಶ್ವ ಶಾಖೆಗಳಿಂದ ಪದೇಪದೇ ದತ್ತು ಬೇಕಾಯಿತು) ಗಮನಿಸುತ್ತದೆ -- ಇದು ಈ ದಂತಕಥೆಯ ಜನಪ್ರಿಯ ಪ್ರಚಲಿತತೆಯನ್ನು ಇಂದಿಗೂ ಉಳಿಸಿಕೊಂಡಿದೆ.'),
+  citations: [c(SRC_WODEYAR_HISTORY, '"The Tradition of Alamelamma" chapter (pp. 201-202): full narrative and the curse verse as rendered in the book, cited to the Mysore Palace Records')],
+  review,
+})
