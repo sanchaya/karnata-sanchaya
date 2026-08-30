@@ -960,3 +960,24 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_VADHY_VOL12, 'Dr. C. Mahadeva, "ರೂಕ ನಾಣ್ಯ - ಒಂದು ಪರಿಶೀಲನೆ" (The rooka coin: an examination), pp. 196-201, responding to A.V. Narasimhamurthy\'s "The Coins and Currency Systems of Karnataka"')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 13 (Directorate of Archaeology and Museums, Mysore, 2008).
+const SRC_VADHY_VOL13 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg'
+
+karnatakaArchaeologyMiningEvents.push({
+  id: 'event-karch-krishnadevaraya-gaya-inscription-1522',
+  type: 'cultural-contact',
+  name: n('Krishnadevaraya\'s 1522 CE inscription at Vishnupada temple, Gaya (Bihar)', 'ಗಯಾದ (ಬಿಹಾರ) ವಿಷ್ಣುಪಾದ ದೇವಾಲಯದ ಕೃಷ್ಣದೇವರಾಯನ 1522ರ ಶಾಸನ'),
+  date: d(1522, 1522, 'year'),
+  year: 1522,
+  location: { type: 'Point', coordinates: [84.9994, 24.7955], precision: 'approximate' },
+  summary: n('Keladi Venkatesh Joyis discusses a Kannada-script, Telugu-language inscription on the entrance archway of the Vishnupada temple at Gaya, Bihar -- on the Ganga\'s bank, over 1,400 km north of Hampi -- dated Saka 1444, Vishu samvatsara, Ashadha 13 (1522 CE). Buchanan\'s 1811 Patna-Gaya survey records a stone torana built there in the names of Krishnadevaraya and his chief queen Tirumaladevi. Scholars are divided on its nature: the inscription\'s own text describes Krishnadevaraya conducting his late father\'s shraddha (ancestral rites) there, suggesting a pilgrimage/dharma-shasana rather than proof of direct territorial conquest this far north (an Udayambaram inscription elsewhere already credits Krishnadevaraya\'s fame as reaching "from the Ganga to Lanka"); others read it as a vijaya-shasana (victory record) in the tradition of rulers -- Samudragupta at Kanchi, Rajendra Chola on the Ganga -- who erected commemorative inscriptions at the furthest points of a campaign, without that implying sustained rule there. The paper tentatively credits the court poet Nandi Timmana (Mukku Timmayya), who is thought to have accompanied the king\'s representative to the Ganga and may have composed the record, and treats the poet Allasani Peddana\'s Manucharitamu claims of Krishnadevaraya defeating northern "Gauda" kings and a "Sikandar" (probably conflated with Sikandar Lodi, Delhi\'s sultan 1488-1517) with explicit scepticism as poetic exaggeration rather than settled history.', 'ಕೆಳದಿ ವೆಂಕಟೇಶ್ ಜೋಯಿಸ್ ಬಿಹಾರದ ಗಯಾದ ವಿಷ್ಣುಪಾದ ದೇವಾಲಯದ ಪ್ರವೇಶ ತೋರಣದ ಮೇಲಿನ ಕನ್ನಡ-ಲಿಪಿ, ತೆಲುಗು-ಭಾಷೆಯ ಶಾಸನವನ್ನು ಚರ್ಚಿಸುತ್ತಾರೆ -- ಗಂಗಾ ದಡದಲ್ಲಿ, ಹಂಪೆಯಿಂದ 1,400 ಕಿ.ಮೀ.ಗಿಂತ ಹೆಚ್ಚು ಉತ್ತರಕ್ಕೆ -- ಶಕ 1444, ವಿಷು ಸಂವತ್ಸರ, ಆಷಾಢ 13 (1522) ದಿನಾಂಕಿತ. ಬುಕಾನನ್‌ನ 1811ರ ಪಾಟ್ನಾ-ಗಯಾ ಸಮೀಕ್ಷೆ ಅಲ್ಲಿ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪಟ್ಟಮಹಿಷಿ ತಿರುಮಲದೇವಿಯ ಹೆಸರಿನಲ್ಲಿ ಕಲ್ಲಿನ ತೋರಣ ಕಟ್ಟಿಸಿದ್ದನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ಇದರ ಸ್ವರೂಪದ ಬಗ್ಗೆ ವಿದ್ವಾಂಸರು ಭಿನ್ನಾಭಿಪ್ರಾಯ ಹೊಂದಿದ್ದಾರೆ: ಶಾಸನ ಪಠ್ಯವೇ ಕೃಷ್ಣದೇವರಾಯ ಅಲ್ಲಿ ತನ್ನ ದಿವಂಗತ ತಂದೆಯ ಶ್ರಾದ್ಧ (ಪಿತೃ ಕರ್ಮ) ನಡೆಸಿದ್ದನ್ನು ವಿವರಿಸುತ್ತದೆ, ಇದು ಈ ದೂರದ ಉತ್ತರದವರೆಗೆ ನೇರ ಭೂಪ್ರದೇಶ ವಿಜಯದ ಸಾಕ್ಷ್ಯಕ್ಕಿಂತ ಯಾತ್ರೆ/ಧರ್ಮಶಾಸನ ಎಂದು ಸೂಚಿಸುತ್ತದೆ (ಬೇರೆಡೆಯ ಉದಯಾಂಬರಂ ಶಾಸನ ಈಗಾಗಲೇ ಕೃಷ್ಣದೇವರಾಯನ ಕೀರ್ತಿ "ಗಂಗೆಯಿಂದ ಲಂಕೆಯವರೆಗೆ" ಹಬ್ಬಿತ್ತೆಂದು ಗೌರವಿಸುತ್ತದೆ); ಇತರರು ಇದನ್ನು ವಿಜಯ-ಶಾಸನ (ವಿಜಯ ದಾಖಲೆ) ಎಂದು ಓದುತ್ತಾರೆ, ಸಮುದ್ರಗುಪ್ತ ಕಂಚಿಯಲ್ಲಿ, ರಾಜೇಂದ್ರ ಚೋಳ ಗಂಗೆಯ ಮೇಲೆ ಸ್ಥಾಪಿಸಿದಂತಹ ದಂಡಯಾತ್ರೆಯ ಅತ್ಯಂತ ದೂರದ ಬಿಂದುಗಳಲ್ಲಿ ಸ್ಮಾರಕ ಶಾಸನ ಸ್ಥಾಪಿಸುವ ಅರಸರ ಪರಂಪರೆಯಲ್ಲಿ, ಅದು ಅಲ್ಲಿ ನಿರಂತರ ಆಳ್ವಿಕೆಯನ್ನು ಸೂಚಿಸದೆಯೇ. ಪ್ರಬಂಧ ತಾತ್ಕಾಲಿಕವಾಗಿ ಆಸ್ಥಾನ ಕವಿ ನಂದಿ ತಿಮ್ಮನ (ಮುಕ್ಕು ತಿಮ್ಮಯ್ಯ)ನಿಗೆ ಶ್ರೇಯ ನೀಡುತ್ತದೆ, ಅವನು ರಾಜನ ಪ್ರತಿನಿಧಿಯೊಂದಿಗೆ ಗಂಗೆಗೆ ಜೊತೆಗೂಡಿ ಶಾಸನ ರಚಿಸಿರಬಹುದೆಂದು ಭಾವಿಸಲಾಗಿದೆ, ಮತ್ತು ಕವಿ ಅಲ್ಲಸಾನಿ ಪೆದ್ದನನ ಮನುಚರಿತಂ ಕೃಷ್ಣದೇವರಾಯ ಉತ್ತರದ "ಗೌಡ" ಅರಸರನ್ನೂ "ಸಿಕಂದರ"ನನ್ನೂ (ಬಹುಶಃ ದಿಲ್ಲಿ ಸುಲ್ತಾನ್ ಸಿಕಂದರ್ ಲೋಧಿ, 1488-1517, ಜೊತೆ ಗೊಂದಲಗೊಂಡಿದೆ) ಸೋಲಿಸಿದನೆಂಬ ಹಕ್ಕುಗಳನ್ನು ಇತಿಹಾಸಕ್ಕಿಂತ ಕಾವ್ಯಾತ್ಮಕ ಉತ್ಪ್ರೇಕ್ಷೆಯೆಂದು ಸ್ಪಷ್ಟ ಸಂಶಯದೊಂದಿಗೆ ಪರಿಗಣಿಸುತ್ತದೆ.'),
+  participants: [
+    { polityId: 'polity-vijayanagara', role: 'inscribing-polity', outcome: 'commemorated' },
+  ],
+  peopleIds: ['person-krishnadevaraya'],
+  originPlaceId: 'place-hampi',
+  destinationPlaceId: 'place-gaya',
+  citations: [c(SRC_VADHY_VOL13, 'Dr. Keladi Venkatesh Joyis, "ವಿಷ್ಣು ಗಯಾದಲ್ಲಿರುವ ವಿಜಯನಗರದ ಕೃಷ್ಣದೇವರಾಯನ ವಿಜಯ ಶಾಸನ" (Krishnadevaraya\'s victory inscription at Vishnu Gaya), pp. 91-95, citing Buchanan\'s 1811 Patna-Gaya survey and Allasani Peddana\'s Manucharitamu')],
+  review,
+})
