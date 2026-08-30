@@ -901,3 +901,24 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_VADHY_VOL9, 'B. Abdul Mannan, "ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿ ಮುಸ್ಲಿಂ ಧರ್ಮ" (Islam in Vijayanagara city), pp. 110-114, citing Department progress reports (VPR 1979-83, 1983-84, 1984-87) and the Kumararamana Sangatya')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 10 (Directorate of Archaeology and Museums, Mysore, 2005).
+const SRC_VADHY_VOL10 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg'
+
+karnatakaArchaeologyMiningEvents.push({
+  id: 'event-karch-harihara-i-vidyaranya-1336-foundation-charter',
+  type: 'kingdom-foundation',
+  name: n('1336 CE copper-plate charter of Harihara I naming Vidyaranya and dating Vijayanagara\'s founding', 'ವಿದ್ಯಾರಣ್ಯರನ್ನು ಹೆಸರಿಸಿ ವಿಜಯನಗರ ಸ್ಥಾಪನೆ ದಿನಾಂಕಿಸುವ ಹರಿಹರ Iನ 1336ರ ತಾಮ್ರಶಾಸನ ಪ್ರಮಾಣಪತ್ರ'),
+  date: d(1336, 1336, 'year'),
+  year: 1336,
+  location: { type: 'Point', coordinates: [76.46, 15.335], precision: 'approximate' },
+  summary: n('D.V. Parameshivamurti publishes a previously unrecorded 126-line Sanskrit/Nandinagari copper-plate charter of Harihara I -- one of three copper plates a priestly family (Dattatreya Shivarama Purohit) at Halkavatagi village, Lingasugur taluk, had preserved and worshipped for generations. The charter opens with the Sangama genealogy (Sangama\'s five sons Harihara, Kampa, Bukka, Mada and Muddha) and then narrates the empire\'s founding legend in full: Harihara, ruling from Kunjarakonapura (Anegundi), crosses the Tungabhadra on a hunt and is astonished to see a hare turn on and confront his fierce hunting dog; near the Virupaksha-Pampadevi shrine he meets the sage Vidyaranya in penance, who explains the land\'s sanctity and instructs him to found a city named "Vidya" there, as beautiful as Alakanagara and walled with nine gates like Dwaraka. The charter dates this precisely by a Sanskrit chronogram to Shalivahana Shaka 1258, Dhatr samvatsara, Vaishakha 7 -- 18 April 1336 CE -- on which date, before Virupaksha-Pampadevi, Harihara founded the Hariharapura agrahara and granted land in Kopanachala-sime (Hastinavati kingdom) to two Brahmins, Tippa Bhatta (Kaushika gotra) and Aragamallappa (Bharadvaja gotra). The author frames the find explicitly against the live scholarly dispute over whether any reliable evidence documents Vijayanagara\'s founding and Vidyaranya\'s role in it, several extant sources having been judged artificial or unreliable -- while noting this record too requires the same page-image and provenance scrutiny given its family-preserved, previously unpublished transmission.', 'ಡಿ.ವಿ. ಪರಮಶಿವಮೂರ್ತಿ ಈ ಮೊದಲು ದಾಖಲಾಗದ 126-ಸಾಲಿನ ಸಂಸ್ಕೃತ/ನಂದಿನಾಗರಿ ತಾಮ್ರಶಾಸನ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪ್ರಕಟಿಸುತ್ತಾರೆ, ಹರಿಹರ Iನದ್ದು -- ಲಿಂಗಸುಗೂರು ತಾಲ್ಲೂಕಿನ ಹಾಲ್ಕಾವಟಗಿ ಗ್ರಾಮದ ಪುರೋಹಿತ ಕುಟುಂಬ (ದತ್ತಾತ್ರೇಯ ಶಿವರಾಮ ಪುರೋಹಿತ) ತಲೆಮಾರುಗಳಿಂದ ಸಂರಕ್ಷಿಸಿ ಪೂಜಿಸಿದ ಮೂರು ತಾಮ್ರಫಲಕಗಳಲ್ಲಿ ಒಂದು. ಪ್ರಮಾಣಪತ್ರ ಸಂಗಮ ವಂಶಾವಳಿಯಿಂದ (ಸಂಗಮನ ಐವರು ಪುತ್ರರು ಹರಿಹರ, ಕಂಪ, ಬುಕ್ಕ, ಮಾದ ಮತ್ತು ಮುದ್ದ) ಆರಂಭಗೊಂಡು ಸಾಮ್ರಾಜ್ಯದ ಸ್ಥಾಪನಾ ದಂತಕಥೆಯನ್ನು ಪೂರ್ಣವಾಗಿ ನಿರೂಪಿಸುತ್ತದೆ: ಕುಂಜರಕೋಣಪುರ (ಆನೆಗುಂದಿ)ದಿಂದ ಆಳುತ್ತಿದ್ದ ಹರಿಹರ, ಬೇಟೆಗೆ ತುಂಗಭದ್ರಾ ದಾಟಿ, ಮೊಲವೊಂದು ತನ್ನ ಉಗ್ರ ಬೇಟೆನಾಯಿಯನ್ನು ಎದುರಿಸುವುದನ್ನು ಕಂಡು ಆಶ್ಚರ್ಯಪಡುತ್ತಾನೆ; ವಿರೂಪಾಕ್ಷ-ಪಂಪಾದೇವಿ ಗುಡಿಯ ಬಳಿ ತಪಸ್ಸಿನಲ್ಲಿದ್ದ ಋಷಿ ವಿದ್ಯಾರಣ್ಯರನ್ನು ಭೇಟಿಯಾಗುತ್ತಾನೆ, ಅವರು ಭೂಮಿಯ ಪಾವಿತ್ರ್ಯವನ್ನು ವಿವರಿಸಿ ಅಲ್ಲಿ "ವಿದ್ಯಾ" ಎಂಬ ನಗರವನ್ನು, ಅಲಕಾನಗರದಷ್ಟು ಸುಂದರವಾಗಿ, ದ್ವಾರಕೆಯಂತೆ ಒಂಬತ್ತು ಬಾಗಿಲುಗಳ ಕೋಟೆಯೊಂದಿಗೆ ಸ್ಥಾಪಿಸಲು ಆಜ್ಞಾಪಿಸುತ್ತಾರೆ. ಪ್ರಮಾಣಪತ್ರ ಇದನ್ನು ಸಂಸ್ಕೃತ ಕಾಲಸೂಚಕ ಪದ್ಯದ ಮೂಲಕ ನಿಖರವಾಗಿ ಶಾಲಿವಾಹನ ಶಕ 1258, ಧಾತೃ ಸಂವತ್ಸರ, ವೈಶಾಖ 7 -- 18 ಏಪ್ರಿಲ್ 1336 -- ಎಂದು ದಿನಾಂಕಿಸುತ್ತದೆ, ಈ ದಿನಾಂಕದಂದು, ವಿರೂಪಾಕ್ಷ-ಪಂಪಾದೇವಿಯ ಮುಂದೆ, ಹರಿಹರ ಹರಿಹರಪುರ ಅಗ್ರಹಾರವನ್ನು ಸ್ಥಾಪಿಸಿ ಕೊಪಣಾಚಲ-ಸೀಮೆಯಲ್ಲಿ (ಹಸ್ತಿನಾವತಿ ರಾಜ್ಯ) ಇಬ್ಬರು ಬ್ರಾಹ್ಮಣರಿಗೆ, ತಿಪ್ಪ ಭಟ್ಟ (ಕೌಶಿಕ ಗೋತ್ರ) ಮತ್ತು ಅರಗಮಲ್ಲಪ್ಪ (ಭಾರದ್ವಾಜ ಗೋತ್ರ), ಭೂಮಿ ದಾನ ನೀಡಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ. ಲೇಖಕರು ಈ ಶೋಧನೆಯನ್ನು ವಿಜಯನಗರ ಸ್ಥಾಪನೆ ಮತ್ತು ಅದರಲ್ಲಿ ವಿದ್ಯಾರಣ್ಯರ ಪಾತ್ರವನ್ನು ಯಾವುದೇ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಕ್ಷ್ಯ ದಾಖಲಿಸುತ್ತದೆಯೇ ಎಂಬ ಜೀವಂತ ವಿದ್ವತ್ ವಿವಾದದ ವಿರುದ್ಧ ಸ್ಪಷ್ಟವಾಗಿ ಇರಿಸುತ್ತಾರೆ, ಹಲವು ಈಗಿರುವ ಆಕರಗಳನ್ನು ಕೃತಕ ಅಥವಾ ಅವಿಶ್ವಾಸಾರ್ಹವೆಂದು ತೀರ್ಮಾನಿಸಲಾಗಿದೆ -- ಈ ದಾಖಲೆಗೂ, ಕುಟುಂಬ-ಸಂರಕ್ಷಿತ, ಈ ಮೊದಲು ಅಪ್ರಕಟಿತ ಪ್ರಸರಣದ ಕಾರಣ, ಅದೇ ಪುಟಚಿತ್ರ ಮತ್ತು ಮೂಲ ಪರಿಶೀಲನೆ ಬೇಕೆಂದು ಗಮನಿಸುತ್ತಾ.'),
+  participants: [
+    { polityId: 'polity-vijayanagara', role: 'founding-polity', outcome: 'established-1336-04-18' },
+  ],
+  peopleIds: ['person-harihara-i'],
+  originPlaceId: 'place-anegundi',
+  destinationPlaceId: 'place-hampi',
+  citations: [c(SRC_VADHY_VOL10, 'D.V. Parameshivamurti, "ಒಂದನೇ ಹರಿಹರ ಮತ್ತು ವಿದ್ಯಾರಣ್ಯರ ತಾಮ್ರಶಾಸನ" (The copper-plate charter of Harihara I and Vidyaranya), pp. 16-29: full 126-line text with chronogram date, from a family-preserved, previously unpublished plate at Halkavatagi')],
+  review,
+})
