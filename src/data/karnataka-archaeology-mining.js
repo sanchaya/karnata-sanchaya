@@ -741,3 +741,39 @@ karnatakaArchaeologyMiningInscriptions.push(
     review,
   },
 )
+
+// Source: "Vijayanagara Adhyayana" Volume 3 (Directorate of Archaeology and Museums, Mysore, 1998).
+const SRC_VADHY_VOL3 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mlsh'
+
+// Kampili was the immediate political predecessor of Vijayanagara: a Tungabhadra-doab chiefdom
+// whose ruler Kampilaraya, based at Kummatadurga (just 12 km from Hampi), fought and finally fell
+// to Delhi Sultanate forces c. 1327 CE -- only nine years before the Vijayanagara empire rose at
+// Hampi itself. Not previously present anywhere in this atlas.
+export const karnatakaArchaeologyMiningPolities = [
+  {
+    id: 'polity-kampili',
+    name: n('Kampili chiefdom', 'ಕಂಪಿಲಿ ಸಂಸ್ಥಾನ'),
+    type: 'kingdom',
+    date: { from: 1280, to: 1327, era: 'CE', precision: 'range' },
+    capitalId: 'place-kummata',
+    color: '#7a5230',
+    description: n('A Tungabhadra-doab chiefdom centred on the twin fortresses of Hanamsagar/Doravadi (under founder Mummadi Singa, r. c. 1280-1287) and later Kummatadurga and Hosamaledurga (under his son Kampilaraya). Kampilaraya repelled three separate Delhi Sultanate expeditions before a large invasion force finally besieged Kummatadurga for months in 1327 CE; he died fighting outside its walls rather than surrender. Kummatadurga lies barely 12 km from Hampi, and the Vijayanagara empire rose there just nine years later, in 1336 -- making Kampili its immediate and closest political predecessor in the same landscape.', 'ಸ್ಥಾಪಕ ಮುಮ್ಮಡಿ ಸಿಂಗ (ಆ. ಸು. 1280-1287) ಕಾಲದಲ್ಲಿ ಹನಮಸಾಗರ/ದೊರವಡಿ ಅವಳಿ ಕೋಟೆಗಳ, ಮತ್ತು ನಂತರ ಅವನ ಮಗ ಕಂಪಿಲರಾಯನ ಕಾಲದಲ್ಲಿ ಕುಮ್ಮಟದುರ್ಗ ಮತ್ತು ಹೊಸಮಲೆದುರ್ಗದ ಸುತ್ತ ಕೇಂದ್ರಿತವಾದ ತುಂಗಭದ್ರಾ ದ್ವಿಪ್ರದೇಶದ ಸಂಸ್ಥಾನ. ಕಂಪಿಲರಾಯ ಮೂರು ಪ್ರತ್ಯೇಕ ದಿಲ್ಲಿ ಸುಲ್ತಾನೀ ದಂಡಯಾತ್ರೆಗಳನ್ನು ಹಿಮ್ಮೆಟ್ಟಿಸಿದನು, ಕೊನೆಗೆ 1327ರಲ್ಲಿ ಒಂದು ದೊಡ್ಡ ಆಕ್ರಮಣ ಪಡೆ ಕುಮ್ಮಟದುರ್ಗವನ್ನು ತಿಂಗಳುಗಟ್ಟಲೆ ಮುತ್ತಿದಾಗ, ಶರಣಾಗುವ ಬದಲು ಕೋಟೆಯ ಹೊರಗೆ ಹೋರಾಡುತ್ತಾ ವೀರಮರಣ ಹೊಂದಿದನು. ಕುಮ್ಮಟದುರ್ಗ ಹಂಪೆಯಿಂದ ಕೇವಲ 12 ಕಿ.ಮೀ. ದೂರದಲ್ಲಿದ್ದು, ಕೇವಲ ಒಂಬತ್ತು ವರ್ಷಗಳ ನಂತರ, 1336ರಲ್ಲಿ, ಅದೇ ಭೂಪ್ರದೇಶದಲ್ಲಿ ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ ಉದಯಿಸಿತು -- ಕಂಪಿಲಿಯನ್ನು ಅದರ ಅತ್ಯಂತ ಸಮೀಪದ ರಾಜಕೀಯ ಪೂರ್ವಗಾಮಿಯನ್ನಾಗಿ ಮಾಡುತ್ತದೆ.'),
+    extent: { type: 'Polygon', coordinates: [[76.1, 15.6], [76.7, 15.6], [76.7, 15.1], [76.1, 15.1], [76.1, 15.6]], precision: 'schematic' },
+    citations: [c(SRC_VADHY_VOL3, 'Channabasappa S. Patil, "ಮುಮ್ಮಡಿ ಸಿಂಗನ ಮೇಲೆ ಮತ್ತಷ್ಟು ಬೆಳಕು" (More light on Mummadi Singa), pp. 93-95: political-history summary drawing on the author\'s earlier published research')],
+    review,
+  },
+]
+
+karnatakaArchaeologyMiningInscriptions.push({
+  id: 'inscription-karch-vadhy3-va-museum-erambarage-jinalaya',
+  name: n('Victoria & Albert Museum Parshvanatha pedestal inscription: Mummadi Singa and the Erambarage Jinalaya (c. late 13th century)', 'ವಿಕ್ಟೋರಿಯಾ ಮತ್ತು ಆಲ್ಬರ್ಟ್ ಮ್ಯೂಸಿಯಂ ಪಾರ್ಶ್ವನಾಥ ಪೀಠ ಶಾಸನ: ಮುಮ್ಮಡಿ ಸಿಂಗ ಮತ್ತು ಎರಂಬರಗೆ ಜಿನಾಲಯ (ಸು. 13ನೇ ಶತಮಾನದ ಅಂತ್ಯ)'),
+  date: d(1275, 1300, 'range'),
+  placeId: 'place-koppal',
+  polityId: 'polity-kampili',
+  districtAuditId: 'audit-koppal',
+  languages: ['Kannada'],
+  scripts: ['Kannada'],
+  description: n('An undated Kannada inscription on the pedestal of a Parshvanatha sculpture, noticed by the epigraphist Channabasappa S. Patil during a 1995 visit to the Victoria and Albert Museum, London -- letter forms place it in the late 13th century CE. It records that the Jain dharma/community at Erambarage (identified with present-day Yalburga, Koppal district) was disrupted by "the persecution of Mummadi Singa" (mummudi singana badheyinda), after which the Acharya Balendu Maladhari intervened; the shrine was subsequently rebuilt when Mallisetti, son of Ketisetti of Mindaguddi, had the image of Parshvadeva made for the renovated Jinalaya at Erambarage. Patil identifies this Mummadi Singa with the Kampili chiefdom\'s founder (r. c. 1280-1287, attested at Kummata by a Lakshmeshwar inscription of 1287), making this the only known record of friction between the Kampili chiefs and a local Jain community -- notable since Kampilaraya\'s dynasty is otherwise remembered, via other inscriptions and the Panchala-Ganga Chennarama\'s Samgatya poem, as reasserting control over Kummata\'s Jain population after displacing them.', 'ಶಾಸನಶಾಸ್ತ್ರಜ್ಞ ಚನ್ನಬಸಪ್ಪ ಎಸ್. ಪಾಟೀಲ 1995ರಲ್ಲಿ ಲಂಡನ್‌ನ ವಿಕ್ಟೋರಿಯಾ ಮತ್ತು ಆಲ್ಬರ್ಟ್ ಮ್ಯೂಸಿಯಂಗೆ ಭೇಟಿ ನೀಡಿದಾಗ ಗಮನಿಸಿದ, ಪಾರ್ಶ್ವನಾಥ ಶಿಲ್ಪದ ಪೀಠದ ಮೇಲಿನ ದಿನಾಂಕವಿಲ್ಲದ ಕನ್ನಡ ಶಾಸನ -- ಅಕ್ಷರ ಆಕಾರಗಳು ಇದನ್ನು 13ನೇ ಶತಮಾನದ ಅಂತ್ಯಕ್ಕೆ ಇರಿಸುತ್ತವೆ. ಎರಂಬರಗೆಯ (ಈಗಿನ ಕೊಪ್ಪಳ ಜಿಲ್ಲೆಯ ಯಲಬುರ್ಗ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ) ಜೈನ ಧರ್ಮ/ಸಮುದಾಯ "ಮುಮ್ಮಡಿ ಸಿಂಗನ ಬಾಧೆಯಿಂದ" ಅಸ್ತವ್ಯಸ್ತಗೊಂಡಿತೆಂದೂ, ನಂತರ ಆಚಾರ್ಯ ಬಾಳೇಂದು ಮಲಧಾರಿ ಮಧ್ಯಪ್ರವೇಶಿಸಿದನೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ; ಮಿಂಡಗುದಲಿಯ ಕೇತಿಸೆಟ್ಟಿಯ ಮಗ ಮಲ್ಲಿಸೆಟ್ಟಿ ಎರಂಬರಗೆಯ ನವೀಕರಿಸಿದ ಜಿನಾಲಯಕ್ಕೆ ಪಾರ್ಶ್ವದೇವರ ವಿಗ್ರಹವನ್ನು ಮಾಡಿಸಿದಾಗ ದೇವಾಲಯ ನಂತರ ಪುನರ್ನಿರ್ಮಾಣಗೊಂಡಿತು. ಪಾಟೀಲ ಈ ಮುಮ್ಮಡಿ ಸಿಂಗನನ್ನು ಕಂಪಿಲಿ ಸಂಸ್ಥಾನದ ಸ್ಥಾಪಕ (ಆ. ಸು. 1280-1287, 1287ರ ಲಕ್ಷ್ಮೇಶ್ವರ ಶಾಸನದಿಂದ ಕುಮ್ಮಟದಲ್ಲಿ ದೃಢಪಟ್ಟ) ಎಂದು ಗುರುತಿಸುತ್ತಾರೆ, ಇದು ಕಂಪಿಲಿ ಮುಖಂಡರು ಮತ್ತು ಸ್ಥಳೀಯ ಜೈನ ಸಮುದಾಯದ ನಡುವಿನ ಘರ್ಷಣೆಯ ಏಕೈಕ ತಿಳಿದ ದಾಖಲೆಯಾಗಿಸುತ್ತದೆ -- ಇತರೆಡೆ, ಬೇರೆ ಶಾಸನಗಳು ಮತ್ತು ಪಾಂಚಾಳ ಗಂಗನ ಚೆನ್ನರಾಮನ ಸಾಂಗತ್ಯ ಕಾವ್ಯದ ಮೂಲಕ, ಕಂಪಿಲರಾಯನ ವಂಶ ಕುಮ್ಮಟದ ಜೈನ ಜನಸಂಖ್ಯೆಯನ್ನು ಸ್ಥಳಾಂತರಿಸಿದ ನಂತರ ಮತ್ತೆ ನಿಯಂತ್ರಣ ಸ್ಥಾಪಿಸಿದಂತೆ ಸ್ಮರಿಸಲ್ಪಡುತ್ತಾರೆ ಎಂಬ ಕಾರಣಕ್ಕೆ ಗಮನಾರ್ಹ.'),
+  citations: [c(SRC_VADHY_VOL3, 'Channabasappa S. Patil, "ಮುಮ್ಮಡಿ ಸಿಂಗನ ಮೇಲೆ ಮತ್ತಷ್ಟು ಬೆಳಕು" (More light on Mummadi Singa), pp. 93-95: inscription noticed at the Victoria & Albert Museum, London, 1995; full Kannada text transcribed')],
+  review,
+})
