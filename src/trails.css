@@ -1,5 +1,11 @@
 .app-shell>main.trail-page{display:block;height:auto;min-height:calc(100vh - 142px)}
 .trail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;padding:0 clamp(16px,4vw,48px) 3rem}
+.trail-directory-tools{margin:0 clamp(16px,4vw,48px) 1rem;padding:.8rem 1rem;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px;background:var(--card,#fff)}
+.trail-directory-tools label{display:block;margin-bottom:.35rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.75}
+.trail-directory-tools div{display:flex;align-items:center;gap:.75rem}
+.trail-directory-tools input{min-width:0;flex:1;border:1px solid var(--border,rgba(0,0,0,.2));border-radius:8px;background:transparent;color:inherit;font:inherit;padding:.6rem .75rem}
+.trail-directory-tools span{white-space:nowrap;font-size:.82rem;font-weight:700;opacity:.7}
+.trail-no-results{grid-column:1/-1;margin:0;padding:2rem;text-align:center;border:1px dashed var(--border,rgba(0,0,0,.2));border-radius:12px;opacity:.75}
 .trail-card{text-align:left;background:var(--card,#fff);border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px;padding:1.25rem;cursor:pointer;display:flex;flex-direction:column;gap:.35rem;transition:box-shadow .15s ease,transform .15s ease;color:inherit}
 .trail-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.12);transform:translateY(-2px)}
 .trail-card h3{margin:0;font-size:1.15rem}
@@ -54,3 +60,4 @@
 .trail-step-button:disabled{opacity:.4;cursor:default}
 .trail-complete{font-weight:700;color:#2f7d32}
 .trail-page .about-hero{padding:1.5rem clamp(16px,4vw,48px) 1.5rem}
+@media(max-width:560px){.trail-directory-tools div{align-items:stretch;flex-direction:column}.trail-directory-tools span{white-space:normal}.trail-grid{grid-template-columns:1fr}}
