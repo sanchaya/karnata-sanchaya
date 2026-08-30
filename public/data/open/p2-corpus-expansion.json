@@ -253,8 +253,10 @@
           "kn": "ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ"
         },
         "districtAuditId": "audit-bengaluru-rural",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-karch-mad1941-kondrahalli-kongani-muttarasar-plate"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-devanahalli-ec-ix-survey",
@@ -295,13 +297,13 @@
         ],
         "reviewPass": null,
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-ec-karnataka-district-guide",
-            "locator": "Epigraphia Carnatica Vol. IX, Devanahalli entries Dv 2, 12, 13, 27, 29, 31, 32, 38, 44, 50, 56, 64, 66 and 81"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -1772,8 +1774,10 @@
           "kn": "ಚಾಮರಾಜನಗರ"
         },
         "districtAuditId": "audit-chamarajanagar",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-karch-vinsc3-kn1629-krishnadevaraya-aladiru-grant"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-punisaraja-chamarajanagar-1117",
@@ -1823,17 +1827,13 @@
         ],
         "reviewPass": null,
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-asi-jaina-epigraphic-register",
-            "locator": "Epigraphia Carnatica IV, Chamarajanagar taluk 83; stone record associated with Punisaraja and Hoysala Vishnuvardhana"
-          },
-          {
-            "sourceId": "src-ia-sok-ec-vol4",
-            "locator": "EC IV, Chamarajanagar 83; verify the printed page image before transcription"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -1921,8 +1921,16 @@
           "kn": "ಚಿಕ್ಕಮಗಳೂರು"
         },
         "districtAuditId": "audit-chikkamagaluru",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-karch-vinsc2-kn428-ambale-narasimha-spurious",
+          "inscription-karch-vinsc2-kn432-achyutadevaraya-khandya-grant",
+          "inscription-karch-vinsc2-kn433-venkatapati-khandya-grant",
+          "inscription-karch-vinsc2-kn431-srirangaraya-iii-kalasapura-grant",
+          "inscription-karch-mad1943-yellambalasi-sripurusha-viragal",
+          "inscription-karch-mad1943-panditarahalli-vinayaditya-hoysala",
+          "inscription-karch-mad1943-hiremagalur-janamejaya-pillar-brahmi"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-hunasemakke-hero-stone",
@@ -2018,17 +2026,13 @@
           }
         },
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-mysore-archaeology-hunasemakke",
-            "locator": "Annual report record no. 37; Saka 1058 is described as irregular and the nearest Sadharana year as Saka 1052"
-          },
-          {
-            "sourceId": "src-wikipedia-kannada-inscriptions",
-            "locator": "Kannada inscriptions: 500 CE Chikkamagaluru inscription"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -2237,8 +2241,10 @@
           "kn": "ದಾವಣಗೆರೆ"
         },
         "districtAuditId": "audit-davanagere",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-karch-mad1943-kasipura-ravivarma-kadamba-plate"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-kodaganur-976",
@@ -2294,13 +2300,13 @@
           }
         },
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-mysore-archaeology-kodaganur",
-            "locator": "Epigraphia Carnatica XI, Davanagere 152; dated 976 CE"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -2441,7 +2447,8 @@
           "inscription-halmidi",
           "inscription-shravanabelagola",
           "inscription-tyagada-brahmadeva",
-          "inscription-belur-foundation"
+          "inscription-belur-foundation",
+          "inscription-karch-mad1941-belur-surendratirtha-matha-grant"
         ],
         "priorityCandidates": [
           {
@@ -2732,8 +2739,11 @@
           "kn": "ಕೋಲಾರ"
         },
         "districtAuditId": "audit-kolar",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-karch-vinsc3-kn1280-sadasiva-tippenahalli-date-mismatch",
+          "inscription-karch-mad1941-bechirak-devalapura-sadasiva-muslim-official"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-kolar-ramasagara-venkataramana",
@@ -2789,13 +2799,13 @@
           }
         },
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-ia-sok-ec-vol10",
-            "locator": "Epigraphia Carnatica, Volume X, Bowringpet 12; Ramasagara Venkataramana temple — verify the printed item and page image"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -2817,7 +2827,12 @@
         "districtAuditId": "audit-koppal",
         "auditStatus": "seeded",
         "inscriptionIds": [
-          "inscription-kukkanur"
+          "inscription-kukkanur",
+          "inscription-karch-koppal-vol3-no335-butuga-ii-land-restoration",
+          "inscription-karch-koppal-vol3-no364-marasimha-ii-copper-plates",
+          "inscription-karch-koppal-vol3-no232-padmabbarasi-nisidhi",
+          "inscription-karch-koppal-vol3-no338-itagi-mahadeva-foundation",
+          "inscription-karch-koppal-vol3-no340-itagi-portrait-sculptures"
         ],
         "priorityCandidates": [],
         "reviewPass": null,
@@ -2850,7 +2865,10 @@
         "districtAuditId": "audit-mandya",
         "auditStatus": "seeded",
         "inscriptionIds": [
-          "inscription-atakur"
+          "inscription-atakur",
+          "inscription-karch-vinsc3-kn1514-vira-narasimha-kaigonahalli-doubtful",
+          "inscription-karch-vinsc3-kn1515-melukote-chelapilaraya-grant",
+          "inscription-karch-vinsc3-kn1516-sadasivaraya-bachahalli-grant"
         ],
         "priorityCandidates": [],
         "reviewPass": null,
@@ -2883,7 +2901,13 @@
         "districtAuditId": "audit-mysuru",
         "auditStatus": "seeded",
         "inscriptionIds": [
-          "inscription-doddahundi-nishidhi"
+          "inscription-doddahundi-nishidhi",
+          "inscription-karch-ec14-no126-immadi-devaraya-kadasir-plates",
+          "inscription-karch-ec14-no128-harihara-triyambakapura-plates",
+          "inscription-karch-ec14-no129-krishnaraya-kedihalli-plates",
+          "inscription-karch-ec14-no155-chamaraja-wodeyar-honnalagere-plates",
+          "inscription-karch-ec14-no115-chikkadevaraja-devanagara-plates",
+          "inscription-karch-mad1945-venkatapati-raya-plates"
         ],
         "priorityCandidates": [
           {
@@ -3208,8 +3232,13 @@
           "kn": "ತುಮಕೂರು"
         },
         "districtAuditId": "audit-tumakuru",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-karch-mad1941-vadanagal-bhupati-vodeyar-plate",
+          "inscription-karch-mad1941-jangamarahalli-chalukya-ganga-pallava-conflict",
+          "inscription-karch-mad1945-sibi-harihararayapura-plate",
+          "inscription-karch-mad1945-tirumalaraya-renukacharya-plates"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-tumakuru-ec-xii-survey",
@@ -3265,17 +3294,13 @@
           }
         },
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-ia-sok-ec-vol12",
-            "locator": "Epigraphia Carnatica, Volume XII, Tumkur district and taluk entries"
-          },
-          {
-            "sourceId": "src-ia-sok-ec-vol16",
-            "locator": "Epigraphia Carnatica, Volume XVI; supplementary Tumkur entries"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -3517,7 +3542,15 @@
         "auditStatus": "seeded",
         "inscriptionIds": [
           "inscription-hampi",
-          "inscription-hampi-krishna-temple"
+          "inscription-hampi-krishna-temple",
+          "inscription-karch-hampi-vol1-no113-kampiladeva-trikuta-lingas",
+          "inscription-karch-hampi-vol1-no267-virupaksha-iii-canal",
+          "inscription-karch-hampi-vol1-no104-106-krishnadevaraya-coronation-debate",
+          "inscription-karch-hampi-vol1-no188-achyutadevaraya-vitthaladeva-grant",
+          "inscription-karch-hampi-vol1-no189-190-achyutadevaraya-vitthalasvami-gifts",
+          "inscription-karch-hampi-vol1-no196-vyasatirtha-narasimha-installation",
+          "inscription-karch-hampi-vol1-no197-krishnaraya-hundred-pillared-mandapa",
+          "inscription-karch-hampi-vol1-no338-krishnaraya-ramachandra-grant"
         ],
         "priorityCandidates": [],
         "reviewPass": null,
@@ -77026,6 +77059,458 @@
           {
             "sourceId": "src-coinindia-tipu-sultan-patan-mint",
             "locator": "Patan mint gold pagoda specimens (AH1198 RY1, AH1200 RY4, AM1221/KM129) and copper 2-paisa/paisa specimens (KM124.3 var, KM123.5) with weight and diameter"
+          },
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Corroborating scholarly catalogue: Pattan (Seringapatam) as Tipu Sultan’s principal mint with regnal-year gold and silver issues, confirming the mint-and-regnal-year dating pattern independent of the CoinIndia gallery"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-haidar-ali-bahaduri-pagoda-lead",
+        "name": {
+          "en": "Haidar Ali Bahaduri pagoda coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ ಬಹದ್ದೂರಿ ಪಗೋಡ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-mysuru",
+        "date": {
+          "from": 1761,
+          "to": 1782,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": 3.34,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Catalogued as Henderson’s No. 1 (Plate I): the so-called Bahaduri pagoda, Haidar Ali’s earliest and most common coin (51.5 grains ≈ 3.34 g), showing Haidar’s initial letter on a granulated field. The type was itself copied from a pagoda struck by the Nayakas of Ikkeri/Bednur, who in turn had imitated a Vijayanagara-era Sadashivaraya pagoda — a design lineage running from Vijayanagara through Ikkeri to Mysore.",
+          "kn": "ಹೆಂಡರ್ಸನ್‌ನ ಸಂಖ್ಯೆ 1ರಂತೆ (ಫಲಕ I) ಪಟ್ಟಿಗತ: ಬಹದ್ದೂರಿ ಪಗೋಡ ಎಂದು ಕರೆಯಲ್ಪಡುವ ಈ ನಾಣ್ಯ ಹೈದರ್ ಅಲಿಯ ಅತ್ಯಂತ ಹಳೆಯ ಮತ್ತು ಸಾಮಾನ್ಯ ನಾಣ್ಯ (51.5 ಗ್ರೇನ್ ≈ 3.34 ಗ್ರಾಂ), ಚುಕ್ಕೆಗಳ ಕ್ಷೇತ್ರದ ಮೇಲೆ ಹೈದರ್‌ನ ಆದ್ಯಕ್ಷರ ಅಚ್ಚು ತೋರಿಸುತ್ತದೆ. ಈ ಬಗೆಯನ್ನೇ ಇಕ್ಕೇರಿ/ಬೇಡ್ನೂರಿನ ನಾಯಕರ ಪಗೋಡದಿಂದ ನಕಲಿಸಲಾಗಿದ್ದು, ಅವರೂ ವಿಜಯನಗರ ಕಾಲದ ಸದಾಶಿವರಾಯನ ಪಗೋಡವನ್ನು ಅನುಕರಿಸಿದ್ದರು — ವಿಜಯನಗರದಿಂದ ಇಕ್ಕೇರಿಯ ಮೂಲಕ ಮೈಸೂರಿಗೆ ಸಾಗಿದ ವಿನ್ಯಾಸ ಪರಂಪರೆ."
+        },
+        "reverse": {
+          "en": "Siva seated with Parvati on his left knee; a trisula in one right hand and a deer in one left hand. Henderson notes that, unlike Tipu Sultan’s later fanciful mint names, few mint-names occur on Haidar Ali’s coins at all, so this specimen cannot yet be tied to a specific mint town. A rarer half-pagoda variant (Henderson No. 5, ~26 grains ≈ 1.68 g) substitutes a seated Vishnu with chakra and sankha on the reverse.",
+          "kn": "ಇವನ ಎಡ ಮೊಣಕಾಲ ಮೇಲೆ ಪಾರ್ವತಿಯೊಂದಿಗೆ ಕುಳಿತ ಶಿವ; ಒಂದು ಬಲಗೈಯಲ್ಲಿ ತ್ರಿಶೂಲ ಮತ್ತು ಒಂದು ಎಡಗೈಯಲ್ಲಿ ಜಿಂಕೆ. ಟಿಪ್ಪು ಸುಲ್ತಾನನ ನಂತರದ ಕಾಲ್ಪನಿಕ ಟಂಕಶಾಲೆ ಹೆಸರುಗಳಿಗಿಂತ ಭಿನ್ನವಾಗಿ, ಹೈದರ್ ಅಲಿಯ ನಾಣ್ಯಗಳಲ್ಲಿ ಟಂಕಶಾಲೆ ಹೆಸರುಗಳು ಬಹಳ ಅಪರೂಪ ಎಂದು ಹೆಂಡರ್ಸನ್ ಗಮನಿಸುತ್ತಾನೆ; ಆದ್ದರಿಂದ ಈ ಮಾದರಿಯನ್ನು ಇನ್ನೂ ನಿರ್ದಿಷ್ಟ ಟಂಕಶಾಲೆ ಪಟ್ಟಣಕ್ಕೆ ಜೋಡಿಸಲಾಗಿಲ್ಲ. ಅಪರೂಪದ ಅರ್ಧ-ಪಗೋಡ ಬಗೆ (ಹೆಂಡರ್ಸನ್ ಸಂಖ್ಯೆ 5, ~26 ಗ್ರೇನ್ ≈ 1.68 ಗ್ರಾಂ) ಹಿಂಭಾಗದಲ್ಲಿ ಚಕ್ರ ಮತ್ತು ಶಂಖದೊಂದಿಗೆ ಕುಳಿತ ವಿಷ್ಣುವನ್ನು ತೋರಿಸುತ್ತದೆ."
+        },
+        "findspot": {
+          "placeId": "place-mysuru",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Catalogue No. 1-4 (Plate I): Bahaduri pagoda, 51.5 grains, Haidar’s initial obverse and Siva-Parvati reverse; No. 5-6 half-pagoda variants (~26 grains)"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-haidar-ali-fanam-lead",
+        "name": {
+          "en": "Haidar Ali gold fanam coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ ಚಿನ್ನದ ಫಣಂ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-mysuru",
+        "date": {
+          "from": 1761,
+          "to": 1782,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": 0.356,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Catalogued as Henderson’s Nos. 7-10 (Plate I): the gold fanam, Haidar Ali’s smallest gold denomination, weighing a consistent ~5.5 grains (≈0.356 g). Two types occur — one resembling the Bahaduri pagoda/half-pagoda design, the other bearing a date within a dotted or lined circle.",
+          "kn": "ಹೆಂಡರ್ಸನ್‌ನ ಸಂಖ್ಯೆ 7-10ರಂತೆ (ಫಲಕ I) ಪಟ್ಟಿಗತ: ಚಿನ್ನದ ಫಣಂ, ಹೈದರ್ ಅಲಿಯ ಅತ್ಯಂತ ಚಿಕ್ಕ ಚಿನ್ನದ ಮೌಲ್ಯ, ಸ್ಥಿರವಾಗಿ ~5.5 ಗ್ರೇನ್ (≈0.356 ಗ್ರಾಂ) ತೂಗುತ್ತದೆ. ಎರಡು ಬಗೆಗಳಿವೆ — ಒಂದು ಬಹದ್ದೂರಿ ಪಗೋಡ/ಅರ್ಧ-ಪಗೋಡ ವಿನ್ಯಾಸವನ್ನು ಹೋಲುತ್ತದೆ, ಇನ್ನೊಂದು ಚುಕ್ಕೆ ಅಥವಾ ರೇಖಾ ವೃತ್ತದೊಳಗೆ ದಿನಾಂಕವನ್ನು ಹೊಂದಿದೆ."
+        },
+        "reverse": {
+          "en": "One dated specimen was struck at Calicut with the date 1166 (1752-53 CE) — a year before Haidar controlled Calicut (which he took only in 1766) — leading Henderson to suggest this particular fanam may actually be an issue of Tipu Sultan rather than his father. Henderson also argues that coins of three grains or less, which earlier writers (Tufnell) classed as half-fanams, are more likely small full-weight fanams made with less alloy.",
+          "kn": "ಒಂದು ದಿನಾಂಕಿತ ಮಾದರಿಯನ್ನು ಕ್ಯಾಲಿಕಟ್‌ನಲ್ಲಿ 1166 (1752-53 ಕ್ರಿ.ಶ.) ದಿನಾಂಕದೊಂದಿಗೆ ಟಂಕಿಸಲಾಗಿತ್ತು — ಹೈದರ್ ಕ್ಯಾಲಿಕಟ್ ಅನ್ನು ವಶಪಡಿಸಿಕೊಳ್ಳುವ (1766) ಮೊದಲಿನ ವರ್ಷ — ಇದರಿಂದ ಈ ನಿರ್ದಿಷ್ಟ ಫಣಂ ವಾಸ್ತವವಾಗಿ ತಂದೆಗಿಂತ ಟಿಪ್ಪು ಸುಲ್ತಾನನ ನಾಣ್ಯವಾಗಿರಬಹುದೆಂದು ಹೆಂಡರ್ಸನ್ ಸೂಚಿಸುತ್ತಾನೆ. ಮೂರು ಗ್ರೇನ್ ಅಥವಾ ಕಡಿಮೆ ತೂಗುವ ನಾಣ್ಯಗಳನ್ನು (ಟಫ್ನೆಲ್ ಅರ್ಧ-ಫಣಂ ಎಂದು ವರ್ಗೀಕರಿಸಿದ್ದ) ಹೆಂಡರ್ಸನ್ ಕಡಿಮೆ ಮಿಶ್ರಲೋಹದ ಪೂರ್ಣ-ತೂಕದ ಚಿಕ್ಕ ಫಣಂಗಳೆಂದು ವಾದಿಸುತ್ತಾನೆ."
+        },
+        "findspot": {
+          "placeId": "place-mysuru",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Catalogue Nos. 7-10 (Plate I): Bahaduri-type and dated gold fanam, ~5.5 grains each; a dated Calicut fanam (1166 AD, blundered) possibly issued by Tipu Sultan rather than Haidar Ali"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-haidar-ali-paisa-lead",
+        "name": {
+          "en": "Haidar Ali elephant copper paisa coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ ಆನೆ ತಾಮ್ರ ಪೈಸ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-srirangapatna",
+        "date": {
+          "from": 1780,
+          "to": 1782,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "copper",
+        "weightGrams": 12.42,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Catalogued as Henderson’s Nos. 11-12: the copper paisa with an elephant advancing right, uplifted tail, struck at Seringapatam in the last two years of Haidar Ali’s reign (dated 1195 and 1196 Mauludi). Recorded weights run 187-191.5 grains (≈12.1-12.4 g). Henderson notes this elephant type is of particular interest as the model on which Tipu Sultan’s extensive copper series was later based.",
+          "kn": "ಹೆಂಡರ್ಸನ್‌ನ ಸಂಖ್ಯೆ 11-12ರಂತೆ ಪಟ್ಟಿಗತ: ಬಲಕ್ಕೆ ಚಲಿಸುತ್ತಿರುವ, ಬಾಲ ಎತ್ತಿದ ಆನೆಯುಳ್ಳ ತಾಮ್ರ ಪೈಸ, ಹೈದರ್ ಅಲಿಯ ಆಳ್ವಿಕೆಯ ಕೊನೆಯ ಎರಡು ವರ್ಷಗಳಲ್ಲಿ (1195, 1196 ಮೌಲೂದಿ) ಶ್ರೀರಂಗಪಟ್ಟಣದಲ್ಲಿ ಟಂಕಿಸಲಾಯಿತು. ದಾಖಲಾದ ತೂಕ 187-191.5 ಗ್ರೇನ್ (≈12.1-12.4 ಗ್ರಾಂ). ಈ ಆನೆ ಬಗೆಯೇ ಮುಂದೆ ಟಿಪ್ಪು ಸುಲ್ತಾನನ ವಿಸ್ತಾರವಾದ ತಾಮ್ರ ನಾಣ್ಯ ಸರಣಿಗೆ ಮಾದರಿಯಾಯಿತು ಎಂದು ಹೆಂಡರ್ಸನ್ ಗಮನಿಸುತ್ತಾನೆ."
+        },
+        "reverse": {
+          "en": "Under \"Doubtful copper coins of Haidar Ali\" Henderson lists three roughly-executed, undated elephant paisas (Nos. 13-15, 194.5-201.5 grains): two struck at Bellary — the only known coins of that mint, spelled two different ways — and one at Seringapatam. Their extreme roughness leaves open the possibility they were issued by Tipu Sultan instead.",
+          "kn": "\"ಹೈದರ್ ಅಲಿಯ ಸಂಶಯಾಸ್ಪದ ತಾಮ್ರ ನಾಣ್ಯಗಳು\" ಎಂಬ ಶೀರ್ಷಿಕೆಯಡಿ ಹೆಂಡರ್ಸನ್ ಮೂರು ಒರಟಾಗಿ ಟಂಕಿಸಿದ, ದಿನಾಂಕವಿಲ್ಲದ ಆನೆ ಪೈಸಗಳನ್ನು (ಸಂಖ್ಯೆ 13-15, 194.5-201.5 ಗ್ರೇನ್) ಪಟ್ಟಿ ಮಾಡುತ್ತಾನೆ: ಎರಡು ಬಳ್ಳಾರಿಯಲ್ಲಿ ಟಂಕಿಸಲ್ಪಟ್ಟಿದ್ದು — ಆ ಟಂಕಶಾಲೆಯ ಏಕೈಕ ತಿಳಿದ ನಾಣ್ಯಗಳು, ಎರಡು ಬಗೆಯ ಕಾಗುಣಿತದಲ್ಲಿ — ಮತ್ತು ಒಂದು ಶ್ರೀರಂಗಪಟ್ಟಣದಲ್ಲಿ. ಅವುಗಳ ತೀವ್ರ ಒರಟುತನದಿಂದಾಗಿ ಇವು ಟಿಪ್ಪು ಸುಲ್ತಾನನಿಂದ ಟಂಕಿಸಲ್ಪಟ್ಟಿರಬಹುದೆಂಬ ಸಾಧ್ಯತೆಯೂ ಉಳಿದಿದೆ."
+        },
+        "findspot": {
+          "placeId": "place-srirangapatna",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Catalogue Nos. 11-12: elephant-obverse copper paisa, Seringapatam mint, dated 1195/1196 Mauludi, 187-191.5 grains; \"Doubtful\" Nos. 13-15: undated elephant paisas from Bellary (x2) and Seringapatam, 194.5-201.5 grains"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-haidar-ali-kanarese-numeral-paisa-lead",
+        "name": {
+          "en": "Haidar Ali Kanarese-numeral copper paisa coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ ಕನ್ನಡ-ಅಂಕಿ ತಾಮ್ರ ಪೈಸ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-mysuru",
+        "date": {
+          "from": 1761,
+          "to": 1782,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "copper",
+        "weightGrams": 1.41,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Catalogued as Henderson’s Nos. 16-21: copper coins bearing Kanarese numerals ೯ to ೧೪ (9-14) above/below a repeated Arabic numeral, weighing approximately 19-24.5 grains (≈1.2-1.6 g). Henderson identifies these as a reissue of an earlier, more abundant Mysore Raja coinage (pre-dating the Muhammadan usurpation) which came in two sizes, ~46 and ~23 grains, bearing Kanarese numerals I to 33.",
+          "kn": "ಹೆಂಡರ್ಸನ್‌ನ ಸಂಖ್ಯೆ 16-21ರಂತೆ ಪಟ್ಟಿಗತ: ಪುನರಾವರ್ತಿತ ಅರಬ್ಬಿ ಅಂಕಿಯ ಮೇಲೆ/ಕೆಳಗೆ ಕನ್ನಡ ಅಂಕಿ ೯ ರಿಂದ ೧೪ (9-14) ಹೊಂದಿರುವ ತಾಮ್ರ ನಾಣ್ಯಗಳು, ಸುಮಾರು 19-24.5 ಗ್ರೇನ್ (≈1.2-1.6 ಗ್ರಾಂ) ತೂಗುತ್ತವೆ. ಇವು ಮುಸ್ಲಿಂ ಆಳ್ವಿಕೆಗೆ ಮುಂಚಿನ, ಹೆಚ್ಚು ವ್ಯಾಪಕವಾಗಿದ್ದ ಮೈಸೂರು ಅರಸರ ನಾಣ್ಯದ (ಎರಡು ಗಾತ್ರ, ~46 ಮತ್ತು ~23 ಗ್ರೇನ್, ಕನ್ನಡ ಅಂಕಿ 1 ರಿಂದ 33) ಮರುಟಂಕಣ ಎಂದು ಹೆಂಡರ್ಸನ್ ಗುರುತಿಸುತ್ತಾನೆ."
+        },
+        "reverse": {
+          "en": "On the chequered reverse Haidar’s initial letter appears — a fact Henderson says cannot definitively assign the coins to father or son, though he leans toward Haidar Ali since Tipu Sultan already had an extensive copper coinage of his own and this fits Haidar’s general policy of copying earlier types. The significance of the numerals is unresolved; possibly regnal years, tentatively of Chikka Deva Wodeyar (1672-1704) or Krishnaraja Wodeyar II (1734-1766).",
+          "kn": "ಚದುರಂಗದ ಹಿಂಭಾಗದಲ್ಲಿ ಹೈದರ್‌ನ ಆದ್ಯಕ್ಷರ ಅಚ್ಚು ಕಾಣಿಸುತ್ತದೆ — ಇದು ನಾಣ್ಯಗಳನ್ನು ತಂದೆ ಅಥವಾ ಮಗನಿಗೆ ನಿಶ್ಚಿತವಾಗಿ ಆರೋಪಿಸಲಾಗದ ಸಂಗತಿ ಎಂದು ಹೆಂಡರ್ಸನ್ ಹೇಳುತ್ತಾನೆ, ಆದರೂ ಟಿಪ್ಪು ಸುಲ್ತಾನನಿಗೆ ಈಗಾಗಲೇ ತನ್ನದೇ ವಿಸ್ತಾರವಾದ ತಾಮ್ರ ನಾಣ್ಯ ಇದ್ದುದರಿಂದ ಮತ್ತು ಇದು ಹೈದರ್‌ನ ಹಿಂದಿನ ಬಗೆಗಳನ್ನು ನಕಲಿಸುವ ಸಾಮಾನ್ಯ ನೀತಿಗೆ ಹೊಂದುವುದರಿಂದ ಹೈದರ್ ಅಲಿಯತ್ತ ಒಲವು ತೋರಿಸುತ್ತಾನೆ. ಅಂಕಿಗಳ ಅರ್ಥ ಇನ್ನೂ ಅನಿಶ್ಚಿತ; ಬಹುಶಃ ಆಳ್ವಿಕೆ ವರ್ಷಗಳು, ಚಿಕ್ಕದೇವ ಒಡೆಯರ್ (1672-1704) ಅಥವಾ ಕೃಷ್ಣರಾಜ ಒಡೆಯರ್ II (1734-1766) ಗೆ ತಾತ್ಕಾಲಿಕವಾಗಿ ಆರೋಪಿಸಬಹುದು."
+        },
+        "findspot": {
+          "placeId": "place-mysuru",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Catalogue Nos. 16-21: copper reissue of pre-Muhammadan Mysore Raja coinage bearing Kanarese numerals 9-14 and a repeated Arabic numeral, Haidar’s initial on reverse, ~19-24.5 grains; original two-size Mysore Raja series (~46 and ~23 grains, numerals I-33) cited as the model"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-haidar-ali-tiger-battle-axe-lead",
+        "name": {
+          "en": "Haidar Ali tiger-and-battle-axe copper coinage lead",
+          "kn": "ಹೈದರ್ ಅಲಿ ಹುಲಿ-ಯುದ್ಧಕೊಡಲಿ ತಾಮ್ರ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-mysuru",
+        "date": {
+          "from": 1761,
+          "to": 1782,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "copper",
+        "weightGrams": 2.53,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Catalogued as Henderson’s Nos. 22-25: a series showing a tiger with uplifted tail on the obverse and a battle-axe on the reverse, in three sizes — half-paisa (No. 22, weight not established in this catalogue), quarter-paisa (No. 23, 39.0 grains ≈ 2.53 g) and eighth-paisa (No. 25, 12 grains ≈ 0.78 g, Plate II) — the smallest of all recorded Mysore copper pieces.",
+          "kn": "ಹೆಂಡರ್ಸನ್‌ನ ಸಂಖ್ಯೆ 22-25ರಂತೆ ಪಟ್ಟಿಗತ: ಮುಂಭಾಗದಲ್ಲಿ ಬಾಲ ಎತ್ತಿದ ಹುಲಿ ಮತ್ತು ಹಿಂಭಾಗದಲ್ಲಿ ಯುದ್ಧಕೊಡಲಿಯುಳ್ಳ ಸರಣಿ, ಮೂರು ಗಾತ್ರಗಳಲ್ಲಿ — ಅರ್ಧ-ಪೈಸ (ಸಂಖ್ಯೆ 22, ತೂಕ ಈ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಗದಿಯಾಗಿಲ್ಲ), ಕಾಲು-ಪೈಸ (ಸಂಖ್ಯೆ 23, 39.0 ಗ್ರೇನ್ ≈ 2.53 ಗ್ರಾಂ) ಮತ್ತು ಎಂಟನೇ-ಪೈಸ (ಸಂಖ್ಯೆ 25, 12 ಗ್ರೇನ್ ≈ 0.78 ಗ್ರಾಂ, ಫಲಕ II) — ದಾಖಲಾದ ಮೈಸೂರು ತಾಮ್ರ ನಾಣ್ಯಗಳಲ್ಲಿ ಅತ್ಯಂತ ಚಿಕ್ಕದು."
+        },
+        "reverse": {
+          "en": "Attribution is genuinely contested: Moor first linked the type to Mysore, Marsden thought it a possible Tipu Sultan pattern piece never put into circulation, and Henderson catalogues it under Haidar while conceding it may equally belong to Tipu, whose half-paisa and quarter-paisa it matches in weight and border style. Henderson had never seen a specimen from Mysore itself — most come from Malabar, suggesting a temporary Calicut-region issue.",
+          "kn": "ಆರೋಪಣೆ ನಿಜವಾಗಿಯೂ ವಿವಾದಾಸ್ಪದ: ಮೂರ್ ಮೊದಲಿಗೆ ಈ ಬಗೆಯನ್ನು ಮೈಸೂರಿಗೆ ಜೋಡಿಸಿದನು, ಮಾರ್ಸ್‌ಡೆನ್ ಇದನ್ನು ಎಂದೂ ಚಲಾವಣೆಗೆ ಬಾರದ ಟಿಪ್ಪು ಸುಲ್ತಾನನ ಪ್ರಾಯೋಗಿಕ ನಾಣ್ಯವಾಗಿರಬಹುದೆಂದು ಭಾವಿಸಿದನು, ಮತ್ತು ಹೆಂಡರ್ಸನ್ ಇದನ್ನು ಹೈದರ್‌ನ ಅಡಿಯಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡುತ್ತಾ ಇದು ತೂಕ ಮತ್ತು ಅಂಚಿನ ಶೈಲಿಯಲ್ಲಿ ಹೊಂದಿಕೆಯಾಗುವ ಟಿಪ್ಪುವಿನ ಅರ್ಧ-ಪೈಸ ಮತ್ತು ಕಾಲು-ಪೈಸಗೆ ಸೇರಿರಬಹುದೆಂದೂ ಒಪ್ಪಿಕೊಳ್ಳುತ್ತಾನೆ. ಹೆಂಡರ್ಸನ್ ಮೈಸೂರಿನಿಂದಲೇ ಒಂದೂ ಮಾದರಿಯನ್ನು ಕಂಡಿಲ್ಲ — ಹೆಚ್ಚಿನವು ಮಲಬಾರಿನಿಂದ ಬರುತ್ತವೆ, ಇದು ಕ್ಯಾಲಿಕಟ್ ಪ್ರದೇಶದ ತಾತ್ಕಾಲಿಕ ನಾಣ್ಯ ಎಂಬ ಸಾಧ್ಯತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ."
+        },
+        "findspot": {
+          "placeId": "place-mysuru",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "provisional"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Catalogue Nos. 22-25 (Plate II): tiger-and-battle-axe copper series, provisionally attributed to Haidar Ali though disputed with Tipu Sultan; quarter-paisa 39.0 grains, eighth-paisa 12 grains, half-paisa weight not established; mostly found in Malabar"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-tipu-sultan-ahmadi-sadiqi-gold-lead",
+        "name": {
+          "en": "Tipu Sultan ahmadi and sadiqi gold coinage lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಅಹ್ಮದಿ ಮತ್ತು ಸಾದಿಕಿ ಚಿನ್ನದ ನಾಣ್ಯ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-srirangapatna",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "gold",
+        "weightGrams": 13.67,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Tipu Sultan named his coin denominations after early Islamic figures rather than using the older Mysore/Vijayanagara \"pagoda\" terminology. The ahmadi, the largest gold piece, has an average weight of 211 grains (≈13.67 g), intended as the equivalent of four pagodas (one pagoda ≈52.25 grains); its name honours Ahmad, an epithet of the Prophet. It was struck at the Seringapatam and Nagar mints across three inscription types spanning the reign.",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ತನ್ನ ನಾಣ್ಯ ಮೌಲ್ಯಗಳಿಗೆ ಹಳೆಯ ಮೈಸೂರು/ವಿಜಯನಗರ \"ಪಗೋಡ\" ಪದದ ಬದಲು ಆರಂಭಿಕ ಇಸ್ಲಾಮಿಕ್ ವ್ಯಕ್ತಿಗಳ ಹೆಸರಿಟ್ಟನು. ಅಹ್ಮದಿ, ಅತಿ ದೊಡ್ಡ ಚಿನ್ನದ ನಾಣ್ಯ, ಸರಾಸರಿ 211 ಗ್ರೇನ್ (≈13.67 ಗ್ರಾಂ) ತೂಗುತ್ತದೆ, ನಾಲ್ಕು ಪಗೋಡಗಳಿಗೆ ಸಮಾನವಾಗಿ ಉದ್ದೇಶಿಸಲಾಗಿತ್ತು (ಒಂದು ಪಗೋಡ ≈52.25 ಗ್ರೇನ್); ಇದರ ಹೆಸರು ಪ್ರವಾದಿಯ ಬಿರುದಾದ ಅಹ್ಮದ್‌ನನ್ನು ಗೌರವಿಸುತ್ತದೆ. ಇದನ್ನು ಶ್ರೀರಂಗಪಟ್ಟಣ ಮತ್ತು ನಗರ ಟಂಕಶಾಲೆಗಳಲ್ಲಿ ಆಳ್ವಿಕೆಯುದ್ದಕ್ಕೂ ಮೂರು ಬಗೆಯ ಲೇಖಗಳಲ್ಲಿ ಟಂಕಿಸಲಾಗಿತ್ತು."
+        },
+        "reverse": {
+          "en": "The sadiqi, average weight 106 grains (≈6.87 g, roughly two pagodas), is named for Abu Bakr Sadiq, the first Khalifa, and shares the ahmadi’s reverse inscription. A typical legend reads \"Muhammad — the religion of Ahmad is illumined in the world by the victory of Haidar,\" struck at Pattan (Seringapatam) with the cyclic and Mauludi-era year. The intermediate pagoda-equivalent, the faruqi (≈52.25 grains ≈3.4 g), is separately catalogued and corresponds to the previously-recorded Patan gold pagoda specimens.",
+          "kn": "ಸಾದಿಕಿ, ಸರಾಸರಿ ತೂಕ 106 ಗ್ರೇನ್ (≈6.87 ಗ್ರಾಂ, ಸುಮಾರು ಎರಡು ಪಗೋಡ), ಮೊದಲ ಖಲೀಫ ಅಬೂ ಬಕರ್ ಸಾದಿಕ್‌ನ ಹೆಸರಿನದ್ದು, ಮತ್ತು ಅಹ್ಮದಿಯ ಹಿಂಭಾಗದ ಲೇಖವನ್ನೇ ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ. ಒಂದು ವಿಶಿಷ್ಟ ಲೇಖ \"ಮುಹಮ್ಮದ್ — ಅಹ್ಮದ್‌ನ ಧರ್ಮವು ಹೈದರನ ವಿಜಯದಿಂದ ಜಗತ್ತಿನಲ್ಲಿ ಬೆಳಗುತ್ತದೆ\" ಎಂದು ಓದುತ್ತದೆ, ಪಟಣ (ಶ್ರೀರಂಗಪಟ್ಟಣ)ದಲ್ಲಿ ಚಕ್ರೀಯ ಮತ್ತು ಮೌಲೂದಿ ಯುಗದ ವರ್ಷದೊಂದಿಗೆ ಟಂಕಿಸಲಾಗಿತ್ತು. ಪಗೋಡ-ಸಮಾನ ಮಧ್ಯಂತರ ಮೌಲ್ಯ, ಫಾರೂಕಿ (≈52.25 ಗ್ರೇನ್ ≈3.4 ಗ್ರಾಂ), ಪ್ರತ್ಯೇಕವಾಗಿ ಪಟ್ಟಿಗತವಾಗಿದ್ದು ಈಗಾಗಲೇ ದಾಖಲಾದ ಪಟಣ ಚಿನ್ನದ ಪಗೋಡ ಮಾದರಿಗಳಿಗೆ ಅನುಗುಣವಾಗಿದೆ."
+        },
+        "findspot": {
+          "placeId": "place-srirangapatna",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Ahmadi (four-pagoda gold piece, average 211 grains) and sadiqi (two-pagoda gold piece, average 106 grains) sections: Seringapatam/Nagar mints, \"religion of Ahmad illumined by the victory of Haidar\" legend, cross-referenced with the previously-catalogued Patan gold pagoda (faruqi) specimens"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-tipu-sultan-silver-rupee-system-lead",
+        "name": {
+          "en": "Tipu Sultan silver rupee fractional system lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಬೆಳ್ಳಿ ರೂಪಾಯಿ ಭಾಗ ವ್ಯವಸ್ಥೆ ದಾರಿ"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-mysore",
+        "placeId": "place-srirangapatna",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "silver",
+        "weightGrams": 11.34,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Henderson catalogues a full seven-step silver fractional ladder, each denomination named after one of the twelve Shia Imams (or a related figure) rather than by a Persian numeral fraction: haidari/double-rupee (352-355 grains ≈22.8-23.0 g, named for Ali \"the lion,\" also honouring Haidar Ali); imami/rupee (average 175 grains, up to 188 grains exceptionally ≈11.3-12.2 g, from Imam \"leader,\" struck at Seringapatam and Nagar from 1200, later also Dharwar); abidi/half-rupee (≈87 grains ≈5.64 g, named for the fourth Imam Zain al-Abidin).",
+          "kn": "ಹೆಂಡರ್ಸನ್ ಸಂಪೂರ್ಣ ಏಳು-ಹಂತದ ಬೆಳ್ಳಿ ಭಾಗ ಶ್ರೇಣಿಯನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತಾನೆ, ಪ್ರತಿ ಮೌಲ್ಯಕ್ಕೂ ಪರ್ಷಿಯನ್ ಸಂಖ್ಯಾ ಭಾಗದ ಬದಲು ಹನ್ನೆರಡು ಶಿಯಾ ಇಮಾಮರಲ್ಲಿ ಒಬ್ಬರ (ಅಥವಾ ಸಂಬಂಧಿತ ವ್ಯಕ್ತಿಯ) ಹೆಸರಿಡಲಾಗಿದೆ: ಹೈದರಿ/ಡಬಲ್-ರೂಪಾಯಿ (352-355 ಗ್ರೇನ್ ≈22.8-23.0 ಗ್ರಾಂ, \"ಸಿಂಹ\" ಎಂಬ ಅರ್ಥದ ಅಲಿಯ ಹೆಸರಿನಿಂದ, ಹೈದರ್ ಅಲಿಯನ್ನೂ ಗೌರವಿಸುತ್ತದೆ); ಇಮಾಮಿ/ರೂಪಾಯಿ (ಸರಾಸರಿ 175 ಗ್ರೇನ್, ಅಪವಾದವಾಗಿ 188 ಗ್ರೇನ್‌ವರೆಗೆ ≈11.3-12.2 ಗ್ರಾಂ, \"ನಾಯಕ\" ಎಂಬ ಇಮಾಮ್ ಪದದಿಂದ, 1200ರಿಂದ ಶ್ರೀರಂಗಪಟ್ಟಣ ಮತ್ತು ನಗರದಲ್ಲಿ, ನಂತರ ಧಾರವಾಡದಲ್ಲೂ ಟಂಕಿಸಲಾಗಿತ್ತು); ಅಬಿದಿ/ಅರ್ಧ-ರೂಪಾಯಿ (≈87 ಗ್ರೇನ್ ≈5.64 ಗ್ರಾಂ, ನಾಲ್ಕನೇ ಇಮಾಮ್ ಜೈನ್ ಅಲ್-ಅಬಿದೀನ್‌ನ ಹೆಸರಿನಿಂದ)."
+        },
+        "reverse": {
+          "en": "The ladder continues below the rupee: baqiri/quarter-rupee (≈43 grains ≈2.79 g, Seringapatam mint 1216-1224 Mauludi, named for the fifth Imam al-Baqir); jafari/eighth-rupee (≈20 grains ≈1.30 g, Seringapatam 1218-1226, sixth Imam Jafar al-Sadiq); kazimi/sixteenth-rupee (≈10 grains ≈0.65 g, Seringapatam 1220-1226, seventh Imam Musa al-Kazim); and khizri/thirty-second-rupee (≈5 grains ≈0.32 g), the smallest of all Tipu Sultan’s coins, struck only at Seringapatam and only in the year 1222, named for the saint Al-Khizr.",
+          "kn": "ಶ್ರೇಣಿ ರೂಪಾಯಿಯ ಕೆಳಗೆ ಮುಂದುವರಿಯುತ್ತದೆ: ಬಾಕಿರಿ/ಕಾಲು-ರೂಪಾಯಿ (≈43 ಗ್ರೇನ್ ≈2.79 ಗ್ರಾಂ, ಶ್ರೀರಂಗಪಟ್ಟಣ ಟಂಕಶಾಲೆ 1216-1224 ಮೌಲೂದಿ, ಐದನೇ ಇಮಾಮ್ ಅಲ್-ಬಾಕಿರ್‌ನ ಹೆಸರಿನಿಂದ); ಜಾಫರಿ/ಎಂಟನೇ-ರೂಪಾಯಿ (≈20 ಗ್ರೇನ್ ≈1.30 ಗ್ರಾಂ, ಶ್ರೀರಂಗಪಟ್ಟಣ 1218-1226, ಆರನೇ ಇಮಾಮ್ ಜಾಫರ್ ಅಲ್-ಸಾದಿಕ್); ಕಾಜಿಮಿ/ಹದಿನಾರನೇ-ರೂಪಾಯಿ (≈10 ಗ್ರೇನ್ ≈0.65 ಗ್ರಾಂ, ಶ್ರೀರಂಗಪಟ್ಟಣ 1220-1226, ಏಳನೇ ಇಮಾಮ್ ಮೂಸಾ ಅಲ್-ಕಾಜಿಮ್); ಮತ್ತು ಖಿಜ್ರಿ/ಮೂವತ್ತೆರಡನೇ-ರೂಪಾಯಿ (≈5 ಗ್ರೇನ್ ≈0.32 ಗ್ರಾಂ), ಟಿಪ್ಪು ಸುಲ್ತಾನನ ಎಲ್ಲ ನಾಣ್ಯಗಳಲ್ಲಿ ಅತ್ಯಂತ ಚಿಕ್ಕದು, ಶ್ರೀರಂಗಪಟ್ಟಣದಲ್ಲಿ ಮಾತ್ರ ಮತ್ತು 1222ರಲ್ಲಿ ಮಾತ್ರ ಟಂಕಿಸಲಾಗಿತ್ತು, ಸಂತ ಅಲ್-ಖಿಜ್ರ್‌ನ ಹೆಸರಿನಿಂದ."
+        },
+        "findspot": {
+          "placeId": "place-srirangapatna",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "Full silver fractional ladder: haidari/double-rupee (352-355 grains), imami/rupee (avg 175, up to 188 grains), abidi/half-rupee (~87 grains), baqiri/quarter-rupee (~43 grains, Seringapatam 1216-1224), jafari/eighth-rupee (~20 grains, Seringapatam 1218-1226), kazimi/sixteenth-rupee (~10 grains, Seringapatam 1220-1226), khizri/thirty-second-rupee (~5 grains, Seringapatam only, year 1222 only)"
           }
         ],
         "review": {
