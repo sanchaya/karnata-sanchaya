@@ -335,8 +335,10 @@ test('selected timeline stories retain readable text contrast', () => {
 
 test('the static release is installable and keeps map context available offline', () => {
   assert.match(indexSource, /serviceWorker\.register/, 'production builds must register the offline service worker')
+  assert.match(indexSource, /VITE_BUILD_SHA/, 'each deployment must version the service-worker URL with its commit SHA')
   assert.match(serviceWorkerSource, /karnataka-districts\.geojson/, 'district boundaries must be cached with the app shell')
   assert.match(serviceWorkerSource, /tile\.openstreetmap\.org/, 'visited map tiles must be cached for offline reuse')
+  assert.match(serviceWorkerSource, /cache:request\.mode === 'navigate' \? 'reload' : 'no-cache'/, 'online navigation must bypass a stale HTTP shell cache')
   assert.match(serviceWorkerSource, /caches\.match\('\.\/index\.html'\)/, 'offline navigation must fall back to the cached app shell')
 })
 
