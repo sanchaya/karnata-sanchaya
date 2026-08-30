@@ -475,6 +475,30 @@ export const karnatakaArchaeologyMiningCulturalHeritage = [
   },
 ]
 
+// Source: "Vijayanagara Adhyayana" (Vijayanagara Studies), Volume 1 -- papers presented at the
+// Hampi Utsava 1995 conference (Directorate of Archaeology and Museums, Mysore, 1996), eds.
+// D.V. Devaraj and Channabasappa S. Patil. A Kannada-language research journal/conference-
+// proceedings series (22 volumes, 1996-2020) rather than a primary-source catalogue; each article
+// is a scholarly paper, so records here summarize an author's stated argument/finding rather than
+// transcribing a catalogue entry, and are correspondingly hedged.
+const SRC_VADHY_VOL1 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-1-dvde'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-hemakuta-badami-chalukya-temple',
+  name: n('Badami Chalukya-period temple, Hemakuta Hill, Hampi', 'ಹಂಪೆಯ ಹೇಮಕೂಟ ಬೆಟ್ಟದ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ-ಕಾಲದ ದೇವಾಲಯ'),
+  category: 'architecture',
+  date: d(700, 725, 'circa'),
+  polityIds: ['polity-badami-chalukya'],
+  placeIds: ['place-hampi-hemakuta'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['Badami-Chalukya', 'pre-Vijayanagara', 'Hemakuta', 'sandstone', 'earliest-structure'],
+  continuity: 'material-survival',
+  description: n('In a paper presented at the Hampi Utsava 1995 conference, the scholar Devarakonda Reddy argues that one of the temples on Hemakuta Hill, Hampi, differs structurally from its neighbours and should be dated to the Badami Chalukya period, c. early 8th century CE -- centuries earlier than the 1100-1300 CE range usually assigned to the "pre-Vijayanagara" Hemakuta temples as a group. The argument rests on the building material (sandstone rather than the harder slab-stone typical of later Hampi construction) and comparative mouldings/profile details (adhishthana, kapota, sukanasi treatment) matched against dated Badami Chalukya architecture elsewhere. If correct, this identifies the oldest surviving built structure yet proposed at the Hampi site, predating the Vijayanagara empire\'s founding by roughly six centuries. The same paper traces Hampi\'s sacred-site history through inscriptions independent of this specific temple: as Pampatirtha in a 681 CE record, a Nolamba chief Udayaditya\'s visit recorded in an 1018 CE Bagali inscription, and an 1199 CE inscription naming numerous temples at the site along with a garrison stationed on Matanga Hill for its protection.', 'ಹಂಪಿ ಉತ್ಸವ 1995 ಸಮ್ಮೇಳನದಲ್ಲಿ ಮಂಡಿಸಿದ ಪ್ರಬಂಧವೊಂದರಲ್ಲಿ, ವಿದ್ವಾಂಸ ದೇವರಕೊಂಡಾರೆಡ್ಡಿ ಹಂಪೆಯ ಹೇಮಕೂಟ ಬೆಟ್ಟದ ಒಂದು ದೇವಾಲಯ ಅದರ ನೆರೆಹೊರೆಯ ದೇವಾಲಯಗಳಿಗಿಂತ ರಚನಾತ್ಮಕವಾಗಿ ಭಿನ್ನವಾಗಿದ್ದು ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಕಾಲಕ್ಕೆ, ಅಂದರೆ ಸು. 8ನೇ ಶತಮಾನದ ಆರಂಭಕ್ಕೆ ಸೇರಿಸಬೇಕೆಂದು ವಾದಿಸುತ್ತಾರೆ -- "ವಿಜಯನಗರ-ಪೂರ್ವ" ಹೇಮಕೂಟ ದೇವಾಲಯಗಳಿಗೆ ಸಾಮಾನ್ಯವಾಗಿ ನೀಡಲಾಗುವ 1100-1300 ವ್ಯಾಪ್ತಿಗಿಂತ ಶತಮಾನಗಳ ಮುಂಚಿನದು. ಈ ವಾದ ಕಟ್ಟಡ ಸಾಮಗ್ರಿಯ (ನಂತರದ ಹಂಪೆ ನಿರ್ಮಾಣದ ವಿಶಿಷ್ಟ ಗಟ್ಟಿ ಚಪ್ಪಡಿಗಲ್ಲಿಗಿಂತ ಮರಳುಗಲ್ಲು) ಮತ್ತು ತುಲನಾತ್ಮಕ ಅಚ್ಚು/ಪ್ರೊಫೈಲ್ ವಿವರಗಳ (ಅಧಿಷ್ಠಾನ, ಕಪೋತ, ಸುಖನಾಸಿ ನಿರ್ವಹಣೆ) ಆಧಾರದ ಮೇಲಿದ್ದು, ಇತರೆಡೆ ದಿನಾಂಕಿತ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ವಾಸ್ತುಶಿಲ್ಪದೊಂದಿಗೆ ಹೋಲಿಸಲಾಗಿದೆ. ಸರಿಯಾಗಿದ್ದರೆ, ಇದು ಹಂಪೆ ತಾಣದಲ್ಲಿ ಇದುವರೆಗೆ ಸೂಚಿಸಲಾದ ಅತ್ಯಂತ ಹಳೆಯ ಉಳಿದಿರುವ ನಿರ್ಮಿತ ರಚನೆಯನ್ನು ಗುರುತಿಸುತ್ತದೆ, ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯದ ಸ್ಥಾಪನೆಗಿಂತ ಸುಮಾರು ಆರು ಶತಮಾನಗಳ ಮುಂಚಿನದು. ಅದೇ ಪ್ರಬಂಧ ಈ ನಿರ್ದಿಷ್ಟ ದೇವಾಲಯದಿಂದ ಸ್ವತಂತ್ರವಾಗಿ ಹಂಪೆಯ ಪುಣ್ಯಕ್ಷೇತ್ರ ಇತಿಹಾಸವನ್ನು ಶಾಸನಗಳ ಮೂಲಕ ಪತ್ತೆ ಮಾಡುತ್ತದೆ: 681ರ ದಾಖಲೆಯಲ್ಲಿ ಪಂಪಾತೀರ್ಥವಾಗಿ, 1018ರ ಬಾಗಳಿ ಶಾಸನದಲ್ಲಿ ದಾಖಲಾದ ನೊಳಂಬ ಮುಖಂಡ ಉದಯಾದಿತ್ಯನ ಭೇಟಿಯಾಗಿ, ಮತ್ತು 1199ರ ಶಾಸನವು ತಾಣದಲ್ಲಿ ಹಲವು ದೇವಾಲಯಗಳನ್ನು ಹೆಸರಿಸುತ್ತಾ ಅದರ ರಕ್ಷಣೆಗಾಗಿ ಮತಂಗ ಬೆಟ್ಟದ ಮೇಲೆ ನಿಯೋಜಿತ ಸೈನ್ಯದ ಉಲ್ಲೇಖವನ್ನೂ ನೀಡುತ್ತದೆ.'),
+  citations: [c(SRC_VADHY_VOL1, 'Devarakonda Reddy, "ಹಂಪೆಯಲ್ಲಿ ಬಾದಾಮಿ ಚಾಲುಕ್ಯರ ಕಾಲದ ದೇವಾಲಯ" (A Badami Chalukya-period temple at Hampi), pp. 37-40: architectural dating argument and epigraphic history of Pampatirtha/Hampi')],
+  review,
+})
+
 // Source: "Annual Report of the Mysore Archaeological Department for the Year 1941" (1942) --
 // Part I Epigraphy section, summarising ~60 inscriptions collected that year.
 const SRC_MAD_AR_1941 = 'src-ia-karnataka-archaeology-damh-annualreportmyso0000unse1941'
