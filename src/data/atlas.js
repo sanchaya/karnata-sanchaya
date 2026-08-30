@@ -27,7 +27,7 @@ import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, source
 import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js'
 import { applyExternalCapitalLinks } from './external-capitals.js'
 import { p2ClosureRecords } from './p2-research-graph-closure.js'
-import { karnatakaArchaeologyMiningInscriptions, karnatakaArchaeologyMiningCulturalHeritage, karnatakaArchaeologyMiningPolities } from './karnataka-archaeology-mining.js'
+import { karnatakaArchaeologyMiningInscriptions, karnatakaArchaeologyMiningCulturalHeritage, karnatakaArchaeologyMiningPolities, karnatakaArchaeologyMiningCoinRecords } from './karnataka-archaeology-mining.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -267,6 +267,7 @@ appendUniqueById(atlasData.inscriptions, sourceVolumeExtractionInscriptions)
 appendUniqueById(atlasData.inscriptionEditions, sourceVolumeExtractionInscriptionEditions)
 appendUniqueById(atlasData.manuscriptWitnesses, sourceVolumeExtractionManuscriptWitnesses)
 appendUniqueById(atlasData.coinRecords, sourceVolumeExtractionCoinRecords)
+appendUniqueById(atlasData.coinRecords, karnatakaArchaeologyMiningCoinRecords)
 applyPaleographyMaturitySprint(atlasData, appendUniqueById)
 for (const [collection, records] of Object.entries(p2ClosureRecords)) appendUniqueById(atlasData[collection], records)
 appendUniqueById(atlasData.sources, [{

@@ -815,3 +815,27 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_VADHY_VOL5, 'T.M. Manjunathayya, "ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿಯ ಆನೆಯ ಸಾಲೆ" (The elephant stable at Vijayanagara city), pp. 31-36: excavation report and inscription text')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 6 (Directorate of Archaeology and Museums, Mysore, 2001).
+const SRC_VADHY_VOL6 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mvkr'
+
+export const karnatakaArchaeologyMiningCoinRecords = [
+  {
+    id: 'coin-krishnadevaraya-saraswati-copper-lead',
+    name: n('Krishnadevaraya "Saraswati-only" copper coin (unpublished, 20th recorded type)', 'ಕೃಷ್ಣದೇವರಾಯನ "ಕೇವಲ ಸರಸ್ವತಿ" ತಾಮ್ರ ನಾಣ್ಯ ದಾರಿ (ಅಪ್ರಕಟಿತ, 20ನೇ ದಾಖಲಿತ ನಮೂನೆ)'),
+    coinKind: 'dynastic-coinage-lead',
+    polityId: 'polity-vijayanagara',
+    placeId: 'place-hampi',
+    date: d(1509, 1529, 'range'),
+    material: 'copper',
+    weightGrams: 3.15,
+    diameterMm: 12,
+    obverse: n('Published from a private collection by the numismatist N. Havalayya as an unrecorded type, absent from every major published Vijayanagara coin catalogue to date (Narasimhamurthy 1991/1997, Ganesh & Girijapati 1998, Ramesan, Shankaranarayana 1997). Circular, 1.2 cm diameter, 1 mm thick, 3.150 g. Obverse shows a crowned goddess seated behind/with a peacock, her left hand slightly raised holding an indistinct object; no veena or book is shown. Havalayya identifies her as Saraswati on the strength of the peacock, her vahana, even though her standard attributes (veena, book) -- well attested on other Vijayanagara-period Saraswati sculptures -- are pointedly omitted here.', 'ಖಾಸಗಿ ಸಂಗ್ರಹದಿಂದ ನಾಣ್ಯಶಾಸ್ತ್ರಜ್ಞ ಎನ್. ಹವಳಯ್ಯರಿಂದ ಅಪ್ರಕಟಿತ ನಮೂನೆಯಾಗಿ ಪ್ರಕಟಿತ, ಇದುವರೆಗಿನ ಯಾವುದೇ ಪ್ರಮುಖ ಪ್ರಕಟಿತ ವಿಜಯನಗರ ನಾಣ್ಯ ಪಟ್ಟಿಯಲ್ಲಿ (ನರಸಿಂಹಮೂರ್ತಿ 1991/1997, ಗಣೇಶ & ಗಿರಿಜಾಪತಿ 1998, ರಮೇಶನ್, ಶಂಕರನಾರಾಯಣ 1997) ಇಲ್ಲ. ವರ್ತುಲಾಕಾರ, 1.2 ಸೆಂ.ಮೀ ವ್ಯಾಸ, 1 ಮಿ.ಮೀ ದಪ್ಪ, 3.150 ಗ್ರಾಂ. ಮುಮ್ಮುಖದಲ್ಲಿ ಕಿರೀಟಧಾರಿ ದೇವತೆ ನವಿಲಿನ ಹಿಂಬದಿಯಲ್ಲಿ/ಜೊತೆ ಕುಳಿತಿದ್ದು, ಎಡಗೈ ಸ್ವಲ್ಪ ಮೇಲೆತ್ತಿ ಅಸ್ಪಷ್ಟ ವಸ್ತುವನ್ನು ಹಿಡಿದಿದೆ; ವೀಣೆ ಅಥವಾ ಪುಸ್ತಕ ಇಲ್ಲ. ಹವಳಯ್ಯ ಈಕೆಯನ್ನು ನವಿಲಿನ (ಆಕೆಯ ವಾಹನ) ಆಧಾರದ ಮೇಲೆ ಸರಸ್ವತಿಯೆಂದು ಗುರುತಿಸುತ್ತಾರೆ, ಇತರ ವಿಜಯನಗರ-ಕಾಲದ ಸರಸ್ವತಿ ಶಿಲ್ಪಗಳಲ್ಲಿ ಚೆನ್ನಾಗಿ ದೃಢಪಟ್ಟ ಆಕೆಯ ಪ್ರಮಾಣಿತ ಚಿಹ್ನೆಗಳನ್ನು (ವೀಣೆ, ಪುಸ್ತಕ) ಇಲ್ಲಿ ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಬಿಟ್ಟಿದ್ದರೂ.'),
+    reverse: n('Three-line Nagari-script legend: "Pratapa / Krishna / Raya." The author situates this within a broader Vijayanagara numismatic tradition of paired-deity coinage (Shiva-Parvati, Lakshmi-Narayana, Lakshmi-Narasimha, Rama-Sita, Venkateshwara-Sridevi-Bhudevi, Brahma-Saraswati) inaugurated by Harihara II, whose own gold half-varaha shows Brahma and Saraswati together with a matching three-line "Pratapa Harihara" legend. Krishnadevaraya\'s coinage, by contrast, frequently depicts only one deity from such a pair (as on his separately known Balakrishna, Venkateshwara-only, and lotus-seated-Lakshmi-only types) -- so this coin\'s Saraswati-without-Brahma design is read as consistent with that personal preference rather than as evidence Brahma held reduced religious status. Before this find, 19 gold/silver/copper types were catalogued for Krishnadevaraya; this is recorded as the 20th, with the author noting many more likely remain undocumented.', 'ಮೂರು-ಸಾಲಿನ ನಾಗರಿ-ಲಿಪಿಯ ಲೇಖ: "ಪ್ರತಾಪ / ಕೃಷ್ಣ / ರಾಯ." ಲೇಖಕರು ಇದನ್ನು ಹರಿಹರ IIನಿಂದ ಪ್ರಾರಂಭಿಸಲಾದ ವಿಶಾಲ ವಿಜಯನಗರ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಂಪರೆಯೊಳಗೆ ಇರಿಸುತ್ತಾರೆ -- ಜೋಡಿ-ದೇವತಾ ನಾಣ್ಯಗಳ (ಶಿವ-ಪಾರ್ವತಿ, ಲಕ್ಷ್ಮೀ-ನಾರಾಯಣ, ಲಕ್ಷ್ಮೀ-ನರಸಿಂಹ, ರಾಮ-ಸೀತೆ, ವೆಂಕಟೇಶ್ವರ-ಶ್ರೀದೇವಿ-ಭೂದೇವಿ, ಬ್ರಹ್ಮ-ಸರಸ್ವತಿ), ಹರಿಹರ IIನ ಸ್ವಂತ ಚಿನ್ನದ ಅರ್ಧ ವರಾಹ ಬ್ರಹ್ಮ ಮತ್ತು ಸರಸ್ವತಿಯನ್ನು ಒಟ್ಟಿಗೆ, ಹೊಂದಾಣಿಕೆಯ ಮೂರು-ಸಾಲಿನ "ಪ್ರತಾಪ ಹರಿಹರ" ಲೇಖದೊಂದಿಗೆ ತೋರಿಸುತ್ತದೆ. ಇದಕ್ಕೆ ವ್ಯತಿರಿಕ್ತವಾಗಿ, ಕೃಷ್ಣದೇವರಾಯನ ನಾಣ್ಯಗಳು ಇಂತಹ ಜೋಡಿಯಿಂದ ಆಗಾಗ್ಗೆ ಒಂದೇ ದೇವತೆಯನ್ನು ತೋರಿಸುತ್ತವೆ (ಪ್ರತ್ಯೇಕವಾಗಿ ತಿಳಿದ ಬಾಲಕೃಷ್ಣ, ಕೇವಲ-ವೆಂಕಟೇಶ್ವರ, ಮತ್ತು ಕಮಲದ ಮೇಲೆ ಕುಳಿತ ಕೇವಲ-ಲಕ್ಷ್ಮೀ ನಮೂನೆಗಳಂತೆ) -- ಆದ್ದರಿಂದ ಈ ನಾಣ್ಯದ ಬ್ರಹ್ಮನಿಲ್ಲದ ಸರಸ್ವತಿ ವಿನ್ಯಾಸವನ್ನು ಆ ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗೆ ಅನುಗುಣವಾಗಿ ಓದಲಾಗುತ್ತದೆ, ಬ್ರಹ್ಮನ ಕಡಿಮೆ ಧಾರ್ಮಿಕ ಸ್ಥಾನಮಾನದ ಸಾಕ್ಷ್ಯವಾಗಿ ಅಲ್ಲ. ಈ ಶೋಧನೆಗೂ ಮೊದಲು, ಕೃಷ್ಣದೇವರಾಯನಿಗೆ 19 ಚಿನ್ನ/ಬೆಳ್ಳಿ/ತಾಮ್ರ ನಮೂನೆಗಳು ಪಟ್ಟಿಗತವಾಗಿದ್ದವು; ಇದನ್ನು 20ನೇ ಎಂದು ದಾಖಲಿಸಲಾಗಿದೆ, ಇನ್ನೂ ಹಲವು ದಾಖಲಾಗದೆ ಉಳಿದಿರಬಹುದೆಂದು ಲೇಖಕರು ಗಮನಿಸುತ್ತಾರೆ.'),
+    findspot: { placeId: 'place-hampi', certainty: 'unknown' },
+    image: { status: 'missing', license: null, url: null },
+    evidenceGates: { catalogue: { status: 'located' }, image: { status: 'unresolved' }, metal: { status: 'located' }, weight: { status: 'located' }, findspot: { status: 'unresolved' } },
+    citations: [c(SRC_VADHY_VOL6, 'N. Havalayya, "ಕೃಷ್ಣದೇವರಾಯನ ಸರಸ್ವತಿ ನಮೂನೆಯ ಅಪ್ರಕಟಿತ ನಾಣ್ಯ" (An unpublished Saraswati-type coin of Krishnadevaraya), pp. 18-20: private-collection specimen with full physical description and Nagari legend transcription')],
+    review,
+  },
+]
