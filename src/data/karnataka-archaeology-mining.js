@@ -882,3 +882,22 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_VADHY_VOL8, 'T.M. Keshava, "Recent Excavations in the Mint Area," pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 9 (Directorate of Archaeology and Museums, Mysore, 2004).
+const SRC_VADHY_VOL9 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000krra'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-vijayanagara-muslim-community',
+  name: n('Muslim community and Kattige Ahmad Khan\'s endowment at Vijayanagara city', 'ವಿಜಯನಗರ ಪಟ್ಟಣದ ಮುಸ್ಲಿಂ ಸಮುದಾಯ ಮತ್ತು ಕಟ್ಟಿಗೆ ಅಹ್ಮದ್ ಖಾನ್‌ನ ದತ್ತಿ'),
+  category: 'religious-tradition',
+  date: d(1336, 1565, 'range'),
+  polityIds: ['polity-vijayanagara'],
+  placeIds: ['place-hampi'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['Islam', 'religious-plurality', 'military-officer', 'dharmashala', 'coexistence'],
+  continuity: 'material-survival',
+  description: n('B. Abdul Mannan\'s paper documents a Muslim quarter, tombs and mosques on the eastern side of Vijayanagara city -- attested both by foreign travellers\' accounts and by the Department\'s own progress reports (1979-83, 1983-84, 1984-87), including large tombs at Kaddirampura and within the inner fort. Vijayanagara armies employed Muslim soldiers and officers; the paper\'s clearest documented case is Kattige Ahmad Khan, a military officer who built a dharmashala (rest-house) and a well "for the merit of Devaraya" (dedicated for the king\'s benefit) with the intention it endure achandrarkasthayi ("as long as the sun and moon") -- both structures, along with Ahmad Khan\'s own tomb, are still preserved. The paper places the region\'s Islamic presence earlier still through the Kumararamana Sangatya folk epic, which recounts (as legend, not verified history) that the Delhi Sultanate governor Bahauddin Gushtasp ("Badur Khan"), exiled by Muhammad bin Tughlaq, took refuge at Kampiladeva\'s court -- with the Sultan\'s daughter Babbami\'s romantic interest in Kumara Rama later drawn into the narrative explaining the Sultanate\'s repeated campaigns against Kummata.', 'ಬಿ. ಅಬ್ದುಲ್ ಮನ್ನಾನ್‌ರ ಪ್ರಬಂಧ ವಿಜಯನಗರ ಪಟ್ಟಣದ ಪೂರ್ವ ಭಾಗದಲ್ಲಿ ಮುಸ್ಲಿಂ ವಸತಿ ಪ್ರದೇಶ, ಗೋರಿಗಳು ಮತ್ತು ಮಸೀದಿಗಳನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ವಿದೇಶಿ ಪ್ರವಾಸಿಗರ ಬರಹಗಳಿಂದ ಮತ್ತು ಇಲಾಖೆಯ ಸ್ವಂತ ಪ್ರಗತಿ ವರದಿಗಳಿಂದ (೧೯೭೯-೮೩, ೧೯೮೩-೮೪, ೧೯೮೪-೮೭) ದೃಢಪಟ್ಟಿದೆ, ಕಡ್ಡೇ ರಾಮಪುರ ಮತ್ತು ಒಳಕೋಟೆಯೊಳಗಿನ ದೊಡ್ಡ ಗೋರಿಗಳು ಸೇರಿ. ವಿಜಯನಗರ ಸೈನ್ಯಗಳು ಮುಸ್ಲಿಂ ಸೈನಿಕರು ಮತ್ತು ಅಧಿಕಾರಿಗಳನ್ನು ಬಳಸಿಕೊಂಡವು; ಪ್ರಬಂಧದ ಅತ್ಯಂತ ಸ್ಪಷ್ಟ ದಾಖಲಿತ ಪ್ರಕರಣ ಕಟ್ಟಿಗೆ ಅಹ್ಮದ್ ಖಾನ್, ಒಬ್ಬ ಸೈನ್ಯಾಧಿಕಾರಿ, "ದೇವರಾಯರಿಗೆ ಧರ್ಮವಾಗಬೇಕೆಂದು" (ರಾಜನ ಪುಣ್ಯಕ್ಕಾಗಿ ಸಮರ್ಪಿತ) ಧರ್ಮಶಾಲೆ ಮತ್ತು ಬಾವಿಯನ್ನು ಆಚಂದ್ರಾರ್ಕಸ್ಥಾಯಿ ("ಸೂರ್ಯ-ಚಂದ್ರರಿರುವ ತನಕ") ಇರುವ ಉದ್ದೇಶದಿಂದ ಕಟ್ಟಿಸಿದನು -- ಎರಡೂ ರಚನೆಗಳು, ಅಹ್ಮದ್ ಖಾನ್‌ನ ಸ್ವಂತ ಸಮಾಧಿಯೊಂದಿಗೆ, ಇಂದಿಗೂ ಸಂರಕ್ಷಿತವಾಗಿವೆ. ಪ್ರಬಂಧ ಈ ಪ್ರದೇಶದ ಇಸ್ಲಾಮಿಕ್ ಉಪಸ್ಥಿತಿಯನ್ನು ಇನ್ನೂ ಹಿಂದಕ್ಕೆ, ಕುಮಾರರಾಮನ ಸಾಂಗತ್ಯ ಜನಪದ ಕಾವ್ಯದ ಮೂಲಕ ಇರಿಸುತ್ತದೆ, ಇದು (ದಂತಕಥೆಯಾಗಿ, ಪರಿಶೀಲಿತ ಇತಿಹಾಸವಾಗಿ ಅಲ್ಲ) ಮುಹಮ್ಮದ್ ಬಿನ್ ತುಘಲಕ್‌ನಿಂದ ಗಡಿಪಾರುಗೊಂಡ ದೆಹಲಿ ಸುಲ್ತಾನೀ ಗವರ್ನರ್ ಬಹಾಉದ್ದೀನ್ ಗುಸ್ತಾಸ್ಪ್ ("ಬಾದುರ್ ಖಾನ್") ಕಂಪಿಲದೇವನ ಆಸ್ಥಾನದಲ್ಲಿ ಆಶ್ರಯ ಪಡೆದನೆಂದು ಹೇಳುತ್ತದೆ -- ಸುಲ್ತಾನನ ಮಗಳು ಬಾಬ್ಬಮಿಯ ಕುಮಾರರಾಮನ ಮೇಲಿನ ಪ್ರಣಯಾಸಕ್ತಿ ನಂತರ ಕುಮ್ಮಟದ ವಿರುದ್ಧ ಸುಲ್ತಾನೀ ಪದೇಪದೇ ದಂಡಯಾತ್ರೆಗಳನ್ನು ವಿವರಿಸುವ ಕಥನದೊಳಗೆ ಎಳೆಯಲ್ಪಟ್ಟಿದೆ.'),
+  citations: [c(SRC_VADHY_VOL9, 'B. Abdul Mannan, "ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿ ಮುಸ್ಲಿಂ ಧರ್ಮ" (Islam in Vijayanagara city), pp. 110-114, citing Department progress reports (VPR 1979-83, 1983-84, 1984-87) and the Kumararamana Sangatya')],
+  review,
+})
