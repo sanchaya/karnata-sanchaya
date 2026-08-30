@@ -48,3 +48,17 @@ test('trail slugs are unique', () => {
   const slugs = new Set(trails.map(trail => trail.slug))
   assert.equal(slugs.size, trails.length, 'trail slugs must be unique')
 })
+
+test('guided trails cover the previously missing Karnataka dynasties and governing powers', () => {
+  const ids = new Set(trails.map(trail => trail.id))
+  for (const id of [
+    'trail-western-ganga',
+    'trail-mauryan-karnataka',
+    'trail-alupa-coast',
+    'trail-chola-gangavadi',
+    'trail-kampili-vijayanagara-threshold',
+    'trail-bahmani-adil-shahi',
+    'trail-keladi-ikkeri',
+    'trail-chitradurga-nayakas',
+  ]) assert.ok(ids.has(id), `${id} must remain available in the public trail explorer`)
+})
