@@ -863,3 +863,22 @@ export const karnatakaArchaeologyMiningEvents = [
     review,
   },
 ]
+
+// Source: "Vijayanagara Adhyayana" Volume 8 (Directorate of Archaeology and Museums, Mysore, 2003).
+const SRC_VADHY_VOL8 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-harihara-i-residence-silamandapa-excavation',
+  name: n('ASI excavation identifying Harihara I\'s residence near the Silamandapa, Hampi', 'ಎ.ಎಸ್.ಐ ಉತ್ಖನನ, ಹಂಪೆಯ ಶಿಲಾಮಂಟಪದ ಬಳಿ ಹರಿಹರ Iನ ನಿವಾಸ ಗುರುತಿಸುವಿಕೆ'),
+  category: 'architecture',
+  date: d(1336, 1404, 'range'),
+  polityIds: ['polity-vijayanagara'],
+  placeIds: ['place-hampi'],
+  peopleIds: ['person-harihara-i', 'person-krishnadevaraya'],
+  relatedWorkIds: [],
+  traditionTags: ['excavation', 'royal-residence', 'Mint-area', 'Silamandapa', 'palace-complex'],
+  continuity: 'material-survival',
+  description: n('T.M. Keshava (Archaeological Survey of India, Bangalore Circle) reports nearly two decades of excavation identifying, west-northwest of the Hazara Ramachandra temple in the so-called "Mint" area, a structure that two inscriptions found at an adjoining Silamandapa site identify as the residence of Vira Harihara -- Vijayanagara\'s first ruler. Before this, scholars had believed the empire\'s early structural activity was confined to Anegundi alone. The earlier of the two inscriptions, by one Tippa Vodeya, records installing an image of Bhuvaneshwari "near the house (maneya) of Sri Vira Harihara Raya" -- the modest word maneya suggesting an austere early dwelling, with Tippa Vodeya likely a servant attached to it. The later inscription, from Krishnadevaraya\'s reign, shows the same site had by then grown into a "Hiriya Aramane" (senior/elder palace, implying a companion "Kiriya Aramane" existed too); it records that Timmoja, son of Pampoja -- the Hiriya Aramane\'s architect -- built a Silamandapa there in 1528 CE, and names a "Naga Bana," a series of naga (serpent) stones installed over time before the mandapa housing Bhuvaneshwari, evidently propitiated by people seeking the blessing of children (excavations in 1995-96 recovered many such naga stones and a fairly well-preserved Bhuvaneshwari image in front of the mandapa). Excavations from 1994-95 to 1996-97 uncovered a large, repeatedly enlarged palace complex north-northwest of the Silamandapa within its own high enclosure walls -- guarded entrances, zigzag passages, a water system, a royal court, residential quarters, a garden, a kitchen, rectangular halls and a toilet. A third related inscription, found at Anegundi itself, separately names a "Tippannavodeyara Aramane" (Tippanna Vodeya\'s palace).', 'ಟಿ.ಎಂ. ಕೇಶವ (ಭಾರತೀಯ ಪುರಾತತ್ವ ಸರ್ವೇಕ್ಷಣಾ ಇಲಾಖೆ, ಬೆಂಗಳೂರು ವಲಯ) ಸುಮಾರು ಎರಡು ದಶಕಗಳ ಉತ್ಖನನವನ್ನು ವರದಿ ಮಾಡುತ್ತಾರೆ, ಹಜಾರ ರಾಮಚಂದ್ರ ದೇವಾಲಯದ ವಾಯುವ್ಯಕ್ಕೆ "ಮಿಂಟ್" ಎಂದು ಕರೆಯಲಾಗುವ ಪ್ರದೇಶದಲ್ಲಿ, ಪಕ್ಕದ ಶಿಲಾಮಂಟಪ ತಾಣದಲ್ಲಿ ಪತ್ತೆಯಾದ ಎರಡು ಶಾಸನಗಳು ವೀರ ಹರಿಹರ -- ವಿಜಯನಗರದ ಮೊದಲ ಅರಸ -- ನ ನಿವಾಸವೆಂದು ಗುರುತಿಸುವ ರಚನೆಯನ್ನು ಗುರುತಿಸಲಾಗಿದೆ. ಇದಕ್ಕೂ ಮೊದಲು, ಸಾಮ್ರಾಜ್ಯದ ಆರಂಭಿಕ ರಚನಾತ್ಮಕ ಚಟುವಟಿಕೆ ಆನೆಗುಂದಿಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಗಿತ್ತೆಂದು ವಿದ್ವಾಂಸರು ನಂಬಿದ್ದರು. ಎರಡು ಶಾಸನಗಳಲ್ಲಿ ಮುಂಚಿನದು, ತಿಪ್ಪ ವೊಡೆಯ ಎಂಬಾತನಿಂದ, "ಶ್ರೀ ವೀರ ಹರಿಹರ ರಾಯನ ಮನೆಯ" ಬಳಿ ಭುವನೇಶ್ವರಿ ವಿಗ್ರಹ ಸ್ಥಾಪನೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ಸಾಧಾರಣ ಪದ "ಮನೆಯ" ಆರಂಭಿಕ ಸರಳ ವಸತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ, ತಿಪ್ಪ ವೊಡೆಯ ಬಹುಶಃ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಸೇವಕ. ನಂತರದ ಶಾಸನ, ಕೃಷ್ಣದೇವರಾಯನ ಆಳ್ವಿಕೆಯದ್ದು, ಅದೇ ತಾಣ ಆ ವೇಳೆಗೆ "ಹಿರಿಯ ಅರಮನೆ" ಆಗಿ ಬೆಳೆದಿತ್ತೆಂದು ತೋರಿಸುತ್ತದೆ (ಇದು ಜೊತೆಗಿನ "ಕಿರಿಯ ಅರಮನೆ" ಇತ್ತೆಂದೂ ಸೂಚಿಸುತ್ತದೆ); ಹಿರಿಯ ಅರಮನೆಯ ವಾಸ್ತುಶಿಲ್ಪಿ ಪೊಂಪೊಜನ ಮಗ ತಿಂಮೊಜ 1528ರಲ್ಲಿ ಅಲ್ಲಿ ಶಿಲಾಮಂಟಪ ಕಟ್ಟಿಸಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ, ಮತ್ತು "ನಾಗ ಬನ"ವನ್ನು ಹೆಸರಿಸುತ್ತದೆ, ಇದು ಭುವನೇಶ್ವರಿಯನ್ನು ಹೊಂದಿರುವ ಮಂಟಪದ ಮುಂದೆ ಕಾಲಕ್ರಮದಲ್ಲಿ ಸ್ಥಾಪಿಸಲಾದ ನಾಗ ಶಿಲೆಗಳ ಸರಣಿ, ಸ್ಪಷ್ಟವಾಗಿ ಮಕ್ಕಳ ಆಶೀರ್ವಾದ ಬಯಸುವ ಜನರಿಂದ ಪೂಜಿಸಲ್ಪಡುತ್ತಿತ್ತು (1995-96ರ ಉತ್ಖನನಗಳು ಅಂತಹ ಹಲವು ನಾಗ ಶಿಲೆಗಳನ್ನೂ ಮಂಟಪದ ಮುಂದೆ ಸಾಕಷ್ಟು ಚೆನ್ನಾಗಿ ಸಂರಕ್ಷಿತ ಭುವನೇಶ್ವರಿ ವಿಗ್ರಹವನ್ನೂ ಪತ್ತೆಮಾಡಿದವು). 1994-95ರಿಂದ 1996-97ರವರೆಗಿನ ಉತ್ಖನನಗಳು ಶಿಲಾಮಂಟಪದ ಉತ್ತರ-ವಾಯುವ್ಯಕ್ಕೆ ತನ್ನದೇ ಎತ್ತರದ ಆವರಣ ಗೋಡೆಗಳೊಳಗೆ ಪದೇಪದೇ ವಿಸ್ತರಿಸಲಾದ ದೊಡ್ಡ ಅರಮನೆ ಸಂಕೀರ್ಣವನ್ನು ಬಯಲಿಗೆ ತಂದವು -- ಕಾವಲು ಪ್ರವೇಶದ್ವಾರಗಳು, ಜಿಗ್-ಜಾಗ್ ಹಾದಿಗಳು, ನೀರಿನ ವ್ಯವಸ್ಥೆ, ರಾಜ ಆಸ್ಥಾನ, ವಸತಿ ಕೊಠಡಿಗಳು, ಉದ್ಯಾನ, ಅಡುಗೆಮನೆ, ಆಯತಾಕಾರದ ಸಭಾಂಗಣಗಳು ಮತ್ತು ಶೌಚಾಲಯ. ಸಂಬಂಧಿತ ಮೂರನೇ ಶಾಸನ, ಆನೆಗುಂದಿಯಲ್ಲೇ ಪತ್ತೆಯಾಗಿದ್ದು, ಪ್ರತ್ಯೇಕವಾಗಿ "ತಿಪ್ಪಣ್ಣವೊಡೆಯರ ಅರಮನೆ"ಯನ್ನು ಹೆಸರಿಸುತ್ತದೆ.'),
+  citations: [c(SRC_VADHY_VOL8, 'T.M. Keshava, "Recent Excavations in the Mint Area," pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts')],
+  review,
+})
