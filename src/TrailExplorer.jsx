@@ -12,6 +12,8 @@ for(const [key,records] of Object.entries(atlasData))if(Array.isArray(records))r
 const DEEP_LINKS={
   events:'#atlas',places:'#atlas',people:'#people',works:'#literature',inscriptions:'#epigraphy',
   culturalHeritage:'#districts',districtHistoryResearch:'#district-history',relationships:'#relations',politicalRelations:'#relations',
+  polities:'#atlas',externalPolities:'#atlas',externalGovernancePhases:'#atlas',territorialExtents:'#atlas',
+  feudatoryRelations:'#relations',scriptEvolution:'#scripts',templeInventoryLeads:'#districts',heritageInventoryLeads:'#districts',
 }
 const ERA_LABELS={classical:{kn:'ಪ್ರಾಚೀನ ಯುಗ',en:'Classical era'},medieval:{kn:'ಮಧ್ಯಯುಗ',en:'Medieval era'},modern:{kn:'ಆಧುನಿಕ ಯುಗ',en:'Modern era'}}
 const dateLabel=(date,locale)=>{
@@ -22,6 +24,7 @@ const dateLabel=(date,locale)=>{
   const circa=locale==='kn'?'ಸು. ':'c. '
   return `${(date.precision==='circa'&&date.from)?circa:''}${date.from}${date.to&&date.to!==date.from?`–${date.to}`:''} ${era}`.trim()
 }
+const chronologicalStart=trail=>trail.yearRange?.era==='BCE'?-trail.yearRange.from:trail.yearRange?.from??Number.MAX_SAFE_INTEGER
 
 const REVIEW_STATUS_LABELS={reviewed:{kn:'ಪರಿಶೀಲಿಸಲಾಗಿದೆ',en:'Reviewed'},published:{kn:'ಪ್ರಕಟಿತ',en:'Published'},'needs-review':{kn:'ಪರಿಶೀಲನೆ ಬಾಕಿ',en:'Needs review'},draft:{kn:'ಕರಡು',en:'Draft'}}
 const DATE_PRECISION_LABELS={year:{kn:'ನಿರ್ದಿಷ್ಟ ವರ್ಷ',en:'Specific year'},circa:{kn:'ಸುಮಾರು',en:'Circa'},range:{kn:'ಕಾಲಶ್ರೇಣಿ',en:'Date range'},century:{kn:'ಶತಮಾನ',en:'Century'},unknown:{kn:'ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ',en:'Not established'}}
@@ -90,7 +93,11 @@ function StopEvidence({stop,locale}){
 export default function TrailExplorer({locale='kn'}){
   const [selectedId,setSelectedId]=useState(null)
   const [stopIndex,setStopIndex]=useState(0)
+  const [query,setQuery]=useState('')
   const selected=trails.find(trail=>trail.id===selectedId)||null
+  const normalizedQuery=query.trim().toLocaleLowerCase()
+  const orderedTrails=[...trails].sort((left,right)=>chronologicalStart(left)-chronologicalStart(right))
+  const visibleTrails=normalizedQuery?orderedTrails.filter(trail=>JSON.stringify([trail.title,trail.summary]).toLocaleLowerCase().includes(normalizedQuery)):orderedTrails
   const t={
     trailList:locale==='kn'?'ಕಥಾಮಾರ್ಗಗಳು':'Guided trails',
     trailIntro:locale==='kn'?'ಕರ್ನಾಟಕದ ಇತಿಹಾಸವನ್ನು ಹಂತ ಹಂತವಾಗಿ ರೂಪಿಸುವ ನಿರೂಪಣೆ — ಪ್ರತಿ ಹಂತದ ಹಿಂದೆ ಪರಿಶೀಲಿತ ದತ್ತಾಂಶ.':'Curation-backed narratives that walk Karnataka\'s history step by step — every stop rooted in the evidence ledger.',
@@ -105,6 +112,10 @@ export default function TrailExplorer({locale='kn'}){
     exportBibtex:locale==='kn'?'BibTeX':'BibTeX',
     exportRis:locale==='kn'?'RIS':'RIS',
     exportCsl:locale==='kn'?'CSL-JSON':'CSL-JSON',
+    search:locale==='kn'?'ರಾಜವಂಶ ಅಥವಾ ಕಾಲವನ್ನು ಹುಡುಕಿ':'Search dynasty or period',
+    searchPlaceholder:locale==='kn'?'ಗಂಗರು, ಆಳುಪರು, ಕಂಪಿಲಿ…':'Ganga, Alupa, Kampili…',
+    trailCount:locale==='kn'?`${trails.length} ಕಥಾಮಾರ್ಗಗಳು`:`${trails.length} guided trails`,
+    noResults:locale==='kn'?'ಈ ಹುಡುಕಾಟಕ್ಕೆ ಹೊಂದುವ ಕಥಾಮಾರ್ಗಗಳಿಲ್ಲ.':'No trails match this search.',
   }
   if(selected){
     const stop=selected.stops[stopIndex]
@@ -122,7 +133,7 @@ export default function TrailExplorer({locale='kn'}){
         <b>{t.stop} {step} {t.of} {selected.stops.length}</b>
       </nav>
       <section className="trail-narrative">
-        <div className="trail-narrative-head"><span className="trail-era">{text(ERA_LABELS[selected.era],locale)} · {dateLabel(selected.yearRange)}</span><h3>{recordName(record,locale)}</h3></div>
+        <div className="trail-narrative-head"><span className="trail-era">{text(ERA_LABELS[selected.era],locale)} · {dateLabel(selected.yearRange,locale)}</span><h3>{recordName(record,locale)}</h3></div>
         <p>{text(stop.narrative,locale)}</p>
         <StopEvidence stop={stop} locale={locale}/>
         <div className="trail-cite-actions"><span>{t.citeTrail}</span><button className="trail-step-button" onClick={()=>exportTrail(selected,'bib')}>{t.exportBibtex}</button><button className="trail-step-button" onClick={()=>exportTrail(selected,'ris')}>{t.exportRis}</button><button className="trail-step-button" onClick={()=>exportTrail(selected,'csl')}>{t.exportCsl}</button></div>
@@ -135,17 +146,22 @@ export default function TrailExplorer({locale='kn'}){
   }
   return <main className="portal-page trail-page" id="trails">
     <section className="about-hero"><p className="eyebrow">{t.trailList}</p><h2>{locale==='kn'?'ಕಥೆಯ ರೂಪದಲ್ಲಿ ಕರ್ನಾಟಕ':'Karnataka as story'}</h2><p>{t.trailIntro}</p></section>
+    <section className="trail-directory-tools" aria-label={t.search}>
+      <label htmlFor="trail-search">{t.search}</label>
+      <div><input id="trail-search" type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.searchPlaceholder}/><span>{t.trailCount}</span></div>
+    </section>
     <section className="trail-grid">
-      {trails.map(trail=>{
+      {visibleTrails.map(trail=>{
         const collections=new Set(trail.stops.map(stop=>stop.kind))
         return           <button key={trail.id} className="trail-card" onClick={()=>{setStopIndex(0);setSelectedId(trail.id)}}>
-          <span className="trail-era">{text(ERA_LABELS[trail.era],locale)} · {dateLabel(trail.yearRange)}</span>
+          <span className="trail-era">{text(ERA_LABELS[trail.era],locale)} · {dateLabel(trail.yearRange,locale)}</span>
           <h3>{text(trail.title,locale)}</h3>
           <p className="entity-secondary">{trail.title[locale==='kn'?'en':'kn']}</p>
           <p>{text(trail.summary,locale)}</p>
           <small>{locale==='kn'?`${trail.stops.length} ಹಂತಗಳು · ${collections.size} ದತ್ತಾಂಶ ವಿಭಾಗಗಳು`:`${trail.stops.length} stops · ${collections.size} collections`}</small>
         </button>
       })}
+      {visibleTrails.length===0&&<p className="trail-no-results">{t.noResults}</p>}
     </section>
   </main>
 }
