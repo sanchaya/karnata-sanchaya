@@ -796,3 +796,22 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_VADHY_VOL4, 'Sharanabasappa Kolkar, "ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯ: ನಿರ್ಮಾಣ ಕಾಲ ಮತ್ತು ಸಂದ ದಾನಗಳು" (The Vitthala Temple, Hampi: construction date and grants made to it), pp. 27-28')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 5 (Directorate of Archaeology and Museums, Mysore, 2000).
+const SRC_VADHY_VOL5 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-5-0000prom'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-hampi-second-elephant-enclosure-excavation',
+  name: n('Excavated second elephant enclosure near the Lotus Mahal, Hampi', 'ಹಂಪಿಯ ಕಮಲ ಮಹಲ್ ಬಳಿಯ ಉತ್ಖನನಗೊಂಡ ಎರಡನೇ ಆನೆ ಆವರಣ'),
+  category: 'architecture',
+  date: d(1400, 1565, 'range'),
+  polityIds: ['polity-vijayanagara'],
+  placeIds: ['place-hampi'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['elephant-stable', 'excavation', 'faunal-remains', 'royal-city-infrastructure'],
+  continuity: 'material-survival',
+  description: n('T.M. Manjunathayya\'s paper argues the well-known "Elephant Stables" monument at Vijayanagara has room for only eleven elephants -- too few for the empire\'s much larger elephant corps -- and that a second, larger enclosure must have existed for ordinary (non-royal-family) elephants. He identifies this with a 168 x 105 metre walled enclosure between the Lotus Mahal (Kamal Mahal) and the Ramachandra Temple, behind the present tourist canteen, excavated by the Directorate of Archaeology and Museums. The excavation uncovered an elephant skeleton buried in a corner (apparently because the dead animal could not be moved out), partial remains of 28 human skeletons, a doorway, stone feeding troughs (1.5m wide, 6m long, too small for human habitation), a water channel and storage trough bearing a Ganesha sculpture, and a stone lamp-post flanked by carved elephants. A layer of black ash across the site is interpreted as burnt fodder and dung from the time of Vijayanagara\'s fall in 1565. A stone inscription found within the enclosure -- undated beyond a cyclic year (Shubhakritu, Chaitra shuddha 7) -- records a grant by one Konamarasa to the "Narasimha deity near the elephant stable," funded from Vijayanagara city\'s talavarike (watch-duty) tax revenue.', 'ಟಿ.ಎಂ. ಮಂಜುನಾಥಯ್ಯನ ಪ್ರಬಂಧ ವಿಜಯನಗರದ ಪ್ರಸಿದ್ಧ "ಆನೆ ಸಾಲೆ" ಸ್ಮಾರಕದಲ್ಲಿ ಕೇವಲ ಹನ್ನೊಂದು ಆನೆಗಳಿಗೆ ಮಾತ್ರ ಸ್ಥಳಾವಕಾಶವಿದೆ ಎಂದೂ -- ಸಾಮ್ರಾಜ್ಯದ ಬಹಳ ದೊಡ್ಡ ಆನೆ ಪಡೆಗೆ ಇದು ಸಾಕಾಗುವುದಿಲ್ಲ ಎಂದೂ -- ಸಾಮಾನ್ಯ (ರಾಜಪರಿವಾರೇತರ) ಆನೆಗಳಿಗಾಗಿ ಎರಡನೇ, ದೊಡ್ಡ ಆವರಣ ಇದ್ದಿರಬೇಕೆಂದೂ ವಾದಿಸುತ್ತಾರೆ. ಇದನ್ನು ಅವರು ಕಮಲ ಮಹಲ್ ಮತ್ತು ರಾಮಚಂದ್ರ ದೇವಾಲಯದ ನಡುವಿನ, ಈಗಿನ ಪ್ರವಾಸಿ ಕ್ಯಾಂಟೀನ್ ಹಿಂದಿನ 168 x 105 ಮೀಟರ್ ಗೋಡೆಯ ಆವರಣದೊಂದಿಗೆ ಗುರುತಿಸುತ್ತಾರೆ, ಪ್ರಾಚ್ಯವಸ್ತು ಮತ್ತು ಸಂಗ್ರಹಾಲಯಗಳ ನಿರ್ದೇಶನಾಲಯದಿಂದ ಉತ್ಖನನಗೊಂಡಿದೆ. ಉತ್ಖನನ ಆವರಣದ ಮೂಲೆಯಲ್ಲಿ ಹೂತಿದ್ದ ಆನೆಯ ಅಸ್ಥಿಪಂಜರವನ್ನು (ಸತ್ತ ಪ್ರಾಣಿಯನ್ನು ಹೊರಗೆ ಸಾಗಿಸಲಾಗದ ಕಾರಣ ಎಂದು ತೋರುತ್ತದೆ), 28 ಮಾನವ ಅಸ್ಥಿಪಂಜರಗಳ ಭಾಗಗಳನ್ನು, ಬಾಗಿಲನ್ನು, ಶಿಲಾ ಗೋದಲಿಗಳನ್ನು (1.5 ಮೀ ಅಗಲ, 6 ಮೀ ಉದ್ದ, ಮಾನವ ವಾಸಕ್ಕೆ ತೀರಾ ಚಿಕ್ಕದು), ಗಣೇಶ ಶಿಲ್ಪವಿರುವ ನೀರಿನ ಕಾಲುವೆ ಮತ್ತು ಸಂಗ್ರಹಣಾ ತೊಟ್ಟಿಯನ್ನು, ಮತ್ತು ಆನೆಗಳ ಕೆತ್ತನೆಯುಳ್ಳ ಕಲ್ಲಿನ ದೀಪಸ್ತಂಭವನ್ನು ಬಯಲಿಗೆ ತಂದಿತು. ತಾಣದಾದ್ಯಂತ ಇರುವ ಕಪ್ಪು ಬೂದಿಯ ಪದರವನ್ನು 1565ರ ವಿಜಯನಗರದ ಪತನ ಕಾಲದ ಸುಟ್ಟ ಮೇವು ಮತ್ತು ಸಗಣಿ ಎಂದು ಅರ್ಥೈಸಲಾಗಿದೆ. ಆವರಣದೊಳಗೆ ಪತ್ತೆಯಾದ ಶಿಲಾಶಾಸನ -- ಚಕ್ರೀಯ ವರ್ಷಕ್ಕಿಂತ (ಶುಭಕೃತು, ಚೈತ್ರ ಶುದ್ಧ 7) ಹೆಚ್ಚಿಗೆ ದಿನಾಂಕವಿಲ್ಲ -- ಕೋನಮರಸ ಎಂಬಾತ "ಆನೆ ಸಾಲೆಯ ಬಳಿಯ ನರಸಿಂಹ ದೇವರಿಗೆ" ವಿಜಯನಗರ ಪಟ್ಟಣದ ತಳವಾರಿಕೆ (ಕಾವಲು ಕರ್ತವ್ಯ) ತೆರಿಗೆ ಆದಾಯದಿಂದ ಅನುದಾನ ನೀಡಿದ್ದನ್ನು ದಾಖಲಿಸುತ್ತದೆ.'),
+  citations: [c(SRC_VADHY_VOL5, 'T.M. Manjunathayya, "ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿಯ ಆನೆಯ ಸಾಲೆ" (The elephant stable at Vijayanagara city), pp. 31-36: excavation report and inscription text')],
+  review,
+})
