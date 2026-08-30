@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { atlasData, collectionLabels } from './data/atlas'
 import { hasValidationErrors, validateAtlas } from './data/validate'
 import { translationGlossary } from './data/translation-glossary'
-import { alternateRecordTitle, localizedRecordTitle, recordMatchesAdminSearch } from './admin-search'
+import { alternateRecordTitle, localizedRecordTitle, missingKannadaTranslation, recordMatchesAdminSearch } from './admin-search'
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
 
@@ -82,8 +82,8 @@ Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntr
 Object.assign(adminText.kn,{sourceUsage:'ಉಲ್ಲೇಖ ಬಳಕೆ',sourceUsageNote:'ಈ ಆಕರವನ್ನು ಬಳಸುವ ದಾಖಲೆಗಳು ಮತ್ತು ಸ್ಥಾನಸೂಚಿಗಳನ್ನು ಇಲ್ಲಿ ನೋಡಿ. ದಾಖಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ಉಲ್ಲೇಖ ತಿದ್ದುಪಡಿ ಮಾಡಿ ಅಥವಾ ಹೊಸ ಆಕರ ಸೇರಿಸಿ.',noSourceUsage:'ಈ ಆಕರವನ್ನು ಇನ್ನೂ ಯಾವುದೇ ದಾಖಲೆ ಜೋಡಿಸಿಲ್ಲ.'})
 Object.assign(adminText.kn,{sourceReviewTitle:'ಆಕರ ಪರಿಶೀಲನಾ ಪಟ್ಟಿ',citedSources:'ಉಲ್ಲೇಖಿತ ಆಕರಗಳು',unlinkedSources:'ಜೋಡಿಸದ ಆಕರಗಳು',pendingSources:'ಪರಿಶೀಲನೆ ಬಾಕಿ',sourceLinks:'ಬಳಕೆಗಳು',openSource:'ಆಕರ ತೆರೆಯಿರಿ',englishScope:'ಆಕರದ ಇಂಗ್ಲಿಷ್ ವ್ಯಾಪ್ತಿ',kannadaScope:'ಆಕರದ ಕನ್ನಡ ವ್ಯಾಪ್ತಿ',archiveId:'ಆರ್ಕೈವ್ ಗುರುತು',alternateUrls:'ಪರ್ಯಾಯ URLಗಳು (ಪ್ರತಿ ಸಾಲಿಗೆ ಒಂದು)'})
 Object.assign(adminText.en,{sourceReviewTitle:'Reference review register',citedSources:'Cited sources',unlinkedSources:'Unlinked sources',pendingSources:'Awaiting review',sourceLinks:'uses',openSource:'Open source',englishScope:'English evidence scope',kannadaScope:'Kannada evidence scope',archiveId:'Archive identifier',alternateUrls:'Alternate URLs (one per line)'})
-Object.assign(adminText.kn,{translationIssuesTitle:'ಅನುವಾದ ಸಂಗತತೆ',translationIssuesIntro:'ಗ್ಲಾಸರಿಯ ವಿರುದ್ಧ ಸ್ವಯಂಚಾಲಿತ ಪರಿಶೀಲನೆ ಹಿಡಿದ ದಾಖಲೆಗಳು',translationIssuesNone:'ಯಾವುದೇ ಗ್ಲಾಸರಿ ಸಂಗತತೆ ಸಮಸ್ಯೆ ಪತ್ತೆಯಾಗಿಲ್ಲ.',fixRecord:'ತಿದ್ದುಪಡಿ ಮಾಡಿ →',glossaryTitle:'ಇಂಗ್ಲಿಷ್ → ಕನ್ನಡ ಗ್ಲಾಸರಿ',glossaryIntro:'ಪದೇಪದೇ ಬಳಸುವ ಪದಗಳಿಗೆ ಪ್ರಮಾಣಿತ ಅನುವಾದ; ಹೊಸ ದ್ವಿಭಾಷಾ ಪಠ್ಯ ಬರೆಯುವಾಗ ಸಂಗತತೆಗಾಗಿ ಬಳಸಿ.',glossaryTerm:'ಇಂಗ್ಲಿಷ್ ಪದ',glossaryKn:'ಪ್ರಮಾಣಿತ ಕನ್ನಡ',glossaryNote:'ಟಿಪ್ಪಣಿ'})
-Object.assign(adminText.en,{translationIssuesTitle:'Translation consistency',translationIssuesIntro:'Records flagged by an automated check against the glossary below',translationIssuesNone:'No glossary consistency issues detected.',fixRecord:'Fix →',glossaryTitle:'English → Kannada glossary',glossaryIntro:'Standard translations for recurring terms; consult this when writing new bilingual content to stay consistent.',glossaryTerm:'English term',glossaryKn:'Standard Kannada',glossaryNote:'Note'})
+Object.assign(adminText.kn,{translationIssuesTitle:'ಅನುವಾದ ಸಂಗತತೆ',translationIssuesIntro:'ಗ್ಲಾಸರಿಯ ವಿರುದ್ಧ ಸ್ವಯಂಚಾಲಿತ ಪರಿಶೀಲನೆ ಹಿಡಿದ ದಾಖಲೆಗಳು',translationIssuesNone:'ಯಾವುದೇ ಗ್ಲಾಸರಿ ಸಂಗತತೆ ಸಮಸ್ಯೆ ಪತ್ತೆಯಾಗಿಲ್ಲ.',fixRecord:'ತಿದ್ದುಪಡಿ ಮಾಡಿ →',glossaryTitle:'ಇಂಗ್ಲಿಷ್ → ಕನ್ನಡ ಗ್ಲಾಸರಿ',glossaryIntro:'ಪದೇಪದೇ ಬಳಸುವ ಪದಗಳಿಗೆ ಪ್ರಮಾಣಿತ ಅನುವಾದ; ಹೊಸ ದ್ವಿಭಾಷಾ ಪಠ್ಯ ಬರೆಯುವಾಗ ಸಂಗತತೆಗಾಗಿ ಬಳಸಿ.',glossaryTerm:'ಇಂಗ್ಲಿಷ್ ಪದ',glossaryKn:'ಪ್ರಮಾಣಿತ ಕನ್ನಡ',glossaryNote:'ಟಿಪ್ಪಣಿ',missingKannadaTitle:'ಕನ್ನಡ ಅನುವಾದ ಬಾಕಿ',missingKannadaIntro:`ಹೆಸರು/ಶೀರ್ಷಿಕೆಗೆ ಕನ್ನಡ ಪಠ್ಯ ಇಲ್ಲ ಅಥವಾ ಇಂಗ್ಲಿಷ್‌ನ ನಕಲು ಮಾತ್ರ ಇರುವ ದಾಖಲೆಗಳು (ಹೆಚ್ಚಾಗಿ OCR ಆಮದು ಸಂಗ್ರಹಗಳಿಂದ) — ಸರಿಪಡಿಸುವವರೆಗೆ ಪಟ್ಟಿಯಲ್ಲಿ ಇಂಗ್ಲಿಷ್ ಬದಲಿ ಪಠ್ಯವಾಗಿ ಕಾಣಿಸುತ್ತದೆ.`,missingKannadaNone:'ಎಲ್ಲ ಹೆಸರು/ಶೀರ್ಷಿಕೆಗಳಿಗೆ ಕನ್ನಡ ಅನುವಾದ ಇದೆ.',kannadaMissingTag:'(ಕನ್ನಡ ಇಲ್ಲ — ಇಂಗ್ಲಿಷ್ ತೋರಿಸಲಾಗಿದೆ)'})
+Object.assign(adminText.en,{translationIssuesTitle:'Translation consistency',translationIssuesIntro:'Records flagged by an automated check against the glossary below',translationIssuesNone:'No glossary consistency issues detected.',fixRecord:'Fix →',glossaryTitle:'English → Kannada glossary',glossaryIntro:'Standard translations for recurring terms; consult this when writing new bilingual content to stay consistent.',glossaryTerm:'English term',glossaryKn:'Standard Kannada',glossaryNote:'Note',missingKannadaTitle:'Missing Kannada translations',missingKannadaIntro:'Records whose name/title has no Kannada text yet, or just a copy of the English text (mostly from bulk OCR import collections) — English is shown as a fallback in the list until these are fixed.',missingKannadaNone:'Every name/title has a Kannada translation.',kannadaMissingTag:'(no Kannada yet — showing English)'})
 Object.assign(adminText.kn,{releaseTitle:'ಲೈವ್ ಸಮುದಾಯ ಹಸ್ತಾಂತರ',releaseIntro:'ಮಾರಿಯಾDB ಕಾರ್ಯಕ್ಷೇತ್ರ ಮತ್ತು ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆಯ ಸ್ಥಿತಿ',pendingAccounts:'ಅನುಮೋದನೆ ಬಾಕಿ ಖಾತೆಗಳು',submittedContributions:'ವಿಮರ್ಶೆ ಬಾಕಿ ಕೊಡುಗೆಗಳು',pendingVerifications:'ID ಪರಿಶೀಲನೆ ಬಾಕಿ',appointedReviewers:'ನೇಮಕಗೊಂಡ ಪರಿಶೀಲಕರು',latestRevision:'ಕೊನೆಯ MariaDB ಆವೃತ್ತಿ',lastPublished:'ಕೊನೆಯ ಸ್ಥಿರ ಪ್ರಕಟಣೆ',notPublished:'ಇನ್ನೂ ಸ್ಥಿರ ಪ್ರಕಟಣೆ ಇಲ್ಲ'})
 Object.assign(adminText.en,{releaseTitle:'Live community handoff',releaseIntro:'MariaDB workspace and latest static-publication status',pendingAccounts:'Accounts awaiting approval',submittedContributions:'Contributions awaiting review',pendingVerifications:'ID verifications pending',appointedReviewers:'Appointed reviewers',latestRevision:'Latest MariaDB revision',lastPublished:'Latest static publication',notPublished:'No static publication yet'})
 
@@ -122,6 +122,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   useEffect(()=>{if(connection!=='ready')return;let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/administration/release-readiness`,{credentials:'include'}).then(response=>response.ok?response.json():Promise.reject(new Error('Unable to load release-readiness status.'))).then(value=>{if(active)setReadiness(value)}).catch(()=>{if(active)setReadiness(null)});return()=>{active=false}},[connection])
   const issues = useMemo(()=>validateAtlas(data),[data])
   const translationIssues = useMemo(()=>issues.filter(issue=>issue.message.includes('(glossary:')),[issues])
+  const missingKannadaIssues = useMemo(()=>issues.filter(issue=>issue.message.includes('(missing-kn)')),[issues])
   const filtered = useMemo(() => {
     return (data[collection] || []).filter(record => recordMatchesAdminSearch(record,query))
   },[data,collection,query])
@@ -210,6 +211,13 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       {translationIssues.length
         ? <ul className="admin-translation-issue-list">{translationIssues.map((issue,index)=><li key={`${issue.collection}-${issue.id}-${index}`}><span><strong>{t.collections[issue.collection]||issue.collection}</strong> · <code>{issue.id}</code></span><small>{issue.message}</small><button type="button" onClick={()=>{const record=(data[issue.collection]||[]).find(item=>item.id===issue.id);if(record){selectCollection(issue.collection);selectRecord(record)}}}>{t.fixRecord}</button></li>)}</ul>
         : <p className="admin-translation-none">{t.translationIssuesNone}</p>}
+      <div className="admin-missing-kannada"><p className="eyebrow">{t.missingKannadaTitle}</p><h3>{t.missingKannadaIntro}</h3></div>
+      {missingKannadaIssues.length
+        ? <details className="admin-translation-issue-details" open={missingKannadaIssues.length<=8}>
+            <summary>{missingKannadaIssues.length} {t.records}</summary>
+            <ul className="admin-translation-issue-list">{missingKannadaIssues.map((issue,index)=><li key={`${issue.collection}-${issue.id}-${index}`}><span><strong>{t.collections[issue.collection]||issue.collection}</strong> · <code>{issue.id}</code></span><small>{issue.message}</small><button type="button" onClick={()=>{const record=(data[issue.collection]||[]).find(item=>item.id===issue.id);if(record){selectCollection(issue.collection);selectRecord(record)}}}>{t.fixRecord}</button></li>)}</ul>
+          </details>
+        : <p className="admin-translation-none">{t.missingKannadaNone}</p>}
       <details className="admin-glossary-reference">
         <summary>{t.glossaryTitle}</summary>
         <p className="admin-glossary-intro">{t.glossaryIntro}</p>
@@ -225,7 +233,11 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       <section className="record-list">
         <div className="list-head"><div><p className="eyebrow">{t.collections[collection]}</p><strong>{filtered.length} {t.records}</strong></div><button className="primary" onClick={create}>{collection==='sources'?t.newSource:t.new}</button></div>
         {collection==='sources'&&<section className="admin-source-summary" aria-label={t.sourceReviewTitle}><h3>{t.sourceReviewTitle}</h3><div><span><b>{sourceReviewSummary.total}</b>{t.records}</span><span><b>{sourceReviewSummary.cited}</b>{t.citedSources}</span><span><b>{sourceReviewSummary.pending}</b>{t.pendingSources}</span><span><b>{sourceReviewSummary.unlinked}</b>{t.unlinkedSources}</span></div></section>}
-        {filtered.map(record=>{const secondaryTitle=alternateRecordTitle(record,locale);return <button key={record.id} className={record.id===selectedId?'active':''} onClick={()=>selectRecord(record)}><strong className="admin-record-title" lang={locale}>{recordTitle(record,collection,locale)}</strong><span className="admin-record-meta">{secondaryTitle&&<span className="admin-record-secondary" lang={locale==='kn'?'en':'kn'}>{secondaryTitle}</span>}<code>{record.id}</code></span>{collection==='sources'&&<small className="source-use-count">{(sourceUsageById.get(record.id)||[]).length} {t.sourceLinks}{record.url?' · ↗':''}</small>}<em className={`status ${record.review?.status}`}>{record.review?.status || 'invalid'}</em></button>})}
+        {filtered.map(record=>{
+          const secondaryTitle=alternateRecordTitle(record,locale)
+          const showKannadaFallback=!secondaryTitle && locale!=='kn' && missingKannadaTranslation(record)
+          return <button key={record.id} className={record.id===selectedId?'active':''} onClick={()=>selectRecord(record)}><strong className="admin-record-title" lang={locale}>{recordTitle(record,collection,locale)}</strong><span className="admin-record-meta">{secondaryTitle&&<span className="admin-record-secondary" lang={locale==='kn'?'en':'kn'}>{secondaryTitle}</span>}{showKannadaFallback&&<span className="admin-record-secondary admin-record-secondary-fallback" lang="en">{recordTitle(record,collection,'en')} <em>{t.kannadaMissingTag}</em></span>}<code>{record.id}</code></span>{collection==='sources'&&<small className="source-use-count">{(sourceUsageById.get(record.id)||[]).length} {t.sourceLinks}{record.url?' · ↗':''}</small>}<em className={`status ${record.review?.status}`}>{record.review?.status || 'invalid'}</em></button>
+        })}
         {!filtered.length&&<p className="empty">{t.noMatches}</p>}
       </section>
       <section className="record-editor">
