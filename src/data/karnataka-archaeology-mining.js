@@ -839,3 +839,27 @@ export const karnatakaArchaeologyMiningCoinRecords = [
     review,
   },
 ]
+
+// Source: "Vijayanagara Adhyayana" Volume 7 (Directorate of Archaeology and Museums, Mysore, 2003).
+const SRC_VADHY_VOL7 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra'
+
+export const karnatakaArchaeologyMiningEvents = [
+  {
+    id: 'event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding',
+    type: 'kingdom-foundation',
+    name: n('Two traditions of Harihara and Bukka\'s service under Kampili before founding Vijayanagara', 'ವಿಜಯನಗರ ಸ್ಥಾಪನೆಗೂ ಮೊದಲು ಕಂಪಿಲಿ ಸೇವೆಯಲ್ಲಿ ಹರಿಹರ-ಬುಕ್ಕರ ಎರಡು ಸಂಪ್ರದಾಯಗಳು'),
+    date: d(1327, 1336, 'range'),
+    year: 1336,
+    location: { type: 'Point', coordinates: [76.46, 15.335], precision: 'approximate' },
+    summary: n('Dr. C. Mahadeva\'s paper surveys two competing traditions -- one Kannada, one Telugu -- about what Harihara I and Bukka I, Vijayanagara\'s founders, were doing immediately before 1336. The Kannada tradition, drawn from the "Kumararamana Sangatya" folk epic, holds they held responsible office under Kampiladeva of Kummata/Anegundi (some accounts call them his relatives), fled Anegundi when the Delhi Sultanate\'s forces attacked, and afterward served Hoysala Ballala III; Ibn Battuta and Barani report that after Kummata\'s fall Kampila\'s kinsmen were taken captive to Delhi and later sent back to govern the province. The Telugu tradition instead holds Harihara and Bukka were officers of the Kakatiya king Prataparudra of Warangal, entered Kampila\'s service only after Warangal fell, were captured when Kummata fell in turn, converted to Islam in Delhi, and were sent back by the Sultan to administer the Kampili/Anegundi province -- from which they broke away to found independent Vijayanagara. The paper also gives Kampili\'s territorial extent (parts of present-day Dharwad, Haveri, Gadag, Chitradurga, Ballari, Koppal and Raichur districts) and notes an inscription of Bukka I at Edatore, near Pampapura, naming Bhavasangama -- Kampiladeva\'s son-in-law and Kumararama\'s brother-in-law -- as active in the same landscape.', 'ಡಾ. ಸಿ. ಮಹದೇವರ ಪ್ರಬಂಧ ವಿಜಯನಗರ ಸ್ಥಾಪಕರಾದ ಹರಿಹರ I ಮತ್ತು ಬುಕ್ಕ I 1336ಕ್ಕಿಂತ ಮುಂಚೆ ಏನು ಮಾಡುತ್ತಿದ್ದರೆಂಬುದರ ಬಗ್ಗೆ ಎರಡು ಸ್ಪರ್ಧಾತ್ಮಕ ಸಂಪ್ರದಾಯಗಳನ್ನು -- ಒಂದು ಕನ್ನಡ, ಒಂದು ತೆಲುಗು -- ಸಮೀಕ್ಷಿಸುತ್ತದೆ. "ಕುಮಾರರಾಮನ ಸಾಂಗತ್ಯ" ಜನಪದ ಕಾವ್ಯದಿಂದ ಪಡೆದ ಕನ್ನಡ ಸಂಪ್ರದಾಯ, ಅವರು ಕುಮ್ಮಟ/ಆನೆಗುಂದಿಯ ಕಂಪಿಲದೇವನ ಅಡಿಯಲ್ಲಿ ಜವಾಬ್ದಾರಿಯುತ ಹುದ್ದೆ ಹೊಂದಿದ್ದರೆಂದೂ (ಕೆಲವು ವೃತ್ತಾಂತಗಳು ಅವರನ್ನು ಅವನ ಬಂಧುಗಳೆಂದು ಕರೆಯುತ್ತವೆ), ದೆಹಲಿ ಸುಲ್ತಾನೀ ಪಡೆ ಆಕ್ರಮಣ ಮಾಡಿದಾಗ ಆನೆಗುಂದಿಯಿಂದ ಪರಾರಿಯಾದರೆಂದೂ, ನಂತರ ಹೊಯ್ಸಳ ಮೂರನೇ ಬಲ್ಲಾಳನ ಸೇವೆಗೆ ಸೇರಿದರೆಂದೂ ಹೇಳುತ್ತದೆ; ಇಬ್ನ್ ಬತೂತ ಮತ್ತು ಬರನಿ ಕುಮ್ಮಟದ ಪತನದ ನಂತರ ಕಂಪಿಲನ ಬಂಧುಗಳನ್ನು ದೆಹಲಿಗೆ ಸೆರೆಯಾಳುಗಳಾಗಿ ಒಯ್ಯಲಾಯಿತೆಂದೂ, ನಂತರ ಪ್ರಾಂತ ಆಳಲು ಹಿಂತಿರುಗಿಸಲಾಯಿತೆಂದೂ ವರದಿ ಮಾಡುತ್ತಾರೆ. ಬದಲಿಗೆ ತೆಲುಗು ಸಂಪ್ರದಾಯ ಹರಿಹರ ಮತ್ತು ಬುಕ್ಕ ವಾರಂಗಲ್ಲಿನ ಕಾಕತೀಯ ಅರಸ ಪ್ರತಾಪರುದ್ರನ ಅಧಿಕಾರಿಗಳಾಗಿದ್ದರೆಂದೂ, ವಾರಂಗಲ್ ಪತನದ ನಂತರವಷ್ಟೇ ಕಂಪಿಲನ ಸೇವೆಗೆ ಸೇರಿದರೆಂದೂ, ಕುಮ್ಮಟ ಸಹ ಪತನವಾದಾಗ ಸೆರೆಯಾಳಾಗಿ, ದೆಹಲಿಯಲ್ಲಿ ಇಸ್ಲಾಂಗೆ ಮತಾಂತರಗೊಂಡು, ಕಂಪಿಲಿ/ಆನೆಗುಂದಿ ಪ್ರಾಂತ ಆಳಲು ಸುಲ್ತಾನನಿಂದ ಹಿಂತಿರುಗಿ ಕಳುಹಿಸಲ್ಪಟ್ಟರೆಂದೂ -- ಅಲ್ಲಿಂದ ಸ್ವತಂತ್ರ ವಿಜಯನಗರ ಸ್ಥಾಪಿಸಲು ಬೇರ್ಪಟ್ಟರೆಂದೂ ಹೇಳುತ್ತದೆ. ಪ್ರಬಂಧ ಕಂಪಿಲಿಯ ಭೂಪ್ರದೇಶ ವ್ಯಾಪ್ತಿಯನ್ನೂ (ಈಗಿನ ಧಾರವಾಡ, ಹಾವೇರಿ, ಗದಗ, ಚಿತ್ರದುರ್ಗ, ಬಳ್ಳಾರಿ, ಕೊಪ್ಪಳ ಮತ್ತು ರಾಯಚೂರು ಜಿಲ್ಲೆಗಳ ಭಾಗಗಳು) ನೀಡುತ್ತದೆ ಮತ್ತು ಪಂಪಾಪುರದ ಬಳಿಯ ಎಡತೊರೆಯಲ್ಲಿನ ಬುಕ್ಕ Iನ ಶಾಸನವನ್ನು ಗಮನಿಸುತ್ತದೆ, ಇದು ಭಾವಸಂಗಮನನ್ನು -- ಕಂಪಿಲದೇವನ ಅಳಿಯ ಮತ್ತು ಕುಮಾರರಾಮನ ಭಾವ -- ಅದೇ ಭೂಪ್ರದೇಶದಲ್ಲಿ ಸಕ್ರಿಯನಾಗಿದ್ದನೆಂದು ಹೆಸರಿಸುತ್ತದೆ.'),
+    participants: [
+      { polityId: 'polity-kampili', role: 'predecessor-polity', outcome: 'conquered-1327' },
+      { polityId: 'polity-vijayanagara', role: 'founding-polity', outcome: 'established-1336' },
+    ],
+    peopleIds: ['person-harihara-i', 'person-bukka-i'],
+    originPlaceId: 'place-kummata',
+    destinationPlaceId: 'place-hampi',
+    citations: [c(SRC_VADHY_VOL7, 'Dr. C. Mahadeva, "ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani')],
+    review,
+  },
+]

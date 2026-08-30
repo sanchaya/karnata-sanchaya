@@ -27,7 +27,7 @@ import { sourceVolumeExtractionCoinRecords, sourceVolumeExtractionEvents, source
 import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js'
 import { applyExternalCapitalLinks } from './external-capitals.js'
 import { p2ClosureRecords } from './p2-research-graph-closure.js'
-import { karnatakaArchaeologyMiningInscriptions, karnatakaArchaeologyMiningCulturalHeritage, karnatakaArchaeologyMiningPolities, karnatakaArchaeologyMiningCoinRecords } from './karnataka-archaeology-mining.js'
+import { karnatakaArchaeologyMiningInscriptions, karnatakaArchaeologyMiningCulturalHeritage, karnatakaArchaeologyMiningPolities, karnatakaArchaeologyMiningCoinRecords, karnatakaArchaeologyMiningEvents } from './karnataka-archaeology-mining.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -250,6 +250,7 @@ appendUniqueById(atlasData.sources, communityPeopleSources)
 appendUniqueById(atlasData.externalPolities, communityPeoplePolities)
 appendUniqueById(atlasData.places, communityPeoplePlaces)
 appendUniqueById(atlasData.people, communityPeople)
+appendUniqueById(atlasData.events, karnatakaArchaeologyMiningEvents)
 appendUniqueById(atlasData.events, communityPeopleEvents)
 appendUniqueById(atlasData.events, freedomMovementEventLeads)
 appendUniqueById(atlasData.sources, freedomFighterSources)
