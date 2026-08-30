@@ -941,3 +941,22 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_VADHY_VOL11, 'Zainulla Ballari, "ವಿಜಯನಗರದ ಕುಸ್ತಿಯ ಬಗ್ಗೆ ಎರಡು ಶಾಸನಗಳು" (Two inscriptions about wrestling in Vijayanagara), pp. 89-98')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 12 (Directorate of Archaeology and Museums, Mysore, 2007).
+const SRC_VADHY_VOL12 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-12-0000drrg'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-rooka-generic-money-term',
+  name: n('"Rooka/rokka" as generic Kannada word for cash, not a distinct Vijayanagara coin', '"ರೂಕ/ರೊಕ್ಕ" ಸಾಮಾನ್ಯ ಕನ್ನಡ ನಗದು ಪದ, ವಿಶಿಷ್ಟ ವಿಜಯನಗರ ನಾಣ್ಯವಲ್ಲ'),
+  category: 'literature',
+  date: d(1513, 1563, 'range'),
+  polityIds: ['polity-vijayanagara'],
+  placeIds: ['place-hampi'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['numismatic-terminology', 'Kannada-epigraphic-vocabulary', 'coinage', 'living-usage'],
+  continuity: 'continuing-practice',
+  description: n('C. Mahadeva\'s paper responds to numismatist A.V. Narasimhamurthy\'s treatment of "rooka" as a distinct Deccan-Andhra silver coin (attested there from the 8th century CE, per Nellore inscriptions and a 1276 CE Sevuna Ramachandra grant at Pandharpur) whose presence and exact value in Karnataka Narasimhamurthy left uncertain. Reviewing a run of dated Kannada Vijayanagara inscriptions -- Muddalapura (1513), Melukote (1530), the Vitthala temple at Hampi (1534, 1536, 1563), an unnamed 1545 record, Pura (1547), Ravihalu (1544), Nakkarahalu (1562) and Krishnadevaraya\'s Udayagiri record -- Mahadeva shows "rokka"/"roka" appears there generically alongside actual denominations (gadyana, varaha) to mean "cash payment" broadly, not one specific coin. He connects this to the ordinary Kannada dictionary sense of rokka/rokka (cash, money; compare Hindi rok, Marathi rokh, Tamil/Malayalam/Tulu/Telugu rokkam) and to its continued colloquial use in North Karnataka today for money of any kind, paper or metal, and in personal names such as Rokkappa/Rokkappa Shetty among the (Telugu-home-language) Arya Vaishya community.', 'ಸಿ. ಮಹದೇವರ ಪ್ರಬಂಧ ನಾಣ್ಯಶಾಸ್ತ್ರಜ್ಞ ಎ.ವಿ. ನರಸಿಂಹಮೂರ್ತಿಯವರ "ರೂಕ"ವನ್ನು ಪ್ರತ್ಯೇಕ ದಖ್ಖನ್-ಆಂಧ್ರ ಬೆಳ್ಳಿ ನಾಣ್ಯವೆಂದು (8ನೇ ಶತಮಾನದಿಂದ ಅಲ್ಲಿ ದೃಢಪಟ್ಟ, ನೆಲ್ಲೂರು ಶಾಸನಗಳು ಮತ್ತು ಪಂಢರಾಪುರದ 1276ರ ಸೇವುಣ ರಾಮಚಂದ್ರ ಅನುದಾನದ ಪ್ರಕಾರ) ಪರಿಗಣಿಸಿದ್ದಕ್ಕೆ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತದೆ, ಇದರ ಕರ್ನಾಟಕದಲ್ಲಿ ಇರುವಿಕೆ ಮತ್ತು ನಿಖರ ಮೌಲ್ಯವನ್ನು ನರಸಿಂಹಮೂರ್ತಿ ಅನಿಶ್ಚಿತವಾಗಿ ಬಿಟ್ಟಿದ್ದರು. ದಿನಾಂಕಿತ ಕನ್ನಡ ವಿಜಯನಗರ ಶಾಸನಗಳ ಸರಣಿಯನ್ನು ಪರಿಶೀಲಿಸಿ -- ಮುದ್ದಲಾಪುರ (1513), ಮೇಲುಕೋಟೆ (1530), ಹಂಪೆಯ ವಿಠ್ಠಲ ದೇವಾಲಯ (1534, 1536, 1563), ಹೆಸರಿಲ್ಲದ 1545ರ ದಾಖಲೆ, ಪುರ (1547), ರಾವಿಹಾಳು (1544), ನಕ್ಕರಹಾಳು (1562) ಮತ್ತು ಕೃಷ್ಣದೇವರಾಯನ ಉದಯಗಿರಿ ದಾಖಲೆ -- ಮಹದೇವ "ರೊಕ್ಕ"/"ರೊಕ" ಅಲ್ಲಿ ಸಾಮಾನ್ಯವಾಗಿ ನಿಜವಾದ ಮೌಲ್ಯಗಳ (ಗದ್ಯಾಣ, ವರಾಹ) ಜೊತೆಗೆ "ನಗದು ಪಾವತಿ" ಎಂಬ ವಿಶಾಲ ಅರ್ಥದಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆಂದೂ, ಒಂದು ನಿರ್ದಿಷ್ಟ ನಾಣ್ಯವಲ್ಲವೆಂದೂ ತೋರಿಸುತ್ತಾರೆ. ಇದನ್ನು ಅವರು ಸಾಮಾನ್ಯ ಕನ್ನಡ ನಿಘಂಟಿನ ರೊಕ್ಕ/ರೊಕ (ನಗದು, ಹಣ; ಹಿಂದಿ ರೋಕ್, ಮರಾಠಿ ರೋಖ್, ತಮಿಳು/ಮಲೆಯಾಳ/ತುಳು/ತೆಲುಗು ರೊಕ್ಕಂ ಹೋಲಿಸಿ) ಅರ್ಥದೊಂದಿಗೆ, ಮತ್ತು ಇಂದಿಗೂ ಉತ್ತರ ಕರ್ನಾಟಕದಲ್ಲಿ ಯಾವುದೇ ಬಗೆಯ ಹಣಕ್ಕೆ (ಕಾಗದ ಅಥವಾ ಲೋಹ) ಬಳಸುವ ಆಡುಮಾತಿನ ಬಳಕೆಯೊಂದಿಗೆ, ಮತ್ತು (ತೆಲುಗು-ಮನೆಮಾತಿನ) ಆರ್ಯ ವೈಶ್ಯ ಸಮುದಾಯದ ರೊಕ್ಕಪ್ಪ/ರೊಕ್ಕಪ್ಪ ಶೆಟ್ಟಿಯಂತಹ ವ್ಯಕ್ತಿನಾಮಗಳೊಂದಿಗೆ ಜೋಡಿಸುತ್ತಾರೆ.'),
+  citations: [c(SRC_VADHY_VOL12, 'Dr. C. Mahadeva, "ರೂಕ ನಾಣ್ಯ - ಒಂದು ಪರಿಶೀಲನೆ" (The rooka coin: an examination), pp. 196-201, responding to A.V. Narasimhamurthy\'s "The Coins and Currency Systems of Karnataka"')],
+  review,
+})
