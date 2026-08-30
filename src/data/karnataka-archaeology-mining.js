@@ -499,6 +499,25 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   review,
 })
 
+// Source: "Vijayanagara Adhyayana" Volume 2 (Directorate of Archaeology and Museums, Mysore, 1997).
+const SRC_VADHY_VOL2 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-anegondi-copper-plate-kumbara-purana',
+  name: n('Anegondi copper-plate "potter-guild" origin narrative (c. 13th century)', 'ಆನೆಗುಂದಿ ತಾಮ್ರಪಟ "ಕುಂಬಾರ-ಗುಂಪು" ಮೂಲ ಕಥನ (ಸು. 13ನೇ ಶತಮಾನ)'),
+  category: 'literature',
+  date: d(1200, 1299, 'century'),
+  polityIds: ['polity-vijayanagara'],
+  placeIds: ['place-anegundi'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['Kumbara', 'guild-charter', 'mythological-verse', 'pre-Vijayanagara', 'caste-origin-narrative'],
+  continuity: 'historic',
+  description: n('In a paper re-examining a copper-plate inscription from Anegondi (first published by C.S. Patil in the 1987-88 Vijayanagara Research Progress report), the epigraphist Srinivas V. Padigar argues this is not a conventional administrative record at all but a "samaya shasana" (guild charter) composed as two short Kannada mythological verse-narratives, "Vivaha Purana" and "Amrita Mathana Purana." Probably 13th-century CE (pre-dating Vijayanagara\'s own 1336 founding), the text traces the Kumbara (potter) community\'s origin to a mythic ancestor, Girirāja (Parvati\'s father), who fashioned the vessels for Shiva and Parvati\'s wedding and later helped fashion the vessel used in the gods\' churning of the ocean for amrita -- receiving in return the community\'s guild insignia, its "thirty-six vessels" and eighteen town/lineage divisions. Padigar shows the text is textually near-identical, phrase for phrase, to a stone inscription of similar date found at Sholapur, indicating both derive from a shared archetype text that circulated within the potter community as a charter of guild status and mythological legitimacy, rather than a unique royal or local record.', 'ಆನೆಗುಂದಿಯ ಒಂದು ತಾಮ್ರಶಾಸನವನ್ನು (ಮೊದಲು 1987-88ರ ವಿಜಯನಗರ ಸಂಶೋಧನ ಪ್ರಗತಿ ವರದಿಯಲ್ಲಿ ಸಿ.ಎಸ್. ಪಾಟೀಲರಿಂದ ಪ್ರಕಟಿತ) ಮರುಪರಿಶೀಲಿಸುವ ಪ್ರಬಂಧದಲ್ಲಿ, ಶಾಸನಶಾಸ್ತ್ರಜ್ಞ ಶ್ರೀನಿವಾಸ ವಿ. ಪಾಡಿಗಾರ ಇದು ಸಾಂಪ್ರದಾಯಿಕ ಆಡಳಿತ ದಾಖಲೆಯೇ ಅಲ್ಲವೆಂದೂ, ಬದಲಿಗೆ ಎರಡು ಸಣ್ಣ ಕನ್ನಡ ಪೌರಾಣಿಕ ಪದ್ಯ-ಕಥನಗಳಾದ "ವಿವಾಹ ಪುರಾಣ" ಮತ್ತು "ಅಮೃತ ಮಥನ ಪುರಾಣ"ವಾಗಿ ರಚಿತ "ಸಮಯ ಶಾಸನ" (ಗುಂಪು ಪ್ರಮಾಣಪತ್ರ) ಎಂದೂ ವಾದಿಸುತ್ತಾರೆ. ಬಹುಶಃ 13ನೇ ಶತಮಾನದ್ದು (ವಿಜಯನಗರದ ಸ್ವಂತ 1336ರ ಸ್ಥಾಪನೆಗಿಂತ ಮುಂಚಿನದು), ಈ ಪಠ್ಯ ಕುಂಬಾರ ಗುಂಪಿನ ಮೂಲವನ್ನು ಪೌರಾಣಿಕ ಪೂರ್ವಜ ಗಿರಿರಾಜ (ಪಾರ್ವತಿಯ ತಂದೆ)ನೊಂದಿಗೆ ಪತ್ತೆ ಮಾಡುತ್ತದೆ, ಅವನು ಶಿವ-ಪಾರ್ವತಿಯ ವಿವಾಹಕ್ಕೆ ಪಾತ್ರೆಗಳನ್ನು ಮಾಡಿ, ನಂತರ ದೇವತೆಗಳ ಅಮೃತಕ್ಕಾಗಿ ಸಮುದ್ರ ಮಥನದಲ್ಲಿ ಬಳಸಿದ ಪಾತ್ರೆಯನ್ನೂ ಮಾಡಿಕೊಟ್ಟನೆಂದೂ -- ಪ್ರತಿಫಲವಾಗಿ ಗುಂಪಿನ ಚಿಹ್ನೆಗಳು, ಅದರ "ಮೂವತ್ತಾರು ಪಾತ್ರೆಗಳು" ಮತ್ತು ಹದಿನೆಂಟು ಪಟ್ಟಣ/ವಂಶ ವಿಭಾಗಗಳನ್ನು ಪಡೆದನೆಂದೂ ಹೇಳುತ್ತದೆ. ಇದೇ ಕಾಲದ ಸೋಲ್ಲಾಪುರದಲ್ಲಿ ದೊರೆತ ಶಿಲಾಶಾಸನದೊಂದಿಗೆ ಪಠ್ಯ ಪದಶಃ ಬಹುತೇಕ ಒಂದೇ ಆಗಿದೆ ಎಂದು ಪಾಡಿಗಾರ ತೋರಿಸುತ್ತಾರೆ, ಇದು ಎರಡೂ ಒಂದೇ ಮೂಲ ಪಠ್ಯದಿಂದ ಬಂದಿರುವುದನ್ನು ಸೂಚಿಸುತ್ತದೆ, ಇದು ಕುಂಬಾರ ಸಮುದಾಯದೊಳಗೆ ಗುಂಪು ಸ್ಥಾನಮಾನ ಮತ್ತು ಪೌರಾಣಿಕ ಸಿಂಧುತ್ವದ ಪ್ರಮಾಣಪತ್ರವಾಗಿ ಚಲಾವಣೆಯಲ್ಲಿತ್ತು, ಒಂದು ವಿಶಿಷ್ಟ ರಾಜ ಅಥವಾ ಸ್ಥಳೀಯ ದಾಖಲೆಯಾಗಿ ಅಲ್ಲ.'),
+  citations: [c(SRC_VADHY_VOL2, 'Srinivas V. Padigar, "ಆನೆಗೊಂದಿ ತಾಮ್ರಪಟ ಶಾಸನ: ಒಂದು ಮರುನೋಟ" (The Anegondi copper-plate inscription: a re-examination), pp. 57-59, comparing the text against a Sholapur stone inscription published by Shrinivas Ritti')],
+  review,
+})
+
 // Source: "Annual Report of the Mysore Archaeological Department for the Year 1941" (1942) --
 // Part I Epigraphy section, summarising ~60 inscriptions collected that year.
 const SRC_MAD_AR_1941 = 'src-ia-karnataka-archaeology-damh-annualreportmyso0000unse1941'
@@ -693,3 +712,32 @@ karnatakaArchaeologyMiningCulturalHeritage.push({
   citations: [c(SRC_WODEYAR_HISTORY, '"The Tradition of Alamelamma" chapter (pp. 201-202): full narrative and the curse verse as rendered in the book, cited to the Mysore Palace Records')],
   review,
 })
+
+karnatakaArchaeologyMiningInscriptions.push(
+  {
+    id: 'inscription-karch-vadhy2-yellampalli-harihara-ii-compensation',
+    name: n('Yellampalli inscription: compensation for a royal officer\'s death (1383)', 'ಯಳ್ಳಂಪಳ್ಳಿ ಶಾಸನ: ರಾಜಕಾರ್ಯದಲ್ಲಿ ಮೃತ ಅಧಿಕಾರಿಗೆ ಪರಿಹಾರ (1383)'),
+    date: d(1383, 1383, 'year'),
+    placeId: 'place-udupi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-udupi',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('A 29-line Kannada inscription found near the Vishnumurti temple at Yellampalli (now part of Neelavara village, Udupi taluk), dated Saka 1305, Rudhirodgari samvatsara (1383 CE), reign of Vijayanagara king Harihara II. Records that when Jakkanna Odeya was governing Barkur province under Harihara II\'s order, a revenue officer named Anna Nidambur died while engaged in royal service; the inscription documents compensation granted to his son Shiva Nidambur -- 1157 katti-gadyanas assigned tax-free from the revenues of Yellampalli, Pejamangur and the harivari of Kutupadi -- witnessed by Mallappa Odeya of Honnavar under orders of the dandanayaka of Mudde. A companion inscription of 1399 records a similar death-in-service compensation, suggesting the Nidambur family regularly served as karttale (local enforcers) supporting Vijayanagara\'s provincial governors on the coast. The record also references the village\'s "uru-hattu-praje" (a ten-member village assembly) and its tax allocation, including funds set aside for "uru upachara" (village-assembly expenses).', 'ಯಳ್ಳಂಪಳ್ಳಿಯ (ಈಗ ಉಡುಪಿ ತಾಲ್ಲೂಕಿನ ನೀಲಾವರ ಗ್ರಾಮದ ಭಾಗ) ವಿಷ್ಣುಮೂರ್ತಿ ದೇವಸ್ಥಾನದ ಬಳಿ ಪತ್ತೆಯಾದ 29-ಸಾಲಿನ ಕನ್ನಡ ಶಾಸನ, ಶಕ 1305, ರುಧಿರೋದ್ಗಾರಿ ಸಂವತ್ಸರ (1383) ದಿನಾಂಕಿತ, ವಿಜಯನಗರ ಅರಸ ಹರಿಹರ IIನ ಆಳ್ವಿಕೆ. ಹರಿಹರ IIನ ಆಜ್ಞೆಯಂತೆ ಜಕ್ಕಣ್ಣ ಒಡೆಯ ಬಾರಕೂರು ಪ್ರಾಂತ ಆಳುತ್ತಿದ್ದಾಗ, ಆದಾಯ ಅಧಿಕಾರಿ ಅಣ್ಣ ನಿಡಂಬೂರ ರಾಜಕಾರ್ಯದಲ್ಲಿ ನಿರತನಾಗಿದ್ದಾಗ ಮರಣ ಹೊಂದಿದನೆಂದೂ, ಅವನ ಮಗ ಶಿವ ನಿಡಂಬೂರನಿಗೆ ಪರಿಹಾರ ನೀಡಲಾಯಿತೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ -- ಯಳ್ಳಂಪಳ್ಳಿ, ಪೆಜಮಂಗೂರು ಮತ್ತು ಕುತುಪಾಡಿಯ ಹರವರಿಯ ಆದಾಯದಿಂದ ತೆರಿಗೆ-ಮುಕ್ತವಾಗಿ ನಿಗದಿಪಡಿಸಿದ 1157 ಕಟ್ಟಿ-ಗದ್ಯಾಣಗಳು -- ಮುದ್ದೆಯ ದಂಡನಾಯಕನ ಆಜ್ಞೆಯಂತೆ ಹೊನ್ನಾವರದ ಮಲ್ಲಪ್ಪ ಒಡೆಯನ ಸಾಕ್ಷ್ಯದೊಂದಿಗೆ. 1399ರ ಸಹವರ್ತಿ ಶಾಸನ ಇದೇ ರೀತಿಯ ಸೇವಾ-ಮರಣ ಪರಿಹಾರವನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ಇದು ನಿಡಂಬೂರ ಕುಟುಂಬ ಕರಾವಳಿಯಲ್ಲಿ ವಿಜಯನಗರದ ಪ್ರಾಂತೀಯ ಗವರ್ನರ್‌ಗಳನ್ನು ಬೆಂಬಲಿಸುವ ಕಟ್ಟಳೆಯವರಾಗಿ (ಸ್ಥಳೀಯ ಜಾರಿ ಅಧಿಕಾರಿ) ನಿಯಮಿತವಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸುತ್ತಿದ್ದರೆಂದು ಸೂಚಿಸುತ್ತದೆ. ದಾಖಲೆ ಗ್ರಾಮದ "ಊರು-ಹತ್ತು ಪ್ರಜೆ" (ಹತ್ತು-ಸದಸ್ಯ ಗ್ರಾಮ ಸಭೆ) ಮತ್ತು ಅದರ ತೆರಿಗೆ ಹಂಚಿಕೆಯನ್ನೂ ಉಲ್ಲೇಖಿಸುತ್ತದೆ, "ಊರ ಉಪಚಾರ"ಕ್ಕಾಗಿ (ಗ್ರಾಮಸಭಾ ವೆಚ್ಚ) ಎತ್ತಿಟ್ಟ ನಿಧಿ ಸೇರಿ.'),
+    citations: [c(SRC_VADHY_VOL2, 'B. Vasanta Shetty, "ದಕ್ಷಿಣ ಕನ್ನಡದಲ್ಲಿ ಇತ್ತೀಚೆಗೆ ದೊರೆತ ಮೂರು ವಿಜಯನಗರ ಶಾಸನಗಳು" (Three recently found Vijayanagara inscriptions in Dakshina Kannada), pp. 70-71')],
+    review,
+  },
+  {
+    id: 'inscription-karch-vadhy2-ajri-janani-privileges',
+    name: n('Ajri inscription: privileges of the "janani" landholding officials (1428)', 'ಅಜ್ರಿ ಶಾಸನ: "ಜನನಿ" ಭೂಒಡೆತನ ಅಧಿಕಾರಿಗಳ ಸವಲತ್ತುಗಳು (1428)'),
+    date: d(1428, 1428, 'year'),
+    placeId: 'place-udupi',
+    polityId: 'polity-vijayanagara',
+    districtAuditId: 'audit-udupi',
+    languages: ['Kannada'],
+    scripts: ['Kannada'],
+    description: n('A 29-line Kannada inscription found at Tenku Bayalu, Ajri village (Kundapura taluk), dated Saka 1349, Vartamana Parabhava samvatsara (1428 CE), reign of Vijayanagara king Devaraya II, when Mahamantri Narasimhadeva Odeya administered Barkur province and Achappa held charge of the Ajri (Ajire)-Mungina Nadu locality. The inscription records that Ajri had six landholding officials known as "janani," naming three principal ones -- Tannu Heggade, Beera Heggade and Chonu Heggade -- who jointly set out a katta (rule/regulation) exempting the localities of Tenku Bayalu, Holetalamane, Todu and Ambalagere from tax collection and from entry by soldiers (bantaru) or officials. The record shows these janani held a recognized, land-based standing in Barkur-province village administration -- attested elsewhere (a Herange inscription) receiving ceremonial payment when summoned -- serving as witnesses and administrators in land allocation, sale and mortgage matters.', 'ಅಜ್ರಿ ಗ್ರಾಮದ (ಕುಂದಾಪುರ ತಾಲ್ಲೂಕು) ತೆಂಕು ಬಯಲಿನಲ್ಲಿ ಪತ್ತೆಯಾದ 29-ಸಾಲಿನ ಕನ್ನಡ ಶಾಸನ, ಶಕ 1349, ವರ್ತಮಾನ ಪರಾಭವ ಸಂವತ್ಸರ (1428) ದಿನಾಂಕಿತ, ವಿಜಯನಗರ ಅರಸ ದೇವರಾಯ IIನ ಆಳ್ವಿಕೆ, ಆಗ ಮಹಾಮಂತ್ರಿ ನರಸಿಂಹದೇವ ಒಡೆಯ ಬಾರಕೂರು ಪ್ರಾಂತ ಆಳುತ್ತಿದ್ದು, ಅಚಪ್ಪ ಅಜ್ರಿ (ಅಜಿರೆ)-ಮುಂಗಿನ ನಾಡಿನ ಉಸ್ತುವಾರಿ ಹೊಂದಿದ್ದ. ಶಾಸನ ಅಜ್ರಿಯಲ್ಲಿ ಆರು "ಜನನಿ" ಎಂಬ ಭೂಒಡೆತನ ಅಧಿಕಾರಿಗಳಿದ್ದರೆಂದೂ, ಅವರಲ್ಲಿ ಮೂವರು ಮುಖ್ಯರಾದ ತನ್ನು ಹೆಗ್ಗಡೆ, ಬೀರ ಹೆಗ್ಗಡೆ ಮತ್ತು ಚೋಣು ಹೆಗ್ಗಡೆ ಜಂಟಿಯಾಗಿ ತೆಂಕು ಬಯಲು, ಹೊಳೆತಳಮನೆ, ತೋಡು ಮತ್ತು ಅಂಬಲಗೆರೆ ಪ್ರದೇಶಗಳನ್ನು ತೆರಿಗೆ ವಸೂಲಿ ಮತ್ತು ಸೈನಿಕರ (ಬಂಟರು) ಅಥವಾ ಅಧಿಕಾರಿಗಳ ಪ್ರವೇಶದಿಂದ ವಿನಾಯಿತಿಗೊಳಿಸುವ ಕಟ್ಟನ್ನು (ನಿಯಮ) ಸ್ಥಾಪಿಸಿದರೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ. ಈ ಜನನಿಗಳು ಬಾರಕೂರು ಪ್ರಾಂತದ ಗ್ರಾಮಾಡಳಿತದಲ್ಲಿ ಗುರುತಿಸಲ್ಪಟ್ಟ, ಭೂ-ಆಧಾರಿತ ಸ್ಥಾನಮಾನ ಹೊಂದಿದ್ದರೆಂದು ದಾಖಲೆ ತೋರಿಸುತ್ತದೆ -- ಬೇರೆಡೆ (ಹೆರಂಜೆ ಶಾಸನ) ಕರೆಸಿದಾಗ ಗೌರವ ಸಂದಾಯ ಪಡೆಯುತ್ತಿದ್ದರೆಂದು ದೃಢಪಟ್ಟಿದೆ -- ಭೂಮಿ ಹಂಚಿಕೆ, ಮಾರಾಟ ಮತ್ತು ಅಡವು ವಿಷಯಗಳಲ್ಲಿ ಸಾಕ್ಷಿಗಳಾಗಿ ಮತ್ತು ಆಡಳಿತಗಾರರಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸುತ್ತಿದ್ದರು.'),
+    citations: [c(SRC_VADHY_VOL2, 'B. Vasanta Shetty, "ದಕ್ಷಿಣ ಕನ್ನಡದಲ್ಲಿ ಇತ್ತೀಚೆಗೆ ದೊರೆತ ಮೂರು ವಿಜಯನಗರ ಶಾಸನಗಳು" (Three recently found Vijayanagara inscriptions in Dakshina Kannada), pp. 71-72')],
+    review,
+  },
+)
