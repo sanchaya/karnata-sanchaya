@@ -543,6 +543,63 @@
         }
       },
       {
+        "id": "polity-kampili",
+        "name": {
+          "en": "Kampili chiefdom",
+          "kn": "ಕಂಪಿಲಿ ಸಂಸ್ಥಾನ"
+        },
+        "type": "kingdom",
+        "date": {
+          "from": 1280,
+          "to": 1327,
+          "era": "CE",
+          "precision": "range"
+        },
+        "capitalId": "place-kummata",
+        "color": "#7a5230",
+        "description": {
+          "en": "A Tungabhadra-doab chiefdom centred on the twin fortresses of Hanamsagar/Doravadi (under founder Mummadi Singa, r. c. 1280-1287) and later Kummatadurga and Hosamaledurga (under his son Kampilaraya). Kampilaraya repelled three separate Delhi Sultanate expeditions before a large invasion force finally besieged Kummatadurga for months in 1327 CE; he died fighting outside its walls rather than surrender. Kummatadurga lies barely 12 km from Hampi, and the Vijayanagara empire rose there just nine years later, in 1336 -- making Kampili its immediate and closest political predecessor in the same landscape.",
+          "kn": ""
+        },
+        "extent": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              76.1,
+              15.6
+            ],
+            [
+              76.7,
+              15.6
+            ],
+            [
+              76.7,
+              15.1
+            ],
+            [
+              76.1,
+              15.1
+            ],
+            [
+              76.1,
+              15.6
+            ]
+          ],
+          "precision": "schematic"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mlsh",
+            "locator": "Channabasappa S. Patil, \"ಮುಮ್ಮಡಿ ಸಿಂಗನ ಮೇಲೆ ಮತ್ತಷ್ಟು ಬೆಳಕು\" (More light on Mummadi Singa), pp. 93-95: political-history summary drawing on the author's earlier published research"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "polity-alupa",
         "name": {
           "en": "Alupa polity of coastal Karnataka",
@@ -22851,6 +22908,116 @@
         }
       },
       {
+        "id": "place-gaya",
+        "name": {
+          "en": "Gaya, Bihar",
+          "kn": "ಗಯಾ, ಬಿಹಾರ"
+        },
+        "kind": "historical-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            84.9994,
+            24.7955
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-kantavara",
+        "name": {
+          "en": "Kantavara (Shettibettu), Dakshina Kannada",
+          "kn": "ಕಾಂತಾವರ (ಶೆಟ್ಟಿಬೆಟ್ಟು), ದಕ್ಷಿಣ ಕನ್ನಡ"
+        },
+        "kind": "historical-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.98,
+            13.05
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-kugve",
+        "name": {
+          "en": "Kugve (Talaguppe hobli), Sagara taluk, Shivamogga",
+          "kn": "ಕುಗ್ವೆ (ತಾಳಗುಪ್ಪ ಹೋಬಳಿ), ಸಾಗರ ತಾಲ್ಲೂಕು, ಶಿವಮೊಗ್ಗ"
+        },
+        "kind": "historical-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.83,
+            14.16
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-sringeri",
+        "name": {
+          "en": "Sringeri",
+          "kn": "ಶೃಂಗೇರಿ"
+        },
+        "kind": "religious-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            75.25,
+            13.42
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-ballari",
+        "name": {
+          "en": "Ballari (Bellary)",
+          "kn": "ಬಳ್ಳಾರಿ"
+        },
+        "kind": "settlement",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.92,
+            15.14
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
         "id": "place-versailles",
         "name": {
           "en": "Versailles",
@@ -23070,6 +23237,28 @@
           "coordinates": [
             75.9468,
             15.1078
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-hampi-hemakuta",
+        "name": {
+          "en": "Hemakuta Hill Temple Group",
+          "kn": "ಹೇಮಕೂಟ ಬೆಟ್ಟದ ದೇವಾಲಯ ಸಮೂಹ"
+        },
+        "kind": "monument",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.4602,
+            15.3336
           ],
           "precision": "approximate"
         },
@@ -23598,6 +23787,72 @@
           "coordinates": [
             75.9218,
             14.4644
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-anegundi",
+        "name": {
+          "en": "Anegundi",
+          "kn": "ಆನೆಗುಂದಿ"
+        },
+        "kind": "settlement",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.4757,
+            15.3389
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-udupi",
+        "name": {
+          "en": "Udupi (Barkur region)",
+          "kn": "ಉಡುಪಿ (ಬಾರಕೂರು ಪ್ರದೇಶ)"
+        },
+        "kind": "settlement",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            74.7421,
+            13.3409
+          ],
+          "precision": "approximate"
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "place-kummata",
+        "name": {
+          "en": "Kummatadurga",
+          "kn": "ಕುಮ್ಮಟದುರ್ಗ"
+        },
+        "kind": "settlement",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.37,
+            15.42
           ],
           "precision": "approximate"
         },
@@ -25341,33 +25596,6 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
-        }
-      },
-      {
-        "id": "place-udupi",
-        "name": {
-          "en": "Udupi",
-          "kn": "ಉಡುಪಿ"
-        },
-        "kind": "settlement",
-        "location": {
-          "type": "Point",
-          "coordinates": [
-            74.7461,
-            13.3322
-          ],
-          "precision": "approximate"
-        },
-        "citations": [
-          {
-            "sourceId": "src-epigraphia-carnatica",
-            "locator": "South Kanara/Udupi district corpus context"
-          }
-        ],
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-07-30"
         }
       },
       {
@@ -29855,6 +30083,222 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "type": "kingdom-foundation",
+        "name": {
+          "en": "Two traditions of Harihara and Bukka's service under Kampili before founding Vijayanagara",
+          "kn": "ವಿಜಯನಗರ ಸ್ಥಾಪನೆಗೂ ಮೊದಲು ಕಂಪಿಲಿ ಸೇವೆಯಲ್ಲಿ ಹರಿಹರ-ಬುಕ್ಕರ ಎರಡು ಸಂಪ್ರದಾಯಗಳು"
+        },
+        "date": {
+          "from": 1327,
+          "to": 1336,
+          "era": "CE",
+          "precision": "range"
+        },
+        "year": 1336,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.46,
+            15.335
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Dr. C. Mahadeva's paper surveys two competing traditions -- one Kannada, one Telugu -- about what Harihara I and Bukka I, Vijayanagara's founders, were doing immediately before 1336. The Kannada tradition, drawn from the \"Kumararamana Sangatya\" folk epic, holds they held responsible office under Kampiladeva of Kummata/Anegundi (some accounts call them his relatives), fled Anegundi when the Delhi Sultanate's forces attacked, and afterward served Hoysala Ballala III; Ibn Battuta and Barani report that after Kummata's fall Kampila's kinsmen were taken captive to Delhi and later sent back to govern the province. The Telugu tradition instead holds Harihara and Bukka were officers of the Kakatiya king Prataparudra of Warangal, entered Kampila's service only after Warangal fell, were captured when Kummata fell in turn, converted to Islam in Delhi, and were sent back by the Sultan to administer the Kampili/Anegundi province -- from which they broke away to found independent Vijayanagara. The paper also gives Kampili's territorial extent (parts of present-day Dharwad, Haveri, Gadag, Chitradurga, Ballari, Koppal and Raichur districts) and notes an inscription of Bukka I at Edatore, near Pampapura, naming Bhavasangama -- Kampiladeva's son-in-law and Kumararama's brother-in-law -- as active in the same landscape.",
+          "kn": "ಡಾ. ಸಿ. ಮಹದೇವರ ಪ್ರಬಂಧ ವಿಜಯನಗರ ಸ್ಥಾಪಕರಾದ ಹರಿಹರ I ಮತ್ತು ಬುಕ್ಕ I 1336ಕ್ಕಿಂತ ಮುಂಚೆ ಏನು ಮಾಡುತ್ತಿದ್ದರೆಂಬುದರ ಬಗ್ಗೆ ಎರಡು ಸ್ಪರ್ಧಾತ್ಮಕ ಸಂಪ್ರದಾಯಗಳನ್ನು -- ಒಂದು ಕನ್ನಡ, ಒಂದು ತೆಲುಗು -- ಸಮೀಕ್ಷಿಸುತ್ತದೆ. \"ಕುಮಾರರಾಮನ ಸಾಂಗತ್ಯ\" ಜನಪದ ಕಾವ್ಯದಿಂದ ಪಡೆದ ಕನ್ನಡ ಸಂಪ್ರದಾಯ, ಅವರು ಕುಮ್ಮಟ/ಆನೆಗುಂದಿಯ ಕಂಪಿಲದೇವನ ಅಡಿಯಲ್ಲಿ ಜವಾಬ್ದಾರಿಯುತ ಹುದ್ದೆ ಹೊಂದಿದ್ದರೆಂದೂ (ಕೆಲವು ವೃತ್ತಾಂತಗಳು ಅವರನ್ನು ಅವನ ಬಂಧುಗಳೆಂದು ಕರೆಯುತ್ತವೆ), ದೆಹಲಿ ಸುಲ್ತಾನೀ ಪಡೆ ಆಕ್ರಮಣ ಮಾಡಿದಾಗ ಆನೆಗುಂದಿಯಿಂದ ಪರಾರಿಯಾದರೆಂದೂ, ನಂತರ ಹೊಯ್ಸಳ ಮೂರನೇ ಬಲ್ಲಾಳನ ಸೇವೆಗೆ ಸೇರಿದರೆಂದೂ ಹೇಳುತ್ತದೆ; ಇಬ್ನ್ ಬತೂತ ಮತ್ತು ಬರನಿ ಕುಮ್ಮಟದ ಪತನದ ನಂತರ ಕಂಪಿಲನ ಬಂಧುಗಳನ್ನು ದೆಹಲಿಗೆ ಸೆರೆಯಾಳುಗಳಾಗಿ ಒಯ್ಯಲಾಯಿತೆಂದೂ, ನಂತರ ಪ್ರಾಂತ ಆಳಲು ಹಿಂತಿರುಗಿಸಲಾಯಿತೆಂದೂ ವರದಿ ಮಾಡುತ್ತಾರೆ. ಬದಲಿಗೆ ತೆಲುಗು ಸಂಪ್ರದಾಯ ಹರಿಹರ ಮತ್ತು ಬುಕ್ಕ ವಾರಂಗಲ್ಲಿನ ಕಾಕತೀಯ ಅರಸ ಪ್ರತಾಪರುದ್ರನ ಅಧಿಕಾರಿಗಳಾಗಿದ್ದರೆಂದೂ, ವಾರಂಗಲ್ ಪತನದ ನಂತರವಷ್ಟೇ ಕಂಪಿಲನ ಸೇವೆಗೆ ಸೇರಿದರೆಂದೂ, ಕುಮ್ಮಟ ಸಹ ಪತನವಾದಾಗ ಸೆರೆಯಾಳಾಗಿ, ದೆಹಲಿಯಲ್ಲಿ ಇಸ್ಲಾಂಗೆ ಮತಾಂತರಗೊಂಡು, ಕಂಪಿಲಿ/ಆನೆಗುಂದಿ ಪ್ರಾಂತ ಆಳಲು ಸುಲ್ತಾನನಿಂದ ಹಿಂತಿರುಗಿ ಕಳುಹಿಸಲ್ಪಟ್ಟರೆಂದೂ -- ಅಲ್ಲಿಂದ ಸ್ವತಂತ್ರ ವಿಜಯನಗರ ಸ್ಥಾಪಿಸಲು ಬೇರ್ಪಟ್ಟರೆಂದೂ ಹೇಳುತ್ತದೆ. ಪ್ರಬಂಧ ಕಂಪಿಲಿಯ ಭೂಪ್ರದೇಶ ವ್ಯಾಪ್ತಿಯನ್ನೂ (ಈಗಿನ ಧಾರವಾಡ, ಹಾವೇರಿ, ಗದಗ, ಚಿತ್ರದುರ್ಗ, ಬಳ್ಳಾರಿ, ಕೊಪ್ಪಳ ಮತ್ತು ರಾಯಚೂರು ಜಿಲ್ಲೆಗಳ ಭಾಗಗಳು) ನೀಡುತ್ತದೆ ಮತ್ತು ಪಂಪಾಪುರದ ಬಳಿಯ ಎಡತೊರೆಯಲ್ಲಿನ ಬುಕ್ಕ Iನ ಶಾಸನವನ್ನು ಗಮನಿಸುತ್ತದೆ, ಇದು ಭಾವಸಂಗಮನನ್ನು -- ಕಂಪಿಲದೇವನ ಅಳಿಯ ಮತ್ತು ಕುಮಾರರಾಮನ ಭಾವ -- ಅದೇ ಭೂಪ್ರದೇಶದಲ್ಲಿ ಸಕ್ರಿಯನಾಗಿದ್ದನೆಂದು ಹೆಸರಿಸುತ್ತದೆ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-kampili",
+            "role": "predecessor-polity",
+            "outcome": "conquered-1327"
+          },
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "founding-polity",
+            "outcome": "established-1336"
+          }
+        ],
+        "peopleIds": [
+          "person-harihara-i",
+          "person-bukka-i"
+        ],
+        "originPlaceId": "place-kummata",
+        "destinationPlaceId": "place-hampi",
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+            "locator": "Dr. C. Mahadeva, \"ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ\" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "event-karch-harihara-i-vidyaranya-1336-foundation-charter",
+        "type": "kingdom-foundation",
+        "name": {
+          "en": "1336 CE copper-plate charter of Harihara I naming Vidyaranya and dating Vijayanagara's founding",
+          "kn": "ವಿದ್ಯಾರಣ್ಯರನ್ನು ಹೆಸರಿಸಿ ವಿಜಯನಗರ ಸ್ಥಾಪನೆ ದಿನಾಂಕಿಸುವ ಹರಿಹರ Iನ 1336ರ ತಾಮ್ರಶಾಸನ ಪ್ರಮಾಣಪತ್ರ"
+        },
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "year"
+        },
+        "year": 1336,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            76.46,
+            15.335
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "D.V. Parameshivamurti publishes a previously unrecorded 126-line Sanskrit/Nandinagari copper-plate charter of Harihara I -- one of three copper plates a priestly family (Dattatreya Shivarama Purohit) at Halkavatagi village, Lingasugur taluk, had preserved and worshipped for generations. The charter opens with the Sangama genealogy (Sangama's five sons Harihara, Kampa, Bukka, Mada and Muddha) and then narrates the empire's founding legend in full: Harihara, ruling from Kunjarakonapura (Anegundi), crosses the Tungabhadra on a hunt and is astonished to see a hare turn on and confront his fierce hunting dog; near the Virupaksha-Pampadevi shrine he meets the sage Vidyaranya in penance, who explains the land's sanctity and instructs him to found a city named \"Vidya\" there, as beautiful as Alakanagara and walled with nine gates like Dwaraka. The charter dates this precisely by a Sanskrit chronogram to Shalivahana Shaka 1258, Dhatr samvatsara, Vaishakha 7 -- 18 April 1336 CE -- on which date, before Virupaksha-Pampadevi, Harihara founded the Hariharapura agrahara and granted land in Kopanachala-sime (Hastinavati kingdom) to two Brahmins, Tippa Bhatta (Kaushika gotra) and Aragamallappa (Bharadvaja gotra). The author frames the find explicitly against the live scholarly dispute over whether any reliable evidence documents Vijayanagara's founding and Vidyaranya's role in it, several extant sources having been judged artificial or unreliable -- while noting this record too requires the same page-image and provenance scrutiny given its family-preserved, previously unpublished transmission.",
+          "kn": "ಡಿ.ವಿ. ಪರಮಶಿವಮೂರ್ತಿ ಈ ಮೊದಲು ದಾಖಲಾಗದ 126-ಸಾಲಿನ ಸಂಸ್ಕೃತ/ನಂದಿನಾಗರಿ ತಾಮ್ರಶಾಸನ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪ್ರಕಟಿಸುತ್ತಾರೆ, ಹರಿಹರ Iನದ್ದು -- ಲಿಂಗಸುಗೂರು ತಾಲ್ಲೂಕಿನ ಹಾಲ್ಕಾವಟಗಿ ಗ್ರಾಮದ ಪುರೋಹಿತ ಕುಟುಂಬ (ದತ್ತಾತ್ರೇಯ ಶಿವರಾಮ ಪುರೋಹಿತ) ತಲೆಮಾರುಗಳಿಂದ ಸಂರಕ್ಷಿಸಿ ಪೂಜಿಸಿದ ಮೂರು ತಾಮ್ರಫಲಕಗಳಲ್ಲಿ ಒಂದು. ಪ್ರಮಾಣಪತ್ರ ಸಂಗಮ ವಂಶಾವಳಿಯಿಂದ (ಸಂಗಮನ ಐವರು ಪುತ್ರರು ಹರಿಹರ, ಕಂಪ, ಬುಕ್ಕ, ಮಾದ ಮತ್ತು ಮುದ್ದ) ಆರಂಭಗೊಂಡು ಸಾಮ್ರಾಜ್ಯದ ಸ್ಥಾಪನಾ ದಂತಕಥೆಯನ್ನು ಪೂರ್ಣವಾಗಿ ನಿರೂಪಿಸುತ್ತದೆ: ಕುಂಜರಕೋಣಪುರ (ಆನೆಗುಂದಿ)ದಿಂದ ಆಳುತ್ತಿದ್ದ ಹರಿಹರ, ಬೇಟೆಗೆ ತುಂಗಭದ್ರಾ ದಾಟಿ, ಮೊಲವೊಂದು ತನ್ನ ಉಗ್ರ ಬೇಟೆನಾಯಿಯನ್ನು ಎದುರಿಸುವುದನ್ನು ಕಂಡು ಆಶ್ಚರ್ಯಪಡುತ್ತಾನೆ; ವಿರೂಪಾಕ್ಷ-ಪಂಪಾದೇವಿ ಗುಡಿಯ ಬಳಿ ತಪಸ್ಸಿನಲ್ಲಿದ್ದ ಋಷಿ ವಿದ್ಯಾರಣ್ಯರನ್ನು ಭೇಟಿಯಾಗುತ್ತಾನೆ, ಅವರು ಭೂಮಿಯ ಪಾವಿತ್ರ್ಯವನ್ನು ವಿವರಿಸಿ ಅಲ್ಲಿ \"ವಿದ್ಯಾ\" ಎಂಬ ನಗರವನ್ನು, ಅಲಕಾನಗರದಷ್ಟು ಸುಂದರವಾಗಿ, ದ್ವಾರಕೆಯಂತೆ ಒಂಬತ್ತು ಬಾಗಿಲುಗಳ ಕೋಟೆಯೊಂದಿಗೆ ಸ್ಥಾಪಿಸಲು ಆಜ್ಞಾಪಿಸುತ್ತಾರೆ. ಪ್ರಮಾಣಪತ್ರ ಇದನ್ನು ಸಂಸ್ಕೃತ ಕಾಲಸೂಚಕ ಪದ್ಯದ ಮೂಲಕ ನಿಖರವಾಗಿ ಶಾಲಿವಾಹನ ಶಕ 1258, ಧಾತೃ ಸಂವತ್ಸರ, ವೈಶಾಖ 7 -- 18 ಏಪ್ರಿಲ್ 1336 -- ಎಂದು ದಿನಾಂಕಿಸುತ್ತದೆ, ಈ ದಿನಾಂಕದಂದು, ವಿರೂಪಾಕ್ಷ-ಪಂಪಾದೇವಿಯ ಮುಂದೆ, ಹರಿಹರ ಹರಿಹರಪುರ ಅಗ್ರಹಾರವನ್ನು ಸ್ಥಾಪಿಸಿ ಕೊಪಣಾಚಲ-ಸೀಮೆಯಲ್ಲಿ (ಹಸ್ತಿನಾವತಿ ರಾಜ್ಯ) ಇಬ್ಬರು ಬ್ರಾಹ್ಮಣರಿಗೆ, ತಿಪ್ಪ ಭಟ್ಟ (ಕೌಶಿಕ ಗೋತ್ರ) ಮತ್ತು ಅರಗಮಲ್ಲಪ್ಪ (ಭಾರದ್ವಾಜ ಗೋತ್ರ), ಭೂಮಿ ದಾನ ನೀಡಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ. ಲೇಖಕರು ಈ ಶೋಧನೆಯನ್ನು ವಿಜಯನಗರ ಸ್ಥಾಪನೆ ಮತ್ತು ಅದರಲ್ಲಿ ವಿದ್ಯಾರಣ್ಯರ ಪಾತ್ರವನ್ನು ಯಾವುದೇ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಕ್ಷ್ಯ ದಾಖಲಿಸುತ್ತದೆಯೇ ಎಂಬ ಜೀವಂತ ವಿದ್ವತ್ ವಿವಾದದ ವಿರುದ್ಧ ಸ್ಪಷ್ಟವಾಗಿ ಇರಿಸುತ್ತಾರೆ, ಹಲವು ಈಗಿರುವ ಆಕರಗಳನ್ನು ಕೃತಕ ಅಥವಾ ಅವಿಶ್ವಾಸಾರ್ಹವೆಂದು ತೀರ್ಮಾನಿಸಲಾಗಿದೆ -- ಈ ದಾಖಲೆಗೂ, ಕುಟುಂಬ-ಸಂರಕ್ಷಿತ, ಈ ಮೊದಲು ಅಪ್ರಕಟಿತ ಪ್ರಸರಣದ ಕಾರಣ, ಅದೇ ಪುಟಚಿತ್ರ ಮತ್ತು ಮೂಲ ಪರಿಶೀಲನೆ ಬೇಕೆಂದು ಗಮನಿಸುತ್ತಾ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "founding-polity",
+            "outcome": "established-1336-04-18"
+          }
+        ],
+        "peopleIds": [
+          "person-harihara-i"
+        ],
+        "originPlaceId": "place-anegundi",
+        "destinationPlaceId": "place-hampi",
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
+            "locator": "D.V. Parameshivamurti, \"ಒಂದನೇ ಹರಿಹರ ಮತ್ತು ವಿದ್ಯಾರಣ್ಯರ ತಾಮ್ರಶಾಸನ\" (The copper-plate charter of Harihara I and Vidyaranya), pp. 16-29: full 126-line text with chronogram date, from a family-preserved, previously unpublished plate at Halkavatagi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "event-karch-krishnadevaraya-gaya-inscription-1522",
+        "type": "cultural-contact",
+        "name": {
+          "en": "Krishnadevaraya's 1522 CE inscription at Vishnupada temple, Gaya (Bihar)",
+          "kn": "ಗಯಾದ (ಬಿಹಾರ) ವಿಷ್ಣುಪಾದ ದೇವಾಲಯದ ಕೃಷ್ಣದೇವರಾಯನ 1522ರ ಶಾಸನ"
+        },
+        "date": {
+          "from": 1522,
+          "to": 1522,
+          "era": "CE",
+          "precision": "year"
+        },
+        "year": 1522,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            84.9994,
+            24.7955
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Keladi Venkatesh Joyis discusses a Kannada-script, Telugu-language inscription on the entrance archway of the Vishnupada temple at Gaya, Bihar -- on the Ganga's bank, over 1,400 km north of Hampi -- dated Saka 1444, Vishu samvatsara, Ashadha 13 (1522 CE). Buchanan's 1811 Patna-Gaya survey records a stone torana built there in the names of Krishnadevaraya and his chief queen Tirumaladevi. Scholars are divided on its nature: the inscription's own text describes Krishnadevaraya conducting his late father's shraddha (ancestral rites) there, suggesting a pilgrimage/dharma-shasana rather than proof of direct territorial conquest this far north (an Udayambaram inscription elsewhere already credits Krishnadevaraya's fame as reaching \"from the Ganga to Lanka\"); others read it as a vijaya-shasana (victory record) in the tradition of rulers -- Samudragupta at Kanchi, Rajendra Chola on the Ganga -- who erected commemorative inscriptions at the furthest points of a campaign, without that implying sustained rule there. The paper tentatively credits the court poet Nandi Timmana (Mukku Timmayya), who is thought to have accompanied the king's representative to the Ganga and may have composed the record, and treats the poet Allasani Peddana's Manucharitamu claims of Krishnadevaraya defeating northern \"Gauda\" kings and a \"Sikandar\" (probably conflated with Sikandar Lodi, Delhi's sultan 1488-1517) with explicit scepticism as poetic exaggeration rather than settled history.",
+          "kn": "ಕೆಳದಿ ವೆಂಕಟೇಶ್ ಜೋಯಿಸ್ ಬಿಹಾರದ ಗಯಾದ ವಿಷ್ಣುಪಾದ ದೇವಾಲಯದ ಪ್ರವೇಶ ತೋರಣದ ಮೇಲಿನ ಕನ್ನಡ-ಲಿಪಿ, ತೆಲುಗು-ಭಾಷೆಯ ಶಾಸನವನ್ನು ಚರ್ಚಿಸುತ್ತಾರೆ -- ಗಂಗಾ ದಡದಲ್ಲಿ, ಹಂಪೆಯಿಂದ 1,400 ಕಿ.ಮೀ.ಗಿಂತ ಹೆಚ್ಚು ಉತ್ತರಕ್ಕೆ -- ಶಕ 1444, ವಿಷು ಸಂವತ್ಸರ, ಆಷಾಢ 13 (1522) ದಿನಾಂಕಿತ. ಬುಕಾನನ್‌ನ 1811ರ ಪಾಟ್ನಾ-ಗಯಾ ಸಮೀಕ್ಷೆ ಅಲ್ಲಿ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪಟ್ಟಮಹಿಷಿ ತಿರುಮಲದೇವಿಯ ಹೆಸರಿನಲ್ಲಿ ಕಲ್ಲಿನ ತೋರಣ ಕಟ್ಟಿಸಿದ್ದನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ಇದರ ಸ್ವರೂಪದ ಬಗ್ಗೆ ವಿದ್ವಾಂಸರು ಭಿನ್ನಾಭಿಪ್ರಾಯ ಹೊಂದಿದ್ದಾರೆ: ಶಾಸನ ಪಠ್ಯವೇ ಕೃಷ್ಣದೇವರಾಯ ಅಲ್ಲಿ ತನ್ನ ದಿವಂಗತ ತಂದೆಯ ಶ್ರಾದ್ಧ (ಪಿತೃ ಕರ್ಮ) ನಡೆಸಿದ್ದನ್ನು ವಿವರಿಸುತ್ತದೆ, ಇದು ಈ ದೂರದ ಉತ್ತರದವರೆಗೆ ನೇರ ಭೂಪ್ರದೇಶ ವಿಜಯದ ಸಾಕ್ಷ್ಯಕ್ಕಿಂತ ಯಾತ್ರೆ/ಧರ್ಮಶಾಸನ ಎಂದು ಸೂಚಿಸುತ್ತದೆ (ಬೇರೆಡೆಯ ಉದಯಾಂಬರಂ ಶಾಸನ ಈಗಾಗಲೇ ಕೃಷ್ಣದೇವರಾಯನ ಕೀರ್ತಿ \"ಗಂಗೆಯಿಂದ ಲಂಕೆಯವರೆಗೆ\" ಹಬ್ಬಿತ್ತೆಂದು ಗೌರವಿಸುತ್ತದೆ); ಇತರರು ಇದನ್ನು ವಿಜಯ-ಶಾಸನ (ವಿಜಯ ದಾಖಲೆ) ಎಂದು ಓದುತ್ತಾರೆ, ಸಮುದ್ರಗುಪ್ತ ಕಂಚಿಯಲ್ಲಿ, ರಾಜೇಂದ್ರ ಚೋಳ ಗಂಗೆಯ ಮೇಲೆ ಸ್ಥಾಪಿಸಿದಂತಹ ದಂಡಯಾತ್ರೆಯ ಅತ್ಯಂತ ದೂರದ ಬಿಂದುಗಳಲ್ಲಿ ಸ್ಮಾರಕ ಶಾಸನ ಸ್ಥಾಪಿಸುವ ಅರಸರ ಪರಂಪರೆಯಲ್ಲಿ, ಅದು ಅಲ್ಲಿ ನಿರಂತರ ಆಳ್ವಿಕೆಯನ್ನು ಸೂಚಿಸದೆಯೇ. ಪ್ರಬಂಧ ತಾತ್ಕಾಲಿಕವಾಗಿ ಆಸ್ಥಾನ ಕವಿ ನಂದಿ ತಿಮ್ಮನ (ಮುಕ್ಕು ತಿಮ್ಮಯ್ಯ)ನಿಗೆ ಶ್ರೇಯ ನೀಡುತ್ತದೆ, ಅವನು ರಾಜನ ಪ್ರತಿನಿಧಿಯೊಂದಿಗೆ ಗಂಗೆಗೆ ಜೊತೆಗೂಡಿ ಶಾಸನ ರಚಿಸಿರಬಹುದೆಂದು ಭಾವಿಸಲಾಗಿದೆ, ಮತ್ತು ಕವಿ ಅಲ್ಲಸಾನಿ ಪೆದ್ದನನ ಮನುಚರಿತಂ ಕೃಷ್ಣದೇವರಾಯ ಉತ್ತರದ \"ಗೌಡ\" ಅರಸರನ್ನೂ \"ಸಿಕಂದರ\"ನನ್ನೂ (ಬಹುಶಃ ದಿಲ್ಲಿ ಸುಲ್ತಾನ್ ಸಿಕಂದರ್ ಲೋಧಿ, 1488-1517, ಜೊತೆ ಗೊಂದಲಗೊಂಡಿದೆ) ಸೋಲಿಸಿದನೆಂಬ ಹಕ್ಕುಗಳನ್ನು ಇತಿಹಾಸಕ್ಕಿಂತ ಕಾವ್ಯಾತ್ಮಕ ಉತ್ಪ್ರೇಕ್ಷೆಯೆಂದು ಸ್ಪಷ್ಟ ಸಂಶಯದೊಂದಿಗೆ ಪರಿಗಣಿಸುತ್ತದೆ."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "inscribing-polity",
+            "outcome": "commemorated"
+          }
+        ],
+        "peopleIds": [
+          "person-krishnadevaraya"
+        ],
+        "originPlaceId": "place-hampi",
+        "destinationPlaceId": "place-gaya",
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg",
+            "locator": "Dr. Keladi Venkatesh Joyis, \"ವಿಷ್ಣು ಗಯಾದಲ್ಲಿರುವ ವಿಜಯನಗರದ ಕೃಷ್ಣದೇವರಾಯನ ವಿಜಯ ಶಾಸನ\" (Krishnadevaraya's victory inscription at Vishnu Gaya), pp. 91-95, citing Buchanan's 1811 Patna-Gaya survey and Allasani Peddana's Manucharitamu"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "type": "diplomatic-mission",
+        "name": {
+          "en": "Krishnadevaraya-Albuquerque diplomacy and the 1510 fall of Goa",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ-ಅಲ್ಬುಕರ್ಕ್ ರಾಜತಾಂತ್ರಿಕತೆ ಮತ್ತು 1510ರ ಗೋವಾ ಪತನ"
+        },
+        "date": {
+          "from": 1509,
+          "to": 1515,
+          "era": "CE",
+          "precision": "range"
+        },
+        "year": 1510,
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            73.82,
+            15.49
+          ],
+          "precision": "approximate"
+        },
+        "summary": {
+          "en": "Dr. Nirmalraj traces the diplomacy between Krishnadevaraya and Afonso de Albuquerque, Portuguese Governor of India (1509-1515), noting they came to power almost simultaneously and that friendly contact predated both: Vira Narasimha's reign had already seen visits from Portuguese viceroy Francisco de Almeida (per Pietro della Valle and Fernao Lopes de Castanheda), and Venetian traveller Nicolo de' Conti and Russian traveller Afanasy Nikitin record still-earlier European contact with Vijayanagara. Under Krishnadevaraya, embassies were regularly exchanged: Portuguese friars Luis de Salazar and Gaspar Chanoca visited the king's court, while Vijayanagara's envoy Radhalingam Chetti visited the Portuguese court, and later Portuguese merchant-envoys Duarte Barbosa and (per the article) a traveller referred to as \"Peyas\" also visited Hampi. Portuguese officers Antonio de Sousa and Joao Teixeira served in Krishnadevaraya's campaigns, and other Portuguese engineers assisted irrigation and public works at the Vijayanagara court. The alliance had a concrete strategic core: Albuquerque sought to capture Goa, then held by the Bijapur Sultanate and a rapidly growing Arab-trade hub, partly at the expense of Vijayanagara's own ports Honnavar and Bhatkal; Krishnadevaraya, seeing Bijapur as his own principal rival, assigned Timmayya Dandanayaka and the feudatory chief of Gerusoppa to assist the Portuguese. With this backing Albuquerque captured Goa from Bijapur in 1510 and made it the Portuguese capital in India. The article cites historian B. S. Shastry's assessment that Vijayanagara's direct and indirect support was \"a very decisive event\" in the Portuguese capture of Goa, and quotes Dr. K. S. Sivanna that the Krishnadevaraya-Albuquerque relationship reflected the alignment of two major political powers rather than a personal friendship -- summed up as each treating \"my enemy's enemy\" (Bijapur) as a common target.",
+          "kn": "ಡಾ. ನಿರ್ಮಲ್‌ರಾಜ್ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗವರ್ನರ್ ಅಫೊನ್ಸೊ ಡಿ ಅಲ್ಬುಕರ್ಕ್ (1509-1515) ನಡುವಿನ ರಾಜತಾಂತ್ರಿಕತೆಯನ್ನು ಪತ್ತೆಹಚ್ಚುತ್ತಾರೆ; ಇಬ್ಬರೂ ಬಹುತೇಕ ಏಕಕಾಲದಲ್ಲಿ ಅಧಿಕಾರಕ್ಕೆ ಬಂದರೆಂದೂ ಸ್ನೇಹಸಂಪರ್ಕ ಇಬ್ಬರಿಗಿಂತ ಮುಂಚಿನದೆಂದೂ ಗಮನಿಸುತ್ತಾರೆ: ವೀರನರಸಿಂಹನ ಆಳ್ವಿಕೆಯಲ್ಲೇ ಪೋರ್ಚುಗೀಸ್ ವೈಸ್‌ರಾಯ್ ಫ್ರಾನ್ಸಿಸ್ಕೊ ಡಿ ಅಲ್ಮೇಡಾ ಭೇಟಿ ನೀಡಿದ್ದನ್ನು (ಪೀತ್ರೊ ದೆಲ್ಲಾ ವಲ್ಲೆ ಮತ್ತು ಫೆರ್ನಾವ್ ಲೋಪೆಜ್ ಡಿ ಕಾಸ್ಟಾನೆಡಾ ಪ್ರಕಾರ) ಮತ್ತು ವೆನಿಸ್‌ನ ನಿಕೊಲೊ ಡಿ ಕೊಂಟಿ ಮತ್ತು ರಷ್ಯಾದ ಅಫನಾಸಿ ನಿಕಿತಿನ್ ಇನ್ನೂ ಹಿಂದಿನ ಯುರೋಪಿಯನ್ ಸಂಪರ್ಕವನ್ನು ದಾಖಲಿಸಿದ್ದನ್ನೂ ಉಲ್ಲೇಖಿಸುತ್ತಾರೆ. ಕೃಷ್ಣದೇವರಾಯನ ಕಾಲದಲ್ಲಿ ರಾಯಭಾರ ನಿಯೋಗಗಳ ವಿನಿಮಯ ನಿಯಮಿತವಾಗಿ ನಡೆಯಿತು: ಪೋರ್ಚುಗೀಸ್ ಫ್ರೈರ್‌ಗಳಾದ ಲೂಯಿಸ್ ಡಿ ಸಲಜಾರ್ ಮತ್ತು ಗಾಸ್ಪರ್ ಚನೋಕಾ ರಾಯನ ಆಸ್ಥಾನಕ್ಕೆ ಭೇಟಿ ನೀಡಿದರೆ, ವಿಜಯನಗರದ ರಾಯಭಾರಿ ರಾಧಲಿಂಗಂ ಚೆಟ್ಟಿ ಪೋರ್ಚುಗೀಸ್ ಆಸ್ಥಾನಕ್ಕೆ ಭೇಟಿ ನೀಡಿದರು; ನಂತರ ಪೋರ್ಚುಗೀಸ್ ವರ್ತಕ-ರಾಯಭಾರಿಗಳಾದ ದುವಾರ್ತೆ ಬಾರ್ಬೋಸಾ ಮತ್ತು (ಲೇಖನದ ಪ್ರಕಾರ) \"ಪೆಯಸ್\" ಎಂದು ಉಲ್ಲೇಖಿತ ಪ್ರವಾಸಿಗರೂ ಹಂಪೆಗೆ ಭೇಟಿ ನೀಡಿದರು. ಪೋರ್ಚುಗೀಸ್ ಅಧಿಕಾರಿಗಳಾದ ಆಂಟೋನಿಯೊ ಡಿ ಸೋಜಾ ಮತ್ತು ಜೊವಾವ್ ಟಿಕ್ಷೀರಿಯಾ ಕೃಷ್ಣದೇವರಾಯನ ದಂಡಯಾತ್ರೆಗಳಲ್ಲಿ ಸೇವೆ ಸಲ್ಲಿಸಿದರೆ, ಇತರ ಪೋರ್ಚುಗೀಸ್ ಇಂಜಿನಿಯರ್‌ಗಳು ವಿಜಯನಗರ ಆಸ್ಥಾನದಲ್ಲಿ ನೀರಾವರಿ ಮತ್ತು ಸಾರ್ವಜನಿಕ ಕಾಮಗಾರಿಗಳಿಗೆ ನೆರವಾದರು. ಈ ಮೈತ್ರಿಗೆ ಒಂದು ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯತಂತ್ರದ ತಿರುಳಿತ್ತು: ಆಗ ಬಿಜಾಪುರ ಸುಲ್ತಾನರ ವಶದಲ್ಲಿದ್ದ ಮತ್ತು ಶೀಘ್ರವಾಗಿ ಬೆಳೆಯುತ್ತಿದ್ದ ಅರಬ್-ವ್ಯಾಪಾರ ಕೇಂದ್ರವಾದ ಗೋವಾವನ್ನು ವಶಪಡಿಸಿಕೊಳ್ಳಲು ಅಲ್ಬುಕರ್ಕ್ ಬಯಸಿದ್ದನು -- ಇದು ಭಾಗಶಃ ವಿಜಯನಗರದ ಸ್ವಂತ ಬಂದರುಗಳಾದ ಹೊನ್ನಾವರ ಮತ್ತು ಭಟ್ಕಳಗಳ ವೆಚ್ಚದಲ್ಲಿ ನಡೆಯುತ್ತಿತ್ತು; ಬಿಜಾಪುರವನ್ನೇ ತನ್ನ ಪ್ರಧಾನ ಪ್ರತಿಸ್ಪರ್ಧಿಯಾಗಿ ಕಂಡ ಕೃಷ್ಣದೇವರಾಯ ತಿಮ್ಮಯ್ಯ ದಂಡನಾಯಕ ಮತ್ತು ಗೇರುಸೊಪ್ಪೆಯ ಸಾಮಂತ ಮುಖ್ಯಸ್ಥನನ್ನು ಪೋರ್ಚುಗೀಸರ ನೆರವಿಗೆ ನಿಯೋಜಿಸಿದನು. ಈ ಬೆಂಬಲದೊಂದಿಗೆ ಅಲ್ಬುಕರ್ಕ್ 1510ರಲ್ಲಿ ಬಿಜಾಪುರದಿಂದ ಗೋವಾವನ್ನು ವಶಪಡಿಸಿಕೊಂಡು ಅದನ್ನು ಭಾರತದಲ್ಲಿ ಪೋರ್ಚುಗೀಸ್ ರಾಜಧಾನಿಯನ್ನಾಗಿ ಮಾಡಿಕೊಂಡನು. ಇತಿಹಾಸಕಾರ ಬಿ. ಎಸ್. ಶಾಸ್ತ್ರಿಯವರ \"ಗೋವಾವನ್ನು ಪೋರ್ಚುಗೀಸರು ವಶಪಡಿಸಿಕೊಳ್ಳುವಲ್ಲಿ ವಿಜಯನಗರದ ಪ್ರತ್ಯಕ್ಷ-ಪರೋಕ್ಷ ಬೆಂಬಲ ಅತ್ಯಂತ ನಿರ್ಣಾಯಕ ಘಟನೆ\" ಎಂಬ ಅಭಿಪ್ರಾಯವನ್ನೂ, ಕೃಷ್ಣದೇವರಾಯ-ಅಲ್ಬುಕರ್ಕ್ ಸಂಬಂಧ ವೈಯಕ್ತಿಕ ಸ್ನೇಹಕ್ಕಿಂತ ಎರಡು ಪ್ರಮುಖ ರಾಜಕೀಯ ಶಕ್ತಿಗಳ ಐಕ್ಯತೆಯ ಸಂಕೇತವಾಗಿತ್ತೆಂಬ ಡಾ. ಕೆ. ಎಸ್. ಶಿವಣ್ಣನವರ ಅಭಿಪ್ರಾಯವನ್ನೂ ಲೇಖನ ಉಲ್ಲೇಖಿಸುತ್ತದೆ -- ಇಬ್ಬರೂ ಬಿಜಾಪುರವನ್ನು \"ಶತ್ರುವಿನ ಶತ್ರು ಎನಗೆ ಮಿತ್ರ\" ಎಂಬಂತೆ ಸಾಮಾನ್ಯ ಗುರಿಯಾಗಿ ಕಂಡರೆಂದು ಸಾರಾಂಶಿಸಬಹುದು."
+        },
+        "participants": [
+          {
+            "polityId": "polity-vijayanagara",
+            "role": "ally",
+            "outcome": "assisted-portuguese-capture-of-goa"
+          },
+          {
+            "polityId": "external-polity-portuguese-india",
+            "role": "ally",
+            "outcome": "captured-goa-1510"
+          },
+          {
+            "polityId": "external-polity-adil-shahi",
+            "role": "strategic-rival",
+            "outcome": "lost-goa-1510"
+          }
+        ],
+        "peopleIds": [
+          "person-krishnadevaraya"
+        ],
+        "originPlaceId": "place-hampi",
+        "destinationPlaceId": "place-goa",
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+            "locator": "Dr. Nirmalraj, \"ಶ್ರೀ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗೌರ್ನರ್ ಅಫೊನ್ಸ್ ಡಿ ಅಲ್ಬುಕರ್ಕ್‌ರ ನಡುವಣ ರಾಜತಾಂತ್ರಿಕ ಸಂಬಂಧಗಳು\" (Diplomatic relations between Krishnadevaraya and Portuguese Governor Afonso de Albuquerque), pp. 118-123, citing B. S. Shastry and Dr. K. S. Sivanna"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
         }
       },
       {
@@ -35556,6 +36000,96 @@
         }
       },
       {
+        "id": "culture-karch-hemakuta-badami-chalukya-temple",
+        "name": {
+          "en": "Badami Chalukya-period temple, Hemakuta Hill, Hampi",
+          "kn": "ಹಂಪೆಯ ಹೇಮಕೂಟ ಬೆಟ್ಟದ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ-ಕಾಲದ ದೇವಾಲಯ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 700,
+          "to": 725,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "polityIds": [
+          "polity-badami-chalukya"
+        ],
+        "placeIds": [
+          "place-hampi-hemakuta"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Badami-Chalukya",
+          "pre-Vijayanagara",
+          "Hemakuta",
+          "sandstone",
+          "earliest-structure"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "In a paper presented at the Hampi Utsava 1995 conference, the scholar Devarakonda Reddy argues that one of the temples on Hemakuta Hill, Hampi, differs structurally from its neighbours and should be dated to the Badami Chalukya period, c. early 8th century CE -- centuries earlier than the 1100-1300 CE range usually assigned to the \"pre-Vijayanagara\" Hemakuta temples as a group. The argument rests on the building material (sandstone rather than the harder slab-stone typical of later Hampi construction) and comparative mouldings/profile details (adhishthana, kapota, sukanasi treatment) matched against dated Badami Chalukya architecture elsewhere. If correct, this identifies the oldest surviving built structure yet proposed at the Hampi site, predating the Vijayanagara empire's founding by roughly six centuries. The same paper traces Hampi's sacred-site history through inscriptions independent of this specific temple: as Pampatirtha in a 681 CE record, a Nolamba chief Udayaditya's visit recorded in an 1018 CE Bagali inscription, and an 1199 CE inscription naming numerous temples at the site along with a garrison stationed on Matanga Hill for its protection.",
+          "kn": "ಹಂಪಿ ಉತ್ಸವ 1995 ಸಮ್ಮೇಳನದಲ್ಲಿ ಮಂಡಿಸಿದ ಪ್ರಬಂಧವೊಂದರಲ್ಲಿ, ವಿದ್ವಾಂಸ ದೇವರಕೊಂಡಾರೆಡ್ಡಿ ಹಂಪೆಯ ಹೇಮಕೂಟ ಬೆಟ್ಟದ ಒಂದು ದೇವಾಲಯ ಅದರ ನೆರೆಹೊರೆಯ ದೇವಾಲಯಗಳಿಗಿಂತ ರಚನಾತ್ಮಕವಾಗಿ ಭಿನ್ನವಾಗಿದ್ದು ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಕಾಲಕ್ಕೆ, ಅಂದರೆ ಸು. 8ನೇ ಶತಮಾನದ ಆರಂಭಕ್ಕೆ ಸೇರಿಸಬೇಕೆಂದು ವಾದಿಸುತ್ತಾರೆ -- \"ವಿಜಯನಗರ-ಪೂರ್ವ\" ಹೇಮಕೂಟ ದೇವಾಲಯಗಳಿಗೆ ಸಾಮಾನ್ಯವಾಗಿ ನೀಡಲಾಗುವ 1100-1300 ವ್ಯಾಪ್ತಿಗಿಂತ ಶತಮಾನಗಳ ಮುಂಚಿನದು. ಈ ವಾದ ಕಟ್ಟಡ ಸಾಮಗ್ರಿಯ (ನಂತರದ ಹಂಪೆ ನಿರ್ಮಾಣದ ವಿಶಿಷ್ಟ ಗಟ್ಟಿ ಚಪ್ಪಡಿಗಲ್ಲಿಗಿಂತ ಮರಳುಗಲ್ಲು) ಮತ್ತು ತುಲನಾತ್ಮಕ ಅಚ್ಚು/ಪ್ರೊಫೈಲ್ ವಿವರಗಳ (ಅಧಿಷ್ಠಾನ, ಕಪೋತ, ಸುಖನಾಸಿ ನಿರ್ವಹಣೆ) ಆಧಾರದ ಮೇಲಿದ್ದು, ಇತರೆಡೆ ದಿನಾಂಕಿತ ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ವಾಸ್ತುಶಿಲ್ಪದೊಂದಿಗೆ ಹೋಲಿಸಲಾಗಿದೆ. ಸರಿಯಾಗಿದ್ದರೆ, ಇದು ಹಂಪೆ ತಾಣದಲ್ಲಿ ಇದುವರೆಗೆ ಸೂಚಿಸಲಾದ ಅತ್ಯಂತ ಹಳೆಯ ಉಳಿದಿರುವ ನಿರ್ಮಿತ ರಚನೆಯನ್ನು ಗುರುತಿಸುತ್ತದೆ, ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯದ ಸ್ಥಾಪನೆಗಿಂತ ಸುಮಾರು ಆರು ಶತಮಾನಗಳ ಮುಂಚಿನದು. ಅದೇ ಪ್ರಬಂಧ ಈ ನಿರ್ದಿಷ್ಟ ದೇವಾಲಯದಿಂದ ಸ್ವತಂತ್ರವಾಗಿ ಹಂಪೆಯ ಪುಣ್ಯಕ್ಷೇತ್ರ ಇತಿಹಾಸವನ್ನು ಶಾಸನಗಳ ಮೂಲಕ ಪತ್ತೆ ಮಾಡುತ್ತದೆ: 681ರ ದಾಖಲೆಯಲ್ಲಿ ಪಂಪಾತೀರ್ಥವಾಗಿ, 1018ರ ಬಾಗಳಿ ಶಾಸನದಲ್ಲಿ ದಾಖಲಾದ ನೊಳಂಬ ಮುಖಂಡ ಉದಯಾದಿತ್ಯನ ಭೇಟಿಯಾಗಿ, ಮತ್ತು 1199ರ ಶಾಸನವು ತಾಣದಲ್ಲಿ ಹಲವು ದೇವಾಲಯಗಳನ್ನು ಹೆಸರಿಸುತ್ತಾ ಅದರ ರಕ್ಷಣೆಗಾಗಿ ಮತಂಗ ಬೆಟ್ಟದ ಮೇಲೆ ನಿಯೋಜಿತ ಸೈನ್ಯದ ಉಲ್ಲೇಖವನ್ನೂ ನೀಡುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-1-dvde",
+            "locator": "Devarakonda Reddy, \"ಹಂಪೆಯಲ್ಲಿ ಬಾದಾಮಿ ಚಾಲುಕ್ಯರ ಕಾಲದ ದೇವಾಲಯ\" (A Badami Chalukya-period temple at Hampi), pp. 37-40: architectural dating argument and epigraphic history of Pampatirtha/Hampi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-anegondi-copper-plate-kumbara-purana",
+        "name": {
+          "en": "Anegondi copper-plate \"potter-guild\" origin narrative (c. 13th century)",
+          "kn": "ಆನೆಗುಂದಿ ತಾಮ್ರಪಟ \"ಕುಂಬಾರ-ಗುಂಪು\" ಮೂಲ ಕಥನ (ಸು. 13ನೇ ಶತಮಾನ)"
+        },
+        "category": "literature",
+        "date": {
+          "from": 1200,
+          "to": 1299,
+          "era": "CE",
+          "precision": "century"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-anegundi"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Kumbara",
+          "guild-charter",
+          "mythological-verse",
+          "pre-Vijayanagara",
+          "caste-origin-narrative"
+        ],
+        "continuity": "historic",
+        "description": {
+          "en": "In a paper re-examining a copper-plate inscription from Anegondi (first published by C.S. Patil in the 1987-88 Vijayanagara Research Progress report), the epigraphist Srinivas V. Padigar argues this is not a conventional administrative record at all but a \"samaya shasana\" (guild charter) composed as two short Kannada mythological verse-narratives, \"Vivaha Purana\" and \"Amrita Mathana Purana.\" Probably 13th-century CE (pre-dating Vijayanagara's own 1336 founding), the text traces the Kumbara (potter) community's origin to a mythic ancestor, Girirāja (Parvati's father), who fashioned the vessels for Shiva and Parvati's wedding and later helped fashion the vessel used in the gods' churning of the ocean for amrita -- receiving in return the community's guild insignia, its \"thirty-six vessels\" and eighteen town/lineage divisions. Padigar shows the text is textually near-identical, phrase for phrase, to a stone inscription of similar date found at Sholapur, indicating both derive from a shared archetype text that circulated within the potter community as a charter of guild status and mythological legitimacy, rather than a unique royal or local record.",
+          "kn": "ಆನೆಗುಂದಿಯ ಒಂದು ತಾಮ್ರಶಾಸನವನ್ನು (ಮೊದಲು 1987-88ರ ವಿಜಯನಗರ ಸಂಶೋಧನ ಪ್ರಗತಿ ವರದಿಯಲ್ಲಿ ಸಿ.ಎಸ್. ಪಾಟೀಲರಿಂದ ಪ್ರಕಟಿತ) ಮರುಪರಿಶೀಲಿಸುವ ಪ್ರಬಂಧದಲ್ಲಿ, ಶಾಸನಶಾಸ್ತ್ರಜ್ಞ ಶ್ರೀನಿವಾಸ ವಿ. ಪಾಡಿಗಾರ ಇದು ಸಾಂಪ್ರದಾಯಿಕ ಆಡಳಿತ ದಾಖಲೆಯೇ ಅಲ್ಲವೆಂದೂ, ಬದಲಿಗೆ ಎರಡು ಸಣ್ಣ ಕನ್ನಡ ಪೌರಾಣಿಕ ಪದ್ಯ-ಕಥನಗಳಾದ \"ವಿವಾಹ ಪುರಾಣ\" ಮತ್ತು \"ಅಮೃತ ಮಥನ ಪುರಾಣ\"ವಾಗಿ ರಚಿತ \"ಸಮಯ ಶಾಸನ\" (ಗುಂಪು ಪ್ರಮಾಣಪತ್ರ) ಎಂದೂ ವಾದಿಸುತ್ತಾರೆ. ಬಹುಶಃ 13ನೇ ಶತಮಾನದ್ದು (ವಿಜಯನಗರದ ಸ್ವಂತ 1336ರ ಸ್ಥಾಪನೆಗಿಂತ ಮುಂಚಿನದು), ಈ ಪಠ್ಯ ಕುಂಬಾರ ಗುಂಪಿನ ಮೂಲವನ್ನು ಪೌರಾಣಿಕ ಪೂರ್ವಜ ಗಿರಿರಾಜ (ಪಾರ್ವತಿಯ ತಂದೆ)ನೊಂದಿಗೆ ಪತ್ತೆ ಮಾಡುತ್ತದೆ, ಅವನು ಶಿವ-ಪಾರ್ವತಿಯ ವಿವಾಹಕ್ಕೆ ಪಾತ್ರೆಗಳನ್ನು ಮಾಡಿ, ನಂತರ ದೇವತೆಗಳ ಅಮೃತಕ್ಕಾಗಿ ಸಮುದ್ರ ಮಥನದಲ್ಲಿ ಬಳಸಿದ ಪಾತ್ರೆಯನ್ನೂ ಮಾಡಿಕೊಟ್ಟನೆಂದೂ -- ಪ್ರತಿಫಲವಾಗಿ ಗುಂಪಿನ ಚಿಹ್ನೆಗಳು, ಅದರ \"ಮೂವತ್ತಾರು ಪಾತ್ರೆಗಳು\" ಮತ್ತು ಹದಿನೆಂಟು ಪಟ್ಟಣ/ವಂಶ ವಿಭಾಗಗಳನ್ನು ಪಡೆದನೆಂದೂ ಹೇಳುತ್ತದೆ. ಇದೇ ಕಾಲದ ಸೋಲ್ಲಾಪುರದಲ್ಲಿ ದೊರೆತ ಶಿಲಾಶಾಸನದೊಂದಿಗೆ ಪಠ್ಯ ಪದಶಃ ಬಹುತೇಕ ಒಂದೇ ಆಗಿದೆ ಎಂದು ಪಾಡಿಗಾರ ತೋರಿಸುತ್ತಾರೆ, ಇದು ಎರಡೂ ಒಂದೇ ಮೂಲ ಪಠ್ಯದಿಂದ ಬಂದಿರುವುದನ್ನು ಸೂಚಿಸುತ್ತದೆ, ಇದು ಕುಂಬಾರ ಸಮುದಾಯದೊಳಗೆ ಗುಂಪು ಸ್ಥಾನಮಾನ ಮತ್ತು ಪೌರಾಣಿಕ ಸಿಂಧುತ್ವದ ಪ್ರಮಾಣಪತ್ರವಾಗಿ ಚಲಾವಣೆಯಲ್ಲಿತ್ತು, ಒಂದು ವಿಶಿಷ್ಟ ರಾಜ ಅಥವಾ ಸ್ಥಳೀಯ ದಾಖಲೆಯಾಗಿ ಅಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "Srinivas V. Padigar, \"ಆನೆಗೊಂದಿ ತಾಮ್ರಪಟ ಶಾಸನ: ಒಂದು ಮರುನೋಟ\" (The Anegondi copper-plate inscription: a re-examination), pp. 57-59, comparing the text against a Sholapur stone inscription published by Shrinivas Ritti"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "culture-karch-tradition-of-alamelamma",
         "name": {
           "en": "The tradition of Alamelamma's curse",
@@ -35591,6 +36125,515 @@
           {
             "sourceId": "src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat",
             "locator": "\"The Tradition of Alamelamma\" chapter (pp. 201-202): full narrative and the curse verse as rendered in the book, cited to the Mysore Palace Records"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-vitthala-temple-sangama-era-dating",
+        "name": {
+          "en": "Case for a Sangama-era (pre-Krishnadevaraya) core at the Vitthala Temple, Hampi",
+          "kn": "ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯದ ಮೂಲ ರಚನೆ ಸಂಗಮ-ಕಾಲದ್ದೆಂಬ ವಾದ (ಕೃಷ್ಣದೇವರಾಯನಿಗಿಂತ ಮುಂಚಿನದು)"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1336,
+          "to": 1485,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi-vittala"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Vaishnava",
+          "Sangama-dynasty",
+          "dating-debate",
+          "Vitthala",
+          "stone-chariot"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "Against the popular belief that Krishnadevaraya built Hampi's celebrated Vitthala Temple after bringing the deity's image from Pandharpur, the scholar Sharanabasappa Kolkar argues from multiple independent sources that the temple's core structure -- garbhagriha, sukhanasi, circumambulatory path, a sixteen-pillar ranga-mantapa and the famous 56-pillar maharanga-mantapa -- was already standing under the earlier Sangama dynasty (1336-1485). The case rests on Talapakkam Annamacharya's (1408-1503) kirtana describing Vitthala and Rukmini settling on the Tungabhadra bank; Haribhatta's \"Uttara Narasimha Puranam,\" which places the temple in the 14th century and credits Proluganti Tippanna, an officer of Praudhadevaraya (r. 1426-1446), with building its bhoga-mantapa; and a 1408 CE Sirali inscription recording a gift made \"in the presence of Vitthala on the Tungabhadra bank\" -- there being no other riverside Vitthala shrine it could refer to. On this reading, Krishnadevaraya's own inscriptions credit him only with the hundred-pillared mandapa, with his queens responsible for the gopuras, and the \"Krishnadevaraya built it\" tradition reflects the Vaishnava resurgence of his reign being retrospectively credited with a temple that already existed -- notwithstanding that Sangama kings were themselves largely Shaiva, though not exclusively (Bukkaraya's Shravanabelagola record and his daughter-in-law Gangadevi's Madhura Vijayam both attest Vaishnava activity under the dynasty).",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯ ಪಂಢರಾಪುರದಿಂದ ದೇವರ ವಿಗ್ರಹ ತಂದು ಹಂಪಿಯ ಪ್ರಸಿದ್ಧ ವಿಠ್ಠಲ ದೇವಾಲಯ ಕಟ್ಟಿಸಿದನೆಂಬ ಜನಪ್ರಿಯ ನಂಬಿಕೆಗೆ ವಿರುದ್ಧವಾಗಿ, ವಿದ್ವಾಂಸ ಶರಣಬಸಪ್ಪ ಕೋಲ್ಕಾರ ಹಲವು ಸ್ವತಂತ್ರ ಆಕರಗಳಿಂದ ದೇವಾಲಯದ ಮೂಲ ರಚನೆ -- ಗರ್ಭಗೃಹ, ಸುಖನಾಸಿ, ಪ್ರದಕ್ಷಿಣಾಪಥ, ಹದಿನಾರು-ಕಂಬದ ರಂಗಮಂಟಪ ಮತ್ತು ಪ್ರಸಿದ್ಧ 56-ಕಂಬದ ಮಹಾರಂಗಮಂಟಪ -- ಈಗಾಗಲೇ ಹಿಂದಿನ ಸಂಗಮ ವಂಶದ (1336-1485) ಕಾಲದಲ್ಲಿ ನಿಂತಿತ್ತೆಂದು ವಾದಿಸುತ್ತಾರೆ. ಈ ವಾದ ತಾಳಪಕ್ಕಂ ಅಣ್ಣಮಾಚಾರ್ಯರ (1408-1503) ಕೀರ್ತನೆ, ವಿಠ್ಠಲ ಮತ್ತು ರುಕ್ಮಿಣಿ ತುಂಗಭದ್ರಾ ದಡದಲ್ಲಿ ನೆಲೆನಿಂತರೆಂದು ವರ್ಣಿಸುತ್ತದೆ; ಹರಿಭಟ್ಟನ \"ಉತ್ತರ ನರಸಿಂಹ ಪುರಾಣಂ,\" ಇದು ದೇವಾಲಯವನ್ನು 14ನೇ ಶತಮಾನಕ್ಕೆ ಇರಿಸಿ ಪ್ರೌಢದೇವರಾಯನ (ಆ. 1426-1446) ಅಧಿಕಾರಿ ಪ್ರೊಳುಗಂಟಿ ತಿಪ್ಪಣ್ಣನಿಗೆ ಭೋಗಮಂಟಪ ನಿರ್ಮಾಣದ ಶ್ರೇಯ ನೀಡುತ್ತದೆ; ಮತ್ತು ಶಕ 1408ರ ಶಿರಾಲಿ ಶಾಸನ, \"ತುಂಗಭದ್ರಾ ದಡದ ವಿಠ್ಠಲನ ಸನ್ನಿಧಿಯಲ್ಲಿ\" ಮಾಡಿದ ದಾನವನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ಇದು ಸೂಚಿಸಬಹುದಾದ ಬೇರೆ ಯಾವುದೇ ನದೀತೀರದ ವಿಠ್ಠಲ ದೇವಾಲಯವಿಲ್ಲ. ಈ ವಾಚನದಂತೆ, ಕೃಷ್ಣದೇವರಾಯನ ಸ್ವಂತ ಶಾಸನಗಳು ಅವನಿಗೆ ಕೇವಲ ನೂರುಕಂಬಗಳ ಮಂಟಪದ ಶ್ರೇಯವನ್ನು ಮಾತ್ರ ನೀಡುತ್ತವೆ, ಗೋಪುರಗಳ ಶ್ರೇಯ ಅವನ ರಾಣಿಯರಿಗೆ ಸಲ್ಲುತ್ತದೆ, ಮತ್ತು \"ಕೃಷ್ಣದೇವರಾಯ ಕಟ್ಟಿಸಿದ\" ಎಂಬ ಸಂಪ್ರದಾಯ ಅವನ ಕಾಲದ ವೈಷ್ಣವ ಪುನರುತ್ಥಾನ ಈಗಾಗಲೇ ಇದ್ದ ದೇವಾಲಯಕ್ಕೆ ಹಿಂದಿನಿಂದ ಶ್ರೇಯ ನೀಡಿದ್ದನ್ನು ಪ್ರತಿಬಿಂಬಿಸುತ್ತದೆ -- ಸಂಗಮ ಅರಸರು ಬಹುತೇಕ ಶೈವರಾಗಿದ್ದರೂ, ಪ್ರತ್ಯೇಕವಾಗಿ ಅಲ್ಲ (ಬುಕ್ಕರಾಯನ ಶ್ರವಣಬೆಳಗೊಳ ದಾಖಲೆ ಮತ್ತು ಅವನ ಸೊಸೆ ಗಂಗಾದೇವಿಯ ಮಧುರಾ ವಿಜಯಂ ಎರಡೂ ವಂಶದಡಿ ವೈಷ್ಣವ ಚಟುವಟಿಕೆಯನ್ನು ದೃಢಪಡಿಸುತ್ತವೆ)."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr",
+            "locator": "Sharanabasappa Kolkar, \"ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯ: ನಿರ್ಮಾಣ ಕಾಲ ಮತ್ತು ಸಂದ ದಾನಗಳು\" (The Vitthala Temple, Hampi: construction date and grants made to it), pp. 27-28"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-hampi-second-elephant-enclosure-excavation",
+        "name": {
+          "en": "Excavated second elephant enclosure near the Lotus Mahal, Hampi",
+          "kn": "ಹಂಪಿಯ ಕಮಲ ಮಹಲ್ ಬಳಿಯ ಉತ್ಖನನಗೊಂಡ ಎರಡನೇ ಆನೆ ಆವರಣ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1400,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "elephant-stable",
+          "excavation",
+          "faunal-remains",
+          "royal-city-infrastructure"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "T.M. Manjunathayya's paper argues the well-known \"Elephant Stables\" monument at Vijayanagara has room for only eleven elephants -- too few for the empire's much larger elephant corps -- and that a second, larger enclosure must have existed for ordinary (non-royal-family) elephants. He identifies this with a 168 x 105 metre walled enclosure between the Lotus Mahal (Kamal Mahal) and the Ramachandra Temple, behind the present tourist canteen, excavated by the Directorate of Archaeology and Museums. The excavation uncovered an elephant skeleton buried in a corner (apparently because the dead animal could not be moved out), partial remains of 28 human skeletons, a doorway, stone feeding troughs (1.5m wide, 6m long, too small for human habitation), a water channel and storage trough bearing a Ganesha sculpture, and a stone lamp-post flanked by carved elephants. A layer of black ash across the site is interpreted as burnt fodder and dung from the time of Vijayanagara's fall in 1565. A stone inscription found within the enclosure -- undated beyond a cyclic year (Shubhakritu, Chaitra shuddha 7) -- records a grant by one Konamarasa to the \"Narasimha deity near the elephant stable,\" funded from Vijayanagara city's talavarike (watch-duty) tax revenue.",
+          "kn": "ಟಿ.ಎಂ. ಮಂಜುನಾಥಯ್ಯನ ಪ್ರಬಂಧ ವಿಜಯನಗರದ ಪ್ರಸಿದ್ಧ \"ಆನೆ ಸಾಲೆ\" ಸ್ಮಾರಕದಲ್ಲಿ ಕೇವಲ ಹನ್ನೊಂದು ಆನೆಗಳಿಗೆ ಮಾತ್ರ ಸ್ಥಳಾವಕಾಶವಿದೆ ಎಂದೂ -- ಸಾಮ್ರಾಜ್ಯದ ಬಹಳ ದೊಡ್ಡ ಆನೆ ಪಡೆಗೆ ಇದು ಸಾಕಾಗುವುದಿಲ್ಲ ಎಂದೂ -- ಸಾಮಾನ್ಯ (ರಾಜಪರಿವಾರೇತರ) ಆನೆಗಳಿಗಾಗಿ ಎರಡನೇ, ದೊಡ್ಡ ಆವರಣ ಇದ್ದಿರಬೇಕೆಂದೂ ವಾದಿಸುತ್ತಾರೆ. ಇದನ್ನು ಅವರು ಕಮಲ ಮಹಲ್ ಮತ್ತು ರಾಮಚಂದ್ರ ದೇವಾಲಯದ ನಡುವಿನ, ಈಗಿನ ಪ್ರವಾಸಿ ಕ್ಯಾಂಟೀನ್ ಹಿಂದಿನ 168 x 105 ಮೀಟರ್ ಗೋಡೆಯ ಆವರಣದೊಂದಿಗೆ ಗುರುತಿಸುತ್ತಾರೆ, ಪ್ರಾಚ್ಯವಸ್ತು ಮತ್ತು ಸಂಗ್ರಹಾಲಯಗಳ ನಿರ್ದೇಶನಾಲಯದಿಂದ ಉತ್ಖನನಗೊಂಡಿದೆ. ಉತ್ಖನನ ಆವರಣದ ಮೂಲೆಯಲ್ಲಿ ಹೂತಿದ್ದ ಆನೆಯ ಅಸ್ಥಿಪಂಜರವನ್ನು (ಸತ್ತ ಪ್ರಾಣಿಯನ್ನು ಹೊರಗೆ ಸಾಗಿಸಲಾಗದ ಕಾರಣ ಎಂದು ತೋರುತ್ತದೆ), 28 ಮಾನವ ಅಸ್ಥಿಪಂಜರಗಳ ಭಾಗಗಳನ್ನು, ಬಾಗಿಲನ್ನು, ಶಿಲಾ ಗೋದಲಿಗಳನ್ನು (1.5 ಮೀ ಅಗಲ, 6 ಮೀ ಉದ್ದ, ಮಾನವ ವಾಸಕ್ಕೆ ತೀರಾ ಚಿಕ್ಕದು), ಗಣೇಶ ಶಿಲ್ಪವಿರುವ ನೀರಿನ ಕಾಲುವೆ ಮತ್ತು ಸಂಗ್ರಹಣಾ ತೊಟ್ಟಿಯನ್ನು, ಮತ್ತು ಆನೆಗಳ ಕೆತ್ತನೆಯುಳ್ಳ ಕಲ್ಲಿನ ದೀಪಸ್ತಂಭವನ್ನು ಬಯಲಿಗೆ ತಂದಿತು. ತಾಣದಾದ್ಯಂತ ಇರುವ ಕಪ್ಪು ಬೂದಿಯ ಪದರವನ್ನು 1565ರ ವಿಜಯನಗರದ ಪತನ ಕಾಲದ ಸುಟ್ಟ ಮೇವು ಮತ್ತು ಸಗಣಿ ಎಂದು ಅರ್ಥೈಸಲಾಗಿದೆ. ಆವರಣದೊಳಗೆ ಪತ್ತೆಯಾದ ಶಿಲಾಶಾಸನ -- ಚಕ್ರೀಯ ವರ್ಷಕ್ಕಿಂತ (ಶುಭಕೃತು, ಚೈತ್ರ ಶುದ್ಧ 7) ಹೆಚ್ಚಿಗೆ ದಿನಾಂಕವಿಲ್ಲ -- ಕೋನಮರಸ ಎಂಬಾತ \"ಆನೆ ಸಾಲೆಯ ಬಳಿಯ ನರಸಿಂಹ ದೇವರಿಗೆ\" ವಿಜಯನಗರ ಪಟ್ಟಣದ ತಳವಾರಿಕೆ (ಕಾವಲು ಕರ್ತವ್ಯ) ತೆರಿಗೆ ಆದಾಯದಿಂದ ಅನುದಾನ ನೀಡಿದ್ದನ್ನು ದಾಖಲಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-5-0000prom",
+            "locator": "T.M. Manjunathayya, \"ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿಯ ಆನೆಯ ಸಾಲೆ\" (The elephant stable at Vijayanagara city), pp. 31-36: excavation report and inscription text"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-harihara-i-residence-silamandapa-excavation",
+        "name": {
+          "en": "ASI excavation identifying Harihara I's residence near the Silamandapa, Hampi",
+          "kn": "ಎ.ಎಸ್.ಐ ಉತ್ಖನನ, ಹಂಪೆಯ ಶಿಲಾಮಂಟಪದ ಬಳಿ ಹರಿಹರ Iನ ನಿವಾಸ ಗುರುತಿಸುವಿಕೆ"
+        },
+        "category": "architecture",
+        "date": {
+          "from": 1336,
+          "to": 1404,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [
+          "person-harihara-i",
+          "person-krishnadevaraya"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "excavation",
+          "royal-residence",
+          "Mint-area",
+          "Silamandapa",
+          "palace-complex"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "T.M. Keshava (Archaeological Survey of India, Bangalore Circle) reports nearly two decades of excavation identifying, west-northwest of the Hazara Ramachandra temple in the so-called \"Mint\" area, a structure that two inscriptions found at an adjoining Silamandapa site identify as the residence of Vira Harihara -- Vijayanagara's first ruler. Before this, scholars had believed the empire's early structural activity was confined to Anegundi alone. The earlier of the two inscriptions, by one Tippa Vodeya, records installing an image of Bhuvaneshwari \"near the house (maneya) of Sri Vira Harihara Raya\" -- the modest word maneya suggesting an austere early dwelling, with Tippa Vodeya likely a servant attached to it. The later inscription, from Krishnadevaraya's reign, shows the same site had by then grown into a \"Hiriya Aramane\" (senior/elder palace, implying a companion \"Kiriya Aramane\" existed too); it records that Timmoja, son of Pampoja -- the Hiriya Aramane's architect -- built a Silamandapa there in 1528 CE, and names a \"Naga Bana,\" a series of naga (serpent) stones installed over time before the mandapa housing Bhuvaneshwari, evidently propitiated by people seeking the blessing of children (excavations in 1995-96 recovered many such naga stones and a fairly well-preserved Bhuvaneshwari image in front of the mandapa). Excavations from 1994-95 to 1996-97 uncovered a large, repeatedly enlarged palace complex north-northwest of the Silamandapa within its own high enclosure walls -- guarded entrances, zigzag passages, a water system, a royal court, residential quarters, a garden, a kitchen, rectangular halls and a toilet. A third related inscription, found at Anegundi itself, separately names a \"Tippannavodeyara Aramane\" (Tippanna Vodeya's palace).",
+          "kn": "ಟಿ.ಎಂ. ಕೇಶವ (ಭಾರತೀಯ ಪುರಾತತ್ವ ಸರ್ವೇಕ್ಷಣಾ ಇಲಾಖೆ, ಬೆಂಗಳೂರು ವಲಯ) ಸುಮಾರು ಎರಡು ದಶಕಗಳ ಉತ್ಖನನವನ್ನು ವರದಿ ಮಾಡುತ್ತಾರೆ, ಹಜಾರ ರಾಮಚಂದ್ರ ದೇವಾಲಯದ ವಾಯುವ್ಯಕ್ಕೆ \"ಮಿಂಟ್\" ಎಂದು ಕರೆಯಲಾಗುವ ಪ್ರದೇಶದಲ್ಲಿ, ಪಕ್ಕದ ಶಿಲಾಮಂಟಪ ತಾಣದಲ್ಲಿ ಪತ್ತೆಯಾದ ಎರಡು ಶಾಸನಗಳು ವೀರ ಹರಿಹರ -- ವಿಜಯನಗರದ ಮೊದಲ ಅರಸ -- ನ ನಿವಾಸವೆಂದು ಗುರುತಿಸುವ ರಚನೆಯನ್ನು ಗುರುತಿಸಲಾಗಿದೆ. ಇದಕ್ಕೂ ಮೊದಲು, ಸಾಮ್ರಾಜ್ಯದ ಆರಂಭಿಕ ರಚನಾತ್ಮಕ ಚಟುವಟಿಕೆ ಆನೆಗುಂದಿಗೆ ಮಾತ್ರ ಸೀಮಿತವಾಗಿತ್ತೆಂದು ವಿದ್ವಾಂಸರು ನಂಬಿದ್ದರು. ಎರಡು ಶಾಸನಗಳಲ್ಲಿ ಮುಂಚಿನದು, ತಿಪ್ಪ ವೊಡೆಯ ಎಂಬಾತನಿಂದ, \"ಶ್ರೀ ವೀರ ಹರಿಹರ ರಾಯನ ಮನೆಯ\" ಬಳಿ ಭುವನೇಶ್ವರಿ ವಿಗ್ರಹ ಸ್ಥಾಪನೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ಸಾಧಾರಣ ಪದ \"ಮನೆಯ\" ಆರಂಭಿಕ ಸರಳ ವಸತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ, ತಿಪ್ಪ ವೊಡೆಯ ಬಹುಶಃ ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಸೇವಕ. ನಂತರದ ಶಾಸನ, ಕೃಷ್ಣದೇವರಾಯನ ಆಳ್ವಿಕೆಯದ್ದು, ಅದೇ ತಾಣ ಆ ವೇಳೆಗೆ \"ಹಿರಿಯ ಅರಮನೆ\" ಆಗಿ ಬೆಳೆದಿತ್ತೆಂದು ತೋರಿಸುತ್ತದೆ (ಇದು ಜೊತೆಗಿನ \"ಕಿರಿಯ ಅರಮನೆ\" ಇತ್ತೆಂದೂ ಸೂಚಿಸುತ್ತದೆ); ಹಿರಿಯ ಅರಮನೆಯ ವಾಸ್ತುಶಿಲ್ಪಿ ಪೊಂಪೊಜನ ಮಗ ತಿಂಮೊಜ 1528ರಲ್ಲಿ ಅಲ್ಲಿ ಶಿಲಾಮಂಟಪ ಕಟ್ಟಿಸಿದನೆಂದು ದಾಖಲಿಸುತ್ತದೆ, ಮತ್ತು \"ನಾಗ ಬನ\"ವನ್ನು ಹೆಸರಿಸುತ್ತದೆ, ಇದು ಭುವನೇಶ್ವರಿಯನ್ನು ಹೊಂದಿರುವ ಮಂಟಪದ ಮುಂದೆ ಕಾಲಕ್ರಮದಲ್ಲಿ ಸ್ಥಾಪಿಸಲಾದ ನಾಗ ಶಿಲೆಗಳ ಸರಣಿ, ಸ್ಪಷ್ಟವಾಗಿ ಮಕ್ಕಳ ಆಶೀರ್ವಾದ ಬಯಸುವ ಜನರಿಂದ ಪೂಜಿಸಲ್ಪಡುತ್ತಿತ್ತು (1995-96ರ ಉತ್ಖನನಗಳು ಅಂತಹ ಹಲವು ನಾಗ ಶಿಲೆಗಳನ್ನೂ ಮಂಟಪದ ಮುಂದೆ ಸಾಕಷ್ಟು ಚೆನ್ನಾಗಿ ಸಂರಕ್ಷಿತ ಭುವನೇಶ್ವರಿ ವಿಗ್ರಹವನ್ನೂ ಪತ್ತೆಮಾಡಿದವು). 1994-95ರಿಂದ 1996-97ರವರೆಗಿನ ಉತ್ಖನನಗಳು ಶಿಲಾಮಂಟಪದ ಉತ್ತರ-ವಾಯುವ್ಯಕ್ಕೆ ತನ್ನದೇ ಎತ್ತರದ ಆವರಣ ಗೋಡೆಗಳೊಳಗೆ ಪದೇಪದೇ ವಿಸ್ತರಿಸಲಾದ ದೊಡ್ಡ ಅರಮನೆ ಸಂಕೀರ್ಣವನ್ನು ಬಯಲಿಗೆ ತಂದವು -- ಕಾವಲು ಪ್ರವೇಶದ್ವಾರಗಳು, ಜಿಗ್-ಜಾಗ್ ಹಾದಿಗಳು, ನೀರಿನ ವ್ಯವಸ್ಥೆ, ರಾಜ ಆಸ್ಥಾನ, ವಸತಿ ಕೊಠಡಿಗಳು, ಉದ್ಯಾನ, ಅಡುಗೆಮನೆ, ಆಯತಾಕಾರದ ಸಭಾಂಗಣಗಳು ಮತ್ತು ಶೌಚಾಲಯ. ಸಂಬಂಧಿತ ಮೂರನೇ ಶಾಸನ, ಆನೆಗುಂದಿಯಲ್ಲೇ ಪತ್ತೆಯಾಗಿದ್ದು, ಪ್ರತ್ಯೇಕವಾಗಿ \"ತಿಪ್ಪಣ್ಣವೊಡೆಯರ ಅರಮನೆ\"ಯನ್ನು ಹೆಸರಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
+            "locator": "T.M. Keshava, \"Recent Excavations in the Mint Area,\" pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-vijayanagara-muslim-community",
+        "name": {
+          "en": "Muslim community and Kattige Ahmad Khan's endowment at Vijayanagara city",
+          "kn": "ವಿಜಯನಗರ ಪಟ್ಟಣದ ಮುಸ್ಲಿಂ ಸಮುದಾಯ ಮತ್ತು ಕಟ್ಟಿಗೆ ಅಹ್ಮದ್ ಖಾನ್‌ನ ದತ್ತಿ"
+        },
+        "category": "religious-tradition",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "Islam",
+          "religious-plurality",
+          "military-officer",
+          "dharmashala",
+          "coexistence"
+        ],
+        "continuity": "material-survival",
+        "description": {
+          "en": "B. Abdul Mannan's paper documents a Muslim quarter, tombs and mosques on the eastern side of Vijayanagara city -- attested both by foreign travellers' accounts and by the Department's own progress reports (1979-83, 1983-84, 1984-87), including large tombs at Kaddirampura and within the inner fort. Vijayanagara armies employed Muslim soldiers and officers; the paper's clearest documented case is Kattige Ahmad Khan, a military officer who built a dharmashala (rest-house) and a well \"for the merit of Devaraya\" (dedicated for the king's benefit) with the intention it endure achandrarkasthayi (\"as long as the sun and moon\") -- both structures, along with Ahmad Khan's own tomb, are still preserved. The paper places the region's Islamic presence earlier still through the Kumararamana Sangatya folk epic, which recounts (as legend, not verified history) that the Delhi Sultanate governor Bahauddin Gushtasp (\"Badur Khan\"), exiled by Muhammad bin Tughlaq, took refuge at Kampiladeva's court -- with the Sultan's daughter Babbami's romantic interest in Kumara Rama later drawn into the narrative explaining the Sultanate's repeated campaigns against Kummata.",
+          "kn": "ಬಿ. ಅಬ್ದುಲ್ ಮನ್ನಾನ್‌ರ ಪ್ರಬಂಧ ವಿಜಯನಗರ ಪಟ್ಟಣದ ಪೂರ್ವ ಭಾಗದಲ್ಲಿ ಮುಸ್ಲಿಂ ವಸತಿ ಪ್ರದೇಶ, ಗೋರಿಗಳು ಮತ್ತು ಮಸೀದಿಗಳನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ವಿದೇಶಿ ಪ್ರವಾಸಿಗರ ಬರಹಗಳಿಂದ ಮತ್ತು ಇಲಾಖೆಯ ಸ್ವಂತ ಪ್ರಗತಿ ವರದಿಗಳಿಂದ (೧೯೭೯-೮೩, ೧೯೮೩-೮೪, ೧೯೮೪-೮೭) ದೃಢಪಟ್ಟಿದೆ, ಕಡ್ಡೇ ರಾಮಪುರ ಮತ್ತು ಒಳಕೋಟೆಯೊಳಗಿನ ದೊಡ್ಡ ಗೋರಿಗಳು ಸೇರಿ. ವಿಜಯನಗರ ಸೈನ್ಯಗಳು ಮುಸ್ಲಿಂ ಸೈನಿಕರು ಮತ್ತು ಅಧಿಕಾರಿಗಳನ್ನು ಬಳಸಿಕೊಂಡವು; ಪ್ರಬಂಧದ ಅತ್ಯಂತ ಸ್ಪಷ್ಟ ದಾಖಲಿತ ಪ್ರಕರಣ ಕಟ್ಟಿಗೆ ಅಹ್ಮದ್ ಖಾನ್, ಒಬ್ಬ ಸೈನ್ಯಾಧಿಕಾರಿ, \"ದೇವರಾಯರಿಗೆ ಧರ್ಮವಾಗಬೇಕೆಂದು\" (ರಾಜನ ಪುಣ್ಯಕ್ಕಾಗಿ ಸಮರ್ಪಿತ) ಧರ್ಮಶಾಲೆ ಮತ್ತು ಬಾವಿಯನ್ನು ಆಚಂದ್ರಾರ್ಕಸ್ಥಾಯಿ (\"ಸೂರ್ಯ-ಚಂದ್ರರಿರುವ ತನಕ\") ಇರುವ ಉದ್ದೇಶದಿಂದ ಕಟ್ಟಿಸಿದನು -- ಎರಡೂ ರಚನೆಗಳು, ಅಹ್ಮದ್ ಖಾನ್‌ನ ಸ್ವಂತ ಸಮಾಧಿಯೊಂದಿಗೆ, ಇಂದಿಗೂ ಸಂರಕ್ಷಿತವಾಗಿವೆ. ಪ್ರಬಂಧ ಈ ಪ್ರದೇಶದ ಇಸ್ಲಾಮಿಕ್ ಉಪಸ್ಥಿತಿಯನ್ನು ಇನ್ನೂ ಹಿಂದಕ್ಕೆ, ಕುಮಾರರಾಮನ ಸಾಂಗತ್ಯ ಜನಪದ ಕಾವ್ಯದ ಮೂಲಕ ಇರಿಸುತ್ತದೆ, ಇದು (ದಂತಕಥೆಯಾಗಿ, ಪರಿಶೀಲಿತ ಇತಿಹಾಸವಾಗಿ ಅಲ್ಲ) ಮುಹಮ್ಮದ್ ಬಿನ್ ತುಘಲಕ್‌ನಿಂದ ಗಡಿಪಾರುಗೊಂಡ ದೆಹಲಿ ಸುಲ್ತಾನೀ ಗವರ್ನರ್ ಬಹಾಉದ್ದೀನ್ ಗುಸ್ತಾಸ್ಪ್ (\"ಬಾದುರ್ ಖಾನ್\") ಕಂಪಿಲದೇವನ ಆಸ್ಥಾನದಲ್ಲಿ ಆಶ್ರಯ ಪಡೆದನೆಂದು ಹೇಳುತ್ತದೆ -- ಸುಲ್ತಾನನ ಮಗಳು ಬಾಬ್ಬಮಿಯ ಕುಮಾರರಾಮನ ಮೇಲಿನ ಪ್ರಣಯಾಸಕ್ತಿ ನಂತರ ಕುಮ್ಮಟದ ವಿರುದ್ಧ ಸುಲ್ತಾನೀ ಪದೇಪದೇ ದಂಡಯಾತ್ರೆಗಳನ್ನು ವಿವರಿಸುವ ಕಥನದೊಳಗೆ ಎಳೆಯಲ್ಪಟ್ಟಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000krra",
+            "locator": "B. Abdul Mannan, \"ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿ ಮುಸ್ಲಿಂ ಧರ್ಮ\" (Islam in Vijayanagara city), pp. 110-114, citing Department progress reports (VPR 1979-83, 1983-84, 1984-87) and the Kumararamana Sangatya"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-vijayanagara-wrestling-muslim-soldiers",
+        "name": {
+          "en": "Wrestling (kusti/mallakalaga) inscriptions and Muslim soldiers at Vijayanagara",
+          "kn": "ವಿಜಯನಗರದ ಕುಸ್ತಿ (ಮಲ್ಲಕಾಳಗ) ಶಾಸನಗಳು ಮತ್ತು ಮುಸ್ಲಿಂ ಯೋಧರು"
+        },
+        "category": "games-sports",
+        "date": {
+          "from": 1406,
+          "to": 1446,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "wrestling",
+          "kusti",
+          "mallakalaga",
+          "Muslim-soldiers",
+          "garadi",
+          "syncretic-tradition"
+        ],
+        "continuity": "continuing-practice",
+        "description": {
+          "en": "Zainulla Ballari's paper examines two rare Hampi-area inscriptions documenting wrestling (variously kusti, mallakalaga, bahuyuddha, garadi vidye), a sport foreign travellers (Abdul Razzaq, Nuniz, Paes, Barbosa) describe witnessing and Kannada poets (Kumaravyasa, Ratnakaravarni, Shadaksharadeva, Nanjunda) depict in verse, with wrestling reliefs carved on the Hazara Rama, Vitthala, Achyutadevaraya and Virupaksha temples. The first inscription (1441 CE) records a Muslim wrestler -- his title transcribed by earlier editors as the uncertain \"Miripaluvana\" -- purchasing and donating a house to one Malukhana; comparing other Kannada-ized Perso-Arabic terms in Vijayanagara inscriptions (Ahamudakhana/Ahmad Khan, Masuji/Masjid, Kabirurauta/Kabir Rahut, Gummatha/Gumbaz), the author resolves the title as \"Mir Pahilvan\" (master wrestler), settling the earlier editorial doubt. The second (1439 CE) names Kattige Ahmad Khan, bodyguard to Devaraya II, whose \"dharmasale\" is architecturally identifiable as a mosque; citing Channabasappa S. Patil and Vasundhara Filliozat, the paper adds that Ahmad Khan separately built an annachatra (charitable food-hall) for the king's merit, both structures and his tomb still standing. The paper situates both records against Devaraya II's well-attested military reform recruiting some 10,000 Muslim cavalry (a 1430 CE Srirangapatna inscription) and safeguarding Muslim worship in the city, and against the living garadi (traditional gymnasium) tradition of Hoskote taluk, where Anjaneya, Kumara Rama and Maulali (Hazrat Ali, revered by Muslims as a symbol of strength) are worshipped together as garadi deities by Hindu and Muslim wrestlers without distinction.",
+          "kn": "ಜೈನುಲ್ಲಾ ಬಳ್ಳಾರಿಯ ಪ್ರಬಂಧ ಹಂಪಿ ಪ್ರದೇಶದ ಎರಡು ಅಪರೂಪದ ಶಾಸನಗಳನ್ನು ಪರಿಶೀಲಿಸುತ್ತದೆ, ಕುಸ್ತಿಯನ್ನು (ಮಲ್ಲಕಾಳಗ, ಬಾಹುಯುದ್ಧ, ಗರಡಿ ವಿದ್ಯೆ ಎಂದೂ ಕರೆಯಲಾಗುತ್ತದೆ) ದಾಖಲಿಸುತ್ತವೆ, ವಿದೇಶಿ ಪ್ರವಾಸಿಗರು (ಅಬ್ದುಲ್ ರಜಾಕ್, ನ್ಯೂನಿಜ್, ಪಯಸ್, ಬಾರ್ಬೋಸಾ) ಕಣ್ಣಾರೆ ಕಂಡುದ್ದನ್ನು ವಿವರಿಸಿದ್ದಾರೆ ಮತ್ತು ಕನ್ನಡ ಕವಿಗಳು (ಕುಮಾರವ್ಯಾಸ, ರತ್ನಾಕರವರ್ಣಿ, ಷಡಕ್ಷರದೇವ, ನಂಜುಂಡ) ಪದ್ಯದಲ್ಲಿ ಚಿತ್ರಿಸಿದ್ದಾರೆ, ಹಜಾರ ರಾಮ, ವಿಠ್ಠಲ, ಅಚ್ಯುತದೇವರಾಯ ಮತ್ತು ವಿರೂಪಾಕ್ಷ ದೇವಾಲಯಗಳಲ್ಲಿ ಕುಸ್ತಿ ಉಬ್ಬುಶಿಲ್ಪಗಳಿವೆ. ಮೊದಲ ಶಾಸನ (1441) ಮುಸ್ಲಿಂ ಕುಸ್ತಿಪಟುವನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ಅವನ ಬಿರುದನ್ನು ಹಿಂದಿನ ಸಂಪಾದಕರು ಅನಿಶ್ಚಿತ \"ಮಿರಿಪಾಲುವಾನ\" ಎಂದು ಲಿಪ್ಯಂತರಿಸಿದ್ದರು -- ಮಲುಖಾನನಿಗೆ ಮನೆಯನ್ನು ಖರೀದಿಸಿ ದಾನ ಮಾಡಿದ್ದನ್ನು; ವಿಜಯನಗರ ಶಾಸನಗಳಲ್ಲಿನ ಇತರ ಕನ್ನಡೀಕರಿಸಿದ ಪರ್ಷಿಯನ್-ಅರೇಬಿಕ್ ಪದಗಳನ್ನು (ಅಹಮುದಖಾನ/ಅಹಮದ್ ಖಾನ್, ಮಸೂಜಿ/ಮಸೀದಿ, ಕಬಿರುರಾವುತ/ಕಬೀರ್ ರಾಹುತ್, ಗುಮ್ಮಥ/ಗುಂಬಜ್) ಹೋಲಿಸಿ, ಲೇಖಕರು ಬಿರುದನ್ನು \"ಮೀರ್ ಪೈಲ್ವಾನ್\" (ಪ್ರವೀಣ ಕುಸ್ತಿಪಟು) ಎಂದು ಪರಿಹರಿಸುತ್ತಾರೆ, ಹಿಂದಿನ ಸಂಪಾದಕೀಯ ಸಂದೇಹವನ್ನು ಬಗೆಹರಿಸುತ್ತಾ. ಎರಡನೇ ಶಾಸನ (1439) ಇಮ್ಮಡಿ ದೇವರಾಯನ ಅಂಗರಕ್ಷಕ ಕಟ್ಟಿಗೆ ಅಹಮದ್ ಖಾನ್‌ನನ್ನು ಹೆಸರಿಸುತ್ತದೆ, ಅವನ \"ಧರ್ಮಸಾಲೆ\" ವಾಸ್ತು ಲಕ್ಷಣಗಳಿಂದ ಮಸೀದಿಯೆಂದು ಗುರುತಿಸಬಹುದು; ಚನ್ನಬಸಪ್ಪ ಎಸ್. ಪಾಟೀಲ ಮತ್ತು ವಸುಂಧರಾ ಫಿಲಿಯೋಜಾರನ್ನು ಉಲ್ಲೇಖಿಸಿ, ಪ್ರಬಂಧ ಅಹಮದ್ ಖಾನ್ ಪ್ರತ್ಯೇಕವಾಗಿ ರಾಜನ ಪುಣ್ಯಕ್ಕಾಗಿ ಅನ್ನಛತ್ರವನ್ನೂ ಕಟ್ಟಿಸಿದನೆಂದು ಸೇರಿಸುತ್ತದೆ, ಎರಡೂ ರಚನೆಗಳು ಮತ್ತು ಅವನ ಸಮಾಧಿ ಇಂದಿಗೂ ನಿಂತಿವೆ. ಪ್ರಬಂಧ ಎರಡೂ ದಾಖಲೆಗಳನ್ನು ಇಮ್ಮಡಿ ದೇವರಾಯನ ಸುಪ್ರಸಿದ್ಧ ಸೈನ್ಯ ಸುಧಾರಣೆಯೊಂದಿಗೆ (ಸುಮಾರು 10,000 ಮುಸ್ಲಿಂ ಅಶ್ವದಳ ನೇಮಕ, 1430ರ ಶ್ರೀರಂಗಪಟ್ಟಣ ಶಾಸನ) ಮತ್ತು ಪಟ್ಟಣದಲ್ಲಿ ಮುಸ್ಲಿಂ ಪೂಜಾ ಸಂರಕ್ಷಣೆಯೊಂದಿಗೆ ಇರಿಸುತ್ತದೆ, ಮತ್ತು ಹೊಸಕೋಟೆ ತಾಲ್ಲೂಕಿನ ಜೀವಂತ ಗರಡಿ (ಸಾಂಪ್ರದಾಯಿಕ ವ್ಯಾಯಾಮಶಾಲೆ) ಪರಂಪರೆಯೊಂದಿಗೆ, ಅಲ್ಲಿ ಆಂಜನೇಯ, ಕುಮಾರರಾಮ ಮತ್ತು ಮೌಲಾಲಿ (ಹಜ್ರತ್ ಅಲಿ, ಮುಸ್ಲಿಮರಿಂದ ಶಕ್ತಿಯ ಸಂಕೇತವೆಂದು ಪೂಜಿತ) ಹಿಂದೂ ಮತ್ತು ಮುಸ್ಲಿಂ ಕುಸ್ತಿಪಟುಗಳಿಂದ ಭೇದವಿಲ್ಲದೆ ಗರಡಿ ದೈವಗಳಾಗಿ ಒಟ್ಟಿಗೆ ಪೂಜಿಸಲ್ಪಡುತ್ತಾರೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
+            "locator": "Zainulla Ballari, \"ವಿಜಯನಗರದ ಕುಸ್ತಿಯ ಬಗ್ಗೆ ಎರಡು ಶಾಸನಗಳು\" (Two inscriptions about wrestling in Vijayanagara), pp. 89-98"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-rooka-generic-money-term",
+        "name": {
+          "en": "\"Rooka/rokka\" as generic Kannada word for cash, not a distinct Vijayanagara coin",
+          "kn": "\"ರೂಕ/ರೊಕ್ಕ\" ಸಾಮಾನ್ಯ ಕನ್ನಡ ನಗದು ಪದ, ವಿಶಿಷ್ಟ ವಿಜಯನಗರ ನಾಣ್ಯವಲ್ಲ"
+        },
+        "category": "literature",
+        "date": {
+          "from": 1513,
+          "to": 1563,
+          "era": "CE",
+          "precision": "range"
+        },
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "numismatic-terminology",
+          "Kannada-epigraphic-vocabulary",
+          "coinage",
+          "living-usage"
+        ],
+        "continuity": "continuing-practice",
+        "description": {
+          "en": "C. Mahadeva's paper responds to numismatist A.V. Narasimhamurthy's treatment of \"rooka\" as a distinct Deccan-Andhra silver coin (attested there from the 8th century CE, per Nellore inscriptions and a 1276 CE Sevuna Ramachandra grant at Pandharpur) whose presence and exact value in Karnataka Narasimhamurthy left uncertain. Reviewing a run of dated Kannada Vijayanagara inscriptions -- Muddalapura (1513), Melukote (1530), the Vitthala temple at Hampi (1534, 1536, 1563), an unnamed 1545 record, Pura (1547), Ravihalu (1544), Nakkarahalu (1562) and Krishnadevaraya's Udayagiri record -- Mahadeva shows \"rokka\"/\"roka\" appears there generically alongside actual denominations (gadyana, varaha) to mean \"cash payment\" broadly, not one specific coin. He connects this to the ordinary Kannada dictionary sense of rokka/rokka (cash, money; compare Hindi rok, Marathi rokh, Tamil/Malayalam/Tulu/Telugu rokkam) and to its continued colloquial use in North Karnataka today for money of any kind, paper or metal, and in personal names such as Rokkappa/Rokkappa Shetty among the (Telugu-home-language) Arya Vaishya community.",
+          "kn": "ಸಿ. ಮಹದೇವರ ಪ್ರಬಂಧ ನಾಣ್ಯಶಾಸ್ತ್ರಜ್ಞ ಎ.ವಿ. ನರಸಿಂಹಮೂರ್ತಿಯವರ \"ರೂಕ\"ವನ್ನು ಪ್ರತ್ಯೇಕ ದಖ್ಖನ್-ಆಂಧ್ರ ಬೆಳ್ಳಿ ನಾಣ್ಯವೆಂದು (8ನೇ ಶತಮಾನದಿಂದ ಅಲ್ಲಿ ದೃಢಪಟ್ಟ, ನೆಲ್ಲೂರು ಶಾಸನಗಳು ಮತ್ತು ಪಂಢರಾಪುರದ 1276ರ ಸೇವುಣ ರಾಮಚಂದ್ರ ಅನುದಾನದ ಪ್ರಕಾರ) ಪರಿಗಣಿಸಿದ್ದಕ್ಕೆ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತದೆ, ಇದರ ಕರ್ನಾಟಕದಲ್ಲಿ ಇರುವಿಕೆ ಮತ್ತು ನಿಖರ ಮೌಲ್ಯವನ್ನು ನರಸಿಂಹಮೂರ್ತಿ ಅನಿಶ್ಚಿತವಾಗಿ ಬಿಟ್ಟಿದ್ದರು. ದಿನಾಂಕಿತ ಕನ್ನಡ ವಿಜಯನಗರ ಶಾಸನಗಳ ಸರಣಿಯನ್ನು ಪರಿಶೀಲಿಸಿ -- ಮುದ್ದಲಾಪುರ (1513), ಮೇಲುಕೋಟೆ (1530), ಹಂಪೆಯ ವಿಠ್ಠಲ ದೇವಾಲಯ (1534, 1536, 1563), ಹೆಸರಿಲ್ಲದ 1545ರ ದಾಖಲೆ, ಪುರ (1547), ರಾವಿಹಾಳು (1544), ನಕ್ಕರಹಾಳು (1562) ಮತ್ತು ಕೃಷ್ಣದೇವರಾಯನ ಉದಯಗಿರಿ ದಾಖಲೆ -- ಮಹದೇವ \"ರೊಕ್ಕ\"/\"ರೊಕ\" ಅಲ್ಲಿ ಸಾಮಾನ್ಯವಾಗಿ ನಿಜವಾದ ಮೌಲ್ಯಗಳ (ಗದ್ಯಾಣ, ವರಾಹ) ಜೊತೆಗೆ \"ನಗದು ಪಾವತಿ\" ಎಂಬ ವಿಶಾಲ ಅರ್ಥದಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆಂದೂ, ಒಂದು ನಿರ್ದಿಷ್ಟ ನಾಣ್ಯವಲ್ಲವೆಂದೂ ತೋರಿಸುತ್ತಾರೆ. ಇದನ್ನು ಅವರು ಸಾಮಾನ್ಯ ಕನ್ನಡ ನಿಘಂಟಿನ ರೊಕ್ಕ/ರೊಕ (ನಗದು, ಹಣ; ಹಿಂದಿ ರೋಕ್, ಮರಾಠಿ ರೋಖ್, ತಮಿಳು/ಮಲೆಯಾಳ/ತುಳು/ತೆಲುಗು ರೊಕ್ಕಂ ಹೋಲಿಸಿ) ಅರ್ಥದೊಂದಿಗೆ, ಮತ್ತು ಇಂದಿಗೂ ಉತ್ತರ ಕರ್ನಾಟಕದಲ್ಲಿ ಯಾವುದೇ ಬಗೆಯ ಹಣಕ್ಕೆ (ಕಾಗದ ಅಥವಾ ಲೋಹ) ಬಳಸುವ ಆಡುಮಾತಿನ ಬಳಕೆಯೊಂದಿಗೆ, ಮತ್ತು (ತೆಲುಗು-ಮನೆಮಾತಿನ) ಆರ್ಯ ವೈಶ್ಯ ಸಮುದಾಯದ ರೊಕ್ಕಪ್ಪ/ರೊಕ್ಕಪ್ಪ ಶೆಟ್ಟಿಯಂತಹ ವ್ಯಕ್ತಿನಾಮಗಳೊಂದಿಗೆ ಜೋಡಿಸುತ್ತಾರೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-12-0000drrg",
+            "locator": "Dr. C. Mahadeva, \"ರೂಕ ನಾಣ್ಯ - ಒಂದು ಪರಿಶೀಲನೆ\" (The rooka coin: an examination), pp. 196-201, responding to A.V. Narasimhamurthy's \"The Coins and Currency Systems of Karnataka\""
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "heritage-karch-vyasaraya-kuhuyoga-legend-debunked",
+        "name": {
+          "en": "The \"kuhuyoga\" legend of Vyasaraya's temporary enthronement (debunked)",
+          "kn": "ವ್ಯಾಸರಾಯರ \"ಕುಹುಯೋಗ\" ತಾತ್ಕಾಲಿಕ ಸಿಂಹಾಸನಾರೋಹಣ ಐತಿಹ್ಯ (ಖಂಡಿತ)"
+        },
+        "category": "religious-tradition",
+        "date": {
+          "from": 1519,
+          "to": 1524,
+          "era": "CE",
+          "precision": "range"
+        },
+        "continuity": "historic",
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [
+          "person-krishnadevaraya"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "hagiography",
+          "Madhva-tradition",
+          "astrology-vs-astronomy",
+          "legend-debunked",
+          "Vyasaraya"
+        ],
+        "description": {
+          "en": "Dr. H. Chandrashekhar examines and rejects a devotional legend that Vyasaraya (b. Bannur near Sosale, Mysuru district, c. 1446/47 CE; entered his vrindavana at Hampi in 1539/40 CE), the influential Madhva ascetic whom Krishnadevaraya honoured as his guru, once briefly ascended the Vijayanagara throne himself during an astrologically inauspicious \"kuhuyoga\" to absorb a threat of death meant for the king -- with Krishnadevaraya's later gifts of a jewel-studded coronation (ratnabhisheka) to Vyasaraya explained by some Vaishnava-tradition historians and dasa-sahitya writers as gratitude for this act. Consulting astronomers Dr. B.S. Shailaja and Dr. S. Balachandra Rao, the author first shows \"kuhuyoga\" (widely but incorrectly described by some writers as a conjunction of the Sun, Mars and Saturn with the lunar node Rahu treated as a planet) is a phalajyotishya (predictive-astrology) concept with no basis in astronomy: Rahu and Ketu are not planets or celestial bodies but the ascending and descending nodes where the Moon's orbital path crosses the ecliptic. Historians relying on Swami Kannu Pillai's ephemeris tables cannot even agree on which of seven candidate kuhuyoga dates between 1519 and 1524 the legend refers to, with no explanation offered for why 4 February 1524 in particular is usually cited. Decisively, no contemporary inscription of Krishnadevaraya's reign, and no contemporary literary work -- including the Sanskrit Vyasayogicharitam that poet Somanatha personally dedicated to Vyasaraya, and Krishnadevaraya's own Telugu champu-kavya Amuktamalyada -- mentions any kuhuyoga or any temporary enthronement of Vyasaraya; the inscriptions describe only ordinary devotional worship and gifts to the guru. The author, citing historian Kondduri Sarojinidevi's judgement that Vyasayogicharitam's silence alone makes the story unbelievable, concludes the kuhuyoga-enthronement narrative is a kattukathe (fabricated tale) that grew up in later devotional literature rather than a historical event.",
+          "kn": "ಡಾ. ಹೆಚ್. ಚಂದ್ರಶೇಖರ ಒಂದು ಭಕ್ತಿಪರ ಐತಿಹ್ಯವನ್ನು ಪರಿಶೀಲಿಸಿ ತಿರಸ್ಕರಿಸುತ್ತಾರೆ -- ಮೈಸೂರು ಜಿಲ್ಲೆಯ ಸೋಸಲೆ ಬಳಿಯ ಬನ್ನೂರಿನಲ್ಲಿ ಸು. 1446/47ರಲ್ಲಿ ಜನಿಸಿ, 1539/40ರಲ್ಲಿ ಹಂಪಿಯಲ್ಲಿ ವೃಂದಾವನಸ್ಥರಾದ ಮಾಧ್ವ ಸನ್ಯಾಸಿ ವ್ಯಾಸರಾಯರು, ಕೃಷ್ಣದೇವರಾಯ ತನ್ನ ಗುರುವೆಂದು ಗೌರವಿಸಿದವರು, ಒಮ್ಮೆ ಜ್ಯೋತಿಷ್ಯಶಾಸ್ತ್ರೀಯವಾಗಿ ಅಶುಭವಾದ \"ಕುಹುಯೋಗ\"ದ ವೇಳೆ ರಾಜನಿಗಿದ್ದ ಮೃತ್ಯುಭಯವನ್ನು ತಾವೇ ಸ್ವೀಕರಿಸಲು ಸಂಕ್ಷಿಪ್ತವಾಗಿ ವಿಜಯನಗರ ಸಿಂಹಾಸನವನ್ನೇರಿದರೆಂಬ ಐತಿಹ್ಯ -- ಕೃಷ್ಣದೇವರಾಯ ನಂತರ ವ್ಯಾಸರಾಯರಿಗೆ ಮಾಡಿದ ರತ್ನಾಭಿಷೇಕವನ್ನು ಕೆಲ ವೈಷ್ಣವ ಸಂಪ್ರದಾಯದ ಇತಿಹಾಸಕಾರರು ಮತ್ತು ದಾಸಸಾಹಿತ್ಯ ಲೇಖಕರು ಈ ಕಾರ್ಯಕ್ಕೆ ಕೃತಜ್ಞತೆಯೆಂದು ವಿವರಿಸುತ್ತಾರೆ. ಖಗೋಳಶಾಸ್ತ್ರಜ್ಞರಾದ ಡಾ. ಬಿ.ಎಸ್. ಶೈಲಜಾ ಮತ್ತು ಡಾ. ಎಸ್. ಬಾಲಚಂದರ ರಾವ್ ಅವರೊಡನೆ ಸಮಾಲೋಚಿಸಿ, ಲೇಖಕರು ಮೊದಲು \"ಕುಹುಯೋಗ\" (ಕೆಲ ಲೇಖಕರು ತಪ್ಪಾಗಿ ಸೂರ್ಯ, ಮಂಗಳ, ಶನಿ ಗ್ರಹಗಳು ರಾಹುವಿನೊಂದಿಗೆ, ರಾಹುವನ್ನೂ ಗ್ರಹವೆಂದು ಪರಿಗಣಿಸಿ, ಒಂದೇ ಮನೆಯಲ್ಲಿ ಸೇರುವುದೆಂದು ವಿವರಿಸುತ್ತಾರೆ) ಖಗೋಳಶಾಸ್ತ್ರದಲ್ಲಿ ಆಧಾರವಿಲ್ಲದ ಫಲಜ್ಯೋತಿಷ್ಯದ ಪರಿಕಲ್ಪನೆಯೆಂದು ತೋರಿಸುತ್ತಾರೆ: ರಾಹು-ಕೇತುಗಳು ಗ್ರಹಗಳಾಗಲೀ ಆಕಾಶಕಾಯಗಳಾಗಲೀ ಅಲ್ಲ, ಚಂದ್ರನ ಕಕ್ಷೆ ಕ್ರಾಂತಿವೃತ್ತವನ್ನು ದಾಟುವ ಆರೋಹಣ ಮತ್ತು ಅವರೋಹಣ ಬಿಂದುಗಳು ಮಾತ್ರ. ಸ್ವಾಮಿ ಕನ್ನುಪಿಳ್ಳೆಯವರ ಕೋಷ್ಠಕವನ್ನಾಧರಿಸಿದ ಇತಿಹಾಸಕಾರರು 1519-1524ರ ನಡುವಿನ ಏಳು ಸಂಭಾವ್ಯ ಕುಹುಯೋಗ ದಿನಾಂಕಗಳಲ್ಲಿ ಯಾವುದನ್ನು ಐತಿಹ್ಯ ಸೂಚಿಸುತ್ತದೆಂದು ಒಪ್ಪುವುದೂ ಇಲ್ಲ; 4 ಫೆಬ್ರವರಿ 1524ನ್ನೇ ಏಕೆ ಸಾಮಾನ್ಯವಾಗಿ ಉಲ್ಲೇಖಿಸಲಾಗುತ್ತದೆಂಬುದಕ್ಕೆ ಯಾವ ವಿವರಣೆಯೂ ಇಲ್ಲ. ನಿರ್ಣಾಯಕವಾಗಿ, ಕೃಷ್ಣದೇವರಾಯನ ಆಳ್ವಿಕೆಯ ಯಾವ ಸಮಕಾಲೀನ ಶಾಸನವೂ, ಯಾವ ಸಮಕಾಲೀನ ಸಾಹಿತ್ಯಕೃತಿಯೂ -- ಸ್ವತಃ ವ್ಯಾಸರಾಯರಿಗೆ ಕವಿ ಸೋಮನಾಥ ಅರ್ಪಿಸಿದ ಸಂಸ್ಕೃತ ವ್ಯಾಸಯೋಗಿಚರಿತಂ ಮತ್ತು ಕೃಷ್ಣದೇವರಾಯನ ಸ್ವಂತ ತೆಲುಗು ಚಂಪೂಕಾವ್ಯ ಅಮುಕ್ತಮಾಲ್ಯದ ಸೇರಿದಂತೆ -- ಯಾವುದೇ ಕುಹುಯೋಗ ಅಥವಾ ವ್ಯಾಸರಾಯರ ತಾತ್ಕಾಲಿಕ ಸಿಂಹಾಸನಾರೋಹಣವನ್ನು ಉಲ್ಲೇಖಿಸುವುದಿಲ್ಲ; ಶಾಸನಗಳು ಗುರುವಿಗೆ ಸಾಮಾನ್ಯ ಭಕ್ತಿಪೂರ್ವಕ ಪೂಜೆ ಮತ್ತು ದಾನಗಳನ್ನು ಮಾತ್ರ ವಿವರಿಸುತ್ತವೆ. ಇತಿಹಾಸಕಾರ್ತಿ ಕೊಂಡೂರಿ ಸರೋಜಿನಿದೇವಿಯವರ \"ವ್ಯಾಸಯೋಗಿಚರಿತಂನ ಮೌನವೇ ಈ ಕಥೆಯನ್ನು ನಂಬಲಾಗದಂತೆ ಮಾಡುತ್ತದೆ\" ಎಂಬ ಅಭಿಪ್ರಾಯವನ್ನು ಉಲ್ಲೇಖಿಸಿ, ಲೇಖಕರು ಕುಹುಯೋಗ-ಸಿಂಹಾಸನಾರೋಹಣ ನಿರೂಪಣೆ ಐತಿಹಾಸಿಕ ಘಟನೆಯಲ್ಲ, ನಂತರದ ಭಕ್ತಿಸಾಹಿತ್ಯದಲ್ಲಿ ಬೆಳೆದ ಒಂದು ಕಟ್ಟುಕತೆ ಎಂದು ತೀರ್ಮಾನಿಸುತ್ತಾರೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
+            "locator": "Dr. H. Chandrashekhar, \"ಕುಹುಯೋಗದಲ್ಲಿ ವ್ಯಾಸರಾಯರ ಸಿಂಹಾಸನಾರೋಹಣ: ಒಂದು ಕಟ್ಟುಕತೆ\" (Vyasaraya's enthronement during kuhuyoga: a fabricated tale), pp. 112-119, consulting astronomers Dr. B.S. Shailaja and Dr. S. Balachandra Rao and citing historian Kondduri Sarojinidevi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-ramaraya-death-source-comparison-1565",
+        "name": {
+          "en": "Primary-source comparison: how and by whom was Aliya Rama Raya killed at Talikota (1565)?",
+          "kn": "ಆಕರ ತೌಲನಿಕ ಅಧ್ಯಯನ: ತಾಳಿಕೋಟೆಯಲ್ಲಿ (1565) ಅಳಿಯ ರಾಮರಾಯನನ್ನು ಹೇಗೆ, ಯಾರಿಂದ ಕೊಲ್ಲಲಾಯಿತು?"
+        },
+        "category": "literature",
+        "date": {
+          "from": 1565,
+          "to": 1565,
+          "era": "CE",
+          "precision": "year"
+        },
+        "continuity": "historic",
+        "polityIds": [
+          "polity-vijayanagara",
+          "external-polity-deccan-sultanates"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [
+          "person-rama-raya"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "historiography",
+          "primary-source-comparison",
+          "Talikota",
+          "Deccan-chronicles"
+        ],
+        "description": {
+          "en": "Dr. Krishna Kolhar Kulkarni compares Kannada, Persian, Urdu, Marathi and English primary sources on the death of Aliya Rama Raya after the battle known as Talikota, Rakkasa-Tangadi or Bannihatti (23 January 1565, per most sources; a few give 5 or 26 January). Accounts disagree sharply on who killed him: the near-contemporary Kannada \"Ramarayana Bakhairu\" has Rama Raya himself begging his adoptive \"son\" Ali Adil Shah of Bijapur not to hand him to enemies but to shoot him with a cannon, which Adil Shah reluctantly does; the c. 1750s Kannada champu-kavya Keladi Nrupa Vijaya (by court poet Linganna, ed. Keladi Gundajoisa) instead says Rama Raya was seized and beheaded \"on Adil Shah's scheme\" and his head sent to Kashi. Persian and other Deccan sources point the other way: Aftabi's eyewitness court poem for Husain Nizam Shah I of Ahmadnagar, \"Tarif-i-Husain Shah Badshah Deccan\" (with contemporary illustrated manuscript), Ali Tabataba's near-contemporary \"Burhan-i-Ma'asir,\" western observer Diogo do Couto, Ferishta's history (in Capt. Briggs's 1829 translation, which adds that a stone carving of Rama Raya's head still served as a drain-mouth at Bijapur fort and that descendants of his executioner ritually displayed the actual head annually 250 years later), Rafiuddin Shirazi's \"Tadhkirat al-Muluk\" and Ibrahim Zubairi's 1824 \"Basatin-us-Salatin\" (Marathi tr.) all describe Rama Raya being captured, brought before Husain Nizam Shah, and beheaded on his order -- several giving a detailed, consistent account of Rama Raya's elephant-mounted throne being overturned in the rout, his rescue-turned-capture by a Brahmin retainer named Dalapatrao (whose cry of the king's name to save him instead revealed his identity to Rumi Khan's mahout), and his execution at Nizam Shah's camp on the urging of the confidant Hakim Qasim Beg, who warned that Adil Shah's \"adoptive father\" bond with Rama Raya would otherwise cost Nizam Shah his prize. Weighing the sources, the author concludes it is unlikely Adil Shah personally killed Rama Raya as the Kannada bakhair claims, and that the weight of independent Persian, Deccan and European sources establishes he died at Husain Nizam Shah's camp, on his order -- though exactly where, how and by whose hand within that camp still cannot be pinned down with certainty.",
+          "kn": "ಡಾ. ಕೃಷ್ಣ ಕೊಲ್ಹಾರ ಕುಲಕರ್ಣಿ ತಾಳಿಕೋಟೆ, ರಕ್ಕಸ-ತಂಗಡಗಿ ಅಥವಾ ಬನ್ನಿಹಟ್ಟಿ ಎಂದು ಕರೆಯಲಾಗುವ ಯುದ್ಧದ (ಹೆಚ್ಚಿನ ಆಕರಗಳ ಪ್ರಕಾರ 23 ಜನವರಿ 1565; ಕೆಲವು 5 ಅಥವಾ 26 ಜನವರಿ ಎನ್ನುತ್ತವೆ) ನಂತರ ಅಳಿಯ ರಾಮರಾಯನ ಸಾವಿನ ಬಗ್ಗೆ ಕನ್ನಡ, ಪರ್ಷಿಯನ್, ಉರ್ದು, ಮರಾಠಿ ಮತ್ತು ಇಂಗ್ಲಿಷ್ ಮೂಲ ಆಕರಗಳನ್ನು ತೌಲನಿಕವಾಗಿ ಪರಿಶೀಲಿಸುತ್ತಾರೆ. ಯಾರು ಕೊಂದರೆಂಬುದರಲ್ಲಿ ಆಕರಗಳು ತೀವ್ರವಾಗಿ ಭಿನ್ನವಾಗಿವೆ: ಬಹುತೇಕ ಸಮಕಾಲೀನ ಕನ್ನಡ \"ರಾಮರಾಯನ ಬಖೈರು\" ರಾಮರಾಯನೇ ತನ್ನ ದತ್ತು \"ಮಗ\" ಬಿಜಾಪುರದ ಆಲಿ ಆದಿಲಶಹನಲ್ಲಿ ತನ್ನನ್ನು ಶತ್ರುಗಳಿಗೆ ಒಪ್ಪಿಸದೆ ಫಿರಂಗಿಯಿಂದ ಹೊಡೆಯಬೇಕೆಂದು ಬೇಡಿಕೊಂಡನೆಂದೂ, ಆದಿಲಶಹ ಹಿಂಜರಿಕೆಯಿಂದ ಹಾಗೆ ಮಾಡಿದನೆಂದೂ ಹೇಳುತ್ತದೆ; ಸು. 1750ರ ಕನ್ನಡ ಚಂಪೂಕಾವ್ಯ ಕೆಳದಿ ನೃಪವಿಜಯ (ಕವಿ ಲಿಂಗಣ್ಣ, ಸಂ. ಕೆಳದಿ ಗುಂಡಾಜೋಯಿಸ) ಬದಲಿಗೆ \"ಆದಿಲಶಹನ ಸಂಚಿನ ಮೇಲೆ\" ರಾಮರಾಯನನ್ನು ಹಿಡಿದು ಶಿರಚ್ಛೇದ ಮಾಡಿ ತಲೆಯನ್ನು ಕಾಶಿಗೆ ಕಳುಹಿಸಲಾಯಿತೆಂದು ಹೇಳುತ್ತದೆ. ಪರ್ಷಿಯನ್ ಮತ್ತು ಇತರ ದಖ್ಖನ್ ಆಕರಗಳು ವಿರುದ್ಧ ದಿಕ್ಕು ತೋರಿಸುತ್ತವೆ: ಅಹಮದನಗರದ ಹುಸೇನ ನಿಜಾಮಶಹ Iಗಾಗಿ ಬರೆದ ಆಫತಾಬನ ಪ್ರತ್ಯಕ್ಷದರ್ಶಿ ಆಸ್ಥಾನಕಾವ್ಯ \"ತಾರೀಫ್-ಇ-ಹುಸೇನ್ ಶಾಹ್ ಬಾದಶಾಹ್ ದಖನ್\" (ಸಮಕಾಲೀನ ಚಿತ್ರಿತ ಹಸ್ತಪ್ರತಿಯೊಂದಿಗೆ), ಅಲಿ ತಾಬಾತಾಬಾನ ಸಮಕಾಲೀನ \"ಬುರ್ಹಾನ್-ಇ-ಮಾಸಿರ್\", ಪಾಶ್ಚಿಮಾತ್ಯ ವೀಕ್ಷಕ ದಿಯೋಗೊ ದೊ ಕೌಟೊ, ಫಿರಿಶ್ತಾನ ಚರಿತ್ರೆ (ಕ್ಯಾಪ್ಟನ್ ಬ್ರಿಗ್ಸ್‌ನ 1829ರ ಅನುವಾದ, ಇದು ರಾಮರಾಯನ ತಲೆಯ ಕಲ್ಲಿನ ಪ್ರತಿಕೃತಿ ಇಂದಿಗೂ ಬಿಜಾಪುರ ಕೋಟೆಯ ಚರಂಡಿ ಬಾಯಿಯಾಗಿರುವುದನ್ನೂ, ಶಿರಚ್ಛೇದಕನ ವಂಶಜರು 250 ವರ್ಷಗಳ ನಂತರವೂ ವಾರ್ಷಿಕವಾಗಿ ನಿಜವಾದ ತಲೆಯನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತಿದ್ದುದನ್ನೂ ಸೇರಿಸುತ್ತದೆ), ರಫೀಯುದ್ದೀನ ಶಿರಾಜಿಯ \"ತದ್ಕಿರಾತುಲ್ ಮುಲ್ಕ\" ಮತ್ತು ಇಬ್ರಾಹಿಮ ಜುಬೇರಿಯ 1824ರ \"ಬುಸಾತಿನ-ಎ-ಸಲಾತಿನ\" (ಮರಾಠಿ ಅನುವಾದ) ಎಲ್ಲವೂ ರಾಮರಾಯನನ್ನು ಸೆರೆಹಿಡಿದು ಹುಸೇನ ನಿಜಾಮಶಹನ ಮುಂದೆ ತಂದು ಆತನ ಆಜ್ಞೆಯಂತೆ ಶಿರಚ್ಛೇದ ಮಾಡಿದ್ದನ್ನು ವಿವರಿಸುತ್ತವೆ -- ಹಲವು ಆಕರಗಳು ರಾಮರಾಯನ ಆನೆ-ಸಿಂಹಾಸನ ಕದನದ ಗಡಿಬಿಡಿಯಲ್ಲಿ ಉರುಳಿದ್ದು, ಅವನನ್ನು ಉಳಿಸಲು ಪ್ರಯತ್ನಿಸಿದ ದಲಪತರಾವ್ ಎಂಬ ಬ್ರಾಹ್ಮಣ ಸೇವಕನ ಕೂಗು ಬದಲಿಗೆ ರೂಮೀಖಾನನ ಮಾವುತನಿಗೆ ಆತನ ಗುರುತು ಬಯಲುಮಾಡಿದ್ದು, ಮತ್ತು ಆದಿಲಶಹ ತನ್ನ \"ದತ್ತು ತಂದೆ\" ಸಂಬಂಧದ ಆಧಾರದಲ್ಲಿ ರಾಮರಾಯನನ್ನು ಕಸಿದುಕೊಳ್ಳಬಹುದೆಂದು ಎಚ್ಚರಿಸಿದ ವಿಶ್ವಾಸಿ ಹಕೀಮ ಕಾಸಿಮ ಬೇಗನ ಒತ್ತಾಯದ ಮೇಲೆ ನಿಜಾಮಶಹನ ಪಾಳೆಯದಲ್ಲಿ ಆತನ ವಧೆ ನಡೆದದ್ದನ್ನೂ ವಿವರವಾಗಿ, ಸ್ಥಿರವಾಗಿ ವಿವರಿಸುತ್ತವೆ. ಆಕರಗಳನ್ನು ತೂಗಿ ನೋಡಿ, ಕನ್ನಡ ಬಖೈರು ಹೇಳುವಂತೆ ಆದಿಲಶಹನೇ ಸ್ವತಃ ರಾಮರಾಯನನ್ನು ಕೊಂದಿರುವ ಸಾಧ್ಯತೆ ಕಡಿಮೆಯೆಂದೂ, ಸ್ವತಂತ್ರ ಪರ್ಷಿಯನ್, ದಖ್ಖನ್ ಮತ್ತು ಯುರೋಪಿಯನ್ ಆಕರಗಳ ಭಾರ ಆತ ಹುಸೇನ ನಿಜಾಮಶಹನ ಪಾಳೆಯದಲ್ಲಿ, ಅವನ ಆಜ್ಞೆಯಂತೆ ಮಡಿದನೆಂದು ಸ್ಥಾಪಿಸುತ್ತದೆಂದೂ ಲೇಖಕರು ತೀರ್ಮಾನಿಸುತ್ತಾರೆ -- ಆದರೂ ಆ ಪಾಳೆಯದೊಳಗೆ ನಿಖರವಾಗಿ ಎಲ್ಲಿ, ಹೇಗೆ ಮತ್ತು ಯಾರ ಕೈಯಿಂದ ಎಂಬುದನ್ನು ಇನ್ನೂ ಖಚಿತವಾಗಿ ನಿರ್ಧರಿಸಲಾಗುವುದಿಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+            "locator": "Dr. Krishna Kolhar Kulkarni, \"ವಿಜಯನಗರದ ನಿರ್ಣಾಯಕ ಯುದ್ಧದಲ್ಲಿ ರಾಮರಾಯನನ್ನು ಕೊಂದವರು ಯಾರು?\" (Who killed Rama Raya in Vijayanagara's decisive battle?), pp. 95-100, comparing Ramarayana Bakhairu, Keladi Nrupa Vijaya, Aftabi's Tarif-i-Husain Shah, Ali Tabataba's Burhan-i-Ma'asir, Diogo do Couto, Ferishta (tr. Briggs 1829), Rafiuddin Shirazi and Ibrahim Zubairi's Basatin-us-Salatin"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-mysore-wodeyar-origin-reassessment",
+        "name": {
+          "en": "Krishnadevaraya's Ummattur campaign and a documentary reassessment of Mysore Wodeyar origins",
+          "kn": "ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ದಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲದ ದಾಖಲಾಧಾರಿತ ಮರುಪರಿಶೀಲನೆ"
+        },
+        "category": "literature",
+        "date": {
+          "from": 1512,
+          "to": 1598,
+          "era": "CE",
+          "precision": "range"
+        },
+        "continuity": "historic",
+        "polityIds": [
+          "polity-mysore",
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-mysuru",
+          "place-srirangapatna"
+        ],
+        "peopleIds": [
+          "person-krishnadevaraya"
+        ],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "historiography",
+          "dynastic-origin-legend",
+          "Mysore-Wodeyars",
+          "inscription-based-reassessment"
+        ],
+        "description": {
+          "en": "Dr. L. N. Swamy reviews every published account of the Mysore Wodeyar dynasty's origin (Wilks, B.L. Rice, Hayavadana Rao, M. Shama Rao, G.R. Josyer, and the palace-derived Kannada chronicles Kanthirava Narasaraja Vijayam, Chikkadevaraja Vamshavali, Rajavali Kathasara and Vamsharatnakara) and finds every one traceable, directly or indirectly, to palace-commissioned legend rather than contemporary evidence: variously that the Wodeyars descended from the Devagiri Yadavas, from the Hoysalas, from Jain ancestors (via Devachandra's 1858 Rajavali Kathasara, written for a Jain-sympathetic patron), or -- the version repeated in nearly all popular histories -- that brothers \"Yaduraya\" and \"Krishnaraya,\" descendants of Krishna's Dwaraka lineage, arrived at Mysore around 1399, killed a chieftain called Marnayaka at a wedding by trickery, and founded the dynasty by marriage into the local ruling family. The author shows the Devagiri-Yadava and Hoysala theories were already refuted on documentary grounds by historian P.B. Desai, and finds the Jain-origin story traceable only to a single, late (c. 1858), patron-driven text. Crucially, no inscription earlier than the reign of the fourth-generation ruler \"Mummadi Betta Chamaraja\" mentions the Wodeyar family at all -- contradicting the traditional 1399 founding date, for which the author finds zero contemporary epigraphic support. Instead, tracing a chain of inscriptions (a 1525 CE record naming \"Chammati Timmaraja\" -- identified with Mummadi Betta Chamaraja -- endowing an agrahara in the name of Krishnadevaraya's mother Nagalambika, and a 1598 CE record naming his descendants) against the documented political sequence -- Krishnadevaraya's suppression of the Ummattur chiefs' 1511-12 revolt, his capture of Shivanasamudra and Srirangapatna, and his subsequent policy of dividing the Srirangapatna region among multiple small, closely watched local officials (including Odisha-origin appointees) specifically to prevent any single family from growing powerful again -- the author concludes the Wodeyars first emerge, verifiably, as one of these post-1512 Vijayanagara-appointed local administrators, not as a pre-existing royal lineage. The traditional \"Yaduraya founds Mysore in 1399\" narrative is treated here explicitly as unverified dynastic legend rather than established history.",
+          "kn": "ಡಾ. ಲ. ನ. ಸ್ವಾಮಿ ಮೈಸೂರು ಒಡೆಯರ ಮನೆತನದ ಮೂಲದ ಬಗೆಗಿನ ಎಲ್ಲಾ ಪ್ರಕಟಿತ ವಿವರಣೆಗಳನ್ನು (ವಿಲ್ಕ್ಸ್, ಬಿ.ಎಲ್. ರೈಸ್, ಹಯವದನರಾವ್, ಎಂ. ಶಾಮರಾವ್, ಜಿ.ಆರ್. ಜೋಸ್ಯರ್, ಮತ್ತು ಅರಮನೆ-ಪ್ರೇರಿತ ಕನ್ನಡ ಗ್ರಂಥಗಳಾದ ಕಂಠೀರವ ನರಸರಾಜ ವಿಜಯಂ, ಚಿಕ್ಕದೇವರಾಜ ವಂಶಾವಳಿ, ರಾಜಾವಳಿ ಕಥಾಸಾರ ಮತ್ತು ವಂಶರತ್ನಾಕರ) ಪರಿಶೀಲಿಸಿ, ಇವೆಲ್ಲವೂ ಸಮಕಾಲೀನ ಸಾಕ್ಷ್ಯಕ್ಕಿಂತ ಅರಮನೆ-ಪ್ರೇರಿತ ಐತಿಹ್ಯಕ್ಕೆ ನೇರವಾಗಿ ಅಥವಾ ಪರೋಕ್ಷವಾಗಿ ಜೋಡಿಸಲ್ಪಟ್ಟಿವೆಯೆಂದು ತೋರಿಸುತ್ತಾರೆ: ಕೆಲವು ಒಡೆಯರನ್ನು ದೇವಗಿರಿಯ ಯಾದವರ ವಂಶಜರೆಂದೂ, ಕೆಲವು ಹೊಯ್ಸಳ ವಂಶಜರೆಂದೂ, ಕೆಲವು ಜೈನ ಪೂರ್ವಜರವರೆಂದೂ (ಜೈನ-ಸಹಾನುಭೂತಿಯ ಪೋಷಕನಿಗಾಗಿ ಬರೆದ ದೇವಚಂದ್ರನ 1858ರ ರಾಜಾವಳಿ ಕಥಾಸಾರದ ಮೂಲಕ), ಅಥವಾ -- ಬಹುತೇಕ ಜನಪ್ರಿಯ ಇತಿಹಾಸಗಳಲ್ಲಿ ಪುನರಾವರ್ತಿತವಾದ ಆವೃತ್ತಿ -- ಕೃಷ್ಣನ ದ್ವಾರಕಾ ವಂಶಜರಾದ \"ಯದುರಾಯ\" ಮತ್ತು \"ಕೃಷ್ಣರಾಯ\" ಸಹೋದರರು ಸು. 1399ರಲ್ಲಿ ಮೈಸೂರಿಗೆ ಬಂದು, ಮದುವೆಯಲ್ಲಿ ಮೋಸದಿಂದ ಮಾರನಾಯಕ ಎಂಬ ಸ್ಥಳೀಯ ಮುಖ್ಯಸ್ಥನನ್ನು ಕೊಂದು, ಸ್ಥಳೀಯ ಆಳುವ ಕುಟುಂಬದೊಂದಿಗೆ ಮದುವೆಯಾಗಿ ಮನೆತನ ಸ್ಥಾಪಿಸಿದರೆಂದೂ ಗುರುತಿಸುತ್ತವೆ. ದೇವಗಿರಿ-ಯಾದವ ಮತ್ತು ಹೊಯ್ಸಳ ಸಿದ್ಧಾಂತಗಳನ್ನು ಇತಿಹಾಸಕಾರ ಪಿ.ಬಿ. ದೇಸಾಯಿ ಈಗಾಗಲೇ ದಾಖಲೆಗಳ ಆಧಾರದ ಮೇಲೆ ತಿರಸ್ಕರಿಸಿದ್ದಾರೆಂದೂ, ಜೈನ-ಮೂಲ ಕಥೆ ಒಂದೇ, ತಡವಾದ (ಸು. 1858) ಪೋಷಕ-ಪ್ರೇರಿತ ಗ್ರಂಥದಿಂದ ಮಾತ್ರ ಬಂದಿದೆಯೆಂದೂ ಲೇಖಕರು ತೋರಿಸುತ್ತಾರೆ. ನಿರ್ಣಾಯಕವಾಗಿ, ನಾಲ್ಕನೇ ತಲೆಮಾರಿನ ಆಡಳಿತಗಾರ \"ಮುಮ್ಮಡಿ ಬೆಟ್ಟದ ಚಾಮರಾಜ\"ನ ಆಳ್ವಿಕೆಗಿಂತ ಹಿಂದಿನ ಯಾವ ಶಾಸನವೂ ಒಡೆಯರ ಮನೆತನವನ್ನು ಉಲ್ಲೇಖಿಸುವುದೇ ಇಲ್ಲ -- ಇದು ಸಾಂಪ್ರದಾಯಿಕ 1399ರ ಸ್ಥಾಪನಾ ದಿನಾಂಕಕ್ಕೆ ವಿರುದ್ಧವಾಗಿದ್ದು, ಲೇಖಕರ ಪ್ರಕಾರ ಅದಕ್ಕೆ ಯಾವ ಸಮಕಾಲೀನ ಶಾಸನಾಧಾರವೂ ಇಲ್ಲ. ಬದಲಿಗೆ, ಶಾಸನಗಳ ಸರಣಿಯನ್ನು (ಕೃಷ್ಣದೇವರಾಯನ ತಾಯಿ ನಾಗಲಾಂಬಿಕೆಯ ಹೆಸರಿನಲ್ಲಿ ಅಗ್ರಹಾರ ದಾನ ಮಾಡಿದ \"ಚಮ್ಮಟಿ ತಿಮ್ಮರಾಜ\"ನನ್ನು -- ಮುಮ್ಮಡಿ ಬೆಟ್ಟದ ಚಾಮರಾಜನೊಂದಿಗೆ ಗುರುತಿಸಿ -- ಹೆಸರಿಸುವ 1525ರ ದಾಖಲೆ, ಮತ್ತು ಆತನ ವಂಶಸ್ಥರನ್ನು ಹೆಸರಿಸುವ 1598ರ ದಾಖಲೆ) ದಾಖಲಿತ ರಾಜಕೀಯ ಅನುಕ್ರಮದೊಂದಿಗೆ (ಕೃಷ್ಣದೇವರಾಯ 1511-12ರ ಉಮ್ಮತ್ತೂರು ನಾಯಕರ ದಂಗೆಯನ್ನು ಅಡಗಿಸಿ, ಶಿವನಸಮುದ್ರ ಮತ್ತು ಶ್ರೀರಂಗಪಟ್ಟಣವನ್ನು ವಶಪಡಿಸಿಕೊಂಡು, ಯಾವುದೇ ಒಂದು ಮನೆತನ ಮತ್ತೆ ಬಲಿಷ್ಠವಾಗದಂತೆ ಶ್ರೀರಂಗಪಟ್ಟಣ ಪ್ರಾಂತ್ಯವನ್ನು ಹಲವು ಸಣ್ಣ, ನಿಕಟ ನಿಗಾವಣೆಯ ಸ್ಥಳೀಯ ಅಧಿಕಾರಿಗಳಿಗೆ (ಒರಿಸ್ಸಾ-ಮೂಲದ ನೇಮಕಾತಿಗಳೂ ಸೇರಿ) ಹಂಚಿದ ನೀತಿ) ಜೋಡಿಸಿ ಓದಿದಾಗ, ಒಡೆಯರು ಮೊದಲು ಪತ್ತೆಯಾಗುವುದೇ 1512ರ ನಂತರ ವಿಜಯನಗರ ನೇಮಿಸಿದ ಸ್ಥಳೀಯ ಅಧಿಕಾರಿಗಳಲ್ಲಿ ಒಬ್ಬರಾಗಿ, ಮೊದಲಿನಿಂದಲೂ ಇದ್ದ ರಾಜಮನೆತನವಾಗಿ ಅಲ್ಲ ಎಂದು ಲೇಖಕರು ತೀರ್ಮಾನಿಸುತ್ತಾರೆ. ಸಾಂಪ್ರದಾಯಿಕ \"ಯದುರಾಯ 1399ರಲ್ಲಿ ಮೈಸೂರು ಸ್ಥಾಪಿಸಿದ\" ನಿರೂಪಣೆಯನ್ನು ಇಲ್ಲಿ ಸ್ಪಷ್ಟವಾಗಿ ಪರಿಶೀಲಿಸದ ವಂಶ ಐತಿಹ್ಯವೆಂದೇ ಪರಿಗಣಿಸಲಾಗಿದೆ, ಸ್ಥಾಪಿತ ಇತಿಹಾಸವೆಂದಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
+            "locator": "Dr. L. N. Swamy, \"ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ಧಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲ\" (Krishnaraya's Ummattur attack and the origin of the Mysore Wodeyars), pp. 134-143, reviewing Wilks, B.L. Rice, Hayavadana Rao and P.B. Desai and citing 1525 CE and 1598 CE inscriptions naming Chammati Timmaraja / Betta Chamaraja"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-kanakadasa-caste-critique-kirtanas",
+        "name": {
+          "en": "Kanakadasa's caste-critique kirtanas of the Vijayanagara period",
+          "kn": "ವಿಜಯನಗರ ಕಾಲದ ಕನಕದಾಸರ ಜಾತಿ-ವಿಮರ್ಶಾ ಕೀರ್ತನೆಗಳು"
+        },
+        "category": "literature",
+        "date": {
+          "from": 1509,
+          "to": 1609,
+          "era": "CE",
+          "precision": "range"
+        },
+        "continuity": "continuing-practice",
+        "polityIds": [
+          "polity-vijayanagara"
+        ],
+        "placeIds": [
+          "place-hampi"
+        ],
+        "peopleIds": [
+          "person-kanakadasa"
+        ],
+        "relatedWorkIds": [
+          "work-mohana-tarangini"
+        ],
+        "traditionTags": [
+          "Haridasa-sahitya",
+          "kirtana",
+          "caste-critique",
+          "Kanakadasa",
+          "living-usage"
+        ],
+        "description": {
+          "en": "Dr. B.V. Nagaveni surveys the caste system of Vijayanagara-period society as it appears in Haridasa devotional literature, particularly the kirtanas of Kanakadasa, arguing caste determined nearly every aspect of contemporary life (marriage, residence, diet, occupation, and funerary rites) while noting -- citing the article's own framing -- that surviving Vijayanagara-period records rarely describe caste's social workings directly, so devotional poetry is used here as indirect social evidence rather than administrative record. The article places Kanakadasa's caste critique in a longer Indian tradition of anti-caste religious reformers running from the Buddha through Basava, Akkamahadevi and later Ambedkar and Phule, judging those efforts' practical impact on caste itself as limited even though the poetry endures. It quotes several kirtanas at length: one addressing Muslims and Lingayat ascetics alike (\"Alla Khuda embarthavannu ariyade... ee vesha bhangi mukkugalella lingavantaraha de\" -- questioning claims to piety without understanding), one listing Vijayanagara-era occupational communities (goldsmiths, blacksmiths, stonecutters, coppersmiths, Holeyas, Madigas and others) as united by the common motive of earning a living (\"battegagi\"), and the well-known \"Kula kula kulavendu hodedadadiri\" (\"stop fighting over caste, caste -- do you even know your caste's true basis? there is no womb none has been born from, no ground none has walked on... remember Hari, who alone unites all castes\"), attributed here to Kanakadasa though the article also cites a variant text of this verse-type attributed elsewhere to the vachana poet Sarvajna, reflecting genuine ambiguity in the kirtana/vachana oral-transmission record. The article judges that such calls for caste's dissolution remained largely confined to the capital and major towns and did not loosen caste's hold on the wider Vijayanagara social order.",
+          "kn": "ಡಾ. ಬಿ.ವಿ. ನಾಗವೇಣಿ ವಿಜಯನಗರ-ಕಾಲದ ಸಮಾಜದ ಜಾತಿವ್ಯವಸ್ಥೆಯನ್ನು ಹರಿದಾಸ ಸಾಹಿತ್ಯದಲ್ಲಿ, ಮುಖ್ಯವಾಗಿ ಕನಕದಾಸರ ಕೀರ್ತನೆಗಳಲ್ಲಿ ಕಂಡುಬರುವಂತೆ ಪರಿಶೀಲಿಸುತ್ತಾರೆ; ಜಾತಿ ಅಂದಿನ ಜೀವನದ ಬಹುತೇಕ ಎಲ್ಲ ಅಂಶಗಳನ್ನು (ಮದುವೆ, ವಾಸಸ್ಥಳ, ಆಹಾರ, ಉದ್ಯೋಗ, ಶವಸಂಸ್ಕಾರ) ನಿರ್ಧರಿಸುತ್ತಿತ್ತೆಂದು ವಾದಿಸುತ್ತಾ, ಉಳಿದಿರುವ ವಿಜಯನಗರ-ಕಾಲದ ದಾಖಲೆಗಳು ಜಾತಿಯ ಸಾಮಾಜಿಕ ಕಾರ್ಯವನ್ನು ನೇರವಾಗಿ ವಿರಳವಾಗಿ ವಿವರಿಸುತ್ತವೆಂದೂ ಗಮನಿಸುತ್ತಾರೆ -- ಆದ್ದರಿಂದ ಇಲ್ಲಿ ಭಕ್ತಿಕಾವ್ಯವನ್ನು ಆಡಳಿತ ದಾಖಲೆಗಿಂತ ಪರೋಕ್ಷ ಸಾಮಾಜಿಕ ಸಾಕ್ಷ್ಯವಾಗಿ ಬಳಸಲಾಗಿದೆ. ಲೇಖನ ಕನಕದಾಸರ ಜಾತಿ-ವಿಮರ್ಶೆಯನ್ನು ಬುದ್ಧನಿಂದ ಬಸವ, ಅಕ್ಕಮಹಾದೇವಿ, ನಂತರದ ಅಂಬೇಡ್ಕರ್ ಮತ್ತು ಫುಲೆಯವರೆಗಿನ ದೀರ್ಘ ಭಾರತೀಯ ಜಾತಿ-ವಿರೋಧಿ ಧಾರ್ಮಿಕ ಸುಧಾರಣಾ ಪರಂಪರೆಯಲ್ಲಿಟ್ಟು ನೋಡುತ್ತದೆ, ಆ ಪ್ರಯತ್ನಗಳ ಪ್ರಾಯೋಗಿಕ ಪರಿಣಾಮ ಜಾತಿಯ ಮೇಲೆ ಸೀಮಿತವಾಗಿತ್ತೆಂದು ತೀರ್ಮಾನಿಸುತ್ತಾ, ಕಾವ್ಯ ಮಾತ್ರ ಉಳಿದಿದೆಯೆನ್ನುತ್ತದೆ. ಹಲವು ಕೀರ್ತನೆಗಳನ್ನು ಪೂರ್ಣವಾಗಿ ಉಲ್ಲೇಖಿಸುತ್ತದೆ: ಮುಸ್ಲಿಮರನ್ನೂ ಲಿಂಗವಂತ ಸನ್ಯಾಸಿಗಳನ್ನೂ ಸಮಾನವಾಗಿ ಪ್ರಶ್ನಿಸುವ ಒಂದು (\"ಅಲ್ಲ ಖುದಾ ಎಂಬ ಅರ್ಥವನ್ನು ಅರಿಯದೆ... ಇಂಥ ಭಂಗಿ ಮುಕ್ಕುಗಳೆಲ್ಲ ಲಿಂಗವಂತರಹುದೆ\" -- ಅರ್ಥ ತಿಳಿಯದ ಧಾರ್ಮಿಕತೆಯ ಹಕ್ಕನ್ನು ಪ್ರಶ್ನಿಸುತ್ತಾ), ವಿಜಯನಗರ-ಕಾಲದ ಉದ್ಯೋಗ ಸಮುದಾಯಗಳನ್ನು (ಅಕ್ಕಸಾಲಿಗರು, ಕಮ್ಮಾರರು, ಕಲ್ಲುಕುಟುಕರು, ಕಂಚುಗಾರರು, ಹೊಲೆಯರು, ಮಾದಿಗರು ಮತ್ತಿತರರು) \"ಬಟ್ಟೆಗಾಗಿ\" (ಜೀವನೋಪಾಯಕ್ಕಾಗಿ) ಎಂಬ ಸಾಮಾನ್ಯ ಉದ್ದೇಶದಿಂದ ಒಂದುಗೂಡಿಸುವ ಒಂದು, ಮತ್ತು ಪ್ರಸಿದ್ಧ \"ಕುಲ ಕುಲ ಕುಲವೆಂದು ಹೊಡೆದಾಡದಿರಿ ನಿಮ್ಮ ಕುಲದ ನೆಲೆಯನೇನಾದರೂ ಬಲ್ಲಿರಾ... ಹರಿಯೇ ಸರ್ವೋತ್ತಮ ಹರಿಯೆ ಸರ್ವೇಶ್ವರ\" (ಜಾತಿ ಜಾತಿಯೆಂದು ಹೊಡೆದಾಡದಿರಿ -- ನಿಮ್ಮ ಕುಲದ ನಿಜ ಆಧಾರ ಗೊತ್ತೆ? ಯಾವ ಗರ್ಭದಿಂದಲೂ ಹುಟ್ಟದವರಿಲ್ಲ, ಯಾವ ನೆಲದ ಮೇಲೂ ನಡೆಯದವರಿಲ್ಲ... ಎಲ್ಲ ಜಾತಿಗಳನ್ನೂ ಒಂದುಗೂಡಿಸುವ ಹರಿಯನ್ನೇ ನೆನೆ) ಇಲ್ಲಿ ಕನಕದಾಸರಿಗೆ ಆರೋಪಿಸಲಾಗಿದ್ದರೂ, ಈ ಬಗೆಯ ಪದ್ಯದ ಒಂದು ಭಿನ್ನಪಾಠವನ್ನು ಬೇರೆಡೆ ವಚನಕಾರ ಸರ್ವಜ್ಞನಿಗೂ ಆರೋಪಿಸಲಾಗುತ್ತದೆಂದು ಲೇಖನವೇ ಉಲ್ಲೇಖಿಸುತ್ತದೆ, ಕೀರ್ತನೆ/ವಚನ ಮೌಖಿಕ-ಪ್ರಸರಣ ದಾಖಲೆಯಲ್ಲಿನ ನಿಜವಾದ ಅಸ್ಪಷ್ಟತೆಯನ್ನು ಪ್ರತಿಬಿಂಬಿಸುತ್ತದೆ. ಜಾತಿ ವಿಸರ್ಜನೆಗಾಗಿ ಇಂತಹ ಕರೆಗಳು ಬಹುತೇಕ ರಾಜಧಾನಿ ಮತ್ತು ಪ್ರಮುಖ ಪಟ್ಟಣಗಳಿಗೆ ಸೀಮಿತವಾಗಿ ಉಳಿದವೆಂದೂ, ವಿಶಾಲ ವಿಜಯನಗರ ಸಾಮಾಜಿಕ ವ್ಯವಸ್ಥೆಯ ಮೇಲಿನ ಜಾತಿಯ ಹಿಡಿತವನ್ನು ಸಡಿಲಿಸಲಿಲ್ಲವೆಂದೂ ಲೇಖನ ತೀರ್ಮಾನಿಸುತ್ತದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
+            "locator": "Dr. B.V. Nagaveni, \"ವಿಜಯನಗರ ಕಾಲದ ಜಾತಿವ್ಯವಸ್ಥೆ (ದಾಸ ಸಾಹಿತ್ಯವನ್ನು ಅನುಲಕ್ಷಿಸಿ)\" (The Vijayanagara-period caste system, with reference to Dasa literature), pp. 68-73, quoting Kanakadasa's kirtanas including \"Kula kula kulavendu\" and the Ramadhanya Charitre"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "culture-karch-hande-palegara-hanumappa-nayaka-origin",
+        "name": {
+          "en": "The Hande palegara chiefs of Ballari: epigraphic name-continuity and the Hanumappa Nayaka origin tradition",
+          "kn": "ಬಳ್ಳಾರಿಯ ಹಂಡೆ ಪಾಳೆಯಗಾರರು: ಶಾಸನೋಕ್ತ ಹೆಸರು-ನಿರಂತರತೆ ಮತ್ತು ಹನುಮಪ್ಪನಾಯಕ ಮೂಲ ಐತಿಹ್ಯ"
+        },
+        "category": "literature",
+        "date": {
+          "from": 968,
+          "to": 1550,
+          "era": "CE",
+          "precision": "range"
+        },
+        "continuity": "historic",
+        "polityIds": [
+          "polity-vijayanagara",
+          "external-polity-adil-shahi"
+        ],
+        "placeIds": [
+          "place-ballari"
+        ],
+        "peopleIds": [],
+        "relatedWorkIds": [],
+        "traditionTags": [
+          "kaifiyat",
+          "palegara-history",
+          "oral-tradition",
+          "epigraphic-continuity",
+          "Ballari"
+        ],
+        "description": {
+          "en": "Prof. S.C. Patil studies the minor but long-lived Hande palegara (chieftain) family, which ruled parts of Ballari, Kurugodu, Anantapura and Bankapur for roughly three centuries -- a lineage the author argues has been unfairly neglected in favour of the major dynasties. Two distinct kinds of evidence are combined, and are worth keeping separate. First, solid epigraphic continuity: inscriptions spanning roughly 968-1500 CE trace what the author reads as one evolving chiefly title across Karnataka, Andhra Pradesh and Maharashtra -- \"Handi arasa\" (Bevinahalli, 968 CE), \"Pandi arasa\"/\"Pandarasa\" (Kollanupaka 1081, Nagunuru 1112, Mangalavede 1113, all outside Karnataka), \"Hindiyarasa\" (Kondaguli, 1116), \"Handarugere/Handarakeri\" (Muttagi, 1142 and 1165), \"Handarasa\" (Chikkasugur, 1194), \"Handepa Nayaka\" (Goolapalyam, Andhra, 1407) and \"Hande Hanuma Nayaka\" (Kadadarabenchi, Andhra, c. 1500) -- with an 1182 CE Hemmadagi inscription explicitly equating \"Handi arasaru\" and \"Hande arasaru\" as builders of, respectively, Pandeshvara and Handeshvara temples, which the author takes as confirming the name-forms refer to one continuous family rather than unrelated chiefs. Second, oral kaifiyat (local-chronicle) tradition, recorded far later and treated here as tradition rather than verified fact: that the family originated near Akkalkot-Solapur in Maharashtra; that \"Balada Hanumappa Nayaka,\" a sarnad-gauda at Muttagi and Vadavadagi (Basavana Bagewadi taluk, present Vijayapura district) under the Bijapur Adil Shahi sultanate, was honoured with the title \"Vazirappa\" for military service and sent (Shalivahana Shaka 1410, c. 1488 CE) to pacify and administer Ballari, Tekkalakote and Kurugodu, later extended to eleven parganas; that the Sultan demanded one of his five sons for the royal household, which Hanumappa refused, fleeing across the Krishna river to Ballari; and, per the separately cited Anantapura kaifiyat, that Hande Hanumappa Nayaka was later summoned by Vijayanagara's \"Rama Raya\" and \"Tirumala Raya\" to help put down a rebel treasury official (Salakada Timmayya) who had briefly seized the capital and threatened them -- a tradition the source itself renders with garbled, seemingly conflated references to multiple Deccan sultans (Qutb Shahi, Bahmani/Farid Shahi, Nizam Shahi, Adil Shahi named together as a single approaching threat) and should be treated as a compressed, legend-inflected local memory of Vijayanagara-Deccan political turmoil rather than a precise chronicle.",
+          "kn": "ಪ್ರೊ. ಎಸ್.ಸಿ. ಪಾಟೀಲ ಸುಮಾರು ಮೂರು ಶತಮಾನಗಳ ಕಾಲ ಬಳ್ಳಾರಿ, ಕುರುಗೋಡು, ಅನಂತಪುರ ಮತ್ತು ಬಂಕಾಪುರ ಭಾಗಗಳನ್ನು ಆಳಿದ ಸಣ್ಣ ಆದರೆ ದೀರ್ಘಕಾಲ ಬಾಳಿದ ಹಂಡೆ ಪಾಳೆಯಗಾರ ಮನೆತನವನ್ನು ಅಧ್ಯಯನ ಮಾಡುತ್ತಾರೆ -- ಲೇಖಕರ ಪ್ರಕಾರ ಇದು ಪ್ರಮುಖ ರಾಜವಂಶಗಳ ಪರವಾಗಿ ಅನ್ಯಾಯವಾಗಿ ನಿರ್ಲಕ್ಷಿಸಲ್ಪಟ್ಟ ಪರಂಪರೆ. ಎರಡು ಬಗೆಯ ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯಗಳಿವೆ. ಮೊದಲನೆಯದು, ಗಟ್ಟಿಯಾದ ಶಾಸನೋಕ್ತ ನಿರಂತರತೆ: ಸು. 968-1500ರ ನಡುವಿನ ಶಾಸನಗಳು ಕರ್ನಾಟಕ, ಆಂಧ್ರಪ್ರದೇಶ ಮತ್ತು ಮಹಾರಾಷ್ಟ್ರದಾದ್ಯಂತ ಒಂದೇ ವಿಕಸಿಸುತ್ತಿರುವ ಮುಖಂಡ ಬಿರುದನ್ನು ಲೇಖಕರು ಗುರುತಿಸುತ್ತಾರೆ -- \"ಹಂದಿ ಅರಸ\" (ಬೇವಿನಹಳ್ಳಿ, 968), \"ಪಂದಿ ಅರಸ\"/\"ಪಂದರಸ\" (ಕೊಲ್ಲಾನುಪಾಕ 1081, ನಗುನೂರು 1112, ಮಂಗಳವೇಡೆ 1113, ಎಲ್ಲ ಕರ್ನಾಟಕದ ಹೊರಗೆ), \"ಹಿಂದಿಯರಸ\" (ಕೊಂಡಗುಳಿ, 1116), \"ಹಂದರುಗೆರೆ/ಹಂದರಕೆರಿ\" (ಮುತ್ತಗಿ, 1142 ಮತ್ತು 1165), \"ಹಂದರಸ\" (ಚಿಕ್ಕಸುಗೂರು, 1194), \"ಹಂಡೆಪ ನಾಯಕ\" (ಗೂಳಪಾಳ್ಯಂ, ಆಂಧ್ರ, 1407) ಮತ್ತು \"ಹಂಡೆ ಹನುಮ ನಾಯಕ\" (ಕಡದರಬೆಂಚಿ, ಆಂಧ್ರ, ಸು. 1500) -- 1182ರ ಹೆಮ್ಮಡಗಿ ಶಾಸನ \"ಹಂದಿ ಅರಸರು\" ಮತ್ತು \"ಹಂಡೆ ಅರಸರು\"ಗಳನ್ನು ಕ್ರಮವಾಗಿ ಪಂದೇಶ್ವರ ಮತ್ತು ಹಂಡೇಶ್ವರ ದೇವಾಲಯಗಳ ನಿರ್ಮಾತೃರೆಂದು ಸ್ಪಷ್ಟವಾಗಿ ಸಮೀಕರಿಸುತ್ತದೆ, ಇದನ್ನು ಲೇಖಕರು ಈ ಹೆಸರುರೂಪಗಳು ಒಂದೇ ನಿರಂತರ ಮನೆತನವನ್ನು ಸೂಚಿಸುತ್ತವೆಂಬುದಕ್ಕೆ ದೃಢೀಕರಣವೆಂದು ಪರಿಗಣಿಸುತ್ತಾರೆ. ಎರಡನೆಯದು, ಬಹಳ ನಂತರ ದಾಖಲಾದ ಮೌಖಿಕ ಕೈಫಿಯತ್ (ಸ್ಥಳೀಯ ಚರಿತ್ರೆ) ಸಂಪ್ರದಾಯ, ಇಲ್ಲಿ ಪರಿಶೀಲಿತ ಸತ್ಯಕ್ಕಿಂತ ಐತಿಹ್ಯವೆಂದೇ ಪರಿಗಣಿಸಲಾಗಿದೆ: ಮನೆತನ ಮಹಾರಾಷ್ಟ್ರದ ಅಕ್ಕಲಕೋಟ-ಸೊಲ್ಲಾಪುರ ಸಮೀಪ ಮೂಲದ್ದೆಂದೂ; ಬಿಜಾಪುರದ ಆದಿಲ್ ಶಾಹಿ ಸುಲ್ತಾನರ ಅಡಿಯಲ್ಲಿ ಮುತ್ತಗಿ ಮತ್ತು ವಡವಡಗಿ (ಬಸವನ ಬಾಗೇವಾಡಿ ತಾಲ್ಲೂಕು, ಈಗಿನ ವಿಜಯಪುರ ಜಿಲ್ಲೆ)ಯ ಸರನಾಡ ಗೌಡ \"ಬಾಲದ ಹನುಮಪ್ಪ ನಾಯಕ\" ಮಿಲಿಟರಿ ಸೇವೆಗಾಗಿ \"ವಜೀರಪ್ಪ\" ಬಿರುದು ಪಡೆದು (ಶಾಲಿವಾಹನ ಶಕ 1410, ಸು. 1488) ಬಳ್ಳಾರಿ, ತೆಕ್ಕಲುಕೋಟೆ ಮತ್ತು ಕುರುಗೋಡುಗಳ ಶಾಂತಿಸ್ಥಾಪನೆ-ಆಡಳಿತಕ್ಕೆ ಕಳುಹಿಸಲ್ಪಟ್ಟನೆಂದೂ, ನಂತರ ಹನ್ನೊಂದು ಪರಗಣೆಗಳಿಗೆ ವಿಸ್ತರಿಸಿತೆಂದೂ; ಸುಲ್ತಾನ ಆತನ ಐವರು ಮಕ್ಕಳಲ್ಲಿ ಒಬ್ಬನನ್ನು ಅರಮನೆ ಸೇವೆಗಾಗಿ ಕೇಳಿದಾಗ ಹನುಮಪ್ಪ ನಿರಾಕರಿಸಿ ಕೃಷ್ಣಾ ನದಿ ದಾಟಿ ಬಳ್ಳಾರಿಗೆ ಪಲಾಯನ ಮಾಡಿದನೆಂದೂ; ಮತ್ತು ಪ್ರತ್ಯೇಕವಾಗಿ ಉಲ್ಲೇಖಿತ ಅನಂತಪುರ ಕೈಫಿಯತ್ ಪ್ರಕಾರ, ಹಂಡೆ ಹನುಮಪ್ಪ ನಾಯಕನನ್ನು ವಿಜಯನಗರದ \"ರಾಮರಾಯ\" ಮತ್ತು \"ತಿರುಮಲರಾಯ\" ರಾಜಧಾನಿಯನ್ನು ಕ್ಷಣಕಾಲ ವಶಪಡಿಸಿಕೊಂಡು ಬೆದರಿಸಿದ್ದ ಬಂಡಾಯ ಬೊಕ್ಕಸ ಅಧಿಕಾರಿ (ಸಲಕದ ತಿಮ್ಮಯ್ಯ)ನನ್ನು ಅಡಗಿಸಲು ಕರೆಸಿಕೊಂಡರೆಂದೂ ಗುರುತಿಸುತ್ತದೆ -- ಈ ಐತಿಹ್ಯ ಹಲವು ದಖ್ಖನ್ ಸುಲ್ತಾನರನ್ನು (ಕುತುಬ್ ಶಾಹಿ, ಬಹಮನಿ/ಫರೀದ್ ಶಾಹಿ, ನಿಜಾಮ್ ಶಾಹಿ, ಆದಿಲ್ ಶಾಹಿ) ಒಂದೇ ಸಮೀಪಿಸುತ್ತಿರುವ ಬೆದರಿಕೆಯಾಗಿ ಒಟ್ಟುಗೂಡಿಸಿ, ಗೊಂದಲಮಯವಾಗಿ ನಿರೂಪಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಇದನ್ನು ವಿಜಯನಗರ-ದಖ್ಖನ್ ರಾಜಕೀಯ ಪ್ರಕ್ಷುಬ್ಧತೆಯ ಬಗೆಗಿನ ಸಂಕ್ಷಿಪ್ತ, ಐತಿಹ್ಯ-ಮಿಶ್ರಿತ ಸ್ಥಳೀಯ ಸ್ಮೃತಿಯೆಂದೇ ಪರಿಗಣಿಸಬೇಕೇ ಹೊರತು ನಿಖರ ಚರಿತ್ರೆಯೆಂದಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaradhya0000tven",
+            "locator": "Prof. S.C. Patil, \"ಹಂಡೆ ಪಾಳೆಯಗಾರರ ಮೂಲಪುರುಷ ಬಾ(ಬ)ಲದ ಹನುಮಪ್ಪನಾಯಕ\" (Balada Hanumappa Nayaka, founding figure of the Hande palegara chiefs), pp. 129-133, citing S.C. Patil's \"Hande Palegararu Kaifiyattugalu\" (Chalukya Samskriti Adhyayana Peetha, Kalaburagi) and inscriptions at Bevinahalli, Kollanupaka, Nagunuru, Mangalavede, Kondaguli, Muttagi, Hemmadagi, Chikkasugur, Goolapalyam and Kadadarabenchi"
           }
         ],
         "review": {
@@ -39233,6 +40276,228 @@
           {
             "sourceId": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945",
             "locator": "Part VI record (pp. 106-107), sent by Mr. Renukacharya of Bangalore; cross-referenced against companion grant \"Tumkur No. 1 (H.C. XII)\""
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "inscription-karch-vadhy2-yellampalli-harihara-ii-compensation",
+        "name": {
+          "en": "Yellampalli inscription: compensation for a royal officer's death (1383)",
+          "kn": "ಯಳ್ಳಂಪಳ್ಳಿ ಶಾಸನ: ರಾಜಕಾರ್ಯದಲ್ಲಿ ಮೃತ ಅಧಿಕಾರಿಗೆ ಪರಿಹಾರ (1383)"
+        },
+        "date": {
+          "from": 1383,
+          "to": 1383,
+          "era": "CE",
+          "precision": "year"
+        },
+        "placeId": "place-udupi",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-udupi",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "description": {
+          "en": "A 29-line Kannada inscription found near the Vishnumurti temple at Yellampalli (now part of Neelavara village, Udupi taluk), dated Saka 1305, Rudhirodgari samvatsara (1383 CE), reign of Vijayanagara king Harihara II. Records that when Jakkanna Odeya was governing Barkur province under Harihara II's order, a revenue officer named Anna Nidambur died while engaged in royal service; the inscription documents compensation granted to his son Shiva Nidambur -- 1157 katti-gadyanas assigned tax-free from the revenues of Yellampalli, Pejamangur and the harivari of Kutupadi -- witnessed by Mallappa Odeya of Honnavar under orders of the dandanayaka of Mudde. A companion inscription of 1399 records a similar death-in-service compensation, suggesting the Nidambur family regularly served as karttale (local enforcers) supporting Vijayanagara's provincial governors on the coast. The record also references the village's \"uru-hattu-praje\" (a ten-member village assembly) and its tax allocation, including funds set aside for \"uru upachara\" (village-assembly expenses).",
+          "kn": "ಯಳ್ಳಂಪಳ್ಳಿಯ (ಈಗ ಉಡುಪಿ ತಾಲ್ಲೂಕಿನ ನೀಲಾವರ ಗ್ರಾಮದ ಭಾಗ) ವಿಷ್ಣುಮೂರ್ತಿ ದೇವಸ್ಥಾನದ ಬಳಿ ಪತ್ತೆಯಾದ 29-ಸಾಲಿನ ಕನ್ನಡ ಶಾಸನ, ಶಕ 1305, ರುಧಿರೋದ್ಗಾರಿ ಸಂವತ್ಸರ (1383) ದಿನಾಂಕಿತ, ವಿಜಯನಗರ ಅರಸ ಹರಿಹರ IIನ ಆಳ್ವಿಕೆ. ಹರಿಹರ IIನ ಆಜ್ಞೆಯಂತೆ ಜಕ್ಕಣ್ಣ ಒಡೆಯ ಬಾರಕೂರು ಪ್ರಾಂತ ಆಳುತ್ತಿದ್ದಾಗ, ಆದಾಯ ಅಧಿಕಾರಿ ಅಣ್ಣ ನಿಡಂಬೂರ ರಾಜಕಾರ್ಯದಲ್ಲಿ ನಿರತನಾಗಿದ್ದಾಗ ಮರಣ ಹೊಂದಿದನೆಂದೂ, ಅವನ ಮಗ ಶಿವ ನಿಡಂಬೂರನಿಗೆ ಪರಿಹಾರ ನೀಡಲಾಯಿತೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ -- ಯಳ್ಳಂಪಳ್ಳಿ, ಪೆಜಮಂಗೂರು ಮತ್ತು ಕುತುಪಾಡಿಯ ಹರವರಿಯ ಆದಾಯದಿಂದ ತೆರಿಗೆ-ಮುಕ್ತವಾಗಿ ನಿಗದಿಪಡಿಸಿದ 1157 ಕಟ್ಟಿ-ಗದ್ಯಾಣಗಳು -- ಮುದ್ದೆಯ ದಂಡನಾಯಕನ ಆಜ್ಞೆಯಂತೆ ಹೊನ್ನಾವರದ ಮಲ್ಲಪ್ಪ ಒಡೆಯನ ಸಾಕ್ಷ್ಯದೊಂದಿಗೆ. 1399ರ ಸಹವರ್ತಿ ಶಾಸನ ಇದೇ ರೀತಿಯ ಸೇವಾ-ಮರಣ ಪರಿಹಾರವನ್ನು ದಾಖಲಿಸುತ್ತದೆ, ಇದು ನಿಡಂಬೂರ ಕುಟುಂಬ ಕರಾವಳಿಯಲ್ಲಿ ವಿಜಯನಗರದ ಪ್ರಾಂತೀಯ ಗವರ್ನರ್‌ಗಳನ್ನು ಬೆಂಬಲಿಸುವ ಕಟ್ಟಳೆಯವರಾಗಿ (ಸ್ಥಳೀಯ ಜಾರಿ ಅಧಿಕಾರಿ) ನಿಯಮಿತವಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸುತ್ತಿದ್ದರೆಂದು ಸೂಚಿಸುತ್ತದೆ. ದಾಖಲೆ ಗ್ರಾಮದ \"ಊರು-ಹತ್ತು ಪ್ರಜೆ\" (ಹತ್ತು-ಸದಸ್ಯ ಗ್ರಾಮ ಸಭೆ) ಮತ್ತು ಅದರ ತೆರಿಗೆ ಹಂಚಿಕೆಯನ್ನೂ ಉಲ್ಲೇಖಿಸುತ್ತದೆ, \"ಊರ ಉಪಚಾರ\"ಕ್ಕಾಗಿ (ಗ್ರಾಮಸಭಾ ವೆಚ್ಚ) ಎತ್ತಿಟ್ಟ ನಿಧಿ ಸೇರಿ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "B. Vasanta Shetty, \"ದಕ್ಷಿಣ ಕನ್ನಡದಲ್ಲಿ ಇತ್ತೀಚೆಗೆ ದೊರೆತ ಮೂರು ವಿಜಯನಗರ ಶಾಸನಗಳು\" (Three recently found Vijayanagara inscriptions in Dakshina Kannada), pp. 70-71"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "inscription-karch-vadhy2-ajri-janani-privileges",
+        "name": {
+          "en": "Ajri inscription: privileges of the \"janani\" landholding officials (1428)",
+          "kn": "ಅಜ್ರಿ ಶಾಸನ: \"ಜನನಿ\" ಭೂಒಡೆತನ ಅಧಿಕಾರಿಗಳ ಸವಲತ್ತುಗಳು (1428)"
+        },
+        "date": {
+          "from": 1428,
+          "to": 1428,
+          "era": "CE",
+          "precision": "year"
+        },
+        "placeId": "place-udupi",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-udupi",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "description": {
+          "en": "A 29-line Kannada inscription found at Tenku Bayalu, Ajri village (Kundapura taluk), dated Saka 1349, Vartamana Parabhava samvatsara (1428 CE), reign of Vijayanagara king Devaraya II, when Mahamantri Narasimhadeva Odeya administered Barkur province and Achappa held charge of the Ajri (Ajire)-Mungina Nadu locality. The inscription records that Ajri had six landholding officials known as \"janani,\" naming three principal ones -- Tannu Heggade, Beera Heggade and Chonu Heggade -- who jointly set out a katta (rule/regulation) exempting the localities of Tenku Bayalu, Holetalamane, Todu and Ambalagere from tax collection and from entry by soldiers (bantaru) or officials. The record shows these janani held a recognized, land-based standing in Barkur-province village administration -- attested elsewhere (a Herange inscription) receiving ceremonial payment when summoned -- serving as witnesses and administrators in land allocation, sale and mortgage matters.",
+          "kn": "ಅಜ್ರಿ ಗ್ರಾಮದ (ಕುಂದಾಪುರ ತಾಲ್ಲೂಕು) ತೆಂಕು ಬಯಲಿನಲ್ಲಿ ಪತ್ತೆಯಾದ 29-ಸಾಲಿನ ಕನ್ನಡ ಶಾಸನ, ಶಕ 1349, ವರ್ತಮಾನ ಪರಾಭವ ಸಂವತ್ಸರ (1428) ದಿನಾಂಕಿತ, ವಿಜಯನಗರ ಅರಸ ದೇವರಾಯ IIನ ಆಳ್ವಿಕೆ, ಆಗ ಮಹಾಮಂತ್ರಿ ನರಸಿಂಹದೇವ ಒಡೆಯ ಬಾರಕೂರು ಪ್ರಾಂತ ಆಳುತ್ತಿದ್ದು, ಅಚಪ್ಪ ಅಜ್ರಿ (ಅಜಿರೆ)-ಮುಂಗಿನ ನಾಡಿನ ಉಸ್ತುವಾರಿ ಹೊಂದಿದ್ದ. ಶಾಸನ ಅಜ್ರಿಯಲ್ಲಿ ಆರು \"ಜನನಿ\" ಎಂಬ ಭೂಒಡೆತನ ಅಧಿಕಾರಿಗಳಿದ್ದರೆಂದೂ, ಅವರಲ್ಲಿ ಮೂವರು ಮುಖ್ಯರಾದ ತನ್ನು ಹೆಗ್ಗಡೆ, ಬೀರ ಹೆಗ್ಗಡೆ ಮತ್ತು ಚೋಣು ಹೆಗ್ಗಡೆ ಜಂಟಿಯಾಗಿ ತೆಂಕು ಬಯಲು, ಹೊಳೆತಳಮನೆ, ತೋಡು ಮತ್ತು ಅಂಬಲಗೆರೆ ಪ್ರದೇಶಗಳನ್ನು ತೆರಿಗೆ ವಸೂಲಿ ಮತ್ತು ಸೈನಿಕರ (ಬಂಟರು) ಅಥವಾ ಅಧಿಕಾರಿಗಳ ಪ್ರವೇಶದಿಂದ ವಿನಾಯಿತಿಗೊಳಿಸುವ ಕಟ್ಟನ್ನು (ನಿಯಮ) ಸ್ಥಾಪಿಸಿದರೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ. ಈ ಜನನಿಗಳು ಬಾರಕೂರು ಪ್ರಾಂತದ ಗ್ರಾಮಾಡಳಿತದಲ್ಲಿ ಗುರುತಿಸಲ್ಪಟ್ಟ, ಭೂ-ಆಧಾರಿತ ಸ್ಥಾನಮಾನ ಹೊಂದಿದ್ದರೆಂದು ದಾಖಲೆ ತೋರಿಸುತ್ತದೆ -- ಬೇರೆಡೆ (ಹೆರಂಜೆ ಶಾಸನ) ಕರೆಸಿದಾಗ ಗೌರವ ಸಂದಾಯ ಪಡೆಯುತ್ತಿದ್ದರೆಂದು ದೃಢಪಟ್ಟಿದೆ -- ಭೂಮಿ ಹಂಚಿಕೆ, ಮಾರಾಟ ಮತ್ತು ಅಡವು ವಿಷಯಗಳಲ್ಲಿ ಸಾಕ್ಷಿಗಳಾಗಿ ಮತ್ತು ಆಡಳಿತಗಾರರಾಗಿ ಸೇವೆ ಸಲ್ಲಿಸುತ್ತಿದ್ದರು."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "B. Vasanta Shetty, \"ದಕ್ಷಿಣ ಕನ್ನಡದಲ್ಲಿ ಇತ್ತೀಚೆಗೆ ದೊರೆತ ಮೂರು ವಿಜಯನಗರ ಶಾಸನಗಳು\" (Three recently found Vijayanagara inscriptions in Dakshina Kannada), pp. 71-72"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "inscription-karch-vadhy3-va-museum-erambarage-jinalaya",
+        "name": {
+          "en": "Victoria & Albert Museum Parshvanatha pedestal inscription: Mummadi Singa and the Erambarage Jinalaya (c. late 13th century)",
+          "kn": "ವಿಕ್ಟೋರಿಯಾ ಮತ್ತು ಆಲ್ಬರ್ಟ್ ಮ್ಯೂಸಿಯಂ ಪಾರ್ಶ್ವನಾಥ ಪೀಠ ಶಾಸನ: ಮುಮ್ಮಡಿ ಸಿಂಗ ಮತ್ತು ಎರಂಬರಗೆ ಜಿನಾಲಯ (ಸು. 13ನೇ ಶತಮಾನದ ಅಂತ್ಯ)"
+        },
+        "date": {
+          "from": 1275,
+          "to": 1300,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeId": "place-koppal",
+        "polityId": "polity-kampili",
+        "districtAuditId": "audit-koppal",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "description": {
+          "en": "An undated Kannada inscription on the pedestal of a Parshvanatha sculpture, noticed by the epigraphist Channabasappa S. Patil during a 1995 visit to the Victoria and Albert Museum, London -- letter forms place it in the late 13th century CE. It records that the Jain dharma/community at Erambarage (identified with present-day Yalburga, Koppal district) was disrupted by \"the persecution of Mummadi Singa\" (mummudi singana badheyinda), after which the Acharya Balendu Maladhari intervened; the shrine was subsequently rebuilt when Mallisetti, son of Ketisetti of Mindaguddi, had the image of Parshvadeva made for the renovated Jinalaya at Erambarage. Patil identifies this Mummadi Singa with the Kampili chiefdom's founder (r. c. 1280-1287, attested at Kummata by a Lakshmeshwar inscription of 1287), making this the only known record of friction between the Kampili chiefs and a local Jain community -- notable since Kampilaraya's dynasty is otherwise remembered, via other inscriptions and the Panchala-Ganga Chennarama's Samgatya poem, as reasserting control over Kummata's Jain population after displacing them.",
+          "kn": "ಶಾಸನಶಾಸ್ತ್ರಜ್ಞ ಚನ್ನಬಸಪ್ಪ ಎಸ್. ಪಾಟೀಲ 1995ರಲ್ಲಿ ಲಂಡನ್‌ನ ವಿಕ್ಟೋರಿಯಾ ಮತ್ತು ಆಲ್ಬರ್ಟ್ ಮ್ಯೂಸಿಯಂಗೆ ಭೇಟಿ ನೀಡಿದಾಗ ಗಮನಿಸಿದ, ಪಾರ್ಶ್ವನಾಥ ಶಿಲ್ಪದ ಪೀಠದ ಮೇಲಿನ ದಿನಾಂಕವಿಲ್ಲದ ಕನ್ನಡ ಶಾಸನ -- ಅಕ್ಷರ ಆಕಾರಗಳು ಇದನ್ನು 13ನೇ ಶತಮಾನದ ಅಂತ್ಯಕ್ಕೆ ಇರಿಸುತ್ತವೆ. ಎರಂಬರಗೆಯ (ಈಗಿನ ಕೊಪ್ಪಳ ಜಿಲ್ಲೆಯ ಯಲಬುರ್ಗ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ) ಜೈನ ಧರ್ಮ/ಸಮುದಾಯ \"ಮುಮ್ಮಡಿ ಸಿಂಗನ ಬಾಧೆಯಿಂದ\" ಅಸ್ತವ್ಯಸ್ತಗೊಂಡಿತೆಂದೂ, ನಂತರ ಆಚಾರ್ಯ ಬಾಳೇಂದು ಮಲಧಾರಿ ಮಧ್ಯಪ್ರವೇಶಿಸಿದನೆಂದೂ ದಾಖಲಿಸುತ್ತದೆ; ಮಿಂಡಗುದಲಿಯ ಕೇತಿಸೆಟ್ಟಿಯ ಮಗ ಮಲ್ಲಿಸೆಟ್ಟಿ ಎರಂಬರಗೆಯ ನವೀಕರಿಸಿದ ಜಿನಾಲಯಕ್ಕೆ ಪಾರ್ಶ್ವದೇವರ ವಿಗ್ರಹವನ್ನು ಮಾಡಿಸಿದಾಗ ದೇವಾಲಯ ನಂತರ ಪುನರ್ನಿರ್ಮಾಣಗೊಂಡಿತು. ಪಾಟೀಲ ಈ ಮುಮ್ಮಡಿ ಸಿಂಗನನ್ನು ಕಂಪಿಲಿ ಸಂಸ್ಥಾನದ ಸ್ಥಾಪಕ (ಆ. ಸು. 1280-1287, 1287ರ ಲಕ್ಷ್ಮೇಶ್ವರ ಶಾಸನದಿಂದ ಕುಮ್ಮಟದಲ್ಲಿ ದೃಢಪಟ್ಟ) ಎಂದು ಗುರುತಿಸುತ್ತಾರೆ, ಇದು ಕಂಪಿಲಿ ಮುಖಂಡರು ಮತ್ತು ಸ್ಥಳೀಯ ಜೈನ ಸಮುದಾಯದ ನಡುವಿನ ಘರ್ಷಣೆಯ ಏಕೈಕ ತಿಳಿದ ದಾಖಲೆಯಾಗಿಸುತ್ತದೆ -- ಇತರೆಡೆ, ಬೇರೆ ಶಾಸನಗಳು ಮತ್ತು ಪಾಂಚಾಳ ಗಂಗನ ಚೆನ್ನರಾಮನ ಸಾಂಗತ್ಯ ಕಾವ್ಯದ ಮೂಲಕ, ಕಂಪಿಲರಾಯನ ವಂಶ ಕುಮ್ಮಟದ ಜೈನ ಜನಸಂಖ್ಯೆಯನ್ನು ಸ್ಥಳಾಂತರಿಸಿದ ನಂತರ ಮತ್ತೆ ನಿಯಂತ್ರಣ ಸ್ಥಾಪಿಸಿದಂತೆ ಸ್ಮರಿಸಲ್ಪಡುತ್ತಾರೆ ಎಂಬ ಕಾರಣಕ್ಕೆ ಗಮನಾರ್ಹ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mlsh",
+            "locator": "Channabasappa S. Patil, \"ಮುಮ್ಮಡಿ ಸಿಂಗನ ಮೇಲೆ ಮತ್ತಷ್ಟು ಬೆಳಕು\" (More light on Mummadi Singa), pp. 93-95: inscription noticed at the Victoria & Albert Museum, London, 1995; full Kannada text transcribed"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "inscription-karch-shettibettu-pillar-harihara-i-1347",
+        "name": {
+          "en": "Shettibettu six-faced pillar inscription of Harihara I (Saka 1269 / 1347 CE)",
+          "kn": "ಶೆಟ್ಟಿಬೆಟ್ಟು ಆರುಮುಖದ ಕಂಬ ಶಾಸನ - ಒಂದನೆಯ ಹರಿಹರ (ಶಕ 1269 / 1347)"
+        },
+        "date": {
+          "from": 1347,
+          "to": 1347,
+          "era": "CE",
+          "precision": "year"
+        },
+        "placeId": "place-kantavara",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-dakshina-kannada",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "description": {
+          "en": "Dr. P. N. Narasimhamurthy publishes a previously unrecorded six-faced pillar inscription (sthambha-shasana) found in a field called \"Kannijalu\" (since converted to a coconut grove) at Shettibettu, Palodka village, near the Kanteshwara temple at Kantavara -- historically in Karkala taluk, reassigned to Mangaluru taluk after district reorganisation. The pillar carries a Shivalinga-and-Nandi carving at its top and twelve lines of text across five of its six faces. It opens \"Svasti shrimatu maharaya Hariyappa vodeyaru rajyavamgaivuttirala\" and names his pradhani (chief minister) \"Hadapada Goparasa\" as governing \"Mangaluru rajya,\" dated to Sarvajitu samvatsara, month of Vrishabha (roughly May), 20th day, a Thursday. The author equates this with Saka 1269 = 14 April 1347 CE -- about a year earlier than a previously known Kanteshwara temple inscription of the same king and minister (Sarvadhari samvatsara, Saka 1270 = 29 April 1348 CE per K. V. Ramesh). The text records a land dispute: the Kanteshwara temple's \"Manjattayam Betta\" plot (with house and well), earlier donated to the temple without transferring underlying customary rights, was disputed by its original rights-holders (moola-hakku); one Madadaha paid them gold coins (amount not stated) to clear title. Narasimhamurthy identifies this as the earliest known Vijayanagara-period inscription so far recorded from the Karkala/coastal Dakshina Kannada region, narrowly ahead of the Kanteshwara temple record. He also discusses a still-earlier west-coast inscription at Attavara, Mangaluru (Saka 1267, Parthiva samvatsara; the author computes 4 February 1346 CE, K. V. Ramesh 17 January 1345 CE), which names Sankaradeva as rajyapala (governor) of Mangaluru rajya and honours \"Viru Bukkanna Vodeyaru\" (Bukka I, made yuvaraja by his brother Harihara I by 1344 CE per other records) -- together suggesting the west coast, split into Barakuru rajya and Mangaluru rajya provinces under appointed governors, was already under organised Vijayanagara administration by 1346 CE.",
+          "kn": "ಡಾ. ಪಿ. ಎನ್. ನರಸಿಂಹಮೂರ್ತಿ ಈ ಹಿಂದೆ ದಾಖಲಾಗದ ಆರುಮುಖದ ಕಂಬ ಶಾಸನವೊಂದನ್ನು ಪ್ರಕಟಿಸುತ್ತಾರೆ -- ಕಾಂತಾವರದ ಕಾಂತೇಶ್ವರ ದೇವಾಲಯ ಸಮೀಪ, ಪಾಲಡ್ಕ ಗ್ರಾಮದ ಶೆಟ್ಟಿಬೆಟ್ಟಿನಲ್ಲಿ \"ಕಿನ್ನಿಜಾಲು\" ಎಂಬ ಗದ್ದೆಯಲ್ಲಿ (ಈಗ ತೆಂಗಿನ ತೋಟ) ದೊರೆತಿದ್ದು -- ಚಾರಿತ್ರಿಕವಾಗಿ ಕಾರ್ಕಳ ತಾಲ್ಲೂಕಿನಲ್ಲಿದ್ದು, ಜಿಲ್ಲಾ ಪುನರ್ರಚನೆ ನಂತರ ಮಂಗಳೂರು ತಾಲ್ಲೂಕಿಗೆ ಸೇರಿದೆ. ಕಂಬದ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಶಿವಲಿಂಗ-ನಂದಿ ಕೆತ್ತನೆ ಇದ್ದು, ಆರರಲ್ಲಿ ಐದು ಮುಖಗಳಲ್ಲಿ ಒಟ್ಟು ಹನ್ನೆರಡು ಸಾಲುಗಳ ಬರಹ ಇದೆ. \"ಸ್ವಸ್ತಿ ಶ್ರೀಮತು ಮಹಾರಾಯ ಹರಿಯಪ್ಪ ವೊಡೆಯರು ರಾಜ್ಯವಂಗೈವುತ್ತಿರಲು\" ಎಂದು ಆರಂಭವಾಗಿ, ಪ್ರಧಾನಿ \"ಹಡಪದ ಗೋಪರಸ\" ಮಂಗಳೂರು ರಾಜ್ಯ ಆಳುತ್ತಿದ್ದನ್ನು ಹೆಸರಿಸುತ್ತದೆ, ಸರ್ವಜಿತು ಸಂವತ್ಸರ, ವೃಷಭ ಮಾಸ (ಸುಮಾರು ಮೇ), 20ನೇ ದಿನ, ಗುರುವಾರ ದಿನಾಂಕಿತ. ಲೇಖಕರು ಇದನ್ನು ಶಕ 1269 = 14 ಏಪ್ರಿಲ್ 1347 ಎಂದು ಸಮೀಕರಿಸುತ್ತಾರೆ -- ಅದೇ ಅರಸ ಮತ್ತು ಮಂತ್ರಿಯ ಈ ಹಿಂದೆ ತಿಳಿದಿದ್ದ ಕಾಂತೇಶ್ವರ ದೇವಾಲಯ ಶಾಸನಕ್ಕಿಂತ (ಸರ್ವಧಾರಿ ಸಂವತ್ಸರ, ಶಕ 1270 = 29 ಏಪ್ರಿಲ್ 1348, ಕೆ. ವಿ. ರಮೇಶ್ ಪ್ರಕಾರ) ಸುಮಾರು ಒಂದು ವರ್ಷ ಹಿಂದಿನದು. ಪಠ್ಯ ಒಂದು ಭೂವ್ಯಾಜ್ಯವನ್ನು ದಾಖಲಿಸುತ್ತದೆ: ಕಾಂತೇಶ್ವರ ದೇವಾಲಯದ \"ಮಂಜತ್ತಾಯಂ ಬೆಟ್ಟ\" ಭೂಮಿಯನ್ನು (ಮನೆ, ಬಾವಿ ಸಹಿತ) ಹಿಂದೆ ದೇವಾಲಯಕ್ಕೆ ದಾನ ಮಾಡಿದ್ದರೂ ಮೂಲ ಹಕ್ಕು ವರ್ಗಾವಣೆಯಾಗಿರಲಿಲ್ಲ; ಇದನ್ನು ಮೂಲಿಗರು (ಮೂಲ ಹಕ್ಕುದಾರರು) ವಿವಾದಿಸಿದ್ದರು; ಮಾದಡಹ ಎಂಬಾತ ಅವರಿಗೆ ಚಿನ್ನದ ನಾಣ್ಯ (ಪ್ರಮಾಣ ಶಾಸನದಲ್ಲಿಲ್ಲ) ನೀಡಿ ಹಕ್ಕು ಸ್ಪಷ್ಟಗೊಳಿಸಿದನು. ನರಸಿಂಹಮೂರ್ತಿ ಇದನ್ನು ಕಾರ್ಕಳ/ಕರಾವಳಿ ದಕ್ಷಿಣ ಕನ್ನಡ ಪ್ರದೇಶದಿಂದ ಈವರೆಗೆ ದಾಖಲಾದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ವಿಜಯನಗರ-ಕಾಲೀನ ಶಾಸನವೆಂದು ಗುರುತಿಸುತ್ತಾರೆ, ಕಾಂತೇಶ್ವರ ದೇವಾಲಯ ದಾಖಲೆಗಿಂತ ಸ್ವಲ್ಪವೇ ಮುಂದೆ. ಇನ್ನೂ ಹಿಂದಿನ ಪಶ್ಚಿಮ ಕರಾವಳಿ ಶಾಸನವೊಂದನ್ನೂ (ಮಂಗಳೂರಿನ ಅತ್ತಾವರ, ಶಕ 1267, ಪಾರ್ಥಿವ ಸಂವತ್ಸರ; ಲೇಖಕರ ಲೆಕ್ಕದಲ್ಲಿ 4 ಫೆಬ್ರವರಿ 1346, ಕೆ. ವಿ. ರಮೇಶ್ ಪ್ರಕಾರ 17 ಜನವರಿ 1345) ಚರ್ಚಿಸುತ್ತಾರೆ, ಇದು ಸಂಕರದೇವನನ್ನು ಮಂಗಳೂರು ರಾಜ್ಯದ ರಾಜ್ಯಪಾಲನೆಂದೂ \"ವೀರ ಬುಕ್ಕಣ್ಣ ವೊಡೆಯರು\"ನನ್ನು (ಬುಕ್ಕ I, ಇತರ ದಾಖಲೆಗಳ ಪ್ರಕಾರ 1344ರ ವೇಳೆಗೆ ಸಹೋದರ ಹರಿಹರನಿಂದ ಯುವರಾಜನಾಗಿ ನೇಮಿಸಲ್ಪಟ್ಟ) ಗೌರವಿಸುತ್ತದೆ -- ಇವೆರಡೂ ಒಟ್ಟಾಗಿ, ಬಾರಕೂರು ರಾಜ್ಯ ಮತ್ತು ಮಂಗಳೂರು ರಾಜ್ಯ ಎಂಬ ಎರಡು ಪ್ರಾಂತಗಳಾಗಿ ವಿಂಗಡಿತ ಪಶ್ಚಿಮ ಕರಾವಳಿ, ನೇಮಿತ ರಾಜ್ಯಪಾಲರ ಅಡಿಯಲ್ಲಿ, 1346ರ ವೇಳೆಗಾಗಲೇ ಸಂಘಟಿತ ವಿಜಯನಗರ ಆಡಳಿತಕ್ಕೆ ಒಳಪಟ್ಟಿತ್ತೆಂದು ಸೂಚಿಸುತ್ತವೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-14-0000drrg",
+            "locator": "Dr. P. N. Narasimhamurthy, \"ವಿಜಯನಗರ ಕಾಲೀನ ಒಂದು ಹೊಸ ಶಾಸನ\" (A new Vijayanagara-period inscription), pp. 19-40, citing K. V. Ramesh's dating of the comparanda Kanteshwara temple and Attavara inscriptions"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "inscription-karch-kugve-virgal-harihara-i-1339",
+        "name": {
+          "en": "Kugve hero-stone (virgal) inscription of Harihara I (11 April 1339 CE)",
+          "kn": "ಕುಗ್ವೆ ವೀರಗಲ್ಲು ಶಾಸನ - ಒಂದನೆಯ ಹರಿಹರ (11 ಏಪ್ರಿಲ್ 1339)"
+        },
+        "date": {
+          "from": 1339,
+          "to": 1339,
+          "era": "CE",
+          "precision": "year"
+        },
+        "placeId": "place-kugve",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-shivamogga",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "description": {
+          "en": "Dr. P. N. Narasimhamurthy discusses a hero-stone (virgal) at Kugve village, Talaguppe hobli, Sagara taluk -- close to the west coast -- dated Pramadi samvatsara, Vaishakha (11 April 1339 CE), commemorating a warrior who apparently died in a \"turuka-kalaga\" (battle with Turkic/Muslim forces) and explicitly naming \"Sri Vira Harihara Vodeya\" as the reigning king. The author argues this is the earliest dated stone inscription of the Vijayanagara period found so far, and that its findspot near the west coast implies Harihara I's authority had already reached that far by 1339 -- which in turn requires his reign to have begun some years earlier, since establishing organised administration (the later Mangaluru rajya and Barakuru rajya provinces) over such a distance from Hampi took time. Read together with the Badami \"Tattukote\" inscription of 1340 CE (which titles Harihara I mahamandaleshvara and \"lord of the eastern and western seas\" while still a Hoysala feudatory), the article endorses historian P. B. Desai's conclusion that Vijayanagara's founding falls in 1336 CE, and cites the Halkavatige copper plates (found near Navali, Lingasugur taluk, Raichur district) -- which, per Dr. Suryanath Kamath, record Harihara I's coronation on 18/19 April 1336 CE at Vidyaranya's urging -- as having settled the long-running scholarly dispute over the exact founding date, together with the earlier-known Besrapura and Kapalur inscriptions. The author also rejects the \"forged record\" suspicion sometimes cast on the Halkavatige plates merely for naming Vidyaranya, noting several independent stone inscriptions from the Malnad and west-coast region likewise mention him.",
+          "kn": "ಡಾ. ಪಿ. ಎನ್. ನರಸಿಂಹಮೂರ್ತಿ ಕುಗ್ವೆ ಗ್ರಾಮ, ತಾಳಗುಪ್ಪ ಹೋಬಳಿ, ಸಾಗರ ತಾಲ್ಲೂಕಿನಲ್ಲಿ -- ಪಶ್ಚಿಮ ಕರಾವಳಿಗೆ ಸಮೀಪ -- ದೊರೆತ ವೀರಗಲ್ಲನ್ನು ಚರ್ಚಿಸುತ್ತಾರೆ, ಪ್ರಮಾದಿ ಸಂವತ್ಸರ, ವೈಶಾಖ (11 ಏಪ್ರಿಲ್ 1339) ದಿನಾಂಕಿತ, \"ತುರುಕಾಳಗ\"ದಲ್ಲಿ (ತುರ್ಕಿ/ಮುಸ್ಲಿಂ ಪಡೆಗಳೊಂದಿಗಿನ ಯುದ್ಧ) ಮಡಿದ ವೀರಯೋಧನೊಬ್ಬನ ಸ್ಮರಣಾರ್ಥ, \"ಶ್ರೀವೀರ ಹರಿಹರ ವೊಡೆಯ\" ಆಳ್ವಿಕೆ ಮಾಡುತ್ತಿದ್ದುದನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಹೆಸರಿಸುತ್ತದೆ. ಲೇಖಕರ ಪ್ರಕಾರ ಇದು ಈವರೆಗೆ ದೊರೆತಿರುವ ವಿಜಯನಗರ-ಕಾಲದ ಅತ್ಯಂತ ಪ್ರಾಚೀನ ದಿನಾಂಕಿತ ಶಿಲಾಶಾಸನ; ಪಶ್ಚಿಮ ಕರಾವಳಿ ಸಮೀಪ ಇದು ದೊರೆತಿರುವುದು ಒಂದನೆಯ ಹರಿಹರನ ಅಧಿಕಾರ 1339ರ ವೇಳೆಗಾಗಲೇ ಅಷ್ಟು ದೂರ ವಿಸ್ತರಿಸಿತ್ತೆಂದು ಸೂಚಿಸುತ್ತದೆ -- ಹಂಪೆಯಿಂದ ಅಷ್ಟು ದೂರ ಸಂಘಟಿತ ಆಡಳಿತ (ನಂತರದ ಮಂಗಳೂರು ರಾಜ್ಯ ಮತ್ತು ಬಾರಕೂರು ರಾಜ್ಯ ಪ್ರಾಂತಗಳು) ಸ್ಥಾಪಿಸಲು ಸಮಯ ಬೇಕಾಗಿದ್ದರಿಂದ, ಇದು ಆತನ ಆಳ್ವಿಕೆ ಕೆಲ ವರ್ಷಗಳ ಹಿಂದೆಯೇ ಆರಂಭವಾಗಿರಬೇಕೆಂದು ಬಯಸುತ್ತದೆ. ಬಾದಾಮಿಯ \"ತಟ್ಟುಕೋಟೆ\" ಶಾಸನದೊಂದಿಗೆ (1340, ಇನ್ನೂ ಹೊಯ್ಸಳ ಸಾಮಂತನಾಗಿದ್ದ ಒಂದನೆಯ ಹರಿಹರನನ್ನು ಮಹಾಮಂಡಲೇಶ್ವರ ಮತ್ತು \"ಪೂರ್ವ-ಪಶ್ಚಿಮ ಸಮುದ್ರಾಧಿಪತಿ\" ಎಂದು ಬಿರುದಿಸುತ್ತದೆ) ಜೊತೆಗಿಟ್ಟು ಓದಿದಾಗ, ಲೇಖನ ಇತಿಹಾಸಕಾರ ಪಿ.ಬಿ. ದೇಸಾಯಿಯವರ ವಿಜಯನಗರ ಸ್ಥಾಪನೆ 1336ರಲ್ಲಾಯಿತೆಂಬ ತೀರ್ಮಾನವನ್ನು ಅನುಮೋದಿಸುತ್ತದೆ, ಮತ್ತು ಹಲ್ಕಾವಟಿಗೆ ತಾಮ್ರಪಟಗಳನ್ನು (ರಾಯಚೂರು ಜಿಲ್ಲೆಯ ಲಿಂಗಸಗೂರು ತಾಲ್ಲೂಕಿನ ನಾವಲಿ ಬಳಿ ದೊರೆತ) -- ಡಾ. ಸೂರ್ಯನಾಥ ಕಾಮತರ ಪ್ರಕಾರ ಒಂದನೆಯ ಹರಿಹರನ 18/19 ಏಪ್ರಿಲ್ 1336ರ ಪಟ್ಟಾಭಿಷೇಕವನ್ನು ವಿದ್ಯಾರಣ್ಯರ ಪ್ರೇರಣೆಯಿಂದ ದಾಖಲಿಸುತ್ತವೆ -- ಈ ಹಿಂದೆ ತಿಳಿದಿದ್ದ ಬೆಸರಾಪುರ ಮತ್ತು ಕಪಾಲೂರು ಶಾಸನಗಳೊಂದಿಗೆ, ಸ್ಥಾಪನಾ ದಿನಾಂಕದ ಬಗೆಗಿನ ದೀರ್ಘ ವಿದ್ವತ್ ವಿವಾದವನ್ನು ಇತ್ಯರ್ಥಗೊಳಿಸಿದೆಯೆಂದು ಉಲ್ಲೇಖಿಸುತ್ತಾರೆ. ಕೇವಲ ವಿದ್ಯಾರಣ್ಯರ ಹೆಸರಿದೆ ಎಂಬ ಕಾರಣಕ್ಕೆ ಹಲ್ಕಾವಟಿಗೆ ತಾಮ್ರಪಟಗಳ ಮೇಲಿನ \"ಕೃತಕ ದಾಖಲೆ\" ಎಂಬ ಸಂಶಯವನ್ನೂ ಲೇಖಕರು ತಿರಸ್ಕರಿಸುತ್ತಾರೆ, ಮಲೆನಾಡು ಮತ್ತು ಪಶ್ಚಿಮ ಕರಾವಳಿ ಪ್ರದೇಶದಿಂದ ಸ್ವತಂತ್ರ ಶಿಲಾಶಾಸನಗಳೂ ಅವರನ್ನು ಹೆಸರಿಸುವುದನ್ನು ಗಮನಿಸುತ್ತಾರೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-18-0000drrg",
+            "locator": "Dr. P. N. Narasimhamurthy, \"ಕುಗ್ವೆಯ ವೀರಗಲ್ಲು ಶಾಸನ ಮತ್ತು ವಿಜಯನಗರ ಸ್ಥಾಪನಾ ಕಾಲ ವಿಚಾರ\" (The Kugve hero-stone inscription and the question of Vijayanagara's founding date), pp. 1-5, citing P.B. Desai and Dr. Suryanath Kamath on the Halkavatige copper plates"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "inscription-karch-karkala-sringeri-binnavattale-1515",
+        "name": {
+          "en": "Karkala-Sringeri boundary settlement document (\"binnavattale\"), Saka 1437 / 1515 CE",
+          "kn": "ಕಾರ್ಕಳ-ಶೃಂಗೇರಿ ಗಡಿ ಇತ್ಯರ್ಥ ದಾಖಲೆ (\"ಬಿನ್ನವತ್ತಳೆ\"), ಶಕ 1437 / 1515"
+        },
+        "date": {
+          "from": 1515,
+          "to": 1515,
+          "era": "CE",
+          "precision": "year"
+        },
+        "placeId": "place-sringeri",
+        "polityId": "polity-vijayanagara",
+        "districtAuditId": "audit-chikkamagaluru",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "description": {
+          "en": "Dr. Keladi Venkatesh Joyis publishes the full text of a previously unpublished \"binnavattale\" (a formal written settlement/petition) preserved as a palm-leaf copy in a bundle of Vijayanagara-period document-copies from the collection of the Sringeri astrologer family of Shankaranarayana Joyisa -- the same collection discussed at the previous Hampi Utsava conference (Vijayanagara Adhyayana Vol. 18). Dated Saka 1437, Dhatu samvatsara, Vaishakha shuddha 5, Sunday (equated here to 1515 CE), the document is issued by the chiefs of Karkala (led by \"Bairarasa Deva,\" son of Padumaladevi of Karkala) to the Sringeri matha under its pontiff \"Ramachandra Bharati\" (also referenced as Narasimha Bharati elsewhere in the text). It records that an officer named Mallikarjuna, a predecessor of the Karkala chiefs, had encroached on roughly 6,000 Sringeri-affiliated seeme (territorial units, including Kellanadu, Kikkunda, Kiggenemmaru, Haruru, Mundanadu, Bagahesaruru, Mulavalli and Kudanadu); the Sringeri matha appealed to \"Krishnaraya Maharaya\" at Vidyanagara, whose seal-officer (mudradhikari) ordered Karkala to return the disputed territory, and this document records Karkala's compliance -- restoring 3,000 seeme outright while retaining 3,000 under an agreed arrangement, with provisions for the Mallikarjuna deity's endowment (devasva) at Bagunje and penalties (framed as the sin of killing one's guru) for violating the settlement. Independently of its administrative content, the document's own narrative frame is chronologically puzzling: it names the emissary to Krishnadevaraya's court as \"Vidyaranya Vodeyaru,\" the name conventionally associated with the 14th-century Sringeri pontiff and Vijayanagara-founding figure (d. c. 1386 CE) rather than any pontiff active in 1515 CE, a discrepancy of roughly a century and a half that the published article does not address and that should be resolved (a scribal conflation of titles, or a different, unidentified 16th-century Sringeri figure also called Vidyaranya) before this detail is treated as established fact. The core administrative content -- the territorial dispute, its resolution under Krishnadevaraya's seal-officer, and the place-names involved -- is presented independently as a valuable primary source for the political and religious geography of Vijayanagara-period Tulunadu and Malnad.",
+          "kn": "ಡಾ. ಕೆಳದಿ ವೆಂಕಟೇಶ್ ಜೋಯಿಸ್ ಈ ಹಿಂದೆ ಪ್ರಕಟವಾಗದ \"ಬಿನ್ನವತ್ತಳೆ\" (ಔಪಚಾರಿಕ ಲಿಖಿತ ಇತ್ಯರ್ಥ/ಮನವಿ ಪತ್ರ)ಯ ಪೂರ್ಣ ಪಾಠವನ್ನು ಪ್ರಕಟಿಸುತ್ತಾರೆ -- ಶೃಂಗೇರಿಯ ಜ್ಯೋತಿಷಿ ಕುಟುಂಬ ಶಂಕರನಾರಾಯಣ ಜೋಯಿಸರ ಸಂಗ್ರಹದಲ್ಲಿದ್ದ ವಿಜಯನಗರ-ಕಾಲದ ದಾಖಲೆ ಪ್ರತಿಗಳ ಕಟ್ಟಿನಲ್ಲಿ ತಾಳೆಗರಿ ಪ್ರತಿಯಾಗಿ ಸಂರಕ್ಷಿತವಾಗಿದ್ದು -- ಇದೇ ಸಂಗ್ರಹವನ್ನು ಹಿಂದಿನ ಹಂಪಿ ಉತ್ಸವ ಸಮ್ಮೇಳನದಲ್ಲಿ (ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ 18) ಚರ್ಚಿಸಲಾಗಿತ್ತು. ಶಕ 1437, ಧಾತು ಸಂವತ್ಸರ, ವೈಶಾಖ ಶುದ್ಧ 5, ಆದಿವಾರ (ಇಲ್ಲಿ 1515ಕ್ಕೆ ಸಮೀಕರಿಸಲಾಗಿದೆ) ದಿನಾಂಕಿತ, ಈ ದಾಖಲೆಯನ್ನು ಕಾರ್ಕಳದ ಮುಖಂಡರು (ಕಾರ್ಕಳದ ಪದುಮಲದೇವಿಯ ಮಗ \"ಬೈರರಸ ದೇವ\" ನೇತೃತ್ವದಲ್ಲಿ) ಶೃಂಗೇರಿ ಮಠಕ್ಕೆ, ಆಗಿನ ಜಗದ್ಗುರುಗಳಾದ \"ರಾಮಚಂದ್ರ ಭಾರತಿ\" (ಪಠ್ಯದ ಬೇರೆಡೆ ನರಸಿಂಹ ಭಾರತಿ ಎಂದೂ ಉಲ್ಲೇಖ) ಗೆ ನೀಡಿದ್ದಾಗಿದೆ. ಕಾರ್ಕಳ ಮುಖಂಡರ ಪೂರ್ವಜ ಮಲ್ಲಿಕಾರ್ಜುನ ಎಂಬ ಅಧಿಕಾರಿ ಸುಮಾರು 6,000 ಶೃಂಗೇರಿ-ಸಂಬಂಧಿತ ಸೀಮೆ (ಕೆಲ್ಲನಾಡು, ಕಿಕ್ಕುಂದ, ಕಿಗ್ಗನೆಮ್ಮಾರು, ಹರೂರು, ಮಂಡನಾಡು, ಬಾಗಹೆಸರೂರು, ಮುಳವಳ್ಳಿ ಮತ್ತು ಕುಡನಾಡು ಸೇರಿ) ಅತಿಕ್ರಮಿಸಿದ್ದನ್ನೂ, ಶೃಂಗೇರಿ ಮಠ ವಿದ್ಯಾನಗರದ \"ಕೃಷ್ಣರಾಯ ಮಹಾರಾಯ\"ರಲ್ಲಿ ಮೊರೆಹೋದದ್ದನ್ನೂ, ಅವರ ಮುದ್ರಾಧಿಕಾರಿ ಕಾರ್ಕಳಕ್ಕೆ ವಿವಾದಿತ ಭೂಮಿಯನ್ನು ಹಿಂತಿರುಗಿಸಲು ಆದೇಶಿಸಿದ್ದನ್ನೂ ದಾಖಲಿಸುತ್ತದೆ -- ಈ ದಾಖಲೆ ಕಾರ್ಕಳದ ಅನುಸರಣೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ: 3,000 ಸೀಮೆ ಸಂಪೂರ್ಣವಾಗಿ ಹಿಂತಿರುಗಿಸಿ, 3,000ನ್ನು ಒಪ್ಪಂದದ ಮೇಲೆ ಉಳಿಸಿಕೊಂಡಿದ್ದು, ಬಗುಂಜೆಯ ಮಲ್ಲಿಕಾರ್ಜುನ ದೇವರ ದೇವಸ್ವಕ್ಕೆ ಏರ್ಪಾಡು ಮತ್ತು ಒಪ್ಪಂದ ಉಲ್ಲಂಘಿಸಿದರೆ (ಗುರುಹತ್ಯಾ ದೋಷವೆಂದು ಚಿತ್ರಿತ) ದಂಡದ ನಿಬಂಧನೆಗಳೊಂದಿಗೆ. ಆಡಳಿತಾತ್ಮಕ ವಿಷಯದಿಂದ ಪ್ರತ್ಯೇಕವಾಗಿ, ದಾಖಲೆಯ ಸ್ವಂತ ನಿರೂಪಣಾ ಚೌಕಟ್ಟು ಕಾಲಾನುಕ್ರಮಿಕವಾಗಿ ಗೊಂದಲಮಯವಾಗಿದೆ: ಇದು ಕೃಷ್ಣದೇವರಾಯನ ಆಸ್ಥಾನಕ್ಕೆ ಹೋದ ದೂತರನ್ನು \"ವಿದ್ಯಾರಣ್ಯ ವೊಡೆಯರು\" ಎಂದು ಹೆಸರಿಸುತ್ತದೆ -- ಇದು ಸಾಂಪ್ರದಾಯಿಕವಾಗಿ 14ನೇ ಶತಮಾನದ ಶೃಂಗೇರಿ ಜಗದ್ಗುರು ಮತ್ತು ವಿಜಯನಗರ-ಸ್ಥಾಪನಾ ವ್ಯಕ್ತಿಗೆ (ನಿ. ಸು. 1386) ಸಂಬಂಧಿಸಿದ ಹೆಸರೇ ಹೊರತು 1515ರಲ್ಲಿ ಸಕ್ರಿಯರಾಗಿದ್ದ ಯಾವುದೇ ಜಗದ್ಗುರುವಿನದಲ್ಲ -- ಸುಮಾರು ಒಂದೂವರೆ ಶತಮಾನದ ಈ ವ್ಯತ್ಯಾಸವನ್ನು ಪ್ರಕಟಿತ ಲೇಖನ ಚರ್ಚಿಸುವುದಿಲ್ಲ, ಮತ್ತು ಈ ವಿವರವನ್ನು ಸ್ಥಾಪಿತ ಸತ್ಯವೆಂದು ಪರಿಗಣಿಸುವ ಮೊದಲು ಇತ್ಯರ್ಥಗೊಳಿಸಬೇಕು (ಬಿರುದುಗಳ ಲಿಪಿಕಾರ-ಗೊಂದಲ, ಅಥವಾ ಅದೇ ಹೆಸರಿನ ಬೇರೊಬ್ಬ, ಗುರುತಿಸದ 16ನೇ ಶತಮಾನದ ಶೃಂಗೇರಿ ವ್ಯಕ್ತಿ ಇರಬಹುದು). ಪ್ರಮುಖ ಆಡಳಿತಾತ್ಮಕ ವಿಷಯ -- ಭೂವಿವಾದ, ಕೃಷ್ಣದೇವರಾಯನ ಮುದ್ರಾಧಿಕಾರಿಯಡಿ ಅದರ ಇತ್ಯರ್ಥ, ಮತ್ತು ಒಳಗೊಂಡ ಸ್ಥಳನಾಮಗಳು -- ಇವನ್ನು ವಿಜಯನಗರ-ಕಾಲದ ತುಳುನಾಡು ಮತ್ತು ಮಲೆನಾಡಿನ ರಾಜಕೀಯ ಮತ್ತು ಧಾರ್ಮಿಕ ಭೂಗೋಳಕ್ಕೆ ಮೌಲಿಕ ಮೂಲ ಆಕರವಾಗಿ ಪ್ರತ್ಯೇಕವಾಗಿ ಪ್ರಸ್ತುತಪಡಿಸಲಾಗಿದೆ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
+            "locator": "Dr. Keladi Venkatesh Joyis, \"ವಿಜಯನಗರ ಕಾಲದ ಅಪ್ರಕಟಿತ ಬಿನ್ನವತ್ತಳೆ ಭಾಷಾ ಪತ್ರ\" (An unpublished Vijayanagara-period binnavattale document), pp. 51-54, publishing the full text of the \"Karkaladavara Kattina Binnavattale\" from the Shankaranarayana Joyisa manuscript collection, Sringeri"
           }
         ],
         "review": {
@@ -68548,6 +69813,144 @@
         }
       },
       {
+        "id": "rel-inscription-karch-vadhy2-yellampalli-harihara-ii-compensation-attests",
+        "fromId": "inscription-karch-vadhy2-yellampalli-harihara-ii-compensation",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1383,
+          "to": 1383,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "B. Vasanta Shetty, \"ದಕ್ಷಿಣ ಕನ್ನಡದಲ್ಲಿ ಇತ್ತೀಚೆಗೆ ದೊರೆತ ಮೂರು ವಿಜಯನಗರ ಶಾಸನಗಳು\" (Three recently found Vijayanagara inscriptions in Dakshina Kannada), pp. 70-71"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-inscription-karch-vadhy2-ajri-janani-privileges-attests",
+        "fromId": "inscription-karch-vadhy2-ajri-janani-privileges",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1428,
+          "to": 1428,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "B. Vasanta Shetty, \"ದಕ್ಷಿಣ ಕನ್ನಡದಲ್ಲಿ ಇತ್ತೀಚೆಗೆ ದೊರೆತ ಮೂರು ವಿಜಯನಗರ ಶಾಸನಗಳು\" (Three recently found Vijayanagara inscriptions in Dakshina Kannada), pp. 71-72"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-inscription-karch-vadhy3-va-museum-erambarage-jinalaya-attests",
+        "fromId": "inscription-karch-vadhy3-va-museum-erambarage-jinalaya",
+        "type": "attests",
+        "toId": "polity-kampili",
+        "date": {
+          "from": 1275,
+          "to": 1300,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mlsh",
+            "locator": "Channabasappa S. Patil, \"ಮುಮ್ಮಡಿ ಸಿಂಗನ ಮೇಲೆ ಮತ್ತಷ್ಟು ಬೆಳಕು\" (More light on Mummadi Singa), pp. 93-95: inscription noticed at the Victoria & Albert Museum, London, 1995; full Kannada text transcribed"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-inscription-karch-shettibettu-pillar-harihara-i-1347-attests",
+        "fromId": "inscription-karch-shettibettu-pillar-harihara-i-1347",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1347,
+          "to": 1347,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-14-0000drrg",
+            "locator": "Dr. P. N. Narasimhamurthy, \"ವಿಜಯನಗರ ಕಾಲೀನ ಒಂದು ಹೊಸ ಶಾಸನ\" (A new Vijayanagara-period inscription), pp. 19-40, citing K. V. Ramesh's dating of the comparanda Kanteshwara temple and Attavara inscriptions"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-inscription-karch-kugve-virgal-harihara-i-1339-attests",
+        "fromId": "inscription-karch-kugve-virgal-harihara-i-1339",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1339,
+          "to": 1339,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-18-0000drrg",
+            "locator": "Dr. P. N. Narasimhamurthy, \"ಕುಗ್ವೆಯ ವೀರಗಲ್ಲು ಶಾಸನ ಮತ್ತು ವಿಜಯನಗರ ಸ್ಥಾಪನಾ ಕಾಲ ವಿಚಾರ\" (The Kugve hero-stone inscription and the question of Vijayanagara's founding date), pp. 1-5, citing P.B. Desai and Dr. Suryanath Kamath on the Halkavatige copper plates"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-inscription-karch-karkala-sringeri-binnavattale-1515-attests",
+        "fromId": "inscription-karch-karkala-sringeri-binnavattale-1515",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1515,
+          "to": 1515,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
+            "locator": "Dr. Keladi Venkatesh Joyis, \"ವಿಜಯನಗರ ಕಾಲದ ಅಪ್ರಕಟಿತ ಬಿನ್ನವತ್ತಳೆ ಭಾಷಾ ಪತ್ರ\" (An unpublished Vijayanagara-period binnavattale document), pp. 51-54, publishing the full text of the \"Karkaladavara Kattina Binnavattale\" from the Shankaranarayana Joyisa manuscript collection, Sringeri"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "rel-inscription-alupa-udiyavara-pillars-attests",
         "fromId": "inscription-alupa-udiyavara-pillars",
         "type": "attests",
@@ -70965,6 +72368,167 @@
         }
       },
       {
+        "id": "rel-event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding-participant-1",
+        "fromId": "event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "type": "participant-predecessor-polity",
+        "toId": "polity-kampili",
+        "date": {
+          "from": 1327,
+          "to": 1336,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+            "locator": "Dr. C. Mahadeva, \"ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ\" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding-participant-2",
+        "fromId": "event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "type": "participant-founding-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1327,
+          "to": 1336,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+            "locator": "Dr. C. Mahadeva, \"ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ\" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-harihara-i-vidyaranya-1336-foundation-charter-participant-1",
+        "fromId": "event-karch-harihara-i-vidyaranya-1336-foundation-charter",
+        "type": "participant-founding-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
+            "locator": "D.V. Parameshivamurti, \"ಒಂದನೇ ಹರಿಹರ ಮತ್ತು ವಿದ್ಯಾರಣ್ಯರ ತಾಮ್ರಶಾಸನ\" (The copper-plate charter of Harihara I and Vidyaranya), pp. 16-29: full 126-line text with chronogram date, from a family-preserved, previously unpublished plate at Halkavatagi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-krishnadevaraya-gaya-inscription-1522-participant-1",
+        "fromId": "event-karch-krishnadevaraya-gaya-inscription-1522",
+        "type": "participant-inscribing-polity",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1522,
+          "to": 1522,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg",
+            "locator": "Dr. Keladi Venkatesh Joyis, \"ವಿಷ್ಣು ಗಯಾದಲ್ಲಿರುವ ವಿಜಯನಗರದ ಕೃಷ್ಣದೇವರಾಯನ ವಿಜಯ ಶಾಸನ\" (Krishnadevaraya's victory inscription at Vishnu Gaya), pp. 91-95, citing Buchanan's 1811 Patna-Gaya survey and Allasani Peddana's Manucharitamu"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-krishnadevaraya-albuquerque-goa-1510-participant-1",
+        "fromId": "event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "type": "participant-ally",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1509,
+          "to": 1515,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+            "locator": "Dr. Nirmalraj, \"ಶ್ರೀ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗೌರ್ನರ್ ಅಫೊನ್ಸ್ ಡಿ ಅಲ್ಬುಕರ್ಕ್‌ರ ನಡುವಣ ರಾಜತಾಂತ್ರಿಕ ಸಂಬಂಧಗಳು\" (Diplomatic relations between Krishnadevaraya and Portuguese Governor Afonso de Albuquerque), pp. 118-123, citing B. S. Shastry and Dr. K. S. Sivanna"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-krishnadevaraya-albuquerque-goa-1510-participant-2",
+        "fromId": "event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "type": "participant-ally",
+        "toId": "external-polity-portuguese-india",
+        "date": {
+          "from": 1509,
+          "to": 1515,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+            "locator": "Dr. Nirmalraj, \"ಶ್ರೀ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗೌರ್ನರ್ ಅಫೊನ್ಸ್ ಡಿ ಅಲ್ಬುಕರ್ಕ್‌ರ ನಡುವಣ ರಾಜತಾಂತ್ರಿಕ ಸಂಬಂಧಗಳು\" (Diplomatic relations between Krishnadevaraya and Portuguese Governor Afonso de Albuquerque), pp. 118-123, citing B. S. Shastry and Dr. K. S. Sivanna"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-krishnadevaraya-albuquerque-goa-1510-participant-3",
+        "fromId": "event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "type": "participant-strategic-rival",
+        "toId": "external-polity-adil-shahi",
+        "date": {
+          "from": 1509,
+          "to": 1515,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+            "locator": "Dr. Nirmalraj, \"ಶ್ರೀ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗೌರ್ನರ್ ಅಫೊನ್ಸ್ ಡಿ ಅಲ್ಬುಕರ್ಕ್‌ರ ನಡುವಣ ರಾಜತಾಂತ್ರಿಕ ಸಂಬಂಧಗಳು\" (Diplomatic relations between Krishnadevaraya and Portuguese Governor Afonso de Albuquerque), pp. 118-123, citing B. S. Shastry and Dr. K. S. Sivanna"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "rel-event-onake-obavva-fort-defence-participant-1",
         "fromId": "event-onake-obavva-fort-defence",
         "type": "participant-defender",
@@ -73326,6 +74890,121 @@
         }
       },
       {
+        "id": "rel-person-harihara-i-event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "fromId": "person-harihara-i",
+        "type": "associated-with-event",
+        "toId": "event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "date": {
+          "from": 1327,
+          "to": 1336,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+            "locator": "Dr. C. Mahadeva, \"ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ\" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-person-bukka-i-event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "fromId": "person-bukka-i",
+        "type": "associated-with-event",
+        "toId": "event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "date": {
+          "from": 1327,
+          "to": 1336,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+            "locator": "Dr. C. Mahadeva, \"ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ\" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-person-harihara-i-event-karch-harihara-i-vidyaranya-1336-foundation-charter",
+        "fromId": "person-harihara-i",
+        "type": "associated-with-event",
+        "toId": "event-karch-harihara-i-vidyaranya-1336-foundation-charter",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
+            "locator": "D.V. Parameshivamurti, \"ಒಂದನೇ ಹರಿಹರ ಮತ್ತು ವಿದ್ಯಾರಣ್ಯರ ತಾಮ್ರಶಾಸನ\" (The copper-plate charter of Harihara I and Vidyaranya), pp. 16-29: full 126-line text with chronogram date, from a family-preserved, previously unpublished plate at Halkavatagi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-person-krishnadevaraya-event-karch-krishnadevaraya-gaya-inscription-1522",
+        "fromId": "person-krishnadevaraya",
+        "type": "associated-with-event",
+        "toId": "event-karch-krishnadevaraya-gaya-inscription-1522",
+        "date": {
+          "from": 1522,
+          "to": 1522,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg",
+            "locator": "Dr. Keladi Venkatesh Joyis, \"ವಿಷ್ಣು ಗಯಾದಲ್ಲಿರುವ ವಿಜಯನಗರದ ಕೃಷ್ಣದೇವರಾಯನ ವಿಜಯ ಶಾಸನ\" (Krishnadevaraya's victory inscription at Vishnu Gaya), pp. 91-95, citing Buchanan's 1811 Patna-Gaya survey and Allasani Peddana's Manucharitamu"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-person-krishnadevaraya-event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "fromId": "person-krishnadevaraya",
+        "type": "associated-with-event",
+        "toId": "event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "date": {
+          "from": 1509,
+          "to": 1515,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+            "locator": "Dr. Nirmalraj, \"ಶ್ರೀ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗೌರ್ನರ್ ಅಫೊನ್ಸ್ ಡಿ ಅಲ್ಬುಕರ್ಕ್‌ರ ನಡುವಣ ರಾಜತಾಂತ್ರಿಕ ಸಂಬಂಧಗಳು\" (Diplomatic relations between Krishnadevaraya and Portuguese Governor Afonso de Albuquerque), pp. 118-123, citing B. S. Shastry and Dr. K. S. Sivanna"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "rel-person-onake-obavva-event-onake-obavva-fort-defence",
         "fromId": "person-onake-obavva",
         "type": "associated-with-event",
@@ -74735,6 +76414,98 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding-destination",
+        "fromId": "event-karch-harihara-bukka-kampili-service-and-vijayanagara-founding",
+        "type": "reached-destination",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1327,
+          "to": 1336,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysam-7-0000krra",
+            "locator": "Dr. C. Mahadeva, \"ವಿಜಯನಗರ ಮತ್ತು ಕುಮಾರರಾಮ\" (Vijayanagara and Kumara Rama), pp. 68-69: survey of Kannada (Kumararamana Sangatya) and Telugu source traditions, with citations to Ibn Battuta and Barani"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-harihara-i-vidyaranya-1336-foundation-charter-destination",
+        "fromId": "event-karch-harihara-i-vidyaranya-1336-foundation-charter",
+        "type": "reached-destination",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1336,
+          "to": 1336,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000drrg",
+            "locator": "D.V. Parameshivamurti, \"ಒಂದನೇ ಹರಿಹರ ಮತ್ತು ವಿದ್ಯಾರಣ್ಯರ ತಾಮ್ರಶಾಸನ\" (The copper-plate charter of Harihara I and Vidyaranya), pp. 16-29: full 126-line text with chronogram date, from a family-preserved, previously unpublished plate at Halkavatagi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-krishnadevaraya-gaya-inscription-1522-destination",
+        "fromId": "event-karch-krishnadevaraya-gaya-inscription-1522",
+        "type": "reached-destination",
+        "toId": "place-gaya",
+        "date": {
+          "from": 1522,
+          "to": 1522,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-13drrg",
+            "locator": "Dr. Keladi Venkatesh Joyis, \"ವಿಷ್ಣು ಗಯಾದಲ್ಲಿರುವ ವಿಜಯನಗರದ ಕೃಷ್ಣದೇವರಾಯನ ವಿಜಯ ಶಾಸನ\" (Krishnadevaraya's victory inscription at Vishnu Gaya), pp. 91-95, citing Buchanan's 1811 Patna-Gaya survey and Allasani Peddana's Manucharitamu"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-event-karch-krishnadevaraya-albuquerque-goa-1510-destination",
+        "fromId": "event-karch-krishnadevaraya-albuquerque-goa-1510",
+        "type": "reached-destination",
+        "toId": "place-goa",
+        "date": {
+          "from": 1509,
+          "to": 1515,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000-15unse",
+            "locator": "Dr. Nirmalraj, \"ಶ್ರೀ ಕೃಷ್ಣದೇವರಾಯ ಮತ್ತು ಪೋರ್ಚುಗೀಸ್ ಗೌರ್ನರ್ ಅಫೊನ್ಸ್ ಡಿ ಅಲ್ಬುಕರ್ಕ್‌ರ ನಡುವಣ ರಾಜತಾಂತ್ರಿಕ ಸಂಬಂಧಗಳು\" (Diplomatic relations between Krishnadevaraya and Portuguese Governor Afonso de Albuquerque), pp. 118-123, citing B. S. Shastry and Dr. K. S. Sivanna"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
         }
       },
       {
@@ -78513,6 +80284,98 @@
         }
       },
       {
+        "id": "rel-culture-karch-hemakuta-badami-chalukya-temple-polity-1",
+        "fromId": "culture-karch-hemakuta-badami-chalukya-temple",
+        "type": "cultural-architecture",
+        "toId": "polity-badami-chalukya",
+        "date": {
+          "from": 700,
+          "to": 725,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-1-dvde",
+            "locator": "Devarakonda Reddy, \"ಹಂಪೆಯಲ್ಲಿ ಬಾದಾಮಿ ಚಾಲುಕ್ಯರ ಕಾಲದ ದೇವಾಲಯ\" (A Badami Chalukya-period temple at Hampi), pp. 37-40: architectural dating argument and epigraphic history of Pampatirtha/Hampi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-hemakuta-badami-chalukya-temple-place-1",
+        "fromId": "culture-karch-hemakuta-badami-chalukya-temple",
+        "type": "cultural-location",
+        "toId": "place-hampi-hemakuta",
+        "date": {
+          "from": 700,
+          "to": 725,
+          "era": "CE",
+          "precision": "circa"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-1-dvde",
+            "locator": "Devarakonda Reddy, \"ಹಂಪೆಯಲ್ಲಿ ಬಾದಾಮಿ ಚಾಲುಕ್ಯರ ಕಾಲದ ದೇವಾಲಯ\" (A Badami Chalukya-period temple at Hampi), pp. 37-40: architectural dating argument and epigraphic history of Pampatirtha/Hampi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-anegondi-copper-plate-kumbara-purana-polity-1",
+        "fromId": "culture-karch-anegondi-copper-plate-kumbara-purana",
+        "type": "cultural-literature",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1200,
+          "to": 1299,
+          "era": "CE",
+          "precision": "century"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "Srinivas V. Padigar, \"ಆನೆಗೊಂದಿ ತಾಮ್ರಪಟ ಶಾಸನ: ಒಂದು ಮರುನೋಟ\" (The Anegondi copper-plate inscription: a re-examination), pp. 57-59, comparing the text against a Sholapur stone inscription published by Shrinivas Ritti"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-anegondi-copper-plate-kumbara-purana-place-1",
+        "fromId": "culture-karch-anegondi-copper-plate-kumbara-purana",
+        "type": "cultural-location",
+        "toId": "place-anegundi",
+        "date": {
+          "from": 1200,
+          "to": 1299,
+          "era": "CE",
+          "precision": "century"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+            "locator": "Srinivas V. Padigar, \"ಆನೆಗೊಂದಿ ತಾಮ್ರಪಟ ಶಾಸನ: ಒಂದು ಮರುನೋಟ\" (The Anegondi copper-plate inscription: a re-examination), pp. 57-59, comparing the text against a Sholapur stone inscription published by Shrinivas Ritti"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "rel-culture-karch-tradition-of-alamelamma-polity-1",
         "fromId": "culture-karch-tradition-of-alamelamma",
         "type": "cultural-religious-tradition",
@@ -78550,6 +80413,765 @@
           {
             "sourceId": "src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat",
             "locator": "\"The Tradition of Alamelamma\" chapter (pp. 201-202): full narrative and the curse verse as rendered in the book, cited to the Mysore Palace Records"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-vitthala-temple-sangama-era-dating-polity-1",
+        "fromId": "culture-karch-vitthala-temple-sangama-era-dating",
+        "type": "cultural-architecture",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1485,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr",
+            "locator": "Sharanabasappa Kolkar, \"ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯ: ನಿರ್ಮಾಣ ಕಾಲ ಮತ್ತು ಸಂದ ದಾನಗಳು\" (The Vitthala Temple, Hampi: construction date and grants made to it), pp. 27-28"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-vitthala-temple-sangama-era-dating-place-1",
+        "fromId": "culture-karch-vitthala-temple-sangama-era-dating",
+        "type": "cultural-location",
+        "toId": "place-hampi-vittala",
+        "date": {
+          "from": 1336,
+          "to": 1485,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr",
+            "locator": "Sharanabasappa Kolkar, \"ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯ: ನಿರ್ಮಾಣ ಕಾಲ ಮತ್ತು ಸಂದ ದಾನಗಳು\" (The Vitthala Temple, Hampi: construction date and grants made to it), pp. 27-28"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-hampi-second-elephant-enclosure-excavation-polity-1",
+        "fromId": "culture-karch-hampi-second-elephant-enclosure-excavation",
+        "type": "cultural-architecture",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1400,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-5-0000prom",
+            "locator": "T.M. Manjunathayya, \"ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿಯ ಆನೆಯ ಸಾಲೆ\" (The elephant stable at Vijayanagara city), pp. 31-36: excavation report and inscription text"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-hampi-second-elephant-enclosure-excavation-place-1",
+        "fromId": "culture-karch-hampi-second-elephant-enclosure-excavation",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1400,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-5-0000prom",
+            "locator": "T.M. Manjunathayya, \"ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿಯ ಆನೆಯ ಸಾಲೆ\" (The elephant stable at Vijayanagara city), pp. 31-36: excavation report and inscription text"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-harihara-i-residence-silamandapa-excavation-polity-1",
+        "fromId": "culture-karch-harihara-i-residence-silamandapa-excavation",
+        "type": "cultural-architecture",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1404,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
+            "locator": "T.M. Keshava, \"Recent Excavations in the Mint Area,\" pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-harihara-i-residence-silamandapa-excavation-place-1",
+        "fromId": "culture-karch-harihara-i-residence-silamandapa-excavation",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1336,
+          "to": 1404,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
+            "locator": "T.M. Keshava, \"Recent Excavations in the Mint Area,\" pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-harihara-i-residence-silamandapa-excavation-person-1",
+        "fromId": "culture-karch-harihara-i-residence-silamandapa-excavation",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-harihara-i",
+        "date": {
+          "from": 1336,
+          "to": 1404,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
+            "locator": "T.M. Keshava, \"Recent Excavations in the Mint Area,\" pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-harihara-i-residence-silamandapa-excavation-person-2",
+        "fromId": "culture-karch-harihara-i-residence-silamandapa-excavation",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-krishnadevaraya",
+        "date": {
+          "from": 1336,
+          "to": 1404,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-8-0000drrg",
+            "locator": "T.M. Keshava, \"Recent Excavations in the Mint Area,\" pp. 42-43: ASI Bangalore Circle excavation report (1994-95 to 1996-97), with transcribed inscription texts"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-vijayanagara-muslim-community-polity-1",
+        "fromId": "culture-karch-vijayanagara-muslim-community",
+        "type": "cultural-religious-tradition",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000krra",
+            "locator": "B. Abdul Mannan, \"ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿ ಮುಸ್ಲಿಂ ಧರ್ಮ\" (Islam in Vijayanagara city), pp. 110-114, citing Department progress reports (VPR 1979-83, 1983-84, 1984-87) and the Kumararamana Sangatya"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-vijayanagara-muslim-community-place-1",
+        "fromId": "culture-karch-vijayanagara-muslim-community",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1336,
+          "to": 1565,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000krra",
+            "locator": "B. Abdul Mannan, \"ವಿಜಯನಗರ ಪಟ್ಟಣದಲ್ಲಿ ಮುಸ್ಲಿಂ ಧರ್ಮ\" (Islam in Vijayanagara city), pp. 110-114, citing Department progress reports (VPR 1979-83, 1983-84, 1984-87) and the Kumararamana Sangatya"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-vijayanagara-wrestling-muslim-soldiers-polity-1",
+        "fromId": "culture-karch-vijayanagara-wrestling-muslim-soldiers",
+        "type": "cultural-games-sports",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1406,
+          "to": 1446,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
+            "locator": "Zainulla Ballari, \"ವಿಜಯನಗರದ ಕುಸ್ತಿಯ ಬಗ್ಗೆ ಎರಡು ಶಾಸನಗಳು\" (Two inscriptions about wrestling in Vijayanagara), pp. 89-98"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-vijayanagara-wrestling-muslim-soldiers-place-1",
+        "fromId": "culture-karch-vijayanagara-wrestling-muslim-soldiers",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1406,
+          "to": 1446,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
+            "locator": "Zainulla Ballari, \"ವಿಜಯನಗರದ ಕುಸ್ತಿಯ ಬಗ್ಗೆ ಎರಡು ಶಾಸನಗಳು\" (Two inscriptions about wrestling in Vijayanagara), pp. 89-98"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-rooka-generic-money-term-polity-1",
+        "fromId": "culture-karch-rooka-generic-money-term",
+        "type": "cultural-literature",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1513,
+          "to": 1563,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-12-0000drrg",
+            "locator": "Dr. C. Mahadeva, \"ರೂಕ ನಾಣ್ಯ - ಒಂದು ಪರಿಶೀಲನೆ\" (The rooka coin: an examination), pp. 196-201, responding to A.V. Narasimhamurthy's \"The Coins and Currency Systems of Karnataka\""
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-rooka-generic-money-term-place-1",
+        "fromId": "culture-karch-rooka-generic-money-term",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1513,
+          "to": 1563,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-12-0000drrg",
+            "locator": "Dr. C. Mahadeva, \"ರೂಕ ನಾಣ್ಯ - ಒಂದು ಪರಿಶೀಲನೆ\" (The rooka coin: an examination), pp. 196-201, responding to A.V. Narasimhamurthy's \"The Coins and Currency Systems of Karnataka\""
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-heritage-karch-vyasaraya-kuhuyoga-legend-debunked-polity-1",
+        "fromId": "heritage-karch-vyasaraya-kuhuyoga-legend-debunked",
+        "type": "cultural-religious-tradition",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1519,
+          "to": 1524,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
+            "locator": "Dr. H. Chandrashekhar, \"ಕುಹುಯೋಗದಲ್ಲಿ ವ್ಯಾಸರಾಯರ ಸಿಂಹಾಸನಾರೋಹಣ: ಒಂದು ಕಟ್ಟುಕತೆ\" (Vyasaraya's enthronement during kuhuyoga: a fabricated tale), pp. 112-119, consulting astronomers Dr. B.S. Shailaja and Dr. S. Balachandra Rao and citing historian Kondduri Sarojinidevi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-heritage-karch-vyasaraya-kuhuyoga-legend-debunked-place-1",
+        "fromId": "heritage-karch-vyasaraya-kuhuyoga-legend-debunked",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1519,
+          "to": 1524,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
+            "locator": "Dr. H. Chandrashekhar, \"ಕುಹುಯೋಗದಲ್ಲಿ ವ್ಯಾಸರಾಯರ ಸಿಂಹಾಸನಾರೋಹಣ: ಒಂದು ಕಟ್ಟುಕತೆ\" (Vyasaraya's enthronement during kuhuyoga: a fabricated tale), pp. 112-119, consulting astronomers Dr. B.S. Shailaja and Dr. S. Balachandra Rao and citing historian Kondduri Sarojinidevi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-heritage-karch-vyasaraya-kuhuyoga-legend-debunked-person-1",
+        "fromId": "heritage-karch-vyasaraya-kuhuyoga-legend-debunked",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-krishnadevaraya",
+        "date": {
+          "from": 1519,
+          "to": 1524,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-16-0000drrg",
+            "locator": "Dr. H. Chandrashekhar, \"ಕುಹುಯೋಗದಲ್ಲಿ ವ್ಯಾಸರಾಯರ ಸಿಂಹಾಸನಾರೋಹಣ: ಒಂದು ಕಟ್ಟುಕತೆ\" (Vyasaraya's enthronement during kuhuyoga: a fabricated tale), pp. 112-119, consulting astronomers Dr. B.S. Shailaja and Dr. S. Balachandra Rao and citing historian Kondduri Sarojinidevi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-ramaraya-death-source-comparison-1565-polity-1",
+        "fromId": "culture-karch-ramaraya-death-source-comparison-1565",
+        "type": "cultural-literature",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1565,
+          "to": 1565,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+            "locator": "Dr. Krishna Kolhar Kulkarni, \"ವಿಜಯನಗರದ ನಿರ್ಣಾಯಕ ಯುದ್ಧದಲ್ಲಿ ರಾಮರಾಯನನ್ನು ಕೊಂದವರು ಯಾರು?\" (Who killed Rama Raya in Vijayanagara's decisive battle?), pp. 95-100, comparing Ramarayana Bakhairu, Keladi Nrupa Vijaya, Aftabi's Tarif-i-Husain Shah, Ali Tabataba's Burhan-i-Ma'asir, Diogo do Couto, Ferishta (tr. Briggs 1829), Rafiuddin Shirazi and Ibrahim Zubairi's Basatin-us-Salatin"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-ramaraya-death-source-comparison-1565-polity-2",
+        "fromId": "culture-karch-ramaraya-death-source-comparison-1565",
+        "type": "cultural-literature",
+        "toId": "external-polity-deccan-sultanates",
+        "date": {
+          "from": 1565,
+          "to": 1565,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+            "locator": "Dr. Krishna Kolhar Kulkarni, \"ವಿಜಯನಗರದ ನಿರ್ಣಾಯಕ ಯುದ್ಧದಲ್ಲಿ ರಾಮರಾಯನನ್ನು ಕೊಂದವರು ಯಾರು?\" (Who killed Rama Raya in Vijayanagara's decisive battle?), pp. 95-100, comparing Ramarayana Bakhairu, Keladi Nrupa Vijaya, Aftabi's Tarif-i-Husain Shah, Ali Tabataba's Burhan-i-Ma'asir, Diogo do Couto, Ferishta (tr. Briggs 1829), Rafiuddin Shirazi and Ibrahim Zubairi's Basatin-us-Salatin"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-ramaraya-death-source-comparison-1565-place-1",
+        "fromId": "culture-karch-ramaraya-death-source-comparison-1565",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1565,
+          "to": 1565,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+            "locator": "Dr. Krishna Kolhar Kulkarni, \"ವಿಜಯನಗರದ ನಿರ್ಣಾಯಕ ಯುದ್ಧದಲ್ಲಿ ರಾಮರಾಯನನ್ನು ಕೊಂದವರು ಯಾರು?\" (Who killed Rama Raya in Vijayanagara's decisive battle?), pp. 95-100, comparing Ramarayana Bakhairu, Keladi Nrupa Vijaya, Aftabi's Tarif-i-Husain Shah, Ali Tabataba's Burhan-i-Ma'asir, Diogo do Couto, Ferishta (tr. Briggs 1829), Rafiuddin Shirazi and Ibrahim Zubairi's Basatin-us-Salatin"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-ramaraya-death-source-comparison-1565-person-1",
+        "fromId": "culture-karch-ramaraya-death-source-comparison-1565",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-rama-raya",
+        "date": {
+          "from": 1565,
+          "to": 1565,
+          "era": "CE",
+          "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+            "locator": "Dr. Krishna Kolhar Kulkarni, \"ವಿಜಯನಗರದ ನಿರ್ಣಾಯಕ ಯುದ್ಧದಲ್ಲಿ ರಾಮರಾಯನನ್ನು ಕೊಂದವರು ಯಾರು?\" (Who killed Rama Raya in Vijayanagara's decisive battle?), pp. 95-100, comparing Ramarayana Bakhairu, Keladi Nrupa Vijaya, Aftabi's Tarif-i-Husain Shah, Ali Tabataba's Burhan-i-Ma'asir, Diogo do Couto, Ferishta (tr. Briggs 1829), Rafiuddin Shirazi and Ibrahim Zubairi's Basatin-us-Salatin"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-mysore-wodeyar-origin-reassessment-polity-1",
+        "fromId": "culture-karch-mysore-wodeyar-origin-reassessment",
+        "type": "cultural-literature",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1512,
+          "to": 1598,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
+            "locator": "Dr. L. N. Swamy, \"ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ಧಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲ\" (Krishnaraya's Ummattur attack and the origin of the Mysore Wodeyars), pp. 134-143, reviewing Wilks, B.L. Rice, Hayavadana Rao and P.B. Desai and citing 1525 CE and 1598 CE inscriptions naming Chammati Timmaraja / Betta Chamaraja"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-mysore-wodeyar-origin-reassessment-polity-2",
+        "fromId": "culture-karch-mysore-wodeyar-origin-reassessment",
+        "type": "cultural-literature",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1512,
+          "to": 1598,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
+            "locator": "Dr. L. N. Swamy, \"ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ಧಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲ\" (Krishnaraya's Ummattur attack and the origin of the Mysore Wodeyars), pp. 134-143, reviewing Wilks, B.L. Rice, Hayavadana Rao and P.B. Desai and citing 1525 CE and 1598 CE inscriptions naming Chammati Timmaraja / Betta Chamaraja"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-mysore-wodeyar-origin-reassessment-place-1",
+        "fromId": "culture-karch-mysore-wodeyar-origin-reassessment",
+        "type": "cultural-location",
+        "toId": "place-mysuru",
+        "date": {
+          "from": 1512,
+          "to": 1598,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
+            "locator": "Dr. L. N. Swamy, \"ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ಧಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲ\" (Krishnaraya's Ummattur attack and the origin of the Mysore Wodeyars), pp. 134-143, reviewing Wilks, B.L. Rice, Hayavadana Rao and P.B. Desai and citing 1525 CE and 1598 CE inscriptions naming Chammati Timmaraja / Betta Chamaraja"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-mysore-wodeyar-origin-reassessment-place-2",
+        "fromId": "culture-karch-mysore-wodeyar-origin-reassessment",
+        "type": "cultural-location",
+        "toId": "place-srirangapatna",
+        "date": {
+          "from": 1512,
+          "to": 1598,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
+            "locator": "Dr. L. N. Swamy, \"ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ಧಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲ\" (Krishnaraya's Ummattur attack and the origin of the Mysore Wodeyars), pp. 134-143, reviewing Wilks, B.L. Rice, Hayavadana Rao and P.B. Desai and citing 1525 CE and 1598 CE inscriptions naming Chammati Timmaraja / Betta Chamaraja"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-mysore-wodeyar-origin-reassessment-person-1",
+        "fromId": "culture-karch-mysore-wodeyar-origin-reassessment",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-krishnadevaraya",
+        "date": {
+          "from": 1512,
+          "to": 1598,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy-samputa-19-0000drrg",
+            "locator": "Dr. L. N. Swamy, \"ಕೃಷ್ಣರಾಯನ ಉಮ್ಮತ್ತೂರು ಧಾಳಿ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಮೂಲ\" (Krishnaraya's Ummattur attack and the origin of the Mysore Wodeyars), pp. 134-143, reviewing Wilks, B.L. Rice, Hayavadana Rao and P.B. Desai and citing 1525 CE and 1598 CE inscriptions naming Chammati Timmaraja / Betta Chamaraja"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-kanakadasa-caste-critique-kirtanas-polity-1",
+        "fromId": "culture-karch-kanakadasa-caste-critique-kirtanas",
+        "type": "cultural-literature",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1509,
+          "to": 1609,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
+            "locator": "Dr. B.V. Nagaveni, \"ವಿಜಯನಗರ ಕಾಲದ ಜಾತಿವ್ಯವಸ್ಥೆ (ದಾಸ ಸಾಹಿತ್ಯವನ್ನು ಅನುಲಕ್ಷಿಸಿ)\" (The Vijayanagara-period caste system, with reference to Dasa literature), pp. 68-73, quoting Kanakadasa's kirtanas including \"Kula kula kulavendu\" and the Ramadhanya Charitre"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-kanakadasa-caste-critique-kirtanas-place-1",
+        "fromId": "culture-karch-kanakadasa-caste-critique-kirtanas",
+        "type": "cultural-location",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1509,
+          "to": 1609,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
+            "locator": "Dr. B.V. Nagaveni, \"ವಿಜಯನಗರ ಕಾಲದ ಜಾತಿವ್ಯವಸ್ಥೆ (ದಾಸ ಸಾಹಿತ್ಯವನ್ನು ಅನುಲಕ್ಷಿಸಿ)\" (The Vijayanagara-period caste system, with reference to Dasa literature), pp. 68-73, quoting Kanakadasa's kirtanas including \"Kula kula kulavendu\" and the Ramadhanya Charitre"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-kanakadasa-caste-critique-kirtanas-person-1",
+        "fromId": "culture-karch-kanakadasa-caste-critique-kirtanas",
+        "type": "cultural-patron-or-agent",
+        "toId": "person-kanakadasa",
+        "date": {
+          "from": 1509,
+          "to": 1609,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
+            "locator": "Dr. B.V. Nagaveni, \"ವಿಜಯನಗರ ಕಾಲದ ಜಾತಿವ್ಯವಸ್ಥೆ (ದಾಸ ಸಾಹಿತ್ಯವನ್ನು ಅನುಲಕ್ಷಿಸಿ)\" (The Vijayanagara-period caste system, with reference to Dasa literature), pp. 68-73, quoting Kanakadasa's kirtanas including \"Kula kula kulavendu\" and the Ramadhanya Charitre"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-kanakadasa-caste-critique-kirtanas-work-1",
+        "fromId": "culture-karch-kanakadasa-caste-critique-kirtanas",
+        "type": "cultural-work",
+        "toId": "work-mohana-tarangini",
+        "date": {
+          "from": 1509,
+          "to": 1609,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
+            "locator": "Dr. B.V. Nagaveni, \"ವಿಜಯನಗರ ಕಾಲದ ಜಾತಿವ್ಯವಸ್ಥೆ (ದಾಸ ಸಾಹಿತ್ಯವನ್ನು ಅನುಲಕ್ಷಿಸಿ)\" (The Vijayanagara-period caste system, with reference to Dasa literature), pp. 68-73, quoting Kanakadasa's kirtanas including \"Kula kula kulavendu\" and the Ramadhanya Charitre"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-hande-palegara-hanumappa-nayaka-origin-polity-1",
+        "fromId": "culture-karch-hande-palegara-hanumappa-nayaka-origin",
+        "type": "cultural-literature",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 968,
+          "to": 1550,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaradhya0000tven",
+            "locator": "Prof. S.C. Patil, \"ಹಂಡೆ ಪಾಳೆಯಗಾರರ ಮೂಲಪುರುಷ ಬಾ(ಬ)ಲದ ಹನುಮಪ್ಪನಾಯಕ\" (Balada Hanumappa Nayaka, founding figure of the Hande palegara chiefs), pp. 129-133, citing S.C. Patil's \"Hande Palegararu Kaifiyattugalu\" (Chalukya Samskriti Adhyayana Peetha, Kalaburagi) and inscriptions at Bevinahalli, Kollanupaka, Nagunuru, Mangalavede, Kondaguli, Muttagi, Hemmadagi, Chikkasugur, Goolapalyam and Kadadarabenchi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-hande-palegara-hanumappa-nayaka-origin-polity-2",
+        "fromId": "culture-karch-hande-palegara-hanumappa-nayaka-origin",
+        "type": "cultural-literature",
+        "toId": "external-polity-adil-shahi",
+        "date": {
+          "from": 968,
+          "to": 1550,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaradhya0000tven",
+            "locator": "Prof. S.C. Patil, \"ಹಂಡೆ ಪಾಳೆಯಗಾರರ ಮೂಲಪುರುಷ ಬಾ(ಬ)ಲದ ಹನುಮಪ್ಪನಾಯಕ\" (Balada Hanumappa Nayaka, founding figure of the Hande palegara chiefs), pp. 129-133, citing S.C. Patil's \"Hande Palegararu Kaifiyattugalu\" (Chalukya Samskriti Adhyayana Peetha, Kalaburagi) and inscriptions at Bevinahalli, Kollanupaka, Nagunuru, Mangalavede, Kondaguli, Muttagi, Hemmadagi, Chikkasugur, Goolapalyam and Kadadarabenchi"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-culture-karch-hande-palegara-hanumappa-nayaka-origin-place-1",
+        "fromId": "culture-karch-hande-palegara-hanumappa-nayaka-origin",
+        "type": "cultural-location",
+        "toId": "place-ballari",
+        "date": {
+          "from": 968,
+          "to": 1550,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaradhya0000tven",
+            "locator": "Prof. S.C. Patil, \"ಹಂಡೆ ಪಾಳೆಯಗಾರರ ಮೂಲಪುರುಷ ಬಾ(ಬ)ಲದ ಹನುಮಪ್ಪನಾಯಕ\" (Balada Hanumappa Nayaka, founding figure of the Hande palegara chiefs), pp. 129-133, citing S.C. Patil's \"Hande Palegararu Kaifiyattugalu\" (Chalukya Samskriti Adhyayana Peetha, Kalaburagi) and inscriptions at Bevinahalli, Kollanupaka, Nagunuru, Mangalavede, Kondaguli, Muttagi, Hemmadagi, Chikkasugur, Goolapalyam and Kadadarabenchi"
           }
         ],
         "review": {
@@ -79481,6 +82103,29 @@
           "to": 1947,
           "era": "CE",
           "precision": "year"
+        },
+        "citations": [
+          {
+            "sourceId": "src-prototype-boundaries",
+            "locator": "Prototype synthesis; requires source-by-source boundary review"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-26"
+        }
+      },
+      {
+        "id": "rel-extent-kampili-core-prototype-polity-1",
+        "fromId": "extent-kampili-core-prototype",
+        "type": "territorial-evidence-core-administered",
+        "toId": "polity-kampili",
+        "date": {
+          "from": 1280,
+          "to": 1327,
+          "era": "CE",
+          "precision": "range"
         },
         "citations": [
           {
@@ -90777,6 +93422,52 @@
         }
       },
       {
+        "id": "rel-coin-krishnadevaraya-saraswati-copper-lead-polity",
+        "fromId": "coin-krishnadevaraya-saraswati-copper-lead",
+        "type": "coinage-of",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1509,
+          "to": 1529,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mvkr",
+            "locator": "N. Havalayya, \"ಕೃಷ್ಣದೇವರಾಯನ ಸರಸ್ವತಿ ನಮೂನೆಯ ಅಪ್ರಕಟಿತ ನಾಣ್ಯ\" (An unpublished Saraswati-type coin of Krishnadevaraya), pp. 18-20: private-collection specimen with full physical description and Nagari legend transcription"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
+        "id": "rel-coin-krishnadevaraya-saraswati-copper-lead-place",
+        "fromId": "coin-krishnadevaraya-saraswati-copper-lead",
+        "type": "coin-findspot-context",
+        "toId": "place-hampi",
+        "date": {
+          "from": 1509,
+          "to": 1529,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mvkr",
+            "locator": "N. Havalayya, \"ಕೃಷ್ಣದೇವರಾಯನ ಸರಸ್ವತಿ ನಮೂನೆಯ ಅಪ್ರಕಟಿತ ನಾಣ್ಯ\" (An unpublished Saraswati-type coin of Krishnadevaraya), pp. 18-20: private-collection specimen with full physical description and Nagari legend transcription"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
+        }
+      },
+      {
         "id": "rel-coin-maturity-maski-ashokan-punchmarked-context-polity",
         "fromId": "coin-maturity-maski-ashokan-punchmarked-context",
         "type": "coinage-of",
@@ -96105,6 +98796,70 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "coin-krishnadevaraya-saraswati-copper-lead",
+        "name": {
+          "en": "Krishnadevaraya \"Saraswati-only\" copper coin (unpublished, 20th recorded type)",
+          "kn": "ಕೃಷ್ಣದೇವರಾಯನ \"ಕೇವಲ ಸರಸ್ವತಿ\" ತಾಮ್ರ ನಾಣ್ಯ ದಾರಿ (ಅಪ್ರಕಟಿತ, 20ನೇ ದಾಖಲಿತ ನಮೂನೆ)"
+        },
+        "coinKind": "dynastic-coinage-lead",
+        "polityId": "polity-vijayanagara",
+        "placeId": "place-hampi",
+        "date": {
+          "from": 1509,
+          "to": 1529,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "copper",
+        "weightGrams": 3.15,
+        "diameterMm": 12,
+        "obverse": {
+          "en": "Published from a private collection by the numismatist N. Havalayya as an unrecorded type, absent from every major published Vijayanagara coin catalogue to date (Narasimhamurthy 1991/1997, Ganesh & Girijapati 1998, Ramesan, Shankaranarayana 1997). Circular, 1.2 cm diameter, 1 mm thick, 3.150 g. Obverse shows a crowned goddess seated behind/with a peacock, her left hand slightly raised holding an indistinct object; no veena or book is shown. Havalayya identifies her as Saraswati on the strength of the peacock, her vahana, even though her standard attributes (veena, book) -- well attested on other Vijayanagara-period Saraswati sculptures -- are pointedly omitted here.",
+          "kn": "ಖಾಸಗಿ ಸಂಗ್ರಹದಿಂದ ನಾಣ್ಯಶಾಸ್ತ್ರಜ್ಞ ಎನ್. ಹವಳಯ್ಯರಿಂದ ಅಪ್ರಕಟಿತ ನಮೂನೆಯಾಗಿ ಪ್ರಕಟಿತ, ಇದುವರೆಗಿನ ಯಾವುದೇ ಪ್ರಮುಖ ಪ್ರಕಟಿತ ವಿಜಯನಗರ ನಾಣ್ಯ ಪಟ್ಟಿಯಲ್ಲಿ (ನರಸಿಂಹಮೂರ್ತಿ 1991/1997, ಗಣೇಶ & ಗಿರಿಜಾಪತಿ 1998, ರಮೇಶನ್, ಶಂಕರನಾರಾಯಣ 1997) ಇಲ್ಲ. ವರ್ತುಲಾಕಾರ, 1.2 ಸೆಂ.ಮೀ ವ್ಯಾಸ, 1 ಮಿ.ಮೀ ದಪ್ಪ, 3.150 ಗ್ರಾಂ. ಮುಮ್ಮುಖದಲ್ಲಿ ಕಿರೀಟಧಾರಿ ದೇವತೆ ನವಿಲಿನ ಹಿಂಬದಿಯಲ್ಲಿ/ಜೊತೆ ಕುಳಿತಿದ್ದು, ಎಡಗೈ ಸ್ವಲ್ಪ ಮೇಲೆತ್ತಿ ಅಸ್ಪಷ್ಟ ವಸ್ತುವನ್ನು ಹಿಡಿದಿದೆ; ವೀಣೆ ಅಥವಾ ಪುಸ್ತಕ ಇಲ್ಲ. ಹವಳಯ್ಯ ಈಕೆಯನ್ನು ನವಿಲಿನ (ಆಕೆಯ ವಾಹನ) ಆಧಾರದ ಮೇಲೆ ಸರಸ್ವತಿಯೆಂದು ಗುರುತಿಸುತ್ತಾರೆ, ಇತರ ವಿಜಯನಗರ-ಕಾಲದ ಸರಸ್ವತಿ ಶಿಲ್ಪಗಳಲ್ಲಿ ಚೆನ್ನಾಗಿ ದೃಢಪಟ್ಟ ಆಕೆಯ ಪ್ರಮಾಣಿತ ಚಿಹ್ನೆಗಳನ್ನು (ವೀಣೆ, ಪುಸ್ತಕ) ಇಲ್ಲಿ ಉದ್ದೇಶಪೂರ್ವಕವಾಗಿ ಬಿಟ್ಟಿದ್ದರೂ."
+        },
+        "reverse": {
+          "en": "Three-line Nagari-script legend: \"Pratapa / Krishna / Raya.\" The author situates this within a broader Vijayanagara numismatic tradition of paired-deity coinage (Shiva-Parvati, Lakshmi-Narayana, Lakshmi-Narasimha, Rama-Sita, Venkateshwara-Sridevi-Bhudevi, Brahma-Saraswati) inaugurated by Harihara II, whose own gold half-varaha shows Brahma and Saraswati together with a matching three-line \"Pratapa Harihara\" legend. Krishnadevaraya's coinage, by contrast, frequently depicts only one deity from such a pair (as on his separately known Balakrishna, Venkateshwara-only, and lotus-seated-Lakshmi-only types) -- so this coin's Saraswati-without-Brahma design is read as consistent with that personal preference rather than as evidence Brahma held reduced religious status. Before this find, 19 gold/silver/copper types were catalogued for Krishnadevaraya; this is recorded as the 20th, with the author noting many more likely remain undocumented.",
+          "kn": "ಮೂರು-ಸಾಲಿನ ನಾಗರಿ-ಲಿಪಿಯ ಲೇಖ: \"ಪ್ರತಾಪ / ಕೃಷ್ಣ / ರಾಯ.\" ಲೇಖಕರು ಇದನ್ನು ಹರಿಹರ IIನಿಂದ ಪ್ರಾರಂಭಿಸಲಾದ ವಿಶಾಲ ವಿಜಯನಗರ ನಾಣ್ಯಶಾಸ್ತ್ರ ಪರಂಪರೆಯೊಳಗೆ ಇರಿಸುತ್ತಾರೆ -- ಜೋಡಿ-ದೇವತಾ ನಾಣ್ಯಗಳ (ಶಿವ-ಪಾರ್ವತಿ, ಲಕ್ಷ್ಮೀ-ನಾರಾಯಣ, ಲಕ್ಷ್ಮೀ-ನರಸಿಂಹ, ರಾಮ-ಸೀತೆ, ವೆಂಕಟೇಶ್ವರ-ಶ್ರೀದೇವಿ-ಭೂದೇವಿ, ಬ್ರಹ್ಮ-ಸರಸ್ವತಿ), ಹರಿಹರ IIನ ಸ್ವಂತ ಚಿನ್ನದ ಅರ್ಧ ವರಾಹ ಬ್ರಹ್ಮ ಮತ್ತು ಸರಸ್ವತಿಯನ್ನು ಒಟ್ಟಿಗೆ, ಹೊಂದಾಣಿಕೆಯ ಮೂರು-ಸಾಲಿನ \"ಪ್ರತಾಪ ಹರಿಹರ\" ಲೇಖದೊಂದಿಗೆ ತೋರಿಸುತ್ತದೆ. ಇದಕ್ಕೆ ವ್ಯತಿರಿಕ್ತವಾಗಿ, ಕೃಷ್ಣದೇವರಾಯನ ನಾಣ್ಯಗಳು ಇಂತಹ ಜೋಡಿಯಿಂದ ಆಗಾಗ್ಗೆ ಒಂದೇ ದೇವತೆಯನ್ನು ತೋರಿಸುತ್ತವೆ (ಪ್ರತ್ಯೇಕವಾಗಿ ತಿಳಿದ ಬಾಲಕೃಷ್ಣ, ಕೇವಲ-ವೆಂಕಟೇಶ್ವರ, ಮತ್ತು ಕಮಲದ ಮೇಲೆ ಕುಳಿತ ಕೇವಲ-ಲಕ್ಷ್ಮೀ ನಮೂನೆಗಳಂತೆ) -- ಆದ್ದರಿಂದ ಈ ನಾಣ್ಯದ ಬ್ರಹ್ಮನಿಲ್ಲದ ಸರಸ್ವತಿ ವಿನ್ಯಾಸವನ್ನು ಆ ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗೆ ಅನುಗುಣವಾಗಿ ಓದಲಾಗುತ್ತದೆ, ಬ್ರಹ್ಮನ ಕಡಿಮೆ ಧಾರ್ಮಿಕ ಸ್ಥಾನಮಾನದ ಸಾಕ್ಷ್ಯವಾಗಿ ಅಲ್ಲ. ಈ ಶೋಧನೆಗೂ ಮೊದಲು, ಕೃಷ್ಣದೇವರಾಯನಿಗೆ 19 ಚಿನ್ನ/ಬೆಳ್ಳಿ/ತಾಮ್ರ ನಮೂನೆಗಳು ಪಟ್ಟಿಗತವಾಗಿದ್ದವು; ಇದನ್ನು 20ನೇ ಎಂದು ದಾಖಲಿಸಲಾಗಿದೆ, ಇನ್ನೂ ಹಲವು ದಾಖಲಾಗದೆ ಉಳಿದಿರಬಹುದೆಂದು ಲೇಖಕರು ಗಮನಿಸುತ್ತಾರೆ."
+        },
+        "findspot": {
+          "placeId": "place-hampi",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "missing",
+          "license": null,
+          "url": null
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "unresolved"
+          },
+          "metal": {
+            "status": "located"
+          },
+          "weight": {
+            "status": "located"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000mvkr",
+            "locator": "N. Havalayya, \"ಕೃಷ್ಣದೇವರಾಯನ ಸರಸ್ವತಿ ನಮೂನೆಯ ಅಪ್ರಕಟಿತ ನಾಣ್ಯ\" (An unpublished Saraswati-type coin of Krishnadevaraya), pp. 18-20: private-collection specimen with full physical description and Nagari legend transcription"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-29"
         }
       },
       {
