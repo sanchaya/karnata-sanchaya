@@ -777,3 +777,22 @@ karnatakaArchaeologyMiningInscriptions.push({
   citations: [c(SRC_VADHY_VOL3, 'Channabasappa S. Patil, "ಮುಮ್ಮಡಿ ಸಿಂಗನ ಮೇಲೆ ಮತ್ತಷ್ಟು ಬೆಳಕು" (More light on Mummadi Singa), pp. 93-95: inscription noticed at the Victoria & Albert Museum, London, 1995; full Kannada text transcribed')],
   review,
 })
+
+// Source: "Vijayanagara Adhyayana" Volume 4 (Directorate of Archaeology and Museums, Mysore, 1999).
+const SRC_VADHY_VOL4 = 'src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-4mvkr'
+
+karnatakaArchaeologyMiningCulturalHeritage.push({
+  id: 'culture-karch-vitthala-temple-sangama-era-dating',
+  name: n('Case for a Sangama-era (pre-Krishnadevaraya) core at the Vitthala Temple, Hampi', 'ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯದ ಮೂಲ ರಚನೆ ಸಂಗಮ-ಕಾಲದ್ದೆಂಬ ವಾದ (ಕೃಷ್ಣದೇವರಾಯನಿಗಿಂತ ಮುಂಚಿನದು)'),
+  category: 'architecture',
+  date: d(1336, 1485, 'range'),
+  polityIds: ['polity-vijayanagara'],
+  placeIds: ['place-hampi-vittala'],
+  peopleIds: [],
+  relatedWorkIds: [],
+  traditionTags: ['Vaishnava', 'Sangama-dynasty', 'dating-debate', 'Vitthala', 'stone-chariot'],
+  continuity: 'material-survival',
+  description: n('Against the popular belief that Krishnadevaraya built Hampi\'s celebrated Vitthala Temple after bringing the deity\'s image from Pandharpur, the scholar Sharanabasappa Kolkar argues from multiple independent sources that the temple\'s core structure -- garbhagriha, sukhanasi, circumambulatory path, a sixteen-pillar ranga-mantapa and the famous 56-pillar maharanga-mantapa -- was already standing under the earlier Sangama dynasty (1336-1485). The case rests on Talapakkam Annamacharya\'s (1408-1503) kirtana describing Vitthala and Rukmini settling on the Tungabhadra bank; Haribhatta\'s "Uttara Narasimha Puranam," which places the temple in the 14th century and credits Proluganti Tippanna, an officer of Praudhadevaraya (r. 1426-1446), with building its bhoga-mantapa; and a 1408 CE Sirali inscription recording a gift made "in the presence of Vitthala on the Tungabhadra bank" -- there being no other riverside Vitthala shrine it could refer to. On this reading, Krishnadevaraya\'s own inscriptions credit him only with the hundred-pillared mandapa, with his queens responsible for the gopuras, and the "Krishnadevaraya built it" tradition reflects the Vaishnava resurgence of his reign being retrospectively credited with a temple that already existed -- notwithstanding that Sangama kings were themselves largely Shaiva, though not exclusively (Bukkaraya\'s Shravanabelagola record and his daughter-in-law Gangadevi\'s Madhura Vijayam both attest Vaishnava activity under the dynasty).', 'ಕೃಷ್ಣದೇವರಾಯ ಪಂಢರಾಪುರದಿಂದ ದೇವರ ವಿಗ್ರಹ ತಂದು ಹಂಪಿಯ ಪ್ರಸಿದ್ಧ ವಿಠ್ಠಲ ದೇವಾಲಯ ಕಟ್ಟಿಸಿದನೆಂಬ ಜನಪ್ರಿಯ ನಂಬಿಕೆಗೆ ವಿರುದ್ಧವಾಗಿ, ವಿದ್ವಾಂಸ ಶರಣಬಸಪ್ಪ ಕೋಲ್ಕಾರ ಹಲವು ಸ್ವತಂತ್ರ ಆಕರಗಳಿಂದ ದೇವಾಲಯದ ಮೂಲ ರಚನೆ -- ಗರ್ಭಗೃಹ, ಸುಖನಾಸಿ, ಪ್ರದಕ್ಷಿಣಾಪಥ, ಹದಿನಾರು-ಕಂಬದ ರಂಗಮಂಟಪ ಮತ್ತು ಪ್ರಸಿದ್ಧ 56-ಕಂಬದ ಮಹಾರಂಗಮಂಟಪ -- ಈಗಾಗಲೇ ಹಿಂದಿನ ಸಂಗಮ ವಂಶದ (1336-1485) ಕಾಲದಲ್ಲಿ ನಿಂತಿತ್ತೆಂದು ವಾದಿಸುತ್ತಾರೆ. ಈ ವಾದ ತಾಳಪಕ್ಕಂ ಅಣ್ಣಮಾಚಾರ್ಯರ (1408-1503) ಕೀರ್ತನೆ, ವಿಠ್ಠಲ ಮತ್ತು ರುಕ್ಮಿಣಿ ತುಂಗಭದ್ರಾ ದಡದಲ್ಲಿ ನೆಲೆನಿಂತರೆಂದು ವರ್ಣಿಸುತ್ತದೆ; ಹರಿಭಟ್ಟನ "ಉತ್ತರ ನರಸಿಂಹ ಪುರಾಣಂ," ಇದು ದೇವಾಲಯವನ್ನು 14ನೇ ಶತಮಾನಕ್ಕೆ ಇರಿಸಿ ಪ್ರೌಢದೇವರಾಯನ (ಆ. 1426-1446) ಅಧಿಕಾರಿ ಪ್ರೊಳುಗಂಟಿ ತಿಪ್ಪಣ್ಣನಿಗೆ ಭೋಗಮಂಟಪ ನಿರ್ಮಾಣದ ಶ್ರೇಯ ನೀಡುತ್ತದೆ; ಮತ್ತು ಶಕ 1408ರ ಶಿರಾಲಿ ಶಾಸನ, "ತುಂಗಭದ್ರಾ ದಡದ ವಿಠ್ಠಲನ ಸನ್ನಿಧಿಯಲ್ಲಿ" ಮಾಡಿದ ದಾನವನ್ನು ದಾಖಲಿಸುತ್ತದೆ -- ಇದು ಸೂಚಿಸಬಹುದಾದ ಬೇರೆ ಯಾವುದೇ ನದೀತೀರದ ವಿಠ್ಠಲ ದೇವಾಲಯವಿಲ್ಲ. ಈ ವಾಚನದಂತೆ, ಕೃಷ್ಣದೇವರಾಯನ ಸ್ವಂತ ಶಾಸನಗಳು ಅವನಿಗೆ ಕೇವಲ ನೂರುಕಂಬಗಳ ಮಂಟಪದ ಶ್ರೇಯವನ್ನು ಮಾತ್ರ ನೀಡುತ್ತವೆ, ಗೋಪುರಗಳ ಶ್ರೇಯ ಅವನ ರಾಣಿಯರಿಗೆ ಸಲ್ಲುತ್ತದೆ, ಮತ್ತು "ಕೃಷ್ಣದೇವರಾಯ ಕಟ್ಟಿಸಿದ" ಎಂಬ ಸಂಪ್ರದಾಯ ಅವನ ಕಾಲದ ವೈಷ್ಣವ ಪುನರುತ್ಥಾನ ಈಗಾಗಲೇ ಇದ್ದ ದೇವಾಲಯಕ್ಕೆ ಹಿಂದಿನಿಂದ ಶ್ರೇಯ ನೀಡಿದ್ದನ್ನು ಪ್ರತಿಬಿಂಬಿಸುತ್ತದೆ -- ಸಂಗಮ ಅರಸರು ಬಹುತೇಕ ಶೈವರಾಗಿದ್ದರೂ, ಪ್ರತ್ಯೇಕವಾಗಿ ಅಲ್ಲ (ಬುಕ್ಕರಾಯನ ಶ್ರವಣಬೆಳಗೊಳ ದಾಖಲೆ ಮತ್ತು ಅವನ ಸೊಸೆ ಗಂಗಾದೇವಿಯ ಮಧುರಾ ವಿಜಯಂ ಎರಡೂ ವಂಶದಡಿ ವೈಷ್ಣವ ಚಟುವಟಿಕೆಯನ್ನು ದೃಢಪಡಿಸುತ್ತವೆ).'),
+  citations: [c(SRC_VADHY_VOL4, 'Sharanabasappa Kolkar, "ಹಂಪಿಯ ವಿಠ್ಠಲ ದೇವಾಲಯ: ನಿರ್ಮಾಣ ಕಾಲ ಮತ್ತು ಸಂದ ದಾನಗಳು" (The Vitthala Temple, Hampi: construction date and grants made to it), pp. 27-28')],
+  review,
+})
