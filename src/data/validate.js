@@ -1,4 +1,4 @@
-import { checkTranslationGlossary } from './translation-glossary.js'
+import { checkTranslationGlossary, checkMissingKannadaTranslation } from './translation-glossary.js'
 
 const ID_PATTERN = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/
 const COLLECTIONS = ['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','epigraphiaArchiveTexts','karnatakaArchaeologyTexts','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
@@ -506,6 +506,7 @@ export function validateAtlas(data) {
   COLLECTIONS.forEach(collection => (data[collection] || []).forEach(record => {
     const id = record.id || ''
     checkTranslationGlossary(record).forEach(issue => add('warning',collection,id,issue.path,issue.message))
+    checkMissingKannadaTranslation(record).forEach(issue => add('warning',collection,id,issue.path,issue.message))
     ;(record.citations || []).forEach((item, index) => {
       if (!sourceIds.has(item.sourceId)) add('error',collection,id,`citations.${index}.sourceId`,`Unknown source: ${item.sourceId}`)
     })

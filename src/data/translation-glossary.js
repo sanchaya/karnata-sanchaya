@@ -67,3 +67,25 @@ export function checkTranslationGlossary(record) {
   }
   return issues
 }
+
+const containsKannadaScript = value => /[ಀ-೿]/.test(value)
+
+// Flags a record's title/name when the Kannada side is empty or is just the English text copied
+// verbatim -- the pattern bulk OCR importers (Epigraphia Archive, Karnataka Archaeology) leave
+// behind because they only have an English archive-item title to work with. Scoped to name/title
+// only (not every bilingual pair) so short, legitimately-identical fields like page locators don't
+// false-positive.
+export function checkMissingKannadaTranslation(record) {
+  if (!record?.id) return []
+  const issues = []
+  for (const field of ['name', 'title']) {
+    const pair = record[field]
+    if (!pair || typeof pair !== 'object') continue
+    const en = String(pair.en || '').trim()
+    const kn = String(pair.kn || '').trim()
+    if (!en) continue
+    const looksTranslated = (kn && kn !== en) || containsKannadaScript(kn)
+    if (!looksTranslated) issues.push({ path: field, message: `No Kannada translation yet for "${field}" (missing-kn) -- Kannada text is empty or identical to the English text. English is shown as a fallback until this is translated.` })
+  }
+  return issues
+}

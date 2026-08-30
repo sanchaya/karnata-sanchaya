@@ -16,6 +16,17 @@ export const alternateRecordTitle = (record, locale = 'en') => {
   return alternate && alternate !== primary ? alternate : ''
 }
 
+const containsKannadaScript = value => /[ಀ-೿]/.test(value)
+
+// True when name/title has English text but no distinct Kannada translation yet (empty, or the
+// English string copied verbatim) -- the pattern bulk OCR importers leave behind.
+export const missingKannadaTranslation = record => {
+  const en = languageValue(record.name, 'en') || languageValue(record.title, 'en')
+  if (!en) return false
+  const kn = languageValue(record.name, 'kn') || languageValue(record.title, 'kn')
+  return !((kn && kn !== en) || containsKannadaScript(kn))
+}
+
 const searchableText = value => {
   if (value == null) return ''
   if (Array.isArray(value)) return value.map(searchableText).join(' ')
