@@ -62,3 +62,13 @@ test('guided trails cover the previously missing Karnataka dynasties and governi
     'trail-chitradurga-nayakas',
   ]) assert.ok(ids.has(id), `${id} must remain available in the public trail explorer`)
 })
+
+test('new dynasty trails expose material, administrative and territorial evidence where records exist', () => {
+  const stops = id => new Set(trails.find(trail => trail.id === id)?.stops.map(stop => stop.recordId))
+  assert.ok(stops('trail-mauryan-karnataka').has('coin-maturity-maski-ashokan-punchmarked-context'))
+  assert.ok(stops('trail-chola-gangavadi').has('external-governance-chola-gangavadi'))
+  assert.ok(stops('trail-kampili-vijayanagara-threshold').has('inscription-karch-vadhy3-va-museum-erambarage-jinalaya'))
+  for (const id of ['admin-bahmani-bidar-kalaburagi-zone','coin-bahmani-bidar-kalaburagi-mint-lead','boundary-evidence-bahmani-northern-karnataka-zone']) assert.ok(stops('trail-bahmani-adil-shahi').has(id), `${id} must remain in the Bahmani trail`)
+  assert.ok(stops('trail-keladi-ikkeri').has('boundary-evidence-keladi-coastal-interior-admin-zone'))
+  assert.ok(stops('trail-chitradurga-nayakas').has('feudatory-chitradurga-nayaka-vijayanagara-successor'))
+})

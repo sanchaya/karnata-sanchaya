@@ -423,6 +423,24 @@ const literaryEvidenceTemplates={
   editionWitness:{submissionType:'edition-witness',requiredFields:['witnessType','repositoryOrPublisher','shelfmarkOrEdition','year','sourceUrl'],instruction:name('Identify at least one manuscript, critical edition, first edition or dependable digital witness for the work.','ಕೃತಿಗೆ ಕನಿಷ್ಠ ಒಂದು ಹಸ್ತಪ್ರತಿ, ವಿಮರ್ಶಾತ್ಮಕ ಆವೃತ್ತಿ, ಮೊದಲ ಆವೃತ್ತಿ ಅಥವಾ ವಿಶ್ವಾಸಾರ್ಹ ಡಿಜಿಟಲ್ ಸಾಕ್ಷ್ಯವನ್ನು ಗುರುತಿಸಿ.')},
 }
 
+// Witness records are assembled by several bounded research passes. Keep the
+// literary packet as the discoverable inverse of those records so a reviewer
+// never has to know which import created the witness. A located witness is not
+// a verified edition: the workflow below continues to block publication until
+// an independent reviewer confirms every gate.
+const literaryWitnessesByWork=new Map()
+atlasData.manuscriptWitnesses.forEach(witness=>{
+  const ids=literaryWitnessesByWork.get(witness.workId)||[]
+  ids.push(witness.id)
+  literaryWitnessesByWork.set(witness.workId,ids)
+})
+atlasData.works.forEach(work=>{
+  work.manuscriptWitnesses=[...new Set([...(work.manuscriptWitnesses||[]),...(literaryWitnessesByWork.get(work.id)||[])])]
+  const locatedWitnesses=atlasData.manuscriptWitnesses.filter(witness=>work.manuscriptWitnesses.includes(witness.id)&&witness.evidenceGates?.repositoryRecord?.status==='located')
+  const citations=[...(work.citations||[]),...locatedWitnesses.flatMap(witness=>witness.citations||[])]
+  work.citations=[...new Map(citations.map(item=>[`${item.sourceId}:${item.locator||''}`,item])).values()]
+})
+
 const workEditionWitnessLinks={
   'work-kumaravyasa-bharata':{manuscriptWitnesses:['manuscript-kumaravyasa-bharata-sanchaya-witness-lead'],citations:[citation('src-archive-kumaravyasa-karnata-bharata-kathamanjari','Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable'),citation('src-murty-classical-library-kannada-mahabharata','Murty Classical Library of India scholarly bilingual translation, for edition comparison')],description:name('A Kannada retelling of the first ten parvas of the Mahabharata in Bhamini Shatpadi metre, by the court poet Kumaravyasa under Deva Raya II of Vijayanagara; completion traditionally dated 1430.','ವಿಜಯನಗರದ ದೇವರಾಯ IIನ ಆಸ್ಥಾನ ಕವಿ ಕುಮಾರವ್ಯಾಸನಿಂದ ಭಾಮಿನಿ ಷಟ್ಪದಿಯಲ್ಲಿ ರಚಿತವಾದ ಮಹಾಭಾರತದ ಮೊದಲ ಹತ್ತು ಪರ್ವಗಳ ಕನ್ನಡ ಮರುಕಥನ; ಪೂರ್ಣಗೊಂಡ ದಿನಾಂಕ ಸಾಂಪ್ರದಾಯಿಕವಾಗಿ 1430.')},
   'work-torave-ramayana':{manuscriptWitnesses:['manuscript-torave-ramayana-sanchaya-witness-lead'],citations:[citation('src-archive-torave-ramayana-vol2','Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable')],description:name('A Kannada retelling of the Ramayana in Bhamini Shatpadi metre, composed from c. 1500 by Kumara Valmiki (pen name of Narahari) at the Narasimha temple, Torvi (Torave); ~5000 verses in 112 sections.','ಕುಮಾರ ವಾಲ್ಮೀಕಿ (ನರಹರಿಯ ಕಾವ್ಯನಾಮ) ಅವರಿಂದ ಸು. 1500ರಿಂದ ತೊರವಿ (ತೊರವೆ)ಯ ನರಸಿಂಹ ದೇವಾಲಯದಲ್ಲಿ ಭಾಮಿನಿ ಷಟ್ಪದಿಯಲ್ಲಿ ರಚಿತವಾದ ರಾಮಾಯಣದ ಕನ್ನಡ ಮರುಕಥನ; 112 ಸಂಧಿಗಳಲ್ಲಿ ಸು. 5000 ಪದ್ಯಗಳು.')},
@@ -432,8 +450,8 @@ const workEditionWitnessLinks={
 Object.entries(workEditionWitnessLinks).forEach(([id,update])=>{
   const work=atlasData.works.find(item=>item.id===id)
   if(work){
-    work.manuscriptWitnesses=update.manuscriptWitnesses
-    work.citations=update.citations
+    work.manuscriptWitnesses=[...new Set([...(work.manuscriptWitnesses||[]),...update.manuscriptWitnesses])]
+    work.citations=[...new Map([...(work.citations||[]),...update.citations].map(item=>[`${item.sourceId}:${item.locator||''}`,item])).values()]
     if(update.description)work.description=update.description
     if(update.dateOverride)work.date=update.dateOverride
   }
