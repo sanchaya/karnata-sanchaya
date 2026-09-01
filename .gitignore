@@ -8,5 +8,16 @@ public/data/approved-community.json.tmp
 public/data/published-atlas.json.tmp
 .gstack/
 
+# Local assistant and editor integrations. These are workstation-specific and
+# are not required by the atlas, server, CI or GitHub Pages deployment.
+/.adal/
+/.claude/
+/.cursor/
+/.gemini/
+/.grok/
+/.kiro/
+/.windsurf/
+/.mcp.json
+
 # graft's local graph cache — regenerable, not committed (run `graft build`).
 /graft/
