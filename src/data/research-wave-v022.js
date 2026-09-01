@@ -140,8 +140,9 @@ export function applyResearchWaveV022(atlasData,appendUniqueById){
     work.reviewWorkflow.evidence.itemCitation={status:'located',note:n('An item-level scholarly record or published edition locator is attached; reviewer verification remains required.','ಕೃತಿ-ಮಟ್ಟದ ಸಂಶೋಧನಾ ದಾಖಲೆ ಅಥವಾ ಪ್ರಕಟಿತ ಆವೃತ್ತಿ ಸ್ಥಳಸೂಚಿ ಜೋಡಿಸಲಾಗಿದೆ; ಪರಿಶೀಲಕರ ದೃಢೀಕರಣ ಇನ್ನೂ ಅಗತ್ಯ.')}
     work.reviewWorkflow.evidence.editionWitness={status:'located',note:n(witness.witness,witness.witness)}
     work.reviewWorkflow.completedEvidence=[...new Set([...(work.reviewWorkflow.completedEvidence||[]),'itemCitation','editionWitness'])]
-    work.reviewWorkflow.blockingEvidence=(work.reviewWorkflow.blockingEvidence||[]).filter(field=>field!=='itemCitation'&&field!=='editionWitness')
-    work.reviewWorkflow.evidenceRequests=(work.reviewWorkflow.evidenceRequests||[]).filter(request=>work.reviewWorkflow.blockingEvidence.includes(request.field))
+    // “Located” improves the packet but does not satisfy publication review.
+    // Retain both blockers and their structured evidence requests until an
+    // independent reviewer changes the gate itself to verified.
   })
 
   const covered=new Set(atlasData.districtHistoryResearch.filter(item=>item.recordKind==='candidate').map(item=>item.districtId))

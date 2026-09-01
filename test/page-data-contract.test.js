@@ -236,6 +236,39 @@ test('all map-facing records have safe coordinates and valid linked places', () 
   }
 })
 
+test('the first eight-district heritage batch uses site-level points rather than district centres', () => {
+  const districtIds = ['audit-kolar','audit-tumakuru','audit-chikkamagaluru','audit-ballari','audit-raichur','audit-dharwad','audit-haveri','audit-davanagere']
+  for (const districtId of districtIds) {
+    const audit = atlasData.heritageAudits.find(record => record.id === districtId)
+    assert.ok(audit, `${districtId} must remain in the heritage batch`)
+    assert.equal(audit.prioritySites.length, 2, `${districtId} must retain both priority sites`)
+    for (const site of audit.prioritySites) {
+      const point = site.verification?.coordinates
+      assert.ok(Number.isFinite(point?.latitude) && Number.isFinite(point?.longitude), `${site.id} needs a mapped site/locality point`)
+      assert.notEqual(point.precision, 'district-centroid', `${site.id} must not fall back to the district centre`)
+      assert.ok(site.verification?.siteCitations?.length, `${site.id} needs a coordinate or identity source`)
+      if (site.status === 'verified') {
+        assert.equal(site.verification?.verificationChecks?.currentCondition?.status, 'verified', `${site.id} cannot be fully verified without authority-confirmed present-condition evidence`)
+      }
+    }
+  }
+})
+
+test('registered literary witnesses are linked back to their review packets', () => {
+  const witnessById = new Map(atlasData.manuscriptWitnesses.map(record => [record.id, record]))
+  const linkedWorks = atlasData.works.filter(work => work.manuscriptWitnesses?.length)
+  assert.ok(linkedWorks.length >= 10, `expected at least 10 witness-linked works, found ${linkedWorks.length}`)
+  for (const work of linkedWorks) {
+    for (const witnessId of work.manuscriptWitnesses) {
+      const witness = witnessById.get(witnessId)
+      assert.ok(witness, `${work.id} points to missing witness ${witnessId}`)
+      assert.equal(witness.workId, work.id, `${witnessId} must point back to ${work.id}`)
+    }
+    assert.equal(work.reviewWorkflow.evidence.editionWitness.status, 'located', `${work.id} must expose its located witness in the review workflow`)
+    assert.ok(work.reviewWorkflow.blockingEvidence.includes('editionWitness'), `${work.id} must still require independent witness review`)
+  }
+})
+
 test('timeline and explorer cards have all fields used by their page renderers', () => {
   for (const collection of ['events', 'works', 'inscriptions', 'reigns', 'culturalHeritage']) {
     for (const record of atlasData[collection]) {

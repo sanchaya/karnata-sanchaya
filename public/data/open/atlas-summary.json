@@ -40580,8 +40580,16 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Work context"
+          },
+          {
+            "sourceId": "src-archive-kavirajamarga-sundaram",
+            "locator": "R.V.S. Sundaram verse-by-verse English/modern-Kannada translation, freely downloadable"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Article/OCR cluster for early Kannada literary history; exact article page and edition comparison pending"
           },
           {
             "sourceId": "src-cesck-kavirajamarga",
@@ -40593,6 +40601,10 @@
           "reviewer": null,
           "updatedAt": "2026-07-26"
         },
+        "manuscriptWitnesses": [
+          "manuscript-kavirajamarga-sanchaya-witness-lead",
+          "manuscript-kavirajamarga-parampare-print-witness-lead"
+        ],
         "editionWitnesses": [
           {
             "type": "edition-or-manuscript-witness",
@@ -40642,8 +40654,16 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Pampa and court context"
+          },
+          {
+            "sourceId": "src-archive-vikramarjuna-vijaya-kuvempu",
+            "locator": "Kuvempu-edited Mysore University edition, 1969, 492 pp., freely downloadable"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000mgnasmput-16",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
           },
           {
             "sourceId": "src-cesck-vikramarjuna-vijaya",
@@ -40655,6 +40675,10 @@
           "reviewer": null,
           "updatedAt": "2026-07-26"
         },
+        "manuscriptWitnesses": [
+          "manuscript-vikramarjuna-vijaya-sanchaya-witness-lead",
+          "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead"
+        ],
         "editionWitnesses": [
           {
             "type": "edition-or-manuscript-witness",
@@ -40717,6 +40741,9 @@
           "reviewer": null,
           "updatedAt": "2026-07-26"
         },
+        "manuscriptWitnesses": [
+          "manuscript-adipurana-printed-edition-lead"
+        ],
         "editionWitnesses": [
           {
             "type": "edition-or-manuscript-witness",
@@ -40766,12 +40793,12 @@
         ],
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
           },
           {
             "sourceId": "src-routledge-gadayuddham",
-            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
+            "locator": "Translation/study lead; Kannada base edition and manuscript witness still required"
           }
         ],
         "review": {
@@ -40779,6 +40806,10 @@
           "reviewer": null,
           "updatedAt": "2026-07-26"
         },
+        "manuscriptWitnesses": [
+          "manuscript-gadayuddha-routledge-witness-lead",
+          "manuscript-gadayuddha-routledge-translation-lead"
+        ],
         "editionWitnesses": [
           {
             "type": "edition-or-manuscript-witness",
@@ -40834,7 +40865,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-yashodhara-charite",
@@ -40878,7 +40910,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-harishchandra-kavya",
@@ -40922,7 +40955,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-kumaravyasa-bharata",
@@ -40960,12 +40994,24 @@
         ],
         "citations": [
           {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kumaravyasa and Vijayanagara-period Kannada literary context"
+          },
+          {
             "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
-            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition, freely downloadable, 676 pages"
           },
           {
             "sourceId": "src-murty-classical-library-kannada-mahabharata",
             "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000drmgsamputa-25",
+            "locator": "Literature and inscription OCR signal; article/page review required before promotion"
+          },
+          {
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
           }
         ],
         "review": {
@@ -40974,7 +41020,8 @@
           "updatedAt": "2026-07-26"
         },
         "manuscriptWitnesses": [
-          "manuscript-kumaravyasa-bharata-sanchaya-witness-lead"
+          "manuscript-kumaravyasa-bharata-sanchaya-witness-lead",
+          "manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead"
         ],
         "description": {
           "en": "A Kannada retelling of the first ten parvas of the Mahabharata in Bhamini Shatpadi metre, by the court poet Kumaravyasa under Deva Raya II of Vijayanagara; completion traditionally dated 1430.",
@@ -41017,6 +41064,18 @@
         ],
         "citations": [
           {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Torave Ramayana literary context"
+          },
+          {
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2, freely downloadable; Volume 1 still to be located"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-itihasadarshanav0000drde",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          },
+          {
             "sourceId": "src-archive-torave-ramayana-vol2",
             "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable"
           }
@@ -41027,7 +41086,8 @@
           "updatedAt": "2026-07-26"
         },
         "manuscriptWitnesses": [
-          "manuscript-torave-ramayana-sanchaya-witness-lead"
+          "manuscript-torave-ramayana-sanchaya-witness-lead",
+          "manuscript-source-volume-torave-ramayana-itihasa-literature-lead"
         ],
         "description": {
           "en": "A Kannada retelling of the Ramayana in Bhamini Shatpadi metre, composed from c. 1500 by Kumara Valmiki (pen name of Narahari) at the Narasimha temple, Torvi (Torave); ~5000 verses in 112 sections.",
@@ -41088,6 +41148,10 @@
           "reviewer": null,
           "updatedAt": "2026-07-26"
         },
+        "manuscriptWitnesses": [
+          "manuscript-vaddaradhane-palm-leaf-witness-lead",
+          "manuscript-vaddaradhane-repository-recovery-lead"
+        ],
         "editionWitnesses": [
           {
             "type": "edition-or-manuscript-witness",
@@ -41141,6 +41205,14 @@
           }
         ],
         "citations": [
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed, freely downloadable"
+          },
           {
             "sourceId": "src-archive-shantipurana-vidyashankar",
             "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed (item-level), freely downloadable"
@@ -41204,7 +41276,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-ajitapurana",
@@ -41246,6 +41319,14 @@
           }
         ],
         "citations": [
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection, freely downloadable"
+          },
           {
             "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
             "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection (item-level), freely downloadable"
@@ -41309,7 +41390,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-basavanna-vachanas",
@@ -41360,7 +41442,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-akka-mahadevi-vachanas",
@@ -41411,7 +41494,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-allama-prabhu-vachanas",
@@ -41462,7 +41546,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-basavarajadevara-ragale",
@@ -41513,7 +41598,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-shabdamanidarpana",
@@ -41558,13 +41644,20 @@
           {
             "sourceId": "src-asi-kannada-literature-survey",
             "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Kesiraja/Shabdamanidarpana literary-history context; Sanchaya witness URL pending"
           }
         ],
         "review": {
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": [
+          "manuscript-shabdamanidarpana-script-grammar-witness-lead"
+        ]
       },
       {
         "id": "work-mohana-tarangini",
@@ -41615,7 +41708,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-jaimini-bharata",
@@ -41666,7 +41760,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-chikkadevaraja-vamshavali",
@@ -41717,7 +41812,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-mudramanjusha",
@@ -41768,7 +41864,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-mankuthimmana-kagga",
@@ -41819,7 +41916,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       },
       {
         "id": "work-gajasastra",
@@ -41862,7 +41960,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "manuscriptWitnesses": []
       }
     ],
     "sources": [
@@ -52803,73 +52902,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17",
-          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17"
-        },
-        "authors": [
-          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-        ],
-        "year": 2013,
-        "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-17.0000drrg",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-21",
-          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-21"
-        },
-        "authors": [
-          "ಟಿ. ವೆಂಕಟೇಶ್"
-        ],
-        "year": 2020,
-        "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000tven",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-14-0000drrg",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14",
-          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14"
-        },
-        "authors": [
-          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-        ],
-        "year": 2010,
-        "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-14.0000drrg",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -52891,7 +52924,29 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-14-0000drrg",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-14"
+        },
+        "authors": [
+          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+        ],
+        "year": 2010,
+        "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-14.0000drrg",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -52913,7 +52968,51 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000tven",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-21",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-21"
+        },
+        "authors": [
+          "ಟಿ. ವೆಂಕಟೇಶ್"
+        ],
+        "year": 2020,
+        "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000tven",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-17-0000drrg",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-17"
+        },
+        "authors": [
+          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+        ],
+        "year": 2013,
+        "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-17.0000drrg",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -52935,7 +53034,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -52957,7 +53056,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -52979,7 +53078,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53001,7 +53100,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53023,7 +53122,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53045,7 +53144,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53067,7 +53166,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53089,7 +53188,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53111,7 +53210,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53133,7 +53232,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53155,7 +53254,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53177,7 +53276,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53199,7 +53298,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53221,535 +53320,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-2",
-          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-2"
-        },
-        "authors": [
-          "ಎಂ. ಎಲ್. ಶಿವಶಂಕರ"
-        ],
-        "year": 1997,
-        "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000.2mlsh",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-c0a4",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Archaeological Survey Of Mysore Annual Report-1931",
-          "kn": "Archaeological Survey Of Mysore Annual Report-1931"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1931,
-        "url": "https://archive.org/details/damh.archaeologicalsu0000unse_c0a4",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-indexannualrepor0000mhkr-1929",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Index - Annual Reports - 1906 - 1922",
-          "kn": "Index - Annual Reports - 1906 - 1922"
-        },
-        "authors": [
-          "M. H. Krishna Iyenger"
-        ],
-        "year": 1929,
-        "url": "https://archive.org/details/damh.indexannualrepor0000mhkr_1929",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20",
-          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20"
-        },
-        "authors": [
-          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-        ],
-        "year": 2017,
-        "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-20.0000drrg",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-vijayanagaradaha0000chan-sam-1",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Vijayanagarada (Hampeya) Shasanagalu",
-          "kn": "Vijayanagarada (Hampeya) Shasanagalu"
-        },
-        "authors": [
-          "Channabasappa S Patila"
-        ],
-        "year": 1996,
-        "url": "https://archive.org/details/damh.vijayanagaradaha0000chan_sam_1",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11",
-          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11"
-        },
-        "authors": [
-          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
-        ],
-        "year": 2006,
-        "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000unse",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-karnatakashasana0000chan-sam-2",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu",
-          "kn": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu"
-        },
-        "authors": [
-          "Channabasappa S. Patil"
-        ],
-        "year": 1997,
-        "url": "https://archive.org/details/damh.karnatakashasana0000chan_sam_2",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-j9t4",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": " Archaeological Survey Of Mysore Annual Report-1943",
-          "kn": " Archaeological Survey Of Mysore Annual Report-1943"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1943,
-        "url": "https://archive.org/details/damh.archaeologicalsu0000unse_j9t4",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Annual Report Of The Mysore Archaeological Department -1945",
-          "kn": "Annual Report Of The Mysore Archaeological Department -1945"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1946,
-        "url": "https://archive.org/details/damh.annualreportofmy0000unse_1945",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v14",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts",
-          "kn": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1943,
-        "url": "https://archive.org/details/damh.epigraphiacarnat0000unse_v14",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-inscriptionsofko0000chan-vol-iii",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Inscriptions Of Koppal District - Volum III",
-          "kn": "Inscriptions Of Koppal District - Volum III"
-        },
-        "authors": [
-          "Channabasappa S Patil"
-        ],
-        "year": 1998,
-        "url": "https://archive.org/details/damh.inscriptionsofko0000chan_vol_iii",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-inscriptionsatvi0000chan-vol-i-ser-8",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Inscriptions At Vijayanagara (Hampi) - Volume I - Series No 8",
-          "kn": "Inscriptions At Vijayanagara (Hampi) - Volume I - Series No 8"
-        },
-        "authors": [
-          "Channabasappas S. Patil"
-        ],
-        "year": 1995,
-        "url": "https://archive.org/details/damh.inscriptionsatvi0000chan_vol_I_ser_8",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-cambridgehistory0005hhdo",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "The Cambridge History Of India Volume-5",
-          "kn": "The Cambridge History Of India Volume-5"
-        },
-        "authors": [
-          "H.H Dodwell"
-        ],
-        "year": 1929,
-        "url": "https://archive.org/details/damh.cambridgehistory0005hhdo",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-ii",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Vijayanagara Inscriptions - Volume II",
-          "kn": "Vijayanagara Inscriptions - Volume II"
-        },
-        "authors": [
-          "Dr. B. R. Gopal"
-        ],
-        "year": 1986,
-        "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_ii",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-epigraphicalstud0000drbr",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Epigraphical Studies",
-          "kn": "Epigraphical Studies"
-        },
-        "authors": [
-          "Dr. B. R. Gopal"
-        ],
-        "year": 1997,
-        "url": "https://archive.org/details/damh.epigraphicalstud0000drbr",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (research journal). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (research journal). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-dasara850000unse-85",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Dasara - 85",
-          "kn": "Dasara - 85"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1985,
-        "url": "https://archive.org/details/damh.dasara850000unse_85",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iv",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Vijayanagara Inscriptions - Volume IV",
-          "kn": "Vijayanagara Inscriptions - Volume IV"
-        },
-        "authors": [
-          "Dr. B. R. Gopal"
-        ],
-        "year": 1996,
-        "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_iv",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-annualreportmyso0000unse1941",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Annual Report - Mysore Archaeological Department 1941",
-          "kn": "Annual Report - Mysore Archaeological Department 1941"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1942,
-        "url": "https://archive.org/details/damh.annualreportmyso0000unse1941",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "History Of The Wodeyars Of Mysore (1610 - 1748)",
-          "kn": "History Of The Wodeyars Of Mysore (1610 - 1748)"
-        },
-        "authors": [
-          "A. Satyanarayana"
-        ],
-        "year": 1996,
-        "url": "https://archive.org/details/damh.historyofwodeyar0000asat",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-prachinakarnatak0000srin",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Prachina Karnatakada Adalita Paribhashakosha",
-          "kn": "Prachina Karnatakada Adalita Paribhashakosha"
-        },
-        "authors": [
-          "Srinivasa Ritti"
-        ],
-        "year": 2000,
-        "url": "https://archive.org/details/damh.prachinakarnatak0000srin",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-internationalcon0000unse-2010",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "International Confrence on Life and Achievements of Tipu Sultan",
-          "kn": "International Confrence on Life and Achievements of Tipu Sultan"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 2010,
-        "url": "https://archive.org/details/damh.internationalcon0000unse_2010",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-dasara85nenapina0000unse",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Dasara - 85 - Nenapina Sanchike",
-          "kn": "Dasara - 85 - Nenapina Sanchike"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1985,
-        "url": "https://archive.org/details/damh.dasara85nenapina0000unse",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-stoneagecultures0000bend",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Stone age  cultures of Ballary",
-          "kn": "Stone age  cultures of Ballary"
-        },
-        "authors": [
-          "Bendapudi Subbarao "
-        ],
-        "year": null,
-        "url": "https://archive.org/details/damh.stoneagecultures0000bend",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
-        }
-      },
-      {
-        "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse1931",
-        "type": "digitised-archive-item",
-        "title": {
-          "en": "Annual Report Of The Mysore Archaeological Department - 1931",
-          "kn": "Annual Report Of The Mysore Archaeological Department - 1931"
-        },
-        "authors": [
-          "Unknown / uncredited"
-        ],
-        "year": 1935,
-        "url": "https://archive.org/details/damh.annualreportofmy0000unse1931",
-        "scope": {
-          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
-          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
-        },
-        "review": {
-          "status": "needs-review",
-          "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53771,7 +53342,7 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -53793,7 +53364,799 @@
         "review": {
           "status": "needs-review",
           "reviewer": null,
-          "updatedAt": "2026-08-29"
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadha0000-2mlsh",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-2",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-2"
+        },
+        "authors": [
+          "ಎಂ. ಎಲ್. ಶಿವಶಂಕರ"
+        ],
+        "year": 1997,
+        "url": "https://archive.org/details/asi.ka.vijayanagaraadha0000.2mlsh",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-c0a4",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Archaeological Survey Of Mysore Annual Report-1931",
+          "kn": "Archaeological Survey Of Mysore Annual Report-1931"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1931,
+        "url": "https://archive.org/details/damh.archaeologicalsu0000unse_c0a4",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-indexannualrepor0000mhkr-1929",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Index - Annual Reports - 1906 - 1922",
+          "kn": "Index - Annual Reports - 1906 - 1922"
+        },
+        "authors": [
+          "M. H. Krishna Iyenger"
+        ],
+        "year": 1929,
+        "url": "https://archive.org/details/damh.indexannualrepor0000mhkr_1929",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-vijayanagaradaha0000chan-sam-1",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Vijayanagarada (Hampeya) Shasanagalu",
+          "kn": "Vijayanagarada (Hampeya) Shasanagalu"
+        },
+        "authors": [
+          "Channabasappa S Patila"
+        ],
+        "year": 1996,
+        "url": "https://archive.org/details/damh.vijayanagaradaha0000chan_sam_1",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhysamputa-20-0000drrg",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-20"
+        },
+        "authors": [
+          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+        ],
+        "year": 2017,
+        "url": "https://archive.org/details/asi.ka.vijayanagaraadhysamputa-20.0000drrg",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-karnatakashasana0000chan-sam-2",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu",
+          "kn": "Karnataka Shasanagalu Samputa - 2 Ballari Jilleya Shasanagalu"
+        },
+        "authors": [
+          "Channabasappa S. Patil"
+        ],
+        "year": 1997,
+        "url": "https://archive.org/details/damh.karnatakashasana0000chan_sam_2",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-internationalcon0000unse-2010",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "International Confrence on Life and Achievements of Tipu Sultan",
+          "kn": "International Confrence on Life and Achievements of Tipu Sultan"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 2010,
+        "url": "https://archive.org/details/damh.internationalcon0000unse_2010",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v2",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Epigraphia Carnatica Vol - 2",
+          "kn": "Epigraphia Carnatica Vol - 2"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1973,
+        "url": "https://archive.org/details/damh.epigraphiacarnat0000unse_v2",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-asi-ka-vijayanagaraadhy0000unse",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11",
+          "kn": "ವಿಜಯನಗರ ಅಧ್ಯಯನ ಸಂಪುಟ-11"
+        },
+        "authors": [
+          "ಡಾ. ಆರ್ ಗೋಪಾಲ್"
+        ],
+        "year": 2006,
+        "url": "https://archive.org/details/asi.ka.vijayanagaraadhy0000unse",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-bengalurujilleya0000drrg",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Bengaluru Jilleya Itihasa Mattu Puratatva",
+          "kn": "Bengaluru Jilleya Itihasa Mattu Puratatva"
+        },
+        "authors": [
+          "Dr. R. Gopal"
+        ],
+        "year": 2013,
+        "url": "https://archive.org/details/damh.bengalurujilleya0000drrg",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1938",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Annual Report Of The Mysore Archaeological Department - 1938",
+          "kn": "Annual Report Of The Mysore Archaeological Department - 1938"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1940,
+        "url": "https://archive.org/details/damh.annualreportofmy0000unse_1938",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-archaeologicalsu0000unse-j9t4",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": " Archaeological Survey Of Mysore Annual Report-1943",
+          "kn": " Archaeological Survey Of Mysore Annual Report-1943"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1943,
+        "url": "https://archive.org/details/damh.archaeologicalsu0000unse_j9t4",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse-1945",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Annual Report Of The Mysore Archaeological Department -1945",
+          "kn": "Annual Report Of The Mysore Archaeological Department -1945"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1946,
+        "url": "https://archive.org/details/damh.annualreportofmy0000unse_1945",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v14",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts",
+          "kn": "Epigraphia Carnatica Vol-XIV Mysore And Mandya Districts"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1943,
+        "url": "https://archive.org/details/damh.epigraphiacarnat0000unse_v14",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-coinscurrencysys0000drav",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Coins And Currency System In Karnataka",
+          "kn": "Coins And Currency System In Karnataka"
+        },
+        "authors": [
+          "Dr. A. V. Narasimha Murthy"
+        ],
+        "year": 1997,
+        "url": "https://archive.org/details/damh.coinscurrencysys0000drav",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (coin catalogue). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (coin catalogue). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-inscriptionsofko0000chan-vol-iii",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Inscriptions Of Koppal District - Volum III",
+          "kn": "Inscriptions Of Koppal District - Volum III"
+        },
+        "authors": [
+          "Channabasappa S Patil"
+        ],
+        "year": 1998,
+        "url": "https://archive.org/details/damh.inscriptionsofko0000chan_vol_iii",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-uttarakannadajil0000drrg",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Uttara Kannada Jilleya Itihasa Mattu Puratatva",
+          "kn": "Uttara Kannada Jilleya Itihasa Mattu Puratatva"
+        },
+        "authors": [
+          "Dr. R. Gopal"
+        ],
+        "year": 2021,
+        "url": "https://archive.org/details/damh.uttarakannadajil0000drrg",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-cambridgehistory0005hhdo",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "The Cambridge History Of India Volume-5",
+          "kn": "The Cambridge History Of India Volume-5"
+        },
+        "authors": [
+          "H.H Dodwell"
+        ],
+        "year": 1929,
+        "url": "https://archive.org/details/damh.cambridgehistory0005hhdo",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-gazetteerofindia0000unse",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "GazetteerOf India Mysore State Mandya District",
+          "kn": "GazetteerOf India Mysore State Mandya District"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1976,
+        "url": "https://archive.org/details/damh.gazetteerofindia0000unse",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-annualreportofmy0000unse1931",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Annual Report Of The Mysore Archaeological Department - 1931",
+          "kn": "Annual Report Of The Mysore Archaeological Department - 1931"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1935,
+        "url": "https://archive.org/details/damh.annualreportofmy0000unse1931",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-stoneagecultures0000bend",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Stone age  cultures of Ballary",
+          "kn": "Stone age  cultures of Ballary"
+        },
+        "authors": [
+          "Bendapudi Subbarao "
+        ],
+        "year": null,
+        "url": "https://archive.org/details/damh.stoneagecultures0000bend",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-templesofraichur0000chan",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Temples Of Raichur And Bellary Districts",
+          "kn": "Temples Of Raichur And Bellary Districts"
+        },
+        "authors": [
+          "Channabasappa S. Patil"
+        ],
+        "year": 1992,
+        "url": "https://archive.org/details/damh.templesofraichur0000chan",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-ii",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Vijayanagara Inscriptions - Volume II",
+          "kn": "Vijayanagara Inscriptions - Volume II"
+        },
+        "authors": [
+          "Dr. B. R. Gopal"
+        ],
+        "year": 1986,
+        "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_ii",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-epigraphicalstud0000drbr",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Epigraphical Studies",
+          "kn": "Epigraphical Studies"
+        },
+        "authors": [
+          "Dr. B. R. Gopal"
+        ],
+        "year": 1997,
+        "url": "https://archive.org/details/damh.epigraphicalstud0000drbr",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (research journal). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (research journal). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-inscriptionsofbe0000chan-vol-ii",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Inscriptions Of Bellary District - Volume II",
+          "kn": "Inscriptions Of Bellary District - Volume II"
+        },
+        "authors": [
+          "Channabasappa S. Patil"
+        ],
+        "year": 1997,
+        "url": "https://archive.org/details/damh.inscriptionsofbe0000chan_vol_ii",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-annualreportofdi0000unse-1929",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Annual Report Of The Directorate Of Archaeology And Museums In Karnataka - 1929",
+          "kn": "Annual Report Of The Directorate Of Archaeology And Museums In Karnataka - 1929"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": null,
+        "url": "https://archive.org/details/damh.annualreportofdi0000unse_1929",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000rnar-vol-xiii-part-ii",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Epigraphia Carnatica - General Index - Volume XIII Part II",
+          "kn": "Epigraphia Carnatica - General Index - Volume XIII Part II"
+        },
+        "authors": [
+          "R. Narasimhachar"
+        ],
+        "year": 1987,
+        "url": "https://archive.org/details/damh.epigraphiacarnat0000rnar_vol_xiii_part_ii",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-inscriptionsatvi0000chan-vol-i-ser-8",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Inscriptions At Vijayanagara (Hampi) - Volume I - Series No 8",
+          "kn": "Inscriptions At Vijayanagara (Hampi) - Volume I - Series No 8"
+        },
+        "authors": [
+          "Channabasappas S. Patil"
+        ],
+        "year": 1995,
+        "url": "https://archive.org/details/damh.inscriptionsatvi0000chan_vol_I_ser_8",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-historyofwodeyar0000asat",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "History Of The Wodeyars Of Mysore (1610 - 1748)",
+          "kn": "History Of The Wodeyars Of Mysore (1610 - 1748)"
+        },
+        "authors": [
+          "A. Satyanarayana"
+        ],
+        "year": 1996,
+        "url": "https://archive.org/details/damh.historyofwodeyar0000asat",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-prachinakarnatak0000srin",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Prachina Karnatakada Adalita Paribhashakosha",
+          "kn": "Prachina Karnatakada Adalita Paribhashakosha"
+        },
+        "authors": [
+          "Srinivasa Ritti"
+        ],
+        "year": 2000,
+        "url": "https://archive.org/details/damh.prachinakarnatak0000srin",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-annualreportmyso0000unse1941",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Annual Report - Mysore Archaeological Department 1941",
+          "kn": "Annual Report - Mysore Archaeological Department 1941"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1942,
+        "url": "https://archive.org/details/damh.annualreportmyso0000unse1941",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-dasara850000unse-85",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Dasara - 85",
+          "kn": "Dasara - 85"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1985,
+        "url": "https://archive.org/details/damh.dasara850000unse_85",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-nagachandrika0000drdv",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Nagachandrika",
+          "kn": "Nagachandrika"
+        },
+        "authors": [
+          "Dr. D. V. Devaraj"
+        ],
+        "year": 1996,
+        "url": "https://archive.org/details/damh.nagachandrika0000drdv",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-epigraphiacarnat0000unse-v9",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Epigraphia Carnatica Vol-9",
+          "kn": "Epigraphia Carnatica Vol-9"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1990,
+        "url": "https://archive.org/details/damh.epigraphiacarnat0000unse_v9",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-dasara85nenapina0000unse",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Dasara - 85 - Nenapina Sanchike",
+          "kn": "Dasara - 85 - Nenapina Sanchike"
+        },
+        "authors": [
+          "Unknown / uncredited"
+        ],
+        "year": 1985,
+        "url": "https://archive.org/details/damh.dasara85nenapina0000unse",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (archaeology report). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (archaeology report). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
+        }
+      },
+      {
+        "id": "src-ia-karnataka-archaeology-damh-vijayanagarainsc0000drbr-vol-iv",
+        "type": "digitised-archive-item",
+        "title": {
+          "en": "Vijayanagara Inscriptions - Volume IV",
+          "kn": "Vijayanagara Inscriptions - Volume IV"
+        },
+        "authors": [
+          "Dr. B. R. Gopal"
+        ],
+        "year": 1996,
+        "url": "https://archive.org/details/damh.vijayanagarainsc0000drbr_vol_iv",
+        "scope": {
+          "en": "Digitised item from the Karnataka Archaeology collection on the Internet Archive (epigraphy corpus). Full-text OCR is available for term-level discovery; verify against the page image before citing specific facts.",
+          "kn": "ಇಂಟರ್ನೆಟ್ ಆರ್ಕೈವ್‌ನ ಕರ್ನಾಟಕ ಆರ್ಕಿಯಾಲಜಿ ಸಂಗ್ರಹದ ಡಿಜಿಟಲೀಕರಿಸಿದ ಕಡತ (epigraphy corpus). ಪದ-ಮಟ್ಟದ ಅನ್ವೇಷಣೆಗೆ ಪೂರ್ಣಪಠ್ಯ OCR ಲಭ್ಯವಿದೆ; ನಿರ್ದಿಷ್ಟ ಸಂಗತಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ಮೊದಲು ಪುಟದ ಚಿತ್ರದೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."
+        },
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-31"
         }
       },
       {
@@ -67008,8 +67371,16 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Work context"
+          },
+          {
+            "sourceId": "src-archive-kavirajamarga-sundaram",
+            "locator": "R.V.S. Sundaram verse-by-verse English/modern-Kannada translation, freely downloadable"
+          },
+          {
+            "sourceId": "src-karnataka-parampare-v1",
+            "locator": "Article/OCR cluster for early Kannada literary history; exact article page and edition comparison pending"
           },
           {
             "sourceId": "src-cesck-kavirajamarga",
@@ -67035,8 +67406,16 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Pampa and court context"
+          },
+          {
+            "sourceId": "src-archive-vikramarjuna-vijaya-kuvempu",
+            "locator": "Kuvempu-edited Mysore University edition, 1969, 492 pp., freely downloadable"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000mgnasmput-16",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
           },
           {
             "sourceId": "src-cesck-vikramarjuna-vijaya",
@@ -67089,12 +67468,12 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
           },
           {
             "sourceId": "src-routledge-gadayuddham",
-            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
+            "locator": "Translation/study lead; Kannada base edition and manuscript witness still required"
           }
         ],
         "review": {
@@ -67185,12 +67564,24 @@
         },
         "citations": [
           {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kumaravyasa and Vijayanagara-period Kannada literary context"
+          },
+          {
             "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
-            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition, freely downloadable, 676 pages"
           },
           {
             "sourceId": "src-murty-classical-library-kannada-mahabharata",
             "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000drmgsamputa-25",
+            "locator": "Literature and inscription OCR signal; article/page review required before promotion"
+          },
+          {
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
           }
         ],
         "review": {
@@ -67211,6 +67602,18 @@
           "precision": "circa"
         },
         "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Torave Ramayana literary context"
+          },
+          {
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2, freely downloadable; Volume 1 still to be located"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-itihasadarshanav0000drde",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          },
           {
             "sourceId": "src-archive-torave-ramayana-vol2",
             "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable"
@@ -67262,6 +67665,14 @@
         },
         "citations": [
           {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed, freely downloadable"
+          },
+          {
             "sourceId": "src-archive-shantipurana-vidyashankar",
             "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed (item-level), freely downloadable"
           }
@@ -67307,6 +67718,14 @@
           "precision": "year"
         },
         "citations": [
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection, freely downloadable"
+          },
           {
             "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
             "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection (item-level), freely downloadable"
@@ -67448,6 +67867,10 @@
           {
             "sourceId": "src-asi-kannada-literature-survey",
             "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Kesiraja/Shabdamanidarpana literary-history context; Sanchaya witness URL pending"
           }
         ],
         "review": {
@@ -67607,8 +68030,16 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Pampa and court context"
+          },
+          {
+            "sourceId": "src-archive-vikramarjuna-vijaya-kuvempu",
+            "locator": "Kuvempu-edited Mysore University edition, 1969, 492 pp., freely downloadable"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000mgnasmput-16",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
           },
           {
             "sourceId": "src-cesck-vikramarjuna-vijaya",
@@ -67661,12 +68092,12 @@
         },
         "citations": [
           {
-            "sourceId": "src-asi-kannada-literature-survey",
-            "locator": "Work and literary-period survey; item-level citation review pending"
+            "sourceId": "src-routledge-gadayuddham",
+            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
           },
           {
             "sourceId": "src-routledge-gadayuddham",
-            "locator": "2021 critical English translation; editors identify Kannada textual witnesses consulted"
+            "locator": "Translation/study lead; Kannada base edition and manuscript witness still required"
           }
         ],
         "review": {
@@ -67688,12 +68119,24 @@
         },
         "citations": [
           {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Kumaravyasa and Vijayanagara-period Kannada literary context"
+          },
+          {
             "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
-            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition, freely downloadable, 676 pages"
           },
           {
             "sourceId": "src-murty-classical-library-kannada-mahabharata",
             "locator": "Murty Classical Library of India scholarly bilingual translation, for edition comparison"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-kia-itihasadarsanasa0000drmgsamputa-25",
+            "locator": "Literature and inscription OCR signal; article/page review required before promotion"
+          },
+          {
+            "sourceId": "src-archive-kumaravyasa-karnata-bharata-kathamanjari",
+            "locator": "Kuvempu/Masti Venkatesha Iyengar critical print edition (item-level, 676 pp.), freely downloadable"
           }
         ],
         "review": {
@@ -67714,6 +68157,18 @@
           "precision": "circa"
         },
         "citations": [
+          {
+            "sourceId": "src-gazetteer-karnataka-1983",
+            "locator": "Torave Ramayana literary context"
+          },
+          {
+            "sourceId": "src-archive-torave-ramayana-vol2",
+            "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2, freely downloadable; Volume 1 still to be located"
+          },
+          {
+            "sourceId": "src-itihasa-darshana-itihasadarshanav0000drde",
+            "locator": "Literature-heavy OCR signal; article/page review required before treating this as a witness authority"
+          },
           {
             "sourceId": "src-archive-torave-ramayana-vol2",
             "locator": "Kannada Sahitya Parishat 1977 print edition, Volume 2 (item-level), freely downloadable"
@@ -67765,6 +68220,14 @@
         },
         "citations": [
           {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-archive-shantipurana-vidyashankar",
+            "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed, freely downloadable"
+          },
+          {
             "sourceId": "src-archive-shantipurana-vidyashankar",
             "locator": "S. Vidyashankar edition, Priyadarshini Prakashan, CC0-licensed (item-level), freely downloadable"
           }
@@ -67810,6 +68273,14 @@
           "precision": "year"
         },
         "citations": [
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
+            "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection, freely downloadable"
+          },
           {
             "sourceId": "src-archive-ajitapurana-sannayya-ramagauda",
             "locator": "N. Sannayya Rama Gauda edition, Jangamwadi Math Library Collection (item-level), freely downloadable"
@@ -67951,6 +68422,10 @@
           {
             "sourceId": "src-asi-kannada-literature-survey",
             "locator": "Work, authorship and historical-period survey; circa dates require record-level review"
+          },
+          {
+            "sourceId": "src-asi-kannada-literature-survey",
+            "locator": "Kesiraja/Shabdamanidarpana literary-history context; Sanchaya witness URL pending"
           }
         ],
         "review": {
@@ -93330,6 +93805,52 @@
         }
       },
       {
+        "id": "rel-coin-tipu-sultan-twelve-mint-network-lead-polity",
+        "fromId": "coin-tipu-sultan-twelve-mint-network-lead",
+        "type": "coinage-of",
+        "toId": "polity-mysore",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "\"The Mints\": twelve mints listed with Tipu’s invented names and modern equivalents; mint count by regnal year, the post-1792 losses of Calicut/Feroke/Dindigul/Gurramkonda/Dharwar, the final-year Nagar-only copper issues, and the excluded Benazir (Hole Honnur) claim"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "rel-coin-tipu-sultan-twelve-mint-network-lead-place",
+        "fromId": "coin-tipu-sultan-twelve-mint-network-lead",
+        "type": "coin-findspot-context",
+        "toId": "place-srirangapatna",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "\"The Mints\": twelve mints listed with Tipu’s invented names and modern equivalents; mint count by regnal year, the post-1792 losses of Calicut/Feroke/Dindigul/Gurramkonda/Dharwar, the final-year Nagar-only copper issues, and the excluded Benazir (Hole Honnur) claim"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
         "id": "rel-coin-parampare-western-ganga-gold-plate-lead-polity",
         "fromId": "coin-parampare-western-ganga-gold-plate-lead",
         "type": "coinage-of",
@@ -98662,6 +99183,70 @@
           {
             "sourceId": "src-henderson-1921-coins-haidar-tipu",
             "locator": "Full silver fractional ladder: haidari/double-rupee (352-355 grains), imami/rupee (avg 175, up to 188 grains), abidi/half-rupee (~87 grains), baqiri/quarter-rupee (~43 grains, Seringapatam 1216-1224), jafari/eighth-rupee (~20 grains, Seringapatam 1218-1226), kazimi/sixteenth-rupee (~10 grains, Seringapatam 1220-1226), khizri/thirty-second-rupee (~5 grains, Seringapatam only, year 1222 only)"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
+        "id": "coin-tipu-sultan-twelve-mint-network-lead",
+        "name": {
+          "en": "Tipu Sultan twelve-mint network lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಹನ್ನೆರಡು ಟಂಕಶಾಲೆ ಜಾಲ ದಾರಿ"
+        },
+        "coinKind": "mint-record",
+        "polityId": "polity-mysore",
+        "placeId": "place-srirangapatna",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "mixed",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Tipu Sultan struck from twelve mints, most carrying fanciful names he invented for them: Pattan (Seringapatam), Nagar, Faiz Hisar (Gooty), Bengalur (Bangalore), Farrukh-yab Hisar (Chitaldrig), Kalikat (Calicut), Farrukhi (Feroke), Salamabad (Satyamangalam), Khaliqabad (Dindigul), Zafarabad (Gurramkonda), Khwurshed-sawad (Dharwar) and Nazarbar (Mysore). Only Nagar, Bangalore, Calicut and Feroke appear on the coins under names recognisable today; Dharwar appears under both its own name and the invented one. Henderson notes the mint-towns were chosen for military or political importance.",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಹನ್ನೆರಡು ಟಂಕಶಾಲೆಗಳಿಂದ ನಾಣ್ಯ ಟಂಕಿಸಿದನು, ಹೆಚ್ಚಿನವು ಆತನೇ ಸೃಷ್ಟಿಸಿದ ಕಾಲ್ಪನಿಕ ಹೆಸರುಗಳನ್ನು ಹೊಂದಿದ್ದವು: ಪಟಣ (ಶ್ರೀರಂಗಪಟ್ಟಣ), ನಗರ, ಫೈಜ಼್ ಹಿಸಾರ್ (ಗೂಟಿ), ಬೆಂಗಳೂರ್ (ಬೆಂಗಳೂರು), ಫರ್ರುಖ್-ಯಾಬ್ ಹಿಸಾರ್ (ಚಿತ್ರದುರ್ಗ), ಕಾಲಿಕತ್ (ಕಲ್ಲಿಕೋಟೆ), ಫರ್ರುಖಿ (ಫೆರೋಕೆ), ಸಲಾಮಾಬಾದ್ (ಸತ್ಯಮಂಗಲಂ), ಖಾಲಿಕಾಬಾದ್ (ದಿಂಡಿಗಲ್), ಜ಼ಫರಾಬಾದ್ (ಗುರ್ರಂಕೊಂಡ), ಖ್ವುರ್ಷೇದ್-ಸವಾದ್ (ಧಾರವಾಡ) ಮತ್ತು ನಜ಼ರ್ಬಾರ್ (ಮೈಸೂರು). ಇಂದು ಗುರುತಿಸಬಹುದಾದ ಹೆಸರುಗಳಲ್ಲಿ ನಗರ, ಬೆಂಗಳೂರು, ಕಲ್ಲಿಕೋಟೆ ಮತ್ತು ಫೆರೋಕೆ ಮಾತ್ರ ನಾಣ್ಯಗಳಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ; ಧಾರವಾಡ ತನ್ನದೇ ಹೆಸರಿನಲ್ಲೂ ಕಾಲ್ಪನಿಕ ಹೆಸರಿನಲ್ಲೂ ಬರುತ್ತದೆ. ಟಂಕಶಾಲೆ ಪಟ್ಟಣಗಳನ್ನು ಸೈನಿಕ ಅಥವಾ ರಾಜಕೀಯ ಮಹತ್ವಕ್ಕಾಗಿ ಆಯ್ಕೆ ಮಾಡಲಾಗಿತ್ತೆಂದು ಹೆಂಡರ್ಸನ್ ಗಮನಿಸುತ್ತಾನೆ."
+        },
+        "reverse": {
+          "en": "The mint network tracks the war record directly. Only Seringapatam and Nagar operated in the first regnal year; the count peaked at eight in the fifth; a sharp fall came in the ninth as military pressure mounted before the 1792 siege of Bangalore. The treaty that followed cost Tipu half his dominions, and Calicut, Feroke, Dindigul, Gurramkonda and Dharwar all passed out of his possession. From the tenth regnal year to the end only Seringapatam, Nagar and Gooty struck coins, Gooty in copper alone. In the seventeenth and final year — begun less than a month before Tipu’s death — only two copper varieties are known, both from Nagar. Henderson excludes a thirteenth claimed mint, Benazir (Hole Honnur, Shimoga district), because the single reported coin was never rediscovered and the source work \"contains not a few inaccuracies.\"",
+          "kn": "ಟಂಕಶಾಲೆ ಜಾಲವು ಯುದ್ಧದ ದಾಖಲೆಯನ್ನು ನೇರವಾಗಿ ಅನುಸರಿಸುತ್ತದೆ. ಮೊದಲ ಆಳ್ವಿಕೆ ವರ್ಷದಲ್ಲಿ ಶ್ರೀರಂಗಪಟ್ಟಣ ಮತ್ತು ನಗರ ಮಾತ್ರ ಕಾರ್ಯನಿರತವಾಗಿದ್ದವು; ಐದನೇ ವರ್ಷದಲ್ಲಿ ಸಂಖ್ಯೆ ಎಂಟಕ್ಕೆ ಏರಿತು; 1792ರ ಬೆಂಗಳೂರು ಮುತ್ತಿಗೆಗೂ ಮುನ್ನ ಸೈನಿಕ ಒತ್ತಡ ಹೆಚ್ಚಿದಂತೆ ಒಂಬತ್ತನೇ ವರ್ಷದಲ್ಲಿ ತೀವ್ರ ಇಳಿಕೆಯಾಯಿತು. ನಂತರದ ಒಪ್ಪಂದ ಟಿಪ್ಪುವಿನ ಅರ್ಧ ರಾಜ್ಯವನ್ನು ಕಸಿಯಿತು, ಮತ್ತು ಕಲ್ಲಿಕೋಟೆ, ಫೆರೋಕೆ, ದಿಂಡಿಗಲ್, ಗುರ್ರಂಕೊಂಡ ಮತ್ತು ಧಾರವಾಡ ಆತನ ವಶದಿಂದ ಹೋದವು. ಹತ್ತನೇ ಆಳ್ವಿಕೆ ವರ್ಷದಿಂದ ಕೊನೆಯವರೆಗೆ ಶ್ರೀರಂಗಪಟ್ಟಣ, ನಗರ ಮತ್ತು ಗೂಟಿ ಮಾತ್ರ ನಾಣ್ಯ ಟಂಕಿಸಿದವು, ಗೂಟಿ ತಾಮ್ರದಲ್ಲಿ ಮಾತ್ರ. ಟಿಪ್ಪುವಿನ ಮರಣಕ್ಕೆ ಒಂದು ತಿಂಗಳಿಗಿಂತ ಕಡಿಮೆ ಮೊದಲು ಆರಂಭವಾದ ಹದಿನೇಳನೇ ಮತ್ತು ಕೊನೆಯ ವರ್ಷದಲ್ಲಿ ಕೇವಲ ಎರಡು ತಾಮ್ರ ಬಗೆಗಳು ತಿಳಿದಿವೆ, ಎರಡೂ ನಗರದಿಂದ. ಹದಿಮೂರನೇ ಎಂದು ಹೇಳಲಾದ ಬೆನಜ಼ೀರ್ (ಹೊಳೆ ಹೊನ್ನೂರು, ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ) ಟಂಕಶಾಲೆಯನ್ನು ಹೆಂಡರ್ಸನ್ ಹೊರಗಿಡುತ್ತಾನೆ, ವರದಿಯಾದ ಆ ಒಂದೇ ನಾಣ್ಯ ಮತ್ತೆ ಸಿಗಲಿಲ್ಲವಾದ್ದರಿಂದ ಮತ್ತು ಆಕರ ಕೃತಿಯಲ್ಲಿ \"ಸಾಕಷ್ಟು ಅಸಮರ್ಪಕತೆಗಳಿವೆ\" ಎಂಬ ಕಾರಣಕ್ಕೆ."
+        },
+        "findspot": {
+          "placeId": "place-srirangapatna",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "not-applicable"
+          },
+          "weight": {
+            "status": "not-applicable"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "\"The Mints\": twelve mints listed with Tipu’s invented names and modern equivalents; mint count by regnal year, the post-1792 losses of Calicut/Feroke/Dindigul/Gurramkonda/Dharwar, the final-year Nagar-only copper issues, and the excluded Benazir (Hole Honnur) claim"
           }
         ],
         "review": {

@@ -20,9 +20,14 @@ const mergeVerification=(id,base)=>{
   const licensed=photographs.length>0&&photographs.every(photo=>photo.licenseStatus&& !photo.licenseStatus.startsWith('verify-')&&!photo.licenseStatus.startsWith('pending-'))
   const generatedChecks={photoLicence:{status:photographs.length?licensed?'verified':'pending':'not-provided',checkedAt:licensed?'2026-07-26':null},protectionRegister:{status:merged.protectionStatus.length?'matched':'not-found-in-linked-registers',checkedAt:'2026-07-26'},managingAuthority:{status:merged.managingAuthorities.length?'identified':'unresolved',checkedAt:merged.managingAuthorities.length?'2026-07-26':null},currentCondition:{status:merged.presentConditionEvidence?(merged.presentConditionEvidence.status==='authority-confirmed'?'verified':'pending'):'not-provided',checkedAt:merged.presentConditionEvidence?.observedAt||null}}
   merged.verificationChecks={...generatedChecks,...(update.verificationChecks||{})}
-  const conditionReady=!merged.presentConditionEvidence||merged.presentConditionEvidence.status==='authority-confirmed'
+  const conditionReady=merged.presentConditionEvidence?.status==='authority-confirmed'
   const fullyVerified=Boolean(conditionReady&&merged.coordinates&&merged.siteCitations.length&&merged.verificationChecks.photoLicence.status==='verified'&&merged.verificationChecks.protectionRegister.status==='matched'&&merged.verificationChecks.managingAuthority.status==='identified')
-  merged.verificationStatus=fullyVerified?'verified':merged.verificationStatus==='research-pending'?'identified':merged.verificationStatus
+  const incompleteStatus=merged.verificationStatus==='research-pending'
+    ?'identified'
+    :merged.verificationStatus==='verified'
+      ?'partially-verified'
+      :merged.verificationStatus
+  merged.verificationStatus=fullyVerified?'verified':incompleteStatus
   merged.lastVerified='2026-07-26'
   return merged
 }

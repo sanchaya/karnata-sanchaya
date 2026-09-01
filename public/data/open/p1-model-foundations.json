@@ -3153,6 +3153,70 @@
         }
       },
       {
+        "id": "coin-tipu-sultan-twelve-mint-network-lead",
+        "name": {
+          "en": "Tipu Sultan twelve-mint network lead",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಹನ್ನೆರಡು ಟಂಕಶಾಲೆ ಜಾಲ ದಾರಿ"
+        },
+        "coinKind": "mint-record",
+        "polityId": "polity-mysore",
+        "placeId": "place-srirangapatna",
+        "date": {
+          "from": 1782,
+          "to": 1799,
+          "era": "CE",
+          "precision": "range"
+        },
+        "material": "mixed",
+        "weightGrams": null,
+        "diameterMm": null,
+        "obverse": {
+          "en": "Tipu Sultan struck from twelve mints, most carrying fanciful names he invented for them: Pattan (Seringapatam), Nagar, Faiz Hisar (Gooty), Bengalur (Bangalore), Farrukh-yab Hisar (Chitaldrig), Kalikat (Calicut), Farrukhi (Feroke), Salamabad (Satyamangalam), Khaliqabad (Dindigul), Zafarabad (Gurramkonda), Khwurshed-sawad (Dharwar) and Nazarbar (Mysore). Only Nagar, Bangalore, Calicut and Feroke appear on the coins under names recognisable today; Dharwar appears under both its own name and the invented one. Henderson notes the mint-towns were chosen for military or political importance.",
+          "kn": "ಟಿಪ್ಪು ಸುಲ್ತಾನ್ ಹನ್ನೆರಡು ಟಂಕಶಾಲೆಗಳಿಂದ ನಾಣ್ಯ ಟಂಕಿಸಿದನು, ಹೆಚ್ಚಿನವು ಆತನೇ ಸೃಷ್ಟಿಸಿದ ಕಾಲ್ಪನಿಕ ಹೆಸರುಗಳನ್ನು ಹೊಂದಿದ್ದವು: ಪಟಣ (ಶ್ರೀರಂಗಪಟ್ಟಣ), ನಗರ, ಫೈಜ಼್ ಹಿಸಾರ್ (ಗೂಟಿ), ಬೆಂಗಳೂರ್ (ಬೆಂಗಳೂರು), ಫರ್ರುಖ್-ಯಾಬ್ ಹಿಸಾರ್ (ಚಿತ್ರದುರ್ಗ), ಕಾಲಿಕತ್ (ಕಲ್ಲಿಕೋಟೆ), ಫರ್ರುಖಿ (ಫೆರೋಕೆ), ಸಲಾಮಾಬಾದ್ (ಸತ್ಯಮಂಗಲಂ), ಖಾಲಿಕಾಬಾದ್ (ದಿಂಡಿಗಲ್), ಜ಼ಫರಾಬಾದ್ (ಗುರ್ರಂಕೊಂಡ), ಖ್ವುರ್ಷೇದ್-ಸವಾದ್ (ಧಾರವಾಡ) ಮತ್ತು ನಜ಼ರ್ಬಾರ್ (ಮೈಸೂರು). ಇಂದು ಗುರುತಿಸಬಹುದಾದ ಹೆಸರುಗಳಲ್ಲಿ ನಗರ, ಬೆಂಗಳೂರು, ಕಲ್ಲಿಕೋಟೆ ಮತ್ತು ಫೆರೋಕೆ ಮಾತ್ರ ನಾಣ್ಯಗಳಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ; ಧಾರವಾಡ ತನ್ನದೇ ಹೆಸರಿನಲ್ಲೂ ಕಾಲ್ಪನಿಕ ಹೆಸರಿನಲ್ಲೂ ಬರುತ್ತದೆ. ಟಂಕಶಾಲೆ ಪಟ್ಟಣಗಳನ್ನು ಸೈನಿಕ ಅಥವಾ ರಾಜಕೀಯ ಮಹತ್ವಕ್ಕಾಗಿ ಆಯ್ಕೆ ಮಾಡಲಾಗಿತ್ತೆಂದು ಹೆಂಡರ್ಸನ್ ಗಮನಿಸುತ್ತಾನೆ."
+        },
+        "reverse": {
+          "en": "The mint network tracks the war record directly. Only Seringapatam and Nagar operated in the first regnal year; the count peaked at eight in the fifth; a sharp fall came in the ninth as military pressure mounted before the 1792 siege of Bangalore. The treaty that followed cost Tipu half his dominions, and Calicut, Feroke, Dindigul, Gurramkonda and Dharwar all passed out of his possession. From the tenth regnal year to the end only Seringapatam, Nagar and Gooty struck coins, Gooty in copper alone. In the seventeenth and final year — begun less than a month before Tipu’s death — only two copper varieties are known, both from Nagar. Henderson excludes a thirteenth claimed mint, Benazir (Hole Honnur, Shimoga district), because the single reported coin was never rediscovered and the source work \"contains not a few inaccuracies.\"",
+          "kn": "ಟಂಕಶಾಲೆ ಜಾಲವು ಯುದ್ಧದ ದಾಖಲೆಯನ್ನು ನೇರವಾಗಿ ಅನುಸರಿಸುತ್ತದೆ. ಮೊದಲ ಆಳ್ವಿಕೆ ವರ್ಷದಲ್ಲಿ ಶ್ರೀರಂಗಪಟ್ಟಣ ಮತ್ತು ನಗರ ಮಾತ್ರ ಕಾರ್ಯನಿರತವಾಗಿದ್ದವು; ಐದನೇ ವರ್ಷದಲ್ಲಿ ಸಂಖ್ಯೆ ಎಂಟಕ್ಕೆ ಏರಿತು; 1792ರ ಬೆಂಗಳೂರು ಮುತ್ತಿಗೆಗೂ ಮುನ್ನ ಸೈನಿಕ ಒತ್ತಡ ಹೆಚ್ಚಿದಂತೆ ಒಂಬತ್ತನೇ ವರ್ಷದಲ್ಲಿ ತೀವ್ರ ಇಳಿಕೆಯಾಯಿತು. ನಂತರದ ಒಪ್ಪಂದ ಟಿಪ್ಪುವಿನ ಅರ್ಧ ರಾಜ್ಯವನ್ನು ಕಸಿಯಿತು, ಮತ್ತು ಕಲ್ಲಿಕೋಟೆ, ಫೆರೋಕೆ, ದಿಂಡಿಗಲ್, ಗುರ್ರಂಕೊಂಡ ಮತ್ತು ಧಾರವಾಡ ಆತನ ವಶದಿಂದ ಹೋದವು. ಹತ್ತನೇ ಆಳ್ವಿಕೆ ವರ್ಷದಿಂದ ಕೊನೆಯವರೆಗೆ ಶ್ರೀರಂಗಪಟ್ಟಣ, ನಗರ ಮತ್ತು ಗೂಟಿ ಮಾತ್ರ ನಾಣ್ಯ ಟಂಕಿಸಿದವು, ಗೂಟಿ ತಾಮ್ರದಲ್ಲಿ ಮಾತ್ರ. ಟಿಪ್ಪುವಿನ ಮರಣಕ್ಕೆ ಒಂದು ತಿಂಗಳಿಗಿಂತ ಕಡಿಮೆ ಮೊದಲು ಆರಂಭವಾದ ಹದಿನೇಳನೇ ಮತ್ತು ಕೊನೆಯ ವರ್ಷದಲ್ಲಿ ಕೇವಲ ಎರಡು ತಾಮ್ರ ಬಗೆಗಳು ತಿಳಿದಿವೆ, ಎರಡೂ ನಗರದಿಂದ. ಹದಿಮೂರನೇ ಎಂದು ಹೇಳಲಾದ ಬೆನಜ಼ೀರ್ (ಹೊಳೆ ಹೊನ್ನೂರು, ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ) ಟಂಕಶಾಲೆಯನ್ನು ಹೆಂಡರ್ಸನ್ ಹೊರಗಿಡುತ್ತಾನೆ, ವರದಿಯಾದ ಆ ಒಂದೇ ನಾಣ್ಯ ಮತ್ತೆ ಸಿಗಲಿಲ್ಲವಾದ್ದರಿಂದ ಮತ್ತು ಆಕರ ಕೃತಿಯಲ್ಲಿ \"ಸಾಕಷ್ಟು ಅಸಮರ್ಪಕತೆಗಳಿವೆ\" ಎಂಬ ಕಾರಣಕ್ಕೆ."
+        },
+        "findspot": {
+          "placeId": "place-srirangapatna",
+          "certainty": "unknown"
+        },
+        "image": {
+          "status": "available",
+          "license": "public-domain",
+          "url": "https://archive.org/details/damh.coinsofhaiderali0000jrhe"
+        },
+        "evidenceGates": {
+          "catalogue": {
+            "status": "located"
+          },
+          "image": {
+            "status": "located"
+          },
+          "metal": {
+            "status": "not-applicable"
+          },
+          "weight": {
+            "status": "not-applicable"
+          },
+          "findspot": {
+            "status": "unresolved"
+          }
+        },
+        "citations": [
+          {
+            "sourceId": "src-henderson-1921-coins-haidar-tipu",
+            "locator": "\"The Mints\": twelve mints listed with Tipu’s invented names and modern equivalents; mint count by regnal year, the post-1792 losses of Calicut/Feroke/Dindigul/Gurramkonda/Dharwar, the final-year Nagar-only copper issues, and the excluded Benazir (Hole Honnur) claim"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-08-23"
+        }
+      },
+      {
         "id": "coin-parampare-western-ganga-gold-plate-lead",
         "name": {
           "en": "Western Ganga gold coin image-plate lead",
