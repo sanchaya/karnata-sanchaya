@@ -15,7 +15,7 @@ import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from './timeline-r
 import { compactTimelineStories } from './timeline-story-utils'
 import { isTempleRecord, objectIcon, objectKindFor, timelineCategoryForCulture } from './object-icons'
 
-const Admin=lazy(()=>import('./Admin'))
+const Admin=import.meta.env.VITE_STATIC_DATASET==='true'?null:lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
 const LiteratureEpigraphyExplorer=lazy(()=>import('./LiteratureEpigraphyExplorer'))
 const GlobalRelationsExplorer=lazy(()=>import('./GlobalRelationsExplorer'))
@@ -29,6 +29,17 @@ const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const CoinExplorer=lazy(()=>import('./CoinExplorer'))
 const ScriptEvolutionExplorer=lazy(()=>import('./ScriptEvolutionExplorer'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
+const AdminAccessGate=({locale,staticBuild,user})=>{
+  const isKannada=locale==='kn'
+  const administrator=user?.roles?.includes('administrator')
+  const title=staticBuild?(isKannada?'ಸ್ಥಿರ ತಾಣದಲ್ಲಿ ನಿರ್ವಾಹಕ ಪ್ರವೇಶ ಲಭ್ಯವಿಲ್ಲ':'Admin is unavailable on the static site'):(isKannada?'ನಿರ್ವಾಹಕ ಪ್ರವೇಶ ಅಗತ್ಯ':'Administrator access required')
+  const body=staticBuild
+    ?(isKannada?'ಸುರಕ್ಷತೆಗಾಗಿ GitHub Pages ಆವೃತ್ತಿಯಲ್ಲಿ ನಿರ್ವಾಹಕ ಕಾರ್ಯಕ್ಷೇತ್ರ ಮತ್ತು ಖಾಸಗಿ ಬೆಂಗಳೂರು ದಾಖಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ. ಲೈವ್ ತಾಣದಲ್ಲಿ ನಿರ್ವಾಹಕ ಖಾತೆಯಿಂದ ಲಾಗಿನ್ ಮಾಡಿ.':'For security, the GitHub Pages build excludes the Admin workspace and private Bengaluru records. Sign in with an administrator account on the live site.')
+    :administrator
+      ?''
+      :(user?(isKannada?'ಈ ಖಾತೆಗೆ ನಿರ್ವಾಹಕ ಪಾತ್ರವಿಲ್ಲ.':'This account does not have the administrator role.'):(isKannada?'ಮುಂದುವರಿಯಲು ಲೈವ್ ತಾಣದಲ್ಲಿ ನಿಮ್ಮ ನಿರ್ವಾಹಕ ಖಾತೆ ಮತ್ತು ಗುಪ್ತಪದದಿಂದ ಲಾಗಿನ್ ಮಾಡಿ.':'Sign in on the live site with your administrator account and password to continue.'))
+  return <main className="portal-page admin-access-gate"><section><p className="eyebrow">Admin</p><h2>{title}</h2><p>{body}</p><a className="admin-cta" href={staticBuild?'#atlas':'#community'}>{staticBuild?(isKannada?'ಸಾರ್ವಜನಿಕ ಭೂಪಟಕ್ಕೆ ಹಿಂತಿರುಗಿ':'Return to public atlas'):(isKannada?'ಲಾಗಿನ್ ಪುಟ ತೆರೆಯಿರಿ':'Open sign-in')}</a></section></main>
+}
 const socialLinks=[
   ['YouTube',import.meta.env.VITE_SOCIAL_YOUTUBE_URL],
   ['Instagram',import.meta.env.VITE_SOCIAL_INSTAGRAM_URL],
@@ -736,6 +747,7 @@ export default function App(){
   const [mapTheme,setMapTheme]=useState(()=>localStorage.getItem('karnataka-atlas-map-theme')||'modern')
   const [mapOnlyMode,setMapOnlyMode]=useState(false)
   const [communityUser,setCommunityUser]=useState(null)
+  const [communityAuthChecked,setCommunityAuthChecked]=useState(false)
   const [mobileNavOpen,setMobileNavOpen]=useState(false)
   useEffect(()=>{document.documentElement.lang=locale},[locale])
   useEffect(()=>{localStorage.setItem('karnataka-atlas-map-theme',mapTheme)},[mapTheme])
@@ -758,7 +770,7 @@ export default function App(){
   // Hydrate the parent auth state once from the live session. Do not clear a
   // successful login because a transient API request fails during navigation;
   // that used to make the epigraphy explorer hide Bengaluru after login.
-  useEffect(()=>{let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/auth/me`,{credentials:'include'}).then(response=>response.ok?response.json():null).then(data=>{if(active&&data?.user)setCommunityUser(data.user)}).catch(()=>{});return()=>{active=false}},[])
+  useEffect(()=>{let active=true;fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/auth/me`,{credentials:'include'}).then(response=>response.ok?response.json():null).then(data=>{if(active&&data?.user)setCommunityUser(data.user)}).catch(()=>{}).finally(()=>{if(active)setCommunityAuthChecked(true)});return()=>{active=false}},[])
   useEffect(()=>{const syncHash=()=>{const rawHash=window.location.hash.slice(1);const hash=normalizeView(rawHash);setAdmin(rawHash==='admin');if(rawHash==='history')window.history.replaceState(null,'','#district-history');if(publicViews.includes(hash))setView(hash);else if(hash!=='admin')setView('atlas')};if(window.location.hash.slice(1)==='history')window.history.replaceState(null,'','#district-history');window.addEventListener('hashchange',syncHash);return()=>window.removeEventListener('hashchange',syncHash)},[])
   useEffect(()=>{const rawHash=window.location.hash.slice(1);if(rawHash==='district-history'||districtSectionRoutes[rawHash])requestAnimationFrame(()=>document.getElementById(rawHash)?.scrollIntoView({block:'start'}))},[view])
   useEffect(()=>{setMobileNavOpen(false)},[view])
@@ -863,7 +875,13 @@ export default function App(){
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${isNavActive(key)?'active':''}`.trim()} aria-current={isNavActive(key)?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(isNavActive(key)){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
   const renderMapLayerControl=([key,label])=><div className={`map-layer-row map-layer-row-${key}`} key={key}><label className={key==='people'?'people-map-toggle':''}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key]}))}/><span>{label}</span></label>{key==='inscriptions'&&layers.inscriptions&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label>}{key==='researchCandidates'&&layers.researchCandidates&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllReviewCandidates} onChange={event=>setShowAllReviewCandidates(event.target.checked)}/><span>{t.showAllReviewCandidates}</span></label>}</div>
-  if(admin)return <Suspense fallback={<PortalFallback/>}><Admin onClose={closeAdmin} locale={locale} onLocaleChange={changeLocale}/></Suspense>
+  if(admin){
+    const staticBuild=import.meta.env.VITE_STATIC_DATASET==='true'
+    if(staticBuild)return <AdminAccessGate locale={locale} staticBuild/>
+    if(!communityAuthChecked)return <PortalFallback/>
+    if(!communityUser?.roles?.includes('administrator'))return <AdminAccessGate locale={locale} user={communityUser}/>
+    return <Suspense fallback={<PortalFallback/>}><Admin onClose={closeAdmin} locale={locale} onLocaleChange={changeLocale}/></Suspense>
+  }
 
   return <div className={`app-shell ${view==='atlas'&&mapOnlyMode?'map-only-atlas':''}`} lang={locale}>
     <header><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.appTitle}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.digitalAtlas}</p><h1>{t.appTitle}</h1><p className="header-secondary">{t.appSubtitle}</p></div></div><div className="header-actions"><nav className="header-utility-nav" aria-label={locale==='kn'?'ಉಪಯುಕ್ತ ಕೊಂಡಿಗಳು':'Utility links'}>{utilityNavItems.map(item=>navLink(item))}</nav><PwaControls locale={locale} t={t}/><button className="mobile-nav-toggle" aria-expanded={mobileNavOpen} aria-controls="primary-navigation" aria-label={mobileNavOpen?(locale==='kn'?'ಮೆನು ಮುಚ್ಚಿ':'Close menu'):(locale==='kn'?'ಮೆನು ತೆರೆಯಿರಿ':'Open menu')} onClick={()=>setMobileNavOpen(open=>!open)}><span aria-hidden="true">☰</span></button><button className="language-switch" aria-label={t.languageLabel} onClick={changeLocale}>{t.switchLanguage}</button></div></header>

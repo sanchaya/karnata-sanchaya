@@ -10,6 +10,7 @@
     "db:migrate": "node server/migrate.js",
     "db:sync-dataset": "node scripts/sync-dataset.mjs",
     "import:patrika": "node scripts/import-patrika.mjs",
+    "import:nakshe-sites": "node scripts/import-nakshe-sites.mjs",
     "import:epigraphia-archive": "node scripts/import-epigraphia-archive.mjs",
     "import:karnataka-archaeology": "node scripts/import-karnataka-archaeology.mjs",
     "audit:freedom-fighters": "node scripts/audit-freedom-fighters.mjs",

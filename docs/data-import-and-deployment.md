@@ -80,6 +80,43 @@ After review, commit the input, importer, generated seed and documentation in
 one change. The live server does **not** need to rerun this importer when the
 generated seed is already committed.
 
+### Nakshe / Inscription Stones Of Bengaluru site inventory
+
+This team-verified inventory contains inscriptions, hero stones, temples and
+combined hero-stone/inscription records supplied by **Inscription Stones Of
+Bengaluru**. The row-level data is private: do not place the CSV, generated
+JSON, coordinates or observations under `src/`, `public/` or another committed
+path. Keep the source file in protected server storage and import it with:
+
+```sh
+npm run import:nakshe-sites -- /secure/path/nakshe-mythicsociety-sites.csv
+npm run validate:data
+node --test test/nakshe-sites.test.js
+npm run db:migrate
+npm run db:sync-dataset
+```
+
+The importer writes the ignored private seed
+`var/private-seeds/nakshe-sites.json` unless `NAKSHE_SITES_SEED_FILE` or a
+third command-line argument selects another protected path. Every input row is
+preserved with its stable source ID, coordinates, raw period/reference and
+contributor-reported condition. Records are marked `published` with
+**Inscription Stones Of Bengaluru** as reviewer because the contributing team
+has verified the dataset. Administrators can continue correcting and enriching
+them in MariaDB. Source-supplied Epigraphia Carnatica locators remain distinct
+from independently checked item-level editions.
+
+`npm run db:sync-dataset` merges the private records into a permanent MariaDB
+revision without overwriting administrator-edited scalar fields. If the seed
+is absent during a later deployment, repository sync leaves existing MariaDB
+records intact. The collection appears only in the authenticated administrator
+editor, not in the public Epigraphy Explorer or GitHub Pages bundle.
+
+The live `#admin` route requires an approved session carrying the
+`administrator` role; every administration API enforces the same requirement.
+Static GitHub Pages builds disable `#admin` because a password embedded in
+JavaScript would be discoverable and would not protect bundled data.
+
 ### Epigraphia Carnatica / Epigraphia Indica Archive TXT workflow
 
 The Archive.org Epigraphia importer builds a review-only index of TXT/OCR
@@ -109,6 +146,7 @@ These are intentionally source-specific and are not all run on every deploy:
 | Script | Use | Run when |
 | --- | --- | --- |
 | `npm run import:patrika` | Patrika Sanchaya newspapers/magazines CSV | The catalogue CSV changes |
+| `npm run import:nakshe-sites -- /secure/path/sites.csv` | Import the private, team-verified Inscription Stones Of Bengaluru inventory for MariaDB Admin | The protected site CSV changes |
 | `npm run import:epigraphia-archive` | Build review-only Epigraphia Archive TXT citation index | Local archive cache changes or a bounded Archive.org refresh is approved |
 | `node scripts/import-wikimedia-people.mjs` | Refresh Wikimedia people candidates | A reviewed source export is supplied |
 | `node scripts/import-freedom-fighters.mjs` | Refresh freedom-fighter CSVs | Master/source CSVs change; pass both CSV paths when needed |

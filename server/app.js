@@ -9,7 +9,7 @@ import { closeDatabase, pool, transaction } from './db.js'
 import { decryptDocument, encryptDocument, hashPassword, randomToken, sha256, verifyPassword } from './security.js'
 import { normalizeTranslationAssessment, translationApprovalIssues, translationProposalIssues } from './review-policy.js'
 import { validateAtlas } from '../src/data/validate.js'
-import { insertDatasetRevision, latestDataset, repositoryDataset } from './dataset-store.js'
+import { insertDatasetRevision, latestDataset, publicDataset, repositoryDataset } from './dataset-store.js'
 
 config.assertProductionSecrets()
 const app=express()
@@ -47,8 +47,10 @@ app.get('/api/health',async(req,res)=>{await pool.query('SELECT 1');res.json({ok
 app.get('/api/dataset',async(req,res)=>{
   const latest=await latestDataset(pool)
   if(!latest)return res.status(503).set('Cache-Control','no-store').json({error:'The MariaDB atlas dataset has not been initialized.'})
-  if(req.get('if-none-match')===`"${latest.contentSha256}"`)return res.status(304).end()
-  res.set({'Cache-Control':'no-store',ETag:`"${latest.contentSha256}"`}).json(latest)
+  const dataset=publicDataset(latest.dataset)
+  const contentSha256=sha256(JSON.stringify(dataset))
+  if(req.get('if-none-match')===`"${contentSha256}"`)return res.status(304).end()
+  res.set({'Cache-Control':'no-store',ETag:`"${contentSha256}"`}).json({...latest,contentSha256,dataset})
 })
 
 app.post('/api/auth/register',rateLimit('register',8,60*60*1000),async(req,res)=>{
