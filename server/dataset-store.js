@@ -1,10 +1,21 @@
 import { createHash, randomUUID } from 'node:crypto'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { atlasData } from '../src/data/atlas.js'
 import peopleCandidateCorpus from './seeds/wikimedia-people-candidates.json' with { type:'json' }
 
 const clone=value=>JSON.parse(JSON.stringify(value))
+const moduleDirectory=path.dirname(fileURLToPath(import.meta.url))
+const privateNaksheSeedFile=process.env.NAKSHE_SITES_SEED_FILE||path.resolve(moduleDirectory,'../var/private-seeds/nakshe-sites.json')
+const privateNaksheSites=()=>{
+  if(!fs.existsSync(privateNaksheSeedFile))return []
+  const payload=JSON.parse(fs.readFileSync(privateNaksheSeedFile,'utf8'))
+  if(!Array.isArray(payload?.records))throw new Error(`Private Nakshe seed must contain a records array: ${privateNaksheSeedFile}`)
+  return payload.records
+}
 export const datasetContent=value=>`${JSON.stringify(value,null,2)}\n`
-const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','epigraphiaArchiveTexts','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
+const DATA_COLLECTIONS=['polities','externalPolities','externalGovernancePhases','events','culturalHeritage','periodicals','epigraphiaArchiveTexts','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue','templeInventoryLeads','heritageInventoryLeads','naksheSites','reigns','territorialExtents','deepChronologies','heritageAudits','districtHistoryResearch','inscriptionAudits','people','peopleCandidates','martyrCandidates','places','inscriptions','works','sources','relationships','politicalRelations','collaborations']
 const ADDITIVE_ARRAY_FIELDS=new Set(['citations','alternateUrls','aliases','roles'])
 
 // Repository research passes may add evidence to records that already exist in
@@ -55,9 +66,18 @@ export function normalizeDatasetCollections(value){
 export function repositoryDataset(){
   return normalizeDatasetCollections({
     ...clone(atlasData),
+    naksheSites:clone(privateNaksheSites()),
     peopleCandidateMeta:clone(peopleCandidateCorpus.meta),
     peopleCandidates:clone(peopleCandidateCorpus.records),
   })
+}
+
+// Collections listed here contain partner-supplied working data whose record
+// payloads must never cross the authenticated administration boundary.
+export function publicDataset(dataset){
+  const value=normalizeDatasetCollections(dataset)
+  value.naksheSites=[]
+  return value
 }
 
 export function mergeRepositorySeed(current){
@@ -102,7 +122,7 @@ export async function insertDatasetRevision(db,dataset,{revision,updatedBy=null}
   return {id,revision,contentSha256}
 }
 
-const INDEXED_COLLECTIONS=['polities','externalPolities','events','people','places','inscriptions','works','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','epigraphiaArchiveTexts','territorialExtents','relationships','politicalRelations','collaborations','heritageAudits','districtHistoryResearch','inscriptionAudits','templeInventoryLeads','heritageInventoryLeads']
+const INDEXED_COLLECTIONS=['polities','externalPolities','events','people','places','inscriptions','works','artifacts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','epigraphiaArchiveTexts','territorialExtents','relationships','politicalRelations','collaborations','heritageAudits','districtHistoryResearch','inscriptionAudits','templeInventoryLeads','heritageInventoryLeads','naksheSites']
 const titleOf=value=>typeof value==='string'?{en:value,kn:null}:{en:value?.en||value?.kn||'Untitled record',kn:value?.kn||null}
 const dateOf=record=>record.date||record.period||record.activePeriod||record.temporalCoverage||{}
 const countryOf=record=>record.geographicScope?.countryCode||record.location?.countryCode||null

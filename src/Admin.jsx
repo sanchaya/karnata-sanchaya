@@ -7,7 +7,7 @@ import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
 
 const collections = Object.keys(collectionLabels)
-const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', periodicals:'periodical', epigraphiaArchiveTexts:'archive-epigraphia', artifacts:'artifact', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', peopleCandidates:'person-candidate-q', martyrCandidates:'martyr-candidate-v5-p', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
+const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', periodicals:'periodical', epigraphiaArchiveTexts:'archive-epigraphia', artifacts:'artifact', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', naksheSites:'nakshe-site', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', peopleCandidates:'person-candidate-q', martyrCandidates:'martyr-candidate-v5-p', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
 const clone = value => JSON.parse(JSON.stringify(value))
 const today = () => new Date().toISOString().slice(0,10)
 const collectSourceUses = (value, sourceId, path='record', output=[]) => {
@@ -72,6 +72,7 @@ adminText.kn.collections.externalGovernancePhases='ಬಾಹ್ಯ ಆಡಳಿ�
 adminText.kn.collections.districtHistoryResearch='ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ ಸಂಶೋಧನೆ'
 adminText.kn.collections.templeInventoryLeads='ದೇವಾಲಯ ಪಟ್ಟಿ ಸುಳಿವುಗಳು'
 adminText.kn.collections.heritageInventoryLeads='ಪರಂಪರೆ ಸಮಗ್ರ ಪಟ್ಟಿ ಸುಳಿವುಗಳು'
+adminText.kn.collections.naksheSites='ಖಾಸಗಿ ನಕ್ಷೆ ತಾಣ ದಾಖಲೆಗಳು'
 adminText.kn.collections.inscriptionAudits='ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆಗಳು'
 adminText.kn.collections.politicalRelations='ದ್ವಿಪಕ್ಷೀಯ ರಾಜಕೀಯ ಸಂಬಂಧಗಳು'
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'

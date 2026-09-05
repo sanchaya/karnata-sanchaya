@@ -4,6 +4,9 @@ dist
 .env
 .env.backup.*
 var/
+/var/private-seeds/
+/src/data/imports/nakshe-mythicsociety-sites.csv
+/src/data/nakshe-sites.generated.js
 public/data/approved-community.json.tmp
 public/data/published-atlas.json.tmp
 .gstack/

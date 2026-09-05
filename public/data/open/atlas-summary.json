@@ -41966,6 +41966,33 @@
     ],
     "sources": [
       {
+        "id": "src-nakshe-inscription-stones-bengaluru",
+        "type": "community-geospatial-inventory",
+        "title": {
+          "en": "Nakshe site survey — private administrative inventory",
+          "kn": "ನಕ್ಷೆ ತಾಣ ಸಮೀಕ್ಷೆ — ಖಾಸಗಿ ನಿರ್ವಾಹಕ ಪಟ್ಟಿ"
+        },
+        "authors": [
+          "Inscription Stones Of Bengaluru"
+        ],
+        "year": 2026,
+        "url": "https://inscription-stones.mapunitygroups.com/",
+        "repository": {
+          "format": "CSV",
+          "localAsset": "private",
+          "records": 3277
+        },
+        "scope": {
+          "en": "Team-verified coordinates and observations for inscriptions, hero stones and temples. Record payloads are restricted to authenticated administrators and maintained in MariaDB for continuing updates.",
+          "kn": "ಶಾಸನಗಳು, ವೀರಗಲ್ಲುಗಳು ಮತ್ತು ದೇವಾಲಯಗಳಿಗೆ ತಂಡದಿಂದ ಪರಿಶೀಲಿಸಲಾದ ನಿರ್ದೇಶಾಂಕಗಳು ಮತ್ತು ಗಮನಿಕೆಗಳು. ದಾಖಲೆಗಳ ವಿವರಗಳು ದೃಢೀಕೃತ ನಿರ್ವಾಹಕರಿಗೆ ಮಾತ್ರ ಲಭ್ಯವಾಗಿದ್ದು, ಮುಂದಿನ ನವೀಕರಣಗಳಿಗಾಗಿ MariaDBಯಲ್ಲಿ ನಿರ್ವಹಿಸಲಾಗುತ್ತವೆ."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": "Inscription Stones Of Bengaluru",
+          "updatedAt": "2026-09-05"
+        }
+      },
+      {
         "id": "src-wikidata-people-candidate-audit",
         "type": "linked-open-data-discovery",
         "title": {
