@@ -63,6 +63,13 @@ APP_DIR=$(cd "$APP_DIR" 2>/dev/null && pwd) || die "Cannot access app directory:
 [[ -f "$APP_DIR/package.json" && -f "$APP_DIR/server/app.js" ]] || die "This does not look like the atlas clone: $APP_DIR"
 [[ -f "$APP_DIR/.env" ]] || die "Missing $APP_DIR/.env. Run the initial Linux/Nginx installer first."
 systemctl cat "$SERVICE_NAME.service" >/dev/null 2>&1 || die "Missing systemd service: $SERVICE_NAME.service"
+if [[ "$(systemctl is-enabled "$SERVICE_NAME.service" 2>/dev/null)" == "disabled" ]]; then
+  die "$SERVICE_NAME.service is disabled. This usually means the app has been migrated off" \
+      $'\n  this systemd deployment (e.g. to Coolify/Docker) and this script no longer applies.' \
+      $'\n  Deploy via Coolify instead (redeploy button in the dashboard, or POST /api/v1/deploy).' \
+      $'\n  If you really intend to go back to this systemd deployment, re-enable it first:' \
+      $'\n    systemctl enable --now '"$SERVICE_NAME"'.service'
+fi
 
 for command in git node npm systemctl curl runuser flock chown; do
   command -v "$command" >/dev/null 2>&1 || die "Required command is missing: $command"
