@@ -82,7 +82,8 @@ trap cleanup ERR
 notice 'Dumping MariaDB'
 env MYSQL_PWD="$DB_PASSWORD" "$DUMP_BIN" \
   --host="$DB_HOST" --port="$DB_PORT" --user="$DB_USER" --protocol=tcp \
-  --single-transaction --routines --events --triggers --hex-blob --databases "$DB_NAME" \
+  --single-transaction --routines --events --triggers --hex-blob \
+  --max-allowed-packet=1073741824 --net-buffer-length=1000000 --databases "$DB_NAME" \
   > "$SET_DIR/database.sql"
 gzip -9 "$SET_DIR/database.sql"
 

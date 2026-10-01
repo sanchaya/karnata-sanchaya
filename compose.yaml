@@ -2,6 +2,9 @@ services:
   database:
     image: mariadb:11.4
     restart: unless-stopped
+    # Default max_allowed_packet (16M) is too small for large JSON blob rows
+    # in dataset_snapshots — matches the 1G setting already used on the host MariaDB.
+    command: --max_allowed_packet=1073741824
     environment:
       MARIADB_DATABASE: karnataka_atlas
       MARIADB_USER: karnataka_atlas

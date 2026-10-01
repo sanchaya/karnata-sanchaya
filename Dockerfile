@@ -13,5 +13,6 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/server ./server
 COPY --from=build /app/scripts ./scripts
+COPY --from=build /app/src/data ./src/data
 EXPOSE 8787
 CMD ["sh", "-c", "npm run db:migrate && npm start"]
