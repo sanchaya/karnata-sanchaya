@@ -3,6 +3,14 @@ const isFinitePoint = point => Array.isArray(point) && Number.isFinite(point[0])
 export const isKarnatakaPoint = point => isFinitePoint(point) && point[0] >= 11 && point[0] <= 19 && point[1] >= 73.5 && point[1] <= 78.5
 export const isIndiaPoint = point => isFinitePoint(point) && point[0] >= 5 && point[0] <= 38 && point[1] >= 67 && point[1] <= 98
 
+const scopeViews = {
+  karnataka: { center: [14.7, 76.2], zoom: 6.35 },
+  india: { center: [20.2, 78.4], zoom: 4.35 },
+  world: { center: [20, 35], zoom: 2.25 },
+}
+
+export const mapViewForScope = scope => scopeViews[scope] || scopeViews.karnataka
+
 export function mapZoomForPoint(point) {
   if (!isFinitePoint(point)) return 3.75
   const [lat, lng] = point
