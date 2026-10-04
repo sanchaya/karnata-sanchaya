@@ -7,7 +7,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const outputPath=path.join(root,'server/seeds/wikimedia-people-candidates.json')
 const endpoint='https://query.wikidata.org/sparql'
 const entityApi='https://www.wikidata.org/w/api.php'
-const userAgent='KarnatakaHistoricalAtlas/0.25 (https://karnata.sanchaya.net)'
+const userAgent='KarnatakaHistoricalAtlas/0.25 (https://try.karnata.sanchaya.net)'
 const reviewedAt=new Date().toISOString().slice(0,10)
 const occupations={
   Q33999:{role:'actor',en:'actor',kn:'ನಟ / ನಟಿ'},
