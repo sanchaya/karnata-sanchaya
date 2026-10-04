@@ -26,7 +26,7 @@ jobs:
       - run: npm install
       - run: npm run build
         env:
-          PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          PUBLIC_SITE_URL: https://try.karnata.sanchaya.net/
           VITE_STATIC_DATASET: 'true'
           VITE_BUILD_SHA: ${{ github.sha }}
       - uses: actions/configure-pages@v5

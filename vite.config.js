@@ -11,8 +11,18 @@ const peopleSeedPlugin={
   generateBundle(){this.emitFile({type:'asset',fileName:peopleSeedPath.slice(1),source:peopleSeed})},
 }
 
+// OSM only supports the canonical, non-sharded tile host. Keep older explorer
+// modules working during the migration instead of shipping retired {s} URLs.
+const osmTileEndpointPlugin={
+  name:'atlas-supported-osm-tile-endpoint',
+  transform(code,id){
+    if(!id.includes('/src/')||!code.includes('https://{s}.tile.openstreetmap.org/'))return null
+    return code.replaceAll('https://{s}.tile.openstreetmap.org/','https://tile.openstreetmap.org/')
+  },
+}
+
 export default defineConfig({
-  plugins: [react(),peopleSeedPlugin],
+  plugins: [react(),peopleSeedPlugin,osmTileEndpointPlugin],
   base: './',
   server: {
     host: '0.0.0.0',
