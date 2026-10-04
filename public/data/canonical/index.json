@@ -1,0 +1,31 @@
+{
+  "inscriptions_by_dynasty": {
+    "dynasty:demo-dynasty-a": [
+      "ec:inscription:ec-demo-001"
+    ],
+    "dynasty:demo-dynasty-b": [
+      "ec:inscription:ec-demo-001"
+    ]
+  },
+  "inscriptions_by_ruler": {
+    "ruler:demo-ruler": [
+      "ec:inscription:ec-demo-001"
+    ]
+  },
+  "inscriptions_by_place": {
+    "place:demo-district:demo-taluk:ec-pipeline-demonstration-record-not-research-data": [
+      "ec:inscription:ec-demo-001"
+    ],
+    "place:demo-district:demo-taluk:ei-pipeline-demonstration-record-not-research-data": [
+      "ei:inscription:ei-demo-001"
+    ]
+  },
+  "inscriptions_by_source": {
+    "ec:ec-demo-001": [
+      "ec:inscription:ec-demo-001"
+    ],
+    "ei:ei-demo-001": [
+      "ei:inscription:ei-demo-001"
+    ]
+  }
+}

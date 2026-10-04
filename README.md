@@ -1,5 +1,7 @@
 # Karnataka Kingdoms — Digital Historical Atlas
 
+The EC/EI canonical entity model, static ingestion pipeline, provenance policy and source-onboarding procedure are documented in [docs/canonical-epigraphy.md](docs/canonical-epigraphy.md).
+
 A Kannada-first React/Vite atlas for exploring Karnataka's history through a time-aware map, inscriptions, literature and heritage. The public GitHub Pages edition stays static; the optional live service adds moderated community contributions backed by MariaDB.
 
 ## Features

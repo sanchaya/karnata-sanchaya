@@ -28,6 +28,7 @@ import { applyPaleographyMaturitySprint } from './paleography-maturity-sprint.js
 import { applyExternalCapitalLinks } from './external-capitals.js'
 import { p2ClosureRecords } from './p2-research-graph-closure.js'
 import { karnatakaArchaeologyMiningInscriptions, karnatakaArchaeologyMiningCulturalHeritage, karnatakaArchaeologyMiningPolities, karnatakaArchaeologyMiningCoinRecords, karnatakaArchaeologyMiningEvents } from './karnataka-archaeology-mining.js'
+import { canonicalData } from './canonical/ec-ei-canonical.generated.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -44,10 +45,11 @@ const appendUniqueById = (target, items) => {
 
 export const atlasData = {
   meta: {
-    schemaVersion: '0.28.1',
+    schemaVersion: '0.29.0',
     title: name('Karnataka Historical Atlas', 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ'),
     exportedAt: null,
   },
+  canonical: canonicalData,
   naksheSites: [],
   sources: [
     { id:'src-nakshe-inscription-stones-bengaluru', type:'community-geospatial-inventory', title:name('Nakshe site survey — private administrative inventory','ನಕ್ಷೆ ತಾಣ ಸಮೀಕ್ಷೆ — ಖಾಸಗಿ ನಿರ್ವಾಹಕ ಪಟ್ಟಿ'), authors:['Inscription Stones Of Bengaluru'], year:2026, url:'https://inscription-stones.mapunitygroups.com/', repository:{format:'CSV',localAsset:'private',records:3277}, scope:name('Team-verified coordinates and observations for inscriptions, hero stones and temples. Record payloads are restricted to authenticated administrators and maintained in MariaDB for continuing updates.','ಶಾಸನಗಳು, ವೀರಗಲ್ಲುಗಳು ಮತ್ತು ದೇವಾಲಯಗಳಿಗೆ ತಂಡದಿಂದ ಪರಿಶೀಲಿಸಲಾದ ನಿರ್ದೇಶಾಂಕಗಳು ಮತ್ತು ಗಮನಿಕೆಗಳು. ದಾಖಲೆಗಳ ವಿವರಗಳು ದೃಢೀಕೃತ ನಿರ್ವಾಹಕರಿಗೆ ಮಾತ್ರ ಲಭ್ಯವಾಗಿದ್ದು, ಮುಂದಿನ ನವೀಕರಣಗಳಿಗಾಗಿ MariaDBಯಲ್ಲಿ ನಿರ್ವಹಿಸಲಾಗುತ್ತವೆ.'), review:{status:'reviewed',reviewer:'Inscription Stones Of Bengaluru',updatedAt:'2026-09-05'} },

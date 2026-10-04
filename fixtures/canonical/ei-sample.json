@@ -1,0 +1,40 @@
+{
+  "corpus": "EI",
+  "fixture": true,
+  "source": {
+    "id": "ei:source:epigraphia-indica-fixture",
+    "publication": "Epigraphia Indica",
+    "volume": "DEMO",
+    "editor": "Fixture only — not a historical edition",
+    "url": "https://archive.org/details/epigraphia-indica"
+  },
+  "records": [
+    {
+      "ID": "EI-DEMO-001",
+      "fixture": true,
+      "Category": "inscription",
+      "District": "DEMO DISTRICT",
+      "Taluk": "DEMO TALUK",
+      "Condition": "unknown",
+      "Dynasty (multiple)": "",
+      "Language (multiple)": "Sanskrit",
+      "Script (multiple)": "unknown",
+      "Century": "unknown",
+      "Period from": "",
+      "Period to": "",
+      "Date certainty": "unknown",
+      "Within project area": "unknown",
+      "Name": "EI pipeline demonstration record — NOT RESEARCH DATA",
+      "Description": "Synthetic fixture with deliberately unresolved date and location fields.",
+      "Images": "",
+      "Sources": "Fixture",
+      "Volume": "DEMO",
+      "Page": "DEMO",
+      "Inscription number": "DEMO-001",
+      "Source URL": "https://archive.org/details/epigraphia-indica",
+      "Editor": "Fixture only",
+      "Review status": "draft",
+      "Last updated": "2026-10-04"
+    }
+  ]
+}
