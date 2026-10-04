@@ -1,0 +1,47 @@
+{
+  "corpus": "EC",
+  "fixture": true,
+  "source": {
+    "id": "ec:source:epigraphia-carnatica-fixture",
+    "publication": "Epigraphia Carnatica",
+    "volume": "DEMO",
+    "editor": "Fixture only — not a historical edition",
+    "url": "https://archive.org/details/epigraphiacarnat00myso"
+  },
+  "records": [
+    {
+      "ID": "EC-DEMO-001",
+      "fixture": true,
+      "GPS/location": "12.0000, 77.0000",
+      "Location precision": "approximate",
+      "Category": "inscription",
+      "District": "DEMO DISTRICT",
+      "Taluk": "DEMO TALUK",
+      "Condition": "unknown",
+      "Deity": "DEMO DEITY",
+      "Deity form": "unknown",
+      "Dynasty (multiple)": "DEMO DYNASTY A; DEMO DYNASTY B",
+      "Ruler (multiple)": "DEMO RULER",
+      "Language (multiple)": "Kannada; Sanskrit",
+      "Script (multiple)": "Kannada script",
+      "Century": "DEMO",
+      "Period from": 1000,
+      "Period to": 1050,
+      "Date certainty": "approximate",
+      "Within project area": "unknown",
+      "Name": "EC pipeline demonstration record — NOT RESEARCH DATA",
+      "Description": "Synthetic fixture used only to test source preservation, normalization and validation.",
+      "Images": "https://example.org/ec-demo-image",
+      "Sources": "Fixture",
+      "Volume": "DEMO",
+      "Page": "DEMO",
+      "Inscription number": "DEMO-001",
+      "Source URL": "https://archive.org/details/epigraphiacarnat00myso",
+      "Scan URL": "https://archive.org/details/epigraphiacarnat00myso/page/n1/mode/2up",
+      "Editor": "Fixture only",
+      "Review status": "draft",
+      "Reviewed by": "",
+      "Last updated": "2026-10-04"
+    }
+  ]
+}

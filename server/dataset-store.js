@@ -60,6 +60,11 @@ export function normalizeDatasetCollections(value){
     if(Array.isArray(current))continue
     dataset[collection]=current&&typeof current==='object'?Object.values(current).filter(record=>record&&typeof record==='object'):[]
   }
+  const baselineCanonical=atlasData.canonical
+  if(!dataset.canonical||typeof dataset.canonical!=='object')dataset.canonical=clone(baselineCanonical)
+  if(!dataset.canonical.entities||typeof dataset.canonical.entities!=='object')dataset.canonical.entities={}
+  for(const [collection,records] of Object.entries(baselineCanonical?.entities||{}))if(!Array.isArray(dataset.canonical.entities[collection]))dataset.canonical.entities[collection]=clone(records)
+  dataset.canonical.indexes=dataset.canonical.indexes&&typeof dataset.canonical.indexes==='object'?dataset.canonical.indexes:clone(baselineCanonical?.indexes||{})
   return dataset
 }
 
@@ -99,6 +104,13 @@ export function mergeRepositorySeed(current){
     const byId=new Map(records.map(record=>[record?.id,record]).filter(([id])=>Boolean(id)))
     for(const record of seedRecords)if(record?.id){const existingRecord=byId.get(record.id);if(!existingRecord){records.push(clone(record));byId.set(record.id,record);added+=1}else if(mergeRepositoryAdditions(existingRecord,record))updated+=1}
   }
+  for(const [collection,seedRecords] of Object.entries(baseline.canonical?.entities||{})){
+    const records=dataset.canonical.entities[collection]
+    const byId=new Map(records.map(record=>[record?.id,record]).filter(([id])=>Boolean(id)))
+    for(const record of seedRecords)if(record?.id){const existingRecord=byId.get(record.id);if(!existingRecord){records.push(clone(record));byId.set(record.id,record);added+=1}else if(mergeRepositoryAdditions(existingRecord,record))updated+=1}
+  }
+  dataset.canonical.schema_version=baseline.canonical.schema_version
+  dataset.canonical.indexes=clone(baseline.canonical.indexes)
   if(!dataset.peopleCandidateMeta||dataset.peopleCandidateMeta.candidateCount!==baseline.peopleCandidateMeta.candidateCount)dataset.peopleCandidateMeta=clone(baseline.peopleCandidateMeta)
   dataset.meta={...(dataset.meta||{}),schemaVersion:baseline.meta.schemaVersion}
   const changed=added>0||updated>0||JSON.stringify(dataset.peopleCandidateMeta)!==JSON.stringify(current.peopleCandidateMeta)||dataset.meta.schemaVersion!==current.meta?.schemaVersion

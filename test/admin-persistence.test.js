@@ -87,3 +87,14 @@ test('repository sync adds new evidence fields without replacing MariaDB reviewe
   assert.ok(mergedPerson.citations.some(citation=>citation.sourceId===source.id))
   assert.ok(result.updated>0)
 })
+
+test('repository sync adds canonical entities without replacing MariaDB editorial work', () => {
+  const server=clone(atlasData)
+  const edited=server.canonical.entities.inscriptions[0]
+  edited.normalized_metadata.name.en='Reviewer-edited canonical title'
+  server.canonical.entities.inscriptions=server.canonical.entities.inscriptions.slice(0,1)
+  const result=mergeRepositorySeed(server)
+  assert.equal(result.dataset.canonical.entities.inscriptions.length,atlasData.canonical.entities.inscriptions.length)
+  assert.equal(result.dataset.canonical.entities.inscriptions.find(item=>item.id===edited.id).normalized_metadata.name.en,'Reviewer-edited canonical title')
+  assert.ok(result.added>0)
+})

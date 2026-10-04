@@ -537,7 +537,10 @@ export function validateAtlas(data) {
     ;(record.relatedEventIds || []).forEach((eventId,index) => { if (!all.has(eventId)) add('error',collection,id,`relatedEventIds.${index}`,`Unknown event: ${eventId}`) })
     ;(record.relationIds || []).forEach((relationId,index) => { if (!all.has(relationId)) add('error',collection,id,`relationIds.${index}`,`Unknown related political relation: ${relationId}`) })
   }))
+  if(data.canonical)issues.push(...validateCanonicalDataset(data.canonical))
+  else add('warning','canonical','','canonical','Canonical EC/EI dataset is not present.')
   return issues
 }
 
 export const hasValidationErrors = issues => issues.some(issue => issue.severity === 'error')
+import { validateCanonicalDataset } from './canonical/pipeline.js'

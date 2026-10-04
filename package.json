@@ -21,7 +21,12 @@
     "export:static-dataset": "node scripts/export-static-dataset.mjs",
     "publish:static": "./scripts/publish-static.sh",
     "privacy:cleanup": "node scripts/cleanup-private-documents.mjs",
-    "build": "node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build",
+    "canonical:build": "node scripts/build-canonical.mjs",
+    "canonical:validate": "node scripts/validate-canonical.mjs",
+    "test": "node --test",
+    "import:ec": "node scripts/build-canonical.mjs",
+    "import:ei": "node scripts/build-canonical.mjs",
+    "build": "npm run canonical:build && node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build",
     "preview": "vite preview",
     "validate:data": "node scripts/validate-data.mjs",
     "check": "npm run validate:data && node --test && npm run build"
