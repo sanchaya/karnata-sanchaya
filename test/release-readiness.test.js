@@ -7,6 +7,7 @@ import { communityPeople, communityPeopleEvents } from '../src/data/community-pe
 const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
 const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
+const serverSource = await readFile(new URL('../server/app.js', import.meta.url), 'utf8')
 const explorerSource = await readFile(new URL('../src/LiteratureEpigraphyExplorer.jsx', import.meta.url), 'utf8')
 const relationsSource = await readFile(new URL('../src/GlobalRelationsExplorer.jsx', import.meta.url), 'utf8')
 const coinSource = await readFile(new URL('../src/CoinExplorer.jsx', import.meta.url), 'utf8')
@@ -340,6 +341,9 @@ test('the static release is installable and keeps map context available offline'
   assert.match(serviceWorkerSource, /tile\.openstreetmap\.org/, 'visited map tiles must be cached for offline reuse')
   assert.match(serviceWorkerSource, /cache:request\.mode === 'navigate' \? 'reload' : 'no-cache'/, 'online navigation must bypass a stale HTTP shell cache')
   assert.match(serviceWorkerSource, /caches\.match\('\.\/index\.html'\)/, 'offline navigation must fall back to the cached app shell')
+  assert.match(serviceWorkerSource, /const copy = response\.clone\(\)[\s\S]*await caches\.open/, 'responses must be cloned before asynchronous cache access')
+  assert.doesNotMatch(serviceWorkerSource, /caches\.open\([^\n]+\.then\([^\n]+response\.clone\(\)/, 'response cloning must not be deferred until after the body may be consumed')
+  assert.match(serverSource, /connect-src 'self' https:\/\/tile\.openstreetmap\.org/, 'the live CSP must allow service-worker tile requests')
 })
 
 test('map and timeline safety guards remain wired into the public app', () => {
