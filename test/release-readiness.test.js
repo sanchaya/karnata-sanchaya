@@ -161,6 +161,14 @@ test('mobile timeline categories and kingdom boundaries remain unambiguous', () 
   assert.doesNotMatch(appSource, /layers\.territorialReach&&reachTerritories\.map/, 'the map must not render every active kingdom reach overlay together')
 })
 
+test('timeline stories can be minimized and start collapsed on mobile', () => {
+  assert.match(appSource, /matchMedia\('\(max-width: 720px\)'\)/, 'mobile must start with timeline stories collapsed')
+  assert.match(appSource, /className="event-rail-toggle"/, 'timeline stories must expose a dedicated collapse control')
+  assert.match(appSource, /aria-expanded=\{expanded\}/, 'the collapse control must expose its state to assistive technology')
+  assert.match(appSource, /event-rail \$\{expanded\?'':'is-collapsed'\}/, 'the minimized state must have a compact layout hook')
+  assert.match(stylesSource, /\.event-rail\.is-collapsed/, 'the minimized timeline must use a compact map overlay')
+})
+
 test('timeline categories coordinate with their required map layers', () => {
   assert.match(appSource, /onCategoryChange\?\.\(value\)/, 'category changes must notify the atlas map')
   assert.match(appSource, /inscriptions:'inscriptions'/, 'the inscription category must enable its map layer')
