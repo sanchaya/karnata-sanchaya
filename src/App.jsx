@@ -28,6 +28,7 @@ const About=lazy(()=>import('./About'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const CoinExplorer=lazy(()=>import('./CoinExplorer'))
 const ScriptEvolutionExplorer=lazy(()=>import('./ScriptEvolutionExplorer'))
+const IndiaResearchExplorer=lazy(()=>import('./IndiaResearchExplorer'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 const AdminAccessGate=({locale,staticBuild,user})=>{
   const isKannada=locale==='kn'
@@ -127,6 +128,7 @@ const seoPages={
   profile:{kn:['ನನ್ನ ಪ್ರೊಫೈಲ್ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ನಿಮ್ಮ ಸಂಶೋಧನಾ ಗುರುತು, ಸಂಸ್ಥೆ, ಕೊಡುಗೆಗಳು ಮತ್ತು ಪರಿಶೀಲನಾ ಪ್ರಮಾಣಪತ್ರವನ್ನು ನಿರ್ವಹಿಸಿ.'],en:['My profile · Karnataka Historical Atlas','Manage your research identity, affiliation, contributions and certificates.']},
   evidence:{kn:['ಮಾನವ ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳ ಕ್ಷೇತ್ರಕಾರ್ಯ, ಪಠ್ಯ ಪರಿಶೀಲನೆ, ಅನುವಾದ ವಿಮರ್ಶೆ ಮತ್ತು ಪ್ರಕಟಣೆ ಸಿದ್ಧತೆಯ ಕಾರ್ಯಪಟ್ಟಿ.'],en:['Human Evidence Workflow · Karnataka Historical Atlas','Track fieldwork, transcription, translation review and publication readiness for inscription candidates.']},
   about:{kn:['ನಮ್ಮ ಬಗ್ಗೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟದ ಉದ್ದೇಶ, ಸಂಶೋಧನಾ ವಿಧಾನ, ಕನ್ನಡ-ಪ್ರಥಮ ವಿನ್ಯಾಸ ಮತ್ತು ಸಮುದಾಯ ಸಹಯೋಗವನ್ನು ತಿಳಿಯಿರಿ.'],en:['About · Karnataka Historical Atlas','Learn about the atlas purpose, research method, Kannada-first design and community collaboration.']},
+  'india-research':{kn:['ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ','ಭಾರತರಾಜ್ಯ ಮತ್ತು WhatIsIndia ಆಮದುಗಳ ನೇರ-ಕೊಂಡಿ ಸಂಶೋಧನಾ ಪರಿಶೀಲನಾ ಸೂಚಿ.'],en:['India Historical Discovery Index · Research workspace','Direct-link research review index for the BharatRajya and WhatIsIndia imports.']},
 }
 
 const tourStep=(target,kn,en)=>({target,title:{kn,en},body:{kn:kn.replace(/^[^·]+·\s*/,''),en}})
@@ -708,7 +710,7 @@ function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInsc
 const districtSectionRoutes={'district-audit':'districts','inscription-audit':'districts','district-inventory':'districts'}
 
 export default function App(){
-  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','community','profile','about']
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','community','profile','about','india-research']
   const normalizeView=hash=>hash==='history'?'district-history':districtSectionRoutes[hash]||hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -944,6 +946,7 @@ export default function App(){
     {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} profileOnly onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='about'&&<Suspense fallback={<PortalFallback/>}><About locale={locale}/></Suspense>}
+    {view==='india-research'&&<Suspense fallback={<PortalFallback/>}><IndiaResearchExplorer locale={locale}/></Suspense>}
     <GuidedTour tourKey={view} locale={locale} steps={guidedTourSteps(view,locale,Boolean(communityUser))}/>
     <footer><span className="footer-brand"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/>{atlasData.meta.title.kn} · Karnataka Historical Atlas · v{atlasData.meta.schemaVersion}</span><span className="footer-partners"><a href="#about"><span className="partner-icon"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/></span>{locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'}</a>{socialLinks.length>0&&<><i aria-hidden="true">·</i><span className="footer-social"><small>{locale==='kn'?'ನವೀಕರಣಗಳನ್ನು ಅನುಸರಿಸಿ':'Follow project updates'}</small>{socialLinks.map(([label,url])=><a href={url} target="_blank" rel="noreferrer" key={label}>{label} ↗</a>)}</span></>}</span></footer>
   </div>

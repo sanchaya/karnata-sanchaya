@@ -18,6 +18,780 @@
     ],
     "place:demo-district:demo-taluk:ei-pipeline-demonstration-record-not-research-data": [
       "ei:inscription:ei-demo-001"
+    ],
+    "place:dharwar:hirekerur:sidenur": [
+      "wii:inscription:wii-feb956824a6a1304",
+      "wii:inscription:wii-e57cb6e040789bd4",
+      "wii:inscription:wii-ccc7daea1dae00f8",
+      "wii:inscription:wii-903293c623bbef89",
+      "wii:inscription:wii-ebdeb99c9bccba15"
+    ],
+    "place:dharwar:shiratti:lakshmesvar": [
+      "wii:inscription:wii-b990405d3a8eee01"
+    ],
+    "place:dharwar:shirhatti:gudigeri": [
+      "wii:inscription:wii-3ef4c14424844409",
+      "wii:inscription:wii-db72bce2ebf757a1",
+      "wii:inscription:wii-b4c4539e37a7857f",
+      "wii:inscription:wii-3001c58c671513b2",
+      "wii:inscription:wii-d4b0773e5e8207b6",
+      "wii:inscription:wii-47c31f78a8e460e9",
+      "wii:inscription:wii-78159986fd37f2cf"
+    ],
+    "place:belagaum:parasgad:saundatti": [
+      "wii:inscription:wii-0bd1799684700e81"
+    ],
+    "place:dharwar:ranebennur:hirebidri": [
+      "wii:inscription:wii-64ce8683de79aed6"
+    ],
+    "place:belgaum:ramdurg:asuti": [
+      "wii:inscription:wii-334a2e40cd5afa69"
+    ],
+    "place:belgaum:parasagad:saundatti": [
+      "wii:inscription:wii-c9fcb76875110d78",
+      "wii:inscription:wii-7928c6f7a3b3d526"
+    ],
+    "place:bijapur:indi:rugi": [
+      "wii:inscription:wii-ab1631141a59a949",
+      "wii:inscription:wii-698daf77c3d7b05f",
+      "wii:inscription:wii-0d94713f3576c25e",
+      "wii:inscription:wii-b71ccd6b8ece8093",
+      "wii:inscription:wii-3d8c08f026e543d5",
+      "wii:inscription:wii-8fc22140adf78aa1",
+      "wii:inscription:wii-7b67b91628290042"
+    ],
+    "place:bijapur:singi:gollageri": [
+      "wii:inscription:wii-219719f2ca94cdeb"
+    ],
+    "place:bijapur:sindgi:devur": [
+      "wii:inscription:wii-22583480cd66a584",
+      "wii:inscription:wii-5ab5b5e8452c3bf7",
+      "wii:inscription:wii-53f6a6c9bdcefa38"
+    ],
+    "place:dharwar:hangal:adur": [
+      "wii:inscription:wii-f47da359fa8dd644",
+      "wii:inscription:wii-1e102c248b0ad134"
+    ],
+    "place:bijapur:indi:tadavalga": [
+      "wii:inscription:wii-d2ea991bd95f218d",
+      "wii:inscription:wii-26c708e467675be2",
+      "wii:inscription:wii-fa6e91c5804e407f"
+    ],
+    "place:bijapur:bijapur:bijapur": [
+      "wii:inscription:wii-f8dd5e132f6ac553",
+      "wii:inscription:wii-cbbdc33707efd904",
+      "wii:inscription:wii-2bbea0b6091ded41",
+      "wii:inscription:wii-9e059294b665c5c2",
+      "wii:inscription:wii-b181f29688e28c0e",
+      "wii:inscription:wii-cb75311978c939db"
+    ],
+    "place:bijapur:sindgi:kannolli": [
+      "wii:inscription:wii-b98b25d1dde11545",
+      "wii:inscription:wii-1f966109a25bb106",
+      "wii:inscription:wii-5e6bc7dd369f38e8"
+    ],
+    "place:dharwar:kundgol:kamdolli": [
+      "wii:inscription:wii-12c56ea10f72918b",
+      "wii:inscription:wii-bc153cefe4d6c232",
+      "wii:inscription:wii-4849b0868a0ee0a4",
+      "wii:inscription:wii-b02255e2f9335f4b"
+    ],
+    "place:bijapur:kundgol:kundgol": [
+      "wii:inscription:wii-1c8435e748bf54b9"
+    ],
+    "place:bijapur:sindgi:almel": [
+      "wii:inscription:wii-a4a614278029576f",
+      "wii:inscription:wii-405c4d82303b5b13",
+      "wii:inscription:wii-07a0f7c1e8285a68",
+      "wii:inscription:wii-99406df339bf54e0",
+      "wii:inscription:wii-f204e4ff2a62ce41",
+      "wii:inscription:wii-93c4f03fadcecd07",
+      "wii:inscription:wii-c48e5e6ccfe473ae"
+    ],
+    "place:dharwar:unknown:b-k-no-93-of-1938-39": [
+      "wii:inscription:wii-a4d43fb81bdcabd8"
+    ],
+    "place:belgaum:parasagad:saudatti": [
+      "wii:inscription:wii-25e060c152b8c19c"
+    ],
+    "place:dharwar:hangal:kalkeri": [
+      "wii:inscription:wii-c28e400400dce7a4",
+      "wii:inscription:wii-f75c46bcad1b16b0",
+      "wii:inscription:wii-99e1a26f90e99688",
+      "wii:inscription:wii-933f5a9bfa176080",
+      "wii:inscription:wii-80656d8cd93e144d",
+      "wii:inscription:wii-0b1534639f8e2964",
+      "wii:inscription:wii-98667fc0a3108177",
+      "wii:inscription:wii-a73ea12673911c5e",
+      "wii:inscription:wii-120690265c4ef2ed",
+      "wii:inscription:wii-1f56d4b307306481",
+      "wii:inscription:wii-a77b09148df2bf36",
+      "wii:inscription:wii-5258157374860d30",
+      "wii:inscription:wii-2a45a4e0c9518600",
+      "wii:inscription:wii-7b655a5abc9bea7d"
+    ],
+    "place:dharwar:unknown:b-k-no-69-of-1935-36": [
+      "wii:inscription:wii-0b9b4ec4facd55d4"
+    ],
+    "place:bijapus:sindgi:balaganur": [
+      "wii:inscription:wii-5b1d755f1a9db0fe"
+    ],
+    "place:bijapur:unknown:b-k-no-17-of-1937-38": [
+      "wii:inscription:wii-f14ed3ea098ebd73"
+    ],
+    "place:dharwar:kuspgol:kuyiha": [
+      "wii:inscription:wii-c5c7fe8b02619f43"
+    ],
+    "place:bijapur:sindgi:devor": [
+      "wii:inscription:wii-bb0a24289a3d36e2"
+    ],
+    "place:bijapur:unknown:b-k-no-48-of-1937-38": [
+      "wii:inscription:wii-ea1693d89d6be84f"
+    ],
+    "place:north-kanara:sirsi:banavasi": [
+      "wii:inscription:wii-dda789309826805c",
+      "wii:inscription:wii-a2246acbbdb3dc51",
+      "wii:inscription:wii-c81b89cdeaf293ff",
+      "wii:inscription:wii-e6b84820130fc196",
+      "wii:inscription:wii-6337e4f6a0fa5fc0",
+      "wii:inscription:wii-8005703d92f7b622",
+      "wii:inscription:wii-6c642067d8d1ea32",
+      "wii:inscription:wii-58a2687e1dd6c26c",
+      "wii:inscription:wii-243405b20f0e59fd",
+      "wii:inscription:wii-76518f46d49bd099",
+      "wii:inscription:wii-dc12f281603415b0",
+      "wii:inscription:wii-924b57bf16681a16",
+      "wii:inscription:wii-b0a173f1deab2443",
+      "wii:inscription:wii-7ac470f0dddf2f19",
+      "wii:inscription:wii-80c36e7ad10eedcf",
+      "wii:inscription:wii-8b46f890cf5ff936",
+      "wii:inscription:wii-c4ef06eba8e7c472"
+    ],
+    "place:bliapur:sindgi:jalvad": [
+      "wii:inscription:wii-94c8e4fd5c2a5b53"
+    ],
+    "place:dharwar:shirhatti:lakshmesvara": [
+      "wii:inscription:wii-8a42990293ccf9a5",
+      "wii:inscription:wii-301d90ed9c7eefb1"
+    ],
+    "place:dharwar:kundgol:samsi": [
+      "wii:inscription:wii-6d125c286962caa5",
+      "wii:inscription:wii-def2b9936c0feb3a",
+      "wii:inscription:wii-678f93d05040e77e",
+      "wii:inscription:wii-e536cfc0e5c2d85a"
+    ],
+    "place:dharwar:hasgal:kalkeri": [
+      "wii:inscription:wii-a77ef1f0348f0aab"
+    ],
+    "place:belgaum:unknown:b-k-no-61-of-1935-36": [
+      "wii:inscription:wii-08bb892749126ce3"
+    ],
+    "place:bijapur:indi:chadchan": [
+      "wii:inscription:wii-393e6e7d70ee4c28",
+      "wii:inscription:wii-55b5eee502ad2299",
+      "wii:inscription:wii-0cf8a1a378c6352d",
+      "wii:inscription:wii-cba8ba6dbd82e7be"
+    ],
+    "place:bijapur:jamkhandi:tadalbagi": [
+      "wii:inscription:wii-ff50cfad19a9ac97"
+    ],
+    "place:bijapur:jamehandi:chikkalgi": [
+      "wii:inscription:wii-4012a07f2eabd562"
+    ],
+    "place:bijapur:sindgi:kadlevad": [
+      "wii:inscription:wii-c6a748b333e0584f",
+      "wii:inscription:wii-9466c1674cb5217c",
+      "wii:inscription:wii-96e95402397fb165",
+      "wii:inscription:wii-d03bed6a595554ff",
+      "wii:inscription:wii-b0ee21080ed36209",
+      "wii:inscription:wii-6d006ecfd5d1f94b",
+      "wii:inscription:wii-77262d45929d34d6"
+    ],
+    "place:dharwar:shirhatti:lakshmesvar": [
+      "wii:inscription:wii-d6b83ecedc96f5d8",
+      "wii:inscription:wii-5b30c99a0cc745fb",
+      "wii:inscription:wii-a33184b4c23c9fcb",
+      "wii:inscription:wii-2921c1ed5e7da352",
+      "wii:inscription:wii-870f3ea7b1e59597",
+      "wii:inscription:wii-ee7937ffbff1a62e",
+      "wii:inscription:wii-ac46f27cd445de0f",
+      "wii:inscription:wii-081e1bcd5b544055",
+      "wii:inscription:wii-063a30943d2fb99c",
+      "wii:inscription:wii-46e3435d0ab9fa95",
+      "wii:inscription:wii-ae5fdc6fca6c305d",
+      "wii:inscription:wii-abbe85a156a6eb3b",
+      "wii:inscription:wii-52d1d015ab271d9d",
+      "wii:inscription:wii-2a777297fdefa598",
+      "wii:inscription:wii-35389677b89b4fd8",
+      "wii:inscription:wii-5176fc0bf5de0808",
+      "wii:inscription:wii-9a29655a7238c31e",
+      "wii:inscription:wii-245b7a9fc03616c1",
+      "wii:inscription:wii-4baa896a8c5ffab1",
+      "wii:inscription:wii-448f9f5cb8063d34",
+      "wii:inscription:wii-424b11f0ef032d79",
+      "wii:inscription:wii-6148be358100727d",
+      "wii:inscription:wii-8fe5a780ba7ebfc4",
+      "wii:inscription:wii-daeb9a0b698eed2c",
+      "wii:inscription:wii-9c65ed40707deaf0",
+      "wii:inscription:wii-1716319d90af3d78"
+    ],
+    "place:bijapur:indi:bhuyar": [
+      "wii:inscription:wii-dd7c9e51008db926",
+      "wii:inscription:wii-1b0f6784107024e4"
+    ],
+    "place:bijapur:sindgi:kadlevada": [
+      "wii:inscription:wii-7bb3e816eec29569"
+    ],
+    "place:bijapur:jamkhandi:jamkhandi": [
+      "wii:inscription:wii-8b08406b083b6bae",
+      "wii:inscription:wii-b23a904f389bc03a",
+      "wii:inscription:wii-f7840913aa525b43"
+    ],
+    "place:dharwar:hangal:balambid": [
+      "wii:inscription:wii-354edd2165bf406b",
+      "wii:inscription:wii-ff5275a04464416a",
+      "wii:inscription:wii-92da90d2c95da8cb",
+      "wii:inscription:wii-983ebf099a0248f9"
+    ],
+    "place:bijapur:sindgi:kondguli": [
+      "wii:inscription:wii-47af4490812b6c79",
+      "wii:inscription:wii-41dcc0a9c8376475",
+      "wii:inscription:wii-5ae5afef657cc956",
+      "wii:inscription:wii-1328adc0369ea7e6"
+    ],
+    "place:dharwar:shirhatta:lakshmesvar": [
+      "wii:inscription:wii-b925d9841709bd26"
+    ],
+    "place:dharwar:shirahatti:lakshmesvar": [
+      "wii:inscription:wii-eaeb17bec3fb598a"
+    ],
+    "place:bijapur:indi:arjunagi": [
+      "wii:inscription:wii-5e9ed2c34dfc8018",
+      "wii:inscription:wii-15fe5665a15fee31"
+    ],
+    "place:bijapur:indi:nandrgi": [
+      "wii:inscription:wii-48791ee0d5394b91"
+    ],
+    "place:bijapur:indi:nimbal": [
+      "wii:inscription:wii-000ca07a4dd3bcb2",
+      "wii:inscription:wii-261ed13d095449b5",
+      "wii:inscription:wii-c6fab7bb5d994045",
+      "wii:inscription:wii-541138577243139a",
+      "wii:inscription:wii-2c4d76899b27159b",
+      "wii:inscription:wii-e0942b661d2b5e5d",
+      "wii:inscription:wii-66be63e138dea324"
+    ],
+    "place:bijapur:indi:sankh": [
+      "wii:inscription:wii-8e2519fcef2ed8dd",
+      "wii:inscription:wii-5f900d46b76b2acb"
+    ],
+    "place:bijapur:jamkhandi:kannoli": [
+      "wii:inscription:wii-bf77c31602db532f"
+    ],
+    "place:bijapur:unknown:b-k-no-13-of-1936-37": [
+      "wii:inscription:wii-5ab3515c30d5a4c2"
+    ],
+    "place:bijapur:sindgi:kalkeri": [
+      "wii:inscription:wii-ab18dfe56c00d61c",
+      "wii:inscription:wii-748b4ebcfe48e5f0",
+      "wii:inscription:wii-87e934a0c058a5b6",
+      "wii:inscription:wii-18a85cf4316d0021",
+      "wii:inscription:wii-c572747815853670"
+    ],
+    "place:bijapur:unknown:b-k-no-36-of-1937-38": [
+      "wii:inscription:wii-ee66dbb76455d49f"
+    ],
+    "place:bijapur:bijapur:madbhavi": [
+      "wii:inscription:wii-88726addd8a88f18",
+      "wii:inscription:wii-32de8b99a7715db2"
+    ],
+    "place:bijapur:sindgi:hipparagi": [
+      "wii:inscription:wii-f2d31b63bf0d0426",
+      "wii:inscription:wii-acfa73983375bf12",
+      "wii:inscription:wii-6ef54f12a34d2a6a"
+    ],
+    "place:bijapur:indi:salotgi": [
+      "wii:inscription:wii-62ec5db93c43e8e3",
+      "wii:inscription:wii-fe4d7873a85d6342"
+    ],
+    "place:bijapur:unknown:k-no-47-of-1937-38": [
+      "wii:inscription:wii-701f4e16658331b2"
+    ],
+    "place:bijapur:sindgi:devangav": [
+      "wii:inscription:wii-62f2c886c673354e",
+      "wii:inscription:wii-13392796d342fc83"
+    ],
+    "place:bijapur:indi:kudigi": [
+      "wii:inscription:wii-170fee710e22ff20"
+    ],
+    "place:dharwar:hangal:udagatti": [
+      "wii:inscription:wii-f102e2de988eed94"
+    ],
+    "place:bijapur:sindgi:padaganur": [
+      "wii:inscription:wii-1df1635f02011ae0",
+      "wii:inscription:wii-c22d88982ef61d19"
+    ],
+    "place:bijapur:unknown:b-k-no-85-of-1936-37": [
+      "wii:inscription:wii-90ce6d7163f8bdbb"
+    ],
+    "place:bijapur:sindgi:korvar": [
+      "wii:inscription:wii-4f246a9df20b901d",
+      "wii:inscription:wii-d3e25d25283b7b7e"
+    ],
+    "place:bijapur:bijapur:kumatgi": [
+      "wii:inscription:wii-b7540b97f12a6a47",
+      "wii:inscription:wii-8d744267c5c31951"
+    ],
+    "place:bijapur:sindgi:kadna": [
+      "wii:inscription:wii-9be7cb92161b6cb0"
+    ],
+    "place:dharwar:kundgol:kuyibla": [
+      "wii:inscription:wii-e6281aeffd8dda99"
+    ],
+    "place:dharwar:kundgol:kundgol": [
+      "wii:inscription:wii-edbdf879cc2f421e",
+      "wii:inscription:wii-89f3021eebb2c4e1",
+      "wii:inscription:wii-6b174dff6a6bf1e7",
+      "wii:inscription:wii-fe13a2d11b51028a",
+      "wii:inscription:wii-0fc0b8d273d27a34"
+    ],
+    "place:bijapur:indi:bhatgunki": [
+      "wii:inscription:wii-5d13ab4c77eda46f"
+    ],
+    "place:dharwar:unknown:b-k-no-77": [
+      "wii:inscription:wii-769071b26c910971"
+    ],
+    "place:north-kanara:unknown:b-k-no-130": [
+      "wii:inscription:wii-c2b9f4c8c7420e61"
+    ],
+    "place:north-kanara:unknown:b-k-no-127": [
+      "wii:inscription:wii-83244e1de91bfe7b"
+    ],
+    "place:dharwar:unknown:b-k-no-33": [
+      "wii:inscription:wii-36cb5a305774dfc3"
+    ],
+    "place:sirsi-taluk-north-kanara:unknown:b-k-no-119": [
+      "wii:inscription:wii-ad246e3e79f03621"
+    ],
+    "place:dharwar:unknown:b-k-no-82": [
+      "wii:inscription:wii-f8245f7405c7e63a"
+    ],
+    "place:belgaum:parasgad:saundatti": [
+      "wii:inscription:wii-7f85fc20b984f9b7",
+      "wii:inscription:wii-140a1e3e60808f1e"
+    ],
+    "place:unknown:unknown:b-k-no-120": [
+      "wii:inscription:wii-eb390bbb01f4323e"
+    ],
+    "place:bijapur:badami:badami": [
+      "wii:inscription:wii-ed1b823951e33df3",
+      "wii:inscription:wii-95320b935e68629c",
+      "wii:inscription:wii-fb364ca6c1a7e7fb",
+      "wii:inscription:wii-c0da79ad0bb5925a",
+      "wii:inscription:wii-0ff27dc485794174",
+      "wii:inscription:wii-260bf1ead1ed2ba4",
+      "wii:inscription:wii-848abfd5d4e9f45d",
+      "wii:inscription:wii-95b74cb5a32ed141"
+    ],
+    "place:dharwar:shrihatti:lakshmesvar": [
+      "wii:inscription:wii-ee97e5fc1f155b30"
+    ],
+    "place:belgaum:parasgad:saudatti": [
+      "wii:inscription:wii-8717b1d2145951b0"
+    ],
+    "place:belgaum:parasgad:sundatti": [
+      "wii:inscription:wii-767c0ca673cf7706"
+    ],
+    "place:norh-kanara:srisi:banavasi": [
+      "wii:inscription:wii-2f6c47d3ba70c4d4"
+    ],
+    "place:north-kanara:unknown:b-k-no-132": [
+      "wii:inscription:wii-6eb6eb07f5ded49f"
+    ],
+    "place:unknown:unknown:two-inscription-are-engraved-in-shell-characters": [
+      "wii:inscription:wii-4d3e4e77fd359e99"
+    ],
+    "place:bijapur:badami:mahakuta": [
+      "wii:inscription:wii-ecb7707c82fa4588",
+      "wii:inscription:wii-35f234d34e672449"
+    ],
+    "place:bijapur:unknown:b-k-no-84": [
+      "wii:inscription:wii-7ac25432a4f03a06"
+    ],
+    "place:dhawar:hirekerur:sidenur": [
+      "wii:inscription:wii-d1786f40364e1b2b"
+    ],
+    "place:dhawar:unknown:b-k-no-95": [
+      "wii:inscription:wii-1a921c1d10bcf825"
+    ],
+    "place:bejguam:ramdurga:mullur": [
+      "wii:inscription:wii-b53890b28225d082"
+    ],
+    "place:bijapur:jamkhandi:algur": [
+      "wii:inscription:wii-fded5d04c423430a",
+      "wii:inscription:wii-a39f7092975b31ad"
+    ],
+    "place:bijapur:indi:hire-bevinur": [
+      "wii:inscription:wii-7d170e4418dca787",
+      "wii:inscription:wii-79194c3a6791ebe2"
+    ],
+    "place:dharwar:unknown:b-k-no-118": [
+      "wii:inscription:wii-a2a4381f8cbef117"
+    ],
+    "place:bijapur:sindi:chandakavate": [
+      "wii:inscription:wii-6742eacdaa15086b"
+    ],
+    "place:bijapur:unknown:jamkhandi-jamkhandi-taluk-bijapur-district": [
+      "wii:inscription:wii-b22b58c91d2114eb"
+    ],
+    "place:bekguam:ramdurg:soreban": [
+      "wii:inscription:wii-6d51819c7123070f"
+    ],
+    "place:kanara:sirsi:banavasi": [
+      "wii:inscription:wii-a3e375a0e62cf2b7"
+    ],
+    "place:unknown:unknown:b-k-no-25of": [
+      "wii:inscription:wii-6c59231e6902fb09"
+    ],
+    "place:dharwar:kundgol:yelival": [
+      "wii:inscription:wii-46aee6a376f7a954",
+      "wii:inscription:wii-333cfc60b30bbc8d",
+      "wii:inscription:wii-b97a848fba5b7229"
+    ],
+    "place:dharwar:shirhatti:laksmesvar": [
+      "wii:inscription:wii-f65677ac2e4a2891"
+    ],
+    "place:dharwar:unknown:lakshmesvar-shirhatti-taluk-dharwar-district": [
+      "wii:inscription:wii-2c7c7a836354dcc7"
+    ],
+    "place:dhawar:shirhatti:lakshmesvar": [
+      "wii:inscription:wii-7333582db2f1b7d2"
+    ],
+    "place:unknown:unknown:r-no-6-of-1906": [
+      "wii:inscription:wii-f8b8306de6affb67"
+    ],
+    "place:unknown:unknown:r-no-258-of-1906": [
+      "wii:inscription:wii-38f416ae87ccd9ce"
+    ],
+    "place:unknown:unknown:r-no-501-of-1907": [
+      "wii:inscription:wii-6cac38bc164d63e6"
+    ],
+    "place:unknown:unknown:r-no-498-of-1907": [
+      "wii:inscription:wii-bd0b508dcaedcfaf"
+    ],
+    "place:unknown:unknown:r-no-500-of-1907": [
+      "wii:inscription:wii-f7dcb32827b7bff2"
+    ],
+    "place:unknown:unknown:r-no-499-of-1907": [
+      "wii:inscription:wii-f63c45c2cf59100c"
+    ],
+    "place:unknown:unknown:r-no-140-of-1907": [
+      "wii:inscription:wii-ecab8239e2d02658"
+    ],
+    "place:unknown:unknown:a-r-no-119-of-1937-38": [
+      "wii:inscription:wii-259d86c02e8480e1"
+    ],
+    "place:unknown:unknown:a-r-no-121-of-1937-38": [
+      "wii:inscription:wii-5bc5f2ac7c35295b"
+    ],
+    "place:bijapur:sindgi:kulekumatgi": [
+      "wii:inscription:wii-b50c5f87f08dea06"
+    ],
+    "place:dharwar:shirhatti:lakahmesvr": [
+      "wii:inscription:wii-0b2830dd90966a23"
+    ],
+    "place:bijapur:sindgi:sindagi": [
+      "wii:inscription:wii-4d6e94caa7beee2e"
+    ],
+    "place:bijapur:sindgi:kulekimatgi": [
+      "wii:inscription:wii-8fb0dd19b1d74286"
+    ],
+    "place:belgaum:ramdurg:hadli": [
+      "wii:inscription:wii-f1e56e813650d1e6"
+    ],
+    "place:bijapur:sindgi:bekkinai": [
+      "wii:inscription:wii-67c5c34ce4ad7fb4"
+    ],
+    "place:dharwar:unknown:b-k-no-76-of-1935-36": [
+      "wii:inscription:wii-5b7b742bce58d956"
+    ],
+    "place:bijapur:unknown:bhujrukh-sindgi-taluk-bijapur-district": [
+      "wii:inscription:wii-fbf30d688c1bc9be"
+    ],
+    "place:bijapur:sindgi:malghan": [
+      "wii:inscription:wii-e62e0911c6b37f0e",
+      "wii:inscription:wii-ffc752990413b277",
+      "wii:inscription:wii-5859713399b34360",
+      "wii:inscription:wii-90c65509d2842ff4",
+      "wii:inscription:wii-53343349cf544825"
+    ],
+    "place:bijapur:unknown:b-k-no": [
+      "wii:inscription:wii-b320664042f8b9f0"
+    ],
+    "place:bijapur:unknown:k-no-61-of-1936-37": [
+      "wii:inscription:wii-9824b38edcdec242"
+    ],
+    "place:bijapur:sindgi:kadleeevad": [
+      "wii:inscription:wii-14659a79b4ee2479"
+    ],
+    "place:bijapur:indi:agarkhed": [
+      "wii:inscription:wii-eccff4382c0a257a",
+      "wii:inscription:wii-4ca84464b69ce335",
+      "wii:inscription:wii-92860fdd06bc601e"
+    ],
+    "place:bijapur:indi:nimbai": [
+      "wii:inscription:wii-f7166cc4fc606511",
+      "wii:inscription:wii-2ff918eb10a17f2f"
+    ],
+    "place:bijapur:sindgi:kadalevad": [
+      "wii:inscription:wii-bf8f6be6e5e93511",
+      "wii:inscription:wii-d907d6232ff1e185"
+    ],
+    "place:bijapur:sindgi:hadginhai": [
+      "wii:inscription:wii-7c6ac3a06d8e649a"
+    ],
+    "place:bijapur:jamkhandi:tunagl": [
+      "wii:inscription:wii-7776420388ac01ad"
+    ],
+    "place:bijapur:indi:tenihalli": [
+      "wii:inscription:wii-7754670120be63e3"
+    ],
+    "place:dharwar:shirhrtti:lakshmesvar": [
+      "wii:inscription:wii-8fcda064082d675f"
+    ],
+    "place:bijapur:jamkhandi:kunchanur": [
+      "wii:inscription:wii-67b3dbad861c0a94"
+    ],
+    "place:bijapur:bijapur:bablesvar": [
+      "wii:inscription:wii-10e310a4c67c69be"
+    ],
+    "place:bijapur:indi:umraj": [
+      "wii:inscription:wii-46afcb53265709ec",
+      "wii:inscription:wii-11b4532f0fd70630",
+      "wii:inscription:wii-f9b7487f4fede109"
+    ],
+    "place:bijapur:sindi:koadguli": [
+      "wii:inscription:wii-bb2bcf25acbb8f91"
+    ],
+    "place:bijapur:sindig:sindgi": [
+      "wii:inscription:wii-f87361b67fd0879f"
+    ],
+    "place:dharwar:unknown:b-k-no-98": [
+      "wii:inscription:wii-929f27b2a8b9e63c"
+    ],
+    "place:bijapur:indi:horti": [
+      "wii:inscription:wii-7cbf855e607f09ab"
+    ],
+    "place:bijapir:indi:tadavalga": [
+      "wii:inscription:wii-07badcaa2f8a2e49"
+    ],
+    "place:bijapur:indi:tambe": [
+      "wii:inscription:wii-84761a14e7bdb31e"
+    ],
+    "place:dharwar:kundgol:kandolli": [
+      "wii:inscription:wii-2a342fdddffdd5a1"
+    ],
+    "place:dharwar:unknown:lakshmesvar": [
+      "wii:inscription:wii-80fcef38b25e8e1a"
+    ],
+    "place:bijapur:unknown:koadguli": [
+      "wii:inscription:wii-c115daecdd09c9c0"
+    ],
+    "place:bijapur:ramdurg:mudenur": [
+      "wii:inscription:wii-97a7c588f8a1e1a8"
+    ],
+    "place:bijapur:ramdurg:panchnga": [
+      "wii:inscription:wii-5ff7024a85486242"
+    ],
+    "place:bijapur:jamkhandi:madarkhandi": [
+      "wii:inscription:wii-0af4275ed4e4e927"
+    ],
+    "place:bijapur:jamkhandi:takkod": [
+      "wii:inscription:wii-aaf725d1300c83f9"
+    ],
+    "place:dharwar:kundgol:shirur": [
+      "wii:inscription:wii-7942e0a56ed3f213",
+      "wii:inscription:wii-085b8d694e06fa1b"
+    ],
+    "place:dharwar:kalghatgi:kamadhenu": [
+      "wii:inscription:wii-87240445ff85f521",
+      "wii:inscription:wii-f008a11424125045"
+    ],
+    "place:unknown:unknown:b-k-no-102": [
+      "wii:inscription:wii-4a62ca1d3358b8ce"
+    ],
+    "place:dharwar:kundugol:yelival": [
+      "wii:inscription:wii-5fd1b07f5a492965"
+    ],
+    "place:dharwar:ranebbenur:konantambige": [
+      "wii:inscription:wii-b5525dfcba9e8dda"
+    ],
+    "place:bijar:sindgi:almel": [
+      "wii:inscription:wii-ba4b13fc4cabd02f"
+    ],
+    "place:bijapur:sindgi:chattarki": [
+      "wii:inscription:wii-e5f0b9036bbdfcea",
+      "wii:inscription:wii-a7288cde030e44fd"
+    ],
+    "place:unknown:unknown:sindgi-taluk-bijapur-cistrict": [
+      "wii:inscription:wii-6358754ba387da59"
+    ],
+    "place:bijapur:indi:benakan-halli": [
+      "wii:inscription:wii-22f7ce92a48d1d43"
+    ],
+    "place:unknown:unknown:a-r-no-204-of-1941-42": [
+      "wii:inscription:wii-0bd02e0b319f661c"
+    ],
+    "place:unknown:unknown:a-r-no-20-of-1938-39": [
+      "wii:inscription:wii-4ac10b1e1b8daa6b"
+    ],
+    "place:bijapur:indi:shirkanhalli": [
+      "wii:inscription:wii-51115daccf82f69b"
+    ],
+    "place:dharwar:kundgol:bejadur": [
+      "wii:inscription:wii-b0a9803536853649"
+    ],
+    "place:bijapur:indi:bevinur": [
+      "wii:inscription:wii-1cc440282c4dfda6"
+    ],
+    "place:bijapur:unknown:k-no-38-of-1936-37": [
+      "wii:inscription:wii-8263c85049721ccc"
+    ],
+    "place:bijapur:sindgi:ghandakavate": [
+      "wii:inscription:wii-476727159d586dbf"
+    ],
+    "place:bijapur:indi:khedgi": [
+      "wii:inscription:wii-70292e418a09051c"
+    ],
+    "place:bijapur:jhamkhandi:jamkhandi": [
+      "wii:inscription:wii-40d882184ddc4a72"
+    ],
+    "place:bijapur:unknown:nada-khurd": [
+      "wii:inscription:wii-e2b78a1c9218931a"
+    ],
+    "place:belgaum:ramdurg:mudenur": [
+      "wii:inscription:wii-4a4cc94c5c378f63"
+    ],
+    "place:belgaum:unknown:b-k-no-45": [
+      "wii:inscription:wii-48c37c56be69c6a1"
+    ],
+    "place:dharawar:hangal:kalkeri": [
+      "wii:inscription:wii-3dab4cc3616498fc"
+    ],
+    "place:north-kanara:sirisi:banavasi": [
+      "wii:inscription:wii-982f6c571cd13f26"
+    ],
+    "place:bijapur:sindgi:banavasi": [
+      "wii:inscription:wii-a1c2c67a6b4d9be6"
+    ],
+    "place:bijapur:indi:halsangi": [
+      "wii:inscription:wii-fdf8cc4603f28cd9"
+    ],
+    "place:bijapur:jamkhandi:savalige": [
+      "wii:inscription:wii-1ee8935c81e57b0c"
+    ],
+    "place:bijapur:unknown:jamkhand-taluk-bijapur-district": [
+      "wii:inscription:wii-e427f05507aad4b8"
+    ],
+    "place:dharwar:kundgol:kuyibal": [
+      "wii:inscription:wii-4b98e63402d75383",
+      "wii:inscription:wii-e9a3c96738edb44e"
+    ],
+    "place:bijapur:unknown:chikka-masali": [
+      "wii:inscription:wii-ab9cb9d331aff016"
+    ],
+    "place:bijapur:sindgi:aheri": [
+      "wii:inscription:wii-a56d071fc5d0e092"
+    ],
+    "place:bijapur:sindgi:bammadevanamadu": [
+      "wii:inscription:wii-b90d19bf379861f1"
+    ],
+    "place:bijapur:sindgi:ramanhalli": [
+      "wii:inscription:wii-f74d0529c777fdf5",
+      "wii:inscription:wii-f5e3d41ce2249ed7"
+    ],
+    "place:bijapur:unknown:b-k-no-86": [
+      "wii:inscription:wii-6e5f1226dfd3779c"
+    ],
+    "place:bijapur:indi:jhalki": [
+      "wii:inscription:wii-30ddad0e95eda6e8"
+    ],
+    "place:bijapur:sindgi:tontapur": [
+      "wii:inscription:wii-85272da5ad7c8985"
+    ],
+    "place:bijapur:jamkhandi:tungal": [
+      "wii:inscription:wii-bf79dd6ec4fda545"
+    ],
+    "place:dharwar:kuadgol:kundgol": [
+      "wii:inscription:wii-8d4dc67609b180db"
+    ],
+    "place:dharwar:unknown:b-k-no-44": [
+      "wii:inscription:wii-6b16d8613ea3994e"
+    ],
+    "place:unknown:unknown:a-r-no-44-of-1938-39": [
+      "wii:inscription:wii-aff9c94c4d9535d4"
+    ],
+    "place:unknown:unknown:a-r-no-1-of-1938-39": [
+      "wii:inscription:wii-6b9617e6cea54ef2"
+    ],
+    "place:bijapur:indi:atharga": [
+      "wii:inscription:wii-5e7cd25c11bfadfd"
+    ],
+    "place:bijapur:indi:mannur": [
+      "wii:inscription:wii-88b309153059ddee"
+    ],
+    "place:bijapur:unknown:khurd-indi-taluk-bijapur-district": [
+      "wii:inscription:wii-06a72ad10dd7ec51"
+    ],
+    "place:bijapur:bijapur:katakanhalli": [
+      "wii:inscription:wii-40886f6c627f1051"
+    ],
+    "place:bijapur:sindgi:devarnavadgi": [
+      "wii:inscription:wii-ec51c4aad47328da"
+    ],
+    "place:dharwar:unknown:k-no-81-of-1938-39": [
+      "wii:inscription:wii-d8066b83b1ca1557"
+    ],
+    "place:bijapur:jamkhandi:kalablgi": [
+      "wii:inscription:wii-c493de19b5212055"
+    ],
+    "place:bijapru:bijapur:kumatgi": [
+      "wii:inscription:wii-64115e9ff9a29079"
+    ],
+    "place:bijapur:indi:bablad": [
+      "wii:inscription:wii-8d16cfaef478f9a6"
+    ],
+    "place:bijapur:indi:satulgav": [
+      "wii:inscription:wii-dfc42068080a9fee"
+    ],
+    "place:north-kanara:sirsi:banavasa": [
+      "wii:inscription:wii-169cd3685a4b2e75"
+    ],
+    "place:dharwar:kundgol:betadur": [
+      "wii:inscription:wii-f9f39907c8c3e2fd"
+    ],
+    "place:bijapur:indi:arjungi": [
+      "wii:inscription:wii-f1b2b34a0540163f"
+    ],
+    "place:dharwar:ranebennur:yallapur": [
+      "wii:inscription:wii-6d80afe6ac67440a"
+    ],
+    "place:bijapur:bijapur:jumnal": [
+      "wii:inscription:wii-e5cd55e47cf84815"
+    ],
+    "place:bijapur:sindgi:sindgi": [
+      "wii:inscription:wii-a9443cafe5978894"
+    ],
+    "place:bijapur:indi:marasanahalli": [
+      "wii:inscription:wii-670ed9dd0e28d8fd"
+    ],
+    "place:dharwar:ranebenur:udagatti": [
+      "wii:inscription:wii-4021508de048db76",
+      "wii:inscription:wii-8ee1edeccdc2f75d"
+    ],
+    "place:bjjapur:jamkhandi:kalhalli": [
+      "wii:inscription:wii-cf15e996d475dc2d",
+      "wii:inscription:wii-b206b89e59681406"
     ]
   },
   "inscriptions_by_source": {
@@ -26,6 +800,1116 @@
     ],
     "ei:ei-demo-001": [
       "ei:inscription:ei-demo-001"
+    ],
+    "wii:wii-feb956824a6a1304": [
+      "wii:inscription:wii-feb956824a6a1304"
+    ],
+    "wii:wii-b990405d3a8eee01": [
+      "wii:inscription:wii-b990405d3a8eee01"
+    ],
+    "wii:wii-3ef4c14424844409": [
+      "wii:inscription:wii-3ef4c14424844409"
+    ],
+    "wii:wii-0bd1799684700e81": [
+      "wii:inscription:wii-0bd1799684700e81"
+    ],
+    "wii:wii-64ce8683de79aed6": [
+      "wii:inscription:wii-64ce8683de79aed6"
+    ],
+    "wii:wii-e57cb6e040789bd4": [
+      "wii:inscription:wii-e57cb6e040789bd4"
+    ],
+    "wii:wii-334a2e40cd5afa69": [
+      "wii:inscription:wii-334a2e40cd5afa69"
+    ],
+    "wii:wii-c9fcb76875110d78": [
+      "wii:inscription:wii-c9fcb76875110d78"
+    ],
+    "wii:wii-ab1631141a59a949": [
+      "wii:inscription:wii-ab1631141a59a949"
+    ],
+    "wii:wii-ccc7daea1dae00f8": [
+      "wii:inscription:wii-ccc7daea1dae00f8"
+    ],
+    "wii:wii-698daf77c3d7b05f": [
+      "wii:inscription:wii-698daf77c3d7b05f"
+    ],
+    "wii:wii-219719f2ca94cdeb": [
+      "wii:inscription:wii-219719f2ca94cdeb"
+    ],
+    "wii:wii-22583480cd66a584": [
+      "wii:inscription:wii-22583480cd66a584"
+    ],
+    "wii:wii-f47da359fa8dd644": [
+      "wii:inscription:wii-f47da359fa8dd644"
+    ],
+    "wii:wii-d2ea991bd95f218d": [
+      "wii:inscription:wii-d2ea991bd95f218d"
+    ],
+    "wii:wii-f8dd5e132f6ac553": [
+      "wii:inscription:wii-f8dd5e132f6ac553"
+    ],
+    "wii:wii-b98b25d1dde11545": [
+      "wii:inscription:wii-b98b25d1dde11545"
+    ],
+    "wii:wii-12c56ea10f72918b": [
+      "wii:inscription:wii-12c56ea10f72918b"
+    ],
+    "wii:wii-1c8435e748bf54b9": [
+      "wii:inscription:wii-1c8435e748bf54b9"
+    ],
+    "wii:wii-a4a614278029576f": [
+      "wii:inscription:wii-a4a614278029576f"
+    ],
+    "wii:wii-1e102c248b0ad134": [
+      "wii:inscription:wii-1e102c248b0ad134"
+    ],
+    "wii:wii-a4d43fb81bdcabd8": [
+      "wii:inscription:wii-a4d43fb81bdcabd8"
+    ],
+    "wii:wii-25e060c152b8c19c": [
+      "wii:inscription:wii-25e060c152b8c19c"
+    ],
+    "wii:wii-c28e400400dce7a4": [
+      "wii:inscription:wii-c28e400400dce7a4"
+    ],
+    "wii:wii-0b9b4ec4facd55d4": [
+      "wii:inscription:wii-0b9b4ec4facd55d4"
+    ],
+    "wii:wii-5b1d755f1a9db0fe": [
+      "wii:inscription:wii-5b1d755f1a9db0fe"
+    ],
+    "wii:wii-f14ed3ea098ebd73": [
+      "wii:inscription:wii-f14ed3ea098ebd73"
+    ],
+    "wii:wii-c5c7fe8b02619f43": [
+      "wii:inscription:wii-c5c7fe8b02619f43"
+    ],
+    "wii:wii-bb0a24289a3d36e2": [
+      "wii:inscription:wii-bb0a24289a3d36e2"
+    ],
+    "wii:wii-ea1693d89d6be84f": [
+      "wii:inscription:wii-ea1693d89d6be84f"
+    ],
+    "wii:wii-dda789309826805c": [
+      "wii:inscription:wii-dda789309826805c"
+    ],
+    "wii:wii-f75c46bcad1b16b0": [
+      "wii:inscription:wii-f75c46bcad1b16b0"
+    ],
+    "wii:wii-94c8e4fd5c2a5b53": [
+      "wii:inscription:wii-94c8e4fd5c2a5b53"
+    ],
+    "wii:wii-0d94713f3576c25e": [
+      "wii:inscription:wii-0d94713f3576c25e"
+    ],
+    "wii:wii-b71ccd6b8ece8093": [
+      "wii:inscription:wii-b71ccd6b8ece8093"
+    ],
+    "wii:wii-db72bce2ebf757a1": [
+      "wii:inscription:wii-db72bce2ebf757a1"
+    ],
+    "wii:wii-8a42990293ccf9a5": [
+      "wii:inscription:wii-8a42990293ccf9a5"
+    ],
+    "wii:wii-6d125c286962caa5": [
+      "wii:inscription:wii-6d125c286962caa5"
+    ],
+    "wii:wii-a77ef1f0348f0aab": [
+      "wii:inscription:wii-a77ef1f0348f0aab"
+    ],
+    "wii:wii-08bb892749126ce3": [
+      "wii:inscription:wii-08bb892749126ce3"
+    ],
+    "wii:wii-393e6e7d70ee4c28": [
+      "wii:inscription:wii-393e6e7d70ee4c28"
+    ],
+    "wii:wii-ff50cfad19a9ac97": [
+      "wii:inscription:wii-ff50cfad19a9ac97"
+    ],
+    "wii:wii-4012a07f2eabd562": [
+      "wii:inscription:wii-4012a07f2eabd562"
+    ],
+    "wii:wii-c6a748b333e0584f": [
+      "wii:inscription:wii-c6a748b333e0584f"
+    ],
+    "wii:wii-d6b83ecedc96f5d8": [
+      "wii:inscription:wii-d6b83ecedc96f5d8"
+    ],
+    "wii:wii-dd7c9e51008db926": [
+      "wii:inscription:wii-dd7c9e51008db926"
+    ],
+    "wii:wii-7bb3e816eec29569": [
+      "wii:inscription:wii-7bb3e816eec29569"
+    ],
+    "wii:wii-1f966109a25bb106": [
+      "wii:inscription:wii-1f966109a25bb106"
+    ],
+    "wii:wii-8b08406b083b6bae": [
+      "wii:inscription:wii-8b08406b083b6bae"
+    ],
+    "wii:wii-354edd2165bf406b": [
+      "wii:inscription:wii-354edd2165bf406b"
+    ],
+    "wii:wii-47af4490812b6c79": [
+      "wii:inscription:wii-47af4490812b6c79"
+    ],
+    "wii:wii-b925d9841709bd26": [
+      "wii:inscription:wii-b925d9841709bd26"
+    ],
+    "wii:wii-eaeb17bec3fb598a": [
+      "wii:inscription:wii-eaeb17bec3fb598a"
+    ],
+    "wii:wii-5e9ed2c34dfc8018": [
+      "wii:inscription:wii-5e9ed2c34dfc8018"
+    ],
+    "wii:wii-48791ee0d5394b91": [
+      "wii:inscription:wii-48791ee0d5394b91"
+    ],
+    "wii:wii-000ca07a4dd3bcb2": [
+      "wii:inscription:wii-000ca07a4dd3bcb2"
+    ],
+    "wii:wii-8e2519fcef2ed8dd": [
+      "wii:inscription:wii-8e2519fcef2ed8dd"
+    ],
+    "wii:wii-bf77c31602db532f": [
+      "wii:inscription:wii-bf77c31602db532f"
+    ],
+    "wii:wii-261ed13d095449b5": [
+      "wii:inscription:wii-261ed13d095449b5"
+    ],
+    "wii:wii-5ab3515c30d5a4c2": [
+      "wii:inscription:wii-5ab3515c30d5a4c2"
+    ],
+    "wii:wii-ab18dfe56c00d61c": [
+      "wii:inscription:wii-ab18dfe56c00d61c"
+    ],
+    "wii:wii-ee66dbb76455d49f": [
+      "wii:inscription:wii-ee66dbb76455d49f"
+    ],
+    "wii:wii-88726addd8a88f18": [
+      "wii:inscription:wii-88726addd8a88f18"
+    ],
+    "wii:wii-f2d31b63bf0d0426": [
+      "wii:inscription:wii-f2d31b63bf0d0426"
+    ],
+    "wii:wii-62ec5db93c43e8e3": [
+      "wii:inscription:wii-62ec5db93c43e8e3"
+    ],
+    "wii:wii-9466c1674cb5217c": [
+      "wii:inscription:wii-9466c1674cb5217c"
+    ],
+    "wii:wii-5f900d46b76b2acb": [
+      "wii:inscription:wii-5f900d46b76b2acb"
+    ],
+    "wii:wii-5ab5b5e8452c3bf7": [
+      "wii:inscription:wii-5ab5b5e8452c3bf7"
+    ],
+    "wii:wii-701f4e16658331b2": [
+      "wii:inscription:wii-701f4e16658331b2"
+    ],
+    "wii:wii-62f2c886c673354e": [
+      "wii:inscription:wii-62f2c886c673354e"
+    ],
+    "wii:wii-170fee710e22ff20": [
+      "wii:inscription:wii-170fee710e22ff20"
+    ],
+    "wii:wii-96e95402397fb165": [
+      "wii:inscription:wii-96e95402397fb165"
+    ],
+    "wii:wii-f102e2de988eed94": [
+      "wii:inscription:wii-f102e2de988eed94"
+    ],
+    "wii:wii-1df1635f02011ae0": [
+      "wii:inscription:wii-1df1635f02011ae0"
+    ],
+    "wii:wii-90ce6d7163f8bdbb": [
+      "wii:inscription:wii-90ce6d7163f8bdbb"
+    ],
+    "wii:wii-4f246a9df20b901d": [
+      "wii:inscription:wii-4f246a9df20b901d"
+    ],
+    "wii:wii-5b30c99a0cc745fb": [
+      "wii:inscription:wii-5b30c99a0cc745fb"
+    ],
+    "wii:wii-b7540b97f12a6a47": [
+      "wii:inscription:wii-b7540b97f12a6a47"
+    ],
+    "wii:wii-b4c4539e37a7857f": [
+      "wii:inscription:wii-b4c4539e37a7857f"
+    ],
+    "wii:wii-9be7cb92161b6cb0": [
+      "wii:inscription:wii-9be7cb92161b6cb0"
+    ],
+    "wii:wii-e6281aeffd8dda99": [
+      "wii:inscription:wii-e6281aeffd8dda99"
+    ],
+    "wii:wii-99e1a26f90e99688": [
+      "wii:inscription:wii-99e1a26f90e99688"
+    ],
+    "wii:wii-55b5eee502ad2299": [
+      "wii:inscription:wii-55b5eee502ad2299"
+    ],
+    "wii:wii-a33184b4c23c9fcb": [
+      "wii:inscription:wii-a33184b4c23c9fcb"
+    ],
+    "wii:wii-edbdf879cc2f421e": [
+      "wii:inscription:wii-edbdf879cc2f421e"
+    ],
+    "wii:wii-5d13ab4c77eda46f": [
+      "wii:inscription:wii-5d13ab4c77eda46f"
+    ],
+    "wii:wii-769071b26c910971": [
+      "wii:inscription:wii-769071b26c910971"
+    ],
+    "wii:wii-c2b9f4c8c7420e61": [
+      "wii:inscription:wii-c2b9f4c8c7420e61"
+    ],
+    "wii:wii-a2246acbbdb3dc51": [
+      "wii:inscription:wii-a2246acbbdb3dc51"
+    ],
+    "wii:wii-83244e1de91bfe7b": [
+      "wii:inscription:wii-83244e1de91bfe7b"
+    ],
+    "wii:wii-36cb5a305774dfc3": [
+      "wii:inscription:wii-36cb5a305774dfc3"
+    ],
+    "wii:wii-ad246e3e79f03621": [
+      "wii:inscription:wii-ad246e3e79f03621"
+    ],
+    "wii:wii-f8245f7405c7e63a": [
+      "wii:inscription:wii-f8245f7405c7e63a"
+    ],
+    "wii:wii-7f85fc20b984f9b7": [
+      "wii:inscription:wii-7f85fc20b984f9b7"
+    ],
+    "wii:wii-eb390bbb01f4323e": [
+      "wii:inscription:wii-eb390bbb01f4323e"
+    ],
+    "wii:wii-ed1b823951e33df3": [
+      "wii:inscription:wii-ed1b823951e33df3"
+    ],
+    "wii:wii-2921c1ed5e7da352": [
+      "wii:inscription:wii-2921c1ed5e7da352"
+    ],
+    "wii:wii-870f3ea7b1e59597": [
+      "wii:inscription:wii-870f3ea7b1e59597"
+    ],
+    "wii:wii-140a1e3e60808f1e": [
+      "wii:inscription:wii-140a1e3e60808f1e"
+    ],
+    "wii:wii-c81b89cdeaf293ff": [
+      "wii:inscription:wii-c81b89cdeaf293ff"
+    ],
+    "wii:wii-ee97e5fc1f155b30": [
+      "wii:inscription:wii-ee97e5fc1f155b30"
+    ],
+    "wii:wii-933f5a9bfa176080": [
+      "wii:inscription:wii-933f5a9bfa176080"
+    ],
+    "wii:wii-ee7937ffbff1a62e": [
+      "wii:inscription:wii-ee7937ffbff1a62e"
+    ],
+    "wii:wii-ac46f27cd445de0f": [
+      "wii:inscription:wii-ac46f27cd445de0f"
+    ],
+    "wii:wii-081e1bcd5b544055": [
+      "wii:inscription:wii-081e1bcd5b544055"
+    ],
+    "wii:wii-8717b1d2145951b0": [
+      "wii:inscription:wii-8717b1d2145951b0"
+    ],
+    "wii:wii-767c0ca673cf7706": [
+      "wii:inscription:wii-767c0ca673cf7706"
+    ],
+    "wii:wii-e6b84820130fc196": [
+      "wii:inscription:wii-e6b84820130fc196"
+    ],
+    "wii:wii-2f6c47d3ba70c4d4": [
+      "wii:inscription:wii-2f6c47d3ba70c4d4"
+    ],
+    "wii:wii-6337e4f6a0fa5fc0": [
+      "wii:inscription:wii-6337e4f6a0fa5fc0"
+    ],
+    "wii:wii-6eb6eb07f5ded49f": [
+      "wii:inscription:wii-6eb6eb07f5ded49f"
+    ],
+    "wii:wii-063a30943d2fb99c": [
+      "wii:inscription:wii-063a30943d2fb99c"
+    ],
+    "wii:wii-95320b935e68629c": [
+      "wii:inscription:wii-95320b935e68629c"
+    ],
+    "wii:wii-fb364ca6c1a7e7fb": [
+      "wii:inscription:wii-fb364ca6c1a7e7fb"
+    ],
+    "wii:wii-c0da79ad0bb5925a": [
+      "wii:inscription:wii-c0da79ad0bb5925a"
+    ],
+    "wii:wii-0ff27dc485794174": [
+      "wii:inscription:wii-0ff27dc485794174"
+    ],
+    "wii:wii-260bf1ead1ed2ba4": [
+      "wii:inscription:wii-260bf1ead1ed2ba4"
+    ],
+    "wii:wii-4d3e4e77fd359e99": [
+      "wii:inscription:wii-4d3e4e77fd359e99"
+    ],
+    "wii:wii-ecb7707c82fa4588": [
+      "wii:inscription:wii-ecb7707c82fa4588"
+    ],
+    "wii:wii-7ac25432a4f03a06": [
+      "wii:inscription:wii-7ac25432a4f03a06"
+    ],
+    "wii:wii-d1786f40364e1b2b": [
+      "wii:inscription:wii-d1786f40364e1b2b"
+    ],
+    "wii:wii-1a921c1d10bcf825": [
+      "wii:inscription:wii-1a921c1d10bcf825"
+    ],
+    "wii:wii-35f234d34e672449": [
+      "wii:inscription:wii-35f234d34e672449"
+    ],
+    "wii:wii-b53890b28225d082": [
+      "wii:inscription:wii-b53890b28225d082"
+    ],
+    "wii:wii-26c708e467675be2": [
+      "wii:inscription:wii-26c708e467675be2"
+    ],
+    "wii:wii-fded5d04c423430a": [
+      "wii:inscription:wii-fded5d04c423430a"
+    ],
+    "wii:wii-7d170e4418dca787": [
+      "wii:inscription:wii-7d170e4418dca787"
+    ],
+    "wii:wii-a2a4381f8cbef117": [
+      "wii:inscription:wii-a2a4381f8cbef117"
+    ],
+    "wii:wii-6742eacdaa15086b": [
+      "wii:inscription:wii-6742eacdaa15086b"
+    ],
+    "wii:wii-b22b58c91d2114eb": [
+      "wii:inscription:wii-b22b58c91d2114eb"
+    ],
+    "wii:wii-6d51819c7123070f": [
+      "wii:inscription:wii-6d51819c7123070f"
+    ],
+    "wii:wii-def2b9936c0feb3a": [
+      "wii:inscription:wii-def2b9936c0feb3a"
+    ],
+    "wii:wii-3d8c08f026e543d5": [
+      "wii:inscription:wii-3d8c08f026e543d5"
+    ],
+    "wii:wii-a3e375a0e62cf2b7": [
+      "wii:inscription:wii-a3e375a0e62cf2b7"
+    ],
+    "wii:wii-6c59231e6902fb09": [
+      "wii:inscription:wii-6c59231e6902fb09"
+    ],
+    "wii:wii-46aee6a376f7a954": [
+      "wii:inscription:wii-46aee6a376f7a954"
+    ],
+    "wii:wii-f65677ac2e4a2891": [
+      "wii:inscription:wii-f65677ac2e4a2891"
+    ],
+    "wii:wii-2c7c7a836354dcc7": [
+      "wii:inscription:wii-2c7c7a836354dcc7"
+    ],
+    "wii:wii-7333582db2f1b7d2": [
+      "wii:inscription:wii-7333582db2f1b7d2"
+    ],
+    "wii:wii-80656d8cd93e144d": [
+      "wii:inscription:wii-80656d8cd93e144d"
+    ],
+    "wii:wii-405c4d82303b5b13": [
+      "wii:inscription:wii-405c4d82303b5b13"
+    ],
+    "wii:wii-d03bed6a595554ff": [
+      "wii:inscription:wii-d03bed6a595554ff"
+    ],
+    "wii:wii-748b4ebcfe48e5f0": [
+      "wii:inscription:wii-748b4ebcfe48e5f0"
+    ],
+    "wii:wii-f8b8306de6affb67": [
+      "wii:inscription:wii-f8b8306de6affb67"
+    ],
+    "wii:wii-38f416ae87ccd9ce": [
+      "wii:inscription:wii-38f416ae87ccd9ce"
+    ],
+    "wii:wii-6cac38bc164d63e6": [
+      "wii:inscription:wii-6cac38bc164d63e6"
+    ],
+    "wii:wii-bd0b508dcaedcfaf": [
+      "wii:inscription:wii-bd0b508dcaedcfaf"
+    ],
+    "wii:wii-f7dcb32827b7bff2": [
+      "wii:inscription:wii-f7dcb32827b7bff2"
+    ],
+    "wii:wii-f63c45c2cf59100c": [
+      "wii:inscription:wii-f63c45c2cf59100c"
+    ],
+    "wii:wii-ecab8239e2d02658": [
+      "wii:inscription:wii-ecab8239e2d02658"
+    ],
+    "wii:wii-259d86c02e8480e1": [
+      "wii:inscription:wii-259d86c02e8480e1"
+    ],
+    "wii:wii-5bc5f2ac7c35295b": [
+      "wii:inscription:wii-5bc5f2ac7c35295b"
+    ],
+    "wii:wii-b50c5f87f08dea06": [
+      "wii:inscription:wii-b50c5f87f08dea06"
+    ],
+    "wii:wii-0b2830dd90966a23": [
+      "wii:inscription:wii-0b2830dd90966a23"
+    ],
+    "wii:wii-4d6e94caa7beee2e": [
+      "wii:inscription:wii-4d6e94caa7beee2e"
+    ],
+    "wii:wii-46e3435d0ab9fa95": [
+      "wii:inscription:wii-46e3435d0ab9fa95"
+    ],
+    "wii:wii-8fb0dd19b1d74286": [
+      "wii:inscription:wii-8fb0dd19b1d74286"
+    ],
+    "wii:wii-f1e56e813650d1e6": [
+      "wii:inscription:wii-f1e56e813650d1e6"
+    ],
+    "wii:wii-67c5c34ce4ad7fb4": [
+      "wii:inscription:wii-67c5c34ce4ad7fb4"
+    ],
+    "wii:wii-5b7b742bce58d956": [
+      "wii:inscription:wii-5b7b742bce58d956"
+    ],
+    "wii:wii-5e6bc7dd369f38e8": [
+      "wii:inscription:wii-5e6bc7dd369f38e8"
+    ],
+    "wii:wii-7928c6f7a3b3d526": [
+      "wii:inscription:wii-7928c6f7a3b3d526"
+    ],
+    "wii:wii-fbf30d688c1bc9be": [
+      "wii:inscription:wii-fbf30d688c1bc9be"
+    ],
+    "wii:wii-e62e0911c6b37f0e": [
+      "wii:inscription:wii-e62e0911c6b37f0e"
+    ],
+    "wii:wii-ffc752990413b277": [
+      "wii:inscription:wii-ffc752990413b277"
+    ],
+    "wii:wii-b320664042f8b9f0": [
+      "wii:inscription:wii-b320664042f8b9f0"
+    ],
+    "wii:wii-41dcc0a9c8376475": [
+      "wii:inscription:wii-41dcc0a9c8376475"
+    ],
+    "wii:wii-9824b38edcdec242": [
+      "wii:inscription:wii-9824b38edcdec242"
+    ],
+    "wii:wii-333cfc60b30bbc8d": [
+      "wii:inscription:wii-333cfc60b30bbc8d"
+    ],
+    "wii:wii-14659a79b4ee2479": [
+      "wii:inscription:wii-14659a79b4ee2479"
+    ],
+    "wii:wii-eccff4382c0a257a": [
+      "wii:inscription:wii-eccff4382c0a257a"
+    ],
+    "wii:wii-1b0f6784107024e4": [
+      "wii:inscription:wii-1b0f6784107024e4"
+    ],
+    "wii:wii-b0ee21080ed36209": [
+      "wii:inscription:wii-b0ee21080ed36209"
+    ],
+    "wii:wii-f7166cc4fc606511": [
+      "wii:inscription:wii-f7166cc4fc606511"
+    ],
+    "wii:wii-bf8f6be6e5e93511": [
+      "wii:inscription:wii-bf8f6be6e5e93511"
+    ],
+    "wii:wii-b23a904f389bc03a": [
+      "wii:inscription:wii-b23a904f389bc03a"
+    ],
+    "wii:wii-d907d6232ff1e185": [
+      "wii:inscription:wii-d907d6232ff1e185"
+    ],
+    "wii:wii-2ff918eb10a17f2f": [
+      "wii:inscription:wii-2ff918eb10a17f2f"
+    ],
+    "wii:wii-07a0f7c1e8285a68": [
+      "wii:inscription:wii-07a0f7c1e8285a68"
+    ],
+    "wii:wii-7c6ac3a06d8e649a": [
+      "wii:inscription:wii-7c6ac3a06d8e649a"
+    ],
+    "wii:wii-7776420388ac01ad": [
+      "wii:inscription:wii-7776420388ac01ad"
+    ],
+    "wii:wii-89f3021eebb2c4e1": [
+      "wii:inscription:wii-89f3021eebb2c4e1"
+    ],
+    "wii:wii-7754670120be63e3": [
+      "wii:inscription:wii-7754670120be63e3"
+    ],
+    "wii:wii-cbbdc33707efd904": [
+      "wii:inscription:wii-cbbdc33707efd904"
+    ],
+    "wii:wii-8fc22140adf78aa1": [
+      "wii:inscription:wii-8fc22140adf78aa1"
+    ],
+    "wii:wii-8fcda064082d675f": [
+      "wii:inscription:wii-8fcda064082d675f"
+    ],
+    "wii:wii-67b3dbad861c0a94": [
+      "wii:inscription:wii-67b3dbad861c0a94"
+    ],
+    "wii:wii-0b1534639f8e2964": [
+      "wii:inscription:wii-0b1534639f8e2964"
+    ],
+    "wii:wii-10e310a4c67c69be": [
+      "wii:inscription:wii-10e310a4c67c69be"
+    ],
+    "wii:wii-46afcb53265709ec": [
+      "wii:inscription:wii-46afcb53265709ec"
+    ],
+    "wii:wii-87e934a0c058a5b6": [
+      "wii:inscription:wii-87e934a0c058a5b6"
+    ],
+    "wii:wii-bb2bcf25acbb8f91": [
+      "wii:inscription:wii-bb2bcf25acbb8f91"
+    ],
+    "wii:wii-f87361b67fd0879f": [
+      "wii:inscription:wii-f87361b67fd0879f"
+    ],
+    "wii:wii-929f27b2a8b9e63c": [
+      "wii:inscription:wii-929f27b2a8b9e63c"
+    ],
+    "wii:wii-15fe5665a15fee31": [
+      "wii:inscription:wii-15fe5665a15fee31"
+    ],
+    "wii:wii-7cbf855e607f09ab": [
+      "wii:inscription:wii-7cbf855e607f09ab"
+    ],
+    "wii:wii-7b67b91628290042": [
+      "wii:inscription:wii-7b67b91628290042"
+    ],
+    "wii:wii-fe4d7873a85d6342": [
+      "wii:inscription:wii-fe4d7873a85d6342"
+    ],
+    "wii:wii-07badcaa2f8a2e49": [
+      "wii:inscription:wii-07badcaa2f8a2e49"
+    ],
+    "wii:wii-84761a14e7bdb31e": [
+      "wii:inscription:wii-84761a14e7bdb31e"
+    ],
+    "wii:wii-11b4532f0fd70630": [
+      "wii:inscription:wii-11b4532f0fd70630"
+    ],
+    "wii:wii-2a342fdddffdd5a1": [
+      "wii:inscription:wii-2a342fdddffdd5a1"
+    ],
+    "wii:wii-bc153cefe4d6c232": [
+      "wii:inscription:wii-bc153cefe4d6c232"
+    ],
+    "wii:wii-3001c58c671513b2": [
+      "wii:inscription:wii-3001c58c671513b2"
+    ],
+    "wii:wii-80fcef38b25e8e1a": [
+      "wii:inscription:wii-80fcef38b25e8e1a"
+    ],
+    "wii:wii-98667fc0a3108177": [
+      "wii:inscription:wii-98667fc0a3108177"
+    ],
+    "wii:wii-a73ea12673911c5e": [
+      "wii:inscription:wii-a73ea12673911c5e"
+    ],
+    "wii:wii-53f6a6c9bdcefa38": [
+      "wii:inscription:wii-53f6a6c9bdcefa38"
+    ],
+    "wii:wii-5ae5afef657cc956": [
+      "wii:inscription:wii-5ae5afef657cc956"
+    ],
+    "wii:wii-c115daecdd09c9c0": [
+      "wii:inscription:wii-c115daecdd09c9c0"
+    ],
+    "wii:wii-97a7c588f8a1e1a8": [
+      "wii:inscription:wii-97a7c588f8a1e1a8"
+    ],
+    "wii:wii-5ff7024a85486242": [
+      "wii:inscription:wii-5ff7024a85486242"
+    ],
+    "wii:wii-0af4275ed4e4e927": [
+      "wii:inscription:wii-0af4275ed4e4e927"
+    ],
+    "wii:wii-aaf725d1300c83f9": [
+      "wii:inscription:wii-aaf725d1300c83f9"
+    ],
+    "wii:wii-7942e0a56ed3f213": [
+      "wii:inscription:wii-7942e0a56ed3f213"
+    ],
+    "wii:wii-d4b0773e5e8207b6": [
+      "wii:inscription:wii-d4b0773e5e8207b6"
+    ],
+    "wii:wii-87240445ff85f521": [
+      "wii:inscription:wii-87240445ff85f521"
+    ],
+    "wii:wii-4a62ca1d3358b8ce": [
+      "wii:inscription:wii-4a62ca1d3358b8ce"
+    ],
+    "wii:wii-5fd1b07f5a492965": [
+      "wii:inscription:wii-5fd1b07f5a492965"
+    ],
+    "wii:wii-120690265c4ef2ed": [
+      "wii:inscription:wii-120690265c4ef2ed"
+    ],
+    "wii:wii-ae5fdc6fca6c305d": [
+      "wii:inscription:wii-ae5fdc6fca6c305d"
+    ],
+    "wii:wii-1f56d4b307306481": [
+      "wii:inscription:wii-1f56d4b307306481"
+    ],
+    "wii:wii-b5525dfcba9e8dda": [
+      "wii:inscription:wii-b5525dfcba9e8dda"
+    ],
+    "wii:wii-32de8b99a7715db2": [
+      "wii:inscription:wii-32de8b99a7715db2"
+    ],
+    "wii:wii-ba4b13fc4cabd02f": [
+      "wii:inscription:wii-ba4b13fc4cabd02f"
+    ],
+    "wii:wii-99406df339bf54e0": [
+      "wii:inscription:wii-99406df339bf54e0"
+    ],
+    "wii:wii-e5f0b9036bbdfcea": [
+      "wii:inscription:wii-e5f0b9036bbdfcea"
+    ],
+    "wii:wii-6358754ba387da59": [
+      "wii:inscription:wii-6358754ba387da59"
+    ],
+    "wii:wii-c22d88982ef61d19": [
+      "wii:inscription:wii-c22d88982ef61d19"
+    ],
+    "wii:wii-22f7ce92a48d1d43": [
+      "wii:inscription:wii-22f7ce92a48d1d43"
+    ],
+    "wii:wii-0bd02e0b319f661c": [
+      "wii:inscription:wii-0bd02e0b319f661c"
+    ],
+    "wii:wii-4ac10b1e1b8daa6b": [
+      "wii:inscription:wii-4ac10b1e1b8daa6b"
+    ],
+    "wii:wii-2bbea0b6091ded41": [
+      "wii:inscription:wii-2bbea0b6091ded41"
+    ],
+    "wii:wii-51115daccf82f69b": [
+      "wii:inscription:wii-51115daccf82f69b"
+    ],
+    "wii:wii-abbe85a156a6eb3b": [
+      "wii:inscription:wii-abbe85a156a6eb3b"
+    ],
+    "wii:wii-18a85cf4316d0021": [
+      "wii:inscription:wii-18a85cf4316d0021"
+    ],
+    "wii:wii-ff5275a04464416a": [
+      "wii:inscription:wii-ff5275a04464416a"
+    ],
+    "wii:wii-4ca84464b69ce335": [
+      "wii:inscription:wii-4ca84464b69ce335"
+    ],
+    "wii:wii-52d1d015ab271d9d": [
+      "wii:inscription:wii-52d1d015ab271d9d"
+    ],
+    "wii:wii-d3e25d25283b7b7e": [
+      "wii:inscription:wii-d3e25d25283b7b7e"
+    ],
+    "wii:wii-9e059294b665c5c2": [
+      "wii:inscription:wii-9e059294b665c5c2"
+    ],
+    "wii:wii-2a777297fdefa598": [
+      "wii:inscription:wii-2a777297fdefa598"
+    ],
+    "wii:wii-b0a9803536853649": [
+      "wii:inscription:wii-b0a9803536853649"
+    ],
+    "wii:wii-35389677b89b4fd8": [
+      "wii:inscription:wii-35389677b89b4fd8"
+    ],
+    "wii:wii-92da90d2c95da8cb": [
+      "wii:inscription:wii-92da90d2c95da8cb"
+    ],
+    "wii:wii-1cc440282c4dfda6": [
+      "wii:inscription:wii-1cc440282c4dfda6"
+    ],
+    "wii:wii-8263c85049721ccc": [
+      "wii:inscription:wii-8263c85049721ccc"
+    ],
+    "wii:wii-a77b09148df2bf36": [
+      "wii:inscription:wii-a77b09148df2bf36"
+    ],
+    "wii:wii-8005703d92f7b622": [
+      "wii:inscription:wii-8005703d92f7b622"
+    ],
+    "wii:wii-f204e4ff2a62ce41": [
+      "wii:inscription:wii-f204e4ff2a62ce41"
+    ],
+    "wii:wii-476727159d586dbf": [
+      "wii:inscription:wii-476727159d586dbf"
+    ],
+    "wii:wii-a7288cde030e44fd": [
+      "wii:inscription:wii-a7288cde030e44fd"
+    ],
+    "wii:wii-1328adc0369ea7e6": [
+      "wii:inscription:wii-1328adc0369ea7e6"
+    ],
+    "wii:wii-5859713399b34360": [
+      "wii:inscription:wii-5859713399b34360"
+    ],
+    "wii:wii-70292e418a09051c": [
+      "wii:inscription:wii-70292e418a09051c"
+    ],
+    "wii:wii-40d882184ddc4a72": [
+      "wii:inscription:wii-40d882184ddc4a72"
+    ],
+    "wii:wii-6b174dff6a6bf1e7": [
+      "wii:inscription:wii-6b174dff6a6bf1e7"
+    ],
+    "wii:wii-678f93d05040e77e": [
+      "wii:inscription:wii-678f93d05040e77e"
+    ],
+    "wii:wii-6d006ecfd5d1f94b": [
+      "wii:inscription:wii-6d006ecfd5d1f94b"
+    ],
+    "wii:wii-5176fc0bf5de0808": [
+      "wii:inscription:wii-5176fc0bf5de0808"
+    ],
+    "wii:wii-b181f29688e28c0e": [
+      "wii:inscription:wii-b181f29688e28c0e"
+    ],
+    "wii:wii-0cf8a1a378c6352d": [
+      "wii:inscription:wii-0cf8a1a378c6352d"
+    ],
+    "wii:wii-cba8ba6dbd82e7be": [
+      "wii:inscription:wii-cba8ba6dbd82e7be"
+    ],
+    "wii:wii-79194c3a6791ebe2": [
+      "wii:inscription:wii-79194c3a6791ebe2"
+    ],
+    "wii:wii-e2b78a1c9218931a": [
+      "wii:inscription:wii-e2b78a1c9218931a"
+    ],
+    "wii:wii-c6fab7bb5d994045": [
+      "wii:inscription:wii-c6fab7bb5d994045"
+    ],
+    "wii:wii-541138577243139a": [
+      "wii:inscription:wii-541138577243139a"
+    ],
+    "wii:wii-2c4d76899b27159b": [
+      "wii:inscription:wii-2c4d76899b27159b"
+    ],
+    "wii:wii-e0942b661d2b5e5d": [
+      "wii:inscription:wii-e0942b661d2b5e5d"
+    ],
+    "wii:wii-66be63e138dea324": [
+      "wii:inscription:wii-66be63e138dea324"
+    ],
+    "wii:wii-f9b7487f4fede109": [
+      "wii:inscription:wii-f9b7487f4fede109"
+    ],
+    "wii:wii-4a4cc94c5c378f63": [
+      "wii:inscription:wii-4a4cc94c5c378f63"
+    ],
+    "wii:wii-48c37c56be69c6a1": [
+      "wii:inscription:wii-48c37c56be69c6a1"
+    ],
+    "wii:wii-f7840913aa525b43": [
+      "wii:inscription:wii-f7840913aa525b43"
+    ],
+    "wii:wii-fe13a2d11b51028a": [
+      "wii:inscription:wii-fe13a2d11b51028a"
+    ],
+    "wii:wii-3dab4cc3616498fc": [
+      "wii:inscription:wii-3dab4cc3616498fc"
+    ],
+    "wii:wii-903293c623bbef89": [
+      "wii:inscription:wii-903293c623bbef89"
+    ],
+    "wii:wii-982f6c571cd13f26": [
+      "wii:inscription:wii-982f6c571cd13f26"
+    ],
+    "wii:wii-a1c2c67a6b4d9be6": [
+      "wii:inscription:wii-a1c2c67a6b4d9be6"
+    ],
+    "wii:wii-fdf8cc4603f28cd9": [
+      "wii:inscription:wii-fdf8cc4603f28cd9"
+    ],
+    "wii:wii-1ee8935c81e57b0c": [
+      "wii:inscription:wii-1ee8935c81e57b0c"
+    ],
+    "wii:wii-e427f05507aad4b8": [
+      "wii:inscription:wii-e427f05507aad4b8"
+    ],
+    "wii:wii-4b98e63402d75383": [
+      "wii:inscription:wii-4b98e63402d75383"
+    ],
+    "wii:wii-b97a848fba5b7229": [
+      "wii:inscription:wii-b97a848fba5b7229"
+    ],
+    "wii:wii-ab9cb9d331aff016": [
+      "wii:inscription:wii-ab9cb9d331aff016"
+    ],
+    "wii:wii-92860fdd06bc601e": [
+      "wii:inscription:wii-92860fdd06bc601e"
+    ],
+    "wii:wii-9a29655a7238c31e": [
+      "wii:inscription:wii-9a29655a7238c31e"
+    ],
+    "wii:wii-6c642067d8d1ea32": [
+      "wii:inscription:wii-6c642067d8d1ea32"
+    ],
+    "wii:wii-a56d071fc5d0e092": [
+      "wii:inscription:wii-a56d071fc5d0e092"
+    ],
+    "wii:wii-93c4f03fadcecd07": [
+      "wii:inscription:wii-93c4f03fadcecd07"
+    ],
+    "wii:wii-c48e5e6ccfe473ae": [
+      "wii:inscription:wii-c48e5e6ccfe473ae"
+    ],
+    "wii:wii-b90d19bf379861f1": [
+      "wii:inscription:wii-b90d19bf379861f1"
+    ],
+    "wii:wii-f74d0529c777fdf5": [
+      "wii:inscription:wii-f74d0529c777fdf5"
+    ],
+    "wii:wii-6e5f1226dfd3779c": [
+      "wii:inscription:wii-6e5f1226dfd3779c"
+    ],
+    "wii:wii-30ddad0e95eda6e8": [
+      "wii:inscription:wii-30ddad0e95eda6e8"
+    ],
+    "wii:wii-85272da5ad7c8985": [
+      "wii:inscription:wii-85272da5ad7c8985"
+    ],
+    "wii:wii-bf79dd6ec4fda545": [
+      "wii:inscription:wii-bf79dd6ec4fda545"
+    ],
+    "wii:wii-8d4dc67609b180db": [
+      "wii:inscription:wii-8d4dc67609b180db"
+    ],
+    "wii:wii-085b8d694e06fa1b": [
+      "wii:inscription:wii-085b8d694e06fa1b"
+    ],
+    "wii:wii-6b16d8613ea3994e": [
+      "wii:inscription:wii-6b16d8613ea3994e"
+    ],
+    "wii:wii-aff9c94c4d9535d4": [
+      "wii:inscription:wii-aff9c94c4d9535d4"
+    ],
+    "wii:wii-6b9617e6cea54ef2": [
+      "wii:inscription:wii-6b9617e6cea54ef2"
+    ],
+    "wii:wii-f008a11424125045": [
+      "wii:inscription:wii-f008a11424125045"
+    ],
+    "wii:wii-245b7a9fc03616c1": [
+      "wii:inscription:wii-245b7a9fc03616c1"
+    ],
+    "wii:wii-5e7cd25c11bfadfd": [
+      "wii:inscription:wii-5e7cd25c11bfadfd"
+    ],
+    "wii:wii-90c65509d2842ff4": [
+      "wii:inscription:wii-90c65509d2842ff4"
+    ],
+    "wii:wii-88b309153059ddee": [
+      "wii:inscription:wii-88b309153059ddee"
+    ],
+    "wii:wii-06a72ad10dd7ec51": [
+      "wii:inscription:wii-06a72ad10dd7ec51"
+    ],
+    "wii:wii-4baa896a8c5ffab1": [
+      "wii:inscription:wii-4baa896a8c5ffab1"
+    ],
+    "wii:wii-58a2687e1dd6c26c": [
+      "wii:inscription:wii-58a2687e1dd6c26c"
+    ],
+    "wii:wii-40886f6c627f1051": [
+      "wii:inscription:wii-40886f6c627f1051"
+    ],
+    "wii:wii-47c31f78a8e460e9": [
+      "wii:inscription:wii-47c31f78a8e460e9"
+    ],
+    "wii:wii-ec51c4aad47328da": [
+      "wii:inscription:wii-ec51c4aad47328da"
+    ],
+    "wii:wii-e536cfc0e5c2d85a": [
+      "wii:inscription:wii-e536cfc0e5c2d85a"
+    ],
+    "wii:wii-5258157374860d30": [
+      "wii:inscription:wii-5258157374860d30"
+    ],
+    "wii:wii-2a45a4e0c9518600": [
+      "wii:inscription:wii-2a45a4e0c9518600"
+    ],
+    "wii:wii-448f9f5cb8063d34": [
+      "wii:inscription:wii-448f9f5cb8063d34"
+    ],
+    "wii:wii-e9a3c96738edb44e": [
+      "wii:inscription:wii-e9a3c96738edb44e"
+    ],
+    "wii:wii-53343349cf544825": [
+      "wii:inscription:wii-53343349cf544825"
+    ],
+    "wii:wii-424b11f0ef032d79": [
+      "wii:inscription:wii-424b11f0ef032d79"
+    ],
+    "wii:wii-d8066b83b1ca1557": [
+      "wii:inscription:wii-d8066b83b1ca1557"
+    ],
+    "wii:wii-6148be358100727d": [
+      "wii:inscription:wii-6148be358100727d"
+    ],
+    "wii:wii-c493de19b5212055": [
+      "wii:inscription:wii-c493de19b5212055"
+    ],
+    "wii:wii-7b655a5abc9bea7d": [
+      "wii:inscription:wii-7b655a5abc9bea7d"
+    ],
+    "wii:wii-77262d45929d34d6": [
+      "wii:inscription:wii-77262d45929d34d6"
+    ],
+    "wii:wii-64115e9ff9a29079": [
+      "wii:inscription:wii-64115e9ff9a29079"
+    ],
+    "wii:wii-8fe5a780ba7ebfc4": [
+      "wii:inscription:wii-8fe5a780ba7ebfc4"
+    ],
+    "wii:wii-8d744267c5c31951": [
+      "wii:inscription:wii-8d744267c5c31951"
+    ],
+    "wii:wii-4849b0868a0ee0a4": [
+      "wii:inscription:wii-4849b0868a0ee0a4"
+    ],
+    "wii:wii-8d16cfaef478f9a6": [
+      "wii:inscription:wii-8d16cfaef478f9a6"
+    ],
+    "wii:wii-a39f7092975b31ad": [
+      "wii:inscription:wii-a39f7092975b31ad"
+    ],
+    "wii:wii-dfc42068080a9fee": [
+      "wii:inscription:wii-dfc42068080a9fee"
+    ],
+    "wii:wii-daeb9a0b698eed2c": [
+      "wii:inscription:wii-daeb9a0b698eed2c"
+    ],
+    "wii:wii-ebdeb99c9bccba15": [
+      "wii:inscription:wii-ebdeb99c9bccba15"
+    ],
+    "wii:wii-f5e3d41ce2249ed7": [
+      "wii:inscription:wii-f5e3d41ce2249ed7"
+    ],
+    "wii:wii-fa6e91c5804e407f": [
+      "wii:inscription:wii-fa6e91c5804e407f"
+    ],
+    "wii:wii-848abfd5d4e9f45d": [
+      "wii:inscription:wii-848abfd5d4e9f45d"
+    ],
+    "wii:wii-169cd3685a4b2e75": [
+      "wii:inscription:wii-169cd3685a4b2e75"
+    ],
+    "wii:wii-301d90ed9c7eefb1": [
+      "wii:inscription:wii-301d90ed9c7eefb1"
+    ],
+    "wii:wii-9c65ed40707deaf0": [
+      "wii:inscription:wii-9c65ed40707deaf0"
+    ],
+    "wii:wii-243405b20f0e59fd": [
+      "wii:inscription:wii-243405b20f0e59fd"
+    ],
+    "wii:wii-76518f46d49bd099": [
+      "wii:inscription:wii-76518f46d49bd099"
+    ],
+    "wii:wii-dc12f281603415b0": [
+      "wii:inscription:wii-dc12f281603415b0"
+    ],
+    "wii:wii-924b57bf16681a16": [
+      "wii:inscription:wii-924b57bf16681a16"
+    ],
+    "wii:wii-b0a173f1deab2443": [
+      "wii:inscription:wii-b0a173f1deab2443"
+    ],
+    "wii:wii-7ac470f0dddf2f19": [
+      "wii:inscription:wii-7ac470f0dddf2f19"
+    ],
+    "wii:wii-80c36e7ad10eedcf": [
+      "wii:inscription:wii-80c36e7ad10eedcf"
+    ],
+    "wii:wii-8b46f890cf5ff936": [
+      "wii:inscription:wii-8b46f890cf5ff936"
+    ],
+    "wii:wii-c4ef06eba8e7c472": [
+      "wii:inscription:wii-c4ef06eba8e7c472"
+    ],
+    "wii:wii-acfa73983375bf12": [
+      "wii:inscription:wii-acfa73983375bf12"
+    ],
+    "wii:wii-cb75311978c939db": [
+      "wii:inscription:wii-cb75311978c939db"
+    ],
+    "wii:wii-95b74cb5a32ed141": [
+      "wii:inscription:wii-95b74cb5a32ed141"
+    ],
+    "wii:wii-f9f39907c8c3e2fd": [
+      "wii:inscription:wii-f9f39907c8c3e2fd"
+    ],
+    "wii:wii-b02255e2f9335f4b": [
+      "wii:inscription:wii-b02255e2f9335f4b"
+    ],
+    "wii:wii-f1b2b34a0540163f": [
+      "wii:inscription:wii-f1b2b34a0540163f"
+    ],
+    "wii:wii-78159986fd37f2cf": [
+      "wii:inscription:wii-78159986fd37f2cf"
+    ],
+    "wii:wii-c572747815853670": [
+      "wii:inscription:wii-c572747815853670"
+    ],
+    "wii:wii-13392796d342fc83": [
+      "wii:inscription:wii-13392796d342fc83"
+    ],
+    "wii:wii-6ef54f12a34d2a6a": [
+      "wii:inscription:wii-6ef54f12a34d2a6a"
+    ],
+    "wii:wii-6d80afe6ac67440a": [
+      "wii:inscription:wii-6d80afe6ac67440a"
+    ],
+    "wii:wii-e5cd55e47cf84815": [
+      "wii:inscription:wii-e5cd55e47cf84815"
+    ],
+    "wii:wii-a9443cafe5978894": [
+      "wii:inscription:wii-a9443cafe5978894"
+    ],
+    "wii:wii-670ed9dd0e28d8fd": [
+      "wii:inscription:wii-670ed9dd0e28d8fd"
+    ],
+    "wii:wii-0fc0b8d273d27a34": [
+      "wii:inscription:wii-0fc0b8d273d27a34"
+    ],
+    "wii:wii-4021508de048db76": [
+      "wii:inscription:wii-4021508de048db76"
+    ],
+    "wii:wii-8ee1edeccdc2f75d": [
+      "wii:inscription:wii-8ee1edeccdc2f75d"
+    ],
+    "wii:wii-cf15e996d475dc2d": [
+      "wii:inscription:wii-cf15e996d475dc2d"
+    ],
+    "wii:wii-b206b89e59681406": [
+      "wii:inscription:wii-b206b89e59681406"
+    ],
+    "wii:wii-1716319d90af3d78": [
+      "wii:inscription:wii-1716319d90af3d78"
+    ],
+    "wii:wii-983ebf099a0248f9": [
+      "wii:inscription:wii-983ebf099a0248f9"
     ]
   }
 }

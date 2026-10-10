@@ -24,3 +24,6 @@ public/data/published-atlas.json.tmp
 
 # graft's local graph cache — regenerable, not committed (run `graft build`).
 /graft/
+
+# Rebuildable caches created by remote scholarly-corpus importers.
+/var/import-cache/

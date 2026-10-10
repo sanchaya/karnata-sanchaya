@@ -43,8 +43,10 @@ export function normalizeStagedRecord(staged){
     date:{from,to,certainty:valueOf(raw,'Date certainty','date_certainty')||'unknown'},religion:valueOf(raw,'Religion','religion'),
     within_project_area:valueOf(raw,'Within project area','within_project_area'),images:list(valueOf(raw,'Images','images')),
   }
+  const sourcePublication=valueOf(raw,'Source publication','source_publication')||staged.source.publication
+  const sourceId=valueOf(raw,'Source ID','source_id')||(sourcePublication===staged.source.publication&&staged.source.id?staged.source.id:stableId(corpus,'source',sourcePublication))
   const provenance={
-    source_id:staged.source.id||stableId(corpus,'source',staged.source.publication),source_publication:staged.source.publication,
+    source_id:sourceId,source_publication:sourcePublication,
     volume:valueOf(raw,'Volume','volume')||staged.source.volume||null,page:valueOf(raw,'Page','page'),
     inscription_number:valueOf(raw,'Inscription number','inscription_number','ID','id'),source_url:valueOf(raw,'Source URL','source_url')||staged.source.url||null,
     scan_url:valueOf(raw,'Scan URL','scan_url'),editor:valueOf(raw,'Editor','editor')||staged.source.editor||null,

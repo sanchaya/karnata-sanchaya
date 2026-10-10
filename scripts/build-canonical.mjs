@@ -5,12 +5,25 @@ import { canonicalGeoJSON, importCanonical, stageSourceRecords, validateCanonica
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const args=process.argv.slice(2),inputArgs=args.filter(value=>!value.startsWith('--'))
-const inputs=inputArgs.length?inputArgs.map(value=>path.resolve(process.cwd(),value)):[path.join(root,'fixtures/canonical/ec-sample.json'),path.join(root,'fixtures/canonical/ei-sample.json')]
+const defaultInputs=[path.join(root,'fixtures/canonical/ec-sample.json'),path.join(root,'fixtures/canonical/ei-sample.json')]
+const whatIsIndiaImport=path.join(root,'data/imports/whatisindia-inscriptions.json')
+if(fs.existsSync(whatIsIndiaImport))defaultInputs.push(whatIsIndiaImport)
+const inputs=inputArgs.length?inputArgs.map(value=>path.resolve(process.cwd(),value)):defaultInputs
 const outputOnly=args.includes('--validate-only')
 const staged=[]
+const karnatakaTerms=/\b(karnataka|kannada|mysore|mysuru|bangalore|bengaluru|belgaum|belagavi|dharwar|dharwad|bijapur|vijayapura|bellary|ballari|raichur|gulbarga|kalaburagi|bidar|shimoga|shivamogga|hassan|tumkur|tumakuru|kolar|mandya|chikmagalur|chikkamagaluru|chitradurga|chitaldroog|kodagu|coorg|kanara|canara|mangalore|mangaluru|udupi|haveri|gadag|bagalkot|koppal|yadgir|gangavadi|banavasi|halebid|belur|sravanabelgola|srirangapatna|talakad|aihole|badami|pattadakal|lakkundi|sannati|maski|talagunda|sidenur)\b/i
+const isPublicKarnatakaInscription=record=>karnatakaTerms.test([
+  record.Name,record.Place,record.Taluk,record.District,record.Description,record['Original page title'],record.Language,
+].filter(Boolean).join(' '))
 for(const file of inputs){
   const payload=JSON.parse(fs.readFileSync(file,'utf8'))
-  staged.push(...stageSourceRecords({corpus:payload.corpus,source:payload.source,records:payload.records,importedAt:null}))
+  const isDefaultWhatIsIndia=path.resolve(file)===whatIsIndiaImport&&!args.includes('--all-discovery')
+  const records=isDefaultWhatIsIndia?payload.records
+    .filter(record=>record.Category==='inscription'&&isPublicKarnatakaInscription(record))
+    .map(record=>Object.fromEntries(Object.entries(record).filter(([key])=>key!=='Source excerpt')))
+    :payload.records
+  if(isDefaultWhatIsIndia)console.log(`Public canonical projection: ${records.length} item-numbered WhatIsIndia records have explicit Karnataka/Kannada evidence; all ${payload.records.length} records remain in the hidden research index.`)
+  staged.push(...stageSourceRecords({corpus:payload.corpus,source:payload.source,records,importedAt:null}))
 }
 const dataset=importCanonical(staged,{generatedAt:null}),issues=validateCanonicalDataset(dataset),errors=issues.filter(issue=>issue.severity==='error')
 if(issues.length)console.log(issues.map(issue=>`${issue.severity.toUpperCase()} ${issue.collection}.${issue.id} ${issue.path}: ${issue.message}`).join('\n'))
