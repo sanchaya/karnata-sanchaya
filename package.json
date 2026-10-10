@@ -12,6 +12,9 @@
     "import:patrika": "node scripts/import-patrika.mjs",
     "import:nakshe-sites": "node scripts/import-nakshe-sites.mjs",
     "import:epigraphia-archive": "node scripts/import-epigraphia-archive.mjs",
+    "import:whatisindia": "node scripts/import-whatisindia-inscriptions.mjs",
+    "import:bharatrajya": "node scripts/import-bharatrajya.mjs",
+    "research:index": "node scripts/build-india-research-index.mjs",
     "import:karnataka-archaeology": "node scripts/import-karnataka-archaeology.mjs",
     "audit:freedom-fighters": "node scripts/audit-freedom-fighters.mjs",
     "extract:martyrs-karnataka": "node scripts/extract-dictionary-martyrs-karnataka.mjs",
@@ -26,7 +29,7 @@
     "test": "node --test",
     "import:ec": "node scripts/build-canonical.mjs",
     "import:ei": "node scripts/build-canonical.mjs",
-    "build": "npm run canonical:build && node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build",
+    "build": "npm run research:index && npm run canonical:build && node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build",
     "preview": "vite preview",
     "validate:data": "node scripts/validate-data.mjs",
     "check": "npm run validate:data && node --test && npm run build"

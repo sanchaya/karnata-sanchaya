@@ -1,6 +1,6 @@
 # Canonical epigraphy model and EC/EI ingestion
 
-Updated: 4 October 2026
+Updated: 10 October 2026
 
 ## Purpose and compatibility
 
@@ -86,6 +86,41 @@ Create an adapter that maps source headings into the accepted headings and calls
 - Use `unknown`, never a guess.
 - Mark inferred matches as `inferred` pending review.
 - Do not mark a record publication-ready before item, place and citation review.
+
+## Importing the WhatIsIndia inscriptions catalogue
+
+WhatIsIndia is used as a discovery and online-access layer, not as a replacement for the printed Archaeological Survey of India editions. The importer preserves the linked underlying publication (for example *South Indian Inscriptions*, *Epigraphia Indica*, *Annual Reports on Indian Epigraphy*, or *Corpus Inscriptionum Indicarum*), volume, printed page, inscription number, source URL, original page text excerpt, and the portal discovery URL.
+
+Run a complete same-host crawl with:
+
+```bash
+npm run import:whatisindia
+npm run canonical:build
+npm run canonical:validate
+```
+
+For a bounded audit run, use `npm run import:whatisindia -- --max-pages 50`. Use `--refresh` to bypass the rebuildable cache in `var/import-cache/whatisindia/`, `--numbered-only` to exclude unresolved article-page leads, or `--output path/to/file.json` to retain a separate research batch. The committed default output is `data/imports/whatisindia-inscriptions.json`; when present, the static canonical build includes it automatically.
+
+The complete 9 October 2026 crawl visited 9,939 source pages and retained 9,283 records: 2,402 item-numbered inscriptions and 6,881 unresolved corpus-page leads. The manifest also retains 152 broken or forbidden source links so that an incomplete upstream page is never silently represented as a successful extraction. The full collection is available in the direct-only India research index. The normal public canonical bundle includes only item-numbered records carrying explicit Kannada/Karnataka place, district, language or title evidence; unresolved page leads and full source excerpts remain in research storage. This keeps the public story in scope and prevents the full discovery corpus from blocking initial page load. Use `node scripts/build-canonical.mjs --all-discovery` only for a deliberate offline research build.
+
+## BharatRajya discovery import and the hidden India index
+
+BharatRajya is a discovery feed, not a citable scholarly authority. Run:
+
+```bash
+npm run import:bharatrajya
+npm run research:index
+```
+
+The first command preserves the eight exposed structured collections in `data/imports/bharatrajya-discovery.json` and generates a deliberately narrow Kannada/Karnataka review projection in `src/data/bharatrajya-karnataka.generated.js`. That review projection is not injected into the normal public timeline. The second command combines the full BharatRajya discovery bundle and the full WhatIsIndia inscription import into the build-time research index at `src/data/india-research.generated.js`.
+
+The direct route `#india-research` is intentionally absent from public navigation. It provides a searchable, lazy-listed workspace for India-wide and wider subcontinent discovery records without changing the normal Karnataka scope. Its records remain `needs-review`. A BharatRajya `source` string is displayed only as an **imported source claim**; it must be resolved to the named book, article, inscription edition, official register or other underlying source before the record can be promoted. The 47 underlying reference candidates are shown separately for that matching work.
+
+`npm run build` regenerates the compact research index from the committed import snapshots. It does not access the network. Refreshing either upstream source is a deliberate research operation and must be followed by validation and a reviewed commit.
+
+Numbered entries are split at printed `No./Nos. … (Page No …)` locators. Article pages where individual item boundaries cannot be safely inferred are retained as `corpus-page-lead` records. All imported entries begin as `needs-review`, with unknown locations left unplotted until an authority-confirmed coordinate is supplied. Printed place spellings remain in `source_record.raw`; normalization never silently rewrites them.
+
+Before promotion, a reviewer must compare the online transcription against the cited printed page, resolve grouped inscription numbers, confirm the modern district/taluk and coordinates, identify language/script/dynasty only from evidence, and add a scan URL where available. The crawler cache is ignored by Git; the normalized import file and generated static canonical files are versioned.
 
 ## Validation and provenance policy
 
