@@ -228,6 +228,8 @@ if [[ $SKIP_MIGRATIONS -eq 0 ]]; then
   run_as_app "$NPM_BIN" run db:migrate
   notice 'Synchronizing repository seed records into a permanent MariaDB revision'
   run_as_app "$NPM_BIN" run db:sync-dataset
+  notice 'Synchronizing India-wide discovery records into the permanent research queue'
+  run_as_app "$NPM_BIN" run db:sync-research-discovery
 fi
 
 cat > "$UNIT_FILE" <<UNIT

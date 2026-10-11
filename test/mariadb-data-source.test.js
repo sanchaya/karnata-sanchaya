@@ -45,8 +45,8 @@ test('live application hydrates before App evaluates and public API reads MariaD
 })
 
 test('research records and assignments have no browser persistence path',async()=>{
-  const [admin,evidence,people]=await Promise.all([source('src/Admin.jsx'),source('src/EvidenceWorkflow.jsx'),source('src/PeopleExplorer.jsx')])
-  for(const [name,value] of Object.entries({admin,evidence,people})){
+  const [admin,evidence,people,discovery]=await Promise.all([source('src/Admin.jsx'),source('src/EvidenceWorkflow.jsx'),source('src/PeopleExplorer.jsx'),source('src/AdminDiscoveryQueue.jsx')])
+  for(const [name,value] of Object.entries({admin,evidence,people,discovery})){
     assert.doesNotMatch(value,/localStorage\.|sessionStorage\.|indexedDB\s*\(/,`${name} must not persist research data in the browser`)
   }
   assert.match(people,/atlasData\.peopleCandidates/)
@@ -72,4 +72,24 @@ test('live install and update scripts synchronize the MariaDB dataset',async()=>
   const [install,update]=await Promise.all([source('scripts/install-linux-nginx.sh'),source('scripts/update-live.sh')])
   assert.match(install,/run db:sync-dataset/)
   assert.match(update,/run db:sync-dataset/)
+  assert.match(install,/run db:sync-research-discovery/)
+  assert.match(update,/run db:sync-research-discovery/)
+})
+
+test('India-wide discovery imports have a permanent, review-safe MariaDB workflow',async()=>{
+  const [migration,sync,server,admin,queue,manifest]=await Promise.all([
+    source('server/migrations/010_research_discovery_records.sql'),source('scripts/sync-research-discovery.mjs'),source('server/app.js'),source('src/Admin.jsx'),source('src/AdminDiscoveryQueue.jsx'),source('package.json')
+  ])
+  assert.match(migration,/CREATE TABLE IF NOT EXISTS research_discovery_records/)
+  assert.match(migration,/source_payload_json LONGTEXT NOT NULL/)
+  assert.match(migration,/editorial_payload_json LONGTEXT NULL/)
+  assert.match(sync,/ON DUPLICATE KEY UPDATE/)
+  assert.doesNotMatch(sync,/editorial_payload_json=VALUES/)
+  assert.match(sync,/source_payload_json=IF\(managed_by='repository'/)
+  assert.match(server,/app\.get\('\/api\/administration\/discovery'/)
+  assert.match(server,/Reviewed discovery records require a reviewer note and at least one HTTP\(S\) citation/)
+  assert.match(admin,/AdminDiscoveryQueue/)
+  assert.match(queue,/Save review/)
+  assert.match(queue,/Create in MariaDB/)
+  assert.match(manifest,/db:sync-research-discovery/)
 })

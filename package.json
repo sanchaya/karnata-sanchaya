@@ -9,6 +9,7 @@
     "start": "node server/app.js",
     "db:migrate": "node server/migrate.js",
     "db:sync-dataset": "node scripts/sync-dataset.mjs",
+    "db:sync-research-discovery": "node scripts/sync-research-discovery.mjs",
     "import:patrika": "node scripts/import-patrika.mjs",
     "import:nakshe-sites": "node scripts/import-nakshe-sites.mjs",
     "import:epigraphia-archive": "node scripts/import-epigraphia-archive.mjs",

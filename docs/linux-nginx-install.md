@@ -35,7 +35,8 @@ The clone owner is used by default as the service account. If the clone is root-
 The first run will:
 
 1. Create a mode-640 `.env` in the clone.
-2. Run `npm ci`, `npm run check`, and `npm run db:migrate`.
+2. Run `npm ci`, `npm run check`, `npm run db:migrate`,
+   `npm run db:sync-dataset`, and `npm run db:sync-research-discovery`.
 3. Create and enable `karnataka-atlas.service` (or the supplied service name).
 4. Temporarily configure an HTTP-only Nginx block for the ACME challenge.
 5. Request the certificate and replace the block with HTTP→HTTPS redirect plus the TLS proxy.

@@ -162,6 +162,47 @@ app.get('/api/verification-requests/mine',requireUser,async(req,res)=>{const row
 
 const normalizeCitationList=(list,max=20)=>Array.isArray(list)?list.filter(item=>item&&typeof item.url==='string'&&/^https?:\/\//i.test(item.url)).slice(0,max).map(item=>({url:clean(item.url,1000),title:clean(item.title,255),locator:clean(item.locator,500)})):[]
 const normalizeContribution=body=>{const record=safeJson(body.proposedRecord);const citations=normalizeCitationList(body.citations);return {action:['create','update','correction','citation','translation'].includes(body.action)?body.action:'update',recordType:clean(body.recordType,80),targetRecordId:clean(body.targetRecordId,160)||null,title:clean(body.title,255),rationale:clean(body.rationale,10000),record,citations}}
+const discoveryDatasets=new Set(['history','inscriptions','sources','failures'])
+const discoveryStatuses=new Set(['needs-review','in-progress','reviewed','rejected'])
+const discoveryRow=row=>({id:row.record_id,provider:row.provider,dataset:row.dataset_name,kind:row.record_kind,scope:row.scope_name,title:row.title,url:row.source_url||'',source:safeJson(row.source_payload_json)||{},editorial:safeJson(row.editorial_payload_json)||{},reviewStatus:row.review_status,reviewedBy:row.reviewed_by||null,reviewedAt:row.reviewed_at||null,managedBy:row.managed_by,sourceUpdatedAt:row.source_updated_at||null,updatedAt:row.updated_at})
+
+app.get('/api/administration/discovery',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const dataset=discoveryDatasets.has(req.query.dataset)?req.query.dataset:null,status=discoveryStatuses.has(req.query.status)?req.query.status:null,query=clean(req.query.query,240),page=Math.max(1,Number.parseInt(req.query.page,10)||1),limit=Math.min(100,Math.max(10,Number.parseInt(req.query.limit,10)||50)),where=[],params=[]
+  if(dataset){where.push('dataset_name=?');params.push(dataset)}
+  if(status){where.push('review_status=?');params.push(status)}
+  if(query){where.push('(LOWER(title) LIKE ? OR LOWER(provider) LIKE ? OR LOWER(record_kind) LIKE ? OR LOWER(source_payload_json) LIKE ?)');const needle=`%${query.toLowerCase()}%`;params.push(needle,needle,needle,needle)}
+  const clause=where.length?` WHERE ${where.join(' AND ')}`:''
+  const [countRows,rows,statRows]=await Promise.all([
+    pool.query(`SELECT COUNT(*) total FROM research_discovery_records${clause}`,params),
+    pool.query(`SELECT record_id,provider,dataset_name,record_kind,scope_name,title,source_url,source_payload_json,editorial_payload_json,review_status,reviewed_by,reviewed_at,managed_by,source_updated_at,updated_at FROM research_discovery_records${clause} ORDER BY updated_at DESC,title ASC LIMIT ${limit} OFFSET ${(page-1)*limit}`,params),
+    pool.query('SELECT dataset_name,review_status,COUNT(*) total FROM research_discovery_records GROUP BY dataset_name,review_status ORDER BY dataset_name,review_status'),
+  ])
+  res.json({records:rows.map(discoveryRow),page,limit,total:Number(countRows[0]?.total||0),stats:statRows.map(row=>({dataset:row.dataset_name,status:row.review_status,total:Number(row.total)}))})
+})
+
+app.post('/api/administration/discovery',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const id=clean(req.body?.id,191),provider=clean(req.body?.provider,120)||'Administrator intake',dataset=discoveryDatasets.has(req.body?.dataset)?req.body.dataset:null,kind=clean(req.body?.kind,96),scope=clean(req.body?.scope,80)||'india',title=clean(req.body?.title,1000),url=clean(req.body?.url,2048),source=safeJson(req.body?.source)||{}
+  if(!/^[a-z0-9]+(?::[a-z0-9-]+)+$/.test(id)||!dataset||!kind||!title)return res.status(400).json({error:'A namespaced stable ID, dataset, record kind and title are required.'})
+  if(url&&!/^https?:\/\//i.test(url))return res.status(400).json({error:'Source URL must use HTTP or HTTPS.'})
+  const payload={...source,id,provider,dataset,kind,scope,title,url,reviewStatus:'needs-review'},sourcePayload=JSON.stringify(payload)
+  try{await pool.query(`INSERT INTO research_discovery_records (record_id,provider,dataset_name,record_kind,scope_name,title,source_url,source_hash,source_payload_json,review_status,managed_by,source_updated_at) VALUES (?,?,?,?,?,?,?,?,?,'needs-review','administrator',UTC_DATE())`,[id,provider,dataset,kind,scope,title,url||null,sha256(sourcePayload),sourcePayload])}
+  catch(error){if(error.code==='ER_DUP_ENTRY')return res.status(409).json({error:'That discovery record ID already exists.'});throw error}
+  await audit(pool,req.user.id,'research-discovery.created','research-discovery',id,{provider,dataset,kind})
+  const row=(await pool.query('SELECT * FROM research_discovery_records WHERE record_id=? LIMIT 1',[id]))[0]
+  res.status(201).json({ok:true,record:discoveryRow(row)})
+})
+
+app.put('/api/administration/discovery/:id',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const id=clean(req.params.id,191),status=discoveryStatuses.has(req.body?.reviewStatus)?req.body.reviewStatus:null,citations=normalizeCitationList(req.body?.citations,50),reviewerNote=clean(req.body?.reviewerNote,10000),normalizedTitle=clean(req.body?.normalizedTitle,1000),canonicalTargetId=clean(req.body?.canonicalTargetId,191)
+  if(!id||!status)return res.status(400).json({error:'A stable record ID and supported review status are required.'})
+  if(status==='reviewed'&&(!citations.length||!reviewerNote))return res.status(422).json({error:'Reviewed discovery records require a reviewer note and at least one HTTP(S) citation.'})
+  const editorial={normalizedTitle,canonicalTargetId,reviewerNote,citations}
+  const result=await pool.query(`UPDATE research_discovery_records SET editorial_payload_json=?,review_status=?,reviewed_by=?,reviewed_at=IF(? IN ('reviewed','rejected'),UTC_TIMESTAMP(3),NULL) WHERE record_id=?`,[JSON.stringify(editorial),status,req.user.id,status,id])
+  if(!result.affectedRows)return res.status(404).json({error:'Discovery record not found.'})
+  await audit(pool,req.user.id,'research-discovery.reviewed','research-discovery',id,{status,canonicalTargetId,citationCount:citations.length})
+  const row=(await pool.query('SELECT * FROM research_discovery_records WHERE record_id=? LIMIT 1',[id]))[0]
+  res.json({ok:true,record:discoveryRow(row)})
+})
 const proposalIssues=value=>{const issues=[];if(!value.recordType||!value.title||!value.rationale||!value.record||typeof value.record!=='object'||Array.isArray(value.record))issues.push('Record type, title, rationale and a valid proposed record are required.');if(value.action==='create'&&!/^[a-z0-9]+(?:-[a-z0-9]+)+$/.test(value.record?.id||''))issues.push('New records require a stable lowercase hyphenated ID.');if(value.action!=='create'&&!value.targetRecordId)issues.push('Changes to an existing record require its stable target ID.');if(value.action==='create'&&(!value.record?.name?.kn||!value.record?.name?.en))issues.push('New records require Kannada and English names.');if(value.record?.date&&(!Number.isFinite(value.record.date.from)||!['BCE','CE'].includes(value.record.date.era)||!['exact','year','circa','range','century','unknown'].includes(value.record.date.precision)))issues.push('Dates require a numeric from year, BCE/CE era and supported precision.');if(!value.citations.length)issues.push('At least one HTTP(S) citation is required before submission.');issues.push(...translationProposalIssues(value));return issues}
 app.post('/api/contributions',requireUser,requireApproved,async(req,res)=>{const value=normalizeContribution(req.body||{});if(!value.recordType||!value.title||!value.rationale||!value.record||typeof value.record!=='object')return res.status(400).json({error:'Record type, title, rationale and a valid proposed record are required.'});const id=randomUUID();await pool.query(`INSERT INTO contributions (id,contributor_id,action,record_type,target_record_id,title,rationale,proposed_record_json,citations_json) VALUES (?,?,?,?,?,?,?,?,?)`,[id,req.user.id,value.action,value.recordType,value.targetRecordId,value.title,value.rationale,JSON.stringify(value.record),JSON.stringify(value.citations)]);await audit(pool,req.user.id,'contribution.created','contribution',id,{recordType:value.recordType,targetRecordId:value.targetRecordId});res.status(201).json({ok:true,id,status:'draft'})})
 app.get('/api/contributions/mine',requireUser,async(req,res)=>{const rows=await pool.query(`SELECT c.*,COALESCE((SELECT JSON_ARRAYAGG(JSON_OBJECT('decision',r.decision,'publicComment',r.public_comment,'createdAt',r.created_at)) FROM contribution_reviews r WHERE r.contribution_id=c.id),JSON_ARRAY()) reviews FROM contributions c WHERE contributor_id=? ORDER BY updated_at DESC`,[req.user.id]);res.json({contributions:rows.map(row=>({...row,proposed_record_json:safeJson(row.proposed_record_json),citations_json:safeJson(row.citations_json),reviews:safeJson(row.reviews)||[]}))})})

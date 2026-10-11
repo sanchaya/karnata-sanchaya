@@ -17,9 +17,16 @@ After the change is committed and deployed:
 ```bash
 npm run db:migrate
 npm run db:sync-dataset
+npm run db:sync-research-discovery
 ```
 
 The sync creates a new immutable MariaDB revision, preserves existing records, normalizes older snapshots whose collection keys are missing or stored as object maps, and refuses invalid seed data. Use `scripts/update-live.sh` for the guarded pull/install/migrate/sync/restart sequence.
+
+The separate discovery sync loads the complete India-wide BharatRajya and
+WhatIsIndia discovery corpus, source candidates and unresolved source-page
+failures into the administrator-only review queue. It refreshes preserved
+source payloads without replacing Admin review notes, citations, decisions or
+canonical-target links.
 
 ## Use the Admin citation workflow
 
