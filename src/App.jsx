@@ -212,6 +212,7 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
     ],
     community:[
       tourStep('.community-hero','ಸಮುದಾಯ ಪ್ರವೇಶ · ನೋಂದಣಿ ಅಥವಾ ಲಾಗಿನ್ ಮಾಡಿ','Create a research identity with your affiliation and profession, or sign in to continue.'),
+      tourStep('.community-role-guide','ಪಾತ್ರ ಮಾರ್ಗದರ್ಶಿ · ನಿಮ್ಮ ಕೆಲಸದ ಕ್ರಮ ಆಯ್ಕೆಮಾಡಿ','Choose the student, teacher, contributor, reviewer or administrator guide before starting.'),
       ...(loggedIn?[tourStep('.community-user','ನಿಮ್ಮ ಗುರುತು · karma ಮತ್ತು ಸ್ಥಿತಿ ನೋಡಿ','Your account status, affiliation, reviewer role and karma are shown here.')]:[]),
       ...(loggedIn?[tourStep('.community-workspace-tabs','ಕಾರ್ಯಸ್ಥಳ ಟ್ಯಾಬ್‌ಗಳು · ಕೊಡುಗೆ ಅಥವಾ ವಿಮರ್ಶೆ ಆಯ್ಕೆಮಾಡಿ','Approved contributors can submit records; reviewers see translation and evidence queues.')]:[]),
       ...(loggedIn?[tourStep('.community-workspace-tabs','ಕೊಡುಗೆ ಕಾರ್ಯಸ್ಥಳ · citation ಜೊತೆಗೆ ಸಲ್ಲಿಸಿ','Choose the workspace tab to add a proposed record, upload verification when needed and follow your contribution status.')]:[]),

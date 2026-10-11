@@ -14,6 +14,8 @@ test('community contribution uses a guided structured workflow instead of JSON e
   assert.match(guided,/Page \/ inscription \/ record number/)
   assert.match(tasks,/Help complete one evidence gap/)
   assert.match(tasks,/contributeTarget/)
+  for(const group of ['governance','periodicals','evidence'])assert.match(tasks,new RegExp(`group:'${group}'`))
+  assert.match(guided,/periodical:'Newspaper \/ periodical'/)
   for(const value of [community,guided,tasks])assert.doesNotMatch(value,/localStorage\.|sessionStorage\.|indexedDB\s*\(/)
 })
 

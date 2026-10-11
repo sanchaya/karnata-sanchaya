@@ -1,0 +1,19 @@
+.community-role-guide{max-width:1100px;margin:24px 0 8px;padding:20px;border:1px solid #e0e4f2;border-radius:12px;background:#f8f9ff}
+.community-role-guide h3{margin:2px 0 6px}
+.community-role-guide>div:first-child>p:last-child,.community-role-guide article p{color:#5d6278;line-height:1.55}
+.community-guide-tabs{display:flex;gap:7px;overflow-x:auto;padding:9px 0 12px;scrollbar-width:thin}
+.community-guide-tabs button{white-space:nowrap;border:1px solid #d3d8eb;background:#fff;padding:8px 11px;border-radius:999px;cursor:pointer}
+.community-guide-tabs button.active{background:#4361ee;color:#fff;border-color:#4361ee}
+.community-role-guide article{background:#fff;border-left:3px solid #4361ee;padding:12px 14px;margin-bottom:10px}
+.community-role-guide article p{margin:4px 0}
+.community-role-guide>a{font-size:13px;font-weight:700}
+.community-consents{display:grid;gap:9px}
+.community-consents label{display:flex;align-items:flex-start;gap:9px;font-size:13px;font-weight:500}
+.community-consents input{width:auto;margin-top:2px}
+.community-link-button{border:0;background:none;color:#3655d6;text-decoration:underline;justify-self:start;padding:3px 0;cursor:pointer}
+.account-item button{white-space:nowrap}
+.research-task-progress{display:flex;gap:7px;overflow-x:auto;padding:4px 0 14px;scrollbar-width:thin}
+.research-task-progress button{display:flex;align-items:center;gap:8px;white-space:nowrap;border:1px solid #dce0ed;border-radius:999px;background:#fff;padding:7px 10px;color:#454b65;cursor:pointer}
+.research-task-progress button.active{border-color:#4361ee;background:#eef1ff;color:#2744bf}
+.research-task-progress b{font-size:11px;color:#304ab4}
+@media(max-width:800px){.community-role-guide{padding:16px}.account-item{display:grid}.account-item>div{margin-bottom:5px}}

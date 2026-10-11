@@ -60,7 +60,7 @@ npm run dev:api
 npm run dev
 ```
 
-The Vite server proxies `/api` to port 8787. For an all-in-one production-shaped setup, configure `.env` and use `docker compose up -d --build`. See [live deployment](docs/live-deployment.md) and [community governance](docs/community-governance.md).
+The Vite server proxies `/api` to port 8787. For an all-in-one production-shaped setup, configure `.env` and use `docker compose up -d --build`. See the role-specific [community user guide](docs/user-guide.md), [live deployment](docs/live-deployment.md) and [community governance](docs/community-governance.md).
 
 For a cloned Linux deployment behind an existing Nginx instance, use the guarded systemd/TLS installer: [Linux + Nginx installation](docs/linux-nginx-install.md) and `scripts/install-linux-nginx.sh`. For later releases, run `scripts/update-live.sh` on the server to fetch, validate, migrate and restart the existing deployment without replacing its secrets or Nginx/TLS configuration.
 
@@ -122,6 +122,10 @@ The GitHub Pages workflow supplies `PUBLIC_SITE_URL` and generates an absolute s
 ## Community workflow
 
 Open **ಕೊಡುಗೆ ನೀಡಿ / Contribute**. Registration captures profession and institutional affiliation. Sanchaya approves accounts; contributors then save and submit cited proposals. Appointed reviewers approve or request changes, and approved work receives auditable karma points. Institution IDs are optional, encrypted, access-restricted, and excluded from public exports.
+
+Registration requires explicit community-terms and privacy consent. **Forgot password?** sends a one-time expiring recovery link on the live portal; using it invalidates existing sessions. Configure `RESEND_API_KEY`, `MAIL_FROM`, `APP_ORIGIN` and `PASSWORD_RESET_MINUTES` in production. Administrators can approve, reject, suspend or reactivate accounts and appoint reviewer, verification-officer and exporter roles from the Administration workspace.
+
+The community research marketplace reports open counts and offers lazy, searchable queues for inscriptions, literature, district history, people, monuments and temples, relations, coins and scripts, territorial evidence, rulers and dynasties, grouped periodical-place packets, and source/translation review. Evidence packets also link to the permanent human Evidence Workflow instead of creating a separate browser-only queue.
 
 The live application and GitHub Pages have intentionally different responsibilities:
 
