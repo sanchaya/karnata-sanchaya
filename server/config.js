@@ -20,6 +20,8 @@ export const config={
     connectionLimit:Number(process.env.DB_POOL_SIZE||10),
   },
   sessionDays:Number(process.env.SESSION_DAYS||14),
+  passwordResetMinutes:Number(process.env.PASSWORD_RESET_MINUTES||30),
+  mail:{apiKey:process.env.RESEND_API_KEY||'',from:process.env.MAIL_FROM||''},
   uploadDir:path.resolve(process.env.PRIVATE_UPLOAD_DIR||path.join(rootDir,'var','private-uploads')),
   documentEncryptionKey:process.env.DOCUMENT_ENCRYPTION_KEY||'',
   publicDir:path.join(rootDir,'dist'),

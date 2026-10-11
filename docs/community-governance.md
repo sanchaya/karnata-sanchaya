@@ -3,6 +3,7 @@
 ## Roles and review path
 
 1. A visitor registers with a name, profession, affiliation and institution details. Every new account remains `pending` until Sanchaya approves it.
+   Registration requires explicit terms and privacy consent. Password recovery uses a short-lived, one-time token stored only as a hash; completing a reset invalidates all active sessions. The generic recovery response never confirms whether an email is registered.
 2. An approved account receives the contributor role. Contributors create proposals; they never write directly to the published atlas.
 3. Sanchaya administrators may appoint qualified people or institutional nominees as reviewers and verification officers.
    Administrators may separately grant the exporter role to approved members who need structured JSON worklists or dataset handoff files. Export permission is not implied by contributor, reviewer or verified-badge status.

@@ -4,7 +4,7 @@ The live portal is one same-origin service: Express serves the built React appli
 
 ## Initial setup
 
-1. Copy `.env.example` to `.env` and set strong unique database passwords, the public HTTPS `APP_ORIGIN`, and a key generated with `openssl rand -base64 32`. Keep this file outside version control and back up the encryption key separately.
+1. Copy `.env.example` to `.env` and set strong unique database passwords, the public HTTPS `APP_ORIGIN`, a key generated with `openssl rand -base64 32`, and password-recovery mail settings (`RESEND_API_KEY` and `MAIL_FROM`). Keep this file outside version control and back up the encryption key separately.
 2. MariaDB's `max_allowed_packet` must be at least 32M before running `db:sync-dataset` (see below); a fresh install's default (sometimes 1M-4M on minimal distro packages) is too small for the bundled dataset (~10MB and growing) and the sync will fail with `ECONNRESET`.
 3. Start MariaDB and the portal with `docker compose up -d --build`, or run MariaDB independently, then `npm run db:migrate`, `npm run db:sync-dataset`, `npm run db:sync-research-discovery`, `npm run build`, and `npm start`.
 4. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
@@ -39,4 +39,8 @@ The live administrator workspace stores complete dataset revisions in MariaDB. A
 
 ## Before public launch
 
-Add verified-email/password-reset delivery, administrator MFA, a production secrets manager, central rate limiting, malware scanning for uploads, database least-privilege users, monitoring, backups, and final terms/privacy text. Run the service only behind HTTPS.
+Password-reset delivery is implemented with one-time hashed tokens and Resend's HTTPS API. Before launch, test delivery and expiry against the public `APP_ORIGIN`. Still add verified-email delivery, administrator MFA, a production secrets manager, central rate limiting, malware scanning for uploads, database least-privilege users, monitoring, backups, and final terms/privacy text. Run the service only behind HTTPS.
+
+### Account-flow smoke test
+
+After every authentication release: register a fresh address; verify its pending state; approve it from the Administration workspace; sign in and submit a draft; request a password reset; use the link once; confirm the old password and existing sessions no longer work; then suspend and reactivate the test account. Do not perform this test on a real contributor account.

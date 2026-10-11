@@ -1,8 +1,8 @@
 # Community operations and release handoff
 
-Updated: 2026-10-11
+Updated: 2026-10-12
 
-This is the operating checklist for the live MariaDB portal. It keeps community work permanent and reviewable while keeping the GitHub Pages site a deliberate, read-only release.
+This is the operating checklist for the live MariaDB portal. It keeps community work permanent and reviewable while keeping the GitHub Pages site a deliberate, read-only release. The role-specific public workflow is documented in [user-guide.md](user-guide.md). Account recovery uses one-time, expiring, hashed tokens; production email delivery must be configured and exercised before inviting contributors.
 
 ## Daily reviewer workflow
 
