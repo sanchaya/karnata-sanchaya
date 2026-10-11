@@ -34,6 +34,24 @@ Open `#admin` as an approved administrator and choose **Sources / ಆಕರಗ�
 
 For a public release, review the revision, run `npm run publish:static`, and deploy the generated static build. JSON export/import is an administrator tool only.
 
+## Guided community contribution
+
+Approved contributors use `#community`; they do not edit JSON or canonical
+records directly. The four-step Kannada-first form collects the record type,
+place/date context, type-specific fields, rationale and structured citations.
+For new records the server assigns the provisional stable ID. For corrections
+and new evidence, Atlas detail panels pass the selected record ID and name into
+the form. The research-task panel also exposes current inscription, literature,
+district-history and freedom-person evidence gaps as small tasks.
+
+Saving creates a MariaDB draft. The contributor deliberately submits that
+draft, and an independent reviewer approves, rejects or requests changes before
+anything can enter a published dataset revision. Every submitted citation must
+have an HTTP(S) URL, title and item-level locator such as a page, inscription
+number or catalogue record. Photographs are not part of this contribution form
+yet; introduce them only with an explicit licence, consent, retention and
+moderation policy.
+
 ## Social update links
 
 Set only the handles that actually exist in the live/static build environment. Blank values remain hidden:

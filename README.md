@@ -25,6 +25,7 @@ A Kannada-first React/Vite atlas for exploring Karnataka's history through a tim
 - Sanchaya-approved accounts for students, researchers, teachers, historians and the public
 - Optional encrypted institution-ID verification and a verified badge
 - Cited change proposals, independent review, karma points and bilingual contribution certificates
+- Kannada-first guided contributions for new records, corrections and cited evidence, plus a searchable research-task board; drafts are stored permanently in MariaDB and never in browser storage
 - MariaDB audit trail with an approved-only, privacy-safe static release export
 - Search-engine metadata, bilingual structured dataset markup, crawler rules and deployment-aware sitemap generation
 - Atlas-level and source-level citations with plain-text, BibTeX, RIS and JSON exports
