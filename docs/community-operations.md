@@ -1,6 +1,6 @@
 # Community operations and release handoff
 
-Updated: 2026-08-24
+Updated: 2026-10-11
 
 This is the operating checklist for the live MariaDB portal. It keeps community work permanent and reviewable while keeping the GitHub Pages site a deliberate, read-only release.
 
@@ -12,6 +12,17 @@ This is the operating checklist for the live MariaDB portal. It keeps community 
 4. Verification officers separately review institution ID requests. Documents remain encrypted and private; the verified badge is the only public result.
 5. Approved proposals earn ledger points and remain linked to the review. The record is not public until it is included in an administrator-approved dataset revision.
 6. Evidence-board assignments are coordinated in `#evidence`. Researchers may set assignee, independent reviewer, due date, status and review note. The saved status history is operational metadata; it does not change the historical record's review status by itself.
+7. Returned contributions remain editable by their original contributor. Saving a revision increments its version, returns it to `draft`, and requires a deliberate resubmission.
+8. Campaign coordinators use the Administration workspace to create a bilingual research campaign, including optional record-type and district scope. Approved contributors may join an active campaign and associate a draft with it. The schema retains `draft`, `active`, `closed` and `archived` lifecycle states plus coordinator/participant membership roles.
+9. Contributor and reviewer decisions generate persistent MariaDB notifications; opening a notification marks only that user's copy as read.
+
+## Bulk research staging
+
+Approved contributors can stage CSV or KML files from the contribution workspace. The browser parses the supplied file, shows the row count, and sends at most 500 sanitized rows to `research_import_batches`. These batches are private operational records: they are not merged into the canonical dataset and are not included in the GitHub Pages build.
+
+A reviewer or administrator must inspect the preview and approve, reject or request changes with a written note. Approval means that the batch is suitable for a later controlled canonical import; it does **not** publish the rows automatically. This separation prevents a spreadsheet or KML from bypassing stable IDs, evidence validation and record-level editorial review.
+
+The initial staging formats are CSV and point-based KML. Image uploads remain outside this workflow until the project approves licence, consent, retention and moderation rules.
 
 ## Administrator release gate
 
@@ -25,6 +36,8 @@ Before a static release, open the admin dashboard and check the **Live community
 - the last static publication is known, or the release is explicitly the first publication.
 
 Then run `npm run export:approved`, inspect `public/data/approved-community.json`, run `npm run check`, and publish the static build. Never copy the live database, sessions, private review notes or encrypted uploads to GitHub Pages.
+
+Migration `011_v029_community_operations.sql` adds notifications, scoped campaigns, campaign membership and private research-import batches. It intentionally retains future-safe account/system notification kinds and the `staged` import state; these values are inexpensive schema capacity and must not be removed without a data-migration review. `scripts/update-live.sh` runs `npm run db:migrate`; verify the migration appears in `schema_migrations` before testing these panels.
 
 ## Recovery and audit
 

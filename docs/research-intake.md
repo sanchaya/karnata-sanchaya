@@ -41,16 +41,27 @@ records directly. The four-step Kannada-first form collects the record type,
 place/date context, type-specific fields, rationale and structured citations.
 For new records the server assigns the provisional stable ID. For corrections
 and new evidence, Atlas detail panels pass the selected record ID and name into
-the form. The research-task panel also exposes current inscription, literature,
-district-history and freedom-person evidence gaps as small tasks.
+the form. Known canonical places can be selected by Kannada or English name;
+the form then fills the available district, taluk, coordinate and location precision. Taluk is only inferred when an existing structured research record safely matches the selected canonical place; otherwise it remains open for the contributor rather than being guessed.
+The research-task panel exposes evidence gaps across inscriptions, literature,
+district history, people, heritage/temples, political relations, coins/scripts
+and territorial evidence as small tasks.
 
 Saving creates a MariaDB draft. The contributor deliberately submits that
 draft, and an independent reviewer approves, rejects or requests changes before
 anything can enter a published dataset revision. Every submitted citation must
 have an HTTP(S) URL, title and item-level locator such as a page, inscription
-number or catalogue record. Photographs are not part of this contribution form
-yet; introduce them only with an explicit licence, consent, retention and
-moderation policy.
+number or catalogue record. A requested change can be edited and resubmitted;
+each save creates a new contribution version. Persistent notifications tell the
+contributor when a review decision is recorded.
+
+Administrators can create bilingual campaigns for a classroom, district audit
+or institutional research sprint and retain record-type/district scope in MariaDB. Contributors join an active campaign and may
+associate their drafts with it. Researchers with existing tabular or map work
+can stage CSV/KML batches privately in MariaDB; reviewer approval does not
+automatically publish or merge those rows. Photographs are not part of this
+contribution form yet; introduce them only with an explicit licence, consent,
+retention and moderation policy.
 
 ## Social update links
 
