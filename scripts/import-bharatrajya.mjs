@@ -14,7 +14,7 @@ const bilingual=en=>({en:String(en||''),kn:''})
 const review={status:'needs-review',reviewer:null,updatedAt:retrievedAt}
 
 async function getJson(name,extension='json'){
-  const url=`${base}/${name}.${extension}`,response=await fetch(url,{headers:{'user-agent':'KarnatakaHistoricalAtlasResearchImporter/1.0 (+https://try.karnata.sanchaya.net/)'}})
+  const url=`${base}/${name}.${extension}`,response=await fetch(url,{headers:{'user-agent':'KarnatakaHistoricalAtlasResearchImporter/1.0 (+https://try-karnata.sanchaya.net/)'}})
   if(!response.ok)throw new Error(`${url}: ${response.status} ${response.statusText}`)
   return response.json()
 }

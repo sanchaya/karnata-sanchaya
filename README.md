@@ -54,6 +54,7 @@ Copy `.env.example` to `.env`, configure a local MariaDB database, then run:
 ```bash
 npm run db:migrate
 npm run db:sync-dataset
+npm run db:sync-research-discovery
 npm run dev:api
 npm run dev
 ```
@@ -142,6 +143,8 @@ The live `#admin` workspace requires an approved administrator session and store
 The admin workspace remains available only by opening `#admin` directly for maintainers. It is not linked from the public navigation and is protected by the live administrator role; the static GitHub Pages build remains read-only.
 
 Use the **Resources & collaborations management** shortcuts in the admin toolbar to maintain source metadata and collaboration records. Source fields include authors/organizations, publisher or repository, DOI, ISBN, URL and review state; collaboration records include entity type, public stage, scope and bilingual descriptions. Export and review the complete JSON before publishing.
+
+The direct-only `#india-research` workspace contains the complete BharatRajya and WhatIsIndia discovery imports without widening the ordinary Karnataka timeline. On the live service, Admin has a separate paginated discovery queue for those records, underlying source candidates and unresolved source-page failures. Run `npm run db:migrate` followed by `npm run db:sync-research-discovery` after a deliberate source refresh; `scripts/update-live.sh` performs both automatically for committed imports. Admin review notes, citations and canonical-target links are retained when repository source payloads are refreshed.
 
 Open `#evidence` to operate the current evidence board. The board now includes reviewer assignments, review notes, saved status history, source citations, a reviewer operations summary and a ready-for-promotion queue. Every task shows its attached source citations directly on the card and requires at least one before it can move to awaiting-review or complete; citations are permanent and additive, so submitting a new one never removes an earlier one. A completed assignment is still only a workflow signal; publication requires an independently reviewed evidence packet, validation, a permanent MariaDB revision and a deliberate static release.
 

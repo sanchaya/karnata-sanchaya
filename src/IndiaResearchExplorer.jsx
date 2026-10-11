@@ -17,7 +17,7 @@ export default function IndiaResearchExplorer({locale='en'}){
   const [year,setYear]=useState('')
   const [limit,setLimit]=useState(PAGE_SIZE)
   const [selected,setSelected]=useState(null)
-  const records=dataset==='sources'?indiaResearchIndex.sources:indiaResearchIndex.records.filter(record=>record.dataset===dataset)
+  const records=dataset==='sources'?indiaResearchIndex.sources:dataset==='failures'?indiaResearchIndex.failures:indiaResearchIndex.records.filter(record=>record.dataset===dataset)
   const kinds=useMemo(()=>[...new Set(records.map(record=>record.kind).filter(Boolean))].sort(),[records])
   const filtered=useMemo(()=>{
     const needle=query.trim().toLowerCase(),selectedYear=year===''?null:Number(year)
@@ -34,8 +34,8 @@ export default function IndiaResearchExplorer({locale='en'}){
   const counts=indiaResearchIndex.meta
   return <main className="india-research-page">
     <section className="india-research-hero">
-      <div><p className="eyebrow">{kn?'ನೇರ ಕೊಂಡಿ ಮೂಲಕ ಮಾತ್ರ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ':'Direct-link only · research workspace'}</p><h2>{kn?'ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ':'India Historical Discovery Index'}</h2><p>{kn?'ಈ ಪುಟವು ಸಾಮಾನ್ಯ ನಾವಿಗೇಶನ್‌ನಲ್ಲಿ ಕಾಣಿಸುವುದಿಲ್ಲ. ಭಾರತರಾಜ್ಯ ಮತ್ತು WhatIsIndiaಯಿಂದ ಆಮದು ಮಾಡಿದ ಭಾರತವ್ಯಾಪಿ ಸುಳಿವುಗಳನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಒಟ್ಟುಗೂಡಿಸುತ್ತದೆ; ಇವು ಪ್ರಕಟಿತ ಅಥವಾ ಸ್ವತಂತ್ರವಾಗಿ ದೃಢೀಕರಿಸಿದ ಹೇಳಿಕೆಗಳಲ್ಲ.':'This unlinked workspace brings together India-wide discovery leads imported from BharatRajya and WhatIsIndia. These are not published or independently verified historical claims.'}</p></div>
-      <aside><strong>{kn?'ಸಾಕ್ಷ್ಯ ನೀತಿ':'Evidence policy'}</strong><p>{kn?'ಭಾರತರಾಜ್ಯವನ್ನು ವಿದ್ವತ್ ಉಲ್ಲೇಖವಾಗಿ ಬಳಸಲಾಗುವುದಿಲ್ಲ. ಪ್ರತಿಯೊಂದು ಹೇಳಿಕೆಯನ್ನು ಅದರ ಮೂಲ ಆಕರದೊಂದಿಗೆ ವಸ್ತುಮಟ್ಟದಲ್ಲಿ ಹೊಂದಿಸಿ ಪರಿಶೀಲಿಸಿದ ನಂತರವೇ ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ಏರಿಸಬೇಕು.':'BharatRajya is not a scholarly citation. Every claim must be matched to its underlying source and reviewed at item level before public promotion.'}</p></aside>
+      <div><p className="eyebrow">{kn?'ನೇರ ಕೊಂಡಿ ಮೂಲಕ ಮಾತ್ರ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ':'Direct-link only · research workspace'}</p><h2>{kn?'ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ':'India Historical Discovery Index'}</h2><p>{kn?'ಈ ಪುಟವು ಸಾಮಾನ್ಯ ನಾವಿಗೇಶನ್‌ನಲ್ಲಿ ಕಾಣಿಸುವುದಿಲ್ಲ. ಭಾರತವ್ಯಾಪಿ ಸಂಶೋಧನಾ ಸುಳಿವುಗಳನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಇಲ್ಲಿ ಒಟ್ಟುಗೂಡಿಸಲಾಗಿದೆ; ಇವು ಪ್ರಕಟಿತ ಅಥವಾ ಸ್ವತಂತ್ರವಾಗಿ ದೃಢೀಕರಿಸಿದ ಹೇಳಿಕೆಗಳಲ್ಲ.':'This unlinked workspace brings together India-wide research leads for review. These are not published or independently verified historical claims.'}</p></div>
+      <aside><strong>{kn?'ಸಾಕ್ಷ್ಯ ನೀತಿ':'Evidence policy'}</strong><p>{kn?'ಪ್ರತಿ ದಾಖಲೆಯಲ್ಲೇ ಅದರ ಅನ್ವೇಷಣಾ ಮೂಲವನ್ನು ಉಲ್ಲೇಖಿಸಲಾಗಿದೆ. ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ಮುನ್ನ ಹೇಳಿಕೆಯನ್ನು ಮೂಲ ಪ್ರಾಥಮಿಕ ಅಥವಾ ವಿದ್ವತ್ ಆಕರದೊಂದಿಗೆ ವಸ್ತುಮಟ್ಟದಲ್ಲಿ ಹೊಂದಿಸಿ ಪರಿಶೀಲಿಸಬೇಕು.':'Each record carries its discovery-source attribution. Before public promotion, its claim must be matched at item level to the underlying primary or scholarly source.'}</p></aside>
     </section>
     <section className="india-research-stats" aria-label={kn?'ಆಮದು ಅಂಕಿಅಂಶಗಳು':'Import statistics'}>
       <span><b>{counts.bharatrajya.counts.kingdoms?.toLocaleString('en-IN')}</b>{kn?'ರಾಜ್ಯ/ರಾಜವಂಶ ದಾಖಲೆಗಳು':'polity records'}</span>
@@ -48,6 +48,7 @@ export default function IndiaResearchExplorer({locale='en'}){
       <button className={dataset==='history'?'active':''} onClick={()=>chooseDataset('history')}>{kn?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'India history data'}</button>
       <button className={dataset==='inscriptions'?'active':''} onClick={()=>chooseDataset('inscriptions')}>{kn?'ಭಾರತ ಶಾಸನ ಸೂಚಿ':'India inscription index'}</button>
       <button className={dataset==='sources'?'active':''} onClick={()=>chooseDataset('sources')}>{kn?'ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು':'Underlying source candidates'}</button>
+      <button className={dataset==='failures'?'active':''} onClick={()=>chooseDataset('failures')}>{kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು':'Source-page failures'} · {counts.failureCount}</button>
     </nav>
     <section className="india-research-controls">
       <label><span>{kn?'ಹುಡುಕಿ':'Search all fields'}</span><input value={query} onChange={event=>{setQuery(event.target.value);setLimit(PAGE_SIZE)}} placeholder={kn?'ಸ್ಥಳ, ರಾಜವಂಶ, ಶಾಸನ, ಘಟನೆ…':'Place, dynasty, inscription, event…'}/></label>
@@ -65,13 +66,13 @@ export default function IndiaResearchExplorer({locale='en'}){
     <section className="india-research-results">
       <header><div><strong>{filtered.length.toLocaleString('en-IN')}</strong> {kn?'ದಾಖಲೆಗಳು ಹೊಂದಿಕೆಯಾಗಿವೆ':'matching records'}</div><small>{kn?'ಎಲ್ಲಾ ದಾಖಲೆಗಳು ಮಾನವ ಪರಿಶೀಲನೆಗಾಗಿ ಕಾಯುತ್ತಿವೆ':'All records await human review'}</small></header>
       <div className="india-research-grid">{filtered.slice(0,limit).map(record=><article key={record.id} className={selected?.id===record.id?'selected':''}>
-        <div className="india-research-record-meta"><span>{record.kind}</span><em>{record.reviewStatus}</em></div>
+        <div className="india-research-record-meta"><span>{record.kind} · {record.provider}</span><em>{record.reviewStatus}</em></div>
         <h3>{record.title}</h3>
         <p className="india-research-locator">{[record.place,record.district,record.taluk,record.publication&&`${record.publication}${record.volume?` · Vol. ${record.volume}`:''}`,record.number&&`No. ${record.number}`,record.page&&`p. ${record.page}`].filter(Boolean).join(' · ')}</p>
         {(record.yearFrom!=null||record.yearTo!=null)&&<time>{yearLabel(record.yearFrom)}{record.yearTo!=null&&record.yearTo!==record.yearFrom?` – ${yearLabel(record.yearTo)}`:''}</time>}
         {record.summary&&<p>{record.summary.slice(0,720)}</p>}
         {record.sourceClaim&&<div className="india-research-source-claim"><b>{kn?'ಆಮದು ಮಾಡಿದ ಮೂಲ ಸೂಚನೆ — ಪರಿಶೀಲಿಸಬೇಕು':'Imported source claim — verify'}</b><span>{record.sourceClaim}</span></div>}
-        <footer><code>{record.id}</code>{record.url&&<a href={record.url} target="_blank" rel="noreferrer">{kn?'ಮೂಲ ಪುಟ ತೆರೆಯಿರಿ ↗':'Open source page ↗'}</a>}</footer>
+        <footer><code>{record.id}</code>{record.url&&<a href={record.url} target="_blank" rel="noreferrer">{kn?'ಉಲ್ಲೇಖಿತ ಮೂಲ ಪುಟ ↗':'Cited source page ↗'}</a>}</footer>
       </article>)}</div>
       {limit<filtered.length&&<button className="india-research-more" onClick={()=>setLimit(value=>value+PAGE_SIZE)}>{kn?'ಇನ್ನಷ್ಟು 80 ದಾಖಲೆಗಳನ್ನು ತೋರಿಸಿ':'Show 80 more records'}</button>}
     </section>

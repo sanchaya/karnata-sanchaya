@@ -139,6 +139,8 @@ if [[ $SKIP_MIGRATIONS -eq 0 ]]; then
   run_as_app sh -c 'set -a; . ./.env; set +a; exec "$1" run db:migrate' sh "$NPM_BIN"
   notice 'Synchronizing repository seed records into a permanent MariaDB revision'
   run_as_app sh -c 'set -a; . ./.env; set +a; exec "$1" run db:sync-dataset' sh "$NPM_BIN"
+  notice 'Synchronizing India-wide discovery records into the permanent research queue'
+  run_as_app sh -c 'set -a; . ./.env; set +a; exec "$1" run db:sync-research-discovery' sh "$NPM_BIN"
 else
   notice 'Skipping MariaDB migrations by request'
 fi

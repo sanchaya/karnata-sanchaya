@@ -27,7 +27,7 @@ async function fetchPage(url){
   let error
   for(let attempt=1;attempt<=3;attempt++){
     try{
-      const response=await fetch(url,{headers:{'user-agent':'KarnatakaHistoricalAtlasResearchImporter/1.0 (+https://try.karnata.sanchaya.net/)'}})
+      const response=await fetch(url,{headers:{'user-agent':'KarnatakaHistoricalAtlasResearchImporter/1.0 (+https://try-karnata.sanchaya.net/)'}})
       if(!response.ok)throw new Error(`${response.status} ${response.statusText}`)
       const html=await response.text();fs.writeFileSync(cacheFile,html);return html
     }catch(caught){error=caught;if(attempt<3)await sleep(400*attempt)}

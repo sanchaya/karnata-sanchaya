@@ -5,8 +5,8 @@ This project has two deliberately separate layers:
 - The repository is the reproducible **seed**. CSV imports and generated seed
   files are prepared here, reviewed, committed and pushed.
 - MariaDB is the live **source of truth**. The live server receives repository
-  seeds through migrations and `db:sync-dataset`; browser storage is never a
-  data store.
+  seeds through migrations, `db:sync-dataset` and the separate
+  `db:sync-research-discovery` intake; browser storage is never a data store.
 
 ## 1. Check that the checkout is the expected release
 
@@ -183,6 +183,7 @@ With `.env` configured for the target database:
 npm run validate:data
 npm run db:migrate
 npm run db:sync-dataset
+npm run db:sync-research-discovery
 ```
 
 `db:migrate` creates/updates schema tables. `db:sync-dataset` validates the
@@ -190,8 +191,14 @@ repository seed, merges missing stable IDs without deleting live records and
 creates an immutable dataset revision. It is safe to rerun; it should not be
 used as a substitute for reviewing a changed record.
 
+`db:sync-research-discovery` separately upserts the complete BharatRajya and
+WhatIsIndia discovery imports, their source candidates and unresolved source
+page failures. Source refreshes do not overwrite Admin editorial metadata or
+review decisions. These records remain outside the ordinary public dataset
+snapshot so that its API payload and Karnataka-focused pages stay bounded.
+
 For a fresh installation, create the database/user first, copy
-`.env.example` to `.env`, then run the same three commands. If MariaDB reports
+`.env.example` to `.env`, then run the same four commands. If MariaDB reports
 `ECONNREFUSED`, start/check MariaDB and the host/port. If it reports
 `ER_ACCESS_DENIED_ERROR`, correct the database username/password/permissions;
 rerunning the command cannot fix credentials.
@@ -206,7 +213,8 @@ sudo ./scripts/update-live.sh
 
 It fast-forwards the selected branch, runs `npm ci`, `npm run check` (data
 validation, tests and build), then `npm run db:migrate`,
-`npm run db:sync-dataset`, restarts systemd and checks `/api/health`. It does
+`npm run db:sync-dataset`, `npm run db:sync-research-discovery`, restarts
+systemd and checks `/api/health`. It does
 **not** run source import scripts, replace `.env`, change Nginx/TLS, or publish
 the static GitHub Pages snapshot. Therefore the normal order is:
 

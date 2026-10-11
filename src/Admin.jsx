@@ -5,6 +5,7 @@ import { translationGlossary } from './data/translation-glossary'
 import { alternateRecordTitle, localizedRecordTitle, missingKannadaTranslation, recordMatchesAdminSearch } from './admin-search'
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
+import AdminDiscoveryQueue from './AdminDiscoveryQueue'
 
 const collections = Object.keys(collectionLabels)
 const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', periodicals:'periodical', epigraphiaArchiveTexts:'archive-epigraphia', artifacts:'artifact', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', naksheSites:'nakshe-site', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', peopleCandidates:'person-candidate-q', martyrCandidates:'martyr-candidate-v5-p', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
@@ -226,6 +227,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       </details>
     </section>
     {readiness&&<section className="admin-release-readiness" aria-labelledby="admin-release-title"><div><p className="eyebrow">{t.releaseTitle}</p><h2 id="admin-release-title">{t.releaseIntro}</h2></div><div className="admin-readiness-grid"><span><b>{readiness.community.pendingAccounts}</b>{t.pendingAccounts}</span><span><b>{readiness.community.submittedContributions}</b>{t.submittedContributions}</span><span><b>{readiness.community.pendingVerifications}</b>{t.pendingVerifications}</span><span><b>{readiness.community.appointedReviewers}</b>{t.appointedReviewers}</span><span><b>{readiness.dataset.revision}</b>{t.latestRevision}</span><span><b>{readiness.published.publishedAt?new Date(readiness.published.publishedAt).toLocaleDateString(locale==='kn'?'kn-IN':'en-IN'):t.notPublished}</b>{t.lastPublished}</span></div></section>}
+    {connection==='ready'&&<AdminDiscoveryQueue locale={locale}/>}
     <main className="admin-main">
       <aside className="admin-nav">
         <label className="search" lang={locale}>{t.search}<input lang={locale} value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.searchPlaceholder}/></label>
