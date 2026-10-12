@@ -24,6 +24,67 @@ Public interface changes and bundled research-data changes become available on t
 
 Existing administrator dataset snapshots are not overwritten during deployment. That separation protects edits already made on the live server: the public application uses the reviewed bundled release, while MariaDB keeps its own permanent revision history until an administrator deliberately imports, reconciles and saves a newer complete dataset revision.
 
+### Coolify deployment and discovery synchronization
+
+Coolify builds the commit available on its configured remote branch. It cannot deploy local commits or uncommitted files that have not been pushed. Enable Coolify's Git webhook/automatic deployment if every push to `main` should create a new deployment; otherwise use **Redeploy** after pushing.
+
+The current container startup command applies MariaDB migrations and starts the service. Repository dataset synchronization is a deliberate deployment operation, so run both synchronization commands from the **portal application container** after the new image is running:
+
+```sh
+cd /app
+npm run db:migrate
+npm run db:sync-dataset
+NODE_OPTIONS=--max-old-space-size=1024 npm run db:sync-research-discovery
+```
+
+Do not run these commands in the MariaDB container or an old host clone. The application container should report `DB_HOST=database` when it uses the bundled Compose/Coolify MariaDB service:
+
+```sh
+printenv | grep -E '^(DB_HOST|DB_NAME|DB_USER)='
+```
+
+`db:sync-research-discovery` reads the approximately 19 MB generated discovery index and atomically upserts 35,061 records. It currently prints its summary only after all batches complete, so a quiet Coolify terminal does not necessarily mean the process has stopped. The expected corpus is:
+
+| Intake | Records |
+| --- | ---: |
+| BharatRajya history discovery records | 25,579 |
+| WhatIsIndia inscription/corpus records | 9,283 |
+| WhatIsIndia failed-page repair leads | 152 |
+| BharatRajya source catalogue | 47 |
+| **Total** | **35,061** |
+
+These are discovery leads stored separately in `research_discovery_records`, defaulting to `needs-review`. They do not change the Atlas schema version and do not become public historical claims until their underlying sources are independently verified and a reviewed canonical record is published. Repository refreshes update source payloads but retain Admin editorial metadata, citations and review decisions.
+
+Verify the migration and row count against the exact database used by the application:
+
+```sh
+node --input-type=module -e "
+import { pool } from './server/db.js';
+const migrations = await pool.query(
+  \"SELECT version FROM schema_migrations WHERE version='010_research_discovery_records.sql'\"
+);
+const rows = await pool.query('SELECT COUNT(*) total FROM research_discovery_records');
+console.log({
+  migrationApplied: migrations.length === 1,
+  discoveryRecords: Number(rows[0].total)
+});
+await pool.end();
+"
+```
+
+Expected: `migrationApplied: true` and `discoveryRecords: 35061`.
+
+Common failures:
+
+- `Missing script`: the container image predates the synchronizer or the terminal is not in `/app`.
+- `research_discovery_records doesn't exist`: migration `010_research_discovery_records.sql` was not applied to this database.
+- `ECONNREFUSED`: `DB_HOST` points to the wrong service; in the bundled deployment it is `database`.
+- `ER_ACCESS_DENIED_ERROR`: the portal and MariaDB credentials do not match.
+- packet-size errors: increase MariaDB `max_allowed_packet`; the bundled Compose service sets it to 1 GB.
+- exit status `137`: raise the portal container memory limit and rerun with the `NODE_OPTIONS` value above.
+
+The public `/api/dataset` endpoint is a separate canonical snapshot. `db:sync-dataset` advances that revision; `db:sync-research-discovery` only refreshes the private discovery/review queue. If the application container sees a newer dataset revision while the public endpoint still returns an old one, check that DNS and the reverse proxy route the domain to this Coolify service rather than a legacy systemd deployment.
+
 ## Reviewer and administrator operation
 
 - Administrators approve accounts and appoint `reviewer`, `verification-officer` or `exporter` roles from the live administration API.
