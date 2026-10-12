@@ -196,6 +196,10 @@ WhatIsIndia discovery imports, their source candidates and unresolved source
 page failures. Source refreshes do not overwrite Admin editorial metadata or
 review decisions. These records remain outside the ordinary public dataset
 snapshot so that its API payload and Karnataka-focused pages stay bounded.
+On Coolify, run this command inside the portal application container after the
+new image is running; a successful Git build alone does not synchronize the
+separate discovery table. See the Coolify troubleshooting and verification
+procedure in [Live portal deployment](live-deployment.md#coolify-deployment-and-discovery-synchronization).
 
 For a fresh installation, create the database/user first, copy
 `.env.example` to `.env`, then run the same four commands. If MariaDB reports
