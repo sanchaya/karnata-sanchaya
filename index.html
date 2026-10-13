@@ -34,10 +34,13 @@
         ]
       }
     </script>
+    <style>
+      .app-loading{min-height:100vh;display:grid;place-items:center;background:#fff;color:#1a1a2e;text-align:center;font-family:system-ui,-apple-system,sans-serif}.app-loading img{width:84px;height:84px;object-fit:contain;animation:loading-pulse 1.4s ease-in-out infinite}.app-loading strong,.app-loading small{display:block}.app-loading strong{margin-top:18px;font-size:18px}.app-loading small{margin-top:7px;color:#4a4a68}.app-loading-bar{width:150px;height:3px;margin:18px auto 0;overflow:hidden;border-radius:3px;background:#e8eaff}.app-loading-bar::after{content:"";display:block;width:45%;height:100%;border-radius:inherit;background:#4361ee;animation:loading-slide 1.2s ease-in-out infinite}@keyframes loading-pulse{50%{transform:scale(1.05);opacity:.78}}@keyframes loading-slide{from{transform:translateX(-110%)}to{transform:translateX(335%)}}@media(prefers-reduced-motion:reduce){.app-loading img,.app-loading-bar::after{animation:none}}
+    </style>
     <title>ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · Karnataka Historical Atlas</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><main class="app-loading" role="status" aria-live="polite" aria-busy="true"><div><img src="./sanchaya-logo.png" alt=""/><strong>ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ ತೆರೆಯಲಾಗುತ್ತಿದೆ…</strong><small>Loading Karnataka Historical Atlas…</small><span class="app-loading-bar" aria-hidden="true"></span></div></main></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
