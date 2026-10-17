@@ -22,7 +22,7 @@ The normalized installation seed is defined in `src/data/atlas.js` and `server/s
 | `manuscriptWitnesses` | Manuscript, print and digital-edition witnesses for literary works | `workId` |
 | `inscriptionEditions` | Item-edition, transcription, translation and photograph review packets | `inscriptionId` |
 | `sources` | Bibliographic evidence | Referenced by citations |
-| `heritageAudits` | District heritage candidates and authority evidence | `prioritySites`, protection checks |
+| `heritageAudits` | District heritage candidates and authority evidence | `prioritySites`, category coverage, precision, protection and condition checks. Categories include temples, basadis, dargahs, churches, monasteries, forts, palaces, museums, archives/manuscript repositories, libraries, historic parks/gardens, markets, railway, engineering, industrial, maritime, educational, scientific, performance, memorial and urban-precinct heritage, archaeological landscapes and later built heritage |
 | `districtHistoryResearch` | District deep-history intake for prehistoric, settlement, foundation-stone and locality-history leads | `districtId`, `location`, `citations` |
 | `relationships` | Explicit entity-to-entity assertions | `fromId`, `type`, `toId` |
 | `politicalRelations` | Bilateral or coalition-level political relationships | `parties`, `relationKind`, `geography`, `eventIds`, `peopleIds`, `treatyDocuments`, `citations` |
