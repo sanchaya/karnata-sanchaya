@@ -1,5 +1,6 @@
 import { events, eventSources, externalPolities } from './events.js'
-import { deepChronologies, districtHistoryResearch, heritageAudits } from './research.js'
+import { deepChronologies, districtHistoryResearch, heritageAuditCategories, heritageAudits } from './research.js'
+import { culturalInstitutionSources } from './cultural-institutions.js'
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
 import { politicalRelations, politicalRelationPeople, politicalRelationPolities, foreignPoliticalRelations } from './political-relations.js'
@@ -307,6 +308,7 @@ appendUniqueById(atlasData.sources, offbeatHoysalaSources)
 appendUniqueById(atlasData.sources, hoysalaTempleInventorySources)
 appendUniqueById(atlasData.sources, wikipediaTempleIndexSources)
 appendUniqueById(atlasData.sources, wikipediaHeritageSources)
+appendUniqueById(atlasData.sources, culturalInstitutionSources)
 appendUniqueById(atlasData.places, offbeatHoysalaPlaces)
 appendUniqueById(atlasData.templeInventoryLeads, hoysalaTempleInventoryLeads)
 appendUniqueById(atlasData.templeInventoryLeads, wikipediaTempleInventoryLeads)
@@ -406,7 +408,7 @@ atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistri
 appendUniqueById(atlasData.heritageAudits, [{
   id:'audit-cross-border-kannada', name:name('Outside-Karnataka Kannada inscription audit','ಕರ್ನಾಟಕದ ಹೊರಗಿನ ಕನ್ನಡ ಶಾಸನ ಪರಿಶೀಲನೆ'),
   district:name('Outside Karnataka / cross-border leads','ಕರ್ನಾಟಕದ ಹೊರಗೆ / ಗಡಿ-ದಾಟಿದ ದಾರಿಗಳು'), region:'cross-border', auditStatus:'in-progress',
-  categoryCoverage:{temple:'unassessed','coastal-temple':'unassessed',basadi:'unassessed',dargah:'unassessed',church:'unassessed',monastery:'unassessed',fort:'unassessed','palace-civic-architecture':'unassessed','colonial-architecture':'unassessed','archaeological-landscape':'unassessed','modern-heritage':'unassessed'}, prioritySites:[],
+  categoryCoverage:Object.fromEntries(heritageAuditCategories.map(category=>[category,'unassessed'])), prioritySites:[],
   methodologyNote:name('Discovery leads for Kannada records outside Karnataka. Resolve the item, findspot, repository, political context and present authority separately; do not infer territory from an inscription alone.','ಕರ್ನಾಟಕದ ಹೊರಗಿನ ಕನ್ನಡ ದಾಖಲೆಗಳ ಹುಡುಕಾಟದ ದಾರಿಗಳು. ದಾಖಲೆ, ಪತ್ತೆಸ್ಥಳ, ಸಂಗ್ರಹಸ್ಥಳ, ರಾಜಕೀಯ ಸಂದರ್ಭ ಮತ್ತು ಪ್ರಸ್ತುತ ಪ್ರಾಧಿಕಾರವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ನಿರ್ಧರಿಸಿ; ಶಾಸನದ ಆಧಾರದಿಂದ ಮಾತ್ರ ಭೂಆಳ್ವಿಕೆಯನ್ನು ಊಹಿಸಬಾರದು.'),
   citations:[citation('src-wikipedia-kannada-inscriptions','Sections on Kannada inscriptions found in Andhra Pradesh, Maharashtra and Tamil Nadu')], review:review('needs-review'),
 }])

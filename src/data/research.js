@@ -5,10 +5,11 @@ import { heritageDirectVerification } from './heritage-direct-verification.js'
 import { commonsPhotoLicenses, heritageEvidenceUpdates } from './heritage-evidence-updates.js'
 import { heritageEvidencePassUpdates } from './heritage-evidence-pass.js'
 import { heritageAuthorityAdditions } from './heritage-authority-additions.js'
+import { districtHeritageAdditions } from './cultural-institutions.js'
 
 const n=(en,kn)=>({en,kn})
 const review={status:'needs-review',reviewer:null,updatedAt:'2026-07-26'}
-const categories=['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
+const categories=['temple','coastal-temple','basadi','dargah','church','monastery','fort','palace','museum','archive','library','historic-park','historic-market','railway-heritage','engineering-heritage','industrial-heritage','maritime-heritage','educational-heritage','scientific-heritage','cultural-venue','memorial-heritage','historic-urban-precinct','palace-civic-architecture','colonial-architecture','archaeological-landscape','modern-heritage']
 const slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')
 const uniqueByUrl=items=>[...new Map(items.map(item=>[item.url||item.sourceUrl||JSON.stringify(item),item])).values()]
 const mergeVerification=(id,base)=>{
@@ -72,7 +73,7 @@ const districtSeeds=[
   ['Kolar','ಕೋಲಾರ','south',['Avani temple landscape|ಅವನಿ ದೇವಾಲಯ ಭೂದೃಶ್ಯ|temple','Kolaramma Temple|ಕೋಲಾರಮ್ಮ ದೇವಾಲಯ|temple']],
   ['Koppal','ಕೊಪ್ಪಳ','central',['Anegundi fort landscape|ಆನೆಗುಂದಿ ಕೋಟೆ ಭೂದೃಶ್ಯ|fort','Itagi Mahadeva Temple|ಇಟಗಿ ಮಹಾದೇವ ದೇವಾಲಯ|temple']],
   ['Mandya','ಮಂಡ್ಯ','south',['Srirangapatna Fort|ಶ್ರೀರಂಗಪಟ್ಟಣ ಕೋಟೆ|fort','Colonel Bailey’s Dungeon|ಕರ್ನಲ್ ಬೇಲಿ ಸೆರೆಮನೆ|colonial-architecture']],
-  ['Mysuru','ಮೈಸೂರು','south',['St Philomena’s Cathedral|ಸೇಂಟ್ ಫಿಲೋಮಿನಾ ಕ್ಯಾಥೆಡ್ರಲ್|church','Mysore Palace|ಮೈಸೂರು ಅರಮನೆ|palace-civic-architecture']],
+  ['Mysuru','ಮೈಸೂರು','south',['St Philomena’s Cathedral|ಸೇಂಟ್ ಫಿಲೋಮಿನಾ ಕ್ಯಾಥೆಡ್ರಲ್|church','Mysore Palace|ಮೈಸೂರು ಅರಮನೆ|palace']],
   ['Raichur','ರಾಯಚೂರು','north',['Raichur Fort|ರಾಯಚೂರು ಕೋಟೆ|fort','Mudgal Fort|ಮುದಗಲ್ ಕೋಟೆ|fort']],
   ['Ramanagara','ರಾಮನಗರ','south',['Magadi Fort remains|ಮಾಗಡಿ ಕೋಟೆ ಅವಶೇಷಗಳು|fort','Janapada Loka|ಜಾನಪದ ಲೋಕ|modern-heritage']],
   ['Shivamogga','ಶಿವಮೊಗ್ಗ','malenadu',['Kavaledurga Fort|ಕವಲೇದುರ್ಗ ಕೋಟೆ|fort','Keladi heritage precinct|ಕೆಳದಿ ಪರಂಪರೆ ಪರಿಸರ|palace-civic-architecture']],
@@ -80,14 +81,16 @@ const districtSeeds=[
   ['Udupi','ಉಡುಪಿ','coast',['Udupi Krishna Matha|ಉಡುಪಿ ಕೃಷ್ಣ ಮಠ|coastal-temple','Karkala Chaturmukha Basadi|ಕಾರ್ಕಳ ಚತುರ್ಮುಖ ಬಸದಿ|basadi','Barkur fort and church landscape|ಬಾರ್ಕೂರು ಕೋಟೆ ಮತ್ತು ಚರ್ಚ್ ಭೂದೃಶ್ಯ|church']],
   ['Uttara Kannada','ಉತ್ತರ ಕನ್ನಡ','coast',['Gokarna temple landscape|ಗೋಕರ್ಣ ದೇವಾಲಯ ಭೂದೃಶ್ಯ|coastal-temple','Mirjan Fort|ಮಿರ್ಜಾನ್ ಕೋಟೆ|fort','Mundgod Tibetan monasteries|ಮುಂಡಗೋಡ ಟಿಬೆಟಿಯನ್ ಮಠಗಳು|monastery']],
   ['Vijayapura','ವಿಜಯಪುರ','north',['Gol Gumbaz precinct|ಗೋಳಗುಮ್ಮಟ ಪರಿಸರ|palace-civic-architecture','Ibrahim Rauza|ಇಬ್ರಾಹಿಂ ರೌಜಾ|palace-civic-architecture','Vijayapura Fort walls|ವಿಜಯಪುರ ಕೋಟೆ ಗೋಡೆಗಳು|fort']],
-  ['Vijayanagara','ವಿಜಯನಗರ','central',['Hampi fortified landscape|ಹಂಪಿಯ ಕೋಟೆಬದ್ಧ ಭೂದೃಶ್ಯ|fort','Lotus Mahal and royal centre|ಕಮಲ ಮಹಲ್ ಮತ್ತು ರಾಜಕೇಂದ್ರ|palace-civic-architecture']],
+  ['Vijayanagara','ವಿಜಯನಗರ','central',['Hampi fortified landscape|ಹಂಪಿಯ ಕೋಟೆಬದ್ಧ ಭೂದೃಶ್ಯ|fort','Lotus Mahal and royal centre|ಕಮಲ ಮಹಲ್ ಮತ್ತು ರಾಜಕೇಂದ್ರ|palace']],
   ['Yadgir','ಯಾದಗಿರಿ','north',['Yadgir Fort|ಯಾದಗಿರಿ ಕೋಟೆ|fort','Sufi Sarmast Dargah, Sagar|ಸೂಫಿ ಸರಮಸ್ತ ದರ್ಗಾ, ಸಾಗರ|dargah']]
 ]
 
 export const heritageAuditCategories=categories
 
 export const heritageAudits=districtSeeds.map(([districtEn,districtKn,region,siteRows])=>{
-  const prioritySites=siteRows.map((row,index)=>{const [en,kn,category]=row.split('|');const id=`candidate-${slug(districtEn)}-${index+1}`;const base=heritageVerification[id]||heritagePageVerification[id]||heritageGeocodeVerification[id]||heritageDirectVerification[id]||{verificationStatus:'research-pending',externalIds:{},coordinates:null,constructionPhases:[],protectionStatus:[],managingAuthorities:[],administrativeAreas:[],photographs:[],siteCitations:[],verificationNote:n('Candidate is inventoried; monument-level identity and evidence fields remain to be resolved.','ಅಭ್ಯರ್ಥಿಯ ಪಟ್ಟಿ ಸಿದ್ಧವಾಗಿದೆ; ಸ್ಮಾರಕಮಟ್ಟದ ಗುರುತು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಕ್ಷೇತ್ರಗಳನ್ನು ಇನ್ನೂ ಹೊಂದಿಸಬೇಕಾಗಿದೆ.'),lastVerified:null};const verification=mergeVerification(id,base);return {id,name:n(en,kn),category,status:verification.verificationStatus,verification}})
+  const seededSites=siteRows.map((row,index)=>{const [en,kn,category]=row.split('|');const id=`candidate-${slug(districtEn)}-${index+1}`;const base=heritageVerification[id]||heritagePageVerification[id]||heritageGeocodeVerification[id]||heritageDirectVerification[id]||{verificationStatus:'research-pending',externalIds:{},coordinates:null,constructionPhases:[],protectionStatus:[],managingAuthorities:[],administrativeAreas:[],photographs:[],siteCitations:[],verificationNote:n('Candidate is inventoried; monument-level identity and evidence fields remain to be resolved.','ಅಭ್ಯರ್ಥಿಯ ಪಟ್ಟಿ ಸಿದ್ಧವಾಗಿದೆ; ಸ್ಮಾರಕಮಟ್ಟದ ಗುರುತು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಕ್ಷೇತ್ರಗಳನ್ನು ಇನ್ನೂ ಹೊಂದಿಸಬೇಕಾಗಿದೆ.'),lastVerified:null};const verification=mergeVerification(id,base);return {id,name:n(en,kn),category,status:verification.verificationStatus,verification}})
+  const institutionSites=(districtHeritageAdditions[districtEn]||[]).map(site=>{const verification=mergeVerification(site.id,site.verification);return {...site,status:verification.verificationStatus,verification}})
+  const prioritySites=[...seededSites,...institutionSites]
   const seeded=new Set(prioritySites.map(site=>site.category))
   return {
     id:`audit-${slug(districtEn)}`,

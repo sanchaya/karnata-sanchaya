@@ -52889,6 +52889,490 @@
         }
       },
       {
+        "id": "src-ministry-culture-india-museum-directory",
+        "type": "government-directory",
+        "title": {
+          "en": "Directory of Museums in India — Karnataka",
+          "kn": "ಭಾರತದ ವಸ್ತುಸಂಗ್ರಹಾಲಯಗಳ ನಿರ್ದೇಶಿಕೆ — ಕರ್ನಾಟಕ"
+        },
+        "authors": [
+          "Ministry of Culture, Government of India"
+        ],
+        "year": 2023,
+        "url": "https://culture.gov.in/files/inline-documents/Directory_of_Indian_Museums_080620231.pdf",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-cag-asi-site-museums-karnataka",
+        "type": "government-audit-report",
+        "title": {
+          "en": "CAG Report No. 10 of 2022 — ASI site museums in Karnataka",
+          "kn": "CAG ವರದಿ ಸಂ. 10, 2022 — ಕರ್ನಾಟಕದ ASI ತಾಣ ವಸ್ತುಸಂಗ್ರಹಾಲಯಗಳು"
+        },
+        "authors": [
+          "Comptroller and Auditor General of India"
+        ],
+        "year": 2022,
+        "url": "https://saiindia.gov.in/uploads/download_audit_report/2022/Chapter%208-062f0de36d14073.38024306.pdf",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-asi-dharwad-circle-museums",
+        "type": "government-directory",
+        "title": {
+          "en": "ASI Dharwad Circle museum directory",
+          "kn": "ASI ಧಾರವಾಡ ವೃತ್ತದ ವಸ್ತುಸಂಗ್ರಹಾಲಯ ನಿರ್ದೇಶಿಕೆ"
+        },
+        "authors": [
+          "Archaeological Survey of India, Dharwad Circle"
+        ],
+        "year": null,
+        "url": "https://www.asidharwadcircle.in/museum/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-asi-hampi-circle-museum",
+        "type": "government-museum-page",
+        "title": {
+          "en": "Archaeological Museum, Kamalapura — ASI Hampi Circle",
+          "kn": "ಪುರಾತತ್ವ ವಸ್ತುಸಂಗ್ರಹಾಲಯ, ಕಮಲಾಪುರ — ASI ಹಂಪಿ ವೃತ್ತ"
+        },
+        "authors": [
+          "Archaeological Survey of India, Hampi Circle"
+        ],
+        "year": null,
+        "url": "https://www.asihampicircle.in/museum/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-state-archives-rules",
+        "type": "government-rules",
+        "title": {
+          "en": "Karnataka State Archives rules and researcher access form",
+          "kn": "ಕರ್ನಾಟಕ ರಾಜ್ಯ ಪತ್ರಾಗಾರದ ನಿಯಮಗಳು ಮತ್ತು ಸಂಶೋಧಕರ ಪ್ರವೇಶ ಅರ್ಜಿ"
+        },
+        "authors": [
+          "Government of Karnataka"
+        ],
+        "year": 2023,
+        "url": "https://upload.indiacode.nic.in/showfile?actid=AC_KA_71_592_00007_7_1551266549834&filename=adobe_scan_05-oct-2023_watermark.pdf&type=rule",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-public-libraries-act",
+        "type": "legislation",
+        "title": {
+          "en": "Karnataka Public Libraries Act, 1965",
+          "kn": "ಕರ್ನಾಟಕ ಸಾರ್ವಜನಿಕ ಗ್ರಂಥಾಲಯಗಳ ಅಧಿನಿಯಮ, 1965"
+        },
+        "authors": [
+          "Government of Karnataka"
+        ],
+        "year": 1965,
+        "url": "https://www.indiacode.nic.in/bitstream/123456789/7175/1/10_of_1965_%28e%29.pdf",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-pib-festival-libraries-2025",
+        "type": "government-directory",
+        "title": {
+          "en": "Festival of Libraries — participating library directory",
+          "kn": "ಗ್ರಂಥಾಲಯಗಳ ಉತ್ಸವ — ಭಾಗವಹಿಸಿದ ಗ್ರಂಥಾಲಯಗಳ ನಿರ್ದೇಶಿಕೆ"
+        },
+        "authors": [
+          "Press Information Bureau, Government of India"
+        ],
+        "year": 2025,
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2150704&lang=2&reg=48",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-forts-palaces",
+        "type": "government-tourism-index",
+        "title": {
+          "en": "Karnataka forts and palaces discovery index",
+          "kn": "ಕರ್ನಾಟಕದ ಕೋಟೆ ಮತ್ತು ಅರಮನೆಗಳ ಅನ್ವೇಷಣಾ ಸೂಚಿ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/attractions",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-bengaluru-urban-cubbon-park",
+        "type": "government-district-page",
+        "title": {
+          "en": "Cubbon Park — history and administration",
+          "kn": "ಕಬ್ಬನ್ ಉದ್ಯಾನ — ಇತಿಹಾಸ ಮತ್ತು ಆಡಳಿತ"
+        },
+        "authors": [
+          "District Bengaluru Urban, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://bengaluruurban.nic.in/en/tourist-place/cubbon-park/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-lalbagh",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Bengaluru destination guide — Lalbagh Botanical Garden",
+          "kn": "ಬೆಂಗಳೂರು ತಾಣ ಮಾರ್ಗದರ್ಶಿ — ಲಾಲ್‌ಬಾಗ್ ಸಸ್ಯೋದ್ಯಾನ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/destinations/bengaluru",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-bengaluru-urban-freedom-park",
+        "type": "government-district-page",
+        "title": {
+          "en": "Bengaluru tourism — Freedom Park (former Central Jail)",
+          "kn": "ಬೆಂಗಳೂರು ಪ್ರವಾಸೋದ್ಯಮ — ಸ್ವಾತಂತ್ರ್ಯ ಉದ್ಯಾನ (ಹಳೆಯ ಕೇಂದ್ರ ಕಾರಾಗೃಹ)"
+        },
+        "authors": [
+          "District Bengaluru Urban, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://bengaluruurban.nic.in/en/tourism/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-brindavan-gardens",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Brindavan Gardens and Krishnaraja Sagara",
+          "kn": "ಬೃಂದಾವನ ಉದ್ಯಾನ ಮತ್ತು ಕೃಷ್ಣರಾಜ ಸಾಗರ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://old.karnatakatourism.org/tour-item/brindavan-gardens-krs-mysuru/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-mysuru-rail-museum",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Mysuru Rail Museum",
+          "kn": "ಮೈಸೂರು ರೈಲು ವಸ್ತುಸಂಗ್ರಹಾಲಯ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://old.karnatakatourism.org/tour-item/mysuru-rail-museum/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-mysuru-destination",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Mysuru destination guide — Devaraja Market",
+          "kn": "ಮೈಸೂರು ತಾಣ ಮಾರ್ಗದರ್ಶಿ — ದೇವರಾಜ ಮಾರುಕಟ್ಟೆ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/destinations/mysuru/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-gokak-falls",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Gokak Falls industrial and engineering heritage",
+          "kn": "ಗೋಕಾಕ ಜಲಪಾತದ ಕೈಗಾರಿಕಾ ಮತ್ತು ಎಂಜಿನಿಯರಿಂಗ್ ಪರಂಪರೆ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/attractions/gokak-falls",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-surathkal-lighthouse",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Surathkal lighthouse and coastal landscape",
+          "kn": "ಸುರತ್ಕಲ್ ದೀಪಸ್ತಂಭ ಮತ್ತು ಕರಾವಳಿ ಭೂದೃಶ್ಯ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/attractions/surathkal-beach-mangaluru",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-iisc-history",
+        "type": "institutional-history",
+        "title": {
+          "en": "Indian Institute of Science — history",
+          "kn": "ಭಾರತೀಯ ವಿಜ್ಞಾನ ಸಂಸ್ಥೆ — ಇತಿಹಾಸ"
+        },
+        "authors": [
+          "Indian Institute of Science"
+        ],
+        "year": null,
+        "url": "https://www.iisc.ac.in/history/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-university-mysore-history",
+        "type": "institutional-history",
+        "title": {
+          "en": "University of Mysore — history",
+          "kn": "ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾನಿಲಯ — ಇತಿಹಾಸ"
+        },
+        "authors": [
+          "University of Mysore"
+        ],
+        "year": null,
+        "url": "https://uni-mysore.ac.in/english-version/content.php?id=2",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-university-mysore-library",
+        "type": "institutional-history",
+        "title": {
+          "en": "Mysore University Library — history and collections",
+          "kn": "ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾನಿಲಯ ಗ್ರಂಥಾಲಯ — ಇತಿಹಾಸ ಮತ್ತು ಸಂಗ್ರಹಗಳು"
+        },
+        "authors": [
+          "University of Mysore"
+        ],
+        "year": null,
+        "url": "https://www.uni-mysore.ac.in/english-version/library/about.html",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-rangayana",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Rangayana theatre institute, Mysuru",
+          "kn": "ರಂಗಾಯಣ ರಂಗ ಸಂಸ್ಥೆ, ಮೈಸೂರು"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://old.karnatakatourism.org/tour-item/mysuru/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-national-military-memorial",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "National Military Memorial, Bengaluru",
+          "kn": "ರಾಷ್ಟ್ರೀಯ ಸೈನಿಕ ಸ್ಮಾರಕ, ಬೆಂಗಳೂರು"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/attractions/indira-gandhi-musical-fountain-bangalore",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-mysuru-district-urban-history",
+        "type": "government-district-page",
+        "title": {
+          "en": "Mysuru district — planned city and public realm history",
+          "kn": "ಮೈಸೂರು ಜಿಲ್ಲೆ — ಯೋಜಿತ ನಗರ ಮತ್ತು ಸಾರ್ವಜನಿಕ ಪರಿಸರದ ಇತಿಹಾಸ"
+        },
+        "authors": [
+          "District Mysuru, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://mysore.nic.in/en/about-district/",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
         "id": "src-wikipedia-mysuru-heritage-buildings",
         "type": "discovery-list",
         "title": {

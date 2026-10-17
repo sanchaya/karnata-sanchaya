@@ -241,7 +241,7 @@ test('the first eight-district heritage batch uses site-level points rather than
   for (const districtId of districtIds) {
     const audit = atlasData.heritageAudits.find(record => record.id === districtId)
     assert.ok(audit, `${districtId} must remain in the heritage batch`)
-    assert.equal(audit.prioritySites.length, 2, `${districtId} must retain both priority sites`)
+    assert.ok(audit.prioritySites.length >= 2, `${districtId} must retain both priority sites`)
     for (const site of audit.prioritySites) {
       const point = site.verification?.coordinates
       assert.ok(Number.isFinite(point?.latitude) && Number.isFinite(point?.longitude), `${site.id} needs a mapped site/locality point`)
