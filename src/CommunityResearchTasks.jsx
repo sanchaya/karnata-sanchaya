@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react'
 import { atlasData } from './data/atlas'
+import { canonicalDistrictName } from './data/district-normalization'
 
 const text=(value,locale)=>value?.[locale]||value?.kn||value?.en||''
 const needsReview=record=>!['reviewed','verified','published','authority-confirmed'].includes(record?.review?.status)
+const withCanonicalTaskDistrict=record=>{const values=record.district?[record.district]:(record.districtText||[]);return values.length?{...record,district:{en:values.map(value=>canonicalDistrictName(value,'en')).join(', '),kn:values.map(value=>canonicalDistrictName(value,'kn')).join(', ')}}:record}
 const taskRecords=()=>[
   ...(atlasData.inscriptions||[]).filter(needsReview).map(record=>({record,type:'inscription',group:'inscriptions'})),
   ...(atlasData.works||[]).filter(needsReview).map(record=>({record,type:'work',group:'literature'})),
@@ -20,7 +22,7 @@ const taskRecords=()=>[
   ...(atlasData.periodicalMapSites||[]).filter(needsReview).map(record=>({record,type:'periodical',group:'periodicals'})),
   ...(atlasData.sources||[]).filter(needsReview).map(record=>({record,type:'source',group:'evidence'})),
   ...(atlasData.inscriptionEditions||[]).filter(record=>!['verified','not-applicable'].includes(record.evidenceGates?.translation?.status)).map(record=>({record,type:'inscription',targetId:record.inscriptionId,group:'evidence'})),
-]
+].map(task=>({...task,record:withCanonicalTaskDistrict(task.record)}))
 
 const groupLabels={
   kn:{all:'ಎಲ್ಲ ಕಾರ್ಯಗಳು',inscriptions:'ಶಾಸನಗಳು',literature:'ಸಾಹಿತ್ಯ',districts:'ಜಿಲ್ಲಾ ಇತಿಹಾಸ',people:'ವ್ಯಕ್ತಿಗಳು',heritage:'ಪರಂಪರೆ ಮತ್ತು ದೇವಾಲಯಗಳು',relations:'ರಾಜಕೀಯ ಸಂಬಂಧಗಳು',material:'ನಾಣ್ಯ ಮತ್ತು ಲಿಪಿ',territory:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',governance:'ಆಳ್ವಿಕರು ಮತ್ತು ರಾಜವಂಶಗಳು',periodicals:'ಪತ್ರಿಕೆಗಳು ಮತ್ತು ನಿಯತಕಾಲಿಕೆಗಳು',evidence:'ಆಕರ ಮತ್ತು ಅನುವಾದ ಪರಿಶೀಲನೆ'},

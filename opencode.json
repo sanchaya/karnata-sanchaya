@@ -8,5 +8,10 @@
       ],
       "enabled": true
     }
+  },
+  "plugins": {
+    "omniroute": {
+      "provider": "@omniroute/opencode-provider"
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { atlasData } from './data/atlas'
+import { canonicalDistrictName } from './data/district-normalization'
 
 const translated=(value,locale)=>typeof value==='string'?value:value?.[locale]||value?.kn||value?.en||''
 const bilingual=value=>typeof value==='string'?{en:value,kn:value}:value
@@ -22,5 +23,5 @@ for(const collection of ['inscriptions','culturalHeritage','heritageInventoryLea
 export const contributionDistricts=(atlasData.heritageAudits||[]).filter(audit=>audit.region!=='cross-border').map(audit=>({id:audit.id,name:audit.district})).sort((a,b)=>translated(a.name,'en').localeCompare(translated(b.name,'en')))
 export const contributionPlaces=places.map(place=>({id:place.id,name:place.name,district:bilingual(districtByPlaceId.get(place.id)),taluk:bilingual(talukByPlaceId.get(place.id)),latitude:place.location?.coordinates?.[1],longitude:place.location?.coordinates?.[0],precision:place.location?.precision||'unknown'})).sort((a,b)=>translated(a.name,'en').localeCompare(translated(b.name,'en')))
 export const contributionPlaceLabel=(place,locale)=>locale==='kn'&&place.name?.kn?`${place.name.kn} · ${place.name.en}`:place.name?.en||place.id
-export const contributionDistrictLabel=(district,locale)=>locale==='kn'&&district.name?.kn?`${district.name.kn} · ${district.name.en}`:district.name?.en||district.id
+export const contributionDistrictLabel=(district,locale)=>{const localized=canonicalDistrictName(district.name,locale),english=canonicalDistrictName(district.name,'en');return locale==='kn'&&localized!==english?`${localized} · ${english}`:english||district.id}
 export const matchContributionPlace=value=>{const needle=String(value||'').trim().toLocaleLowerCase();return needle?contributionPlaces.find(place=>[place.id,translated(place.name,'en'),translated(place.name,'kn'),contributionPlaceLabel(place,'en'),contributionPlaceLabel(place,'kn')].some(candidate=>String(candidate||'').toLocaleLowerCase()===needle)):null}
