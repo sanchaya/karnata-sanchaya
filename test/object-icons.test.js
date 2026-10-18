@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { atlasData } from '../src/data/atlas.js'
-import { isTempleRecord, objectIcon, objectKindFor, timelineCategoryForCulture } from '../src/object-icons.js'
+import { heritageKindForCategory, isTempleRecord, objectIcon, objectKindFor, timelineCategoryForCulture } from '../src/object-icons.js'
 
 test('temples are separated from other cultural and architectural records', () => {
   const temple=atlasData.culturalHeritage.find(item=>item.id==='culture-belur-channakeshava-1117')
@@ -18,6 +18,16 @@ test('map object categories have distinct stable symbols', () => {
   assert.equal(objectKindFor({name:{en:'Mahadeva Temple'},category:'architecture'}),'temple')
   assert.equal(objectKindFor({storyKind:'inscription'}),'inscription')
   assert.equal(objectKindFor({storyKind:'event',type:'battle'}),'war')
+})
+
+test('heritage places retain recognisable category icons on every map', () => {
+  const categories={fort:'fort',palace:'palace',museum:'museum',archive:'archive',library:'library','historic-park':'park'}
+  for(const [category,kind] of Object.entries(categories)){
+    assert.equal(heritageKindForCategory(category),kind)
+    assert.equal(objectKindFor({kind:'heritage',category}),kind)
+    assert.notEqual(objectIcon(kind),'◇')
+  }
+  assert.equal(objectKindFor({kind:'heritage',category:'museum',name:{en:'State Archaeological Museum, Chitradurga'}}),'museum')
 })
 
 test('bulk heritage indexes remain attributed review candidates', () => {

@@ -16,6 +16,16 @@ export const timelineCategoryForCulture = item => isTempleRecord(item)
     ? 'monuments'
     : 'culture'
 
+const heritageKinds = {
+  fort: 'fort', palace: 'palace', 'palace-civic-architecture': 'palace', museum: 'museum',
+  archive: 'archive', library: 'library', 'historic-park': 'park', 'historic-market': 'market',
+  'railway-heritage': 'railway', 'engineering-heritage': 'industry', 'industrial-heritage': 'industry',
+  'maritime-heritage': 'maritime', 'educational-heritage': 'institution', 'scientific-heritage': 'institution',
+  'cultural-venue': 'culture', 'memorial-heritage': 'memorial', 'historic-urban-precinct': 'monument',
+}
+
+export const heritageKindForCategory = category => heritageKinds[category] || null
+
 export const objectKindFor = item => {
   if (!item) return 'heritage'
   if (item.storyKind === 'inscription' || item.kind === 'inscription' || item.evidenceKind === 'inscription') return 'inscription'
@@ -25,6 +35,7 @@ export const objectKindFor = item => {
   if (item.storyKind === 'territory') return 'territory'
   if (item.storyKind === 'reign') return 'reign'
   if (item.storyKind === 'artifact' || item.kind === 'artifact' || item.artifactKind) return 'artifact'
+  if (heritageKindForCategory(item.category)) return heritageKindForCategory(item.category)
   if (isTempleRecord(item) || /temple|basadi/i.test(item.category || '')) return 'temple'
   if (['battle', 'war', 'invasion', 'campaign'].includes(item.type)) return 'war'
   if (item.reach || ['trade-contact', 'diplomatic-mission', 'cultural-contact'].includes(item.type)) return 'connection'
@@ -39,11 +50,15 @@ export const objectKindFor = item => {
 export const objectIcon = kind => ({
   temple: '🛕', inscription: '▤', war: '⚔', connection: '↔', event: '◆', literature: '▥',
   person: '♟', territory: '▱', reign: '♛', monument: '▦', celebration: '✦', religion: '◉',
-  sport: '●', artifact: '◈', culture: '✧', heritage: '◇',
+  sport: '●', artifact: '◈', culture: '✧', heritage: '◇', fort: '♜', palace: '♛', museum: '🏛',
+  archive: '▤', library: '▥', park: '♣', market: '◫', railway: '◆', industry: '⚙', maritime: '⚓',
+  institution: '⌂', memorial: '✦',
 }[kind] || '◇')
 
 export const objectLabelKey = kind => ({
   temple: 'temples', inscription: 'inscriptions', war: 'wars', connection: 'connections', event: 'political',
   literature: 'literature', person: 'people', territory: 'territory', reign: 'reigns', artifact: 'artifacts', monument: 'monuments',
   celebration: 'culture', religion: 'culture', sport: 'culture', culture: 'culture', heritage: 'monuments',
+  fort: 'monuments', palace: 'monuments', museum: 'heritage', archive: 'heritage', library: 'heritage', park: 'heritage',
+  market: 'heritage', railway: 'heritage', industry: 'heritage', maritime: 'heritage', institution: 'heritage', memorial: 'heritage',
 }[kind] || 'culture')
