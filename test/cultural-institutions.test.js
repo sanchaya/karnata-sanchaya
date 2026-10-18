@@ -46,7 +46,22 @@ test('curiosity records remain sourced and review-gated',()=>{
 
 test('new authority sources remain available to admin and repository sync',()=>{
   const ids=new Set(atlasData.sources.map(source=>source.id))
-  for(const id of ['src-ministry-culture-india-museum-directory','src-cag-asi-site-museums-karnataka','src-karnataka-state-archives-rules','src-karnataka-public-libraries-act','src-bengaluru-urban-cubbon-park','src-karnataka-tourism-lalbagh','src-bengaluru-urban-freedom-park','src-karnataka-tourism-brindavan-gardens','src-karnataka-tourism-mysuru-rail-museum','src-karnataka-tourism-mysuru-destination','src-karnataka-tourism-chitradurga','src-karnataka-tourism-gokak-falls','src-karnataka-tourism-surathkal-lighthouse','src-iisc-history','src-university-mysore-history','src-university-mysore-library','src-karnataka-tourism-rangayana','src-karnataka-tourism-national-military-memorial','src-mysuru-district-urban-history']){
+  for(const id of ['src-ministry-culture-india-museum-directory','src-cag-asi-site-museums-karnataka','src-karnataka-state-archives-rules','src-karnataka-public-libraries-act','src-bengaluru-urban-cubbon-park','src-karnataka-tourism-lalbagh','src-bengaluru-urban-freedom-park','src-karnataka-tourism-brindavan-gardens','src-karnataka-tourism-mysuru-rail-museum','src-karnataka-tourism-mysuru-destination','src-karnataka-tourism-chitradurga-destination','src-karnataka-tourism-gokak-falls','src-karnataka-tourism-surathkal-lighthouse','src-karnataka-tourism-kittur-fort','src-karnataka-tourism-gudibande','src-karnataka-tourism-shivappa-nayaka-palace','src-iisc-history','src-university-mysore-history','src-university-mysore-library','src-karnataka-tourism-rangayana','src-karnataka-tourism-national-military-memorial','src-mysuru-district-urban-history']){
     assert.ok(ids.has(id),`missing ${id}`)
+  }
+})
+
+test('new heritage records are bilingual and map-ready without invented dates',()=>{
+  const additions=sites.filter(site=>/^(candidate-institution|candidate-curiosity|candidate-park|candidate-fort)-/.test(site.id))
+  const sourceByUrl=new Map(atlasData.sources.filter(source=>source.url).map(source=>[source.url,source]))
+  assert.equal(additions.length,42)
+  assert.equal(additions.filter(site=>site.verification.coordinates).length,42)
+  assert.equal(additions.filter(site=>site.verification.constructionPhases.some(phase=>Number.isFinite(phase.date?.from))).length,19)
+  assert.equal(additions.filter(site=>site.verification.constructionPhases.some(phase=>Number.isFinite(phase.date?.from)&&phase.date.from<=1973)).length,13)
+  for(const site of additions){
+    assert.match(site.name.kn,/[ಀ-೿]/,`${site.id} needs a Kannada name`)
+    assert.match(site.verification.verificationNote.kn,/[ಀ-೿]/,`${site.id} needs a Kannada review note`)
+    const source=sourceByUrl.get(site.verification.siteCitations[0]?.url)
+    assert.match(source?.title?.kn||'',/[ಀ-೿]/,`${site.id} needs a bilingual citation title`)
   }
 })

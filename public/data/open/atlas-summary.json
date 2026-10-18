@@ -53197,6 +53197,28 @@
         }
       },
       {
+        "id": "src-karnataka-tourism-chitradurga-destination",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Chitradurga destination guide — Vani Vilas Sagar",
+          "kn": "ಚಿತ್ರದುರ್ಗ ತಾಣ ಮಾರ್ಗದರ್ಶಿ — ವಾಣಿ ವಿಲಾಸ ಸಾಗರ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/destinations/chitradurga",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
         "id": "src-karnataka-tourism-gokak-falls",
         "type": "government-tourism-page",
         "title": {
@@ -53230,6 +53252,72 @@
         ],
         "year": null,
         "url": "https://karnatakatourism.org/en/attractions/surathkal-beach-mangaluru",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-kittur-fort",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Kittur Fort",
+          "kn": "ಕಿತ್ತೂರು ಕೋಟೆ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/destinations/kittur-fort",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-gudibande",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Gudibande",
+          "kn": "ಗುಡಿಬಂಡೆ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/destinations/gudibande",
+        "scope": {
+          "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
+          "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."
+        },
+        "review": {
+          "status": "reviewed",
+          "reviewer": null,
+          "updatedAt": "2026-10-17"
+        }
+      },
+      {
+        "id": "src-karnataka-tourism-shivappa-nayaka-palace",
+        "type": "government-tourism-page",
+        "title": {
+          "en": "Shivappa Nayaka Palace, Shivamogga",
+          "kn": "ಶಿವಪ್ಪ ನಾಯಕ ಅರಮನೆ, ಶಿವಮೊಗ್ಗ"
+        },
+        "authors": [
+          "Department of Tourism, Government of Karnataka"
+        ],
+        "year": null,
+        "url": "https://karnatakatourism.org/en/experiences/shivappa-nayaka-palace-shivamogga",
         "scope": {
           "en": "Authority-backed discovery source. Each mapped record retains an explicit precision and review state; item-level coordinates, protection, access and condition must be confirmed separately.",
           "kn": "ಪ್ರಾಧಿಕಾರ ಆಧಾರಿತ ಅನ್ವೇಷಣಾ ಆಕರ. ಪ್ರತಿಯೊಂದು ನಕ್ಷಿತ ದಾಖಲೆಯು ಸ್ಪಷ್ಟ ನಿಖರತೆ ಮತ್ತು ಪರಿಶೀಲನಾ ಸ್ಥಿತಿಯನ್ನು ಉಳಿಸುತ್ತದೆ; ವಸ್ತುಮಟ್ಟದ ನಿರ್ದೇಶಾಂಕ, ರಕ್ಷಣೆ, ಪ್ರವೇಶ ಮತ್ತು ಸ್ಥಿತಿಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದೃಢಪಡಿಸಬೇಕು."

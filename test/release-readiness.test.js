@@ -172,7 +172,9 @@ test('timeline stories can be minimized and start collapsed on mobile', () => {
 test('timeline categories coordinate with their required map layers', () => {
   assert.match(appSource, /onCategoryChange\?\.\(value\)/, 'category changes must notify the atlas map')
   assert.match(appSource, /inscriptions:'inscriptions'/, 'the inscription category must enable its map layer')
+  assert.match(appSource, /heritage:'heritageSites'/, 'the heritage timeline category must enable mapped sites')
   assert.match(appSource, /onCategoryChange=\{coordinateTimelineCategory\}/, 'the timeline rail must be connected to map-layer coordination')
+  assert.match(appSource, /\.\.\.heritageTimelineStories/, 'dated mapped heritage candidates must feed the timeline')
   assert.match(appSource, /chooseInscription=item=>\{enableMapLayer\('inscriptions'\)/, 'opening an inscription must recover a disabled inscription layer')
   assert.match(appSource, /story\.storyKind==='research-candidate'\)\{enableMapLayer\('researchCandidates'\)/, 'opening a review candidate must recover its public map layer')
   assert.match(appSource, /if\(story\.coords\)setSelectedSearchPlace\(\{coords:story\.coords,reviewCandidateId:story\.id\}\)/, 'opening a review candidate must focus and highlight its mapped location')
