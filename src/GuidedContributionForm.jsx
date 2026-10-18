@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { contributionDistrictLabel as districtLabel, contributionDistricts, contributionPlaceLabel as placeLabel, contributionPlaces, matchContributionPlace } from './contribution-places'
+import { canonicalDistrictName } from './data/district-normalization'
 
 const recordTypes=['event','person','peopleCandidate','martyrCandidate','place','inscription','work','culturalHeritage','polity','reign','territorialExtent','heritageCandidate','periodical','source']
 const typeLabels={
@@ -14,7 +15,7 @@ export default function GuidedContributionForm({locale='kn',prefill={},existing=
   const [step,setStep]=useState(1),[draft,setDraft]=useState(()=>initialDraft(prefill,existing)),[citations,setCitations]=useState(()=>existing?.citations_json?.length?existing.citations_json:[blankCitation()])
   useEffect(()=>{setDraft(initialDraft(prefill,existing));setCitations(existing?.citations_json?.length?existing.citations_json:[blankCitation()]);setStep(1)},[existing?.id,prefill.target,prefill.action,prefill.recordType])
   const update=(key,value)=>setDraft(current=>({...current,[key]:value}))
-  const choosePlace=value=>{update('placeName',value);const place=matchContributionPlace(value);if(!place)return;setDraft(current=>({...current,placeName:place.name?.[locale]||place.name?.en||value,district:place.district?.[locale]||place.district?.en||current.district,taluk:place.taluk?.[locale]||place.taluk?.en||current.taluk,latitude:place.latitude??current.latitude,longitude:place.longitude??current.longitude,locationPrecision:place.precision}))}
+  const choosePlace=value=>{update('placeName',value);const place=matchContributionPlace(value);if(!place)return;setDraft(current=>({...current,placeName:place.name?.[locale]||place.name?.en||value,district:canonicalDistrictName(place.district,locale)||current.district,taluk:place.taluk?.[locale]||place.taluk?.en||current.taluk,latitude:place.latitude??current.latitude,longitude:place.longitude??current.longitude,locationPrecision:place.precision}))}
   const updateCitation=(index,key,value)=>setCitations(current=>current.map((item,itemIndex)=>itemIndex===index?{...item,[key]:value}:item))
   const action=draft.intent==='create'?'create':draft.intent==='source'?'citation':'correction'
   const hasLocation=Number.isFinite(Number(draft.latitude))&&Number.isFinite(Number(draft.longitude))&&draft.latitude!==''&&draft.longitude!==''

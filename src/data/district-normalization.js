@@ -1,14 +1,14 @@
 const normalize=value=>String(value||'').normalize('NFKD').toLowerCase().replace(/\b(?:district|distt?|zilla|jille)\b/g,'').replace(/[^a-z0-9\u0c80-\u0cff]+/g,' ').trim()
 
 const aliases={
-  'audit-bagalkote':['Bagalkote','Bagalkot','Bagalakot','ಬಾಗಲಕೋಟೆ'],
-  'audit-ballari':['Ballari','Bellary','ಬಳ್ಳಾರಿ'],
+  'audit-bagalkote':['Bagalkote','Bagalkot','Bagalakot','Bagalakote','ಬಾಗಲಕೋಟೆ'],
+  'audit-ballari':['Ballari','Ballary','Bellary','ಬಳ್ಳಾರಿ'],
   'audit-belagavi':['Belagavi','Belgaum','ಬೆಳಗಾವಿ'],
   'audit-bengaluru-rural':['Bengaluru Rural','Bangalore Rural','ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ'],
-  'audit-bengaluru-urban':['Bengaluru Urban','Bangalore Urban','Bengaluru','Bangalore','ಬೆಂಗಳೂರು ನಗರ','ಬೆಂಗಳೂರು'],
+  'audit-bengaluru-urban':['Bengaluru Urban','Bangalore Urban','Bengaluru','Bangalore','Bangaluru','ಬೆಂಗಳೂರು ನಗರ','ಬೆಂಗಳೂರು'],
   'audit-bidar':['Bidar','ಬೀದರ್'],
   'audit-chamarajanagar':['Chamarajanagar','Chamarajanagara','ಚಾಮರಾಜನಗರ'],
-  'audit-chikkaballapur':['Chikkaballapur','Chikballapur','ಚಿಕ್ಕಬಳ್ಳಾಪುರ'],
+  'audit-chikkaballapur':['Chikkaballapur','Chikkaballapura','Chikballapur','ಚಿಕ್ಕಬಳ್ಳಾಪುರ'],
   'audit-chikkamagaluru':['Chikkamagaluru','Chikmagalur','Chikkamagalur','ಚಿಕ್ಕಮಗಳೂರು'],
   'audit-chitradurga':['Chitradurga','ಚಿತ್ರದುರ್ಗ'],
   'audit-dakshina-kannada':['Dakshina Kannada','South Kanara','Mangalore','Mangaluru','ದಕ್ಷಿಣ ಕನ್ನಡ','ಮಂಗಳೂರು'],
@@ -18,13 +18,13 @@ const aliases={
   'audit-hassan':['Hassan','Hasan','ಹಾಸನ'],
   'audit-haveri':['Haveri','ಹಾವೇರಿ'],
   'audit-kalaburagi':['Kalaburagi','Gulbarga','ಕಲಬುರಗಿ'],
-  'audit-kodagu':['Kodagu','Coorg','ಕೊಡಗು'],
+  'audit-kodagu':['Kodagu','Coorg','Coorg-Kodagu','Coorg (Kodagu)','ಕೊಡಗು'],
   'audit-kolar':['Kolar','ಕೋಲಾರ'],
   'audit-koppal':['Koppal','Kopal','ಕೊಪ್ಪಳ'],
   'audit-mandya':['Mandya','ಮಂಡ್ಯ'],
   'audit-mysuru':['Mysuru','Mysore','ಮೈಸೂರು'],
   'audit-raichur':['Raichur','ರಾಯಚೂರು'],
-  'audit-ramanagara':['Ramanagara','Ramanagaram','ರಾಮನಗರ'],
+  'audit-ramanagara':['Ramanagara','Ramanagaram','Ramnagara','Ramnagar','ರಾಮನಗರ'],
   'audit-shivamogga':['Shivamogga','Shimoga','ಶಿವಮೊಗ್ಗ'],
   'audit-tumakuru':['Tumakuru','Tumkur','ತುಮಕೂರು'],
   'audit-udupi':['Udupi','ಉಡುಪಿ'],
@@ -36,8 +36,21 @@ const aliases={
 
 const aliasToId=new Map(Object.entries(aliases).flatMap(([id,values])=>values.map(value=>[normalize(value),id])))
 const canonicalNames=new Map(Object.entries(aliases).map(([id,values])=>[id,{en:values.find(value=>/^[\x00-\x7F]+$/.test(value))||values[0],kn:values.find(value=>/[\u0c80-\u0cff]/.test(value))||''}]))
+const localizedFallbacks={
+  pending:{en:'District pending',kn:'ಜಿಲ್ಲೆ ನಿರ್ಧಾರ ಬಾಕಿ'},
+  maharashtra:{en:'Maharashtra',kn:'ಮಹಾರಾಷ್ಟ್ರ'},
+}
 
-export const canonicalDistrictId=value=>aliasToId.get(normalize(value))||null
+const sourceName=value=>typeof value==='object'&&value!==null?(value.en||value.kn||''):String(value||'')
+
+export const canonicalDistrictId=value=>aliasToId.get(normalize(sourceName(value)))||null
+
+export function canonicalDistrictName(value,locale='kn'){
+  const raw=sourceName(value)
+  const districtId=canonicalDistrictId(raw)
+  const bilingual=canonicalNames.get(districtId)||localizedFallbacks[normalize(raw)]
+  return bilingual?.[locale]||bilingual?.en||(typeof value==='object'?(value?.[locale]||value?.en||value?.kn):raw)
+}
 
 export function canonicalDistrictAssociation(value,{districtById,locale='kn'}={}){
   const districtId=canonicalDistrictId(value)
