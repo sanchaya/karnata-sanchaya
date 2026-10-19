@@ -1,6 +1,6 @@
 # Karnataka Historical Atlas — milestone status and roadmap
 
-Updated: 2026-10-12
+Updated: 2026-10-19
 
 This is the durable project summary for the decisions and implementation work accumulated across the atlas build. It separates working software from research that still needs human evidence. A record being visible on a map or timeline does not mean that it is authority-confirmed.
 
@@ -11,7 +11,7 @@ The portal is Kannada-first with English support and has two intentionally separ
 - **Public static atlas:** read-only Vite/GitHub Pages build with maps, timeline, relations, literature, epigraphy, heritage and district research views.
 - **Live research service:** authenticated accounts, MariaDB dataset revisions, moderation, reviewer workflow and controlled static-release handoff.
 
-The district-history explorer milestone is included in the current committed snapshot. The current release candidate also includes bounded map focus, permanent admin-save safeguards and cross-page contract tests.
+The district work is now a single compact, bilingual workspace: local history, heritage sites, inscription review and monument inventory are selected from one District Atlas while old route hashes continue to work. The current release candidate also includes bounded map focus, permanent admin-save safeguards and cross-page contract tests.
 
 The current committed snapshot also includes the P2/P3 evidence maturity slice: public coin, script and network exploration, reviewer notes and status history, a reviewer operations panel, a ready-for-promotion queue, regenerated open dataset packets and faster admin save checks for the larger corpus.
 
@@ -38,6 +38,7 @@ The current committed snapshot also includes the P2/P3 evidence maturity slice: 
 | Atlas v0.28 — P1/P2 model foundations and corpus maturity | **P2 research graph expansion closed; review open** | Mature collections for genealogy assertions, samanta/feudatory links, administrative divisions, coin records, manuscript witnesses, boundary evidence, inscription editions and script evolution; public coin/script/network explorers; district-history closure candidates; open dataset packets; reviewer dashboard and ready-for-promotion queue | Replace leads with catalogue specimens, source locators, image/licence evidence, exact generations, administrative geography and independent reviews before promotion |
 | India-wide discovery intake | **Import and permanent review workflow delivered; scholarly verification open** | Direct-only `#india-research` explorer; 34,862 BharatRajya/WhatIsIndia discovery records; 47 source candidates; 152 explicit source-page failures; separate MariaDB table, deployment sync, server-side Admin search/pagination, citation-backed review and manual lead creation | Resolve broken source URLs; match imported source claims to underlying editions; promote only independently verified Kannada/Karnataka records into canonical/public collections |
 | Atlas v0.29 — guided community contribution | **Code complete; production exercise pending** | Kannada-first four-step wizard; role-specific on-page/documentation guide; explicit signup consent; one-time password recovery; administrator approve/reject/suspend/reactivate and role appointment controls; canonical place lookup; structured citations; contextual map actions; permanent MariaDB drafts and revisions; scoped campaigns; notifications; private CSV/KML staging; and a category-counted research marketplace spanning inscriptions, literature, districts, people, heritage, relations, material culture, territory, rulers/dynasties, grouped periodicals and source/translation review | Run migrations `011_v029_community_operations.sql` and `012_password_reset.sql` on the live service; configure mail delivery; exercise signup, recovery, approval, campaign/import/revision and notification cycles with real reviewers; expand taluk inference as authority data becomes available; implement photographs only after licensing, consent, storage and moderation policy are approved |
+| Atlas v0.30 — live reviewer pilot and evidence promotion | **Operational dashboard delivered; live pilot pending** | Admin readiness checks report the two required migrations, password-reset mail, reviewer/contributor cohort, active campaign membership, independent evidence assignments and MariaDB revision; live counters expose campaigns, staged imports and evidence review; manual backup/restore, signup/recovery and approved-publication drills remain explicit rather than falsely inferred | Configure the live service, recruit at least three approved contributors and two independent reviewers, create the bounded Sannati/Maski/eight-district campaign, complete the three manual drills and record pilot findings before widening access |
 | Freedom Movement Explorer / `#freedom` | **Public explorer delivered; evidence review open** | All 626 freedom-fighter research records on a bilingual map and chronological timeline with district/action/review filters, shareable selections and contribution handoff; source-provenance tiers with an **authority-cited** badge (296 of 626 people carry at least one government/epigraphic/UNESCO citation) surfaced across the Freedom, People and Resources pages | Replace provisional district/city-centre markers with authority-confirmed event locations; verify printed pages, identities, event sequences and Kannada names; expand beyond martyr records into protests, organisations, newspapers and constitutional milestones |
 | District Deep History / `#district-history` | **All districts seeded; research ongoing** | 31 district scope slots, 38 needs-review leads covering every district plus five source-backed site-level candidates (Ballari/Sanganakallu-Kupgal Neolithic complex; Kolar as the Western Ganga founding capital of Kuvalala/Kolahalapura; Tumakuru's Kaidala Chennakeshava/Gangadhareshwara foundation inscription, 1150-1151 CE, linking to this atlas's Hoysala king Narasimha I; Haveri's Siddheshwara temple, dated by 1087/1108 CE inscriptions; Davanagere's Harihareshwara temple, founded 1223-1224 CE by a commander of Hoysala king Vira Narasimha II), map/filter/detail view, admin collection and validation | Replace remaining district-centroid intake leads with site-level prehistoric, settlement, foundation-stone and locality records |
 
@@ -70,12 +71,13 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 
 ## Immediate priority order
 
-### P0 — stabilize and publish the current milestone
+### P0 — exercise Atlas v0.30 on the live service
 
-1. **Complete in code:** district-history route, layout, data collection, validation, bounded map focus and permanent admin-save safeguards are committed.
-2. **Complete locally:** `npm run check` passes (zero validation errors/warnings, all tests passing, production build successful).
-3. **Repository action remaining:** enable GitHub Pages → **GitHub Actions** in repository settings; the workflow is present and the build passes, but deployment depends on that repository setting.
-4. **Operator verification remaining:** hard-refresh `#atlas`, `#district-history`, `#districts`, `#inscriptions`, `#literature` and `#epigraphy` on desktop and mobile. The release-readiness tests now protect the route aliases and accessibility wiring in CI.
+1. Open Admin → **Atlas v0.30 reviewer pilot** and resolve every automated blocker reported by the live API.
+2. Apply migrations `011_v029_community_operations.sql` and `012_password_reset.sql`, configure `RESEND_API_KEY`/`MAIL_FROM`, and retain at least two approved reviewers plus three approved contributors.
+3. Create one bounded campaign for Sannati, Maski and the eight-district heritage batch; assign each evidence task to a contributor and a different reviewer.
+4. Complete and record the backup/isolated-restore, real signup/password-recovery and approved-only static-publication drills in [`v030-reviewer-pilot.md`](v030-reviewer-pilot.md).
+5. Hard-refresh `#districts`, `#community`, `#evidence` and `#admin` on desktop, tablet and mobile after the live deployment.
 
 ### P1 — finish the evidence work already promised
 
@@ -129,6 +131,7 @@ The supplied Bengaluru infographic and portals such as BharatRajya can be used t
 - v0.23 promotion sprint: [`docs/v023-evidence-promotion.md`](v023-evidence-promotion.md)
 - Eight-district heritage batch: [`docs/p1-district-batch.md`](p1-district-batch.md)
 - P3 community operations and release handoff: [`docs/community-operations.md`](community-operations.md)
+- v0.30 live reviewer pilot: [`docs/v030-reviewer-pilot.md`](v030-reviewer-pilot.md)
 - Community governance: [`docs/community-governance.md`](community-governance.md)
 - Live deployment: [`docs/live-deployment.md`](live-deployment.md)
 - Linux/Nginx deployment: [`docs/linux-nginx-install.md`](linux-nginx-install.md)

@@ -46,7 +46,7 @@ const appendUniqueById = (target, items) => {
 
 export const atlasData = {
   meta: {
-    schemaVersion: '0.29.0',
+    schemaVersion: '0.30.0',
     title: name('Karnataka Historical Atlas', 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ'),
     exportedAt: null,
   },
