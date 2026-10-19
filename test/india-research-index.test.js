@@ -2,6 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import { indiaResearchIndex } from '../src/data/india-research.generated.js'
+import { indiaResearchMeta } from '../src/data/india-research-meta.generated.js'
 
 test('hidden India research index retains both complete discovery imports',()=>{
   assert.equal(indiaResearchIndex.meta.bharatrajya.counts.kingdoms,461)
@@ -25,10 +26,11 @@ test('BharatRajya discoveries remain review candidates rather than citations',()
   assert.match(indiaResearchIndex.meta.policy,/not treated as a scholarly citation/)
 })
 
-test('India research route is direct-only and absent from navigation',()=>{
+test('India research route is available from utility navigation',()=>{
   const app=fs.readFileSync(new URL('../src/App.jsx',import.meta.url),'utf8')
   assert.match(app,/publicViews=\[[^\]]*'india-research'/)
   assert.match(app,/view==='india-research'/)
   assert.doesNotMatch(app,/primaryNavItems=\[[^\]]*india-research/)
-  assert.doesNotMatch(app,/utilityNavItems=\[[^\]]*india-research/)
+  assert.match(app,/\['india-research'/)
+  assert.deepEqual(indiaResearchMeta,{recordCount:indiaResearchIndex.meta.recordCount,sourceCount:indiaResearchIndex.meta.sourceCount,failureCount:indiaResearchIndex.meta.failureCount})
 })

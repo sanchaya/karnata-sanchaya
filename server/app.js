@@ -71,7 +71,7 @@ app.post('/api/auth/forgot-password',rateLimit('forgot-password',5,60*60*1000),a
   if(config.env==='production'&&!emailDeliveryConfigured(config))return res.status(503).json({error:'Password recovery is temporarily unavailable. Please contact Sanchaya.'})
   const userEmail=email(req.body?.email);const rows=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)?await pool.query('SELECT id,email,preferred_locale FROM users WHERE email=? LIMIT 1',[userEmail]):[]
   let previewUrl
-  if(rows.length){const user=rows[0],token=randomToken(32),tokenHash=sha256(token),expires=new Date(Date.now()+config.passwordResetMinutes*60000);const resetUrl=`${config.appOrigin}/?resetToken=${encodeURIComponent(token)}#community`
+  if(rows.length){const user=rows[0],token=randomToken(32),tokenHash=sha256(token),expires=new Date(Date.now()+config.passwordResetMinutes*60000);const resetUrl=`${config.appOrigin}/?resetToken=${encodeURIComponent(token)}#contribute`
     await transaction(async db=>{await db.query('DELETE FROM password_reset_tokens WHERE user_id=? AND used_at IS NULL',[user.id]);await db.query('INSERT INTO password_reset_tokens (token_hash,user_id,expires_at) VALUES (?,?,?)',[tokenHash,user.id,expires]);await audit(db,user.id,'account.password-reset-requested','user',user.id,{expiresAt:expires.toISOString()})})
     try{const result=await sendPasswordResetEmail({to:user.email,url:resetUrl,locale:user.preferred_locale,config});previewUrl=result.previewUrl}catch(error){await pool.query('DELETE FROM password_reset_tokens WHERE token_hash=?',[tokenHash]);throw error}
   }
