@@ -23,3 +23,12 @@ test('v0.30 does not pretend manual production drills are automated',async()=>{
   for(const check of ['backup-restore','signup-recovery','approved-static-release'])assert.match(server,new RegExp(check))
   assert.match(server,/manualChecks:/)
 })
+
+test('public release labels use the canonical Atlas schema version',async()=>{
+  const [atlas,app,about,admin,evidence,explorer,citations]=await Promise.all(['src/data/atlas.js','src/App.jsx','src/About.jsx','src/Admin.jsx','src/EvidenceWorkflow.jsx','src/LiteratureEpigraphyExplorer.jsx','src/ResourcesCollaborations.jsx'].map(source))
+  assert.match(atlas,/export const ATLAS_RELEASE_VERSION = '0\.30\.0'/)
+  assert.match(app,/t\.appSubtitle} · v{ATLAS_RELEASE_VERSION}/)
+  assert.match(app,/Karnataka Historical Atlas · v{ATLAS_RELEASE_VERSION}/)
+  assert.match(about,/t\.eyebrow} · v{ATLAS_RELEASE_VERSION}/)
+  for(const page of [admin,evidence,explorer,citations])assert.match(page,/ATLAS_RELEASE_VERSION/)
+})

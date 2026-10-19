@@ -1,3 +1,5 @@
+import {ATLAS_RELEASE_VERSION} from './data/atlas.js'
+
 const copy={
   kn:{
     eyebrow:'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · ನಮ್ಮ ಬಗ್ಗೆ',
@@ -25,5 +27,5 @@ const copy={
 
 export default function About({locale}){
   const t=copy[locale]||copy.kn
-  return <main className="about-page portal-page" id="about"><section className="about-hero"><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p className="about-tagline">{t.tagline}</p><p>{t.intro}</p><div className="about-actions"><a href="#community" className="primary-link">{t.contribute}</a><a href="#research">{t.explore}</a><a href="#evidence">{t.evidence}</a></div></section><section className="about-grid"><article><h3>{t.purposeTitle}</h3><p>{t.purpose}</p></article><article><h3>{t.methodTitle}</h3><p>{t.method}</p></article><article><h3>{t.languageTitle}</h3><p>{t.language}</p></article><article><h3>{t.stewardshipTitle}</h3><p>{t.stewardship}</p><a href="https://sanchaya.org/" target="_blank" rel="noreferrer">{t.sanchaya} ↗</a></article></section></main>
+  return <main className="about-page portal-page" id="about"><section className="about-hero"><p className="eyebrow">{t.eyebrow} · v{ATLAS_RELEASE_VERSION}</p><h2>{t.title}</h2><p className="about-tagline">{t.tagline}</p><p>{t.intro}</p><div className="about-actions"><a href="#community" className="primary-link">{t.contribute}</a><a href="#research">{t.explore}</a><a href="#evidence">{t.evidence}</a></div></section><section className="about-grid"><article><h3>{t.purposeTitle}</h3><p>{t.purpose}</p></article><article><h3>{t.methodTitle}</h3><p>{t.method}</p></article><article><h3>{t.languageTitle}</h3><p>{t.language}</p></article><article><h3>{t.stewardshipTitle}</h3><p>{t.stewardship}</p><a href="https://sanchaya.org/" target="_blank" rel="noreferrer">{t.sanchaya} ↗</a></article></section></main>
 }

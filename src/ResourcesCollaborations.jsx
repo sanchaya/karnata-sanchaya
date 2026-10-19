@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { atlasData } from './data/atlas'
+import { ATLAS_RELEASE_VERSION, atlasData } from './data/atlas'
 import { buildSourceTiers, PROVENANCE_ORDER, provenanceTierLabel, sourceTier } from './data/source-provenance'
 import ProvenanceBadge from './ProvenanceBadge'
 import SourceLink from './SourceLink'
@@ -19,9 +19,9 @@ const sourceCitation=source=>`${(source.authors||[]).join(', ')||'Unknown creato
 const sourceBibtex=source=>`@misc{${citationKey(source)},\n  author = {${clean((source.authors||[]).join(' and '))}},\n  title = {${clean(source.title.en)}},${source.year?`\n  year = {${source.year}},`:''}${source.publisher?`\n  publisher = {${clean(source.publisher)}},`:''}${source.doi?`\n  doi = {${clean(source.doi)}},`:''}${source.url?`\n  url = {${source.url}},`:''}\n  note = {Karnataka Historical Atlas source ID: ${source.id}}\n}`
 const sourceRis=source=>['TY  - GEN',...(source.authors||[]).map(author=>`AU  - ${author}`),`TI  - ${source.title.en}`,source.year?`PY  - ${source.year}`:null,source.publisher?`PB  - ${source.publisher}`:null,source.doi?`DO  - ${source.doi}`:null,source.url?`UR  - ${source.url}`:null,`N1  - Karnataka Historical Atlas source ID: ${source.id}`,'ER  -'].filter(Boolean).join('\n')
 const sourceCsl=source=>({id:source.id,type:source.type?.includes('volume')||source.type==='book'?'book':'document',title:source.title.en,author:(source.authors||[]).map(literal=>({literal})),publisher:source.publisher||undefined,issued:source.year?{'date-parts':[[source.year]]}:undefined,URL:source.url||undefined,note:`Karnataka Historical Atlas source ID: ${source.id}`})
-const atlasCitation=()=>`Sanchaya & Sanchi Foundation. (2026). Karnataka Historical Atlas (Version ${atlasData.meta.schemaVersion}) [Digital historical atlas]. ${pageUrl()}`
-const atlasBibtex=()=>`@misc{karnataka_historical_atlas_2026,\n  author = {{Sanchaya} and {Sanchi Foundation}},\n  title = {Karnataka Historical Atlas},\n  year = {2026},\n  version = {${atlasData.meta.schemaVersion}},\n  url = {${pageUrl()}},\n  note = {Kannada-first digital historical atlas}\n}`
-const atlasRis=()=>`TY  - DATA\nAU  - Sanchaya\nAU  - Sanchi Foundation\nTI  - Karnataka Historical Atlas\nPY  - 2026\nET  - ${atlasData.meta.schemaVersion}\nUR  - ${pageUrl()}\nLA  - Kannada; English\nER  -`
+const atlasCitation=()=>`Sanchaya & Sanchi Foundation. (2026). Karnataka Historical Atlas (Version ${ATLAS_RELEASE_VERSION}) [Digital historical atlas]. ${pageUrl()}`
+const atlasBibtex=()=>`@misc{karnataka_historical_atlas_2026,\n  author = {{Sanchaya} and {Sanchi Foundation}},\n  title = {Karnataka Historical Atlas},\n  year = {2026},\n  version = {${ATLAS_RELEASE_VERSION}},\n  url = {${pageUrl()}},\n  note = {Kannada-first digital historical atlas}\n}`
+const atlasRis=()=>`TY  - DATA\nAU  - Sanchaya\nAU  - Sanchi Foundation\nTI  - Karnataka Historical Atlas\nPY  - 2026\nET  - ${ATLAS_RELEASE_VERSION}\nUR  - ${pageUrl()}\nLA  - Kannada; English\nER  -`
 const copyText=async value=>{if(navigator.clipboard?.writeText)return navigator.clipboard.writeText(value);const area=document.createElement('textarea');area.value=value;document.body.append(area);area.select();document.execCommand('copy');area.remove()}
 const downloadText=(value,filename,type='text/plain')=>{const url=URL.createObjectURL(new Blob([value],{type}));const link=document.createElement('a');link.href=url;link.download=filename;link.click();URL.revokeObjectURL(url)}
 const citationEligible=source=>!source.provenanceRole||source.provenanceRole!=='discovery-only'

@@ -44,9 +44,11 @@ const appendUniqueById = (target, items) => {
   })
 }
 
+export const ATLAS_RELEASE_VERSION = '0.30.0'
+
 export const atlasData = {
   meta: {
-    schemaVersion: '0.30.0',
+    schemaVersion: ATLAS_RELEASE_VERSION,
     title: name('Karnataka Historical Atlas', 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ'),
     exportedAt: null,
   },
