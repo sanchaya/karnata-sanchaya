@@ -34,7 +34,7 @@ export default function IndiaResearchExplorer({locale='en'}){
   const counts=indiaResearchIndex.meta
   return <main className="india-research-page">
     <section className="india-research-hero">
-      <div><p className="eyebrow">{kn?'ನೇರ ಕೊಂಡಿ ಮೂಲಕ ಮಾತ್ರ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ':'Direct-link only · research workspace'}</p><h2>{kn?'ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ':'India Historical Discovery Index'}</h2><p>{kn?'ಈ ಪುಟವು ಸಾಮಾನ್ಯ ನಾವಿಗೇಶನ್‌ನಲ್ಲಿ ಕಾಣಿಸುವುದಿಲ್ಲ. ಭಾರತವ್ಯಾಪಿ ಸಂಶೋಧನಾ ಸುಳಿವುಗಳನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಇಲ್ಲಿ ಒಟ್ಟುಗೂಡಿಸಲಾಗಿದೆ; ಇವು ಪ್ರಕಟಿತ ಅಥವಾ ಸ್ವತಂತ್ರವಾಗಿ ದೃಢೀಕರಿಸಿದ ಹೇಳಿಕೆಗಳಲ್ಲ.':'This unlinked workspace brings together India-wide research leads for review. These are not published or independently verified historical claims.'}</p></div>
+      <div><p className="eyebrow">{kn?'ಭಾರತವ್ಯಾಪಿ ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ':'India-wide research workspace'}</p><h2>{kn?'ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ':'India Historical Discovery Index'}</h2><p>{kn?'ಭಾರತವ್ಯಾಪಿ ಸಂಶೋಧನಾ ಸುಳಿವುಗಳನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಇಲ್ಲಿ ಒಟ್ಟುಗೂಡಿಸಲಾಗಿದೆ; ಇವು ಪ್ರಕಟಿತ ಅಥವಾ ಸ್ವತಂತ್ರವಾಗಿ ದೃಢೀಕರಿಸಿದ ಹೇಳಿಕೆಗಳಲ್ಲ.':'This workspace brings together India-wide research leads for review. These are not published or independently verified historical claims.'}</p></div>
       <aside><strong>{kn?'ಸಾಕ್ಷ್ಯ ನೀತಿ':'Evidence policy'}</strong><p>{kn?'ಪ್ರತಿ ದಾಖಲೆಯಲ್ಲೇ ಅದರ ಅನ್ವೇಷಣಾ ಮೂಲವನ್ನು ಉಲ್ಲೇಖಿಸಲಾಗಿದೆ. ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ಮುನ್ನ ಹೇಳಿಕೆಯನ್ನು ಮೂಲ ಪ್ರಾಥಮಿಕ ಅಥವಾ ವಿದ್ವತ್ ಆಕರದೊಂದಿಗೆ ವಸ್ತುಮಟ್ಟದಲ್ಲಿ ಹೊಂದಿಸಿ ಪರಿಶೀಲಿಸಬೇಕು.':'Each record carries its discovery-source attribution. Before public promotion, its claim must be matched at item level to the underlying primary or scholarly source.'}</p></aside>
     </section>
     <section className="india-research-stats" aria-label={kn?'ಆಮದು ಅಂಕಿಅಂಶಗಳು':'Import statistics'}>

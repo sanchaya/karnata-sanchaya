@@ -36,7 +36,7 @@ For a public release, review the revision, run `npm run publish:static`, and dep
 
 ## Guided community contribution
 
-Approved contributors use `#community`; they do not edit JSON or canonical
+Approved contributors use `#contribute`; they do not edit JSON or canonical
 records directly. The four-step Kannada-first form collects the record type,
 place/date context, type-specific fields, rationale and structured citations.
 For new records the server assigns the provisional stable ID. For corrections

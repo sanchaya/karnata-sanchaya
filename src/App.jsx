@@ -16,6 +16,7 @@ import { compactTimelineStories } from './timeline-story-utils'
 import { isTempleRecord, objectIcon, objectKindFor, timelineCategoryForCulture } from './object-icons'
 import ContributeActions from './ContributeActions'
 import { canonicalDistrictId, canonicalDistrictName } from './data/district-normalization'
+import { indiaResearchMeta } from './data/india-research-meta.generated.js'
 
 const Admin=import.meta.env.VITE_STATIC_DATASET==='true'?null:lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
@@ -28,6 +29,7 @@ const PeopleExplorer=lazy(()=>import('./PeopleExplorer'))
 const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
+const CommunityResearchTasks=lazy(()=>import('./CommunityResearchTasks'))
 const CoinExplorer=lazy(()=>import('./CoinExplorer'))
 const ScriptEvolutionExplorer=lazy(()=>import('./ScriptEvolutionExplorer'))
 const IndiaResearchExplorer=lazy(()=>import('./IndiaResearchExplorer'))
@@ -41,7 +43,7 @@ const AdminAccessGate=({locale,staticBuild,user})=>{
     :administrator
       ?''
       :(user?(isKannada?'ಈ ಖಾತೆಗೆ ನಿರ್ವಾಹಕ ಪಾತ್ರವಿಲ್ಲ.':'This account does not have the administrator role.'):(isKannada?'ಮುಂದುವರಿಯಲು ಲೈವ್ ತಾಣದಲ್ಲಿ ನಿಮ್ಮ ನಿರ್ವಾಹಕ ಖಾತೆ ಮತ್ತು ಗುಪ್ತಪದದಿಂದ ಲಾಗಿನ್ ಮಾಡಿ.':'Sign in on the live site with your administrator account and password to continue.'))
-  return <main className="portal-page admin-access-gate"><section><p className="eyebrow">Admin</p><h2>{title}</h2><p>{body}</p><a className="admin-cta" href={staticBuild?'#atlas':'#community'}>{staticBuild?(isKannada?'ಸಾರ್ವಜನಿಕ ಭೂಪಟಕ್ಕೆ ಹಿಂತಿರುಗಿ':'Return to public atlas'):(isKannada?'ಲಾಗಿನ್ ಪುಟ ತೆರೆಯಿರಿ':'Open sign-in')}</a></section></main>
+  return <main className="portal-page admin-access-gate"><section><p className="eyebrow">Admin</p><h2>{title}</h2><p>{body}</p><a className="admin-cta" href={staticBuild?'#atlas':'#contribute'}>{staticBuild?(isKannada?'ಸಾರ್ವಜನಿಕ ಭೂಪಟಕ್ಕೆ ಹಿಂತಿರುಗಿ':'Return to public atlas'):(isKannada?'ಲಾಗಿನ್ ಪುಟ ತೆರೆಯಿರಿ':'Open sign-in')}</a></section></main>
 }
 const socialLinks=[
   ['YouTube',import.meta.env.VITE_SOCIAL_YOUTUBE_URL],
@@ -128,11 +130,14 @@ const seoPages={
   inscriptions:{kn:['ಜಿಲ್ಲಾ ಶಾಸನ ಪರಿಶೀಲನೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಜಿಲ್ಲಾವಾರು ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳು, ಸಂಪುಟ ಸ್ಥಾನಸೂಚಿಗಳು ಮತ್ತು ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನಾ ಪ್ರಗತಿ.'],en:['District Inscription Audits · Karnataka Historical Atlas','District inscription candidates, corpus locators and evidence-verification progress.']},
   coins:{kn:['ನಾಣ್ಯ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕ ಮತ್ತು ಕರ್ಣಾಟ ಸಂಬಂಧಿತ ನಾಣ್ಯ ದಾರಿಗಳನ್ನು ಪಟ್ಟಿ, ಚಿತ್ರ, ಲೋಹ, ತೂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳ ಸಾಕ್ಷ್ಯಗಳೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ.'],en:['Coin Explorer · Karnataka Historical Atlas','Explore Karnataka and Karnata-related coin leads with catalogue, image, metal, weight and findspot evidence gates.']},
   research:{kn:['ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಆಕರ ಪಟ್ಟಿ, BibTeX ಮತ್ತು RIS ಉಲ್ಲೇಖ ಸಾಧನಗಳು, ಸಂಶೋಧನಾ ವಿಧಾನ ಮತ್ತು ಸಹಯೋಗ ಅವಕಾಶಗಳು.'],en:['Resources and Collaborations · Karnataka Historical Atlas','Reference catalogue, BibTeX and RIS citation tools, research method and collaboration opportunities.']},
-  community:{kn:['ಕೊಡುಗೆ ನೀಡಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಉಲ್ಲೇಖಗಳೊಂದಿಗೆ ಐತಿಹಾಸಿಕ ಜ್ಞಾನ, ತಿದ್ದುಪಡಿ ಮತ್ತು ಅನುವಾದಗಳನ್ನು ಸಮುದಾಯ ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಿ.'],en:['Contribute · Karnataka Historical Atlas','Submit cited historical knowledge, corrections and translations for moderated community review.']},
+  contribute:{kn:['ಕೊಡುಗೆ ನೀಡಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಉಲ್ಲೇಖಗಳೊಂದಿಗೆ ಐತಿಹಾಸಿಕ ಜ್ಞಾನ, ತಿದ್ದುಪಡಿ ಮತ್ತು ಅನುವಾದಗಳನ್ನು ಸಮುದಾಯ ಪರಿಶೀಲನೆಗೆ ಸಲ್ಲಿಸಿ.'],en:['Contribute · Karnataka Historical Atlas','Submit cited historical knowledge, corrections and translations for moderated community review.']},
+  'research-tasks':{kn:['ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ವಿಷಯ, ಜಿಲ್ಲೆ, ಸಾಕ್ಷ್ಯ ಕೊರತೆ ಮತ್ತು ಆದ್ಯತೆಯ ಪ್ರಕಾರ ಸಮುದಾಯ ಸಂಶೋಧನಾ ಕಾರ್ಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ.'],en:['Research Tasks · Karnataka Historical Atlas','Choose a community research task by subject, district, evidence gap and priority.']},
   profile:{kn:['ನನ್ನ ಪ್ರೊಫೈಲ್ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ನಿಮ್ಮ ಸಂಶೋಧನಾ ಗುರುತು, ಸಂಸ್ಥೆ, ಕೊಡುಗೆಗಳು ಮತ್ತು ಪರಿಶೀಲನಾ ಪ್ರಮಾಣಪತ್ರವನ್ನು ನಿರ್ವಹಿಸಿ.'],en:['My profile · Karnataka Historical Atlas','Manage your research identity, affiliation, contributions and certificates.']},
+  reviews:{kn:['ಪರಿಶೀಲನಾ ಸರದಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕೊಡುಗೆ, ಆಕರ ಮತ್ತು ಕನ್ನಡ ಅನುವಾದ ಪರಿಶೀಲನೆಗಳನ್ನು ಒಂದು ಕೇಂದ್ರೀಕೃತ ಕಾರ್ಯಸ್ಥಳದಲ್ಲಿ ನಿರ್ವಹಿಸಿ.'],en:['Review Queue · Karnataka Historical Atlas','Review contributions, citations and Kannada translations in one focused workspace.']},
+  operations:{kn:['ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಖಾತೆ ಅನುಮೋದನೆ, ಗುರುತು ಪರಿಶೀಲನೆ ಮತ್ತು ಸಮುದಾಯ ಸಂಶೋಧನಾ ಅಭಿಯಾನಗಳನ್ನು ನಿರ್ವಹಿಸಿ.'],en:['User Operations · Karnataka Historical Atlas','Manage account approvals, identity verification and community research campaigns.']},
   evidence:{kn:['ಮಾನವ ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳ ಕ್ಷೇತ್ರಕಾರ್ಯ, ಪಠ್ಯ ಪರಿಶೀಲನೆ, ಅನುವಾದ ವಿಮರ್ಶೆ ಮತ್ತು ಪ್ರಕಟಣೆ ಸಿದ್ಧತೆಯ ಕಾರ್ಯಪಟ್ಟಿ.'],en:['Human Evidence Workflow · Karnataka Historical Atlas','Track fieldwork, transcription, translation review and publication readiness for inscription candidates.']},
   about:{kn:['ನಮ್ಮ ಬಗ್ಗೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟದ ಉದ್ದೇಶ, ಸಂಶೋಧನಾ ವಿಧಾನ, ಕನ್ನಡ-ಪ್ರಥಮ ವಿನ್ಯಾಸ ಮತ್ತು ಸಮುದಾಯ ಸಹಯೋಗವನ್ನು ತಿಳಿಯಿರಿ.'],en:['About · Karnataka Historical Atlas','Learn about the atlas purpose, research method, Kannada-first design and community collaboration.']},
-  'india-research':{kn:['ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ','ಭಾರತರಾಜ್ಯ ಮತ್ತು WhatIsIndia ಆಮದುಗಳ ನೇರ-ಕೊಂಡಿ ಸಂಶೋಧನಾ ಪರಿಶೀಲನಾ ಸೂಚಿ.'],en:['India Historical Discovery Index · Research workspace','Direct-link research review index for the BharatRajya and WhatIsIndia imports.']},
+  'india-research':{kn:['ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ','ಭಾರತವ್ಯಾಪಿ ಆಮದು ಮಾಡಿದ ಇತಿಹಾಸ ಮತ್ತು ಶಾಸನ ಸುಳಿವುಗಳ ಪರಿಶೀಲನಾ ಸೂಚಿ.'],en:['India Historical Discovery Index · Research workspace','Review India-wide imported historical and epigraphical research leads.']},
 }
 
 const tourStep=(target,kn,en)=>({target,title:{kn,en},body:{kn:kn.replace(/^[^·]+·\s*/,''),en}})
@@ -373,9 +378,9 @@ const publicDataDepth=(()=>{
   const historicalRecords=historicalCollections.reduce((total,key)=>total+(atlasData[key]?.length||0),0)
   const inscriptionLeads=atlasData.inscriptionAudits.reduce((total,audit)=>total+(audit.priorityCandidates?.length||0),0)
   const heritageSites=atlasData.heritageAudits.reduce((total,audit)=>total+(audit.prioritySites?.length||0),0)
-  const researchLeads=atlasData.templeInventoryLeads.length+atlasData.heritageInventoryLeads.length+inscriptionLeads+heritageSites+(atlasData.peopleCandidateMeta?.candidateCount||atlasData.peopleCandidates?.length||0)+(atlasData.martyrCandidates?.length||0)
+  const researchLeads=atlasData.templeInventoryLeads.length+atlasData.heritageInventoryLeads.length+inscriptionLeads+heritageSites+(atlasData.peopleCandidateMeta?.candidateCount||atlasData.peopleCandidates?.length||0)+(atlasData.martyrCandidates?.length||0)+indiaResearchMeta.recordCount+indiaResearchMeta.failureCount
   const relationships=atlasData.relationships.length+atlasData.politicalRelations.length+atlasData.feudatoryRelations.length+atlasData.genealogicalRelations.length
-  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:atlasData.sources.length,relationships}
+  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:atlasData.sources.length+indiaResearchMeta.sourceCount,relationships}
 })()
 const heritageStatusColors={verified:'#17835f','partially-verified':'#4361ee',identified:'#d08024','research-pending':'#8b8b98'}
 const isCultureActive=(item,year)=>year>=item.date.from&&(year<=item.date.to||['continuing-practice','material-survival'].includes(item.continuity))
@@ -650,7 +655,7 @@ function HeritageInventorySection({locale,t}){
 }
 
 function ReviewCandidatePopup({item,locale,t,compact=false}){
-  return <div className={`review-candidate-popup ${compact?'compact':''}`}><strong>{primary(item.name,locale)}</strong>{!compact&&secondary(item.name,locale)&&<><br/><span>{secondary(item.name,locale)}</span></>}<br/><b>{t.reviewCandidateCategory}:</b> {t.reviewCategoryLabels[item.recordKind]||item.recordKind}{!compact&&<>{item.startYear!=null&&<><br/>{timelineYearLabel(item.startYear,locale)}{item.endYear!=null&&item.endYear!==item.startYear?`–${timelineYearLabel(item.endYear,locale)}`:''}</>}{item.placeLabel&&<><br/>{primary(item.placeLabel,locale)}</>}<br/><small>{primary(item.description,locale)||t.publicReviewNote}</small>{item.sourceTitle&&<><br/>{item.sourceUrl?<SourceLink href={item.sourceUrl} label={primary(item.sourceTitle,locale)} locale={locale}/>:primary(item.sourceTitle,locale)}{item.sourceLocator&&<><br/><small>{item.sourceLocator}</small></>}{recordAuthorityCited(item,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}</>}</>}<br/><a href="#community">{t.contributeReview} →</a></div>
+  return <div className={`review-candidate-popup ${compact?'compact':''}`}><strong>{primary(item.name,locale)}</strong>{!compact&&secondary(item.name,locale)&&<><br/><span>{secondary(item.name,locale)}</span></>}<br/><b>{t.reviewCandidateCategory}:</b> {t.reviewCategoryLabels[item.recordKind]||item.recordKind}{!compact&&<>{item.startYear!=null&&<><br/>{timelineYearLabel(item.startYear,locale)}{item.endYear!=null&&item.endYear!==item.startYear?`–${timelineYearLabel(item.endYear,locale)}`:''}</>}{item.placeLabel&&<><br/>{primary(item.placeLabel,locale)}</>}<br/><small>{primary(item.description,locale)||t.publicReviewNote}</small>{item.sourceTitle&&<><br/>{item.sourceUrl?<SourceLink href={item.sourceUrl} label={primary(item.sourceTitle,locale)} locale={locale}/>:primary(item.sourceTitle,locale)}{item.sourceLocator&&<><br/><small>{item.sourceLocator}</small></>}{recordAuthorityCited(item,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}</>}</>}<br/><a href="#contribute">{t.contributeReview} →</a></div>
 }
 
 function PublicDataDepth({t}){
@@ -723,8 +728,8 @@ function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInsc
 const districtSectionRoutes={'district-audit':'districts','inscription-audit':'districts','district-inventory':'districts'}
 
 export default function App(){
-  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','community','profile','about','india-research']
-  const normalizeView=hash=>hash==='history'?'district-history':districtSectionRoutes[hash]||hash
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','research-tasks','contribute','profile','reviews','operations','about','india-research']
+  const normalizeView=hash=>hash==='history'?'district-history':hash==='community'?'contribute':districtSectionRoutes[hash]||hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
   const [admin,setAdmin]=useState(()=>window.location.hash.slice(1)==='admin')
@@ -883,12 +888,13 @@ export default function App(){
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
   const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['districts',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಅಟ್ಲಸ್':'District atlas']]
-  const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗ':'Resources & collaboration'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence workflow'],['community',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[])]
+  const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು':'Resources'],['research-tasks',locale==='kn'?'ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು':'Research tasks'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence'],['india-research',locale==='kn'?'ಭಾರತ ಸಂಶೋಧನೆ':'India research'],['contribute',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[]),...(communityUser?.roles?.some(role=>['reviewer','administrator'].includes(role))?[['reviews',locale==='kn'?'ಪರಿಶೀಲನಾ ಸರದಿ':'Review queue']]:[]),...(communityUser?.roles?.includes('administrator')?[['operations',locale==='kn'?'ಸದಸ್ಯರ ನಿರ್ವಹಣೆ':'User administration'],['admin',locale==='kn'?'ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ':'Data administration']]:[])]
   const isNavActive=key=>key==='districts'?['districts','district-history','inscriptions'].includes(view):view===key
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${isNavActive(key)?'active':''}`.trim()} aria-current={isNavActive(key)?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(isNavActive(key)){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
-  const renderReviewLayerNote=()=>{const note=layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null;return <>{note}<details className="sidebar-object-icon-key sidebar-object-icon-key-current"><summary>{locale==='kn'?'ನಕ್ಷೆ ಗುರುತುಗಳ ಸೂಚಿ':'Map icon key'}</summary><div>{sidebarIconEntries.map(([kind,label])=><span key={kind}><i className={`legend-object-icon ${kind}`}>{objectIcon(kind)}</i>{label}</span>)}</div></details></>}
+  const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
   const renderMapLayerControl=([key,label])=><div className={`map-layer-row map-layer-row-${key}`} key={key}><label className={key==='people'?'people-map-toggle':''}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key]}))}/><span>{label}</span></label>{key==='inscriptions'&&layers.inscriptions&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label>}{key==='researchCandidates'&&layers.researchCandidates&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllReviewCandidates} onChange={event=>setShowAllReviewCandidates(event.target.checked)}/><span>{t.showAllReviewCandidates}</span></label>}</div>
   const sidebarIconEntries=[['temple',t.timelineCategories.temples],['inscription',t.timelineCategories.inscriptions],['artifact',t.timelineCategories.artifacts],['war',t.timelineCategories.wars],['monument',t.timelineCategories.monuments],['fort',t.heritageCategoryLabels.fort],['palace',t.heritageCategoryLabels.palace],['museum',t.heritageCategoryLabels.museum],['archive',t.heritageCategoryLabels.archive],['library',t.heritageCategoryLabels.library],['park',t.heritageCategoryLabels['historic-park']],['territory',t.externalKingdoms]]
+  const renderObjectIconKey=()=> <div className="map-object-icon-key"><strong className="map-object-icon-key-title">{locale==='kn'?'ನಕ್ಷೆ ಗುರುತುಗಳ ಸೂಚಿ':'Map icon key'}</strong>{sidebarIconEntries.map(([kind,label])=><span key={kind}><i className={`legend-object-icon ${kind}`}>{objectIcon(kind)}</i>{label}</span>)}</div>
   if(admin){
     const staticBuild=import.meta.env.VITE_STATIC_DATASET==='true'
     if(staticBuild)return <AdminAccessGate locale={locale} staticBuild/>
@@ -937,6 +943,7 @@ export default function App(){
           <button className="map-legend-toggle mobile-overlay-toggle" aria-expanded={mapLegendOpen} aria-label={mapLegendOpen?t.minimizeMapLegend:t.showMapLegend} onClick={()=>setMapLegendOpen(open=>!open)}>
             {mapLegendOpen?t.minimizeMapLegend:t.showMapLegend}
           </button>
+          {mapLegendOpen&&renderObjectIconKey()}
           <div className="map-legend-content">{compareYear!=null?<div className="comparison-legend"><span><i className="territory-symbol core"></i>{year}: {t.beforeLayer}</span><span><i className="territory-symbol comparison"></i>{compareYear}: {t.afterLayer}</span><span>{t.unchangedEvidence}: {unchangedTerritoryCount}</span><small>{t.comparisonHelp}</small></div>:<><span><i className="territory-symbol core"></i>{t.territoryClasses['core-administered']}</span>{layers.districts&&<><span><i className="district-symbol"></i>{t.districtBoundaries}</span><a href="https://mapservice.gov.in/mapserviceserv176/rest/services/BharatMapService_Karnataka/Admin_Boundary_District/MapServer" target="_blank" rel="noreferrer">{t.districtBoundarySource} ↗</a></>}{layers.heritageSites&&<><span><i className="dot heritage-dot"></i>{t.heritageCandidates} · {visibleHeritage.length}</span><div className="heritage-authority-legend"><b>{t.heritageAuthorityFilter}</b>{['unesco','asi','state','research'].map(tag=><span key={tag}>{t.heritageAuthorityLabels[tag]}</span>)}</div></>}{layers.territorialReach&&<><span><i className="territory-symbol influence"></i>{t.territoryClasses['tributary-influence']}</span><span><i className="territory-symbol contested"></i>{t.territoryClasses['contested-zone']}</span><span><i className="territory-symbol temporary"></i>{t.territoryClasses['temporary-occupation']}</span></>}<span><i className="dot event-dot"></i>{t.events}</span>{(layers.events||layers.researchCandidates||layers.inscriptions||layers.culture||layers.temples||layers.heritageSites)&&<span><i className="research-ring"></i>{t.pendingHumanReview}</span>}{layers.events&&<div className="connection-legend"><b>{t.historicalConnections}</b>{Object.entries(connectionColors).filter(([key])=>key!=='military'&&key!=='other').map(([key,color])=><span key={key}><i className="connection-line" style={{'--connection-color':color}}></i>{t.connectionTypes[key]}</span>)}</div>}{layers.culture&&<span><i className="dot culture-dot"></i>{t.culturalHeritage} · {activeMapCulture.filter(item=>!isTempleRecord(item)).length}</span>}{layers.temples&&<span><i className="dot culture-dot"></i>{t.searchKinds.templeSites} · {activeMapCulture.filter(isTempleRecord).length}</span>}{layers.territorialReach&&highlightedReachTerritories.length>0&&<div className="active-territories"><b>{t.activeTerritorialEvidence}</b>{highlightedReachTerritories.map(territory=><button key={territory.id} className={selectedTerritory?.id===territory.id?'active':''} onClick={()=>chooseTerritory(territory)}><i style={{background:territoryColors[territory.classification]}}></i>{primary(territory.name,locale)}</button>)}</div>}</>}</div>
         </div>
         <EventRail locale={locale} t={t} year={year} stories={layers.externalKingdoms?timelineStories:timelineStories.filter(story=>story.storyCategory!=='externalKingdoms')} selectedId={selectedEvent?.id||selectedTerritory?.id||selectedPerson?.id||selectedWork?.id||selectedInscription?.id||selectedCulture?.id||selectedPeriodicalSite?.id||selectedSearchPlace?.reviewCandidateId||selectedSearchPlace?.periodicalSiteId||selectedSearchPlace?.artifactId||selected} onSelect={chooseTimelineStory} onCategoryChange={coordinateTimelineCategory}/>
@@ -957,8 +964,11 @@ export default function App(){
     {view==='scripts'&&<Suspense fallback={<PortalFallback/>}><ScriptEvolutionExplorer locale={locale} initialSelectedId={selectedScriptId}/></Suspense>}
     {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
-    {view==='community'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
-    {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} profileOnly onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
+    {view==='research-tasks'&&<Suspense fallback={<PortalFallback/>}><CommunityResearchTasks locale={locale}/></Suspense>}
+    {view==='contribute'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="contribute" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
+    {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="profile" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
+    {view==='reviews'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="reviews" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
+    {view==='operations'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="operations" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='about'&&<Suspense fallback={<PortalFallback/>}><About locale={locale}/></Suspense>}
     {view==='india-research'&&<Suspense fallback={<PortalFallback/>}><IndiaResearchExplorer locale={locale}/></Suspense>}
     <GuidedTour tourKey={view} locale={locale} steps={guidedTourSteps(view,locale,Boolean(communityUser))}/>

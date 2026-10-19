@@ -1,6 +1,6 @@
 # Community user guide
 
-Updated: 2026-10-12
+Updated: 2026-10-19
 
 The public atlas is readable without an account. An account is needed only to submit, review or administer research. All edits are saved in MariaDB; the browser is never the research-data source of truth.
 
@@ -12,6 +12,19 @@ The public atlas is readable without an account. An account is needed only to su
 4. If you forget the password, choose **Forgot password?**. The one-time link expires after the configured interval and invalidates existing sessions when used.
 
 Never send a password or reset link to an administrator. Administrators cannot read passwords.
+
+## Finding the right workspace
+
+- **Research tasks / ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು (`#research-tasks`)** is the public task marketplace. Search by subject, district, priority or evidence gap before choosing work.
+- **Contribute / ಕೊಡುಗೆ ನೀಡಿ (`#contribute`)** contains only contribution work: a new guided submission, your drafts/submissions and collaboration proposals.
+- **Profile / ಪ್ರೊಫೈಲ್ (`#profile`)** contains identity, affiliation, verification, notifications, contribution history and certificates.
+- **Evidence workflow / ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ (`#evidence`)** is divided into Overview, Priorities and Tasks so the whole evidence board is not shown at once.
+- **Review queue / ಪರಿಶೀಲನಾ ಸರದಿ (`#reviews`)** appears only for reviewers and administrators.
+- **User operations / ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ (`#operations`)** appears only for administrators and contains account approval, identity verification and research-campaign controls.
+- **Data administration (`#admin`)** is the separate permanent dataset editor. Use it for records, sources, citations, relationships, imports, validation and MariaDB revisions—not for user approvals.
+- **India research (`#india-research`)** is the broad discovery index. Its imported leads are not promoted to the Karnataka atlas until independently verified.
+
+Old `#community` bookmarks continue to open the focused Contribution workspace.
 
 ## Guidance by role
 
@@ -49,11 +62,11 @@ Never send a password or reset link to an administrator. Administrators cannot r
 
 ### Administrator
 
-1. Open **Administration workspace → Account approvals**.
+1. Open **User operations / ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ → Account approvals**.
 2. Check the applicant's name, profession and affiliation; approve or reject the account.
 3. Appoint reviewer or verification-officer roles only after confirming competence and scope. Grant export access sparingly.
-4. Manage campaigns and staged CSV/KML imports; imported rows still require review.
-5. Monitor notifications, review queues and release readiness. Publish only a validated, approved MariaDB revision.
+4. Manage campaigns from User operations; imported CSV/KML batches and rows remain in the Contribution and Review workspaces and still require review.
+5. Use the separate Review queue for moderation and Data administration for canonical records, citations and release readiness. Publish only a validated, approved MariaDB revision.
 
 Suspending an account blocks sign-in without deleting its historical audit record. Re-approving reactivates it.
 

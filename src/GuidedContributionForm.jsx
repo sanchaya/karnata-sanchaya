@@ -52,4 +52,4 @@ function buildRecord(draft,action,hasLocation){
   return Object.fromEntries(Object.entries(record).filter(([,value])=>!(value===''||(Array.isArray(value)&&!value.length))))
 }
 const proposalTitle=(draft,labels)=>`${labels[draft.recordType]} — ${draft.nameKn||draft.nameEn||draft.target}`
-const clearContributionParams=()=>{const url=new URL(window.location.href);['contributeTarget','contributeType','contributeName','contributeAction'].forEach(key=>url.searchParams.delete(key));history.replaceState(null,'',`${url.pathname}${url.search}#community`)}
+const clearContributionParams=()=>{const url=new URL(window.location.href);['contributeTarget','contributeType','contributeName','contributeAction'].forEach(key=>url.searchParams.delete(key));history.replaceState(null,'',`${url.pathname}${url.search}#contribute`)}

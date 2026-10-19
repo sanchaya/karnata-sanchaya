@@ -77,7 +77,7 @@ Most historical entities remain `needs-review` by design. The reviewed counts in
 2. Apply migrations `011_v029_community_operations.sql` and `012_password_reset.sql`, configure `RESEND_API_KEY`/`MAIL_FROM`, and retain at least two approved reviewers plus three approved contributors.
 3. Create one bounded campaign for Sannati, Maski and the eight-district heritage batch; assign each evidence task to a contributor and a different reviewer.
 4. Complete and record the backup/isolated-restore, real signup/password-recovery and approved-only static-publication drills in [`v030-reviewer-pilot.md`](v030-reviewer-pilot.md).
-5. Hard-refresh `#districts`, `#community`, `#evidence` and `#admin` on desktop, tablet and mobile after the live deployment.
+5. Hard-refresh `#districts`, `#contribute`, `#evidence` and `#admin` on desktop, tablet and mobile after the live deployment.
 
 ### P1 — finish the evidence work already promised
 

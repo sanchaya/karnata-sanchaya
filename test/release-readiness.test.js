@@ -33,11 +33,12 @@ const openDatasetExportSource = await readFile(new URL('../scripts/generate-open
 const atlasSource = await readFile(new URL('../src/data/atlas.js', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'community', 'profile', 'about']
+  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'research-tasks', 'contribute', 'profile', 'reviews', 'operations', 'about', 'india-research']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')
-  assert.match(appSource, /hash==='history'\?'district-history':districtSectionRoutes\[hash\]\|\|hash/, 'legacy history links must resolve to district history')
+  assert.match(appSource, /hash==='history'\?'district-history'/, 'legacy history links must resolve to district history')
+  assert.match(appSource, /hash==='community'\?'contribute'/, 'legacy community links must resolve to the focused contribution workspace')
   for (const section of ['district-audit', 'inscription-audit', 'district-inventory']) {
     assert.match(appSource, new RegExp(`['"]${section}['"]:\\s*['"]districts['"]`), `${section} must stay inside the District Atlas instead of falling back to the main atlas`)
   }
@@ -63,6 +64,8 @@ test('navigation separates historical exploration from project utilities', () =>
 test('public navigation reports the depth of the published research dataset', () => {
   assert.match(appSource, /const publicDataDepth=/, 'public dataset counts must be derived from the bundled release data')
   assert.match(appSource, /peopleCandidateMeta\?\.candidateCount/, 'dataset depth must include the public Wikimedia candidate corpus without bundling every row into the top-level app')
+  assert.match(appSource, /indiaResearchMeta\.recordCount/, 'dataset depth must include the separately code-split India research corpus')
+  assert.match(appSource, /indiaResearchMeta\.sourceCount/, 'dataset depth must include India research source candidates')
   assert.match(appSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
@@ -388,12 +391,15 @@ test('public map exposes review-pending information across mapped categories', (
   }
   assert.match(appSource, /showAllReviewCandidates,setShowAllReviewCandidates\]=useState\(false\)/, 'pending information must start timeline-filtered instead of flooding the opening map')
   assert.match(appSource, /checked=\{showAllReviewCandidates\}/, 'the complete public review layer must remain available through an explicit control')
-  assert.match(appSource, /href="#community"/, 'review candidates must link to the contribution workflow')
+  assert.match(appSource, /href="#contribute"/, 'review candidates must link to the contribution workflow')
   assert.match(appSource, /pending:true/, 'review candidates must retain a visibly pending marker style')
   assert.match(appSource, /mobile-overlay-toggle/, 'dense map overlays must expose compact mobile toggles')
   assert.match(appSource, /aria-expanded=\{mapLegendOpen\}/, 'the mobile map legend must expose its open state')
   assert.match(appSource, /showMapLegend/, 'the atlas map legend must provide a visible restore control when minimized')
   assert.match(appSource, /minimizeMapLegend/, 'the atlas map legend must provide a visible minimize control')
+  assert.match(appSource, /mapLegendOpen&&renderObjectIconKey\(\)/, 'the complete map icon key must live in the collapsible map legend')
+  assert.doesNotMatch(appSource, /renderReviewLayerNote=.*sidebar-object-icon-key/, 'the map icon key must not be buried inside the scrollable map-layer list')
+  assert.match(stylesSource, /\.map-object-icon-key-title\{grid-column:1\/-1/, 'the external icon key must retain a distinct bilingual heading')
   assert.match(stylesSource, /\.map-legend\.is-minimized \.map-legend-content\{display:none\}/, 'the minimized atlas legend must hide only the legend panel content')
   assert.match(appSource, /renderMapLayerControl/, 'review options must share the same layer-control path on the sidebar and map-only drawer')
 })
@@ -467,7 +473,9 @@ test('relations explorer exposes genealogy and feudatory network edges', () => {
 
 test('relations layout keeps the map and timeline usable on narrow screens', () => {
   assert.match(relationsSource,/className="relations-timeline"/, 'relations needs an in-map timeline for direct traversal')
-  assert.match(relationsSource,/const \[open,setOpen\]=useState\(false\)/, 'the review matrix should collapse by default')
+  assert.match(relationsSource,/const \[panel,setPanel\]=useState\('matrix'\)/, 'the relation research panels must use a compact tabbed view')
+  assert.match(relationsStylesSource,/relations-extra\[data-panel="matrix"\]/, 'only the active relation research tab should be visible')
+  assert.match(relationsStylesSource,/relations-filters \.map-theme-control\{position:static/, 'the historical map control must remain visible inside the filters')
   assert.match(relationsSource,/timelineStories=filtered\.slice\(\)\.sort/, 'the in-map timeline must follow the active filtered relation set')
   assert.match(relationsStylesSource,/\.relations-map\{height:68svh;min-height:480px\}/, 'mobile relations maps need enough height for map exploration')
   assert.match(relationsStylesSource,/\.relations-timeline\{position:absolute/, 'the timeline must stay attached to the map instead of pushing the matrix below the page')

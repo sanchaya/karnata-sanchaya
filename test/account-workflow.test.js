@@ -18,7 +18,7 @@ test('configured password recovery sends a plain-text bilingual-safe email',asyn
   let request
   const config={env:'production',passwordResetMinutes:30,mail:{apiKey:'secret',from:'Atlas <noreply@example.org>'}}
   const fetchImpl=async(url,options)=>{request={url,options};return {ok:true,json:async()=>({id:'mail-1'})}}
-  const result=await sendPasswordResetEmail({to:'reader@example.org',url:'https://atlas.example/?resetToken=opaque#community',locale:'en',config,fetchImpl})
+  const result=await sendPasswordResetEmail({to:'reader@example.org',url:'https://atlas.example/?resetToken=opaque#contribute',locale:'en',config,fetchImpl})
   assert.equal(result.id,'mail-1')
   assert.equal(request.url,'https://api.resend.com/emails')
   const payload=JSON.parse(request.options.body)

@@ -121,11 +121,13 @@ The GitHub Pages workflow supplies `PUBLIC_SITE_URL` and generates an absolute s
 
 ## Community workflow
 
-Open **ಕೊಡುಗೆ ನೀಡಿ / Contribute**. Registration captures profession and institutional affiliation. Sanchaya approves accounts; contributors then save and submit cited proposals. Appointed reviewers approve or request changes, and approved work receives auditable karma points. Institution IDs are optional, encrypted, access-restricted, and excluded from public exports.
+Open **ಕೊಡುಗೆ ನೀಡಿ / Contribute** (`#contribute`). Registration captures profession and institutional affiliation. Sanchaya approves accounts; contributors then save and submit cited proposals. Appointed reviewers approve or request changes, and approved work receives auditable karma points. Institution IDs are optional, encrypted, access-restricted, and excluded from public exports.
 
 Registration requires explicit community-terms and privacy consent. **Forgot password?** sends a one-time expiring recovery link on the live portal; using it invalidates existing sessions. Configure `RESEND_API_KEY`, `MAIL_FROM`, `APP_ORIGIN` and `PASSWORD_RESET_MINUTES` in production. Administrators can approve, reject, suspend or reactivate accounts and appoint reviewer, verification-officer and exporter roles from the Administration workspace.
 
-The community research marketplace reports open counts and offers lazy, searchable queues for inscriptions, literature, district history, people, monuments and temples, relations, coins and scripts, territorial evidence, rulers and dynasties, grouped periodical-place packets, and source/translation review. Evidence packets also link to the permanent human Evidence Workflow instead of creating a separate browser-only queue.
+The standalone `#research-tasks` marketplace reports open counts and offers lazy, searchable queues for inscriptions, literature, district history, people, monuments and temples, relations, coins and scripts, territorial evidence, rulers and dynasties, grouped periodical-place packets, and source/translation review. Evidence packets link to the permanent human Evidence Workflow instead of creating a separate browser-only queue.
+
+Authenticated work is separated by purpose: `#profile` for identity, affiliation and activity; `#contribute` for new and existing submissions; `#reviews` for appointed reviewers; `#operations` for administrator account approvals, verification and campaigns; and `#admin` for permanent dataset/source editing. Legacy `#community` links redirect to `#contribute`.
 
 The live application and GitHub Pages have intentionally different responsibilities:
 
@@ -145,11 +147,11 @@ Run the live service and sign in as an approved administrator, then open `#admin
 
 The live `#admin` workspace requires an approved administrator session and stores every saved full-dataset revision in MariaDB. It does not use browser-local drafts. JSON import is staged in the editor until an administrator explicitly saves a new server revision; JSON export remains a portable review artifact. To publish, review the permanent revision, run `npm run check`, and deliberately generate the approved static release.
 
-The admin workspace remains available only by opening `#admin` directly for maintainers. It is not linked from the public navigation and is protected by the live administrator role; the static GitHub Pages build remains read-only.
+The admin workspace is shown only to signed-in administrators, is protected by the live administrator role, and stays disabled in the static GitHub Pages build. User approvals are intentionally handled in `#operations`; research moderation is handled in `#reviews`.
 
 Use the **Resources & collaborations management** shortcuts in the admin toolbar to maintain source metadata and collaboration records. Source fields include authors/organizations, publisher or repository, DOI, ISBN, URL and review state; collaboration records include entity type, public stage, scope and bilingual descriptions. Export and review the complete JSON before publishing.
 
-The direct-only `#india-research` workspace contains the complete BharatRajya and WhatIsIndia discovery imports without widening the ordinary Karnataka timeline. On the live service, Admin has a separate paginated discovery queue for those records, underlying source candidates and unresolved source-page failures. Run `npm run db:migrate` followed by `npm run db:sync-research-discovery` after a deliberate source refresh; `scripts/update-live.sh` performs both automatically for committed imports. Admin review notes, citations and canonical-target links are retained when repository source payloads are refreshed.
+The `#india-research` workspace, now available from the utility navigation, contains the complete India-wide discovery imports without widening the ordinary Karnataka timeline. On the live service, Admin has a separate paginated discovery queue for those records, underlying source candidates and unresolved source-page failures. Run `npm run db:migrate` followed by `npm run db:sync-research-discovery` after a deliberate source refresh; `scripts/update-live.sh` performs both automatically for committed imports. Admin review notes, citations and canonical-target links are retained when repository source payloads are refreshed.
 
 Open `#evidence` to operate the current evidence board. The board now includes reviewer assignments, review notes, saved status history, source citations, a reviewer operations summary and a ready-for-promotion queue. Every task shows its attached source citations directly on the card and requires at least one before it can move to awaiting-review or complete; citations are permanent and additive, so submitting a new one never removes an earlier one. A completed assignment is still only a workflow signal; publication requires an independently reviewed evidence packet, validation, a permanent MariaDB revision and a deliberate static release.
 

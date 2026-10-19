@@ -5,8 +5,13 @@ import { readFile } from 'node:fs/promises'
 const source=path=>readFile(new URL(`../${path}`,import.meta.url),'utf8')
 
 test('community contribution uses a guided structured workflow instead of JSON entry',async()=>{
-  const [community,guided,tasks]=await Promise.all([source('src/Community.jsx'),source('src/GuidedContributionForm.jsx'),source('src/CommunityResearchTasks.jsx')])
+  const [app,community,guided,tasks]=await Promise.all([source('src/App.jsx'),source('src/Community.jsx'),source('src/GuidedContributionForm.jsx'),source('src/CommunityResearchTasks.jsx')])
   assert.match(community,/GuidedContributionForm/)
+  assert.match(community,/section='contribute'/)
+  assert.match(community,/contributionView/)
+  assert.doesNotMatch(community,/profileOnly/)
+  for(const route of ['research-tasks','contribute','profile','reviews','operations'])assert.match(app,new RegExp(`view==='${route}'`))
+  assert.match(app,/hash==='community'\?'contribute'/)
   assert.doesNotMatch(community,/name="record"/)
   assert.match(guided,/Guided contribution/)
   assert.match(guided,/Add missing record/)
