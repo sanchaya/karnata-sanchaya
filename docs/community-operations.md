@@ -1,6 +1,6 @@
 # Community operations and release handoff
 
-Updated: 2026-10-12
+Updated: 2026-10-19
 
 This is the operating checklist for the live MariaDB portal. It keeps community work permanent and reviewable while keeping the GitHub Pages site a deliberate, read-only release. The role-specific public workflow is documented in [user-guide.md](user-guide.md). Account recovery uses one-time, expiring, hashed tokens; production email delivery must be configured and exercised before inviting contributors.
 
@@ -49,3 +49,9 @@ Migration `011_v029_community_operations.sql` adds notifications, scoped campaig
 - If a revision conflict occurs, reload the server revision, reconcile the record-level change, validate again and save as a new revision. Do not overwrite a newer revision blindly.
 
 The admin dashboard reads `/api/administration/release-readiness` for the counts above. This endpoint is administrator-only and never exposes contributor email, private notes or document data.
+
+## Atlas v0.30 reviewer pilot
+
+The Admin readiness panel now reports only facts that the live service can verify: required migrations, password-reset mail configuration, approved cohort sizes, active campaign membership, independent evidence assignment and a permanent dataset revision. It also shows pending staged files and evidence-review counts. It deliberately does not claim that a backup restored successfully, a real email arrived or a static release was inspected; those remain manual operator checks.
+
+Run the bounded pilot in [`v030-reviewer-pilot.md`](v030-reviewer-pilot.md) before opening general registration. The initial campaign should cover Sannati, Maski and the first eight-district heritage batch. Each scholarly task must have a contributor and a different reviewer.

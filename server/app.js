@@ -128,15 +128,35 @@ app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('a
 })
 
 app.get('/api/administration/release-readiness',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
-  const [accounts,contributions,verifications,reviewers,latest,published]=await Promise.all([
+  const requiredMigrations=['011_v029_community_operations.sql','012_password_reset.sql']
+  const [accounts,contributions,verifications,reviewers,contributors,latest,published,migrations,evidence]=await Promise.all([
     pool.query("SELECT COUNT(*) total FROM users WHERE account_status='pending'"),
     pool.query("SELECT COUNT(*) total FROM contributions WHERE status='submitted'"),
     pool.query("SELECT COUNT(*) total FROM verification_requests WHERE status='pending'"),
-    pool.query("SELECT COUNT(DISTINCT ur.user_id) total FROM user_roles ur JOIN users u ON u.id=ur.user_id WHERE ur.role IN ('reviewer','verification-officer') AND u.account_status='approved'"),
+    pool.query("SELECT COUNT(DISTINCT ur.user_id) total FROM user_roles ur JOIN users u ON u.id=ur.user_id WHERE ur.role='reviewer' AND u.account_status='approved'"),
+    pool.query("SELECT COUNT(DISTINCT ur.user_id) total FROM user_roles ur JOIN users u ON u.id=ur.user_id WHERE ur.role='contributor' AND u.account_status='approved' AND NOT EXISTS (SELECT 1 FROM user_roles reviewer_role WHERE reviewer_role.user_id=ur.user_id AND reviewer_role.role='reviewer')"),
     pool.query('SELECT revision,created_at FROM dataset_snapshots ORDER BY revision DESC LIMIT 1'),
-    pool.query('SELECT contribution_count,published_at FROM published_snapshots ORDER BY published_at DESC LIMIT 1')
+    pool.query('SELECT contribution_count,published_at FROM published_snapshots ORDER BY published_at DESC LIMIT 1'),
+    pool.query('SELECT version FROM schema_migrations WHERE version IN (?,?)',requiredMigrations),
+    pool.query("SELECT COUNT(*) assigned,SUM(status='awaiting-review') awaiting_review,SUM(assignee IS NOT NULL AND assignee<>'' AND reviewer IS NOT NULL AND reviewer<>'' AND assignee<>reviewer) independently_assigned FROM evidence_assignments")
   ])
-  res.json({community:{pendingAccounts:Number(accounts[0]?.total||0),submittedContributions:Number(contributions[0]?.total||0),pendingVerifications:Number(verifications[0]?.total||0),appointedReviewers:Number(reviewers[0]?.total||0)},dataset:{revision:Number(latest[0]?.revision||0),updatedAt:latest[0]?.created_at||null},published:{contributionCount:Number(published[0]?.contribution_count||0),publishedAt:published[0]?.published_at||null}})
+  const appliedMigrations=new Set(migrations.map(row=>row.version)),communityOperationsReady=appliedMigrations.has(requiredMigrations[0])
+  const [campaigns,campaignMembers,imports]=communityOperationsReady?await Promise.all([
+    pool.query("SELECT COUNT(*) total FROM research_campaigns WHERE status='active'"),
+    pool.query("SELECT COUNT(DISTINCT m.user_id) total FROM research_campaign_members m JOIN research_campaigns c ON c.id=m.campaign_id WHERE c.status='active'"),
+    pool.query("SELECT COUNT(*) total FROM research_import_batches WHERE status IN ('submitted','changes-requested')")
+  ]):[[{total:0}],[{total:0}],[{total:0}]]
+  const revision=Number(latest[0]?.revision||0),reviewerCount=Number(reviewers[0]?.total||0),contributorCount=Number(contributors[0]?.total||0),activeCampaigns=Number(campaigns[0]?.total||0),members=Number(campaignMembers[0]?.total||0),assigned=Number(evidence[0]?.assigned||0),independent=Number(evidence[0]?.independently_assigned||0)
+  const checks=[
+    {id:'migrations',ready:requiredMigrations.every(version=>appliedMigrations.has(version)),detail:`${requiredMigrations.filter(version=>appliedMigrations.has(version)).length}/${requiredMigrations.length}`},
+    {id:'mail',ready:emailDeliveryConfigured(config),detail:emailDeliveryConfigured(config)?'configured':'missing'},
+    {id:'reviewers',ready:reviewerCount>=2,detail:String(reviewerCount)},
+    {id:'contributors',ready:contributorCount>=3,detail:String(contributorCount)},
+    {id:'campaign',ready:activeCampaigns>0&&members>=3,detail:`${activeCampaigns}/${members}`},
+    {id:'assignments',ready:assigned>0&&independent>0,detail:`${independent}/${assigned}`},
+    {id:'dataset',ready:revision>0,detail:String(revision)}
+  ]
+  res.json({community:{pendingAccounts:Number(accounts[0]?.total||0),submittedContributions:Number(contributions[0]?.total||0),pendingVerifications:Number(verifications[0]?.total||0),appointedReviewers:reviewerCount,approvedContributors:contributorCount},dataset:{revision,updatedAt:latest[0]?.created_at||null},published:{contributionCount:Number(published[0]?.contribution_count||0),publishedAt:published[0]?.published_at||null},operations:{activeCampaigns,campaignMembers:members,pendingImports:Number(imports[0]?.total||0),evidenceAssignments:assigned,awaitingEvidenceReview:Number(evidence[0]?.awaiting_review||0),independentAssignments:independent},pilot:{version:'0.30',ready:checks.every(check=>check.ready),passed:checks.filter(check=>check.ready).length,total:checks.length,checks,manualChecks:['backup-restore','signup-recovery','approved-static-release']}})
 })
 
 app.get('/api/evidence/assignments',requireUser,requireApproved,async(req,res)=>{
