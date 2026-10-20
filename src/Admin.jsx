@@ -6,6 +6,7 @@ import { alternateRecordTitle, localizedRecordTitle, missingKannadaTranslation, 
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
 import AdminDiscoveryQueue from './AdminDiscoveryQueue'
+import { calculateDatasetDepth } from './data/dataset-depth'
 
 const collections = Object.keys(collectionLabels)
 const collectionPrefix = { polities:'polity', externalPolities:'external-polity', externalGovernancePhases:'external-governance', events:'event', culturalHeritage:'culture', periodicals:'periodical', epigraphiaArchiveTexts:'archive-epigraphia', artifacts:'artifact', templeInventoryLeads:'temple-inventory', heritageInventoryLeads:'heritage-inventory', naksheSites:'nakshe-site', reigns:'reign', territorialExtents:'extent', deepChronologies:'chronology', heritageAudits:'audit', districtHistoryResearch:'district-history', inscriptionAudits:'inscription-audit', people:'person', peopleCandidates:'person-candidate-q', martyrCandidates:'martyr-candidate-v5-p', places:'place', inscriptions:'inscription', works:'work', sources:'src', relationships:'rel', politicalRelations:'political-relation', collaborations:'collaboration' }
@@ -81,8 +82,8 @@ adminText.kn.collections.politicalRelations='ದ್ವಿಪಕ್ಷೀಯ ರ�
 adminText.kn.collections.collaborations='ಸಹಯೋಗಗಳು'
 adminText.kn.collections.peopleCandidates='ವ್ಯಕ್ತಿಗಳ ಪರಿಶೀಲನಾ ಅಭ್ಯರ್ಥಿಗಳು'
 adminText.kn.collections.martyrCandidates='ಹುತಾತ್ಮರ ನಿಘಂಟು ಪರಿಶೀಲನಾ ಅಭ್ಯರ್ಥಿಗಳು'
-Object.assign(adminText.kn,{progressTitle:'ದತ್ತಾಂಶ ಪ್ರಗತಿ ವರದಿ',progressIntro:'ಪರಿಶೀಲಿಸಿದ, ಬಾಕಿ ಮತ್ತು ದೋಷಗಳ ಸಂಕ್ಷಿಪ್ತ ಚಿತ್ರಣ',dataPoints:'ಒಟ್ಟು ದತ್ತಾಂಶ ಬಿಂದುಗಳು',verified:'ಪರಿಶೀಲಿಸಿದ / ಪ್ರಕಟಿತ',pending:'ಪರಿಶೀಲನೆ ಬಾಕಿ',validationErrors:'ದತ್ತಾಂಶ ದೋಷಗಳು',coverage:'ವ್ಯಾಪ್ತಿ',collectionProgress:'ಸಂಗ್ರಹವಾರು ಪ್ರಗತಿ'})
-Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntro:'A live summary of reviewed, pending and invalid records',dataPoints:'Total data points',verified:'Reviewed / published',pending:'Pending review',validationErrors:'Validation errors',coverage:'Coverage',collectionProgress:'Collection progress'})
+Object.assign(adminText.kn,{progressTitle:'ದತ್ತಾಂಶ ಪ್ರಗತಿ ವರದಿ',progressIntro:'ಸಾರ್ವಜನಿಕ ಪೋರ್ಟಲ್ ವ್ಯಾಪ್ತಿ ಮತ್ತು ಪ್ರಸ್ತುತ MariaDB ಆವೃತ್ತಿಯ ಸ್ಥಿತಿ',portalDepth:'ಪೋರ್ಟಲ್ ದತ್ತಾಂಶ ವ್ಯಾಪ್ತಿ',portalRecords:'ಒಟ್ಟು ಪೋರ್ಟಲ್ ದಾಖಲೆಗಳು',researchLeads:'ಸಂಶೋಧನಾ ಸುಳಿವುಗಳು',sources:'ಆಕರಗಳು',relationships:'ಸಂಬಂಧಗಳು',revisionProgress:'MariaDB ಆವೃತ್ತಿ ಪರಿಶೀಲನೆ',revisionRecords:'ಈ ಆವೃತ್ತಿಯ ದಾಖಲೆಗಳು',verified:'ಪರಿಶೀಲಿಸಿದ / ಪ್ರಕಟಿತ',pending:'ಪರಿಶೀಲನೆ ಬಾಕಿ',validationErrors:'ದತ್ತಾಂಶ ದೋಷಗಳು',coverage:'ವ್ಯಾಪ್ತಿ',collectionProgress:'ಸಂಗ್ರಹವಾರು ಪ್ರಗತಿ'})
+Object.assign(adminText.en,{progressTitle:'Dataset progress report',progressIntro:'Public portal depth and the status of the current MariaDB revision',portalDepth:'Portal dataset depth',portalRecords:'Total portal records',researchLeads:'Research leads',sources:'Sources',relationships:'Relationships',revisionProgress:'MariaDB revision review',revisionRecords:'Records in this revision',verified:'Reviewed / published',pending:'Pending review',validationErrors:'Validation errors',coverage:'Coverage',collectionProgress:'Collection progress'})
 Object.assign(adminText.kn,{sourceUsage:'ಉಲ್ಲೇಖ ಬಳಕೆ',sourceUsageNote:'ಈ ಆಕರವನ್ನು ಬಳಸುವ ದಾಖಲೆಗಳು ಮತ್ತು ಸ್ಥಾನಸೂಚಿಗಳನ್ನು ಇಲ್ಲಿ ನೋಡಿ. ದಾಖಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ಉಲ್ಲೇಖ ತಿದ್ದುಪಡಿ ಮಾಡಿ ಅಥವಾ ಹೊಸ ಆಕರ ಸೇರಿಸಿ.',noSourceUsage:'ಈ ಆಕರವನ್ನು ಇನ್ನೂ ಯಾವುದೇ ದಾಖಲೆ ಜೋಡಿಸಿಲ್ಲ.'})
 Object.assign(adminText.kn,{sourceReviewTitle:'ಆಕರ ಪರಿಶೀಲನಾ ಪಟ್ಟಿ',citedSources:'ಉಲ್ಲೇಖಿತ ಆಕರಗಳು',unlinkedSources:'ಜೋಡಿಸದ ಆಕರಗಳು',pendingSources:'ಪರಿಶೀಲನೆ ಬಾಕಿ',sourceLinks:'ಬಳಕೆಗಳು',openSource:'ಆಕರ ತೆರೆಯಿರಿ',englishScope:'ಆಕರದ ಇಂಗ್ಲಿಷ್ ವ್ಯಾಪ್ತಿ',kannadaScope:'ಆಕರದ ಕನ್ನಡ ವ್ಯಾಪ್ತಿ',archiveId:'ಆರ್ಕೈವ್ ಗುರುತು',alternateUrls:'ಪರ್ಯಾಯ URLಗಳು (ಪ್ರತಿ ಸಾಲಿಗೆ ಒಂದು)'})
 Object.assign(adminText.en,{sourceReviewTitle:'Reference review register',citedSources:'Cited sources',unlinkedSources:'Unlinked sources',pendingSources:'Awaiting review',sourceLinks:'uses',openSource:'Open source',englishScope:'English evidence scope',kannadaScope:'Kannada evidence scope',archiveId:'Archive identifier',alternateUrls:'Alternate URLs (one per line)'})
@@ -147,6 +148,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     const total=rows.reduce((sum,row)=>sum+row.total,0);const verified=rows.reduce((sum,row)=>sum+row.verified,0)
     return {rows,total,verified,pending:total-verified,percent:total?Math.round(verified/total*100):0}
   },[data])
+  const datasetDepth = useMemo(()=>calculateDatasetDepth(data),[data])
   const setEditor = record => { const next=clone(record); setDraft(next); setJsonText(JSON.stringify(next,null,2)) }
 
   const selectCollection = next => {
@@ -209,7 +211,10 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     <GuidedTour tourKey="admin" locale={locale} steps={adminTourSteps(locale)}/>
     <section className="admin-progress" aria-labelledby="admin-progress-title">
       <div className="admin-progress-head"><div><p className="eyebrow">{t.progressTitle}</p><h2 id="admin-progress-title">{t.progressIntro}</h2></div><strong>{progress.percent}% {t.coverage}</strong></div>
-      <div className="admin-stat-grid"><article><b>{progress.total}</b><span>{t.dataPoints}</span></article><article className="verified"><b>{progress.verified}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>
+      <div className="admin-progress-table-title">{t.portalDepth}</div>
+      <div className="admin-stat-grid"><article><b>{datasetDepth.totalRecords.toLocaleString('en-IN')}</b><span>{t.portalRecords}</span></article><article><b>{datasetDepth.researchLeads.toLocaleString('en-IN')}</b><span>{t.researchLeads}</span></article><article><b>{datasetDepth.sources.toLocaleString('en-IN')}</b><span>{t.sources}</span></article><article><b>{datasetDepth.relationships.toLocaleString('en-IN')}</b><span>{t.relationships}</span></article></div>
+      <div className="admin-progress-table-title">{t.revisionProgress}</div>
+      <div className="admin-stat-grid"><article><b>{progress.total.toLocaleString('en-IN')}</b><span>{t.revisionRecords}</span></article><article className="verified"><b>{progress.verified.toLocaleString('en-IN')}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending.toLocaleString('en-IN')}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>
       <div className="admin-progress-table"><div className="admin-progress-table-title">{t.collectionProgress}</div>{progress.rows.map(row=><div className="admin-progress-row" key={row.key}><span>{t.collections[row.key]||row.key}</span><div className="admin-progress-bar"><i style={{width:`${row.total?Math.round(row.verified/row.total*100):0}%`}}></i></div><b>{row.verified}/{row.total}</b><small>{row.total?Math.round(row.verified/row.total*100):0}%</small></div>)}</div>
     </section>
     <section className="admin-translation-glossary" aria-labelledby="admin-translation-title">

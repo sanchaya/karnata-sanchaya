@@ -31,6 +31,7 @@ const tabletStylesSource = await readFile(new URL('../src/tablet.css', import.me
 const packageSource = await readFile(new URL('../package.json', import.meta.url), 'utf8')
 const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
 const atlasSource = await readFile(new URL('../src/data/atlas.js', import.meta.url), 'utf8')
+const datasetDepthSource = await readFile(new URL('../src/data/dataset-depth.js', import.meta.url), 'utf8')
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'research-tasks', 'contribute', 'profile', 'reviews', 'operations', 'about', 'india-research']
@@ -62,11 +63,12 @@ test('navigation separates historical exploration from project utilities', () =>
 })
 
 test('public navigation reports the depth of the published research dataset', () => {
-  assert.match(appSource, /const publicDataDepth=/, 'public dataset counts must be derived from the bundled release data')
-  assert.match(appSource, /peopleCandidateMeta\?\.candidateCount/, 'dataset depth must include the public Wikimedia candidate corpus without bundling every row into the top-level app')
-  assert.match(appSource, /indiaResearchMeta\.recordCount/, 'dataset depth must include the separately code-split India research corpus')
-  assert.match(appSource, /indiaResearchMeta\.sourceCount/, 'dataset depth must include India research source candidates')
-  assert.match(appSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
+  assert.match(appSource, /const publicDataDepth=calculateDatasetDepth\(atlasData\)/, 'public dataset counts must use the shared depth calculation')
+  assert.match(adminSource, /calculateDatasetDepth\(data\)/, 'Admin must use the same portal-depth calculation as the public header')
+  assert.match(datasetDepthSource, /peopleCandidateMeta\?\.candidateCount/, 'dataset depth must include the public Wikimedia candidate corpus without bundling every row into the top-level app')
+  assert.match(datasetDepthSource, /discoveryMeta\.recordCount/, 'dataset depth must include the separately code-split India research corpus')
+  assert.match(datasetDepthSource, /discoveryMeta\.sourceCount/, 'dataset depth must include India research source candidates')
+  assert.match(datasetDepthSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
 })
