@@ -142,6 +142,7 @@ Run the live service and sign in as an approved administrator, then open `#admin
 - searches every field across each record collection;
 - offers common fields plus a complete JSON editor for geometry, citations and relationships;
 - reports dataset and per-record validation problems;
+- shows the same complete portal dataset-depth totals as the public header, separately from the current MariaDB revision's reviewed/pending collection counts;
 - imports JSON into the editor and saves complete, versioned revisions to MariaDB;
 - exports the current revision as a review artifact.
 
