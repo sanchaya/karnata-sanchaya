@@ -71,6 +71,7 @@ const adminText = {
 adminText.kn.workspace=`ಸ್ಥಿರ ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ಷೇತ್ರ · Atlas v${ATLAS_RELEASE_VERSION}`
 adminText.en.workspace=`Permanent research workspace · Atlas v${ATLAS_RELEASE_VERSION}`
 Object.assign(adminText.kn.collections,{externalPolities:'ಬಾಹ್ಯ ರಾಜ್ಯಗಳು',events:'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು',culturalHeritage:'ಸ್ಮಾರಕಗಳು, ಕಲೆ ಮತ್ತು ಸಂಸ್ಕೃತಿ',artifacts:'ರಾಜಚಿಹ್ನೆಗಳು ಮತ್ತು ವಸ್ತುಗಳು',reigns:'ಆಳ್ವಿಕೆ ಮತ್ತು ರಾಜಕೀಯ ಅವಧಿಗಳು',territorialExtents:'ಭೂಪ್ರದೇಶ ಸಾಕ್ಷ್ಯ',deepChronologies:'ಪ್ರಾಚೀನ ಕಾಲಕ್ರಮಗಳು',heritageAudits:'ಜಿಲ್ಲಾ ಪರಂಪರೆ ಪರಿಶೀಲನೆಗಳು'})
+Object.assign(adminText.kn.collections,{epigraphiaArchiveTexts:'ಎಪಿಗ್ರಾಫಿಯಾ ಆರ್ಕೈವ್ OCR ಪಠ್ಯಗಳು',karnatakaArchaeologyTexts:'ಕರ್ನಾಟಕ ಪುರಾತತ್ವ OCR ಪಠ್ಯಗಳು',feudatoryRelations:'ಸಾಮಂತ ಸಂಬಂಧಗಳು',genealogicalRelations:'ವಂಶಾವಳಿ ನಿರೂಪಣೆಗಳು',administrativeDivisions:'ಆಡಳಿತ ವಿಭಾಗಗಳು',boundaryEvidence:'ಗಡಿ ಸಾಕ್ಷ್ಯ ಕಡತಗಳು',coinRecords:'ನಾಣ್ಯ ದಾಖಲೆಗಳು',manuscriptWitnesses:'ಹಸ್ತಪ್ರತಿ ಸಾಕ್ಷಿಗಳು',inscriptionEditions:'ಶಾಸನ ಆವೃತ್ತಿಗಳು',scriptEvolution:'ಲಿಪಿ ವಿಕಾಸ',openDatasetCatalogue:'ಮುಕ್ತ ದತ್ತಸಂಚಯ ಪಟ್ಟಿ'})
 adminText.kn.collections.periodicals='ಪತ್ರಿಕೆಗಳು ಮತ್ತು ಮಾಸಿಕೆಗಳು'
 adminText.kn.collections.externalGovernancePhases='ಬಾಹ್ಯ ಆಡಳಿತ ಹಂತಗಳು'
 adminText.kn.collections.districtHistoryResearch='ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ ಸಂಶೋಧನೆ'
@@ -103,6 +104,7 @@ const adminTourSteps=(locale='kn')=>[
   {target:'.record-editor',title:{kn:'ದಾಖಲೆ ಸಂಪಾದಕ · ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಉಳಿಸಿ',en:'Record editor · validate and save'},body:{kn:'ಕನ್ನಡ ಮತ್ತು ಇಂಗ್ಲಿಷ್ ಕ್ಷೇತ್ರಗಳು, ದಿನಾಂಕ, ಪರಿಶೀಲನಾ ಸ್ಥಿತಿ, ಸಂಬಂಧಗಳು ಮತ್ತು ಉಲ್ಲೇಖಗಳನ್ನು ತಿದ್ದುಪಡಿ ಮಾಡಿ. ಉಳಿಸುವ ಮೊದಲು validation ಸಂದೇಶಗಳನ್ನು ಪರಿಹರಿಸಿ.',en:'Edit bilingual fields, dates, review status, relationships and citations. Resolve validation messages before saving a permanent MariaDB revision.'}},
   {target:'.admin-toolbar',title:{kn:'ಆಮದು ಮತ್ತು ರಫ್ತು · ನಿರ್ವಾಹಕರಿಗೆ ಮಾತ್ರ',en:'Import and export · administrator-only tools'},body:{kn:'JSON ಆಮದು, ರಫ್ತು ಮತ್ತು ಸರ್ವರ್ ಆವೃತ್ತಿ ಮರುಲೋಡ್ ಕಾರ್ಯಗಳು ಇಲ್ಲಿ ಇವೆ. ಸಾರ್ವಜನಿಕ ಬಳಕೆದಾರರಿಗೆ ಇವು ಕಾಣಿಸುವುದಿಲ್ಲ.',en:'JSON import, export and server-version reload controls are kept here for administrators and are not exposed in the public portal.'}},
 ]
+const collectionLabel = (translations,key) => translations[key] || collectionLabels[key] || key
 
 export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   const t=adminText[locale]
@@ -215,7 +217,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
       <div className="admin-stat-grid"><article><b>{datasetDepth.totalRecords.toLocaleString('en-IN')}</b><span>{t.portalRecords}</span></article><article><b>{datasetDepth.researchLeads.toLocaleString('en-IN')}</b><span>{t.researchLeads}</span></article><article><b>{datasetDepth.sources.toLocaleString('en-IN')}</b><span>{t.sources}</span></article><article><b>{datasetDepth.relationships.toLocaleString('en-IN')}</b><span>{t.relationships}</span></article></div>
       <div className="admin-progress-table-title">{t.revisionProgress}</div>
       <div className="admin-stat-grid"><article><b>{progress.total.toLocaleString('en-IN')}</b><span>{t.revisionRecords}</span></article><article className="verified"><b>{progress.verified.toLocaleString('en-IN')}</b><span>{t.verified}</span></article><article className="pending"><b>{progress.pending.toLocaleString('en-IN')}</b><span>{t.pending}</span></article><article className={issues.some(issue=>issue.severity==='error')?'invalid':''}><b>{issues.filter(issue=>issue.severity==='error').length}</b><span>{t.validationErrors}</span></article></div>
-      <div className="admin-progress-table"><div className="admin-progress-table-title">{t.collectionProgress}</div>{progress.rows.map(row=><div className="admin-progress-row" key={row.key}><span>{t.collections[row.key]||row.key}</span><div className="admin-progress-bar"><i style={{width:`${row.total?Math.round(row.verified/row.total*100):0}%`}}></i></div><b>{row.verified}/{row.total}</b><small>{row.total?Math.round(row.verified/row.total*100):0}%</small></div>)}</div>
+      <div className="admin-progress-table"><div className="admin-progress-table-title">{t.collectionProgress}</div>{progress.rows.map(row=><div className="admin-progress-row" key={row.key}><span>{collectionLabel(t.collections,row.key)}</span><div className="admin-progress-bar"><i style={{width:`${row.total?Math.round(row.verified/row.total*100):0}%`}}></i></div><b>{row.verified}/{row.total}</b><small>{row.total?Math.round(row.verified/row.total*100):0}%</small></div>)}</div>
     </section>
     <section className="admin-translation-glossary" aria-labelledby="admin-translation-title">
       <div><p className="eyebrow">{t.translationIssuesTitle}</p><h2 id="admin-translation-title">{t.translationIssuesIntro}</h2></div>
@@ -240,10 +242,10 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
     <main className="admin-main">
       <aside className="admin-nav">
         <label className="search" lang={locale}>{t.search}<input lang={locale} value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.searchPlaceholder}/></label>
-        <nav>{collections.map(key=><button key={key} className={key===collection?'active':''} onClick={()=>selectCollection(key)}><span>{t.collections[key]}</span><b>{data[key]?.length || 0}</b></button>)}</nav>
+        <nav>{collections.map(key=><button key={key} className={key===collection?'active':''} onClick={()=>selectCollection(key)}><span>{collectionLabel(t.collections,key)}</span><b>{data[key]?.length || 0}</b></button>)}</nav>
       </aside>
       <section className="record-list">
-        <div className="list-head"><div><p className="eyebrow">{t.collections[collection]}</p><strong>{filtered.length} {t.records}</strong></div><button className="primary" onClick={create}>{collection==='sources'?t.newSource:t.new}</button></div>
+        <div className="list-head"><div><p className="eyebrow">{collectionLabel(t.collections,collection)}</p><strong>{filtered.length} {t.records}</strong></div><button className="primary" onClick={create}>{collection==='sources'?t.newSource:t.new}</button></div>
         {collection==='sources'&&<section className="admin-source-summary" aria-label={t.sourceReviewTitle}><h3>{t.sourceReviewTitle}</h3><div><span><b>{sourceReviewSummary.total}</b>{t.records}</span><span><b>{sourceReviewSummary.cited}</b>{t.citedSources}</span><span><b>{sourceReviewSummary.pending}</b>{t.pendingSources}</span><span><b>{sourceReviewSummary.unlinked}</b>{t.unlinkedSources}</span></div></section>}
         {filtered.map(record=>{
           const secondaryTitle=alternateRecordTitle(record,locale)
