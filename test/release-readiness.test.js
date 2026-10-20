@@ -516,4 +516,8 @@ test('admin Kannada search controls keep readable contrast', () => {
   assert.match(stylesSource, /\.admin-shell \.search\{color:var\(--sanchaya-ink\)\}/, 'admin search label must use dark readable text')
   assert.match(stylesSource, /\.admin-shell \.search input[\s\S]*color:var\(--sanchaya-ink\)/, 'admin search input text must use dark readable text')
   assert.match(stylesSource, /\.admin-shell \.search input::placeholder[\s\S]*opacity:1/, 'admin search placeholder must remain visible')
+  for (const collection of ['epigraphiaArchiveTexts','karnatakaArchaeologyTexts','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','openDatasetCatalogue']) {
+    assert.match(adminSource,new RegExp(`${collection}:'[^']+'`),`${collection} must have a visible Kannada menu label`)
+  }
+  assert.match(adminSource,/translations\[key\] \|\| collectionLabels\[key\] \|\| key/,'new collection menu items must never render a blank label')
 })
