@@ -21,7 +21,7 @@ Never send a password or reset link to an administrator. Administrators cannot r
 - **Evidence workflow / ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ (`#evidence`)** is divided into Overview, Priorities and Tasks so the whole evidence board is not shown at once.
 - **Review queue / ಪರಿಶೀಲನಾ ಸರದಿ (`#reviews`)** appears only for reviewers and administrators.
 - **User operations / ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ (`#operations`)** appears only for administrators and contains account approval, identity verification and research-campaign controls.
-- **Data administration (`#admin`)** is the separate permanent dataset editor. Use it for records, sources, citations, relationships, imports, validation and MariaDB revisions—not for user approvals.
+- **Data administration (`#admin`)** separates Overview, Dataset editor, Translation review and Research discovery into tabs. Use the Dataset editor for records, sources, citations, relationships, imports, validation and MariaDB revisions—not for user approvals.
 - **India research (`#india-research`)** is the broad discovery index. Its imported leads are not promoted to the Karnataka atlas until independently verified.
 
 Old `#community` bookmarks continue to open the focused Contribution workspace.

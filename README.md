@@ -138,6 +138,7 @@ The live application and GitHub Pages have intentionally different responsibilit
 
 Run the live service and sign in as an approved administrator, then open `#admin`. The workspace:
 
+- separates overview statistics, permanent dataset editing, translation review and research discovery into focused tabs;
 - loads the latest permanent MariaDB dataset revision;
 - searches every field across each record collection;
 - offers common fields plus a complete JSON editor for geometry, citations and relationships;

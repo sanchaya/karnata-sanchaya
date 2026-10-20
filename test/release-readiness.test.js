@@ -521,3 +521,13 @@ test('admin Kannada search controls keep readable contrast', () => {
   }
   assert.match(adminSource,/translations\[key\] \|\| collectionLabels\[key\] \|\| key/,'new collection menu items must never render a blank label')
 })
+
+test('admin separates overview, editing, translation and discovery workspaces', () => {
+  for (const tab of ['overview','data','translation','discovery']) assert.match(adminSource,new RegExp(`${tab}:'[^']+'`),`${tab} must have a bilingual Admin tab label`)
+  assert.match(adminSource,/className="admin-workspace-tabs"/, 'Admin must expose a compact workspace tab bar')
+  assert.match(adminSource,/workspaceTab==='overview'&&<section className="admin-progress"/, 'statistics belong to the Overview tab')
+  assert.match(adminSource,/workspaceTab==='data'&&<main className="admin-main"/, 'record editing belongs to the Dataset editor tab')
+  assert.match(adminSource,/workspaceTab==='translation'&&<section className="admin-translation-glossary"/, 'translation queues belong to their own tab')
+  assert.match(adminSource,/workspaceTab==='discovery'&&<div className="admin-workspace-panel"/, 'research discovery belongs to its own tab')
+  assert.match(stylesSource,/\.admin-workspace-tabs\{/, 'Admin workspace tabs need responsive visual styling')
+})
