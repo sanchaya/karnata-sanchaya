@@ -132,7 +132,9 @@ Authenticated work is separated by purpose: `#profile` for identity, affiliation
 The live application and GitHub Pages have intentionally different responsibilities:
 
 - MariaDB live portal: accounts, private verification, proposals, reviews, points and certificates.
-- GitHub Pages: a read-only release built from the reviewed dataset and `public/data/approved-community.json`.
+- GitHub Pages: a read-only release built from the reviewed dataset and `public/data/approved-community.json`; its public contact form posts to the live portal's permanent inbox.
+
+Both editions expose **ಸಂಪರ್ಕಿಸಿ / Contact** (`#contact`). `POST /api/public/messages` stores each message in MariaDB and returns a `KHA-…` reference. Administrators triage the shared queue in **Admin → Inbox** and configure optional Telegram or WhatsApp Cloud API alerts in **Admin → Integrations**. Provider secrets are encrypted in MariaDB with `DOCUMENT_ENCRYPTION_KEY`, never returned to the browser, and never included in the GitHub Pages build. `TELEGRAM_BOT_TOKEN` and `TELEGRAM_ADMIN_CHAT_ID` remain supported as a server-environment fallback. The GitHub Pages workflow supplies `VITE_COMMUNITY_API_URL=https://karnata.sanchaya.net` so the static form reaches that API.
 
 ## Local researcher workspace
 

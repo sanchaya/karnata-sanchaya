@@ -28,6 +28,7 @@ jobs:
         env:
           PUBLIC_SITE_URL: https://try-karnata.sanchaya.net/
           VITE_STATIC_DATASET: 'true'
+          VITE_COMMUNITY_API_URL: https://karnata.sanchaya.net
           VITE_BUILD_SHA: ${{ github.sha }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

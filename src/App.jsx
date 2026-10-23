@@ -28,6 +28,7 @@ const DistrictHistoryExplorer=lazy(()=>import('./DistrictHistoryExplorer'))
 const PeopleExplorer=lazy(()=>import('./PeopleExplorer'))
 const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
+const Contact=lazy(()=>import('./Contact'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const CommunityResearchTasks=lazy(()=>import('./CommunityResearchTasks'))
 const CoinExplorer=lazy(()=>import('./CoinExplorer'))
@@ -137,6 +138,7 @@ const seoPages={
   operations:{kn:['ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಖಾತೆ ಅನುಮೋದನೆ, ಗುರುತು ಪರಿಶೀಲನೆ ಮತ್ತು ಸಮುದಾಯ ಸಂಶೋಧನಾ ಅಭಿಯಾನಗಳನ್ನು ನಿರ್ವಹಿಸಿ.'],en:['User Operations · Karnataka Historical Atlas','Manage account approvals, identity verification and community research campaigns.']},
   evidence:{kn:['ಮಾನವ ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಶಾಸನ ಅಭ್ಯರ್ಥಿಗಳ ಕ್ಷೇತ್ರಕಾರ್ಯ, ಪಠ್ಯ ಪರಿಶೀಲನೆ, ಅನುವಾದ ವಿಮರ್ಶೆ ಮತ್ತು ಪ್ರಕಟಣೆ ಸಿದ್ಧತೆಯ ಕಾರ್ಯಪಟ್ಟಿ.'],en:['Human Evidence Workflow · Karnataka Historical Atlas','Track fieldwork, transcription, translation review and publication readiness for inscription candidates.']},
   about:{kn:['ನಮ್ಮ ಬಗ್ಗೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟದ ಉದ್ದೇಶ, ಸಂಶೋಧನಾ ವಿಧಾನ, ಕನ್ನಡ-ಪ್ರಥಮ ವಿನ್ಯಾಸ ಮತ್ತು ಸಮುದಾಯ ಸಹಯೋಗವನ್ನು ತಿಳಿಯಿರಿ.'],en:['About · Karnataka Historical Atlas','Learn about the atlas purpose, research method, Kannada-first design and community collaboration.']},
+  contact:{kn:['ಸಂಪರ್ಕಿಸಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಪ್ರಶ್ನೆ, ತಿದ್ದುಪಡಿ, ಆಕರ, ತಾಂತ್ರಿಕ ಸಮಸ್ಯೆ ಅಥವಾ ಸಹಯೋಗದ ಸಂದೇಶವನ್ನು ಸಂಚಯ ತಂಡಕ್ಕೆ ಕಳುಹಿಸಿ.'],en:['Contact · Karnataka Historical Atlas','Send the Sanchaya team a question, correction, source, technical issue or collaboration enquiry.']},
   'india-research':{kn:['ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ · ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ','ಭಾರತವ್ಯಾಪಿ ಆಮದು ಮಾಡಿದ ಇತಿಹಾಸ ಮತ್ತು ಶಾಸನ ಸುಳಿವುಗಳ ಪರಿಶೀಲನಾ ಸೂಚಿ.'],en:['India Historical Discovery Index · Research workspace','Review India-wide imported historical and epigraphical research leads.']},
 }
 
@@ -720,7 +722,7 @@ function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInsc
 const districtSectionRoutes={'district-audit':'districts','inscription-audit':'districts','district-inventory':'districts'}
 
 export default function App(){
-  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','research-tasks','contribute','profile','reviews','operations','about','india-research']
+  const publicViews=['atlas','relations','people','freedom','literature','epigraphy','districts','district-history','inscriptions','coins','scripts','trails','evidence','research','research-tasks','contribute','profile','reviews','operations','about','contact','india-research']
   const normalizeView=hash=>hash==='history'?'district-history':hash==='community'?'contribute':districtSectionRoutes[hash]||hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -880,7 +882,7 @@ export default function App(){
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
   const primaryNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement'],['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['districts',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಅಟ್ಲಸ್':'District atlas']]
-  const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['research',locale==='kn'?'ಆಕರಗಳು':'Resources'],['research-tasks',locale==='kn'?'ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು':'Research tasks'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence'],['india-research',locale==='kn'?'ಭಾರತ ಸಂಶೋಧನೆ':'India research'],['contribute',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[]),...(communityUser?.roles?.some(role=>['reviewer','administrator'].includes(role))?[['reviews',locale==='kn'?'ಪರಿಶೀಲನಾ ಸರದಿ':'Review queue']]:[]),...(communityUser?.roles?.includes('administrator')?[['operations',locale==='kn'?'ಸದಸ್ಯರ ನಿರ್ವಹಣೆ':'User administration'],['admin',locale==='kn'?'ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ':'Data administration']]:[])]
+  const utilityNavItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['contact',locale==='kn'?'ಸಂಪರ್ಕಿಸಿ':'Contact'],['research',locale==='kn'?'ಆಕರಗಳು':'Resources'],['research-tasks',locale==='kn'?'ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು':'Research tasks'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence'],['india-research',locale==='kn'?'ಭಾರತ ಸಂಶೋಧನೆ':'India research'],['contribute',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[]),...(communityUser?.roles?.some(role=>['reviewer','administrator'].includes(role))?[['reviews',locale==='kn'?'ಪರಿಶೀಲನಾ ಸರದಿ':'Review queue']]:[]),...(communityUser?.roles?.includes('administrator')?[['operations',locale==='kn'?'ಸದಸ್ಯರ ನಿರ್ವಹಣೆ':'User administration'],['admin',locale==='kn'?'ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ':'Data administration']]:[])]
   const isNavActive=key=>key==='districts'?['districts','district-history','inscriptions'].includes(view):view===key
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${isNavActive(key)?'active':''}`.trim()} aria-current={isNavActive(key)?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);if(isNavActive(key)){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
@@ -962,6 +964,7 @@ export default function App(){
     {view==='reviews'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="reviews" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='operations'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="operations" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='about'&&<Suspense fallback={<PortalFallback/>}><About locale={locale}/></Suspense>}
+    {view==='contact'&&<Suspense fallback={<PortalFallback/>}><Contact locale={locale}/></Suspense>}
     {view==='india-research'&&<Suspense fallback={<PortalFallback/>}><IndiaResearchExplorer locale={locale}/></Suspense>}
     <GuidedTour tourKey={view} locale={locale} steps={guidedTourSteps(view,locale,Boolean(communityUser))}/>
     <footer><span className="footer-brand"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/>{atlasData.meta.title.kn} · Karnataka Historical Atlas · v{ATLAS_RELEASE_VERSION}</span><span className="footer-partners"><a href="#about"><span className="partner-icon"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/></span>{locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'}</a>{socialLinks.length>0&&<><i aria-hidden="true">·</i><span className="footer-social"><small>{locale==='kn'?'ನವೀಕರಣಗಳನ್ನು ಅನುಸರಿಸಿ':'Follow project updates'}</small>{socialLinks.map(([label,url])=><a href={url} target="_blank" rel="noreferrer" key={label}>{label} ↗</a>)}</span></>}</span></footer>

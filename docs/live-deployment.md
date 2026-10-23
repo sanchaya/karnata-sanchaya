@@ -10,6 +10,22 @@ The live portal is one same-origin service: Express serves the built React appli
 4. Create the first administrator by setting `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` and optionally `ADMIN_NAME_KN`, then run `npm run admin:create` inside the portal environment.
 5. Schedule `npm run privacy:cleanup` daily. Schedule `sudo ./scripts/backup-live.sh --app-dir /srv/karnataka-atlas` daily; it creates a compressed MariaDB dump, an encrypted private-upload archive and SHA-256 checksums under `/var/backups/karnataka-atlas`. Copy that directory to separate durable storage and test restoration before inviting contributors.
 
+### Shared public inbox, Telegram and WhatsApp alerts
+
+The live portal and GitHub Pages use one MariaDB-backed inbox. Add the exact static-site origins to the live service environment. Telegram environment settings are an optional fallback:
+
+```env
+PUBLIC_MESSAGE_ALLOWED_ORIGINS=https://try-karnata.sanchaya.net,https://sanchaya.github.io
+TELEGRAM_BOT_TOKEN=123456:replace-with-botfather-token
+TELEGRAM_ADMIN_CHAT_ID=-1001234567890
+```
+
+Run `npm run db:migrate` to create `portal_messages` and encrypted `portal_notification_settings`, then restart the service. The public `POST /api/public/messages` route accepts anonymous messages with consent and rate limiting; the administrator-only `/api/administration/messages` routes provide the permanent Inbox. In **Admin → Integrations**, configure and test Telegram or WhatsApp Cloud API. Alerts happen only after MariaDB storage and are best-effort, so a provider outage cannot lose a portal message. Never put provider tokens in a `VITE_` variable, GitHub secret used by the browser build, or repository file.
+
+WhatsApp requires a Meta WhatsApp Cloud API access token, phone-number ID, recipient number and supported Graph API version. For business-initiated production alerts, enter an approved template containing one body-text placeholder and its language code; leaving the template blank sends a regular text message for an existing service conversation. These values and admin-entered Telegram credentials are encrypted with `DOCUMENT_ENCRYPTION_KEY`; API responses expose configuration status but never secret values.
+
+The GitHub Pages build must set `VITE_COMMUNITY_API_URL` to the live HTTPS portal. If the static hostname changes, update `PUBLIC_MESSAGE_ALLOWED_ORIGINS` to the new origin and restart the live service. Confirm with an end-to-end submission from both domains and then verify the returned reference in Admin → Inbox.
+
 ### Setting `max_allowed_packet`
 
 Check the current value on the MariaDB host: `mysql -u root -p -e "SHOW VARIABLES LIKE 'max_allowed_packet';"`. If it is below 32M, add `max_allowed_packet = 64M` under `[mysqld]` in the server's config (commonly `/etc/mysql/mariadb.conf.d/50-server.cnf` on Debian/Ubuntu) and `sudo systemctl restart mariadb`. `SET GLOBAL max_allowed_packet = 67108864;` is a faster way to unblock a one-off `db:sync-dataset` run but reverts on the next MariaDB restart, so still make the config-file change for a permanent fix.
