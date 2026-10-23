@@ -5,6 +5,8 @@ import { bengaluruKmlCandidates } from '../src/data/bengaluru-kml.js'
 import { communityPeople, communityPeopleEvents } from '../src/data/community-people.js'
 
 const appSource = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
+const i18nSource = await readFile(new URL('../src/i18n.js', import.meta.url), 'utf8')
+const htmlSource = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 const indexSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
 const serviceWorkerSource = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
 const serverSource = await readFile(new URL('../server/app.js', import.meta.url), 'utf8')
@@ -19,6 +21,7 @@ const communityPeopleSource = await readFile(new URL('../src/data/community-peop
 const evidenceSource = await readFile(new URL('../src/EvidenceWorkflow.jsx', import.meta.url), 'utf8')
 const adminSource = await readFile(new URL('../src/Admin.jsx', import.meta.url), 'utf8')
 const tourSource = await readFile(new URL('../src/GuidedTour.jsx', import.meta.url), 'utf8')
+const tourStylesSource = await readFile(new URL('../src/guided-tour.css', import.meta.url), 'utf8')
 const stylesSource = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8')
 const evidenceStylesSource = await readFile(new URL('../src/evidence-workflow.css', import.meta.url), 'utf8')
 const relationsStylesSource = await readFile(new URL('../src/global-relations.css', import.meta.url), 'utf8')
@@ -32,6 +35,15 @@ const packageSource = await readFile(new URL('../package.json', import.meta.url)
 const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
 const atlasSource = await readFile(new URL('../src/data/atlas.js', import.meta.url), 'utf8')
 const datasetDepthSource = await readFile(new URL('../src/data/dataset-depth.js', import.meta.url), 'utf8')
+
+test('new visitors start in Kannada with the historical map theme', () => {
+  assert.match(i18nSource, /localStorage\.getItem\('karnataka-atlas-locale'\) \|\| 'kn'/)
+  assert.match(appSource, /localStorage\.getItem\('karnataka-atlas-map-theme'\)\|\|'historical'/)
+})
+
+test('the loading screen offers the lightweight public fallback', () => {
+  assert.match(htmlSource, /https:\/\/try-karnata\.sanchaya\.net\//)
+})
 
 test('public navigation keeps the complete release route set and admin private', () => {
   const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'research-tasks', 'contribute', 'profile', 'reviews', 'operations', 'about', 'india-research']
@@ -497,6 +509,8 @@ test('relations layout keeps the map and timeline usable on narrow screens', () 
 
 test('guided tours cover public pages and the private admin workspace', () => {
   assert.match(appSource, /<GuidedTour tourKey=\{view\}/, 'public routes must render the reusable tour')
+  assert.match(appSource, /view==='atlas'&&<a className="contact-chat-launcher" href="#contact"/, 'the atlas home view must offer a direct contact launcher')
+  assert.match(tourStylesSource, /\.guided-tour-launcher \{[\s\S]*?left: 18px;/, 'the guide launcher must stay left of the right-aligned contact control')
   for (const route of ['atlas', 'relations', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'evidence', 'research', 'community', 'profile', 'about']) {
     const key = route.includes('-') ? `['"]${route}['"]` : route
     assert.match(appSource, new RegExp(`${key}:\\[`), `${route} must have page-specific tour steps`)
