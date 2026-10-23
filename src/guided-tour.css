@@ -1,6 +1,6 @@
 .guided-tour-launcher {
   position: fixed;
-  right: 18px;
+  left: 18px;
   bottom: 18px;
   z-index: 1450;
   display: inline-flex;
@@ -52,7 +52,7 @@
 .guided-tour-popover {
   position: fixed;
   z-index: 1402;
-  right: 18px;
+  left: 18px;
   bottom: 68px;
   width: min(390px, calc(100vw - 28px));
   border: 1px solid #cfd5e8;
@@ -136,8 +136,8 @@
 }
 
 @media (max-width: 720px) {
-  .guided-tour-launcher { right: 12px; bottom: 12px; padding: 8px 11px; font-size: 10px; }
-  .guided-tour-popover { right: 12px; bottom: 58px; padding: 15px; }
+  .guided-tour-launcher { left: 12px; bottom: 12px; padding: 8px 11px; font-size: 10px; }
+  .guided-tour-popover { left: 12px; bottom: 58px; padding: 15px; }
   .guided-tour-popover h2 { font-size: 18px; }
   .guided-tour-popover p { font-size: 12px; }
   .guided-tour-highlight { border-radius: 8px; }

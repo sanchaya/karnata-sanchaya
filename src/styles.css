@@ -208,3 +208,38 @@
 @media(max-width:900px){.district-audit .audit-grid>article{grid-template-columns:1fr}.district-audit .audit-card-head,.district-audit .coverage-strip,.district-audit .audit-sites,.district-audit .audit-note{grid-column:1;grid-row:auto}.district-audit .audit-sites{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.district-hub .district-history-intro{grid-template-columns:1fr}.district-hub .district-history-stats{grid-column:1;grid-row:auto}.district-history-page>.district-history-filters{grid-template-columns:1fr;margin-inline:24px}.district-history-page>.district-history-filters>p{text-align:left}.district-hub .district-history-workspace{grid-template-columns:1fr}.district-hub .district-history-detail{max-height:320px}}
 @media(max-width:600px){.district-audit .audit-sites{grid-template-columns:1fr}.district-hub-intro{padding-inline:15px}.district-history-view-menu{padding-inline:15px}.district-hub .district-history-intro{display:block;padding-inline:15px}.district-hub .district-history-stats{margin-top:10px}.district-history-page>.district-history-filters{margin-inline:15px}.district-hub .district-history-map-wrap,.district-hub .district-history-map-wrap .leaflet-container{height:58vh;min-height:360px}.district-hub-workspace{min-height:420px}.district-hub .district-history-cards{grid-template-columns:1fr;max-height:58vh}}
+.contact-chat-launcher {
+  position: fixed;
+  right: 18px;
+  bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+  z-index: 1350;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid #6540a5;
+  border-radius: 999px;
+  background: #7048b6;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(45, 30, 78, .24);
+  font: 700 12px Inter, "Noto Sans Kannada", sans-serif;
+  text-decoration: none;
+}
+
+.contact-chat-launcher:hover { background: #5d379f; color: #fff; }
+.contact-chat-launcher:focus-visible { outline: 3px solid rgba(67, 97, 238, .35); outline-offset: 3px; }
+.contact-chat-launcher svg { width: 21px; height: 21px; fill: currentColor; }
+
+@media (max-width: 720px) {
+  .contact-chat-launcher {
+    right: 12px;
+    bottom: calc(58px + env(safe-area-inset-bottom, 0px));
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 0;
+  }
+  .contact-chat-launcher span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+}

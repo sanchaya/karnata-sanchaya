@@ -755,7 +755,7 @@ export default function App(){
   const [showAllHeritage,setShowAllHeritage]=useState(false)
   const [showAllInscriptions,setShowAllInscriptions]=useState(false)
   const [showAllReviewCandidates,setShowAllReviewCandidates]=useState(false)
-  const [mapTheme,setMapTheme]=useState(()=>localStorage.getItem('karnataka-atlas-map-theme')||'modern')
+  const [mapTheme,setMapTheme]=useState(()=>localStorage.getItem('karnataka-atlas-map-theme')||'historical')
   const [mapOnlyMode,setMapOnlyMode]=useState(false)
   const [communityUser,setCommunityUser]=useState(null)
   const [communityAuthChecked,setCommunityAuthChecked]=useState(false)
@@ -966,6 +966,10 @@ export default function App(){
     {view==='about'&&<Suspense fallback={<PortalFallback/>}><About locale={locale}/></Suspense>}
     {view==='contact'&&<Suspense fallback={<PortalFallback/>}><Contact locale={locale}/></Suspense>}
     {view==='india-research'&&<Suspense fallback={<PortalFallback/>}><IndiaResearchExplorer locale={locale}/></Suspense>}
+    {view==='atlas'&&<a className="contact-chat-launcher" href="#contact" aria-label={locale==='kn'?'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ':'Contact us'} title={locale==='kn'?'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ':'Contact us'}>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.75h16v11.5H9.75L5 20v-3.75H4z"/></svg>
+      <span>{locale==='kn'?'ಸಂಪರ್ಕಿಸಿ':'Contact'}</span>
+    </a>}
     <GuidedTour tourKey={view} locale={locale} steps={guidedTourSteps(view,locale,Boolean(communityUser))}/>
     <footer><span className="footer-brand"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/>{atlasData.meta.title.kn} · Karnataka Historical Atlas · v{ATLAS_RELEASE_VERSION}</span><span className="footer-partners"><a href="#about"><span className="partner-icon"><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt=""/></span>{locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'}</a>{socialLinks.length>0&&<><i aria-hidden="true">·</i><span className="footer-social"><small>{locale==='kn'?'ನವೀಕರಣಗಳನ್ನು ಅನುಸರಿಸಿ':'Follow project updates'}</small>{socialLinks.map(([label,url])=><a href={url} target="_blank" rel="noreferrer" key={label}>{label} ↗</a>)}</span></>}</span></footer>
   </div>
