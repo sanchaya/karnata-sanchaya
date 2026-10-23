@@ -22,6 +22,8 @@ export const config={
   sessionDays:Number(process.env.SESSION_DAYS||14),
   passwordResetMinutes:Number(process.env.PASSWORD_RESET_MINUTES||30),
   mail:{apiKey:process.env.RESEND_API_KEY||'',from:process.env.MAIL_FROM||''},
+  publicMessageOrigins:(process.env.PUBLIC_MESSAGE_ALLOWED_ORIGINS||'').split(',').map(value=>value.trim()).filter(Boolean),
+  telegram:{botToken:process.env.TELEGRAM_BOT_TOKEN||'',chatId:process.env.TELEGRAM_ADMIN_CHAT_ID||''},
   uploadDir:path.resolve(process.env.PRIVATE_UPLOAD_DIR||path.join(rootDir,'var','private-uploads')),
   documentEncryptionKey:process.env.DOCUMENT_ENCRYPTION_KEY||'',
   publicDir:path.join(rootDir,'dist'),

@@ -11,6 +11,7 @@ import { normalizeTranslationAssessment, translationApprovalIssues, translationP
 import { validateAtlas } from '../src/data/validate.js'
 import { insertDatasetRevision, latestDataset, publicDataset, repositoryDataset } from './dataset-store.js'
 import { emailDeliveryConfigured, sendPasswordResetEmail } from './mailer.js'
+import { notificationSettingsSummary, saveNotificationSettings, sendPortalNotifications } from './notifications.js'
 
 config.assertProductionSecrets()
 const app=express()
@@ -20,7 +21,9 @@ app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Op
 app.use(express.json({limit:'12mb'}))
 
 const allowedOrigins=new Set([config.appOrigin])
-app.use('/api',(req,res,next)=>{if(['GET','HEAD','OPTIONS'].includes(req.method))return next();const origin=req.get('origin');if(origin&&!allowedOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});next()})
+const publicMessageOrigins=new Set([config.appOrigin,...config.publicMessageOrigins])
+app.use('/api/public/messages',(req,res,next)=>{const origin=req.get('origin');if(origin&&!publicMessageOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});if(origin)res.set({'Access-Control-Allow-Origin':origin,Vary:'Origin','Access-Control-Allow-Headers':'Content-Type','Access-Control-Allow-Methods':'POST, OPTIONS'});if(req.method==='OPTIONS')return res.status(204).end();next()})
+app.use('/api',(req,res,next)=>{if(req.path==='/public/messages'||['GET','HEAD','OPTIONS'].includes(req.method))return next();const origin=req.get('origin');if(origin&&!allowedOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});next()})
 
 const attempts=new Map()
 const rateLimit=(bucket,max,windowMs)=>(req,res,next)=>{const key=`${bucket}:${req.ip}`;const now=Date.now();const entry=attempts.get(key);if(!entry||entry.until<now){attempts.set(key,{count:1,until:now+windowMs});return next()}if(entry.count>=max)return res.status(429).json({error:'Too many attempts. Please try again later.'});entry.count+=1;next()}
@@ -28,6 +31,7 @@ const cookies=req=>Object.fromEntries((req.headers.cookie||'').split(';').map(va
 const clean=(value,max=255)=>typeof value==='string'?value.trim().slice(0,max):''
 const email=value=>clean(value,254).toLowerCase()
 const safeJson=value=>{try{return typeof value==='string'?JSON.parse(value):value}catch{return null}}
+const safeUrl=value=>{const text=clean(value,1000);if(!text)return null;try{const url=new URL(text);return ['http:','https:'].includes(url.protocol)?url.href:null}catch{return null}}
 const rolesFor=async(db,userId)=>(await db.query('SELECT role FROM user_roles WHERE user_id=?',[userId])).map(row=>row.role)
 const publicUser=(row,roles,karma=0)=>({id:row.id,email:row.email,displayName:row.display_name,displayNameKn:row.display_name_kn,preferredLocale:row.preferred_locale,profession:row.profession,professionDetails:row.profession_details,affiliationType:row.affiliation_type,institutionName:row.institution_name,institutionUrl:row.institution_url,publicBio:row.public_bio,accountStatus:row.account_status,verifiedBadge:Boolean(row.verified_badge),roles,canExport:row.account_status==='approved'&&roles.some(role=>['exporter','administrator'].includes(role)),karma:Number(karma||0)})
 const audit=async(db,actor,action,entityType,entityId,metadata={})=>db.query('INSERT INTO audit_log (id,actor_user_id,action,entity_type,entity_id,metadata_json) VALUES (?,?,?,?,?,?)',[randomUUID(),actor||null,action,entityType,entityId||null,JSON.stringify(metadata)])
@@ -47,6 +51,16 @@ const requireRole=(...roles)=>(req,res,next)=>roles.some(role=>req.roles?.includ
 const datasetIssues=value=>validateAtlas(value).filter(issue=>issue.severity==='error')
 
 app.get('/api/health',async(req,res)=>{await pool.query('SELECT 1');res.json({ok:true,service:'Karnataka Historical Atlas community API'})})
+app.post('/api/public/messages',rateLimit('public-message',10,60*60*1000),async(req,res)=>{
+  const body=req.body||{};if(clean(body.website,200))return res.status(400).json({error:'Message could not be accepted.'})
+  const senderEmail=email(body.email),subject=clean(body.subject,255),message=clean(body.message,10000),category=['question','correction','source','technical','collaboration','other'].includes(body.category)?body.category:'other'
+  if(senderEmail&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(senderEmail))return res.status(400).json({error:'Enter a valid email address or leave it blank.'})
+  if(!subject||message.length<10||body.consent!==true)return res.status(400).json({error:'A subject, message of at least 10 characters and consent are required.'})
+  const id=randomUUID(),referenceCode=`KHA-${new Date().getUTCFullYear()}-${id.slice(0,8).toUpperCase()}`,sourceDeployment=body.sourceDeployment==='github-pages'?'github-pages':'live'
+  await transaction(async db=>{await db.query(`INSERT INTO portal_messages (id,reference_code,user_id,sender_name,sender_email,category,subject,message,locale,source_deployment,page_url,record_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`,[id,referenceCode,req.user?.id||null,clean(body.name,160)||req.user?.display_name||null,senderEmail||req.user?.email||null,category,subject,message,body.locale==='en'?'en':'kn',sourceDeployment,safeUrl(body.pageUrl),clean(body.recordId,191)||null]);await audit(db,req.user?.id||null,'portal-message.created','portal-message',id,{referenceCode,category,sourceDeployment})})
+  sendPortalNotifications(`Karnataka Historical Atlas\n${referenceCode} · ${category}\n${subject}\n${config.appOrigin}/#admin`,pool,config).catch(error=>console.error(error.message))
+  res.status(201).json({ok:true,referenceCode})
+})
 app.get('/api/dataset',async(req,res)=>{
   const latest=await latestDataset(pool)
   if(!latest)return res.status(503).set('Cache-Control','no-store').json({error:'The MariaDB atlas dataset has not been initialized.'})
@@ -128,7 +142,7 @@ app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('a
 })
 
 app.get('/api/administration/release-readiness',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
-  const requiredMigrations=['011_v029_community_operations.sql','012_password_reset.sql']
+  const requiredMigrations=['011_v029_community_operations.sql','012_password_reset.sql','013_portal_messages.sql','014_message_notification_settings.sql']
   const [accounts,contributions,verifications,reviewers,contributors,latest,published,migrations,evidence]=await Promise.all([
     pool.query("SELECT COUNT(*) total FROM users WHERE account_status='pending'"),
     pool.query("SELECT COUNT(*) total FROM contributions WHERE status='submitted'"),
@@ -137,7 +151,7 @@ app.get('/api/administration/release-readiness',requireUser,requireApproved,requ
     pool.query("SELECT COUNT(DISTINCT ur.user_id) total FROM user_roles ur JOIN users u ON u.id=ur.user_id WHERE ur.role='contributor' AND u.account_status='approved' AND NOT EXISTS (SELECT 1 FROM user_roles reviewer_role WHERE reviewer_role.user_id=ur.user_id AND reviewer_role.role='reviewer')"),
     pool.query('SELECT revision,created_at FROM dataset_snapshots ORDER BY revision DESC LIMIT 1'),
     pool.query('SELECT contribution_count,published_at FROM published_snapshots ORDER BY published_at DESC LIMIT 1'),
-    pool.query('SELECT version FROM schema_migrations WHERE version IN (?,?)',requiredMigrations),
+    pool.query(`SELECT version FROM schema_migrations WHERE version IN (${requiredMigrations.map(()=>'?').join(',')})`,requiredMigrations),
     pool.query("SELECT COUNT(*) assigned,SUM(status='awaiting-review') awaiting_review,SUM(assignee IS NOT NULL AND assignee<>'' AND reviewer IS NOT NULL AND reviewer<>'' AND assignee<>reviewer) independently_assigned FROM evidence_assignments")
   ])
   const appliedMigrations=new Set(migrations.map(row=>row.version)),communityOperationsReady=appliedMigrations.has(requiredMigrations[0])
@@ -280,6 +294,11 @@ app.post('/api/reviews/:contributionId',requireUser,requireApproved,requireRole(
 app.get('/api/community/leaderboard',async(req,res)=>{const rows=await pool.query(`SELECT u.id,u.display_name,u.display_name_kn,u.profession,u.institution_name,u.verified_badge,COALESCE(SUM(k.points),0) karma FROM users u LEFT JOIN karma_ledger k ON k.user_id=u.id WHERE u.account_status='approved' GROUP BY u.id ORDER BY karma DESC,u.display_name ASC LIMIT 100`);res.json({people:rows.map(row=>({...row,verified_badge:Boolean(row.verified_badge),karma:Number(row.karma)}))})})
 
 app.get('/api/administration/users',requireUser,requireRole('administrator'),async(req,res)=>{const rows=await pool.query(`SELECT u.id,u.email,u.display_name,u.display_name_kn,u.profession,u.affiliation_type,u.institution_name,u.account_status,u.verified_badge,u.created_at,COALESCE(GROUP_CONCAT(r.role),'') roles FROM users u LEFT JOIN user_roles r ON r.user_id=u.id GROUP BY u.id ORDER BY FIELD(u.account_status,'pending','approved','suspended','rejected'),u.created_at`);res.json({users:rows})})
+app.get('/api/administration/messages',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{const status=['new','triaged','in-progress','replied','closed','spam'].includes(req.query.status)?req.query.status:'new',category=['question','correction','source','technical','collaboration','other'].includes(req.query.category)?req.query.category:null,params=[status];let where='m.status=?';if(category){where+=' AND m.category=?';params.push(category)}const rows=await pool.query(`SELECT m.*,u.display_name account_name,a.display_name assignee_name FROM portal_messages m LEFT JOIN users u ON u.id=m.user_id LEFT JOIN users a ON a.id=m.assigned_to WHERE ${where} ORDER BY m.created_at DESC LIMIT 200`,params);res.json({messages:rows})})
+app.patch('/api/administration/messages/:id',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{const status=['new','triaged','in-progress','replied','closed','spam'].includes(req.body?.status)?req.body.status:null;if(!status)return res.status(400).json({error:'A supported message status is required.'});const result=await pool.query(`UPDATE portal_messages SET status=?,assigned_to=IF(?, ?, assigned_to),admin_note=?,closed_at=IF(? IN ('closed','spam'),UTC_TIMESTAMP(3),NULL) WHERE id=?`,[status,req.body?.assignToMe===true,req.user.id,clean(req.body?.adminNote,10000)||null,status,clean(req.params.id,36)]);if(!result.affectedRows)return res.status(404).json({error:'Message not found.'});await audit(pool,req.user.id,'portal-message.updated','portal-message',req.params.id,{status});res.json({ok:true,status})})
+app.get('/api/administration/notification-settings',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>res.json({providers:await notificationSettingsSummary(pool,config)}))
+app.put('/api/administration/notification-settings/:provider',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{const provider=clean(req.params.provider,32);const settings=await saveNotificationSettings(pool,config,provider,req.body||{},req.user.id);await audit(pool,req.user.id,'notification-settings.updated','notification-provider',provider,{enabled:settings.enabled});res.json({ok:true,settings})})
+app.post('/api/administration/notification-settings/:provider/test',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{const provider=clean(req.params.provider,32);if(!['telegram','whatsapp'].includes(provider))return res.status(400).json({error:'Unsupported notification provider.'});await sendPortalNotifications(`Karnataka Historical Atlas\n${provider} integration test\n${config.appOrigin}/#admin`,pool,config,fetch,provider);res.json({ok:true})})
 app.patch('/api/administration/users/:id',requireUser,requireRole('administrator'),async(req,res)=>{const status=req.body?.accountStatus;if(!['approved','rejected','suspended'].includes(status))return res.status(400).json({error:'Account decision is invalid.'});if(req.params.id===req.user.id&&status!=='approved')return res.status(400).json({error:'Administrators cannot suspend or reject their own account.'});await transaction(async db=>{const target=(await db.query('SELECT id FROM users WHERE id=? LIMIT 1 FOR UPDATE',[req.params.id]))[0];if(!target)throw Object.assign(new Error('Account not found.'),{status:404});await db.query("UPDATE users SET account_status=?,approved_by=?,approved_at=IF(?='approved',UTC_TIMESTAMP(3),approved_at),rejection_reason=? WHERE id=?",[status,req.user.id,status,clean(req.body?.reason,500)||null,target.id]);for(const role of (Array.isArray(req.body?.roles)?req.body.roles:[]).filter(role=>['reviewer','verification-officer','exporter','administrator'].includes(role)))await db.query('INSERT IGNORE INTO user_roles (user_id,role,appointed_by) VALUES (?,?,?)',[target.id,role,req.user.id]);await notify(db,target.id,'account','Account status updated','ಖಾತೆ ಸ್ಥಿತಿ ನವೀಕರಿಸಲಾಗಿದೆ',`Your Sanchaya account is ${status}.`,`ನಿಮ್ಮ ಸಂಚಯ ಖಾತೆಯ ಸ್ಥಿತಿ: ${status}.`,'user',target.id);await audit(db,req.user.id,`account.${status}`,'user',target.id,{roles:req.body?.roles||[]})});res.json({ok:true,status})})
 app.get('/api/administration/verifications',requireUser,requireRole('verification-officer','administrator'),async(req,res)=>{const rows=await pool.query(`SELECT v.id,v.user_id,v.institution_name,v.institutional_identifier,v.document_mime,v.document_size,v.status,v.created_at,u.display_name,u.email FROM verification_requests v JOIN users u ON u.id=v.user_id WHERE v.status='pending' ORDER BY v.created_at`);res.json({requests:rows})})
 app.get('/api/administration/verifications/:id/document',requireUser,requireRole('verification-officer','administrator'),async(req,res)=>{const row=(await pool.query('SELECT * FROM verification_requests WHERE id=? LIMIT 1',[req.params.id]))[0];if(!row)return res.status(404).json({error:'Verification request not found.'});if(!row.document_storage_key)return res.status(410).json({error:'This private document has been deleted under the retention policy.'});const encrypted=await readFile(path.join(config.uploadDir,row.document_storage_key));res.type(row.document_mime).set('Cache-Control','no-store').send(decryptDocument(encrypted,config.documentEncryptionKey))})

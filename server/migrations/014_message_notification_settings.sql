@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS portal_notification_settings (
+  provider VARCHAR(32) PRIMARY KEY,
+  enabled TINYINT(1) NOT NULL DEFAULT 0,
+  settings_encrypted LONGBLOB NOT NULL,
+  updated_by CHAR(36) NULL,
+  created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  CONSTRAINT fk_portal_notification_settings_user FOREIGN KEY (updated_by) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

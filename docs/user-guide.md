@@ -74,6 +74,14 @@ Suspending an account blocks sign-in without deleting its historical audit recor
 
 Production requires `RESEND_API_KEY`, `MAIL_FROM`, `APP_ORIGIN` and `PASSWORD_RESET_MINUTES`. Reset tokens are random, stored only as SHA-256 hashes, expire, work once and invalidate all active sessions. Local development returns a preview link when mail is not configured; production never exposes it.
 
+## Contacting the atlas team
+
+Open **ಸಂಪರ್ಕಿಸಿ / Contact** (`#contact`) from either the live portal or GitHub Pages. Choose a topic, add a subject and message, and accept the message-storage consent. A name and reply email are optional. A successful submission returns a `KHA-…` reference number; keep it when following up. If the live service is temporarily unavailable, the form keeps the entered text and offers a copy action before retrying.
+
+Administrators review these messages in **Admin → Inbox**. **Admin → Integrations** securely configures optional Telegram and WhatsApp notifications for submissions from both portal editions; GitHub Pages itself never stores provider credentials.
+
+Messages are stored in the live MariaDB inbox even when submitted from GitHub Pages. They are distinct from cited dataset contributions: use **Contribute** when proposing a historical record or correction that should enter scholarly review.
+
 ## Troubleshooting
 
 - **Contribution service unavailable:** you are viewing the static GitHub Pages edition or the live API is offline. Continue browsing, then use the live portal to contribute.
