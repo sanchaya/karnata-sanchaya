@@ -1,6 +1,6 @@
 # Karnataka Historical Atlas — milestone status and roadmap
 
-Updated: 2026-10-19
+Updated: 2026-10-26
 
 This is the durable project summary for the decisions and implementation work accumulated across the atlas build. It separates working software from research that still needs human evidence. A record being visible on a map or timeline does not mean that it is authority-confirmed.
 
@@ -48,10 +48,10 @@ The bundled snapshot currently contains approximately:
 
 - 9 Karnataka polities, 53 external polities with 53 map-ready capital/context-centre links, 106 events, 463 curated people, a 905-record lazy Wikimedia people-review candidate corpus and 28 bilateral political relations;
 - 33 inscriptions, 25 literary works, 63 cultural records and 24 reign/period records;
-- 325 sources, 1,639 generated relationships, 139 places and 13 collaboration records;
+- 798 source records, 2,787 explicit and review-gated relationship pointers, 139 places and 13 collaboration records. The shared counter is used by the public header, Admin and generated static packets;
 - 3,715 Patrika Sanchaya periodicals and 76 grouped publication-place anchors, all visibly `needs-review`;
 - 28 genealogy assertions (Hoysala, Wadiyar, Western Ganga and Kadamba long bridges now split into individual-generation links; Kalyani Chalukya closure links added), 9 feudatory/samanta relations, 6 administrative-division packets, 12 coin records, 16 manuscript witnesses, 11 boundary-evidence packets, 30 inscription-edition packets (three Shravanabelagola item-level splits, located Belur Bl. 68 and Muktesvara S.I.I. XVIII No. 112 items, plus Gudnapur/Doddahundi closure packets) and 12 script-evolution records, all review-gated;
-- 12 local Epigraphia Carnatica Archive TXT records indexed as OCR discovery citations, with page-image review still required;
+- 279 Epigraphia Carnatica / Epigraphia Indica Archive TXT records (196 ServantsOfKnowledge and 83 JaiGyan items), producing 811 deduplicated OCR source-to-record pointers across 48 existing entities. These appear as related research leads in the Relations and People explorers and remain `needs-review` until the printed page, inscription number and page image are checked;
 - 33 Itihasa Darshana/Karnataka Parampare research volumes linked to 65 atlas review-lead groups across inscriptions, scripts, literature, manuscripts, freedom-movement, outside-Karnataka rule, ports, coinage and heritage source review; Karnataka Parampare leads now include OCR/page locator hints, with article/page review still required;
 - First source-volume extraction sprint adds review-gated records for Barkur, Ankola, Honnavar and Bhatkal port leads; Achyuta Devaraya and Chamarasa leads; Barkur/Badami inscription leads; Barkur, Badami, west-coast ports and Goa-transition events; and a Krishnadevaraya/Achyuta Devaraya coin-plate packet;
 - Second source-volume extraction sprint registers all 12 offline Epigraphia Carnatica folder names as Internet Archive identifiers and adds Parampare image/caption leads for Achyutaraya-period Hampi, Daria Daulat Bagh, Srirangapatna Gumbaz, Chitradurga Fort and Mysuru Palace;

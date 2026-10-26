@@ -211,6 +211,15 @@ repository seed, merges missing stable IDs without deleting live records and
 creates an immutable dataset revision. It is safe to rerun; it should not be
 used as a substitute for reviewing a changed record.
 
+The sync also carries the repository Epigraphia archive catalogue and its
+review-gated locator pointers into the live revision. The public header, Admin
+overview and generated open-data packets all calculate dataset depth from the
+same helper, so the expected v0.30 repository snapshot is currently **45,301
+records, 38,257 research leads, 798 sources and 2,787 relationships/pointers**.
+After deployment, compare those four figures on the public header and Admin;
+different figures normally mean the new commit was built but
+`db:sync-dataset` was not run in the application container.
+
 `db:sync-research-discovery` separately upserts the complete BharatRajya and
 WhatIsIndia discovery imports, their source candidates and unresolved source
 page failures. Source refreshes do not overwrite Admin editorial metadata or
@@ -264,6 +273,12 @@ npm run publish:static
 Then commit/push the generated publication through the normal GitHub Pages
 workflow. MariaDB edits and reviewer work remain on the live server until the
 next approved static publication.
+
+GitHub Pages builds the committed repository snapshot and regenerates
+`public/data/open/*.json`; each packet carries the same `datasetDepth` summary.
+The MariaDB portal instead hydrates the latest dataset revision before loading
+the application. Repository changes therefore require a Pages build, while the
+live portal requires both a new application image and the dataset sync above.
 
 ## 7. Verify after any change
 

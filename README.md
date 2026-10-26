@@ -1,174 +1,110 @@
-# Karnataka Kingdoms — Digital Historical Atlas
+# Karnataka Historical Atlas
 
-The EC/EI canonical entity model, static ingestion pipeline, provenance policy and source-onboarding procedure are documented in [docs/canonical-epigraphy.md](docs/canonical-epigraphy.md).
+A Kannada-first, bilingual digital atlas for exploring Karnataka through maps,
+timelines, polities, people, inscriptions, literature, heritage, districts and
+global relations.
 
-A Kannada-first React/Vite atlas for exploring Karnataka's history through a time-aware map, inscriptions, literature and heritage. The public GitHub Pages edition stays static; the optional live service adds moderated community contributions backed by MariaDB.
+The project has two publication surfaces:
 
-## Features
+- **GitHub Pages:** a read-only static release with no server dependency.
+- **Live portal:** the same public application plus MariaDB-backed accounts,
+  contributions, review, administration and immutable dataset revisions.
 
-- Timeline slider from 300 BCE–1956 CE; provisional BCE inscription candidates stay in a clearly labelled research state and use distinct amber dashed map markers where provisional coordinates exist
-- Overlapping kingdoms for the selected year
-- Approximate historical extents on a Leaflet map
-- Inscription markers with language and script metadata
-- Every formal inscription is linked to its associated kingdom or governing empire; that attribution is visible in map popups, timeline cards, search results and district inscription lists, while unresolved candidates remain visibly needs-review
-- Kingdom details, rulers and sample literary works
-- Sanchaya integration points
-- Responsive static build suitable for GitHub Pages
-- Stable linked IDs, bilingual fields, citations, date/geographic precision and review states
-- Researcher workspace for search, add/edit, validation and JSON import/export
-- Kannada-first interface with persistent Kannada/English switching and bilingual entity labels
-- Event-driven chronology through 1956 with battles, campaigns, invasions, accessions and democratic reorganisation
-- District deep-history explorer with 31 district research scopes for prehistoric places, settlement origins, foundation stones and locality histories; indicative leads remain visibly needs-review
-- Karnataka and Wider India map scopes with selectable campaign routes and event narratives
-- External kingdom context includes map-ready capital/context-centre links for all 52 external polities, kept review-gated until source-specific capital evidence is verified
-- Sanchaya-branded light interface using the visual tokens and official mark from fonts.sanchaya.net
-- Sanchaya-approved accounts for students, researchers, teachers, historians and the public
-- Optional encrypted institution-ID verification and a verified badge
-- Cited change proposals, independent review, karma points and bilingual contribution certificates
-- Kannada-first guided contributions for new records, corrections and cited evidence, plus a searchable research-task board; drafts are stored permanently in MariaDB and never in browser storage
-- MariaDB audit trail with an approved-only, privacy-safe static release export
-- Search-engine metadata, bilingual structured dataset markup, crawler rules and deployment-aware sitemap generation
-- Atlas-level and source-level citations with plain-text, BibTeX, RIS and JSON exports
-- Evidence Workflow reviewer dashboard with independent reviewer fields, status history and a ready-for-promotion queue for the current P1/P2 packets
-- Dedicated coin, genealogy, boundary-evidence, manuscript witness and inscription-edition seed collections, all review-gated and linked into the public research graph
-- Public script evolution explorer for Kannada script phases, sample inscriptions, predecessor links and evidence-workflow handoff
+Research leads remain visibly `needs-review`. OCR matches, approximate map
+points and reconstructed boundaries are not presented as verified evidence.
 
-> The included boundaries and records are prototype data, not scholarly editions. Replace them with reviewed GeoJSON and cited research data before publication.
+## Current release
 
-## Run locally
+Atlas v0.30 currently reports **45,301 records**, **38,257 research leads**,
+**798 sources** and **2,787 relationships/pointers**. The Epigraphia archive
+layer contains 279 EC/EI text records and 811 deduplicated review pointers to
+48 existing atlas entities. Public, Admin and static-export statistics use the
+same calculation.
+
+See [milestone status and roadmap](docs/roadmap-status.md) for detailed coverage
+and open research work.
+
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-This runs the static atlas. It deliberately shows the contribution service as offline unless the API and MariaDB are also running.
-
-## Install and offline use
-
-The production build is installable as a browser app. After opening the deployed portal once while online, use the browser’s **Install app** / **Add to Home Screen** action. The service worker keeps the application shell, Karnataka district boundaries and map tiles that have already been visited in local cache, so records and boundaries remain usable during a connectivity interruption. A complete offline world tile archive is intentionally not bundled; a future full offline map package should use a licensed, self-hosted tile source rather than bulk-downloading public OpenStreetMap tiles.
-
-## Run the live community portal
-
-Copy `.env.example` to `.env`, configure a local MariaDB database, then run:
-
-```bash
-npm run db:migrate
-npm run db:sync-dataset
-npm run db:sync-research-discovery
-npm run dev:api
-npm run dev
-```
-
-The Vite server proxies `/api` to port 8787. For an all-in-one production-shaped setup, configure `.env` and use `docker compose up -d --build`. See the role-specific [community user guide](docs/user-guide.md), [live deployment](docs/live-deployment.md) and [community governance](docs/community-governance.md).
-
-For a cloned Linux deployment behind an existing Nginx instance, use the guarded systemd/TLS installer: [Linux + Nginx installation](docs/linux-nginx-install.md) and `scripts/install-linux-nginx.sh`. For later releases, run `scripts/update-live.sh` on the server to fetch, validate, migrate and restart the existing deployment without replacing its secrets or Nginx/TLS configuration.
-
-See the maintained [milestone status and roadmap](docs/roadmap-status.md) for the implementation history, current coverage and prioritized next work.
-
-The statewide freedom-fighter research pass is tracked in the [31-district coverage audit](docs/freedom-fighter-district-audit.md). Run `npm run audit:freedom-fighters` after changing people, district associations, citations or review status. The audit deliberately distinguishes captured candidates from independently reviewed records and keeps empty districts visible as research work rather than implying completeness.
-
-The [Internet Archive freedom-fighter research note](docs/internet-archive-freedom-fighter-research.md) records the first ServantsOfKnowledge/JaiGyan scan, six high-value source items and the page-image verification procedure. Internet Archive OCR is used only to find candidate pages; names and claims enter MariaDB through Admin with printed locators and remain `needs-review` until checked.
-
-For repeatable research intake, citation management, MariaDB synchronization, social-update links and offline/PWA operation, follow [Research intake and update procedure](docs/research-intake.md).
-
-For the current P2/P3 corpus maturity work, use [P2/P3 corpus maturity workflow](docs/p2-p3-corpus-maturity.md). It explains how to complete coin records, genealogy assertions, boundary evidence, inscription editions and manuscript/Sanchaya witnesses without promoting leads prematurely.
-
-For the complete CSV/import, migration, server-update and static-publication runbook, see [Data import and deployment](docs/data-import-and-deployment.md).
-
-## Build
-
-```bash
-npm run build
-```
-
-Validate the research data and build together:
+Validate data, run tests and build the static portal:
 
 ```bash
 npm run check
 ```
 
-The deployable static site is generated in `dist/`.
+The production bundle is written to `dist/`. It is installable as a PWA and
+caches the application shell, boundaries and previously visited tiles; it does
+not bulk-download a world map tile archive.
 
-`npm run check` also runs the reusable page-data regression suite in `test/page-data-contract.test.js`. It checks every collection for stable IDs and review states, verifies map coordinates and timeline fields, confirms explorer cards have their required bilingual/optional fields, and resolves cross-page links for events, works, inscriptions, places, people, sources and audits. Run only that suite while developing a data feature with:
+## Live MariaDB portal
+
+Copy `.env.example` to `.env`, configure MariaDB, then run:
 
 ```bash
-node --test test/page-data-contract.test.js
+npm run db:migrate
+npm run db:sync-dataset
+npm run db:sync-research-discovery
+npm run build
+npm start
 ```
 
-Add a focused regression case whenever a new page, map layer, timeline story or cross-collection relationship is introduced.
+`db:sync-dataset` creates a permanent revision from repository seed records
+without deleting server-only edits. `db:sync-research-discovery` updates the
+separate India-wide discovery queue while preserving Admin review metadata.
+The browser is never the source of truth for research data or drafts.
 
-Atlas v0.25 adds 905 Wikimedia people discovery candidates without treating them as verified biographies. Open `#people` → **Wikimedia review candidates** to search and submit cited corrections. `npm run db:sync-dataset` imports the reviewed repository seed into a permanent MariaDB dataset revision; the live portal and Admin both read that revision through the server API. See [`docs/v025-people-culture-public-life.md`](docs/v025-people-culture-public-life.md).
+For routine Linux/systemd deployment use `scripts/update-live.sh`. Coolify users
+must run both sync commands inside the newly deployed application container.
+See [live deployment](docs/live-deployment.md) and
+[data import and deployment](docs/data-import-and-deployment.md).
 
-## Dataset source of truth
+## Static GitHub Pages release
 
-The live server treats the latest `dataset_snapshots` revision in MariaDB as the source of truth for every public page and the Admin editor. The browser never stores historical records, drafts, evidence assignments or candidate edits. Browser storage is limited to interface preferences such as language, map style and whether a guided tour was already shown. The service worker may retain a read-only copy of the last successfully loaded dataset for offline viewing; it cannot edit or publish it.
+Pushes to `main` build the committed repository dataset with the GitHub Actions
+Pages workflow. A reviewed MariaDB revision can be deliberately exported with:
 
-Repository JSON is an installation seed, not the live data store. Deployment runs `db:migrate` followed by `db:sync-dataset`, and administrators create subsequent immutable MariaDB revisions. `npm run publish:static` exports the latest validated MariaDB revision to `public/data/published-atlas.json` before building the read-only GitHub Pages publication; the static site is not a second editing system.
+```bash
+npm run publish:static
+```
 
-Open `#district-history` (ಜಿಲ್ಲಾ ಸಮಗ್ರ ಇತಿಹಾಸ / District deep history) to browse the district intake layer. The older `#history` link remains a compatibility alias. Amber dashed markers are research leads, not verified sites. Researchers can edit the normalized `districtHistoryResearch` collection from the authenticated `#admin` workspace and save a permanent MariaDB revision before preparing a static release.
+Commit the generated publication artifacts before the Pages build. Live Admin
+edits do not appear on GitHub Pages until this approved export occurs.
 
-## Deploy to GitHub Pages
+## Data and research workflow
 
-1. Create a GitHub repository and push this project.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **GitHub Actions**.
-4. Push to `main`; the included workflow deploys the site.
+- Model and collections: [data model](docs/data-model.md)
+- EC/EI canonical ingestion: [canonical epigraphy](docs/canonical-epigraphy.md)
+- Repeatable imports and citations: [research intake](docs/research-intake.md)
+- Contributor and reviewer use: [user guide](docs/user-guide.md)
+- Evidence and governance: [community governance](docs/community-governance.md)
+- P2/P3 review packets: [corpus maturity](docs/p2-p3-corpus-maturity.md)
 
-The Vite `base` is set to `./`, allowing deployment from a repository subpath.
+Administrators edit permanent records in `#admin`; contributors submit cited
+proposals through `#contribute`; reviewers work in `#reviews` and `#evidence`.
+The public `#research-tasks` board keeps unresolved work visible without
+promoting it prematurely.
 
-The GitHub Pages workflow supplies `PUBLIC_SITE_URL` and generates an absolute sitemap automatically. For another production host, build with `PUBLIC_SITE_URL=https://your-atlas.example/ npm run build`. Local builds deliberately omit a domain-specific sitemap so a development address cannot become the public canonical URL.
+## Verification before release
 
-## Community workflow
+```bash
+npm run validate:data
+node --test
+npm run build
+```
 
-Open **ಕೊಡುಗೆ ನೀಡಿ / Contribute** (`#contribute`). Registration captures profession and institutional affiliation. Sanchaya approves accounts; contributors then save and submit cited proposals. Appointed reviewers approve or request changes, and approved work receives auditable karma points. Institution IDs are optional, encrypted, access-restricted, and excluded from public exports.
+Add a regression test for every new page, map layer, timeline category or
+cross-collection relationship. The public dataset must exclude private reviewer
+notes, institution IDs, unapproved drafts and moderation data.
 
-Registration requires explicit community-terms and privacy consent. **Forgot password?** sends a one-time expiring recovery link on the live portal; using it invalidates existing sessions. Configure `RESEND_API_KEY`, `MAIL_FROM`, `APP_ORIGIN` and `PASSWORD_RESET_MINUTES` in production. Administrators can approve, reject, suspend or reactivate accounts and appoint reviewer, verification-officer and exporter roles from the Administration workspace.
+## Licence and scholarly policy
 
-The standalone `#research-tasks` marketplace reports open counts and offers lazy, searchable queues for inscriptions, literature, district history, people, monuments and temples, relations, coins and scripts, territorial evidence, rulers and dynasties, grouped periodical-place packets, and source/translation review. Evidence packets link to the permanent human Evidence Workflow instead of creating a separate browser-only queue.
-
-Authenticated work is separated by purpose: `#profile` for identity, affiliation and activity; `#contribute` for new and existing submissions; `#reviews` for appointed reviewers; `#operations` for administrator account approvals, verification and campaigns; and `#admin` for permanent dataset/source editing. Legacy `#community` links redirect to `#contribute`.
-
-The live application and GitHub Pages have intentionally different responsibilities:
-
-- MariaDB live portal: accounts, private verification, proposals, reviews, points and certificates.
-- GitHub Pages: a read-only release built from the reviewed dataset and `public/data/approved-community.json`; its public contact form posts to the live portal's permanent inbox.
-
-Both editions expose **ಸಂಪರ್ಕಿಸಿ / Contact** (`#contact`). `POST /api/public/messages` stores each message in MariaDB and returns a `KHA-…` reference. Administrators triage the shared queue in **Admin → Inbox** and configure optional Telegram or WhatsApp Cloud API alerts in **Admin → Integrations**. Provider secrets are encrypted in MariaDB with `DOCUMENT_ENCRYPTION_KEY`, never returned to the browser, and never included in the GitHub Pages build. `TELEGRAM_BOT_TOKEN` and `TELEGRAM_ADMIN_CHAT_ID` remain supported as a server-environment fallback. The GitHub Pages workflow supplies `VITE_COMMUNITY_API_URL=https://karnata.sanchaya.net` so the static form reaches that API.
-
-## Local researcher workspace
-
-Run the live service and sign in as an approved administrator, then open `#admin`. The workspace:
-
-- separates overview statistics, permanent dataset editing, translation review and research discovery into focused tabs;
-- loads the latest permanent MariaDB dataset revision;
-- searches every field across each record collection;
-- offers common fields plus a complete JSON editor for geometry, citations and relationships;
-- reports dataset and per-record validation problems;
-- shows the same complete portal dataset-depth totals as the public header, separately from the current MariaDB revision's reviewed/pending collection counts;
-- imports JSON into the editor and saves complete, versioned revisions to MariaDB;
-- exports the current revision as a review artifact.
-
-The live `#admin` workspace requires an approved administrator session and stores every saved full-dataset revision in MariaDB. It does not use browser-local drafts. JSON import is staged in the editor until an administrator explicitly saves a new server revision; JSON export remains a portable review artifact. To publish, review the permanent revision, run `npm run check`, and deliberately generate the approved static release.
-
-The admin workspace is shown only to signed-in administrators, is protected by the live administrator role, and stays disabled in the static GitHub Pages build. User approvals are intentionally handled in `#operations`; research moderation is handled in `#reviews`.
-
-Use the **Resources & collaborations management** shortcuts in the admin toolbar to maintain source metadata and collaboration records. Source fields include authors/organizations, publisher or repository, DOI, ISBN, URL and review state; collaboration records include entity type, public stage, scope and bilingual descriptions. Export and review the complete JSON before publishing.
-
-The `#india-research` workspace, now available from the utility navigation, contains the complete India-wide discovery imports without widening the ordinary Karnataka timeline. On the live service, Admin has a separate paginated discovery queue for those records, underlying source candidates and unresolved source-page failures. Run `npm run db:migrate` followed by `npm run db:sync-research-discovery` after a deliberate source refresh; `scripts/update-live.sh` performs both automatically for committed imports. Admin review notes, citations and canonical-target links are retained when repository source payloads are refreshed.
-
-Open `#evidence` to operate the current evidence board. The board now includes reviewer assignments, review notes, saved status history, source citations, a reviewer operations summary and a ready-for-promotion queue. Every task shows its attached source citations directly on the card and requires at least one before it can move to awaiting-review or complete; citations are permanent and additive, so submitting a new one never removes an earlier one. A completed assignment is still only a workflow signal; publication requires an independently reviewed evidence packet, validation, a permanent MariaDB revision and a deliberate static release.
-
-## Research citations
-
-Open `#research` and choose **Reference catalogue**. Researchers can copy the recommended atlas citation, download atlas BibTeX or RIS, export the filtered source catalogue as JSON, and open the citation menu on any source for item-level BibTeX, RIS or plain-text citation. Citation quality improves as DOI, publisher and authorship metadata is completed in the admin workspace.
-
-Atlas v0.26 adds the Patrika Sanchaya periodicals layer: 3,715 Kannada newspaper and magazine catalogue rows remain available to Admin as `periodicals` records, with 76 grouped publication-place anchors on the atlas map and needs-review markers. Refresh the source with `npm run import:patrika`, then validate and synchronize MariaDB. The catalogue is credited to Patrike Sanchaya and Srinivas Havanur; future digitisation additions can be coordinated with ServantsOfKnowledge.
-
-Kingdom periods are shown as bounded reign cards on the timeline; when more than one polity is active at the selected year, the sidebar identifies the overlap. `artifacts` is the review-marked collection for dynastic symbols, coins, inscription stones, sculpture, regalia and architectural fragments. These objects appear in the dedicated timeline category and map layer with site-context coordinates until an object-level catalogue, repository and photograph are confirmed in Admin.
-
-Atlas v0.28.4 closes the P2 research-graph expansion layer with 28 genealogy assertions, 9 samanta/feudatory packets, 6 administrative-division packets, 12 coin records, 16 manuscript witnesses, 11 boundary-evidence packets, 30 inscription-edition packets and twelve review-gated script-evolution phases. The closure sprint adds Kalyani Chalukya genealogy links, Chitradurga/Bahmani successor-feudatory packets, Lakkundi and Bahmani administrative zones, Kadamba/Bahmani coinage leads, Gadayuddha/Vaddaradhane witness packets, Gudnapur/Doddahundi inscription-edition packets and six source-backed district-history candidates. These are discovery and review packets, not publication-ready claims.
-
-## Data structure
-
-Normalized prototype content is in `src/data/atlas.js`, validation rules are in `src/data/validate.js`, and the field contract is documented in `docs/data-model.md`.
+This repository includes software, structured research leads and links to
+third-party sources. Source rights and image licences remain item-specific.
+Discovery portals and OCR are pointers only; publication claims should cite
+primary editions, institutional registers, authority records or independently
+reviewed field documentation with page/item locators.

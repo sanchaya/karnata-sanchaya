@@ -11,6 +11,12 @@
       "status": "needs-review",
       "reviewer": null,
       "updatedAt": "2026-08-23"
+    },
+    "datasetDepth": {
+      "totalRecords": 45301,
+      "researchLeads": 38257,
+      "sources": 798,
+      "relationships": 2787
     }
   },
   "catalogue": {

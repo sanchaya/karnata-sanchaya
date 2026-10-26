@@ -35,6 +35,7 @@ const packageSource = await readFile(new URL('../package.json', import.meta.url)
 const openDatasetExportSource = await readFile(new URL('../scripts/generate-open-datasets.mjs', import.meta.url), 'utf8')
 const atlasSource = await readFile(new URL('../src/data/atlas.js', import.meta.url), 'utf8')
 const datasetDepthSource = await readFile(new URL('../src/data/dataset-depth.js', import.meta.url), 'utf8')
+const epigraphiaLinksSource = await readFile(new URL('../src/data/epigraphia-links.js', import.meta.url), 'utf8')
 
 test('new visitors start in Kannada with the historical map theme', () => {
   assert.match(i18nSource, /localStorage\.getItem\('karnataka-atlas-locale'\) \|\| 'kn'/)
@@ -78,11 +79,15 @@ test('public navigation reports the depth of the published research dataset', ()
   assert.match(appSource, /const publicDataDepth=calculateDatasetDepth\(atlasData\)/, 'public dataset counts must use the shared depth calculation')
   assert.match(adminSource, /calculateDatasetDepth\(data\)/, 'Admin must use the same portal-depth calculation as the public header')
   assert.match(datasetDepthSource, /peopleCandidateMeta\?\.candidateCount/, 'dataset depth must include the public Wikimedia candidate corpus without bundling every row into the top-level app')
+  assert.match(datasetDepthSource, /length\(dataset\.epigraphiaArchiveTexts\)/, 'dataset depth must include the review-gated Epigraphia Archive corpus')
+  assert.match(datasetDepthSource, /countEpigraphiaPointers\(dataset\.epigraphiaArchiveTexts\)/, 'dataset depth must include review-gated source-to-record pointers')
+  assert.match(epigraphiaLinksSource, /sourceRecord\.id}:\$\{targetId}/, 'duplicate OCR hints must not inflate the relationship count')
   assert.match(datasetDepthSource, /discoveryMeta\.recordCount/, 'dataset depth must include the separately code-split India research corpus')
   assert.match(datasetDepthSource, /discoveryMeta\.sourceCount/, 'dataset depth must include India research source candidates')
   assert.match(datasetDepthSource, /feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution'/, 'dataset depth must include the P1 and P2 model-foundation collections')
   assert.match(appSource, /className="public-data-depth"/, 'dataset depth must remain visible in the top navigation')
   for (const metric of ['totalRecords','researchLeads','sources','relationships']) assert.match(appSource,new RegExp(`publicDataDepth\\.${metric}`),`${metric} must be presented publicly`)
+  assert.match(openDatasetExportSource, /datasetDepth/, 'static open-data packets must publish the same depth summary used by the portal')
 })
 
 test('source-volume extraction sprint is assembled into the atlas dataset', () => {
@@ -233,6 +238,7 @@ test('the public history graph includes cited non-royal and occupational people'
 })
 
 test('the People Explorer exposes the complete linked research workflow', () => {
+  assert.match(peopleSource, /epigraphiaRecordsForTargets/, 'people profiles must expose related epigraphical research pointers')
   assert.match(appSource,/const PeopleExplorer=lazy/, 'the public people page must remain code-split')
   assert.match(appSource,/\['people',locale==='kn'\?'ವ್ಯಕ್ತಿಗಳು':'People'\]/, 'people must remain visible in primary navigation')
   assert.match(peopleSource,/atlasData\.people\.map/, 'the directory must derive from the normalized people collection')
@@ -460,6 +466,8 @@ test('Bengaluru explorer keeps the full KML inventory available without renderin
 })
 
 test('relations explorer includes first-class bilateral political records and battle locations', () => {
+  assert.match(relationsSource, /epigraphiaRecordsForTargets/, 'relations must expose review-gated epigraphical pointers for the selected record')
+  assert.match(relationsSource, /archiveLeadNote/, 'relations must explain that OCR pointers are not verified evidence')
   assert.match(relationsSource, /atlasData\.politicalRelations/, 'the relations page must consume the bilateral relation collection')
   assert.match(relationsSource, /politicalRelationRecords/, 'bilateral records must be normalized for filters and the map')
   assert.match(relationsSource, /battleLocations/, 'battle locations must be retained in map positions')

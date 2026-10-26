@@ -3,11 +3,13 @@ import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { atlasData } from '../src/data/atlas.js'
+import { calculateDatasetDepth } from '../src/data/dataset-depth.js'
 
 const rootDir=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const outputDir=path.join(rootDir,'public','data','open')
 const privateFields=new Set(['reviewWorkflow','verification','resolution','promotionReview','privateNotes','moderation'])
 const generatedAt=process.env.SOURCE_DATE_EPOCH?new Date(Number(process.env.SOURCE_DATE_EPOCH)*1000).toISOString():atlasData.meta.exportedAt||null
+const datasetDepth=calculateDatasetDepth(atlasData)
 
 const publicRecord=value=>{
   if(Array.isArray(value))return value.map(publicRecord)
@@ -22,6 +24,7 @@ const payloadFor=catalogue=>({
     generatedAt,
     access:catalogue.access,
     review:catalogue.review,
+    datasetDepth,
   },
   catalogue:{
     id:catalogue.id,

@@ -6,10 +6,11 @@ test('portal depth combines canonical records and discovery corpora without doub
   const dataset={
     polities:[{}], relationships:[{}], sources:[{},{}],
     templeInventoryLeads:[{}], heritageInventoryLeads:[{}],
+    epigraphiaArchiveTexts:[{id:'archive-1',locatorCandidates:[{targetRecordIds:['person-1','polity-1']},{targetRecordIds:['person-1']}]}],
     inscriptionAudits:[{priorityCandidates:[{},{}]}], heritageAudits:[{prioritySites:[{}]}],
     peopleCandidateMeta:{candidateCount:3}, martyrCandidateMeta:{candidateCount:4},
   }
   assert.deepEqual(calculateDatasetDepth(dataset,{recordCount:5,failureCount:2,sourceCount:3}),{
-    totalRecords:21, researchLeads:19, sources:5, relationships:1,
+    totalRecords:22, researchLeads:20, sources:5, relationships:3,
   })
 })
