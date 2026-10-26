@@ -17,6 +17,7 @@
     "import:bharatrajya": "node scripts/import-bharatrajya.mjs",
     "research:index": "node scripts/build-india-research-index.mjs",
     "import:karnataka-archaeology": "node scripts/import-karnataka-archaeology.mjs",
+    "import:bidar-bksp": "node scripts/import-bidar-bksp.mjs",
     "audit:freedom-fighters": "node scripts/audit-freedom-fighters.mjs",
     "extract:martyrs-karnataka": "node scripts/extract-dictionary-martyrs-karnataka.mjs",
     "admin:create": "node server/create-admin.js",

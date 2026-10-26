@@ -17,6 +17,7 @@ import { isTempleRecord, objectIcon, objectKindFor, timelineCategoryForCulture }
 import ContributeActions from './ContributeActions'
 import { canonicalDistrictId, canonicalDistrictName } from './data/district-normalization'
 import { calculateDatasetDepth } from './data/dataset-depth'
+import { buildSearchText, matchesSearch } from './search-normalization'
 
 const Admin=import.meta.env.VITE_STATIC_DATASET==='true'?null:lazy(()=>import('./Admin'))
 const Community=lazy(()=>import('./Community'))
@@ -802,11 +803,11 @@ export default function App(){
     ...atlasData.places.map(record=>({kind:'place',id:record.id,name:record.name,year:null,review:record.review?.status,coords:[record.location.coordinates[1],record.location.coordinates[0]],record})),
     ...heritageCandidates.map(record=>({kind:'heritage',id:record.id,name:record.name,year:record.startYear,districtId:record.auditId,review:record.verification.verificationStatus,coords:record.coords,record})),
     ...atlasData.districtHistoryResearch.map(record=>({kind:'districtHistory',id:record.id,name:record.name,year:record.date?.from,districtId:record.districtId,review:record.review?.status,coords:record.location?.coordinates?[record.location.coordinates[1],record.location.coordinates[0]]:null,record})),
-  ].map(item=>({...item,searchText:JSON.stringify(item.record).toLowerCase()})),[])
-  const searchResults=useMemo(()=>{const needle=query.trim().toLowerCase();return searchIndex.filter(item=>{
+  ].map(item=>({...item,searchText:buildSearchText(item.record)})),[])
+  const searchResults=useMemo(()=>searchIndex.filter(item=>{
     const century=item.year?Math.floor((item.year-1)/100)+1:null
-    return (!needle||item.searchText.includes(needle))&&(searchFilters.kind==='all'||item.kind===searchFilters.kind)&&(searchFilters.century==='all'||century===Number(searchFilters.century))&&(searchFilters.polity==='all'||item.polityId===searchFilters.polity||item.polityIds?.includes(searchFilters.polity))&&(searchFilters.language==='all'||item.languages?.includes(searchFilters.language))&&(searchFilters.script==='all'||item.scripts?.includes(searchFilters.script))&&(searchFilters.district==='all'||item.districtId===searchFilters.district)&&(searchFilters.review==='all'||item.review===searchFilters.review)
-  }).slice(0,20)},[query,searchFilters,searchIndex])
+    return matchesSearch(item.searchText,query)&&(searchFilters.kind==='all'||item.kind===searchFilters.kind)&&(searchFilters.century==='all'||century===Number(searchFilters.century))&&(searchFilters.polity==='all'||item.polityId===searchFilters.polity||item.polityIds?.includes(searchFilters.polity))&&(searchFilters.language==='all'||item.languages?.includes(searchFilters.language))&&(searchFilters.script==='all'||item.scripts?.includes(searchFilters.script))&&(searchFilters.district==='all'||item.districtId===searchFilters.district)&&(searchFilters.review==='all'||item.review===searchFilters.review)
+  }).slice(0,20),[query,searchFilters,searchIndex])
   const activeCoreKingdoms=useMemo(()=>kingdoms.filter(k=>year>=k.start&&year<=k.end),[year])
   const activeExternalKingdoms=useMemo(()=>contextualExternalKingdoms.filter(k=>year>=k.start&&year<=k.end),[year])
   const active=useMemo(()=>layers.externalKingdoms?[...activeCoreKingdoms,...activeExternalKingdoms]:activeCoreKingdoms,[activeCoreKingdoms,activeExternalKingdoms,layers.externalKingdoms])
