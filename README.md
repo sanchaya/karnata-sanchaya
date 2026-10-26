@@ -58,8 +58,9 @@ without deleting server-only edits. `db:sync-research-discovery` updates the
 separate India-wide discovery queue while preserving Admin review metadata.
 The browser is never the source of truth for research data or drafts.
 
-For routine Linux/systemd deployment use `scripts/update-live.sh`. Coolify users
-must run both sync commands inside the newly deployed application container.
+For routine Linux/systemd deployment use `scripts/update-live.sh`. The Coolify
+container automatically migrates and synchronizes the public dataset before
+starting; run `db:sync-research-discovery` separately after discovery imports.
 See [live deployment](docs/live-deployment.md) and
 [data import and deployment](docs/data-import-and-deployment.md).
 

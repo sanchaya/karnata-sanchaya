@@ -69,9 +69,10 @@ test('evidence assignments retain reviewer metadata and status history in MariaD
 })
 
 test('live install and update scripts synchronize the MariaDB dataset',async()=>{
-  const [install,update]=await Promise.all([source('scripts/install-linux-nginx.sh'),source('scripts/update-live.sh')])
+  const [install,update,dockerfile]=await Promise.all([source('scripts/install-linux-nginx.sh'),source('scripts/update-live.sh'),source('Dockerfile')])
   assert.match(install,/run db:sync-dataset/)
   assert.match(update,/run db:sync-dataset/)
+  assert.match(dockerfile,/run db:migrate && npm run db:sync-dataset && npm start/)
   assert.match(install,/run db:sync-research-discovery/)
   assert.match(update,/run db:sync-research-discovery/)
 })

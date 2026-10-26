@@ -15,4 +15,4 @@ COPY --from=build /app/server ./server
 COPY --from=build /app/scripts ./scripts
 COPY --from=build /app/src/data ./src/data
 EXPOSE 8787
-CMD ["sh", "-c", "npm run db:migrate && npm start"]
+CMD ["sh", "-c", "npm run db:migrate && npm run db:sync-dataset && npm start"]

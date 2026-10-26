@@ -44,7 +44,11 @@ Existing administrator dataset snapshots are not overwritten during deployment. 
 
 Coolify builds the commit available on its configured remote branch. It cannot deploy local commits or uncommitted files that have not been pushed. Enable Coolify's Git webhook/automatic deployment if every push to `main` should create a new deployment; otherwise use **Redeploy** after pushing.
 
-The current container startup command applies MariaDB migrations and starts the service. Repository dataset synchronization is a deliberate deployment operation, so run both synchronization commands from the **portal application container** after the new image is running:
+The container startup command applies MariaDB migrations, merges the committed
+public dataset into a new revision when needed, and then starts the service.
+This keeps the public counters aligned with GitHub Pages without overwriting
+reviewer-edited scalar values. After a discovery-source refresh, run the larger
+discovery synchronization separately from the **portal application container**:
 
 ```sh
 cd /app
@@ -52,6 +56,11 @@ npm run db:migrate
 npm run db:sync-dataset
 NODE_OPTIONS=--max-old-space-size=1024 npm run db:sync-research-discovery
 ```
+
+The first two commands above are safe diagnostics/retries; normal Coolify
+startup already runs them. The third command remains explicit because it
+updates the separate 35,061-row research intake queue and may require a larger
+Node memory allowance.
 
 Do not run these commands in the MariaDB container or an old host clone. The application container should report `DB_HOST=database` when it uses the bundled Compose/Coolify MariaDB service:
 
