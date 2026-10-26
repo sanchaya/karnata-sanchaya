@@ -654,7 +654,7 @@ function ReviewCandidatePopup({item,locale,t,compact=false}){
 }
 
 function PublicDataDepth({t}){
-  return <details className="public-data-depth"><summary><span>{t.dataDepth}</span><b>{publicDataDepth.totalRecords.toLocaleString('en-IN')}</b></summary><div className="public-data-depth-panel" aria-label={t.dataDepth}><span><b>{publicDataDepth.totalRecords.toLocaleString('en-IN')}</b> {t.publicRecords}</span><span><b>{publicDataDepth.researchLeads.toLocaleString('en-IN')}</b> {t.publicResearchLeads}</span><span><b>{publicDataDepth.sources.toLocaleString('en-IN')}</b> {t.publicSources}</span><span><b>{publicDataDepth.relationships.toLocaleString('en-IN')}</b> {t.publicRelationships}</span></div></details>
+  return <details className="public-data-depth"><summary><span>{t.dataDepth}</span><b>{publicDataDepth.totalRecords.toLocaleString('en-IN')} {t.publicRecords}</b><small>· {publicDataDepth.relationships.toLocaleString('en-IN')} {t.publicRelationships}</small></summary><div className="public-data-depth-panel" aria-label={t.dataDepth}><span><b>{publicDataDepth.totalRecords.toLocaleString('en-IN')}</b> {t.publicRecords}</span><span><b>{publicDataDepth.researchLeads.toLocaleString('en-IN')}</b> {t.publicResearchLeads}</span><span><b>{publicDataDepth.sources.toLocaleString('en-IN')}</b> {t.publicSources}</span><span><b>{publicDataDepth.relationships.toLocaleString('en-IN')}</b> {t.publicRelationships}</span></div></details>
 }
 
 function InscriptionAuditSection({locale,t,onChooseInscription,districtGeojson}){
