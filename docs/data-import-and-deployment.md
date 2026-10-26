@@ -120,10 +120,29 @@ JavaScript would be discoverable and would not protect bundled data.
 ### Epigraphia Carnatica / Epigraphia Indica Archive TXT workflow
 
 The Archive.org Epigraphia importer builds a review-only index of TXT/OCR
-derivatives. It records Internet Archive identifiers, TXT derivative URLs,
-series/volume labels and OCR discovery signals. It does not copy full OCR text
-into the app bundle, and OCR hits cannot be treated as final evidence until a
-reviewer checks the printed page image and item locator.
+derivatives. It records Internet Archive identifiers, item-level source
+records, TXT derivative URLs, series/volume labels and OCR discovery signals.
+The network pass covers Epigraphia Carnatica, Epigraphia Indica, South Indian
+Inscriptions, Mysore/Karnataka archaeology reports and state/district
+inscription corpora in the configured ServantsOfKnowledge and JaiGyan
+collections. It does not copy full OCR text into the app bundle, and OCR hits
+cannot be treated as final evidence until a reviewer checks the printed page
+image and item locator.
+
+The generated records also retain conservative district, taluk and village
+mentions found in catalogue titles or OCR. These `administrativeCoverage`
+entries are discovery aids: catalogue-title mentions are useful for routing a
+volume to the right district/taluk queue, while OCR village names remain
+`needs-review` until reconciled with the printed index and a modern authority.
+Each mention preserves its source spelling and also carries `normalizedName`,
+`scope`, `resolutionStatus` and `certainty`. The importer distinguishes a
+normalized Karnataka candidate, an outside-Karnataka reference, rejected OCR
+noise and an unresolved place-review task. None of these fields creates a map
+coordinate or canonical `Place` relationship by itself. Reviewers must confirm
+the printed locator and reconcile the name against the Census of India village
+directory or the Government of India Local Government Directory before adding
+coordinates. Historical names remain aliases rather than replacing the source
+spelling.
 
 To index the local Epigraphia Carnatica cache supplied for this project:
 
@@ -148,6 +167,7 @@ These are intentionally source-specific and are not all run on every deploy:
 | `npm run import:patrika` | Patrika Sanchaya newspapers/magazines CSV | The catalogue CSV changes |
 | `npm run import:nakshe-sites -- /secure/path/sites.csv` | Import the private, team-verified Inscription Stones Of Bengaluru inventory for MariaDB Admin | The protected site CSV changes |
 | `npm run import:epigraphia-archive` | Build review-only Epigraphia Archive TXT citation index | Local archive cache changes or a bounded Archive.org refresh is approved |
+| `npm run import:bidar-bksp` | Refresh the Bidar Kannada Sahitya Parishat `bksp.*` source catalogue and OCR discovery signals from ServantsOfKnowledge | New `bksp.*` books appear or OCR derivatives change; review generated source diffs before committing |
 | `node scripts/import-wikimedia-people.mjs` | Refresh Wikimedia people candidates | A reviewed source export is supplied |
 | `node scripts/import-freedom-fighters.mjs` | Refresh freedom-fighter CSVs | Master/source CSVs change; pass both CSV paths when needed |
 | `npm run audit:freedom-fighters` | Measure freedom-fighter coverage across all 31 current districts | After imports, curated additions, reviews, or a MariaDB/static release update |

@@ -231,6 +231,8 @@
 .contact-chat-launcher:focus-visible { outline: 3px solid rgba(67, 97, 238, .35); outline-offset: 3px; }
 .contact-chat-launcher svg { width: 21px; height: 21px; fill: currentColor; }
 
+.global-search{display:grid;gap:8px;position:relative}.global-search>label{display:grid;gap:7px;color:var(--sanchaya-muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.global-search input{width:100%;border:1px solid var(--sanchaya-border);border-radius:8px;background:#fff;padding:10px 11px;color:var(--sanchaya-ink);font-size:12px}.global-search details{font-size:10px}.global-search summary{color:var(--sanchaya-blue);cursor:pointer}.global-search-filters{display:grid;gap:6px;margin-top:7px}.global-search-filters select,.global-search-filters button{width:100%;border:1px solid var(--sanchaya-border);border-radius:7px;background:#fff;padding:7px;color:var(--sanchaya-ink);font-size:10px}.global-search-results{display:grid;gap:5px;max-height:420px;overflow:auto;padding:8px;border:1px solid var(--sanchaya-border);border-radius:9px;background:#fff;box-shadow:var(--sanchaya-shadow)}.global-search-results>small{color:var(--sanchaya-muted);font-size:9px}.global-search-results button{display:grid;gap:2px;width:100%;border:1px solid #e5e7f2;border-radius:7px;background:#fff;padding:8px;text-align:left;cursor:pointer}.global-search-results button:hover,.global-search-results button:focus-visible{border-color:#b8c3ff;background:var(--sanchaya-hover)}.global-search-results button span{color:var(--sanchaya-blue);font-size:8px;font-weight:800;text-transform:uppercase}.global-search-results button strong{font-size:11px}.global-search-results button small{color:var(--sanchaya-muted);font-size:9px}
+
 @media (max-width: 720px) {
   .contact-chat-launcher {
     right: 12px;
@@ -242,4 +244,10 @@
     padding: 0;
   }
   .contact-chat-launcher span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .app-shell .sidebar:has(.global-search-results){position:relative;z-index:1200;overflow:visible}
+  .sidebar>.global-search{grid-column:1;grid-row:1;min-width:0;z-index:1201}
+  .sidebar>.global-search>label>span,.sidebar>.global-search>details{display:none}
+  .sidebar>.global-search input{height:42px;padding:8px 11px;font-size:12px;text-transform:none;letter-spacing:0}
+  .sidebar .global-search-results{position:absolute;top:48px;left:0;width:min(430px,calc(100vw - 24px));max-height:min(55svh,430px);overscroll-behavior:contain}
 }
+.archive-admin-coverage{display:flex;flex-wrap:wrap;gap:.35rem;margin:.65rem 0}.archive-admin-coverage strong{flex-basis:100%;font-size:.78rem}.archive-admin-coverage span{border:1px solid var(--line);border-radius:999px;padding:.2rem .45rem;font-size:.72rem;background:var(--paper)}

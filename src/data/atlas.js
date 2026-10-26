@@ -16,7 +16,7 @@ import { applyDistrictHeritageConnections } from './district-heritage-connection
 import { freedomFighterPeople, freedomFighterPolities, freedomFighterSources } from './freedom-fighters.js'
 import { freedomMovementResearchSources } from './freedom-movement-research.js'
 import { patrikaPeriodicals, patrikaMapSites } from './patrika-sanchaya.generated.js'
-import { epigraphiaArchiveTexts } from './epigraphia-archive.generated.js'
+import { epigraphiaArchiveSources, epigraphiaArchiveTexts } from './epigraphia-archive.generated.js'
 import { karnatakaArchaeologySources, karnatakaArchaeologyTexts } from './karnataka-archaeology.generated.js'
 import { kingdomArtifacts } from './kingdom-artifacts.js'
 import { applyBengaluruFreedomFighterDisplay } from './bengaluru-freedom-fighters-display.js'
@@ -30,6 +30,9 @@ import { applyExternalCapitalLinks } from './external-capitals.js'
 import { p2ClosureRecords } from './p2-research-graph-closure.js'
 import { karnatakaArchaeologyMiningInscriptions, karnatakaArchaeologyMiningCulturalHeritage, karnatakaArchaeologyMiningPolities, karnatakaArchaeologyMiningCoinRecords, karnatakaArchaeologyMiningEvents } from './karnataka-archaeology-mining.js'
 import { canonicalData } from './canonical/ec-ei-canonical.generated.js'
+import { bidarAshtoorCulture, bidarAshtoorDistrictHistory, bidarAshtoorEvents, bidarAshtoorPeople, bidarAshtoorPlaces, bidarAshtoorSources } from './bidar-ashtoor-research.js'
+import { bidarBkspSources } from './bidar-bksp.generated.js'
+import { bidarBkspDistrictHistory, bidarBkspEvents, bidarBkspPeople, bidarBkspPlaces } from './bidar-bksp-research.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -248,6 +251,7 @@ export const atlasData = {
 }
 
 appendUniqueById(atlasData.sources, literatureEpigraphySources)
+appendUniqueById(atlasData.sources, epigraphiaArchiveSources)
 appendUniqueById(atlasData.people, literaryPeople)
 appendUniqueById(atlasData.places, inscriptionPlaces)
 appendUniqueById(atlasData.works, additionalWorks)
@@ -885,6 +889,17 @@ applyResearchWaveV022(atlasData,appendUniqueById)
 applyExternalCapitalLinks(atlasData,appendUniqueById)
 applyDistrictHeritageConnections(atlasData.districtHistoryResearch)
 appendUniqueById(atlasData.culturalHeritage, offbeatHoysalaTemples)
+appendUniqueById(atlasData.sources,bidarAshtoorSources)
+appendUniqueById(atlasData.places,bidarAshtoorPlaces)
+appendUniqueById(atlasData.people,bidarAshtoorPeople)
+appendUniqueById(atlasData.events,bidarAshtoorEvents)
+appendUniqueById(atlasData.culturalHeritage,bidarAshtoorCulture)
+appendUniqueById(atlasData.districtHistoryResearch,bidarAshtoorDistrictHistory)
+appendUniqueById(atlasData.sources,bidarBkspSources)
+appendUniqueById(atlasData.places,bidarBkspPlaces)
+appendUniqueById(atlasData.people,bidarBkspPeople)
+appendUniqueById(atlasData.events,bidarBkspEvents)
+appendUniqueById(atlasData.districtHistoryResearch,bidarBkspDistrictHistory)
 
 const personPolityRelationshipType=person=>{
   if(person.roles.includes('ruler')||person.roles.includes('queen')||person.roles.includes('foreign-monarch'))return'governed-or-represented'

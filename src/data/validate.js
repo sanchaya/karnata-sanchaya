@@ -228,7 +228,7 @@ export function validateAtlas(data) {
         if (!record.archiveIdentifier?.trim()) add('error',collection,id,'archiveIdentifier','Archive text records require an Internet Archive identifier.')
         if (!record.itemUrl?.startsWith('https://archive.org/details/')) add('error',collection,id,'itemUrl','Archive text records require a stable Archive.org item URL.')
         if (!record.textFile?.url?.startsWith('https://archive.org/download/') || !record.textFile?.name?.endsWith('.txt')) add('error',collection,id,'textFile','Archive text records require a TXT derivative URL.')
-        if (!['Epigraphia Carnatica','Epigraphia Indica','Annual Report on South Indian Epigraphy','Annual Report on Indian Epigraphy','Epigraphy corpus'].includes(record.series)) add('error',collection,id,'series','Archive text record series is invalid.')
+        if (!['Epigraphia Carnatica','Epigraphia Indica','South Indian Inscriptions','Mysore/Karnataka Archaeology Reports','Karnataka State and District Inscription Corpora','Annual Report on South Indian Epigraphy','Annual Report on Indian Epigraphy','Epigraphy corpus'].includes(record.series)) add('error',collection,id,'series','Archive text record series is invalid.')
         if (!record.citation?.sourceId || !knownIds.has(record.citation.sourceId) || !record.citation.locator?.includes('OCR discovery only')) add('error',collection,id,'citation','Archive text records require a review-safe OCR citation.')
         ;(record.locatorCandidates || []).forEach((candidate,index)=>{
           if (!candidate.id?.startsWith('archive-hint-')) add('error',collection,id,`locatorCandidates.${index}.id`,'Archive locator hints require a stable archive-hint ID.')
