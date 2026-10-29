@@ -64,6 +64,13 @@ test('external governance phases distinguish administration from foreign relatio
   assert.ok(!atlasData.externalGovernancePhases.some(record=>record.governingPolityId==='external-polity-portuguese-india'))
 })
 
+test('overlapping Karnataka and external governance phases remain comparable by year', () => {
+  const year=1050
+  const active=[...atlasData.polities,...atlasData.externalGovernancePhases].filter(record=>year>=record.date.from&&year<=record.date.to)
+  assert.ok(active.some(record=>record.id==='polity-kalyani-chalukya'))
+  assert.ok(active.some(record=>record.id==='external-governance-chola-gangavadi'))
+})
+
 test('public inscription map visibility does not depend on review approval', () => {
   const pending = { id: 'pending', year: 450, polityId: 'polity-kadamba', review: { status: 'needs-review' } }
   const visible = inscriptionsForMap([pending], { year: 1973, showAll: true })
@@ -81,6 +88,10 @@ test('primary atlas excludes unrelated external inscriptions without deleting th
   assert.ok(external.length > 0, 'specialist research corpus should retain external inscriptions')
   assert.ok(unrelatedExternal.every(record => !primary.includes(record)), 'unrelated external records must not enter the Karnataka timeline')
   assert.ok(primary.some(record => record.id === 'inscription-halmidi'))
+  assert.ok(primary.some(record => record.id === 'inscription-lobu-tua-barus'))
+  assert.ok(primary.some(record => record.id === 'inscription-polonnaruwa-ayyavole'))
+  assert.ok(!primary.some(record => record.id === 'inscription-takuapa-tamil-guild'))
+  assert.ok(!primary.some(record => record.id === 'inscription-quanzhou-tamil-temple'))
 })
 
 test('primary atlas event timeline requires a Karnataka polity or explicit Karnataka context', () => {

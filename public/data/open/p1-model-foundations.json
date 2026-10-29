@@ -16,7 +16,9 @@
       "totalRecords": 45304,
       "researchLeads": 38257,
       "sources": 800,
-      "relationships": 2788
+      "relationships": 2788,
+      "inscriptions": 81,
+      "karnatakaLinkedNonKannadaInscriptions": 2
     }
   },
   "catalogue": {

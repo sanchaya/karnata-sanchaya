@@ -16,7 +16,9 @@
       "totalRecords": 45304,
       "researchLeads": 38257,
       "sources": 800,
-      "relationships": 2788
+      "relationships": 2788,
+      "inscriptions": 81,
+      "karnatakaLinkedNonKannadaInscriptions": 2
     }
   },
   "catalogue": {
@@ -39233,6 +39235,12 @@
           "reviewer": null,
           "updatedAt": "2026-07-29"
         },
+        "karnatakaRelevance": {
+          "direct": false,
+          "kind": "merchant-network-comparison",
+          "evidenceLevel": "inferred",
+          "note": "Exact guild identity and its Aihole/Karnataka relationship require a new edition check."
+        },
         "districtAuditId": null
       },
       {
@@ -39286,6 +39294,15 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
+        },
+        "karnatakaRelevance": {
+          "direct": true,
+          "kind": "merchant-guild-presence",
+          "evidenceLevel": "attested",
+          "relatedPlaceIds": [
+            "place-aihole"
+          ],
+          "note": "Attests the Ayyavole merchant confederation; it does not imply Kannada royal rule in Sumatra."
         },
         "districtAuditId": null
       },
@@ -39438,6 +39455,15 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-29"
+        },
+        "karnatakaRelevance": {
+          "direct": true,
+          "kind": "merchant-guild-settlement",
+          "evidenceLevel": "attested",
+          "relatedPlaceIds": [
+            "place-aihole"
+          ],
+          "note": "Scholarship links the record to the Ayyavole confederation; exact stone and corpus locator remain under review."
         },
         "districtAuditId": null
       },

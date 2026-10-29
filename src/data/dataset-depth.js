@@ -11,5 +11,7 @@ export function calculateDatasetDepth(dataset, discoveryMeta = indiaResearchMeta
   const heritageSites=(dataset.heritageAudits||[]).reduce((total,audit)=>total+length(audit.prioritySites),0)
   const researchLeads=length(dataset.templeInventoryLeads)+length(dataset.heritageInventoryLeads)+length(dataset.epigraphiaArchiveTexts)+inscriptionLeads+heritageSites+(dataset.peopleCandidateMeta?.candidateCount||length(dataset.peopleCandidates))+(dataset.martyrCandidateMeta?.candidateCount||length(dataset.martyrCandidates))+(discoveryMeta.recordCount||0)+(discoveryMeta.failureCount||0)
   const relationships=length(dataset.relationships)+length(dataset.politicalRelations)+length(dataset.feudatoryRelations)+length(dataset.genealogicalRelations)+countEpigraphiaPointers(dataset.epigraphiaArchiveTexts)
-  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:length(dataset.sources)+(discoveryMeta.sourceCount||0),relationships}
+  const inscriptions=length(dataset.inscriptions)
+  const karnatakaLinkedNonKannadaInscriptions=(dataset.inscriptions||[]).filter(record=>record.karnatakaRelevance?.direct===true&&!(record.languages||[]).some(language=>/kannada/i.test(language))).length
+  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:length(dataset.sources)+(discoveryMeta.sourceCount||0),relationships,inscriptions,karnatakaLinkedNonKannadaInscriptions}
 }

@@ -15,11 +15,10 @@ points and reconstructed boundaries are not presented as verified evidence.
 
 ## Current release
 
-Atlas v0.30 currently reports **45,301 records**, **38,257 research leads**,
-**798 sources** and **2,787 relationships/pointers**. The Epigraphia archive
-layer contains 279 EC/EI text records and 811 deduplicated review pointers to
-48 existing atlas entities. Public, Admin and static-export statistics use the
-same calculation.
+Atlas v0.30 derives its public, Admin and static-export statistics from the
+same dataset collections; totals are not maintained by hand. `npm run build`
+refreshes the GitHub Pages/open-data statistics, while `npm run db:sync-dataset`
+creates the corresponding permanent MariaDB revision for the live portal.
 
 See [milestone status and roadmap](docs/roadmap-status.md) for detailed coverage
 and open research work.
