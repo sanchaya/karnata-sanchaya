@@ -19,6 +19,14 @@
       "relationships": 2788,
       "inscriptions": 81,
       "karnatakaLinkedNonKannadaInscriptions": 2
+    },
+    "attribution": {
+      "name": "Karnataka Historical Atlas",
+      "canonicalUrl": "https://karnata.sanchaya.net",
+      "credit": "Karnataka Historical Atlas · Sanchaya",
+      "originToken": "kha:karnata.sanchaya.net",
+      "notice": "Retain this attribution and the cited record-level sources when reusing public data.",
+      "payloadSha256": "62dc4c159e99378600d14a585a3a7d05d00f800131a87bdbd7829df13c2173c4"
     }
   },
   "catalogue": {
@@ -84,7 +92,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1l06l99 | https://karnata.sanchaya.net"
       },
       {
         "id": "feudatory-alupa-badami-chalukya",
@@ -120,7 +129,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1894k9j] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "feudatory-alupa-kalyani-chalukya",
@@ -157,7 +167,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0rcjlst | https://karnata.sanchaya.net"
       },
       {
         "id": "feudatory-hoysala-kalyani-chalukya",
@@ -194,7 +205,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1cybiug"
       },
       {
         "id": "feudatory-keladi-vijayanagara",
@@ -230,7 +242,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:06dhr0g"
       },
       {
         "id": "feudatory-eastern-chalukya-vengi-badami-chalukya",
@@ -266,7 +279,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:0myglqb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "feudatory-chitradurga-nayaka-vijayanagara-to-mysore",
@@ -306,7 +320,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0w8p26s"
       },
       {
         "id": "feudatory-chitradurga-nayaka-vijayanagara-successor",
@@ -342,7 +357,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0b8hmsw"
       },
       {
         "id": "feudatory-bahmani-adil-shahi-successor",
@@ -378,7 +394,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:1l8f74r] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       }
     ],
     "genealogicalRelations": [
@@ -418,7 +435,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:09ufcgw"
       },
       {
         "id": "genealogy-kirtivarman-i-pulakeshin-ii",
@@ -456,7 +474,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0dvqis2"
       },
       {
         "id": "genealogy-vijayanagara-harihara-bukka-brothers",
@@ -490,7 +509,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1jzzagv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-mayurasharma-kangavarma-kadamba",
@@ -528,7 +548,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:055emdh | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-kangavarma-bhagiratha-kadamba",
@@ -566,7 +587,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0dcvw9s"
       },
       {
         "id": "genealogy-bhagiratha-raghu-kadamba",
@@ -604,7 +626,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:09n5j2n] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-raghu-kakusthavarma-kadamba",
@@ -642,7 +665,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0fk9kh2"
       },
       {
         "id": "genealogy-durvinita-mushkara-western-ganga",
@@ -676,7 +700,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1yqhk0j] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-mushkara-polavira-western-ganga",
@@ -710,7 +735,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:18p39nw"
       },
       {
         "id": "genealogy-polavira-srivikrama-western-ganga",
@@ -744,7 +770,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1pypmbm"
       },
       {
         "id": "genealogy-srivikrama-bhuvikrama-western-ganga",
@@ -778,7 +805,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1eg8aw4"
       },
       {
         "id": "genealogy-bhuvikrama-shivamara-i-western-ganga",
@@ -812,7 +840,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0r9p98e"
       },
       {
         "id": "genealogy-shivamara-i-sripurusha-western-ganga",
@@ -846,7 +875,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1n0i1v1 | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-vishnuvardhana-narasimha-i-hoysala",
@@ -880,7 +910,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:16cpri6"
       },
       {
         "id": "genealogy-narasimha-i-ballala-ii-hoysala",
@@ -914,7 +945,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1d32qax | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-yaduraya-chikkadevaraja-mysore-early-line",
@@ -948,7 +980,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0jadzco"
       },
       {
         "id": "genealogy-chikkadevaraja-kanthirava-narasaraja-ii-mysore",
@@ -982,7 +1015,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ecjkyl | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-kanthirava-narasaraja-ii-dodda-krishnaraja-i-mysore",
@@ -1016,7 +1050,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:19xeium"
       },
       {
         "id": "genealogy-dodda-krishnaraja-i-chamaraja-wodeyar-vii-mysore",
@@ -1050,7 +1085,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1wqf58l | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-chamaraja-wodeyar-vii-krishnaraja-wadiyar-ii-mysore",
@@ -1084,7 +1120,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:16nyjgw"
       },
       {
         "id": "genealogy-krishnaraja-wadiyar-ii-nanjaraja-wodeyar-mysore",
@@ -1118,7 +1155,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0hv2szn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-nanjaraja-wodeyar-chamaraja-wodeyar-viii-mysore",
@@ -1152,7 +1190,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0uk7qil | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-chamaraja-wodeyar-viii-chamaraja-wodeyar-ix-mysore",
@@ -1186,7 +1225,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1nhjrdw"
       },
       {
         "id": "genealogy-chamaraja-wodeyar-ix-krishnaraja-iii-mysore",
@@ -1224,7 +1264,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1y2ujhn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-pulakeshin-ii-kubja-vishnuvardhana-brotherhood",
@@ -1258,7 +1299,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1txynwe"
       },
       {
         "id": "genealogy-vijayanagara-tuluva-krishnadevaraya-achyutaraya",
@@ -1292,7 +1334,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:1f5z9sv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-tailapa-ii-satyashraya-kalyani-chalukya",
@@ -1326,7 +1369,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:026fb5m"
       },
       {
         "id": "genealogy-someshvara-i-vikramaditya-vi-kalyani-chalukya",
@@ -1360,7 +1404,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:0s6v58v] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       }
     ],
     "administrativeDivisions": [
@@ -1417,7 +1462,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:05x3iod | https://karnata.sanchaya.net"
       },
       {
         "id": "admin-gangavadi-ninety-six-thousand",
@@ -1472,7 +1518,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0atjktc"
       },
       {
         "id": "admin-banavasi-twelve-thousand",
@@ -1527,7 +1574,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1rdly5v] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "admin-raichur-doab-contested-province",
@@ -1580,7 +1628,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0kyp3sk"
       },
       {
         "id": "admin-kalyani-chalukya-lakkundi-zone",
@@ -1637,7 +1686,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0rdikfm"
       },
       {
         "id": "admin-bahmani-bidar-kalaburagi-zone",
@@ -1697,7 +1747,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0cmofvy"
       }
     ],
     "boundaryEvidence": [
@@ -1754,7 +1805,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0z331kw"
       },
       {
         "id": "boundary-evidence-hoysala-ballala-ii-1187",
@@ -1813,7 +1865,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1eyzzgc"
       },
       {
         "id": "boundary-evidence-western-ganga-core-prototype",
@@ -1866,7 +1919,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1bkal05 | https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-rashtrakuta-amoghavarsha-850",
@@ -1921,7 +1975,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:04jf6b5 | https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-rashtrakuta-kannauj-campaign-circa-800",
@@ -1980,7 +2035,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1456svn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-hoysala-vishnuvardhana-1117",
@@ -2039,7 +2095,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:00g9f2f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-mysore-tipu-sultan-1787",
@@ -2098,7 +2155,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0epsrcd | https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-badami-chalukya-aihole-inscription-cluster",
@@ -2149,7 +2207,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1qg4jj2"
       },
       {
         "id": "boundary-evidence-keladi-coastal-interior-admin-zone",
@@ -2198,7 +2257,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:1kd3n1r] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-kalyani-chalukya-lakkundi-zone",
@@ -2245,7 +2305,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:0ns0vwj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-bahmani-northern-karnataka-zone",
@@ -2296,7 +2357,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1lh25f9 | https://karnata.sanchaya.net"
       }
     ],
     "coinRecords": [
@@ -2366,7 +2428,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1xv59dd | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-sevuna-devagiri-kannada-legend-lead",
@@ -2434,7 +2497,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1pgwx7b] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-vijayanagara-hampi-gold-coinage-lead",
@@ -2502,7 +2566,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0lfmvkd | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-badami-chalukya-varaha-emblem-lead",
@@ -2570,7 +2635,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1rv6lci"
       },
       {
         "id": "coin-hoysala-belur-numismatic-lead",
@@ -2638,7 +2704,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0zuw70g"
       },
       {
         "id": "coin-mysore-srirangapatna-tipu-lead",
@@ -2710,7 +2777,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1v72ru8"
       },
       {
         "id": "coin-haidar-ali-bahaduri-pagoda-lead",
@@ -2774,7 +2842,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1xif5ov] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-haidar-ali-fanam-lead",
@@ -2838,7 +2907,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ekah9g"
       },
       {
         "id": "coin-haidar-ali-paisa-lead",
@@ -2902,7 +2972,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0sjtfpc"
       },
       {
         "id": "coin-haidar-ali-kanarese-numeral-paisa-lead",
@@ -2966,7 +3037,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:00pek7f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-haidar-ali-tiger-battle-axe-lead",
@@ -3030,7 +3102,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0p07w5i"
       },
       {
         "id": "coin-tipu-sultan-ahmadi-sadiqi-gold-lead",
@@ -3094,7 +3167,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:06k6d5f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-tipu-sultan-silver-rupee-system-lead",
@@ -3158,7 +3232,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0qywxjm"
       },
       {
         "id": "coin-tipu-sultan-twelve-mint-network-lead",
@@ -3222,7 +3297,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:054yux7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-parampare-western-ganga-gold-plate-lead",
@@ -3286,7 +3362,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1ray1nx | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
@@ -3350,7 +3427,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:05vg6vx | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-krishnadevaraya-saraswati-copper-lead",
@@ -3414,7 +3492,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-29"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1r61g6h | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-maturity-maski-ashokan-punchmarked-context",
@@ -3482,7 +3561,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:02rste6"
       },
       {
         "id": "coin-maturity-hoysala-garuda-fanam-catalogue-lead",
@@ -3550,7 +3630,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1wezcz4"
       },
       {
         "id": "coin-kadamba-banavasi-lion-type-lead",
@@ -3614,7 +3695,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0w47nji"
       },
       {
         "id": "coin-bahmani-bidar-kalaburagi-mint-lead",
@@ -3678,7 +3760,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:199ra21 | https://karnata.sanchaya.net"
       }
     ],
     "manuscriptWitnesses": [
@@ -3736,7 +3819,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0o5vt2w"
       },
       {
         "id": "manuscript-vikramarjuna-vijaya-sanchaya-witness-lead",
@@ -3792,7 +3876,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ccnk08"
       },
       {
         "id": "manuscript-adipurana-printed-edition-lead",
@@ -3844,7 +3929,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1pkb3f3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-gadayuddha-routledge-witness-lead",
@@ -3896,7 +3982,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0ty6go7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-vaddaradhane-palm-leaf-witness-lead",
@@ -3948,7 +4035,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1thppvx | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-kumaravyasa-bharata-sanchaya-witness-lead",
@@ -4008,7 +4096,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1gjpneh | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-torave-ramayana-sanchaya-witness-lead",
@@ -4064,7 +4153,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1a4fu71 | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-ajitapurana-jangamwadi-witness-lead",
@@ -4116,7 +4206,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ijwull | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-shantipurana-jangamwadi-witness-lead",
@@ -4168,7 +4259,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1fo1pq6"
       },
       {
         "id": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
@@ -4220,7 +4312,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ybwmtw"
       },
       {
         "id": "manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead",
@@ -4272,7 +4365,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:02vrjsn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-source-volume-torave-ramayana-itihasa-literature-lead",
@@ -4324,7 +4418,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0cpwplx | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-kavirajamarga-parampare-print-witness-lead",
@@ -4376,7 +4471,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:08o9iu8"
       },
       {
         "id": "manuscript-shabdamanidarpana-script-grammar-witness-lead",
@@ -4428,7 +4524,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0yz1vz1 | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-gadayuddha-routledge-translation-lead",
@@ -4480,7 +4577,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:1k47fy7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-vaddaradhane-repository-recovery-lead",
@@ -4532,7 +4630,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ez5yts"
       }
     ],
     "inscriptionEditions": [
@@ -4617,7 +4716,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:022dw4y"
       },
       {
         "id": "edition-inscription-aihole-ravikirti-review-packet",
@@ -4697,7 +4797,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:05yfkrj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-alupa-udiyavara-pillars",
@@ -4777,7 +4878,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:06s6j0m"
       },
       {
         "id": "edition-inscription-lobu-tua-barus",
@@ -4857,7 +4959,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0yzoxyo"
       },
       {
         "id": "edition-inscription-polonnaruwa-ayyavole",
@@ -4937,7 +5040,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:04g1xp9 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-talagunda",
@@ -5023,7 +5127,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0b4mms6"
       },
       {
         "id": "edition-inscription-gudnapur",
@@ -5103,7 +5208,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1cn0m4m"
       },
       {
         "id": "edition-inscription-kappe-arabhatta",
@@ -5193,7 +5299,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1g2pv21 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-begur",
@@ -5279,7 +5386,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:08jbmjp | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-atakur",
@@ -5361,7 +5469,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:12s2ssb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-tyagada-brahmadeva",
@@ -5441,7 +5550,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:05ydumm"
       },
       {
         "id": "edition-inscription-lakkundi",
@@ -5523,7 +5633,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0zxvulj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-belur-foundation",
@@ -5609,7 +5720,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1u84hcr] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-hampi-cluster",
@@ -5691,7 +5803,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1ejrbyy"
       },
       {
         "id": "edition-inscription-hampi-krishna-temple",
@@ -5773,7 +5886,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0r67gn3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-chandravalli-mayurasharma",
@@ -5853,7 +5967,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0ofsvwn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-doddahundi-nishidhi",
@@ -5933,7 +6048,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:19pog60"
       },
       {
         "id": "edition-inscription-takuapa-tamil-guild",
@@ -6013,7 +6129,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1x539w5 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-shravanabelagola-cluster",
@@ -6097,7 +6214,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1wn2n4d | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-shravanabelagola-gommateshwara-chavundaraya",
@@ -6177,7 +6295,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0gf8umc"
       },
       {
         "id": "edition-inscription-shravanabelagola-gangaraja-basti",
@@ -6257,7 +6376,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0o5ifto"
       },
       {
         "id": "edition-inscription-shravanabelagola-panditarya-epitaph",
@@ -6337,7 +6457,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0p1ga6m"
       },
       {
         "id": "edition-inscription-muktesvara-attiraja-review-packet",
@@ -6423,7 +6544,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1y04x1s"
       },
       {
         "id": "edition-source-volume-halmidi-parampare-v1-plate-lead",
@@ -6504,7 +6626,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0mh3xk1 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-source-volume-talagunda-parampare-v1-plate-lead",
@@ -6585,7 +6708,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:06jrmph | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-source-volume-barkur-harihara-lead",
@@ -6666,7 +6790,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1lr091q"
       },
       {
         "id": "edition-source-volume-badami-chamarasa-lead",
@@ -6747,7 +6872,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0n88pox | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-source-volume-belur-hoysala-vol7-lead",
@@ -6828,7 +6954,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:1dgyydv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-gudnapur-kadamba-review-packet",
@@ -6910,7 +7037,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1crysee"
       },
       {
         "id": "edition-inscription-doddahundi-nishidhi-review-packet",
@@ -6992,7 +7120,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ldwids"
       }
     ],
     "scriptEvolution": [
@@ -7050,7 +7179,8 @@
         "morphologyNote": {
           "en": "Kadamba/Proto-Kannada divergence from Southern Brahmi, with Halmidi and Talagunda retained as high-priority item-edition review samples.",
           "kn": "ಹಲ್ಮಿಡಿ ಮತ್ತು ತಾಳಗುಂದವನ್ನು ಉನ್ನತ ಆದ್ಯತೆಯ ವಸ್ತುಮಟ್ಟದ ಆವೃತ್ತಿ ಮಾದರಿಗಳಾಗಿ ಇಟ್ಟು, ದಕ್ಷಿಣ ಬ್ರಾಹ್ಮಿಯಿಂದ ಕದಂಬ/ಪ್ರೋಟೋ-ಕನ್ನಡ ವಿಭಜನೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ."
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:11cnc89 | https://karnata.sanchaya.net"
       },
       {
         "id": "script-old-kannada-epigraphic-phase",
@@ -7114,7 +7244,8 @@
         "morphologyNote": {
           "en": "Kept as the broad Old Kannada umbrella while the Badami Chalukya and Rashtrakuta sub-stages mature as separate packets.",
           "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಮತ್ತು ರಾಷ್ಟ್ರಕೂಟ ಉಪಹಂತಗಳು ಪ್ರತ್ಯೇಕ ಕಡತಗಳಾಗಿ ಪರಿಪಕ್ವವಾಗುವವರೆಗೆ ಇದು ವಿಸ್ತೃತ ಹಳೆಗನ್ನಡ ಅಂಬರ ಹಂತವಾಗಿ ಉಳಿಯುತ್ತದೆ."
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1n4r53t | https://karnata.sanchaya.net"
       },
       {
         "id": "script-early-kannada-verse-transition",
@@ -7179,7 +7310,8 @@
         "morphologyNote": {
           "en": "Review lane for early Kannada verse and mixed-language inscriptions before the later temple-corpus forms dominate.",
           "kn": "ನಂತರದ ದೇವಾಲಯ ಶಾಸನ ರೂಪಗಳು ಮೇಲುಗೈ ಪಡೆಯುವ ಮೊದಲು ಆರಂಭಿಕ ಕನ್ನಡ ಪದ್ಯ ಮತ್ತು ಮಿಶ್ರಭಾಷಾ ಶಾಸನಗಳ ಪರಿಶೀಲನಾ ಹಾದಿ."
-        }
+        },
+        "_attribution": "[kha:0apcjqn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-medieval-kannada-temple-epigraphy",
@@ -7246,7 +7378,8 @@
         "morphologyNote": {
           "en": "Broad medieval temple-epigraphy bucket retained for compatibility, now backed by a finer Kalyani Chalukya-Hoysala ornate phase.",
           "kn": "ಹೊಂದಾಣಿಕೆಗೆ ವಿಸ್ತೃತ ಮಧ್ಯಯುಗೀನ ದೇವಾಲಯ ಶಾಸನ ಗುಂಪು ಉಳಿದಿದ್ದು, ಈಗ ಸೂಕ್ಷ್ಮ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ-ಹೊಯ್ಸಳ ಅಲಂಕೃತ ಹಂತದಿಂದ ಬೆಂಬಲಿತವಾಗಿದೆ."
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:02chtkk"
       },
       {
         "id": "script-vijayanagara-kannada-nagari-mixed-phase",
@@ -7302,7 +7435,8 @@
         "morphologyNote": {
           "en": "Imperial Vijayanagara review lane retained while the successor Nayaka and Telugu-Kannada divergence packet carries the longer standardisation story.",
           "kn": "ದೀರ್ಘ ಮಾನಕೀಕರಣ ಕಥೆಯನ್ನು ಉತ್ತರಾಧಿಕಾರಿ ನಾಯಕ ಮತ್ತು ತೆಲುಗು-ಕನ್ನಡ ವಿಭಜನೆ ಕಡತ ಹೊತ್ತಿರುವಾಗ ಸಾಮ್ರಾಜ್ಯ ವಿಜಯನಗರ ಪರಿಶೀಲನಾ ಹಾದಿ ಉಳಿದಿದೆ."
-        }
+        },
+        "_attribution": "[kha:1w4p99f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-modern-kannada-print-transition",
@@ -7357,7 +7491,8 @@
         "morphologyNote": {
           "en": "Modern print lane extended to the present, with Basel Mission/Mangaluru, Bangalore print culture and Patrika Sanchaya witnesses left as review tasks.",
           "kn": "ಆಧುನಿಕ ಮುದ್ರಣ ಹಾದಿಯನ್ನು ವರ್ತಮಾನವರೆಗೆ ವಿಸ್ತರಿಸಿದ್ದು, ಬಾಸೆಲ್ ಮಿಷನ್/ಮಂಗಳೂರು, ಬೆಂಗಳೂರು ಮುದ್ರಣ ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪತ್ರಿಕಾ ಸಂಚಯ ಸಾಕ್ಷ್ಯಗಳನ್ನು ಪರಿಶೀಲನಾ ಕಾರ್ಯಗಳಾಗಿ ಇಡಲಾಗಿದೆ."
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0fj4nx8"
       },
       {
         "id": "script-ashokan-satavahana-brahmi-root",
@@ -7417,7 +7552,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1afr7dq"
       },
       {
         "id": "script-badami-chalukya-rounded-transition",
@@ -7478,7 +7614,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:01sz58n] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-rashtrakuta-uniform-old-kannada",
@@ -7538,7 +7675,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1bie861 | https://karnata.sanchaya.net"
       },
       {
         "id": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
@@ -7603,7 +7741,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:14iazxj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-vijayanagara-nayaka-standardising-kannada",
@@ -7669,7 +7808,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0to4ww1 | https://karnata.sanchaya.net"
       },
       {
         "id": "script-mysore-wodeyar-print-standard-kannada",
@@ -7730,7 +7870,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1usarkl | https://karnata.sanchaya.net"
       }
     ]
   }

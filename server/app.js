@@ -12,12 +12,13 @@ import { validateAtlas } from '../src/data/validate.js'
 import { insertDatasetRevision, latestDataset, publicDataset, repositoryDataset } from './dataset-store.js'
 import { emailDeliveryConfigured, sendPasswordResetEmail } from './mailer.js'
 import { notificationSettingsSummary, saveNotificationSettings, sendPortalNotifications } from './notifications.js'
+import { PUBLIC_DATA_ATTRIBUTION } from '../src/data/public-attribution.js'
 
 config.assertProductionSecrets()
 const app=express()
 if(config.trustProxy)app.set('trust proxy',1)
 app.disable('x-powered-by')
-app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://tile.openstreetmap.org; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"});next()})
+app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://tile.openstreetmap.org; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",'X-Robots-Tag':'noai, noimageai','X-Karnata-Origin':PUBLIC_DATA_ATTRIBUTION.canonicalUrl,'Cross-Origin-Resource-Policy':'same-site'});next()})
 app.use(express.json({limit:'12mb'}))
 
 const allowedOrigins=new Set([config.appOrigin])
@@ -61,13 +62,16 @@ app.post('/api/public/messages',rateLimit('public-message',10,60*60*1000),async(
   sendPortalNotifications(`Karnataka Historical Atlas\n${referenceCode} · ${category}\n${subject}\n${config.appOrigin}/#admin`,pool,config).catch(error=>console.error(error.message))
   res.status(201).json({ok:true,referenceCode})
 })
-app.get('/api/dataset',async(req,res)=>{
+app.get('/api/dataset',rateLimit('public-dataset',180,60*60*1000),async(req,res)=>{
   const latest=await latestDataset(pool)
   if(!latest)return res.status(503).set('Cache-Control','no-store').json({error:'The MariaDB atlas dataset has not been initialized.'})
-  const dataset=publicDataset(latest.dataset)
-  const contentSha256=sha256(JSON.stringify(dataset))
-  if(req.get('if-none-match')===`"${contentSha256}"`)return res.status(304).end()
-  res.set({'Cache-Control':'no-store',ETag:`"${contentSha256}"`}).json({...latest,contentSha256,dataset})
+  const publicPayload=publicDataset(latest.dataset)
+  publicPayload.meta={...publicPayload.meta,attribution:PUBLIC_DATA_ATTRIBUTION}
+  const payloadSha256=sha256(JSON.stringify(publicPayload))
+  if(req.get('if-none-match')===`"${payloadSha256}"`)return res.status(304).end()
+  const attribution={...PUBLIC_DATA_ATTRIBUTION,payloadSha256}
+  const dataset={...publicPayload,meta:{...publicPayload.meta,attribution}}
+  res.set({'Cache-Control':'no-store',ETag:`"${payloadSha256}"`,'X-Karnata-Payload-SHA256':payloadSha256}).json({...latest,payloadSha256,attribution,dataset})
 })
 
 app.post('/api/auth/register',rateLimit('register',8,60*60*1000),async(req,res)=>{

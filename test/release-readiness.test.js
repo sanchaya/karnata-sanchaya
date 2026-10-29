@@ -47,7 +47,7 @@ test('the loading screen offers the lightweight public fallback', () => {
 })
 
 test('public navigation keeps the complete release route set and admin private', () => {
-  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'research-tasks', 'contribute', 'profile', 'reviews', 'operations', 'about', 'india-research']
+  const expectedRoutes = ['atlas', 'relations', 'people', 'freedom', 'literature', 'epigraphy', 'districts', 'district-history', 'inscriptions', 'coins', 'scripts', 'evidence', 'research', 'research-tasks', 'contribute', 'profile', 'reviews', 'operations', 'about', 'india-research', 'geography']
   const routeBlock = appSource.match(/const publicViews=\[(.*?)\]/s)?.[1] || ''
   for (const route of expectedRoutes) assert.match(routeBlock, new RegExp(`['"]${route}['"]`), `${route} must remain a public route`)
   assert.doesNotMatch(routeBlock, /['"]admin['"]/, 'admin must never be part of public navigation')

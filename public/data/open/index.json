@@ -1,6 +1,13 @@
 {
   "schemaVersion": "0.30.0",
   "generatedAt": null,
+  "attribution": {
+    "name": "Karnataka Historical Atlas",
+    "canonicalUrl": "https://karnata.sanchaya.net",
+    "credit": "Karnataka Historical Atlas · Sanchaya",
+    "originToken": "kha:karnata.sanchaya.net",
+    "notice": "Retain this attribution and the cited record-level sources when reusing public data."
+  },
   "datasets": [
     {
       "id": "dataset-public-atlas-summary",

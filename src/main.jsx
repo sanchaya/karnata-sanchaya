@@ -21,8 +21,17 @@ import './admin-readiness.css'
 import './guided-tour.css'
 import './tablet.css'
 import { hydrateAtlasData } from './data/runtime'
+import { appendPublicAttribution } from './data/public-attribution'
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
+
+document.addEventListener('copy',event=>{
+  if(event.target?.closest?.('input, textarea, [contenteditable="true"]')||!event.clipboardData)return
+  const selected=window.getSelection()?.toString().trim()
+  if(!selected)return
+  event.preventDefault()
+  event.clipboardData.setData('text/plain',appendPublicAttribution(selected,`${location.pathname}${location.hash}`))
+})
 
 async function start(){
   try{

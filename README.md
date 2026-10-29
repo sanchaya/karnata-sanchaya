@@ -108,3 +108,9 @@ third-party sources. Source rights and image licences remain item-specific.
 Discovery portals and OCR are pointers only; publication claims should cite
 primary editions, institutional registers, authority records or independently
 reviewed field documentation with page/item locators.
+
+Public JSON exports and the live dataset API carry the canonical origin
+`https://karnata.sanchaya.net`, a compact origin token and a payload
+fingerprint. These provenance markers support attribution; they are not DRM and
+cannot make a public GitHub Pages dataset impossible to copy. The live API also
+applies request throttling and same-site resource headers.

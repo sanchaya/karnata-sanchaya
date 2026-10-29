@@ -19,6 +19,14 @@
       "relationships": 2788,
       "inscriptions": 81,
       "karnatakaLinkedNonKannadaInscriptions": 2
+    },
+    "attribution": {
+      "name": "Karnataka Historical Atlas",
+      "canonicalUrl": "https://karnata.sanchaya.net",
+      "credit": "Karnataka Historical Atlas · Sanchaya",
+      "originToken": "kha:karnata.sanchaya.net",
+      "notice": "Retain this attribution and the cited record-level sources when reusing public data.",
+      "payloadSha256": "e971c0a5c9520d0e253079f81b87aaf59ae73c07adea5f6b20addac32fa3a0cf"
     }
   },
   "catalogue": {
@@ -86,7 +94,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:15dr1pw"
       },
       {
         "id": "inscription-audit-ballari",
@@ -177,7 +186,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1cdc8mg"
       },
       {
         "id": "inscription-audit-belagavi",
@@ -249,7 +259,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "[kha:1d3drlb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-bengaluru-rural",
@@ -319,7 +330,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:059c2n9 | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-bengaluru-urban",
@@ -1698,7 +1710,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0nxdjd0"
       },
       {
         "id": "inscription-audit-bidar",
@@ -1770,7 +1783,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0fq47ql | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-chamarajanagar",
@@ -1849,7 +1863,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0cruzq1 | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-chikkaballapur",
@@ -1917,7 +1932,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1in5u2h | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-chikkamagaluru",
@@ -2049,7 +2065,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1fsl8pl | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-chitradurga",
@@ -2164,7 +2181,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "[kha:1xl8ubb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-dakshina-kannada",
@@ -2240,7 +2258,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:08euyyt | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-davanagere",
@@ -2325,7 +2344,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1nuzh2g"
       },
       {
         "id": "inscription-audit-dharwad",
@@ -2408,7 +2428,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:16wn6sa"
       },
       {
         "id": "inscription-audit-gadag",
@@ -2441,7 +2462,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0qi6jj8"
       },
       {
         "id": "inscription-audit-hassan",
@@ -2521,7 +2543,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0zxn8ix | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-haveri",
@@ -2566,7 +2589,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1hiys6p | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-kalaburagi",
@@ -2670,7 +2694,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1wq6xlm"
       },
       {
         "id": "inscription-audit-kodagu",
@@ -2738,7 +2763,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1gvoy89 | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-kolar",
@@ -2824,7 +2850,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1fs6t0w"
       },
       {
         "id": "inscription-audit-koppal",
@@ -2863,7 +2890,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0y05s25 | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-mandya",
@@ -2899,7 +2927,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0q57ry8"
       },
       {
         "id": "inscription-audit-mysuru",
@@ -2980,7 +3009,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1hjvfxs"
       },
       {
         "id": "inscription-audit-raichur",
@@ -3089,7 +3119,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:16o6abo"
       },
       {
         "id": "inscription-audit-ramanagara",
@@ -3157,7 +3188,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:13394mu"
       },
       {
         "id": "inscription-audit-shivamogga",
@@ -3233,7 +3265,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:03csw6y"
       },
       {
         "id": "inscription-audit-tumakuru",
@@ -3321,7 +3354,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "[kha:1bgu2bj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-udupi",
@@ -3437,7 +3471,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "[kha:184gbxv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-uttara-kannada",
@@ -3470,7 +3505,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "[kha:0615r9f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-vijayapura",
@@ -3542,7 +3578,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0kqqhym"
       },
       {
         "id": "inscription-audit-vijayanagara",
@@ -3584,7 +3621,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0y7how5 | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-yadgir",
@@ -3664,7 +3702,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:09503lt | https://karnata.sanchaya.net"
       },
       {
         "id": "inscription-audit-cross-border-kannada",
@@ -4047,7 +4086,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0gbvf1c"
       }
     ],
     "inscriptionEditions": [
@@ -4132,7 +4172,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:022dw4y"
       },
       {
         "id": "edition-inscription-aihole-ravikirti-review-packet",
@@ -4212,7 +4253,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:05yfkrj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-alupa-udiyavara-pillars",
@@ -4292,7 +4334,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:06s6j0m"
       },
       {
         "id": "edition-inscription-lobu-tua-barus",
@@ -4372,7 +4415,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0yzoxyo"
       },
       {
         "id": "edition-inscription-polonnaruwa-ayyavole",
@@ -4452,7 +4496,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:04g1xp9 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-talagunda",
@@ -4538,7 +4583,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0b4mms6"
       },
       {
         "id": "edition-inscription-gudnapur",
@@ -4618,7 +4664,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1cn0m4m"
       },
       {
         "id": "edition-inscription-kappe-arabhatta",
@@ -4708,7 +4755,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1g2pv21 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-begur",
@@ -4794,7 +4842,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:08jbmjp | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-atakur",
@@ -4876,7 +4925,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:12s2ssb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-tyagada-brahmadeva",
@@ -4956,7 +5006,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:05ydumm"
       },
       {
         "id": "edition-inscription-lakkundi",
@@ -5038,7 +5089,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0zxvulj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-belur-foundation",
@@ -5124,7 +5176,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1u84hcr] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-hampi-cluster",
@@ -5206,7 +5259,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1ejrbyy"
       },
       {
         "id": "edition-inscription-hampi-krishna-temple",
@@ -5288,7 +5342,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0r67gn3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-chandravalli-mayurasharma",
@@ -5368,7 +5423,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0ofsvwn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-doddahundi-nishidhi",
@@ -5448,7 +5504,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:19pog60"
       },
       {
         "id": "edition-inscription-takuapa-tamil-guild",
@@ -5528,7 +5585,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1x539w5 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-shravanabelagola-cluster",
@@ -5612,7 +5670,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1wn2n4d | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-shravanabelagola-gommateshwara-chavundaraya",
@@ -5692,7 +5751,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0gf8umc"
       },
       {
         "id": "edition-inscription-shravanabelagola-gangaraja-basti",
@@ -5772,7 +5832,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0o5ifto"
       },
       {
         "id": "edition-inscription-shravanabelagola-panditarya-epitaph",
@@ -5852,7 +5913,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0p1ga6m"
       },
       {
         "id": "edition-inscription-muktesvara-attiraja-review-packet",
@@ -5938,7 +6000,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1y04x1s"
       },
       {
         "id": "edition-source-volume-halmidi-parampare-v1-plate-lead",
@@ -6019,7 +6082,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0mh3xk1 | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-source-volume-talagunda-parampare-v1-plate-lead",
@@ -6100,7 +6164,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:06jrmph | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-source-volume-barkur-harihara-lead",
@@ -6181,7 +6246,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1lr091q"
       },
       {
         "id": "edition-source-volume-badami-chamarasa-lead",
@@ -6262,7 +6328,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0n88pox | https://karnata.sanchaya.net"
       },
       {
         "id": "edition-source-volume-belur-hoysala-vol7-lead",
@@ -6343,7 +6410,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:1dgyydv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "edition-inscription-gudnapur-kadamba-review-packet",
@@ -6425,7 +6493,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1crysee"
       },
       {
         "id": "edition-inscription-doddahundi-nishidhi-review-packet",
@@ -6507,7 +6576,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ldwids"
       }
     ],
     "epigraphiaArchiveTexts": [
@@ -6545,7 +6615,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1p815ng"
       },
       {
         "id": "archive-epigraphia-epigraphiacarnaticamysore",
@@ -6809,7 +6880,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1w6xos5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat0000unse-vol-10",
@@ -6845,7 +6917,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0frc3fg"
       },
       {
         "id": "archive-epigraphia-damh-epigraphiacarnat0000unse-v2",
@@ -6881,7 +6954,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1jg1x1o"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat0000unse-vol-5",
@@ -6917,7 +6991,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:00thzni"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiakarnat0000unse-vol-4",
@@ -6953,7 +7028,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1a1rj2e"
       },
       {
         "id": "archive-epigraphia-iisb-epigraphiacarnat0000unse-vol-7",
@@ -6989,7 +7065,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:029we73] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol01-mysore",
@@ -7246,7 +7323,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1mmm6q2"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol03-mysoreoft",
@@ -7511,7 +7589,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1d045te"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol06-mysore",
@@ -7779,7 +7858,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0exg6wf] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol1-coorg",
@@ -8064,7 +8144,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0pt5kkd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-213548",
@@ -8113,7 +8194,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1at7u78"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol10-myso",
@@ -8422,7 +8504,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1bzjput | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat0000unse-vol-11",
@@ -8458,7 +8541,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:18b89kn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol12-mysore",
@@ -8817,7 +8901,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1c696hs"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat0000unse-vol-12",
@@ -8853,7 +8938,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0egorao"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol13-myso",
@@ -9131,7 +9217,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:148bflq"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol14-mysore",
@@ -9335,7 +9422,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0z5v4xx | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiacarnat0000mhkr-k0c1",
@@ -9459,7 +9547,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:062i2hp | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol15-mysore",
@@ -9583,7 +9672,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:15aoypm"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol16-mysore",
@@ -9773,7 +9863,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1036ix9 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiacarnat0000rnar",
@@ -9811,7 +9902,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1r8bcbo"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol2-mysore",
@@ -9849,7 +9941,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ws9zeo"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat0000unse-volu-24",
@@ -9885,7 +9978,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0hb5vil | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat0000unse-g7l3-volu-25",
@@ -9921,7 +10015,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0kuoduj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiacarnat00000une-vol-3",
@@ -9957,7 +10052,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0fkeoza"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol4-mysouoft",
@@ -9995,7 +10091,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1um26vx | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-dli-ernet-213550",
@@ -10044,7 +10141,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1m3j7h7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol5-mysouoft",
@@ -10360,7 +10458,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0vvw5ce"
       },
       {
         "id": "archive-epigraphia-damh-epigraphiacarnat0000unse-v7",
@@ -10396,7 +10495,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0eah8gt | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol7-myso",
@@ -10434,7 +10534,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:11ylpa7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol8-myso",
@@ -10671,7 +10772,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:04ridrb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-epigraphiacarnat0000unse-v9",
@@ -10707,7 +10809,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:17baflz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-isb-epigraphiyakarna000000unse-vol-9",
@@ -10743,7 +10846,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0eluef5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol-9-supplement",
@@ -10781,7 +10885,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0isngon] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-epigraphia-carnatica-vol9-myso",
@@ -10819,7 +10924,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1j26u4i"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-125947",
@@ -10971,7 +11077,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0aah9p6"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-358271",
@@ -11238,7 +11345,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0izpfab] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-epigraphiacarnat0000rnar-vol-xiii-part-ii",
@@ -11276,7 +11384,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1f3mpjm"
       },
       {
         "id": "archive-epigraphia-damh-epigraphiacarnat0000unse-v14",
@@ -11312,7 +11421,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0m91jum"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-36-8916",
@@ -11350,7 +11460,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0y3pat9 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-4391",
@@ -11388,7 +11499,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:18t9t0l | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-4398",
@@ -11426,7 +11538,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1ynmfdp | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-5207",
@@ -11464,7 +11577,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1xmb62u"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000ehul-t2i0",
@@ -11502,7 +11616,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1dxnhvb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000unse-t5v3",
@@ -11538,7 +11653,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1twge22"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000unse-r0x3",
@@ -11574,7 +11690,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:16sbihg"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000drbc-l3y1",
@@ -11612,7 +11729,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:13bapo5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000nlak-p7p3",
@@ -11650,7 +11768,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:16w9an6"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000unse-z3v3",
@@ -11686,7 +11805,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0zczucq"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-5975",
@@ -11724,7 +11844,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1dje8jf] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-69971",
@@ -11762,7 +11883,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1f1sdy3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70037",
@@ -11800,7 +11922,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1tc39i7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-19-1176",
@@ -11838,7 +11961,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0uz2xwq"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-33-8926",
@@ -11876,7 +12000,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0li1lsd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-34-8928",
@@ -11914,7 +12039,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1wifwr4"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-34-8927",
@@ -11952,7 +12078,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0ph7gx3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-34-8929",
@@ -11990,7 +12117,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0cu3j00"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-34-8930",
@@ -12028,7 +12156,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:03vq649 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-39-8939",
@@ -12066,7 +12195,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0ypizj2"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-39-8938",
@@ -12104,7 +12234,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1bs6x35 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-39-8944",
@@ -12142,7 +12273,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:12jqi07] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-39-8940",
@@ -12180,7 +12312,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:06qex4c"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-39-8941",
@@ -12218,7 +12351,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0ujwzwe"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-35-8903",
@@ -12256,7 +12390,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:12wft73] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-35-8902",
@@ -12294,7 +12429,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:12flh25 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-35-8906",
@@ -12332,7 +12468,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:025zwuy"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-35-8908",
@@ -12370,7 +12507,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1w24r7p | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-35-8909",
@@ -12408,7 +12546,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0gxyq2p | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-5483-ii",
@@ -12446,7 +12585,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:14wc68v] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-5483-vi",
@@ -12484,7 +12624,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:107yzmy"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-5483",
@@ -12522,7 +12663,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1c9giv1 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-5483-v",
@@ -12560,7 +12702,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1t5wdlh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-5483-iii",
@@ -12598,7 +12741,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0lvuivz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-5483-vii",
@@ -12636,7 +12780,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ln7klh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-38-8932",
@@ -12674,7 +12819,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1r9myvw"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-38-8936",
@@ -12712,7 +12858,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:08diifv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-380-7103",
@@ -12750,7 +12897,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1n2tubf] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-38-6071",
@@ -12788,7 +12936,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ewb35p | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-38-8937",
@@ -12826,7 +12975,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1baxtf3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-38-6071-iv",
@@ -12864,7 +13014,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:03v3qb8"
       },
       {
         "id": "archive-epigraphia-dli-ministry-12457",
@@ -13283,7 +13434,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0su21er] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-dli-ministry-12460",
@@ -13321,7 +13473,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0lp7esg"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiyaindic0000ehul-r4a7",
@@ -13359,7 +13512,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:183ab4n] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiyaindic0000unse-z0o7",
@@ -13395,7 +13549,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:16ouc1h | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-135307",
@@ -13433,7 +13588,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0kffsnd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000unse-e9c9",
@@ -13469,7 +13625,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0vpn2u5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56660",
@@ -13507,7 +13664,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1h7ff1b] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56661",
@@ -13545,7 +13703,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0ro4cp3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56662",
@@ -13843,7 +14002,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:16bv81b] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-48790",
@@ -13881,7 +14041,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:08vnb16"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-108417",
@@ -13919,7 +14080,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ae9tno"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70170",
@@ -13957,7 +14119,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ix89ih | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70159",
@@ -13995,7 +14158,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1flhnq1 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56668",
@@ -14033,7 +14197,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1rk4xt3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56256",
@@ -14071,7 +14236,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0vsjktz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56670",
@@ -14490,7 +14656,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1r2vtk8"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-100320",
@@ -14528,7 +14695,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0rdc5jx | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56671",
@@ -15007,7 +15175,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0czpnjh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56981",
@@ -15500,7 +15669,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1xvgvam"
       },
       {
         "id": "archive-epigraphia-in-gov-ignca-13301",
@@ -15538,7 +15708,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:12oe60o"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-69621",
@@ -16125,7 +16296,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0w23v7v] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56526",
@@ -16163,7 +16335,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0c6uvmm"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-57120",
@@ -16201,7 +16374,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:06vnq8s"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70001",
@@ -16239,7 +16413,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0vf4ggw"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56527",
@@ -16277,7 +16452,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0hjyxgi"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70002",
@@ -16315,7 +16491,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:03673d3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-49403",
@@ -16455,7 +16632,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1x42lup | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-108298",
@@ -16998,7 +17176,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:17bunc0"
       },
       {
         "id": "archive-epigraphia-in-gov-ignca-3722",
@@ -17036,7 +17215,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1ajh1ph | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-71071",
@@ -17074,7 +17254,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:04swrl5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-epigraphiaindica0000prof-t2d7",
@@ -17112,7 +17293,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0uxropx | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56654",
@@ -17150,7 +17332,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0mbag1x | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-48794",
@@ -17188,7 +17371,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0kvdipa"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-35693",
@@ -17226,7 +17410,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0hzpfl3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-121005",
@@ -17264,7 +17449,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:18cq7kh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56201",
@@ -17302,7 +17488,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0p6vpmn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-367558",
@@ -17340,7 +17527,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0cnsy3i"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-14-904-2",
@@ -17378,7 +17566,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1sshswc"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-14-904-vi",
@@ -17416,7 +17605,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:05cid5a"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-14-904",
@@ -17454,7 +17644,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0jergcc"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-14-904-3",
@@ -17492,7 +17683,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:13ezpcz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-14-904-viii",
@@ -17530,7 +17722,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1ic83vu"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56245",
@@ -17568,7 +17761,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0851nf3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-367484",
@@ -17606,7 +17800,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0pp4406"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-367474",
@@ -17644,7 +17839,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1h5aem6"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-36-48561",
@@ -17682,7 +17878,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0ko09am"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-36-8917",
@@ -17720,7 +17917,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1w67mxg"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-36-4856",
@@ -17758,7 +17956,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:10shul5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-37-8918",
@@ -17796,7 +17995,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:019t2p3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-37-8919",
@@ -17834,7 +18034,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0e0u5zn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-37-8922",
@@ -17872,7 +18073,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:05y52pm"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-37-8920",
@@ -17910,7 +18112,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:00584yl | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-7-54-epi-37-8921",
@@ -17948,7 +18151,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1xaykj5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-aes-collectionofinsc0000alan",
@@ -17986,7 +18190,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:008fvwt | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-529940",
@@ -18024,7 +18229,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0wx50af] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-485593",
@@ -18062,7 +18268,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1jt68nd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-astronomical-significance-of-inscriptions-while-making-grants",
@@ -18100,7 +18307,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:14wcrjd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-306806",
@@ -18138,7 +18346,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1vbza8y"
       },
       {
         "id": "archive-epigraphia-shdgnga-classification-and-recognition-of-ancient-kannada-scripts-from-epigraphi",
@@ -18283,7 +18492,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1t5fzfz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-epigraphicalstud0000drbr",
@@ -18321,7 +18531,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0744rem"
       },
       {
         "id": "archive-epigraphia-damh-epigraphynumisma0000drdv",
@@ -18359,7 +18570,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:057yeyh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-agr-8090",
@@ -18397,7 +18609,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ljkvec"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-48083",
@@ -18754,7 +18967,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0no7vcc"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-181599",
@@ -18816,7 +19030,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:12bvqqz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-dli-csl-6823",
@@ -18878,7 +19093,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1k18a5j] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-32088",
@@ -18916,7 +19132,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1dsmsnr] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-jainism-during-the-rule-of-chalukyas-of-kalyana-on-the-basis-of-inscript",
@@ -19579,7 +19796,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0fjr92k"
       },
       {
         "id": "archive-epigraphia-bmshri-mysorecoorgfromi0000blew",
@@ -19617,7 +19835,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:02mdzkg"
       },
       {
         "id": "archive-epigraphia-shdgnga-novel-approach-for-digitization-of-ancient-stone-inscriptions-and-develo",
@@ -19655,7 +19874,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1tl3c32"
       },
       {
         "id": "archive-epigraphia-bmshri-oldestkanaresein0000nnag",
@@ -19693,7 +19913,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0qft4w7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-sutturinscriptio0000hmn",
@@ -19731,7 +19952,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:13kq5sd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-10603-105013templesofkarnatakaanepigraphicalstudyfromtheearliestto1050ad",
@@ -20371,7 +20593,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1d8flxr] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-the-cult-of-vishnu-in-karnataka-from-earliest-times-to-1336-a-d-based-on",
@@ -20724,7 +20947,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:12uyubn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-the-eastern-chalukyan-inscriptions-a-social-and-cultural-study",
@@ -21158,7 +21382,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0svkuuo"
       },
       {
         "id": "archive-epigraphia-shdgnga-the-kadambas-of-goa-and-their-inscriptions",
@@ -21196,7 +21421,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0pzgjcg"
       },
       {
         "id": "archive-epigraphia-the-mythic-society-internship-opportunity-2023-inscription-stones-of-bengaluru",
@@ -21258,7 +21484,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0lvzvjz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-thirukonamalai-tamil-inscriptions-30",
@@ -21296,7 +21523,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:09jkixb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-vijayanagarainsc0000brgo",
@@ -21334,7 +21562,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0xvgfal | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-56635",
@@ -21372,7 +21601,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1killfn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-53177",
@@ -21525,7 +21755,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1b3jp9d | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-southindiainscri0000unse-l2x7",
@@ -21561,7 +21792,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0avwer0"
       },
       {
         "id": "archive-epigraphia-qjms-vol-113-2-2022-43-undocumented-bengaluru-inscriptions",
@@ -21623,7 +21855,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0zs6pun] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70501",
@@ -21661,7 +21894,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0yq653u"
       },
       {
         "id": "archive-epigraphia-in-gov-ignca-23256",
@@ -21845,7 +22079,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1wcr1rg"
       },
       {
         "id": "archive-epigraphia-mpl-411-754-epi-3-229",
@@ -21881,7 +22116,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1i4wou7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-inscriptionsatvi0000chan-vol-i-ser-8",
@@ -21945,7 +22181,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0jiph5g"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-236278",
@@ -21983,7 +22220,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1gjzn6h | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-126235",
@@ -22175,7 +22413,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1531p07] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-vijayanagarainsc0000drbr-vol-ii",
@@ -22213,7 +22452,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0nrfeka"
       },
       {
         "id": "archive-epigraphia-damh-vijayanagarainsc0000drbr-vol-iii",
@@ -22251,7 +22491,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1kv4wib] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-vijayanagarainsc0000drbr-vol-iv",
@@ -22289,7 +22530,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1xg0k7u"
       },
       {
         "id": "archive-epigraphia-shdgnga-aadilshahigalla-kallada-shasanagala-sanskritika-adhyana",
@@ -22357,7 +22599,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1sds0w1 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1366-kuh-137040",
@@ -22404,7 +22647,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1wj33zl | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-126780",
@@ -22442,7 +22686,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:14yiloh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-chamarajanagara-jilleya-shasanagala-charitrika-haagu-samskruthika-adhyay",
@@ -22491,7 +22736,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:118ad18"
       },
       {
         "id": "archive-epigraphia-shdgnga-channarayapattana-pradeshadallina-shasanagala-ondu-samskrutika-adhyayana",
@@ -22540,7 +22786,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1bvcjiy"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1109-mug-048918",
@@ -22589,7 +22836,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0w0qflu"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1339-vin-137013",
@@ -22627,7 +22875,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1muhndd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1173-ran-049594",
@@ -22676,7 +22925,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1fuqwjo"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1177-man-131568",
@@ -22725,7 +22975,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:05tbd1w"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1009-sha-048817",
@@ -22774,7 +23025,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1qsv3y1 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-copperplateinscr0000drms-1997",
@@ -22812,7 +23064,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ho9fms"
       },
       {
         "id": "archive-epigraphia-kuh-191-mah-049086-h4s9",
@@ -22850,7 +23103,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1r80i6d | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-pghrc-drmmkalaburgisam0000samputa-1",
@@ -22889,7 +23143,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1tfj3mz] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-pghrc-drmmkalaburgisam0000sam-6-bhaga-1",
@@ -22928,7 +23183,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1yebtvh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-pghrc-drmmkalaburgisam0000sam-6-bhaga-2",
@@ -22967,7 +23223,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0jmm21f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1011-sid-048819",
@@ -23016,7 +23273,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0yc0o40"
       },
       {
         "id": "archive-epigraphia-kuh-612-arc-049502",
@@ -23065,7 +23323,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:02c02v6"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-983-kum-048791",
@@ -23114,7 +23373,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:172ww5f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-us-haduvallijainash0000drkg",
@@ -23152,7 +23412,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:04d96mg"
       },
       {
         "id": "archive-epigraphia-dli-eph-lit-116m-13-payanur",
@@ -23192,7 +23453,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1rv5vjd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-867-sur-109281",
@@ -23241,7 +23503,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:15st22t | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-867-sur-048676",
@@ -23290,7 +23553,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:130zu90"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1010-nab-048818",
@@ -23339,7 +23603,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:14ardv5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-70500",
@@ -23377,7 +23642,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1m1ttlq"
       },
       {
         "id": "archive-epigraphia-bmshri-inscriptionsinch0000blew-x2e8",
@@ -23426,7 +23692,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:00pucyw"
       },
       {
         "id": "archive-epigraphia-bmshri-inscriptionsinmy0000blew-m3b4",
@@ -23475,7 +23742,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1gsinlx | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-ag-1401-107972",
@@ -23730,7 +23998,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0xsoy3c"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-53393",
@@ -23768,7 +24037,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:03t81j5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-43036",
@@ -23806,7 +24076,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1k2jesn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-181497",
@@ -23907,7 +24178,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0uzhpgc"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-463254",
@@ -23945,7 +24217,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0ajz4mb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-dli-chennai-128",
@@ -23981,7 +24254,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1tnvl9g"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-75-shi-1-052049",
@@ -24019,7 +24293,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1d8t92d | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-573-gur-049464",
@@ -24057,7 +24332,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:09bz8id | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-10603-239412kannadashasanagalallimaulyapragne",
@@ -24097,7 +24373,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:12gcaex | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-kannadavishwavid20000drde",
@@ -24135,7 +24412,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1uvbrh5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-karavali-karnatakada-uttar-bhagada-sasanagalu-mattu-devalyagalu-ondu-adh",
@@ -24228,7 +24506,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0blfxol | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-karnatakasasanak0000hrra",
@@ -24266,7 +24545,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1fobht5 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-karnatakashasana0000drav",
@@ -24330,7 +24610,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1wdxv3c"
       },
       {
         "id": "archive-epigraphia-damh-karnatakashasana0000chan-sam-2",
@@ -24379,7 +24660,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0v36j8s"
       },
       {
         "id": "archive-epigraphia-pghrc-karnatakadalliya0000drkr-v13",
@@ -24417,7 +24699,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0t0rat7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-572-thi-049463",
@@ -24455,7 +24738,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0n6psap | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-10603-120084krishnadevarayanakaladakannadashasanagalu",
@@ -24550,7 +24834,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1kxs0sd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-krishnadevarayana-kalada-samagra-shasanagalu-bhahumukhi-adyayana",
@@ -24588,7 +24873,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1xyierd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-814-ray-135001",
@@ -24637,7 +24923,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1u9hi9i"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-807-sha-048616",
@@ -24686,7 +24973,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:18vuhf1 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1416-kuh-141211",
@@ -24733,7 +25021,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0wg95um"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-722-koo-48532",
@@ -24771,7 +25060,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ip6zv1 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-maharashtradakan0000basa",
@@ -24809,7 +25099,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1v7q4t4"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-721-gun-048531",
@@ -24858,7 +25149,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0u9tplh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-10603-110397mysorejilleyashasanagalasamskruthikaadyayana",
@@ -24959,7 +25251,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1e5tqrk"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1340-yad-137014",
@@ -24997,7 +25290,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:10gbshu"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-806-sid-109228",
@@ -25035,7 +25329,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0roqydt | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-rashtrakutar-shasanagala-sanskrutika-adhyayan",
@@ -25073,7 +25368,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1j8c23j] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-777-shi-048586",
@@ -25111,7 +25407,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1h55zcb] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-ag-1365-108083",
@@ -25149,7 +25446,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:19sd0nq"
       },
       {
         "id": "archive-epigraphia-kuh-ag-946-037369",
@@ -25187,7 +25485,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1mo6phr] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1379-kol-138154",
@@ -25225,7 +25524,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ecy0b4"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-890a-kum-109226",
@@ -25274,7 +25574,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:08537hd | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-kuh-890-kum-048699",
@@ -25323,7 +25624,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:032prza"
       },
       {
         "id": "archive-epigraphia-shdgnga-10603-222710shasanagalahinneleyallibengalurunagarasamskrutikaadhyayana",
@@ -25385,7 +25687,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:11ue8nu"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1338-ram-137012",
@@ -25423,7 +25726,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:03whauo"
       },
       {
         "id": "archive-epigraphia-shdgnga-shasanagalalli-karnatakad-vartakaru",
@@ -25490,7 +25794,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1jjmo5x | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-shasanagalli-aayagarike",
@@ -25528,7 +25833,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1nbnoyk"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-778-vee-048587",
@@ -25566,7 +25872,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0a723nk"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1381-cha-138156",
@@ -25604,7 +25911,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:06eam9a"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-135609",
@@ -26130,7 +26438,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1i189fc"
       },
       {
         "id": "archive-epigraphia-shdgnga-some-social-aspects-of-the-inscriptions-of-bengal",
@@ -26168,7 +26477,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0w6z8ry"
       },
       {
         "id": "archive-epigraphia-surapurathaluken0000hanu",
@@ -26206,7 +26516,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1rcdbrg"
       },
       {
         "id": "archive-epigraphia-kuh-mphil-1259-ane-131838-teerthahallipari0000anit",
@@ -26255,7 +26566,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1hvytw7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-telugu-inscriptions-in-karnataka-a-socio-cultural-study",
@@ -26904,7 +27216,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1wswarc"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-206655",
@@ -26942,7 +27255,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0muzkhq"
       },
       {
         "id": "archive-epigraphia-shdgnga-viajyanagarad-purvada-shasanakavigalu",
@@ -26980,7 +27294,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0wy8rzs"
       },
       {
         "id": "archive-epigraphia-damh-vijayanagaradaha0000chan-sam-1",
@@ -27018,7 +27333,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:06brsp7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-shdgnga-yalanduru-talukina-devalayagala-mattu-shasanagala-ondu-samskruthika-adhy",
@@ -27067,7 +27383,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:01iq6ab] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-441047",
@@ -27105,7 +27422,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0tmtszq"
       },
       {
         "id": "archive-epigraphia-bmshri-inscriptionsintu0000blew",
@@ -27493,7 +27811,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0sqwoja"
       },
       {
         "id": "archive-epigraphia-bmshri-inscriptionsinka0000blew",
@@ -27542,7 +27861,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0uksa40"
       },
       {
         "id": "archive-epigraphia-damh-inscriptionsofbe0000chan-vol-ii",
@@ -27591,7 +27911,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1r4ef7d | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-inscriptionsofko0000chan-vol-iii",
@@ -27640,7 +27961,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0nq6ry6"
       },
       {
         "id": "archive-epigraphia-damh-archaeologicalsu0000unse-j9t4",
@@ -27676,7 +27998,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0tb2hfm"
       },
       {
         "id": "archive-epigraphia-damh-annualreportdire0000unse-1930",
@@ -27712,7 +28035,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:135mn02"
       },
       {
         "id": "archive-epigraphia-damh-annualreportdire0000unse-1931",
@@ -27748,7 +28072,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0i6of6k"
       },
       {
         "id": "archive-epigraphia-damh-annualreportmyso0000unse1941",
@@ -27784,7 +28109,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:11zv72p | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-536412",
@@ -28207,7 +28533,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1rjlsk9 | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofdi0000unse-1929",
@@ -28243,7 +28570,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1w7clk8"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofdi0000unse-1932",
@@ -28279,7 +28607,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1q81rbt | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofdi0000unse-1930",
@@ -28315,7 +28644,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1nwzgas"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofmy0000unse1931",
@@ -28351,7 +28681,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1ugdyfp | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofmy0000unse-1938",
@@ -28387,7 +28718,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0sjlja0"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofmy0000unse-1939",
@@ -28423,7 +28755,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0xysyfy"
       },
       {
         "id": "archive-epigraphia-damh-annualreportofmy0000unse-1945",
@@ -28459,7 +28792,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0et63y6"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-107051",
@@ -28743,7 +29077,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1ktx2pt | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-501531",
@@ -29099,7 +29434,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1200ngh | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-archaeologicalsu0000unse-o5v9",
@@ -29390,7 +29726,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:03p0s2o"
       },
       {
         "id": "archive-epigraphia-bmshri-archaeologicalsu0000unse-u6q9",
@@ -29426,7 +29763,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0fthwjn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-archaeologicalsu0000unse-e3n5",
@@ -29714,7 +30052,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:067uw8m"
       },
       {
         "id": "archive-epigraphia-damh-archaeologicalsu0000unse-c0a4",
@@ -29750,7 +30089,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:1e5gqiv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-directorateofarc0000unse-i8m3",
@@ -29786,7 +30126,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ddwbs4"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-34589",
@@ -30070,7 +30411,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:05k16ro"
       },
       {
         "id": "archive-epigraphia-bmshri-southindianinscr0000unse-n2o0",
@@ -30106,7 +30448,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:115i55w"
       },
       {
         "id": "archive-epigraphia-bmshri-southindianinscr0000unse-g9f9",
@@ -30142,7 +30485,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:07d8lox | https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-533515",
@@ -30180,7 +30524,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:077yuiy"
       },
       {
         "id": "archive-epigraphia-in-gov-ignca-79603",
@@ -30216,7 +30561,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ted0uk"
       },
       {
         "id": "archive-epigraphia-bmshri-southindianinscr0000unse-h2c8",
@@ -30252,7 +30598,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0uaw8fe"
       },
       {
         "id": "archive-epigraphia-in-ernet-dli-2015-34641",
@@ -30290,7 +30637,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "[kha:0wrxc7z] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "archive-epigraphia-bmshri-southindianinscr0000shri-y2a6",
@@ -30328,7 +30676,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-10-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1h13l3a"
       }
     ],
     "boundaryEvidence": [
@@ -30385,7 +30734,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0z331kw"
       },
       {
         "id": "boundary-evidence-hoysala-ballala-ii-1187",
@@ -30444,7 +30794,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1eyzzgc"
       },
       {
         "id": "boundary-evidence-western-ganga-core-prototype",
@@ -30497,7 +30848,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1bkal05 | https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-rashtrakuta-amoghavarsha-850",
@@ -30552,7 +30904,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:04jf6b5 | https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-rashtrakuta-kannauj-campaign-circa-800",
@@ -30611,7 +30964,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1456svn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-hoysala-vishnuvardhana-1117",
@@ -30670,7 +31024,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:00g9f2f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-mysore-tipu-sultan-1787",
@@ -30729,7 +31084,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0epsrcd | https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-badami-chalukya-aihole-inscription-cluster",
@@ -30780,7 +31136,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1qg4jj2"
       },
       {
         "id": "boundary-evidence-keladi-coastal-interior-admin-zone",
@@ -30829,7 +31186,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:1kd3n1r] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-kalyani-chalukya-lakkundi-zone",
@@ -30876,7 +31234,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:0ns0vwj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "boundary-evidence-bahmani-northern-karnataka-zone",
@@ -30927,7 +31286,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1lh25f9 | https://karnata.sanchaya.net"
       }
     ],
     "genealogicalRelations": [
@@ -30967,7 +31327,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:09ufcgw"
       },
       {
         "id": "genealogy-kirtivarman-i-pulakeshin-ii",
@@ -31005,7 +31366,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0dvqis2"
       },
       {
         "id": "genealogy-vijayanagara-harihara-bukka-brothers",
@@ -31039,7 +31401,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1jzzagv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-mayurasharma-kangavarma-kadamba",
@@ -31077,7 +31440,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:055emdh | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-kangavarma-bhagiratha-kadamba",
@@ -31115,7 +31479,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0dcvw9s"
       },
       {
         "id": "genealogy-bhagiratha-raghu-kadamba",
@@ -31153,7 +31518,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:09n5j2n] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-raghu-kakusthavarma-kadamba",
@@ -31191,7 +31557,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0fk9kh2"
       },
       {
         "id": "genealogy-durvinita-mushkara-western-ganga",
@@ -31225,7 +31592,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1yqhk0j] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-mushkara-polavira-western-ganga",
@@ -31259,7 +31627,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:18p39nw"
       },
       {
         "id": "genealogy-polavira-srivikrama-western-ganga",
@@ -31293,7 +31662,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1pypmbm"
       },
       {
         "id": "genealogy-srivikrama-bhuvikrama-western-ganga",
@@ -31327,7 +31697,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1eg8aw4"
       },
       {
         "id": "genealogy-bhuvikrama-shivamara-i-western-ganga",
@@ -31361,7 +31732,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0r9p98e"
       },
       {
         "id": "genealogy-shivamara-i-sripurusha-western-ganga",
@@ -31395,7 +31767,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1n0i1v1 | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-vishnuvardhana-narasimha-i-hoysala",
@@ -31429,7 +31802,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:16cpri6"
       },
       {
         "id": "genealogy-narasimha-i-ballala-ii-hoysala",
@@ -31463,7 +31837,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1d32qax | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-yaduraya-chikkadevaraja-mysore-early-line",
@@ -31497,7 +31872,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0jadzco"
       },
       {
         "id": "genealogy-chikkadevaraja-kanthirava-narasaraja-ii-mysore",
@@ -31531,7 +31907,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ecjkyl | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-kanthirava-narasaraja-ii-dodda-krishnaraja-i-mysore",
@@ -31565,7 +31942,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:19xeium"
       },
       {
         "id": "genealogy-dodda-krishnaraja-i-chamaraja-wodeyar-vii-mysore",
@@ -31599,7 +31977,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1wqf58l | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-chamaraja-wodeyar-vii-krishnaraja-wadiyar-ii-mysore",
@@ -31633,7 +32012,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:16nyjgw"
       },
       {
         "id": "genealogy-krishnaraja-wadiyar-ii-nanjaraja-wodeyar-mysore",
@@ -31667,7 +32047,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0hv2szn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-nanjaraja-wodeyar-chamaraja-wodeyar-viii-mysore",
@@ -31701,7 +32082,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0uk7qil | https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-chamaraja-wodeyar-viii-chamaraja-wodeyar-ix-mysore",
@@ -31735,7 +32117,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1nhjrdw"
       },
       {
         "id": "genealogy-chamaraja-wodeyar-ix-krishnaraja-iii-mysore",
@@ -31773,7 +32156,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1y2ujhn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-pulakeshin-ii-kubja-vishnuvardhana-brotherhood",
@@ -31807,7 +32191,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1txynwe"
       },
       {
         "id": "genealogy-vijayanagara-tuluva-krishnadevaraya-achyutaraya",
@@ -31841,7 +32226,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:1f5z9sv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "genealogy-tailapa-ii-satyashraya-kalyani-chalukya",
@@ -31875,7 +32261,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:026fb5m"
       },
       {
         "id": "genealogy-someshvara-i-vikramaditya-vi-kalyani-chalukya",
@@ -31909,7 +32296,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:0s6v58v] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       }
     ],
     "coinRecords": [
@@ -31979,7 +32367,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1xv59dd | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-sevuna-devagiri-kannada-legend-lead",
@@ -32047,7 +32436,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1pgwx7b] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-vijayanagara-hampi-gold-coinage-lead",
@@ -32115,7 +32505,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0lfmvkd | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-badami-chalukya-varaha-emblem-lead",
@@ -32183,7 +32574,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1rv6lci"
       },
       {
         "id": "coin-hoysala-belur-numismatic-lead",
@@ -32251,7 +32643,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0zuw70g"
       },
       {
         "id": "coin-mysore-srirangapatna-tipu-lead",
@@ -32323,7 +32716,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1v72ru8"
       },
       {
         "id": "coin-haidar-ali-bahaduri-pagoda-lead",
@@ -32387,7 +32781,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1xif5ov] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-haidar-ali-fanam-lead",
@@ -32451,7 +32846,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ekah9g"
       },
       {
         "id": "coin-haidar-ali-paisa-lead",
@@ -32515,7 +32911,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0sjtfpc"
       },
       {
         "id": "coin-haidar-ali-kanarese-numeral-paisa-lead",
@@ -32579,7 +32976,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:00pek7f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-haidar-ali-tiger-battle-axe-lead",
@@ -32643,7 +33041,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0p07w5i"
       },
       {
         "id": "coin-tipu-sultan-ahmadi-sadiqi-gold-lead",
@@ -32707,7 +33106,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:06k6d5f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-tipu-sultan-silver-rupee-system-lead",
@@ -32771,7 +33171,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0qywxjm"
       },
       {
         "id": "coin-tipu-sultan-twelve-mint-network-lead",
@@ -32835,7 +33236,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:054yux7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "coin-parampare-western-ganga-gold-plate-lead",
@@ -32899,7 +33301,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1ray1nx | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-parampare-krishnadevaraya-achyutaraya-gold-plate-lead",
@@ -32963,7 +33366,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:05vg6vx | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-krishnadevaraya-saraswati-copper-lead",
@@ -33027,7 +33431,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-29"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1r61g6h | https://karnata.sanchaya.net"
       },
       {
         "id": "coin-maturity-maski-ashokan-punchmarked-context",
@@ -33095,7 +33500,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:02rste6"
       },
       {
         "id": "coin-maturity-hoysala-garuda-fanam-catalogue-lead",
@@ -33163,7 +33569,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1wezcz4"
       },
       {
         "id": "coin-kadamba-banavasi-lion-type-lead",
@@ -33227,7 +33634,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:0w47nji"
       },
       {
         "id": "coin-bahmani-bidar-kalaburagi-mint-lead",
@@ -33291,7 +33699,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:199ra21 | https://karnata.sanchaya.net"
       }
     ],
     "manuscriptWitnesses": [
@@ -33349,7 +33758,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0o5vt2w"
       },
       {
         "id": "manuscript-vikramarjuna-vijaya-sanchaya-witness-lead",
@@ -33405,7 +33815,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ccnk08"
       },
       {
         "id": "manuscript-adipurana-printed-edition-lead",
@@ -33457,7 +33868,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:1pkb3f3] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-gadayuddha-routledge-witness-lead",
@@ -33509,7 +33921,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0ty6go7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-vaddaradhane-palm-leaf-witness-lead",
@@ -33561,7 +33974,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1thppvx | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-kumaravyasa-bharata-sanchaya-witness-lead",
@@ -33621,7 +34035,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1gjpneh | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-torave-ramayana-sanchaya-witness-lead",
@@ -33677,7 +34092,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1a4fu71 | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-ajitapurana-jangamwadi-witness-lead",
@@ -33729,7 +34145,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0ijwull | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-shantipurana-jangamwadi-witness-lead",
@@ -33781,7 +34198,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1fo1pq6"
       },
       {
         "id": "manuscript-source-volume-vikramarjuna-vijaya-itihasa-literature-lead",
@@ -33833,7 +34251,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ybwmtw"
       },
       {
         "id": "manuscript-source-volume-kumaravyasa-bharata-itihasa-literature-lead",
@@ -33885,7 +34304,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:02vrjsn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-source-volume-torave-ramayana-itihasa-literature-lead",
@@ -33937,7 +34357,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0cpwplx | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-kavirajamarga-parampare-print-witness-lead",
@@ -33989,7 +34410,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:08o9iu8"
       },
       {
         "id": "manuscript-shabdamanidarpana-script-grammar-witness-lead",
@@ -34041,7 +34463,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0yz1vz1 | https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-gadayuddha-routledge-translation-lead",
@@ -34093,7 +34516,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "[kha:1k47fy7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "manuscript-vaddaradhane-repository-recovery-lead",
@@ -34145,7 +34569,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-26"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0ez5yts"
       }
     ],
     "scriptEvolution": [
@@ -34203,7 +34628,8 @@
         "morphologyNote": {
           "en": "Kadamba/Proto-Kannada divergence from Southern Brahmi, with Halmidi and Talagunda retained as high-priority item-edition review samples.",
           "kn": "ಹಲ್ಮಿಡಿ ಮತ್ತು ತಾಳಗುಂದವನ್ನು ಉನ್ನತ ಆದ್ಯತೆಯ ವಸ್ತುಮಟ್ಟದ ಆವೃತ್ತಿ ಮಾದರಿಗಳಾಗಿ ಇಟ್ಟು, ದಕ್ಷಿಣ ಬ್ರಾಹ್ಮಿಯಿಂದ ಕದಂಬ/ಪ್ರೋಟೋ-ಕನ್ನಡ ವಿಭಜನೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ."
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:11cnc89 | https://karnata.sanchaya.net"
       },
       {
         "id": "script-old-kannada-epigraphic-phase",
@@ -34267,7 +34693,8 @@
         "morphologyNote": {
           "en": "Kept as the broad Old Kannada umbrella while the Badami Chalukya and Rashtrakuta sub-stages mature as separate packets.",
           "kn": "ಬಾದಾಮಿ ಚಾಲುಕ್ಯ ಮತ್ತು ರಾಷ್ಟ್ರಕೂಟ ಉಪಹಂತಗಳು ಪ್ರತ್ಯೇಕ ಕಡತಗಳಾಗಿ ಪರಿಪಕ್ವವಾಗುವವರೆಗೆ ಇದು ವಿಸ್ತೃತ ಹಳೆಗನ್ನಡ ಅಂಬರ ಹಂತವಾಗಿ ಉಳಿಯುತ್ತದೆ."
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1n4r53t | https://karnata.sanchaya.net"
       },
       {
         "id": "script-early-kannada-verse-transition",
@@ -34332,7 +34759,8 @@
         "morphologyNote": {
           "en": "Review lane for early Kannada verse and mixed-language inscriptions before the later temple-corpus forms dominate.",
           "kn": "ನಂತರದ ದೇವಾಲಯ ಶಾಸನ ರೂಪಗಳು ಮೇಲುಗೈ ಪಡೆಯುವ ಮೊದಲು ಆರಂಭಿಕ ಕನ್ನಡ ಪದ್ಯ ಮತ್ತು ಮಿಶ್ರಭಾಷಾ ಶಾಸನಗಳ ಪರಿಶೀಲನಾ ಹಾದಿ."
-        }
+        },
+        "_attribution": "[kha:0apcjqn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-medieval-kannada-temple-epigraphy",
@@ -34399,7 +34827,8 @@
         "morphologyNote": {
           "en": "Broad medieval temple-epigraphy bucket retained for compatibility, now backed by a finer Kalyani Chalukya-Hoysala ornate phase.",
           "kn": "ಹೊಂದಾಣಿಕೆಗೆ ವಿಸ್ತೃತ ಮಧ್ಯಯುಗೀನ ದೇವಾಲಯ ಶಾಸನ ಗುಂಪು ಉಳಿದಿದ್ದು, ಈಗ ಸೂಕ್ಷ್ಮ ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯ-ಹೊಯ್ಸಳ ಅಲಂಕೃತ ಹಂತದಿಂದ ಬೆಂಬಲಿತವಾಗಿದೆ."
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:02chtkk"
       },
       {
         "id": "script-vijayanagara-kannada-nagari-mixed-phase",
@@ -34455,7 +34884,8 @@
         "morphologyNote": {
           "en": "Imperial Vijayanagara review lane retained while the successor Nayaka and Telugu-Kannada divergence packet carries the longer standardisation story.",
           "kn": "ದೀರ್ಘ ಮಾನಕೀಕರಣ ಕಥೆಯನ್ನು ಉತ್ತರಾಧಿಕಾರಿ ನಾಯಕ ಮತ್ತು ತೆಲುಗು-ಕನ್ನಡ ವಿಭಜನೆ ಕಡತ ಹೊತ್ತಿರುವಾಗ ಸಾಮ್ರಾಜ್ಯ ವಿಜಯನಗರ ಪರಿಶೀಲನಾ ಹಾದಿ ಉಳಿದಿದೆ."
-        }
+        },
+        "_attribution": "[kha:1w4p99f] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-modern-kannada-print-transition",
@@ -34510,7 +34940,8 @@
         "morphologyNote": {
           "en": "Modern print lane extended to the present, with Basel Mission/Mangaluru, Bangalore print culture and Patrika Sanchaya witnesses left as review tasks.",
           "kn": "ಆಧುನಿಕ ಮುದ್ರಣ ಹಾದಿಯನ್ನು ವರ್ತಮಾನವರೆಗೆ ವಿಸ್ತರಿಸಿದ್ದು, ಬಾಸೆಲ್ ಮಿಷನ್/ಮಂಗಳೂರು, ಬೆಂಗಳೂರು ಮುದ್ರಣ ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪತ್ರಿಕಾ ಸಂಚಯ ಸಾಕ್ಷ್ಯಗಳನ್ನು ಪರಿಶೀಲನಾ ಕಾರ್ಯಗಳಾಗಿ ಇಡಲಾಗಿದೆ."
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:0fj4nx8"
       },
       {
         "id": "script-ashokan-satavahana-brahmi-root",
@@ -34570,7 +35001,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1afr7dq"
       },
       {
         "id": "script-badami-chalukya-rounded-transition",
@@ -34631,7 +35063,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:01sz58n] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-rashtrakuta-uniform-old-kannada",
@@ -34691,7 +35124,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1bie861 | https://karnata.sanchaya.net"
       },
       {
         "id": "script-kalyani-chalukya-hoysala-ornate-middle-kannada",
@@ -34756,7 +35190,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "[kha:14iazxj] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "script-vijayanagara-nayaka-standardising-kannada",
@@ -34822,7 +35257,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0to4ww1 | https://karnata.sanchaya.net"
       },
       {
         "id": "script-mysore-wodeyar-print-standard-kannada",
@@ -34883,7 +35319,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1usarkl | https://karnata.sanchaya.net"
       }
     ],
     "collaborations": [
@@ -34906,7 +35343,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1hmmcvq"
       },
       {
         "id": "collaboration-shashidhara-hg-hoysala-temples",
@@ -34927,7 +35365,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "[kha:0lzh3vv] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "collaboration-karnataka-itihasa-academy",
@@ -34948,7 +35387,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:020lm4u"
       },
       {
         "id": "collaboration-servants-of-knowledge-itihasa-darshana",
@@ -34969,7 +35409,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1pb674g"
       },
       {
         "id": "collaboration-bharatrajya-research-resource",
@@ -34990,7 +35431,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "[kha:132864j] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "collaboration-sanchaya-steward",
@@ -35011,7 +35453,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:1nya7vd | https://karnata.sanchaya.net"
       },
       {
         "id": "collaboration-sanchi-foundation-steward",
@@ -35032,7 +35475,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1ruuubs"
       },
       {
         "id": "collaboration-open-university-research",
@@ -35052,7 +35496,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "[kha:14vugh7] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "collaboration-open-archives-museums",
@@ -35072,7 +35517,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0g3npl9 | https://karnata.sanchaya.net"
       },
       {
         "id": "collaboration-open-field-documentation",
@@ -35092,7 +35538,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:1xazhvo"
       },
       {
         "id": "collaboration-open-scholarly-review",
@@ -35112,7 +35559,8 @@
           "status": "published",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Karnata Sanchaya record kha:0u9g6ap | https://karnata.sanchaya.net"
       },
       {
         "id": "collaboration-prospective-state-archaeology",
@@ -35132,7 +35580,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:19w3x5c"
       },
       {
         "id": "collaboration-prospective-kannada-university",
@@ -35152,7 +35601,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "ಆಕರ: ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ · https://karnata.sanchaya.net · kha:1wmtk9q"
       },
       {
         "id": "collaboration-prospective-bengaluru-inscription-network",
@@ -35173,7 +35623,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-07-27"
-        }
+        },
+        "_attribution": "[kha:0u6qton] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       }
     ],
     "openDatasetCatalogue": [
@@ -35222,7 +35673,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0lpg9rr] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       },
       {
         "id": "dataset-p1-model-foundations",
@@ -35257,7 +35709,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:015bplo"
       },
       {
         "id": "dataset-p2-corpus-expansion",
@@ -35294,7 +35747,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "Source: Karnataka Historical Atlas · https://karnata.sanchaya.net · kha:094ittg"
       },
       {
         "id": "dataset-p3-publication-review-workflow",
@@ -35332,7 +35786,8 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-23"
-        }
+        },
+        "_attribution": "[kha:0bs8ngn] Karnataka Historical Atlas — https://karnata.sanchaya.net"
       }
     ]
   }
