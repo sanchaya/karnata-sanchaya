@@ -10,6 +10,7 @@ const exportSource=await readFile(new URL('../scripts/generate-open-datasets.mjs
 const resourcesSource=await readFile(new URL('../src/ResourcesCollaborations.jsx',import.meta.url),'utf8')
 const seoSource=await readFile(new URL('../scripts/generate-seo.mjs',import.meta.url),'utf8')
 const mainSource=await readFile(new URL('../src/main.jsx',import.meta.url),'utf8')
+const geographyStyles=await readFile(new URL('../src/geography-nature.css',import.meta.url),'utf8')
 
 test('geography and nature page is bilingual, mapped and fully sourced',()=>{
   assert.ok(geographyNatureFacts.length>=4)
@@ -24,6 +25,7 @@ test('geography and nature page is bilingual, mapped and fully sourced',()=>{
   for(const point of geographyNatureHighlights)assert.ok(point.coords.length===2&&point.coords.every(Number.isFinite),`${point.id} needs valid coordinates`)
   assert.match(appSource,/view==='geography'/)
   assert.match(appSource,/GeographyNatureExplorer/)
+  assert.match(geographyStyles,/\.nature-page header\{height:auto;min-height:0/)
 })
 
 test('public data carries canonical attribution and live scraping controls',()=>{
