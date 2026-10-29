@@ -13,10 +13,10 @@
       "updatedAt": "2026-08-23"
     },
     "datasetDepth": {
-      "totalRecords": 45301,
+      "totalRecords": 45304,
       "researchLeads": 38257,
-      "sources": 798,
-      "relationships": 2787
+      "sources": 800,
+      "relationships": 2788
     }
   },
   "catalogue": {
@@ -25620,6 +25620,38 @@
         }
       },
       {
+        "id": "place-denkanikottai-bettarayaswamy",
+        "name": {
+          "en": "Bettarayaswamy temple, Denkanikottai",
+          "kn": "ಬೆಟ್ಟರಾಯಸ್ವಾಮಿ ದೇವಾಲಯ, ಡೆಂಕಣಿಕೋಟೆ"
+        },
+        "kind": "inscription-site",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            77.79861,
+            12.51611
+          ],
+          "precision": "approximate"
+        },
+        "geographicScope": {
+          "region": "international",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "India"
+          },
+          "outsideKarnataka": true,
+          "outsideIndia": false
+        },
+        "citations": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
         "id": "place-kalsi-ashokan-edicts",
         "name": {
           "en": "Kalsi Ashokan rock edict site",
@@ -38817,6 +38849,81 @@
           "reviewer": null,
           "updatedAt": "2026-08-25"
         }
+      },
+      {
+        "id": "inscription-denkanikottai-kannada-land-grant",
+        "name": {
+          "en": "Denkanikottai Kannada land-grant inscription",
+          "kn": "ಡೆಂಕಣಿಕೋಟೆ ಕನ್ನಡ ಭೂದಾನ ಶಾಸನ"
+        },
+        "date": {
+          "from": 1573,
+          "to": 1574,
+          "era": "CE",
+          "precision": "range"
+        },
+        "placeId": "place-denkanikottai-bettarayaswamy",
+        "polityId": "polity-vijayanagara",
+        "languages": [
+          "Kannada"
+        ],
+        "scripts": [
+          "Kannada"
+        ],
+        "geographicScope": {
+          "region": "international",
+          "countryCode": "IN",
+          "countryName": {
+            "en": "India",
+            "kn": "India"
+          },
+          "outsideKarnataka": true,
+          "outsideIndia": false
+        },
+        "description": {
+          "en": "Incomplete Kannada record on a Sudarshana pillar reported in the compound of the Mrigaya Venkatesa-perumal, or Bettarayaswami, temple. It records a land grant in Denkanikota by Sikkarasa, sirapradhana of Mahamandalesvara Huliya Ramayadeva-maharasu, under an order of Ramaraja-odeya, and refers to Denkanikota in Morasu-nadu. The report leaves the dynasty and king columns blank; the Vijayanagara relationship is therefore an inferred historical context, not a verified issuer attribution.",
+          "kn": "ಮೃಗಯ ವೆಂಕಟೇಶ ಪೆರುಮಾಳ್ ಅಥವಾ ಬೆಟ್ಟರಾಯಸ್ವಾಮಿ ದೇವಾಲಯದ ಆವರಣದಲ್ಲಿ ಇದ್ದ ಸುದರ್ಶನ ಸ್ತಂಭದ ಮೇಲಿನ ಅಪೂರ್ಣ ಕನ್ನಡ ಶಾಸನ. ಮಹಾಮಂಡಲೇಶ್ವರ ಹುಳಿಯ ರಾಮಯದೇವ ಮಹಾರಸುವಿನ ಶಿರಪ್ರಧಾನ ಶಿಕ್ಕರಸನು ರಾಮರಾಜ ಒಡೆಯನ ನಿರೂಪದ ಮೇರೆಗೆ ಡೆಂಕಣಿಕೋಟೆಯಲ್ಲಿ ಭೂದಾನ ನೀಡಿದುದನ್ನು ಹಾಗೂ ಮೊರಸು ನಾಡಿನ ಡೆಂಕಣಿಕೋಟೆಯನ್ನು ಇದು ಉಲ್ಲೇಖಿಸುತ್ತದೆ. ವರದಿಯಲ್ಲಿ ವಂಶ ಮತ್ತು ರಾಜನ ಅಂಕಣಗಳು ಖಾಲಿಯಾಗಿವೆ; ಆದ್ದರಿಂದ ವಿಜಯನಗರ ಸಂಬಂಧವು ಊಹಿತ ಐತಿಹಾಸಿಕ ಸಂದರ್ಭ ಮಾತ್ರ, ಪರಿಶೀಲಿತ ಶಾಸನಕರ್ತೃ ಗುರುತು ಅಲ್ಲ."
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-arie-1975-76",
+            "locator": "Appendix B, no. 214, p. 75; Saka 1495"
+          },
+          {
+            "sourceId": "src-tnhrce-bettarayaswamy-denkanikottai",
+            "locator": "Current temple register and address"
+          }
+        ],
+        "relationIds": [],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        },
+        "condition": "incomplete",
+        "sourceCorpus": "ARIE",
+        "sourceRecordId": "arie:1975-76:B-214",
+        "sourceDate": "Saka 1495, Kartika ba. 30, Monday",
+        "locationPrecision": "approximate",
+        "polityAttribution": {
+          "certainty": "inferred",
+          "sourceFields": "dynasty and king blank",
+          "note": "Vijayanagara relationship retained as research context only"
+        },
+        "aliases": [
+          "Denkanikota",
+          "Denkanikōṭa",
+          "Thenkanikottai"
+        ],
+        "district": {
+          "en": "Krishnagiri",
+          "kn": "ಕೃಷ್ಣಗಿರಿ"
+        },
+        "taluk": {
+          "en": "Denkanikottai",
+          "kn": "ಡೆಂಕಣಿಕೋಟೆ"
+        },
+        "districtAuditId": null
       },
       {
         "id": "inscription-kandahar-bilingual-edict",
@@ -61386,6 +61493,43 @@
         }
       },
       {
+        "id": "src-asi-arie-1975-76",
+        "type": "epigraphical-report",
+        "title": {
+          "en": "Annual Report on Indian Epigraphy for 1975–76",
+          "kn": "1975–76ರ ಭಾರತೀಯ ಶಾಸನಶಾಸ್ತ್ರ ವಾರ್ಷಿಕ ವರದಿ"
+        },
+        "authors": [
+          "Archaeological Survey of India",
+          "P. R. Srinivasan (editor)"
+        ],
+        "year": 1986,
+        "url": "https://tamildigitallibrary.in/assets/docs/uploads/primary_files/book/TVA_BOK_0011228_Annual_Report_on_Indian_Epigraphy_for_1975_76.pdf",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
+        "id": "src-tnhrce-bettarayaswamy-denkanikottai",
+        "type": "government-temple-register",
+        "title": {
+          "en": "Arulmigu Bettarayaswamy Temple, Denkanikottai",
+          "kn": "ಅರುಳ್ಮಿಗು ಬೆಟ್ಟರಾಯಸ್ವಾಮಿ ದೇವಾಲಯ, ಡೆಂಕಣಿಕೋಟೆ"
+        },
+        "authors": [
+          "Hindu Religious and Charitable Endowments Department, Tamil Nadu"
+        ],
+        "year": null,
+        "url": "https://hrce.tn.gov.in/hrcehome/index_temple.php?tid=5266",
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
+        }
+      },
+      {
         "id": "src-unesco-lumbini-ashoka-pillar",
         "type": "heritage-record",
         "title": {
@@ -79649,6 +79793,33 @@
           "status": "needs-review",
           "reviewer": null,
           "updatedAt": "2026-08-25"
+        }
+      },
+      {
+        "id": "rel-inscription-denkanikottai-kannada-land-grant-attests",
+        "fromId": "inscription-denkanikottai-kannada-land-grant",
+        "type": "attests",
+        "toId": "polity-vijayanagara",
+        "date": {
+          "from": 1573,
+          "to": 1574,
+          "era": "CE",
+          "precision": "range"
+        },
+        "citations": [
+          {
+            "sourceId": "src-asi-arie-1975-76",
+            "locator": "Appendix B, no. 214, p. 75; Saka 1495"
+          },
+          {
+            "sourceId": "src-tnhrce-bettarayaswamy-denkanikottai",
+            "locator": "Current temple register and address"
+          }
+        ],
+        "review": {
+          "status": "needs-review",
+          "reviewer": null,
+          "updatedAt": "2026-07-29"
         }
       },
       {
