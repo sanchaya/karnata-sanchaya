@@ -42,8 +42,11 @@ test('geography and nature page is bilingual, mapped and fully sourced',()=>{
   assert.match(appSource,/GeographyNatureExplorer/)
   for(const label of ['National parks','Tiger reserves','Wildlife sanctuaries','Bird sanctuaries'])assert.match(geographyExplorer,new RegExp(label))
   for(const label of ['Ramsar wetlands','Biosphere reserve','Reserved forest'])assert.match(geographyExplorer,new RegExp(label))
+  for(const label of ['Modern','Terrain','Historical'])assert.match(geographyExplorer,new RegExp(label))
   assert.match(geographyExplorer,/not legal boundaries/)
   assert.match(geographyStyles,/\.nature-page header\{height:auto;min-height:0/)
+  assert.match(geographyStyles,/\.nature-map\{position:relative;min-height:520px/)
+  assert.match(geographyStyles,/\.nature-source-links a\{[^}]*overflow-wrap:anywhere/)
 })
 
 test('public data carries canonical attribution and live scraping controls',()=>{

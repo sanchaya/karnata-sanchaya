@@ -59,18 +59,16 @@ test('public navigation keeps the complete release route set and admin private',
 })
 
 test('navigation separates historical exploration from project utilities', () => {
-  assert.match(appSource, /const primaryNavItems=/, 'historical exploration routes must remain grouped together')
-  assert.match(appSource, /const utilityNavItems=/, 'about, research and contribution routes must share a utility group')
-  const primaryNavBlock = appSource.match(/const primaryNavItems=\[(.*?)\]\n  const utilityNavItems=/s)?.[1] || ''
-  assert.match(primaryNavBlock, /\['districts'/, 'district work must keep one visible District Atlas entry')
-  assert.doesNotMatch(primaryNavBlock, /\['district-history'/, 'deep-history must be folded into the District Atlas tab')
-  assert.doesNotMatch(primaryNavBlock, /\['inscriptions'/, 'district inscription audits must be folded into the District Atlas tab')
+  for(const group of ['exploreNavItems','researchNavItems','projectNavItems','accountNavItems'])assert.match(appSource,new RegExp(`const ${group}=`),`${group} must remain an explicit navigation segment`)
+  assert.match(appSource, /const districtNavItem=\['districts'/, 'district work must keep one visible District Atlas entry')
+  assert.doesNotMatch(appSource.match(/const districtNavItem=(.*?)\n/s)?.[1]||'', /district-history|inscriptions/, 'deep-history and inscription audits must stay folded into District Atlas')
   assert.match(appSource, /function DistrictHub/, 'the District Atlas hub must gather the district sections without dropping legacy routes')
   assert.match(appSource, /districtWorkspaceFromHash/, 'legacy district deep links must select the matching compact workspace')
   assert.match(appSource, /section==='history'&&/, 'the District Atlas must mount one selected workspace instead of every long section')
   assert.match(districtHistorySource, /district-history-view-menu/, 'district history must expose compact map, records and freedom views')
   assert.match(appSource, /className="header-utility-nav"/, 'utility routes must be available in the desktop header')
-  assert.match(appSource, /className="nav-utility-link"|navLink\(item,'nav-utility-link'\)/, 'utility routes must remain available in the responsive menu')
+  for(const segment of ['explore','research','project','account'])assert.match(appSource,new RegExp(`navGroup\\('${segment}'`),`${segment} must remain available in the responsive menu`)
+  for(const segment of ['nav-group-explore','nav-group-research','nav-segment-district','nav-group-project','nav-group-account'])assert.match(stylesSource,new RegExp(segment),`${segment} needs a distinct visual segment`)
   const publicHeader = appSource.slice(appSource.indexOf('<header><div className="sanchaya-product-brand"'), appSource.indexOf('<nav id="primary-navigation"'))
   assert.doesNotMatch(publicHeader, /href="https:\/\/sanchaya\.org"/, 'the public header must link to the internal About page instead of leaving the atlas')
 })
