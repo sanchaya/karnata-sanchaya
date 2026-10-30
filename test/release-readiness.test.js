@@ -69,6 +69,7 @@ test('navigation separates historical exploration from project utilities', () =>
   assert.match(appSource, /className="header-utility-nav"/, 'utility routes must be available in the desktop header')
   for(const segment of ['explore','research','project','account'])assert.match(appSource,new RegExp(`navGroup\\('${segment}'`),`${segment} must remain available in the responsive menu`)
   for(const segment of ['nav-group-explore','nav-group-research','nav-segment-district','nav-group-project','nav-group-account'])assert.match(stylesSource,new RegExp(segment),`${segment} needs a distinct visual segment`)
+  assert.match(stylesSource,/\.nav-group-menu a\{[^}]*border-inline-start:/,'each grouped menu item must retain its segment colour cue')
   const publicHeader = appSource.slice(appSource.indexOf('<header><div className="sanchaya-product-brand"'), appSource.indexOf('<nav id="primary-navigation"'))
   assert.doesNotMatch(publicHeader, /href="https:\/\/sanchaya\.org"/, 'the public header must link to the internal About page instead of leaving the atlas')
 })
