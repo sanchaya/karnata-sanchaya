@@ -13,10 +13,11 @@
       "updatedAt": "2026-08-23"
     },
     "datasetDepth": {
-      "totalRecords": 45304,
+      "totalRecords": 45355,
       "researchLeads": 38257,
-      "sources": 800,
-      "relationships": 2788,
+      "geographyRecords": 26,
+      "sources": 818,
+      "relationships": 2802,
       "inscriptions": 81,
       "karnatakaLinkedNonKannadaInscriptions": 2
     },
@@ -26,7 +27,7 @@
       "credit": "Karnataka Historical Atlas · Sanchaya",
       "originToken": "kha:karnata.sanchaya.net",
       "notice": "Retain this attribution and the cited record-level sources when reusing public data.",
-      "payloadSha256": "296530fcaf0345fe4743223cc8d2f8a77e5709598b5aeb36604c07a8160caa32"
+      "payloadSha256": "6369b5620c4e7c7fa2d583d298f666b21be2668f0cd6e2c7797d4a9d2b71c4fb"
     }
   },
   "catalogue": {

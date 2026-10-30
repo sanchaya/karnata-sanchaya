@@ -33,6 +33,7 @@ import { canonicalData } from './canonical/ec-ei-canonical.generated.js'
 import { bidarAshtoorCulture, bidarAshtoorDistrictHistory, bidarAshtoorEvents, bidarAshtoorPeople, bidarAshtoorPlaces, bidarAshtoorSources } from './bidar-ashtoor-research.js'
 import { bidarBkspSources } from './bidar-bksp.generated.js'
 import { bidarBkspDistrictHistory, bidarBkspEvents, bidarBkspPeople, bidarBkspPlaces } from './bidar-bksp-research.js'
+import { applyKarnatakaUnification } from './karnataka-unification.js'
 
 const review = (status = 'draft') => ({ status, reviewer: null, updatedAt: '2026-07-26' })
 const name = (en, kn) => ({ en, kn })
@@ -296,6 +297,7 @@ appendUniqueById(atlasData.sources, [{
 appendUniqueById(atlasData.externalPolities, freedomFighterPolities)
 appendUniqueById(atlasData.people, freedomFighterPeople)
 applyBengaluruFreedomFighterDisplay(atlasData, appendUniqueById)
+applyKarnatakaUnification(atlasData, appendUniqueById)
 // Keep named foreign hosts and eyewitnesses attached to the same dated events
 // that already document their Karnataka connection; this makes them discoverable
 // without implying a stronger political relationship than the cited record supports.

@@ -22,8 +22,18 @@ public/data/published-atlas.json.tmp
 /.windsurf/
 /.mcp.json
 
-# graft's local graph cache — regenerable, not committed (run `graft build`).
+# Local code-navigation and browser-test state. These are regenerable and do
+# not belong in deployable atlas releases. Trail learnings remain eligible for
+# versioning when the team deliberately creates one.
 /graft/
+/.codex/
+/.playwright-cli/
+/.trail/*
+!/.trail/learnings/
+!/.trail/learnings/**
+/graphify-out/
+/output/
+/tmp/
 
 # Rebuildable caches created by remote scholarly-corpus importers.
 /var/import-cache/

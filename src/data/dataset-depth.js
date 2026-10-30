@@ -1,5 +1,6 @@
 import { indiaResearchMeta } from './india-research-meta.generated.js'
 import { countEpigraphiaPointers } from './epigraphia-links.js'
+import { geographyNatureHighlights, geographyNatureSources, geographyProtectedAreas } from './geography-nature.js'
 
 export const datasetDepthCollections = ['polities','externalPolities','places','events','people','works','inscriptions','culturalHeritage','periodicals','periodicalMapSites','artifacts','reigns','territorialExtents','politicalRelations','relationships','externalGovernancePhases','districtHistoryResearch','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','collaborations']
 
@@ -7,11 +8,12 @@ const length = value => Array.isArray(value) ? value.length : 0
 
 export function calculateDatasetDepth(dataset, discoveryMeta = indiaResearchMeta) {
   const historicalRecords=datasetDepthCollections.reduce((total,key)=>total+length(dataset[key]),0)
+  const geographyRecords=geographyNatureHighlights.length+geographyProtectedAreas.length
   const inscriptionLeads=(dataset.inscriptionAudits||[]).reduce((total,audit)=>total+length(audit.priorityCandidates),0)
   const heritageSites=(dataset.heritageAudits||[]).reduce((total,audit)=>total+length(audit.prioritySites),0)
   const researchLeads=length(dataset.templeInventoryLeads)+length(dataset.heritageInventoryLeads)+length(dataset.epigraphiaArchiveTexts)+inscriptionLeads+heritageSites+(dataset.peopleCandidateMeta?.candidateCount||length(dataset.peopleCandidates))+(dataset.martyrCandidateMeta?.candidateCount||length(dataset.martyrCandidates))+(discoveryMeta.recordCount||0)+(discoveryMeta.failureCount||0)
   const relationships=length(dataset.relationships)+length(dataset.politicalRelations)+length(dataset.feudatoryRelations)+length(dataset.genealogicalRelations)+countEpigraphiaPointers(dataset.epigraphiaArchiveTexts)
   const inscriptions=length(dataset.inscriptions)
   const karnatakaLinkedNonKannadaInscriptions=(dataset.inscriptions||[]).filter(record=>record.karnatakaRelevance?.direct===true&&!(record.languages||[]).some(language=>/kannada/i.test(language))).length
-  return {totalRecords:historicalRecords+researchLeads,researchLeads,sources:length(dataset.sources)+(discoveryMeta.sourceCount||0),relationships,inscriptions,karnatakaLinkedNonKannadaInscriptions}
+  return {totalRecords:historicalRecords+researchLeads+geographyRecords,researchLeads,geographyRecords,sources:length(dataset.sources)+(discoveryMeta.sourceCount||0)+geographyNatureSources.length,relationships,inscriptions,karnatakaLinkedNonKannadaInscriptions}
 }

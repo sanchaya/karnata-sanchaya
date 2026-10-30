@@ -12,6 +12,12 @@ The project has two publication surfaces:
 
 Research leads remain visibly `needs-review`. OCR matches, approximate map
 points and reconstructed boundaries are not presented as verified evidence.
+The main timeline includes a dedicated Karnataka-unification view. The
+geography page maps source-backed parks, sanctuaries, Ramsar wetlands, the
+Nilgiri biosphere reserve and a reserved-forest research lead, while linking
+to the official Bhuvan viewer for statutory forest and protected-area
+boundaries. The Epigraphy Explorer separates records, review packets and
+archive/source volumes into a compact tabbed workspace.
 
 ## Current release
 

@@ -273,6 +273,8 @@ test('the Epigraphy Explorer exposes the P2 corpus review queue', () => {
   assert.match(explorerSource, /itihasa-locator-hint/, 'Karnataka Parampare locator hints must be visible in the research-volume drawer')
   assert.match(explorerSource, /epigraphy-command-center/, 'the epigraphy page should keep map and filters together as a command center')
   assert.match(explorerSource, /epigraphy-workbench/, 'the epigraphy page should organize queue, source corpora and records as one workbench')
+  assert.match(explorerSource, /epigraphy-work-tabs/, 'the epigraphy page should expose records, review packets and sources as accessible tabs')
+  assert.match(explorerSource, /epigraphy-source-library/, 'archive sources and inscription volumes should remain discoverable in one source library')
   assert.match(explorerSource, /epigraphy-corpus-drawer/, 'source corpus data must remain available in disclosure drawers')
   assert.match(explorerStylesSource, /\.corpus-review-queue/, 'the P2 queue needs dedicated layout styles')
 })

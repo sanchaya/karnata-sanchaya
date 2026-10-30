@@ -28,8 +28,16 @@
 .epigraphy-filter-panel .explorer-toolbar select:nth-of-type(n+5){grid-row:auto}
 .epigraphy-filter-panel .explorer-toolbar button{grid-column:1/-1}
 .epigraphy-filter-panel .explorer-classification-filter{margin:0}
-.epigraphy-workbench{display:grid;grid-template-columns:minmax(280px,360px) minmax(0,1fr);gap:16px;align-items:start}
-.epigraphy-work-rail{position:sticky;top:64px;display:grid;gap:12px;max-height:calc(100vh - 82px);overflow:auto;padding-right:2px}
+.epigraphy-workbench{display:grid;gap:12px;min-width:0}
+.epigraphy-work-tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px;padding:5px;border:1px solid #e0e4ed;border-radius:12px;background:#f4f6fa}
+.epigraphy-work-tabs button{display:flex;align-items:center;justify-content:center;gap:7px;min-width:max-content;border:0;border-radius:8px;background:transparent;padding:10px 14px;color:#596176;font:inherit;font-size:11px;font-weight:800;cursor:pointer}
+.epigraphy-work-tabs button b{min-width:23px;border-radius:99px;background:#fff;padding:3px 6px;color:#46506a;font-size:9px}
+.epigraphy-work-tabs button.active{background:#fff;color:var(--sanchaya-blue);box-shadow:0 2px 9px rgba(26,26,46,.09)}
+.epigraphy-work-tabs button.active b{background:var(--sanchaya-active);color:var(--sanchaya-blue)}
+.epigraphy-tab-panel{min-width:0}
+.epigraphy-source-library{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.epigraphy-source-library .id-corpus{grid-column:1/-1}
+.epigraphy-work-rail{display:grid;gap:12px}
 .epigraphy-results-pane{min-width:0}
 .evidence-banner{display:flex;gap:24px;padding:12px 4px;font-size:12px;color:#5a6075}
 .evidence-banner span{display:flex;align-items:center;gap:6px}
@@ -199,6 +207,8 @@
 .explorer-search{grid-column:1/-1}
 .epigraphy-command-center,.epigraphy-workbench{grid-template-columns:1fr}
 .epigraphy-work-rail{position:static;max-height:none;overflow:visible}
+.epigraphy-source-library{grid-template-columns:1fr}
+.epigraphy-source-library .id-corpus{grid-column:auto}
 .explorer-layout{grid-template-columns:1fr}
 .explorer-detail{position:relative;top:auto;max-height:none;grid-row:1}
 }
@@ -216,6 +226,8 @@
 .contribution-grid label.wide{grid-column:auto}
 .contribution-dialog{padding:20px}
 .explorer-detail{padding:20px}
+.epigraphy-work-tabs button{padding:9px 11px}
+.epigraphy-map-panel .explorer-map{height:300px}
 }
 .explorer-hero h2{font-family:Georgia,"Noto Sans Kannada",serif;font-weight:500;letter-spacing:-.02em;color:var(--sanchaya-ink)}.explorer-map{position:relative;height:300px;margin:4px 0 20px;border:1px solid var(--sanchaya-border);border-radius:12px;overflow:hidden;background:#eef1f6;box-shadow:var(--sanchaya-shadow)}.explorer-map .leaflet-container{height:100%;width:100%;filter:saturate(.78) brightness(1.03)}.explorer-map-heading{position:absolute;z-index:500;top:12px;left:12px;display:grid;gap:3px;max-width:360px;padding:9px 12px;border:1px solid var(--sanchaya-border);border-radius:8px;background:rgba(255,255,255,.94);box-shadow:0 3px 12px rgba(26,26,46,.1)}.explorer-map-heading span{font-size:11px;font-weight:800;color:var(--sanchaya-ink)}.explorer-map-heading small{font-size:9px;line-height:1.4;color:var(--sanchaya-muted)}.explorer-map.theme-historical .leaflet-tile-pane{filter:sepia(.92) saturate(.55) hue-rotate(-8deg) contrast(.9) brightness(1.06)}.explorer-map.theme-historical{background:#d7c29b}.explorer-map.theme-historical .explorer-map-heading{background:rgba(247,238,216,.96);border-color:#c9b58d}.export-restricted-note{display:inline-flex;align-items:center;max-width:360px;padding:8px 10px;border:1px solid #e7d8bf;border-radius:7px;background:#fffaf3;color:#76501e;font-size:10px;line-height:1.35}.literary-review{border-top:1px solid var(--sanchaya-border);padding-top:12px}
 .explorer-focus{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 14px;padding:9px 11px;border:1px solid var(--sanchaya-border);border-radius:10px;background:#fafbff}.explorer-focus>span{margin-right:4px;color:var(--sanchaya-muted);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.explorer-focus button{border:1px solid var(--sanchaya-border);border-radius:99px;background:#fff;padding:8px 13px;color:var(--sanchaya-muted);font:inherit;font-size:11px;font-weight:750;cursor:pointer}.explorer-focus button.active{border-color:var(--sanchaya-blue);background:var(--sanchaya-blue);color:#fff}.city-focus-panel{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(180px,.6fr) minmax(220px,1fr);gap:18px;align-items:start;margin:0 0 18px;padding:18px;border:1px solid #d8d0bd;border-radius:12px;background:linear-gradient(120deg,#fffdf7,#f7f9ff);box-shadow:0 8px 24px rgba(62,53,30,.06)}.city-focus-copy h3{margin:3px 0 7px;font:600 clamp(21px,3vw,29px)/1.15 Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-ink)}.city-focus-copy>p:not(.eyebrow){margin:0;color:var(--sanchaya-muted);font-size:12px;line-height:1.6}.city-focus-copy>small{display:block;margin-top:9px;color:#826c45;font-size:10px;line-height:1.45}.city-focus-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.city-focus-stats span{display:grid;gap:3px;min-height:66px;padding:10px;border:1px solid #e3ddcf;border-radius:8px;background:#fff;font-size:10px;color:#786d58;line-height:1.3}.city-focus-stats b{font-size:21px;color:#8a5b2c}.city-focus-sources{display:grid;gap:7px}.city-focus-sources strong{font-size:10px;color:var(--sanchaya-muted);text-transform:uppercase;letter-spacing:.08em}.city-focus-sources a{color:var(--sanchaya-blue);font-size:11px;line-height:1.35;text-decoration:none}.city-focus-sources a:hover{text-decoration:underline}

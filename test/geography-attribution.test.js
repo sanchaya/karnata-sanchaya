@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
-import { geographyNatureFacts, geographyNatureHighlights, geographyNatureRegions, geographyNatureSources, geographyNatureThemes } from '../src/data/geography-nature.js'
+import { geographyNatureFacts, geographyNatureHighlights, geographyNatureRegions, geographyNatureSources, geographyNatureThemes, geographyProtectedAreas } from '../src/data/geography-nature.js'
 import { appendPublicAttribution, PUBLIC_DATA_ATTRIBUTION, publicRecordAttribution } from '../src/data/public-attribution.js'
 
 const appSource=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
@@ -11,20 +11,38 @@ const resourcesSource=await readFile(new URL('../src/ResourcesCollaborations.jsx
 const seoSource=await readFile(new URL('../scripts/generate-seo.mjs',import.meta.url),'utf8')
 const mainSource=await readFile(new URL('../src/main.jsx',import.meta.url),'utf8')
 const geographyStyles=await readFile(new URL('../src/geography-nature.css',import.meta.url),'utf8')
+const geographyExplorer=await readFile(new URL('../src/GeographyNatureExplorer.jsx',import.meta.url),'utf8')
 
 test('geography and nature page is bilingual, mapped and fully sourced',()=>{
   assert.ok(geographyNatureFacts.length>=4)
   assert.ok(geographyNatureRegions.length>=4)
   assert.ok(geographyNatureHighlights.length>=6)
   assert.ok(geographyNatureThemes.length>=3)
+  assert.ok(geographyProtectedAreas.length>=20)
   const sourceIds=new Set(geographyNatureSources.map(source=>source.id))
   for(const record of [...geographyNatureFacts,...geographyNatureRegions,...geographyNatureHighlights,...geographyNatureThemes]){
     if(record.name)assert.ok(record.name.en&&record.name.kn,`${record.id} needs bilingual name`)
     for(const sourceId of record.sourceIds||[record.sourceId])assert.ok(sourceIds.has(sourceId),`${record.id||record.value} has unknown source ${sourceId}`)
   }
   for(const point of geographyNatureHighlights)assert.ok(point.coords.length===2&&point.coords.every(Number.isFinite),`${point.id} needs valid coordinates`)
+  for(const area of geographyProtectedAreas){
+    assert.ok(area.name.en&&area.name.kn,`${area.id} needs bilingual name`)
+    assert.ok(area.coords.length===2&&area.coords.every(Number.isFinite),`${area.id} needs valid coordinates`)
+    assert.equal(area.locationPrecision,'approximate')
+    assert.equal(area.boundaryStatus,'authority-viewer')
+    assert.ok(area.sourceIds.includes('geo-bhuvan-karnataka-forest'),`${area.id} needs the authority boundary viewer`)
+    if(area.referenceBounds){
+      assert.equal(area.referenceBounds.length,2,`${area.id} needs a south-west and north-east source extent`)
+      assert.ok(area.referenceBounds.flat().every(Number.isFinite),`${area.id} has invalid source bounds`)
+    }
+    for(const sourceId of area.sourceIds)assert.ok(sourceIds.has(sourceId),`${area.id} has unknown source ${sourceId}`)
+  }
+  for(const type of ['ramsar-wetland','biosphere-reserve','reserved-forest'])assert.ok(geographyProtectedAreas.some(area=>area.type===type),`${type} layer is missing`)
   assert.match(appSource,/view==='geography'/)
   assert.match(appSource,/GeographyNatureExplorer/)
+  for(const label of ['National parks','Tiger reserves','Wildlife sanctuaries','Bird sanctuaries'])assert.match(geographyExplorer,new RegExp(label))
+  for(const label of ['Ramsar wetlands','Biosphere reserve','Reserved forest'])assert.match(geographyExplorer,new RegExp(label))
+  assert.match(geographyExplorer,/not legal boundaries/)
   assert.match(geographyStyles,/\.nature-page header\{height:auto;min-height:0/)
 })
 
