@@ -17,3 +17,24 @@
 .script-specimen-word{font-size:34px;line-height:1.25;color:var(--sanchaya-ink);overflow-wrap:anywhere}
 .script-specimen-line{font-size:18px;line-height:1.5;color:#3d3a52;overflow-wrap:anywhere}
 .script-specimen b{font-size:11px;color:#7a4d09}
+
+/* Script through the ages: era names in their own typefaces, then the phase's kingdoms on a map */
+.script-ribbon{display:grid;gap:6px;padding:10px 12px;border:1px solid #e3d6c0;border-radius:12px;background:#fffaf1}
+.script-ribbon-label{font-size:11px;font-weight:800;letter-spacing:.04em;color:#7a4d09}
+.script-ribbon ol{display:flex;gap:8px;margin:0;padding:0;list-style:none;overflow-x:auto}
+.script-ribbon li{flex:0 0 auto}
+.script-ribbon button{display:grid;gap:1px;min-width:120px;padding:8px 12px;border:1px solid #ead9c3;border-radius:10px;background:#fff;text-align:left;cursor:pointer}
+.script-ribbon button span{font-size:26px;line-height:1.25;color:var(--sanchaya-ink)}
+.script-ribbon button small{font-size:10px;color:var(--sanchaya-muted)}
+.script-ribbon button.active{border-color:#9c3d32;background:#fdeeea}
+.script-ribbon button:disabled{opacity:.5;cursor:default}
+.script-map{display:grid;gap:8px}
+.script-map-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px}
+.script-map-head h4{margin:0}
+.script-map-head>div{display:flex;gap:4px}
+.script-map-head button{padding:5px 12px;border:1px solid var(--sanchaya-border);border-radius:99px;background:#fff;font-size:12px;cursor:pointer}
+.script-map-head button.active{border-color:#9c3d32;background:#fdeeea;color:#7a1f1f;font-weight:700}
+.script-map-frame{height:clamp(300px,42vh,480px);border:1px solid var(--sanchaya-border);border-radius:12px;overflow:hidden}
+.script-map-frame .leaflet-container{height:100%}
+.script-map-label{padding:1px 6px;border:0;background:rgba(255,255,255,.82);box-shadow:none;font-size:15px;color:#2b1d0e}
+.script-map-note{margin:0;color:var(--sanchaya-muted);font-size:11px;line-height:1.5}
