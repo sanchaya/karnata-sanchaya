@@ -8,8 +8,8 @@
 .district-head-stats span.current{border-color:#9fd2bb;background:#e6f2eb;color:#1d5c45}
 .district-head-stats b{font-size:18px;color:var(--sanchaya-ink)}
 @media(max-width:600px){.district-head-stats span{flex:1 1 40%}}
-/* Align the title with the 1180px content column of the audit and inventory pages */
-.district-head-heritage,.district-head-inscriptions,.district-head-inventory{padding-inline:max(clamp(20px,5vw,72px),calc((100% - 1180px)/2))!important}
+/* Align the title with the wide content column of the audit and inventory pages */
+.district-head-heritage,.district-head-inscriptions,.district-head-inventory{padding-inline:max(clamp(20px,5vw,72px),calc((100% - var(--page-wide))/2))!important}
 .district-hub .audit-head h2,.district-hub .inscription-audit-head h2{display:none}
 .district-hub .district-audit,.district-hub .inscription-audit{padding-top:22px}
 

@@ -137,7 +137,9 @@ const itihasaSourceTasks=sourceReviewVolumes.flatMap(source=>(source.contentRevi
 const sourceLinkTasks=[...archiveLocatorTasks,...karnatakaArchaeologyTasks,...itihasaSourceTasks]
 const taskDomains=['epigraphy','literature','coinage','manuscripts','genealogy','boundaries','scripts','sourceLinks']
 const taskPools={epigraphy:[...inscriptionTasks,...editionTasks],literature:literatureTasks,coinage:coinTasks,manuscripts:manuscriptTasks,genealogy:genealogyTasks,boundaries:boundaryTasks,scripts:scriptTasks,sourceLinks:sourceLinkTasks}
-const baseTasks=taskDomains.flatMap(domain=>taskPools[domain])
+// Two source-review links can share one linkKind; keep ids unique so React keys and saved assignments stay stable.
+const uniqueTaskIds=list=>{const seen=new Map();return list.map(task=>{const count=seen.get(task.id)||0;seen.set(task.id,count+1);return count?{...task,id:`${task.id}#${count+1}`}:task})}
+const baseTasks=uniqueTaskIds(taskDomains.flatMap(domain=>taskPools[domain]))
 const emptyAssignments={}
 const gateStatus=record=>Object.values(record.evidenceGates||{}).map(gate=>gate.status)
 const verifiedGateCount=record=>gateStatus(record).filter(status=>['verified','located','not-applicable'].includes(status)).length

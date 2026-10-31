@@ -1,0 +1,7 @@
+/* Wide screens: page columns grow with the viewport (1180px up to 1800px) instead of leaving half of a 2300px display empty. */
+:root{--page-wide:clamp(1180px,76vw,1800px)}
+.explorer-page,.evidence-page,.resources-page,.community-page,.relations-page,.people-page,.script-page,.nature-page,.india-research-page{width:min(100%,var(--page-wide));max-width:none;margin-inline:auto}
+.district-hub .audit-head,.district-hub .audit-map,.district-hub .audit-filters,.district-hub .audit-count,.district-hub .audit-grid,.district-hub .section-intro,.district-hub .heritage-inventory-section{max-width:var(--page-wide)}
+.research-tasks-hero,.research-tasks-page>.research-task-marketplace,.community-card{max-width:var(--page-wide)}
+.explorer-layout:not(:has(.explorer-detail)){grid-template-columns:minmax(0,1fr)}
+.explorer-map{height:clamp(300px,34vh,520px)}

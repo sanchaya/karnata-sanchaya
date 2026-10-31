@@ -36,13 +36,15 @@ const copy={
 function RazorpayButton(){
   const form=useRef(null)
   useEffect(()=>{
-    const node=form.current;if(!node)return
+    const node=form.current
+    // Append once: StrictMode re-runs effects, and removing a script mid-load makes Razorpay's loader throw on a null parent.
+    if(!node||node.dataset.loaded)return
+    node.dataset.loaded='1'
     const script=document.createElement('script')
     script.src='https://checkout.razorpay.com/v1/payment-button.js'
     script.async=true
     script.dataset.payment_button_id=RAZORPAY_BUTTON_ID
     node.appendChild(script)
-    return()=>{node.replaceChildren()}
   },[])
   return <form ref={form} className="donate-razorpay"></form>
 }

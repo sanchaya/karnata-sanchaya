@@ -1,0 +1,19 @@
+/* Accessibility refinements loaded last: AA text contrast on tinted backgrounds, and shared small-text colours. */
+.activity-switch button.picked,.activity-bar-title,.activity-bar-items a.active,.about-pillars span{color:color-mix(in srgb,var(--nav-accent,var(--pillar)) 72%,#000)}
+.activity-bar-items a.active small{color:inherit}
+.app-shell .entity-secondary{color:#6b5f54}
+.eyebrow{color:#8a5530}
+.provenance-badge{font-size:10px}
+
+/* Layout: a single-column grid track must be allowed to shrink or its content overflows the panel (Epigraphy filters at ~1280px). */
+.epigraphy-filter-panel{grid-template-columns:minmax(0,1fr)}
+.epigraphy-filter-panel .explorer-toolbar{min-width:0}
+
+/* Target size (WCAG 2.5.8): standalone source links and small buttons get at least a 24px hit area. */
+.site-citations a,.citations p>a,.nature-source-links a,.nature-facts a,.source-actions a,.inscription-audit a[target="_blank"],.research-task-grid article>a,.audit-map figcaption a,.relation-archive-links a{display:inline-flex;align-items:center;width:fit-content;max-width:100%;min-height:24px;padding-block:3px}
+.ticks button{min-width:24px;min-height:24px;padding:2px 3px}
+.evidence-banner{flex-wrap:wrap;min-width:0}
+.evidence-banner span{white-space:normal;max-width:100%}
+.map-theme-control button{min-height:24px;padding-block:3px}
+.people-filters{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.source-collection-badge{color:#2f45c4}

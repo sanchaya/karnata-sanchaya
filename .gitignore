@@ -37,3 +37,5 @@ public/data/published-atlas.json.tmp
 
 # Rebuildable caches created by remote scholarly-corpus importers.
 /var/import-cache/
+
+/.playwright-mcp/

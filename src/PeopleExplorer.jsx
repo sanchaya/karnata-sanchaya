@@ -67,7 +67,7 @@ function CandidateIdentity({person,t,locale}){
 function PeopleMapViewport({points,selectedPoint}){
   const map=useMap()
   const pointKey=points.map(point=>point.join(',')).join('|')
-  useEffect(()=>{if(selectedPoint)map.setView(selectedPoint,8,{animate:true});else if(points.length>1)map.fitBounds(points,{padding:[32,32],maxZoom:7});else if(points[0])map.setView(points[0],7);else map.setView([14.7,76.2],6)},[map,pointKey,selectedPoint?.[0],selectedPoint?.[1]])
+  useEffect(()=>{if(selectedPoint)map.setView(selectedPoint,8,{animate:true});else if(points.length>1){const inIndia=points.filter(([lat,lng])=>lat>=6&&lat<=37&&lng>=67&&lng<=98);map.fitBounds(inIndia.length>=5?inIndia:points,{padding:[32,32],maxZoom:7})}else if(points[0])map.setView(points[0],7);else map.setView([14.7,76.2],6)},[map,pointKey,selectedPoint?.[0],selectedPoint?.[1]])
   return null
 }
 
