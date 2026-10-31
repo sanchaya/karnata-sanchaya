@@ -23,7 +23,7 @@ export const config={
   passwordResetMinutes:Number(process.env.PASSWORD_RESET_MINUTES||30),
   mail:{apiKey:process.env.RESEND_API_KEY||'',from:process.env.MAIL_FROM||''},
   publicMessageOrigins:(process.env.PUBLIC_MESSAGE_ALLOWED_ORIGINS||'').split(',').map(value=>value.trim()).filter(Boolean),
-  berunda:{apiKey:process.env.ANTHROPIC_API_KEY||'',model:process.env.BERUNDA_MODEL||'claude-haiku-5-5',dailyLimit:Number(process.env.BERUNDA_DAILY_LIMIT||300),perVisitor:Number(process.env.BERUNDA_PER_VISITOR_LIMIT||12)},
+  berunda:{apiKey:process.env.ANTHROPIC_API_KEY||'',model:process.env.BERUNDA_MODEL||'claude-haiku-5-5'},
   telegram:{botToken:process.env.TELEGRAM_BOT_TOKEN||'',chatId:process.env.TELEGRAM_ADMIN_CHAT_ID||''},
   uploadDir:path.resolve(process.env.PRIVATE_UPLOAD_DIR||path.join(rootDir,'var','private-uploads')),
   documentEncryptionKey:process.env.DOCUMENT_ENCRYPTION_KEY||'',

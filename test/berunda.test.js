@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
-import { buildIndex, createLimiter, runBerunda, searchIndex, summarise, tokenize, validateAsk } from '../server/berunda.js'
+import { buildIndex, createLimiter, DEFAULT_SETTINGS, effectiveMode, loadSettings, normalizeSettings, retrievalAnswer, runBerunda, saveSettings, searchIndex, summarise, tokenize, validateAsk } from '../server/berunda.js'
 
 const dataset = {
   sources: [{ id: 'src-ec', title: { en: 'Epigraphia Carnatica', kn: 'ಎಪಿಗ್ರಾಫಿಯಾ ಕರ್ನಾಟಿಕಾ' } }],
@@ -47,7 +47,7 @@ test('validateAsk bounds the question and history', () => {
 
 test('limiter enforces the visitor window and the daily budget', () => {
   let time = Date.UTC(2026, 0, 1, 10)
-  const allow = createLimiter({ perVisitor: 2, windowMs: 1000, daily: 3, now: () => time })
+  const allow = createLimiter({ perVisitor: 2, windowMs: 1000, daily: 3 }, () => time)
   assert.equal(allow('a').ok, true)
   assert.equal(allow('a').ok, true)
   assert.deepEqual(allow('a'), { ok: false, reason: 'visitor' })
@@ -92,6 +92,62 @@ test('the server wires Berunda with CORS for the static site, limits and a hidde
   assert.match(app, /app\.use\('\/api\/berunda'.*publicMessageOrigins/s, 'GitHub Pages origins must be allowed to call Berunda')
   assert.match(app, /req\.path\.startsWith\('\/berunda\/'\)/, 'the generic cross-origin POST guard must let Berunda through')
   assert.match(app, /app\.post\('\/api\/berunda\/ask'/, 'the ask route must exist')
-  assert.match(app, /berundaAllow\(req\.ip\)/, 'asking must be rate limited')
+  assert.match(app, /berundaAiLimit\(req\.ip\)/, 'AI answers must be rate limited')
   assert.match(app, /\/api\/berunda\/status/, 'the browser must be able to learn whether Berunda is enabled')
+})
+
+test('records-only answers show matching records and invent nothing', () => {
+  const index = buildIndex(dataset)
+  const found = retrievalAnswer({ question: 'Talagunda inscription', locale: 'en', index })
+  assert.equal(found.mode, 'retrieval')
+  assert.equal(found.sources[0].id, 'inscription-talagunda')
+  assert.equal(found.sources[0].reviewStatus, 'needs-review')
+  assert.match(found.sources[0].summary, /Kadamba/)
+  assert.match(found.answer, /atlas records/)
+  const none = retrievalAnswer({ question: 'zzzz unknown', locale: 'kn', index })
+  assert.deepEqual(none.sources, [])
+  assert.match(none.answer, /ಅಟ್ಲಸ್/)
+})
+
+test('settings are bounded, default to the free mode, and AI falls back to records without a key', () => {
+  assert.deepEqual(normalizeSettings(null), DEFAULT_SETTINGS)
+  assert.equal(DEFAULT_SETTINGS.mode, 'retrieval')
+  assert.deepEqual(normalizeSettings({ mode: 'ai', dailyLimit: 999999, perVisitor: 0 }), { mode: 'ai', dailyLimit: 5000, perVisitor: 1 })
+  assert.equal(normalizeSettings({ mode: 'rogue' }).mode, 'retrieval')
+  assert.equal(effectiveMode({ mode: 'ai' }, false), 'retrieval')
+  assert.equal(effectiveMode({ mode: 'ai' }, true), 'ai')
+  assert.equal(effectiveMode({ mode: 'off' }, true), 'off')
+})
+
+test('settings persist through portal_settings and reject unknown modes', async () => {
+  const writes = []
+  const db = { query: async (sql, params) => { if (/^SELECT/.test(sql)) return writes.length ? [{ value_json: writes.at(-1)[0] }] : []; writes.push(params); return { affectedRows: 1 } } }
+  assert.deepEqual(await loadSettings(db), DEFAULT_SETTINGS)
+  const saved = await saveSettings(db, { mode: 'off', dailyLimit: 50, perVisitor: 5 }, 'user-1')
+  assert.deepEqual(saved, { mode: 'off', dailyLimit: 50, perVisitor: 5 })
+  assert.deepEqual(await loadSettings(db), saved)
+  await assert.rejects(saveSettings(db, { mode: 'rogue' }, 'user-1'), error => error.status === 400)
+  assert.deepEqual(await loadSettings({ query: async () => { throw new Error('no table yet') } }), DEFAULT_SETTINGS)
+})
+
+test('limiter limits follow admin changes without a restart', () => {
+  let limits = { perVisitor: 1, daily: 10 }
+  const allow = createLimiter(() => limits)
+  assert.equal(allow('a').ok, true)
+  assert.equal(allow('a').ok, false)
+  limits = { perVisitor: 5, daily: 10 }
+  assert.equal(allow('a').ok, true)
+})
+
+test('the admin can switch Berunda from the Integrations tab', async () => {
+  const app = await readFile(new URL('../server/app.js', import.meta.url), 'utf8')
+  const admin = await readFile(new URL('../src/AdminIntegrations.jsx', import.meta.url), 'utf8')
+  const migration = await readFile(new URL('../server/migrations/015_portal_settings.sql', import.meta.url), 'utf8')
+  assert.match(app, /app\.get\('\/api\/administration\/berunda',requireUser,requireApproved,requireRole\('administrator'\)/, 'only approved administrators may read the settings')
+  assert.match(app, /app\.put\('\/api\/administration\/berunda',requireUser,requireApproved,requireRole\('administrator'\)/, 'only approved administrators may change the settings')
+  assert.match(app, /berunda\.settings-updated/, 'setting changes must be audited')
+  assert.match(app, /015_portal_settings\.sql/, 'release readiness must require the settings migration')
+  assert.match(migration, /CREATE TABLE IF NOT EXISTS portal_settings/)
+  assert.match(admin, /BerundaSettings/, 'the settings card must be part of the Integrations tab')
+  assert.match(admin, /name="berunda-mode"/, 'the mode choice must be a radio group')
 })

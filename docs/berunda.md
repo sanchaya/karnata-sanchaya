@@ -10,20 +10,24 @@ Berunda answers visitors' questions about Karnataka's rulers, inscriptions, plac
 
 Code: `server/berunda.js` (index, search, limits, agent loop), the routes in `server/app.js`, `src/Berunda.jsx` and `src/BerundaArt.jsx` (widget and artwork).
 
-## Turn it on
-Set these on the **server** (never in the browser build) and restart:
+## Modes (admin: Admin > Integrations > Berunda guide)
+| Mode | What visitors get | Cost |
+|---|---|---|
+| Off | Berunda is hidden. | none |
+| Records only (default) | The best-matching atlas records with their summaries, dates and review status. No model is called, so nothing can be invented. | none |
+| AI answers | A model writes a short cited answer from the records. If the daily limit is reached or the model fails, the visitor automatically gets the records-only answer. | per question |
 
-| Variable | Purpose |
-|---|---|
-| `ANTHROPIC_API_KEY` | Required. Without it `/api/berunda/status` reports `enabled:false` and the widget stays hidden everywhere. |
-| `BERUNDA_MODEL` | Optional. Defaults to `claude-haiku-5-5`; use a larger model for richer answers at higher cost. |
-| `BERUNDA_DAILY_LIMIT` | Optional. Questions per day for the whole service (default 300). |
-| `BERUNDA_PER_VISITOR_LIMIT` | Optional. Questions per visitor per 10 minutes (default 12). |
+The mode, the daily AI limit and the per-visitor limit are stored in the `portal_settings` table (migration `015_portal_settings.sql`, applied by `npm run db:migrate`, which the container runs on start). Changes take effect within seconds and every change is written to the audit log. The panel also shows today's counts; they reset when the server restarts.
+
+## Turning on AI answers
+1. Set `ANTHROPIC_API_KEY` on the **server** (never in the browser build) and restart. Optional: `BERUNDA_MODEL` (default `claude-haiku-5-5`).
+2. In the admin panel choose **AI answers**. The option stays disabled until the key exists; until then the portal keeps serving records-only answers.
+3. Set a spend cap in the Anthropic console as well, and keep the daily limit modest at first.
 
 `PUBLIC_MESSAGE_ALLOWED_ORIGINS` already lists the GitHub Pages origins; Berunda reuses that list for cross-origin access. The Pages build already points at `https://karnata.sanchaya.net` through `VITE_COMMUNITY_API_URL` in `.github/workflows/deploy.yml`.
 
 ## Safety and cost
 - Questions are capped at 500 characters and the history at 6 turns.
-- Limits are in memory, so a restart resets them. Add a cap in the Anthropic console too.
+- Per-visitor and daily limits are in memory, so a restart resets them (the limit values themselves are saved). Record searches have their own generous per-visitor limit.
 - Answers are not stored. Nothing about accounts, contributions or review notes is in the index; it is built from the public dataset only.
 - Watch the first weeks of real questions and fix the prompt in `systemPrompt()` where answers drift.

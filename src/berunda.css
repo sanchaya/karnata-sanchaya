@@ -37,3 +37,20 @@
 @media(max-width:1400px){.berunda-launcher span:not(.berunda-sr){display:none}.berunda-launcher{padding:3px 8px}}
 @media(prefers-reduced-motion:no-preference){.berunda-panel{animation:berunda-in .18s ease-out}@keyframes berunda-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}}
 @media(max-width:1400px){.sanchaya-product-brand .header-secondary{display:none}}
+.berunda-sources li p{margin:2px 0 0;color:#3b3b52;font-size:12px;line-height:1.5}
+.berunda-notice{align-self:flex-start;margin:0;color:#5c5c78;font-size:11px;font-style:italic}
+/* Admin settings card (inside Integrations) */
+.berunda-admin-modes{display:grid;gap:8px;margin:0;padding:0;border:0}
+.berunda-admin-modes legend{margin-bottom:6px;color:var(--sanchaya-muted);font-size:11px;font-weight:750}
+.berunda-admin-mode{display:flex!important;align-items:flex-start;gap:10px;padding:10px;border:1px solid var(--sanchaya-border);border-radius:8px;background:#fff;cursor:pointer}
+.berunda-admin-mode input{margin-top:3px}
+.berunda-admin-mode span{display:grid!important;gap:2px;padding:0!important;background:none!important;color:var(--sanchaya-ink)!important;font-size:12px!important}
+.berunda-admin-mode b{font-size:13px}
+.berunda-admin-mode small{color:var(--sanchaya-muted);font-size:11px;font-weight:400;line-height:1.45}
+.berunda-admin-mode:has(input:checked){border-color:#c8d0ff;background:#f4f5ff}
+.berunda-admin-mode:has(input:disabled){opacity:.6;cursor:not-allowed}
+.admin-integration-hint{margin:0;color:var(--sanchaya-muted);font-size:11px;line-height:1.5}
+.berunda-admin footer{display:flex;align-items:center;gap:10px}
+.berunda-admin>header{height:auto;min-height:0;padding:0;border:0;background:none;box-shadow:none}
+.admin-integration-grid .berunda-admin input[type=radio]{width:auto;flex:0 0 auto;padding:0}
+.berunda-admin footer .berunda-admin-notice{border-radius:999px;padding:4px 10px;background:#e5f5ec;color:#21643b;font-size:11px;font-weight:700}

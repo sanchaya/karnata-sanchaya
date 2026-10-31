@@ -13,7 +13,7 @@ import { insertDatasetRevision, latestDataset, publicDataset, repositoryDataset 
 import { emailDeliveryConfigured, sendPasswordResetEmail } from './mailer.js'
 import { notificationSettingsSummary, saveNotificationSettings, sendPortalNotifications } from './notifications.js'
 import { PUBLIC_DATA_ATTRIBUTION } from '../src/data/public-attribution.js'
-import { buildIndex, createLimiter, runBerunda, validateAsk } from './berunda.js'
+import { buildIndex, createLimiter, effectiveMode as effectiveBerundaMode, loadSettings as loadBerundaSettings, retrievalAnswer, runBerunda, saveSettings as saveBerundaSettings, validateAsk } from './berunda.js'
 
 config.assertProductionSecrets()
 const app=express()
@@ -64,10 +64,19 @@ app.post('/api/public/messages',rateLimit('public-message',10,60*60*1000),async(
   sendPortalNotifications(`Karnataka Historical Atlas\n${referenceCode} · ${category}\n${subject}\n${config.appOrigin}/#admin`,pool,config).catch(error=>console.error(error.message))
   res.status(201).json({ok:true,referenceCode})
 })
-// Berunda, the portal's question-answering guide. The search index is rebuilt only when a newer dataset revision is published.
-let berundaIndex=null
-const berundaEnabled=()=>Boolean(config.berunda.apiKey)
-const berundaAllow=createLimiter({perVisitor:config.berunda.perVisitor,daily:config.berunda.dailyLimit})
+// Berunda, the portal's question-answering guide. Settings (off / records only / AI) live in portal_settings and are
+// cached briefly; the search index is rebuilt only when a newer dataset revision is published.
+let berundaIndex=null,berundaSettings=null
+const berundaUsage={day:'',ai:0,retrieval:0,fallback:0}
+const countBerunda=kind=>{const today=new Date().toISOString().slice(0,10);if(berundaUsage.day!==today)Object.assign(berundaUsage,{day:today,ai:0,retrieval:0,fallback:0});berundaUsage[kind]+=1}
+const berundaKeyConfigured=()=>Boolean(config.berunda.apiKey)
+async function berundaSettingsNow(){
+  if(berundaSettings&&Date.now()-berundaSettings.at<30000)return berundaSettings.value
+  berundaSettings={value:await loadBerundaSettings(pool),at:Date.now()}
+  return berundaSettings.value
+}
+const berundaAiLimit=createLimiter(()=>({perVisitor:berundaSettings?.value.perVisitor??12,daily:berundaSettings?.value.dailyLimit??300}))
+const berundaSearchLimit=createLimiter({perVisitor:60,daily:Infinity})
 async function berundaIndexFor(){
   const rows=await pool.query('SELECT revision FROM dataset_snapshots ORDER BY revision DESC LIMIT 1')
   if(!rows.length)return null
@@ -78,17 +87,36 @@ async function berundaIndexFor(){
   berundaIndex={revision,index:buildIndex(publicDataset(latest.dataset))}
   return berundaIndex.index
 }
-app.get('/api/berunda/status',(req,res)=>res.set('Cache-Control','public, max-age=300').json({enabled:berundaEnabled()}))
+app.get('/api/berunda/status',async(req,res)=>{const settings=await berundaSettingsNow();const mode=effectiveBerundaMode(settings,berundaKeyConfigured());res.set('Cache-Control','public, max-age=60').json({enabled:mode!=='off',mode})})
 app.post('/api/berunda/ask',async(req,res)=>{
   res.set('Cache-Control','no-store')
-  if(!berundaEnabled())return res.status(503).json({error:'Berunda is resting right now.',code:'disabled'})
+  const settings=await berundaSettingsNow()
+  const mode=effectiveBerundaMode(settings,berundaKeyConfigured())
+  if(mode==='off')return res.status(503).json({error:'Berunda is resting right now.',code:'disabled'})
   const input=validateAsk(req.body)
-  const verdict=berundaAllow(req.ip)
-  if(!verdict.ok)return res.status(429).json({error:verdict.reason==='daily'?'Berunda has answered many questions today. Please come back tomorrow.':'Please wait a few minutes before asking more questions.',code:verdict.reason})
   const index=await berundaIndexFor()
   if(!index)return res.status(503).json({error:'The atlas dataset is not available yet.',code:'no-dataset'})
-  try{res.json(await runBerunda({...input,index,apiKey:config.berunda.apiKey,model:config.berunda.model}))}
-  catch(error){console.error('berunda:',error.message);res.status(502).json({error:'Berunda could not answer just now. Please try again.',code:'model'})}
+  const fromRecords=notice=>{countBerunda(notice?'fallback':'retrieval');return res.json({...retrievalAnswer({question:input.question,locale:input.locale,index}),...(notice?{notice}:{})})}
+  if(mode==='retrieval'){
+    if(!berundaSearchLimit(req.ip).ok)return res.status(429).json({error:'Please wait a few minutes before asking more questions.',code:'visitor'})
+    return fromRecords()
+  }
+  const verdict=berundaAiLimit(req.ip)
+  if(verdict.reason==='visitor')return res.status(429).json({error:'Please wait a few minutes before asking more questions.',code:'visitor'})
+  if(verdict.reason==='daily')return fromRecords('daily')
+  try{countBerunda('ai');res.json(await runBerunda({...input,index,apiKey:config.berunda.apiKey,model:config.berunda.model}))}
+  catch(error){console.error('berunda:',error.message);fromRecords('model')}
+})
+app.get('/api/administration/berunda',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  berundaSettings=null
+  const settings=await berundaSettingsNow()
+  res.json({settings,keyConfigured:berundaKeyConfigured(),model:config.berunda.model,effectiveMode:effectiveBerundaMode(settings,berundaKeyConfigured()),usageToday:{...berundaUsage}})
+})
+app.put('/api/administration/berunda',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const settings=await saveBerundaSettings(pool,req.body,req.user.id)
+  berundaSettings={value:settings,at:Date.now()}
+  await audit(pool,req.user.id,'berunda.settings-updated','settings','berunda',settings)
+  res.json({settings,keyConfigured:berundaKeyConfigured(),model:config.berunda.model,effectiveMode:effectiveBerundaMode(settings,berundaKeyConfigured()),usageToday:{...berundaUsage}})
 })
 app.get('/api/dataset',rateLimit('public-dataset',180,60*60*1000),async(req,res)=>{
   const latest=await latestDataset(pool)
@@ -174,7 +202,7 @@ app.put('/api/administration/dataset',requireUser,requireApproved,requireRole('a
 })
 
 app.get('/api/administration/release-readiness',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
-  const requiredMigrations=['011_v029_community_operations.sql','012_password_reset.sql','013_portal_messages.sql','014_message_notification_settings.sql']
+  const requiredMigrations=['011_v029_community_operations.sql','012_password_reset.sql','013_portal_messages.sql','014_message_notification_settings.sql','015_portal_settings.sql']
   const [accounts,contributions,verifications,reviewers,contributors,latest,published,migrations,evidence]=await Promise.all([
     pool.query("SELECT COUNT(*) total FROM users WHERE account_status='pending'"),
     pool.query("SELECT COUNT(*) total FROM contributions WHERE status='submitted'"),

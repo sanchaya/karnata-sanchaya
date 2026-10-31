@@ -122,11 +122,12 @@ export function validateAsk(body) {
 }
 
 // In-memory limits: a per-visitor window and a daily budget for the whole service. Restarting the server resets them.
-export function createLimiter({ perVisitor = 12, windowMs = 10 * 60 * 1000, daily = 300, now = () => Date.now() } = {}) {
+export function createLimiter(options = {}, now = () => Date.now()) {
   const visitors = new Map()
   let day = ''
   let used = 0
   return key => {
+    const { perVisitor = 12, windowMs = 10 * 60 * 1000, daily = 300 } = typeof options === 'function' ? options() : options
     const time = now()
     const today = new Date(time).toISOString().slice(0, 10)
     if (today !== day) { day = today; used = 0 }
@@ -139,6 +140,48 @@ export function createLimiter({ perVisitor = 12, windowMs = 10 * 60 * 1000, dail
     if (visitors.size > 5000) for (const [id, value] of visitors) if (value.until < time) visitors.delete(id)
     return { ok: true }
   }
+}
+
+// Admin-controlled settings. "retrieval" answers from the records alone (free); "ai" adds the language model on top.
+export const MODES = ['off', 'retrieval', 'ai']
+export const DEFAULT_SETTINGS = { mode: 'retrieval', dailyLimit: 300, perVisitor: 12 }
+const bounded = (value, min, max, fallback) => (Number.isFinite(Number(value)) ? Math.min(max, Math.max(min, Math.round(Number(value)))) : fallback)
+export function normalizeSettings(value) {
+  const input = value && typeof value === 'object' ? value : {}
+  return {
+    mode: MODES.includes(input.mode) ? input.mode : DEFAULT_SETTINGS.mode,
+    dailyLimit: bounded(input.dailyLimit, 1, 5000, DEFAULT_SETTINGS.dailyLimit),
+    perVisitor: bounded(input.perVisitor, 1, 100, DEFAULT_SETTINGS.perVisitor),
+  }
+}
+// "ai" needs a key on the server; without one the visitor still gets record-based answers.
+export const effectiveMode = (settings, keyConfigured) => (settings.mode === 'ai' && !keyConfigured ? 'retrieval' : settings.mode)
+
+export async function loadSettings(db) {
+  try {
+    const rows = await db.query("SELECT value_json FROM portal_settings WHERE setting_key='berunda'")
+    return normalizeSettings(rows.length ? JSON.parse(rows[0].value_json) : null)
+  } catch {
+    return { ...DEFAULT_SETTINGS }
+  }
+}
+export async function saveSettings(db, value, userId) {
+  const settings = normalizeSettings(value)
+  if (value?.mode !== undefined && !MODES.includes(value.mode)) throw Object.assign(new Error('Mode must be off, retrieval or ai.'), { status: 400 })
+  await db.query("INSERT INTO portal_settings (setting_key,value_json,updated_by) VALUES ('berunda',?,?) ON DUPLICATE KEY UPDATE value_json=VALUES(value_json),updated_by=VALUES(updated_by)", [JSON.stringify(settings), userId || null])
+  return settings
+}
+
+const sourceOf = doc => ({ id: doc.id, collection: doc.collection, name: doc.name, date: dateLabel(doc.record.date), reviewStatus: doc.record.review?.status || 'unspecified', summary: clip(label(doc.record.description) || label(doc.record.summary) || label(doc.record.researchNote), 220) })
+
+// Free mode: no model, so nothing can be invented. The best-matching records are shown with their own summaries.
+export function retrievalAnswer({ question, locale = 'kn', index, limit = 5 }) {
+  const docs = searchIndex(index, question, { limit })
+  const kn = locale !== 'en'
+  if (!docs.length) {
+    return { mode: 'retrieval', sources: [], answer: kn ? 'ಈ ಬಗ್ಗೆ ಅಟ್ಲಸ್ ದಾಖಲೆಗಳಲ್ಲಿ ಏನೂ ಸಿಗಲಿಲ್ಲ. ಬೇರೆ ಪದಗಳಿಂದ (ಹೆಸರು, ಸ್ಥಳ) ಹುಡುಕಿ, ಅಥವಾ ‘ಕೊಡುಗೆ ನೀಡಿ’ ಪುಟದಲ್ಲಿ ಮಾಹಿತಿ ಸೇರಿಸಿ.' : 'I found nothing about this in the atlas records. Try other words (a name or a place), or add what you know on the Contribute page.' }
+  }
+  return { mode: 'retrieval', sources: docs.map(sourceOf), answer: kn ? `ನಿಮ್ಮ ಪ್ರಶ್ನೆಗೆ ಹೊಂದುವ ${docs.length} ಅಟ್ಲಸ್ ದಾಖಲೆಗಳು ಇಲ್ಲಿವೆ. ಹಲವು ಇನ್ನೂ ಪರಿಶೀಲನೆ ಬಾಕಿ ಇರಬಹುದು.` : `Here are ${docs.length} atlas records that match your question. Many may still be awaiting review.` }
 }
 
 export const TOOLS = [
@@ -208,8 +251,8 @@ export async function runBerunda({ question, history = [], locale = 'kn', index,
     const raw = (body.content || []).filter(block => block.type === 'text').map(block => block.text).join('\n').trim()
     const cited = [...new Set([...raw.matchAll(/\[\[([^\]\s]+)\]\]/g)].map(match => match[1]))].filter(id => seen.has(id))
     const answer = raw.replace(/\s*\[\[[^\]]*\]\]/g, '').replace(/\n{3,}/g, '\n\n').trim()
-    const sources = cited.map(id => { const doc = seen.get(id); return { id, collection: doc.collection, name: doc.name, date: dateLabel(doc.record.date), reviewStatus: doc.record.review?.status || 'unspecified' } })
-    return { answer: answer || (locale === 'en' ? 'I could not find that in the atlas records.' : 'ಈ ಬಗ್ಗೆ ಅಟ್ಲಸ್ ದಾಖಲೆಗಳಲ್ಲಿ ಮಾಹಿತಿ ಸಿಗಲಿಲ್ಲ.'), sources }
+    const sources = cited.map(id => sourceOf(seen.get(id)))
+    return { mode: 'ai', answer: answer || (locale === 'en' ? 'I could not find that in the atlas records.' : 'ಈ ಬಗ್ಗೆ ಅಟ್ಲಸ್ ದಾಖಲೆಗಳಲ್ಲಿ ಮಾಹಿತಿ ಸಿಗಲಿಲ್ಲ.'), sources }
   }
   throw Object.assign(new Error('The model did not finish.'), { status: 502 })
 }

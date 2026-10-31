@@ -17,6 +17,9 @@ const copy = {
     thinking: 'ಹುಡುಕುತ್ತಿದ್ದೇನೆ…',
     sources: 'ಆಧಾರ ದಾಖಲೆಗಳು',
     needsReview: 'ಪರಿಶೀಲನೆ ಬಾಕಿ',
+    retrievalGreeting: 'ನಮಸ್ಕಾರ! ನಾನು ಭೇರುಂಡ. ಹೆಸರು, ಸ್ಥಳ ಅಥವಾ ವಿಷಯ ಕೇಳಿ; ಅಟ್ಲಸ್‌ನಲ್ಲಿ ಹೊಂದುವ ದಾಖಲೆಗಳನ್ನು ತೋರಿಸುತ್ತೇನೆ.',
+    retrievalNote: 'ಇದು ದಾಖಲೆ ಹುಡುಕಾಟ: ಅಟ್ಲಸ್‌ನಲ್ಲಿರುವ ದಾಖಲೆಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸುತ್ತದೆ. ಹಲವು ಇನ್ನೂ ಪರಿಶೀಲನೆ ಬಾಕಿ.',
+    notices: { daily: 'ಇಂದಿನ AI ಮಿತಿ ಮುಗಿದಿದೆ; ದಾಖಲೆ ಹುಡುಕಾಟ ತೋರಿಸಲಾಗಿದೆ.', model: 'AI ಉತ್ತರ ಸಿಗಲಿಲ್ಲ; ದಾಖಲೆ ಹುಡುಕಾಟ ತೋರಿಸಲಾಗಿದೆ.' },
     suggestions: ['ಮಯೂರಶರ್ಮ ಯಾರು?', 'ತಾಳಗುಂದ ಶಾಸನದ ಬಗ್ಗೆ ಹೇಳಿ', 'ಹಂಪಿಯ ಬಗ್ಗೆ ಯಾವ ದಾಖಲೆಗಳಿವೆ?'],
     errors: {
       disabled: 'ಭೇರುಂಡ ಈಗ ವಿಶ್ರಾಂತಿಯಲ್ಲಿದ್ದಾನೆ.',
@@ -40,6 +43,9 @@ const copy = {
     thinking: 'Searching…',
     sources: 'Records used',
     needsReview: 'Awaiting review',
+    retrievalGreeting: 'Namaskara! I am Berunda. Ask about a name, place or topic and I will show the matching atlas records.',
+    retrievalNote: 'This is a record search: it only shows records that exist in the atlas. Many are still awaiting review.',
+    notices: { daily: 'Today’s AI limit is used up; showing a record search instead.', model: 'The AI answer was unavailable; showing a record search instead.' },
     suggestions: ['Who was Mayurasharma?', 'Tell me about the Talagunda inscription', 'What records exist about Hampi?'],
     errors: {
       disabled: 'Berunda is resting right now.',
@@ -66,6 +72,7 @@ const nameOf = (name, locale) => name?.[locale] || name?.kn || name?.en || ''
 export default function Berunda({ locale = 'kn' }) {
   const t = copy[locale] || copy.kn
   const [enabled, setEnabled] = useState(false)
+  const [mode, setMode] = useState('retrieval')
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([])
   const [question, setQuestion] = useState('')
@@ -77,7 +84,7 @@ export default function Berunda({ locale = 'kn' }) {
 
   useEffect(() => {
     let active = true
-    fetch(`${API}/api/berunda/status`).then(response => (response.ok ? response.json() : null)).then(body => { if (active) setEnabled(Boolean(body?.enabled)) }).catch(() => {})
+    fetch(`${API}/api/berunda/status`).then(response => (response.ok ? response.json() : null)).then(body => { if (active) { setEnabled(Boolean(body?.enabled)); setMode(body?.mode === 'ai' ? 'ai' : 'retrieval') } }).catch(() => {})
     return () => { active = false }
   }, [])
 
@@ -97,7 +104,7 @@ export default function Berunda({ locale = 'kn' }) {
       const response = await fetch(`${API}/api/berunda/ask`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: value, locale, history }) })
       const body = await response.json().catch(() => ({}))
       if (!response.ok) throw Object.assign(new Error(body.error || 'failed'), { code: body.code })
-      setMessages(list => [...list, { role: 'assistant', content: body.answer, sources: body.sources || [] }])
+      setMessages(list => [...list, { role: 'assistant', content: body.answer, sources: body.sources || [], notice: body.notice }])
     } catch (error) {
       const code = error.code || (error instanceof TypeError ? 'network' : 'model')
       setMessages(list => [...list, { role: 'assistant', content: t.errors[code] || t.errors.model, error: true }])
@@ -124,7 +131,7 @@ export default function Berunda({ locale = 'kn' }) {
           </header>
           <div className="berunda-log" ref={log} role="log" aria-live="polite" aria-busy={busy}>
             {!messages.length && <BerundaArt className="berunda-hero" size={112} paper />}
-            <p className="berunda-bubble assistant">{t.greeting}</p>
+            <p className="berunda-bubble assistant">{mode === 'ai' ? t.greeting : t.retrievalGreeting}</p>
             {!messages.length && (
               <div className="berunda-suggestions">
                 {t.suggestions.map(suggestion => <button key={suggestion} type="button" onClick={() => ask(suggestion)}>{suggestion}</button>)}
@@ -133,6 +140,7 @@ export default function Berunda({ locale = 'kn' }) {
             {messages.map((message, index) => (
               <div key={index} className={`berunda-message ${message.role}`}>
                 <p className={`berunda-bubble ${message.role}${message.error ? ' error' : ''}`}>{message.content}</p>
+                {message.notice && <p className="berunda-notice">{t.notices[message.notice] || ''}</p>}
                 {message.sources?.length > 0 && (
                   <div className="berunda-sources">
                     <strong>{t.sources}</strong>
@@ -142,6 +150,7 @@ export default function Berunda({ locale = 'kn' }) {
                           <a href={PAGE_FOR[source.collection] || '#atlas'}>{nameOf(source.name, locale) || source.id}</a>
                           {source.date && <small> · {source.date}</small>}
                           {!REVIEWED.has(source.reviewStatus) && <mark>{t.needsReview}</mark>}
+                          {source.summary && <p>{source.summary}</p>}
                         </li>
                       ))}
                     </ul>
@@ -156,7 +165,7 @@ export default function Berunda({ locale = 'kn' }) {
             <input id={`${titleId}-q`} ref={input} value={question} onChange={event => setQuestion(event.target.value)} maxLength={500} placeholder={t.placeholder} autoComplete="off" />
             <button type="submit" disabled={busy || !question.trim()}>{t.send}</button>
           </form>
-          <p className="berunda-note">{t.note}</p>
+          <p className="berunda-note">{mode === 'ai' ? t.note : t.retrievalNote}</p>
         </section>
       )}
     </>
