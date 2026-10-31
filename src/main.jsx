@@ -22,6 +22,7 @@ import './admin-readiness.css'
 import './guided-tour.css'
 import './tablet.css'
 import './nav-activity.css'
+import './about.css'
 import { hydrateAtlasData } from './data/runtime'
 import { appendPublicAttribution } from './data/public-attribution'
 
