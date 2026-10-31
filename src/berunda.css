@@ -54,3 +54,8 @@
 .berunda-admin>header{height:auto;min-height:0;padding:0;border:0;background:none;box-shadow:none}
 .admin-integration-grid .berunda-admin input[type=radio]{width:auto;flex:0 0 auto;padding:0}
 .berunda-admin footer .berunda-admin-notice{border-radius:999px;padding:4px 10px;background:#e5f5ec;color:#21643b;font-size:11px;font-weight:700}
+
+/* The open mobile menu must sit above the sidebar search box (z-index 1201). */
+@media (max-width: 720px) {
+  .portal-nav.open { z-index: 1300; }
+}
