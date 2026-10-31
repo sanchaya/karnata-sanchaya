@@ -12,3 +12,49 @@
 .district-head-heritage,.district-head-inscriptions,.district-head-inventory{padding-inline:max(clamp(20px,5vw,72px),calc((100% - 1180px)/2))!important}
 .district-hub .audit-head h2,.district-hub .inscription-audit-head h2{display:none}
 .district-hub .district-audit,.district-hub .inscription-audit{padding-top:22px}
+
+/* District history: one toolbar row, map and detail fill the viewport, everything reflows by width */
+.district-hub .district-history-page{--dh-pad:clamp(12px,2vw,28px);--dh-chrome:340px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 14px;align-items:center;min-height:0;padding:12px var(--dh-pad) 20px}
+.district-hub .district-history-page>*{min-width:0}
+.district-hub .district-history-page .district-history-intro{display:none}
+.district-hub .district-history-page>.district-history-view-menu{grid-column:1;max-width:none;margin:0;padding:0;overflow:visible}
+.district-hub .district-history-page>.district-history-filters{grid-column:2;display:grid;grid-template-columns:minmax(180px,300px) minmax(0,1fr) auto;gap:8px 12px;max-width:none;margin:0;padding:8px 12px;align-items:center}
+.district-hub .district-history-page>.district-history-filters label span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.district-hub .district-history-page>.district-history-filters .district-history-filter-row{flex-wrap:wrap}
+.district-hub .district-history-page>.district-history-filters>p{white-space:nowrap;font-size:11px}
+.district-hub .district-history-page>section{grid-column:1/-1}
+.district-hub .district-history-page .district-history-workspace{max-width:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) clamp(300px,26vw,440px);gap:12px}
+.district-hub .district-history-page .district-history-map-wrap{height:clamp(420px,calc(100vh - var(--dh-chrome)),1100px);min-height:0}
+.district-hub .district-history-page .district-history-map-wrap .leaflet-container{height:100%;min-height:0}
+.district-hub .district-history-page .district-history-detail{height:clamp(420px,calc(100vh - var(--dh-chrome)),1100px);max-height:none;min-height:0;overflow:auto}
+.district-hub .district-history-page .district-history-list,.district-hub .district-history-page .district-history-freedom{max-width:none;margin:0;padding-inline:0}
+.district-hub .district-history-page .district-history-cards{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));max-height:none;overflow:visible;padding:0}
+.district-hub .district-history-page .district-history-freedom{padding:16px;border:1px solid #ead9c3;border-radius:12px}
+.district-hub .district-history-page .district-history-freedom>div:last-child{max-height:none;overflow:visible}
+@media(max-width:1050px){
+  .district-hub .district-history-page{grid-template-columns:1fr}
+  .district-hub .district-history-page>.district-history-view-menu,.district-hub .district-history-page>.district-history-filters{grid-column:1}
+  .district-hub .district-history-page>.district-history-view-menu{overflow-x:auto}
+  .district-hub .district-history-page>.district-history-filters{grid-template-columns:minmax(0,1fr) auto}
+  .district-hub .district-history-page>.district-history-filters .district-history-filter-row{grid-column:1/-1;grid-row:2}
+  .district-hub .district-history-page .district-history-workspace{grid-template-columns:1fr}
+  .district-hub .district-history-page .district-history-map-wrap{height:clamp(340px,58vh,640px)}
+  .district-hub .district-history-page .district-history-detail{height:auto;max-height:none}
+}
+@media(max-width:600px){
+  .district-hub .district-history-page>.district-history-filters{grid-template-columns:1fr}
+  .district-hub .district-history-page>.district-history-filters>p{white-space:normal}
+  .district-hub .district-history-page>.district-history-filters .district-history-filter-row{grid-row:auto;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
+  .district-hub .district-history-page>.district-history-filters .district-history-filter-row button{flex:0 0 auto}
+  .district-hub .district-history-page .district-history-cards{grid-template-columns:1fr}
+  .district-hub .district-history-page .district-history-freedom>div:last-child{flex-wrap:wrap}
+  .district-hub .district-history-page .district-history-freedom a{flex:0 1 auto}
+}
+
+/* Empty detail state doubles as a scrollable lead list so the panel is never blank */
+.district-history-leads{display:grid;gap:6px;margin-top:12px}
+.district-history-leads button{display:grid;gap:2px;padding:8px 10px;border:1px solid var(--sanchaya-border);border-radius:9px;background:#fff;text-align:left;cursor:pointer}
+.district-history-leads button:hover,.district-history-leads button:focus-visible{border-color:#d4a969;outline:none;box-shadow:0 0 0 2px rgba(176,106,31,.12)}
+.district-history-leads span{color:#9a641f;font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.district-history-leads strong{font-size:12px;line-height:1.35;color:var(--sanchaya-ink)}
+.district-history-leads small{color:#5c5c78;font-size:10px}

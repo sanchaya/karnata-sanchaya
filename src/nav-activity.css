@@ -33,3 +33,14 @@
 }
 @media(min-width:721px) and (max-width:1120px){.activity-switch button{padding:6px 8px;font-size:11px}.activity-switch button i{display:none}.sanchaya-product-brand .header-secondary{display:none}.header-utility-nav a{font-size:11px;padding:6px 5px}}
 
+
+/* Tablet widths: keep the header on one row without horizontal scroll */
+@media(min-width:721px) and (max-width:960px){
+  header{padding-inline:14px}
+  .header-actions{gap:6px}
+  .activity-switch button{padding:6px 5px;font-size:11px}
+  .header-utility-nav a{padding:6px 4px}
+  .sanchaya-product-brand{gap:8px}
+  .sanchaya-product-brand h1{font-size:20px}
+}
+@media(min-width:721px) and (max-width:800px){.header-utility-nav{display:none}.activity-switch button{padding:6px 4px;font-size:10.5px}}
