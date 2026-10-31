@@ -53,3 +53,13 @@
 .relations-filters .relations-clear-selection{position:static;display:block;width:100%;margin-top:8px;box-sizing:border-box;text-align:center}
 .relations-filters .map-theme-control{position:static;display:flex;width:100%;box-sizing:border-box;justify-content:space-between;margin-top:8px;padding:4px 5px;gap:4px}.relations-filters .map-theme-control>span{display:block;font-size:8px}.relations-filters .map-theme-control>div{padding:1px}.relations-filters .map-theme-control button{padding:4px 6px;font-size:8px}
 @media(max-width:720px){.relations-clear-selection{left:52px;top:10px;padding:6px 8px;font-size:8px}.relations-map .map-theme-control{top:54px;left:52px}}
+
+/* Desktop: the relations workspace fills the screen under a slim title row, like the main atlas */
+@media(min-width:1001px){
+  .app-shell main.relations-page{width:100%;max-width:none;margin:0}
+  .relations-intro{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 18px;padding:8px clamp(16px,2vw,28px)}
+  .relations-intro .eyebrow{flex:0 0 100%;margin:0}
+  .relations-intro h2{margin:0;font-size:clamp(20px,1.8vw,26px)}
+  .relations-intro p:not(.eyebrow){flex:1 1 360px;margin:0;font-size:12px;line-height:1.4}
+  .relations-workspace{height:calc(100vh - 142px - 80px);min-height:520px}
+}
