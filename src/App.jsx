@@ -31,6 +31,7 @@ const DistrictHistoryExplorer=lazy(()=>import('./DistrictHistoryExplorer'))
 const PeopleExplorer=lazy(()=>import('./PeopleExplorer'))
 const FreedomMovementExplorer=lazy(()=>import('./FreedomMovementExplorer'))
 const About=lazy(()=>import('./About'))
+const DonateSection=lazy(()=>import('./About').then(module=>({default:module.DonateSection})))
 const Contact=lazy(()=>import('./Contact'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const CommunityResearchTasks=lazy(()=>import('./CommunityResearchTasks'))
@@ -1123,7 +1124,7 @@ export default function App(){
     {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
     {view==='research-tasks'&&<Suspense fallback={<PortalFallback/>}><CommunityResearchTasks locale={locale}/></Suspense>}
-    {view==='contribute'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="contribute" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
+    {view==='contribute'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="contribute" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/><DonateSection locale={locale}/></Suspense>}
     {view==='profile'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="profile" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='reviews'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="reviews" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}
     {view==='operations'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="operations" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/></Suspense>}

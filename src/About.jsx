@@ -55,6 +55,19 @@ function CopyValue({value,label,t}){
   return <span className="donate-value"><b>{value}</b><button type="button" onClick={copy} aria-label={`${t.copy}: ${label}`}>{done?t.copied:t.copy}</button></span>
 }
 
+export function DonateSection({locale}){
+  const t=copy[locale]||copy.kn
+  return (
+    <section className="donate-section" aria-labelledby="donate-title">
+      <div className="donate-intro"><h3 id="donate-title">{t.donateTitle}</h3><p>{t.donateIntro}</p><a href="https://sanchaya.org/support-us/" target="_blank" rel="noreferrer">{t.donateMore} ↗</a></div>
+      <div className="donate-grid">
+        <article className="donate-online"><h4>{t.donateOnline}</h4><RazorpayButton/></article>
+        {BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}
+      </div>
+    </section>
+  )
+}
+
 export default function About({locale}){
   const t=copy[locale]||copy.kn
   const base=import.meta.env.BASE_URL
@@ -74,12 +87,6 @@ export default function About({locale}){
       </aside>
     </section>
     <section className="about-pillars">{pillars.map(([title,body],index)=><article key={title} className={`pillar-${index+1}`}><span aria-hidden="true">0{index+1}</span><h3>{title}</h3><p>{body}</p></article>)}</section>
-    <section className="donate-section" aria-labelledby="donate-title">
-      <div className="donate-intro"><h3 id="donate-title">{t.donateTitle}</h3><p>{t.donateIntro}</p><a href="https://sanchaya.org/support-us/" target="_blank" rel="noreferrer">{t.donateMore} ↗</a></div>
-      <div className="donate-grid">
-        <article className="donate-online"><h4>{t.donateOnline}</h4><RazorpayButton/></article>
-        {BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}
-      </div>
-    </section>
+    <DonateSection locale={locale}/>
   </main>
 }
