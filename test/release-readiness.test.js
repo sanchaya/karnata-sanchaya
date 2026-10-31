@@ -556,3 +556,14 @@ test('admin separates overview, editing, translation and discovery workspaces', 
   assert.match(adminSource,/workspaceTab==='discovery'&&<div className="admin-workspace-panel"/, 'research discovery belongs to its own tab')
   assert.match(stylesSource,/\.admin-workspace-tabs\{/, 'Admin workspace tabs need responsive visual styling')
 })
+
+test('a redeploy never leaves older tabs failing with an HTML response for a missing script chunk', async () => {
+  const mainSource = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
+  const workerSource = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
+  assert.match(serverSource, /app\.use\('\/assets'.*status\(404\)/s, 'a missing hashed asset must return 404, not the SPA index.html')
+  assert.match(serverSource, /immutable:true,maxAge:'1y'/, 'hashed build assets must be cached as immutable')
+  assert.match(serverSource, /\(sw\\\.js\|index\\\.html\).*no-cache/s, 'the service worker and index.html must always revalidate')
+  assert.match(mainSource, /vite:preloadError/, 'a failed chunk preload must trigger a one-time reload onto the new build')
+  assert.match(mainSource, /chunk-reload-at/, 'the chunk reload must be rate-limited so it cannot loop')
+  assert.match(workerSource, /text\/html/, 'the service worker must not cache an HTML page as a script or style response')
+})

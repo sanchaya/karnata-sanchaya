@@ -313,7 +313,18 @@ app.get('/api/certificates/mine',requireUser,async(req,res)=>{const rows=await p
 app.get('/api/certificates/verify/:code',async(req,res)=>{const rows=await pool.query(`SELECT c.verification_code,c.title_en,c.title_kn,c.period_from,c.period_to,c.contribution_points,c.reviewer_points,c.statement_en,c.statement_kn,c.issued_at,c.revoked_at,u.display_name,u.display_name_kn FROM certificates c JOIN users u ON u.id=c.user_id WHERE c.verification_code=? LIMIT 1`,[req.params.code]);if(!rows.length)return res.status(404).json({error:'Certificate not found.'});res.json({certificate:rows[0],valid:!rows[0].revoked_at})})
 
 app.use('/api',(req,res)=>res.status(404).json({error:'API route not found.'}))
-if(existsSync(config.publicDir)){app.use(express.static(config.publicDir,{index:false,maxAge:config.env==='production'?'1h':0}));app.use((req,res,next)=>{if(req.method!=='GET')return next();res.sendFile(path.join(config.publicDir,'index.html'))})}
+if(existsSync(config.publicDir)){
+  // Hashed build assets never change, and a missing one must be a real 404: answering with index.html makes browsers still
+  // running an older build fail with "Expected a JavaScript module but the server responded with text/html".
+  app.use('/assets',express.static(path.join(config.publicDir,'assets'),{index:false,immutable:true,maxAge:'1y'}))
+  app.use('/assets',(req,res)=>res.status(404).type('text/plain').set('Cache-Control','no-store').send('Asset not found'))
+  app.use(express.static(config.publicDir,{index:false,maxAge:config.env==='production'?'1h':0,setHeaders:(res,file)=>{if(/[\\/](sw\.js|index\.html)$/.test(file))res.set('Cache-Control','no-cache')}}))
+  app.use((req,res,next)=>{
+    if(req.method!=='GET')return next()
+    if(/\.[a-z0-9]+$/i.test(req.path)&&!req.path.endsWith('.html'))return res.status(404).type('text/plain').set('Cache-Control','no-store').send('Not found')
+    res.set('Cache-Control','no-cache').sendFile(path.join(config.publicDir,'index.html'))
+  })
+}
 app.use((error,req,res,next)=>{console.error(error);if(res.headersSent)return next(error);res.status(error.status||500).json({error:error.status?error.message:'The service could not complete this request.'})})
 
 const server=app.listen(config.port,()=>console.log(`Karnataka Historical Atlas community service listening on ${config.port}`))

@@ -1,4 +1,4 @@
-const SHELL_CACHE = 'karnataka-atlas-shell-v4'
+const SHELL_CACHE = 'karnataka-atlas-shell-v5'
 const TILE_CACHE = 'karnataka-atlas-tiles-v2'
 const DATA_CACHE = 'karnataka-atlas-readonly-data-v3'
 const SHELL_ASSETS = ['./', './index.html', './site.webmanifest', './sanchaya-logo.png', './karnataka-districts.geojson']
@@ -29,7 +29,9 @@ const cacheResponse = async (cacheName, request, response, cacheable) => {
 const networkFirst = async request => {
   try {
     const response = await fetch(request,{cache:request.mode === 'navigate' ? 'reload' : 'no-cache'})
-    return cacheResponse(SHELL_CACHE, request, response, response.ok)
+    // Never cache an HTML page answering a script/style request (a stale build asking for a removed chunk).
+    const htmlForAsset = ['script', 'style'].includes(request.destination) && (response.headers.get('content-type') || '').includes('text/html')
+    return cacheResponse(SHELL_CACHE, request, response, response.ok && !htmlForAsset)
   } catch {
     return (await caches.match(request)) || caches.match('./index.html')
   }
