@@ -9,7 +9,7 @@
 .district-head-stats b{font-size:18px;color:var(--sanchaya-ink)}
 @media(max-width:600px){.district-head-stats span{flex:1 1 40%}}
 /* Align the title with the wide content column of the audit and inventory pages */
-.district-head-heritage,.district-head-inscriptions,.district-head-inventory{padding-inline:max(clamp(20px,5vw,72px),calc((100% - var(--page-wide))/2))!important}
+.district-head-history,.district-head-heritage,.district-head-inscriptions,.district-head-inventory{padding-inline:max(clamp(20px,5vw,72px),calc((100% - var(--page-wide))/2))!important}
 .district-hub .audit-head h2,.district-hub .inscription-audit-head h2{display:none}
 .district-hub .district-audit,.district-hub .inscription-audit{padding-top:22px}
 
@@ -58,3 +58,7 @@
 .district-history-leads span{color:#9a641f;font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
 .district-history-leads strong{font-size:12px;line-height:1.35;color:var(--sanchaya-ink)}
 .district-history-leads small{color:#5c5c78;font-size:10px}
+
+/* Local history joins the same content column as the other District Atlas pages */
+.district-hub .district-history-page{--dh-col:max(clamp(20px,5vw,72px),calc((100% - var(--page-wide))/2));padding-inline:var(--dh-col)}
+.district-hub .district-history-page{background:#fff}
