@@ -15,6 +15,7 @@ import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from './timeline-r
 import { compactTimelineStories } from './timeline-story-utils'
 import { isTempleRecord, objectIcon, objectKindFor, timelineCategoryForCulture } from './object-icons'
 import ContributeActions from './ContributeActions'
+import RecordInspector from './RecordInspector'
 import { canonicalDistrictId, canonicalDistrictName } from './data/district-normalization'
 import { calculateDatasetDepth } from './data/dataset-depth'
 import { buildSearchText, matchesSearch } from './search-normalization'
@@ -327,7 +328,7 @@ const personStories=atlasData.people.map(person=>{
   if(!anchorDate)return null
   const polity=entityById.get(person.polityId)
   const place=placeById.get(polity?.capitalId)
-  const relatedPosition=contributions.events.map(record=>record.coords).find(point=>Array.isArray(point)&&Number.isFinite(point[0])&&Number.isFinite(point[1]))||contributions.relations.map(record=>{
+  const relatedPosition=contributions.events.map(record=>Array.isArray(record.coords)?[record.coords[1],record.coords[0]]:null).find(point=>Array.isArray(point)&&Number.isFinite(point[0])&&Number.isFinite(point[1]))||contributions.relations.map(record=>{
     const geography=record.geography||{}
     const party=record.parties?.find(item=>item.polityId===person.polityId)
     const point=party?.role?.includes('origin')?geography.origin?.coordinates:geography.destination?.coordinates
@@ -385,6 +386,207 @@ const territoriesForYear=year=>{
   const active=territorialExtents.filter(item=>year>=item.date.from&&year<=item.date.to)
   const specificCorePolities=new Set(active.filter(item=>item.classification==='core-administered'&&item.snapshotKind!=='prototype').flatMap(item=>item.polityIds))
   return active.filter(item=>item.snapshotKind!=='prototype'||!item.polityIds.some(polityId=>specificCorePolities.has(polityId)))
+}
+
+function placeLabel(placeId,locale){
+  const place=placeById.get(placeId);return place?primary(place.name,locale):''
+}
+function citationRows(citations,locale){
+  return citations.map(item=>({title:primary(item.source.title,locale),url:item.source.url,locator:item.locator,tier:sourceTiers.get(item.sourceId)}))
+}
+function peopleRows(ids,locale){
+  return ids.map(id=>{const person=personById.get(id);if(!person)return null;return {kind:'person',id:person.id,record:person,name:primary(person.name,locale),sub:secondary(person.name,locale)||person.roles.map(role=>t.personRoleLabels[role]||role).join(', ')} }).filter(Boolean)
+}
+function polityRows(ids,locale){
+  return ids.map(id=>{const p=entityById.get(id);if(!p)return null;return {kind:'polity',id:p.id,record:p,name:primary(p.name,locale),sub:secondary(p.name,locale)}}).filter(Boolean)
+}
+function buildInspectorRecord(record,kind,locale,t,related={}){
+  const name=primary(record.name,locale)
+  const nameAlt=secondary(record.name,locale)
+  const citations=(record.citations||[]).map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
+  const citationItems=citationRows(citations,locale)
+  const authority=recordAuthorityCited(record,sourceTiers)
+  const reviewStatus=record.review?.status||'needs-review'
+  const stableId=record.id
+  const meta=[]
+  const connections=[]
+  const evidence={reviewStatus,authority}
+  let description=null,descriptionAlt=null,summary=null,typeLabel,dateLabel
+  const precisionLabel=record.date?.precision
+
+  switch(kind){
+    case 'polity':{
+      typeLabel=t.searchKinds.polity||'Kingdom'
+      dateLabel=record.start!=null&&record.end!=null?`${record.start}–${record.end} ${t.ce}`:(record.date&&record.date.from?`${record.date.from} ${t.ce}`:t.yearPrecision||'year')
+      description=primary(record.description,locale)
+      descriptionAlt=locale==='kn'&&record.description?record.description.en:null
+      summary=record.interpretation?primary(record.interpretation,locale):(description?description.slice(0,160):null)
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      if(record.capitalName)meta.push({label:t.capital||'Capital',value:primary(record.capitalName,locale),valueAlt:secondary(record.capitalName,locale)})
+      if(record.extent?.precision)meta.push({label:t.boundaryPrecision||'Boundary precision',value:record.extent.precision})
+      if(record.governanceType)meta.push({label:'Governance type',value:record.governanceType.replaceAll('-',' ')})
+      evidence.precision=record.extent?.precision
+      if(citationItems.length)evidence.citations=citationItems
+      evidence.notes=record.interpretation?`Scope note: ${primary(record.interpretation,locale)}`:null
+      // Connections
+      const rulers=peopleRows(record.rulers||[],locale)
+      if(rulers.length)connections.push({heading:t.rulers||'Rulers',headingLabel:'rulers',count:rulers.length,items:rulers})
+      const polityId=record.governingPolityId||record.id
+      const succession=successionEdgesForPolity(polityId)
+      if(succession.length)connections.push({heading:t.connectionsSuccession||'Succession',headingLabel:'succession',count:succession.length,items:succession.map(edge=>{const from=personById.get(edge.fromId),to=personById.get(edge.toId);return {kind:'person',id:edge.id,record:edge,name:(from?primary(from.name,locale):edge.fromId)+(to?' → ':'')+(to?primary(to.name,locale):edge.toId),sub:`${edge.date?.from??''} ${edge.date?.era||'CE'} · ${edge.review?.status||'needs-review'}`}})})
+      const feudatories=feudatoryRelationsForPolity(polityId)
+      if(feudatories.length)connections.push({heading:t.connectionsFeudatories||'Feudatories',headingLabel:'feudatories',count:feudatories.length,items:feudatories.map(f=>{const isOverlord=f.overlordPolityId===polityId,other=entityById.get(isOverlord?f.subordinatePolityId:f.overlordPolityId);return {kind:'polity',id:f.id,record:f,name:primary(f.name,locale),sub:isOverlord?(locale==='kn'?'ಅಧೀನ ಘಟಕ':'Subordinate')+(other?': '+primary(other.name,locale):''):(locale==='kn'?'ಅಧಿಪತಿ':'Overlord')+(other?': '+primary(other.name,locale):f.subordinatePolityId)}})})
+      const divisions=administrativeDivisionsForPolity(polityId)
+      if(divisions.length)connections.push({heading:t.connectionsDivisions||'Administrative divisions',headingLabel:'divisions',count:divisions.length,items:divisions.map(d=>{const places=(d.placeIds||[]).map(id=>placeById.get(id)).filter(Boolean);return {kind:'polity',id:d.id,record:d,name:primary(d.name,locale),sub:places.map(p=>primary(p.name,locale)).join(', ')||'—'}})})
+      const scripts=scriptsForPolity(polityId)
+      if(scripts.length)connections.push({heading:'Scripts',headingLabel:'scripts',count:scripts.length,items:scripts.map(s=>{const samples=(s.sampleInscriptionIds||[]).map(id=>atlasData.inscriptions.find(r=>r.id===id)).filter(Boolean);return {kind:'polity',id:s.id,record:s,name:primary(s.name,locale),sub:samples.map(r=>primary(r.name,locale)).join(', ')||'—'}})})
+      if(related.works&&related.works.length)connections.push({heading:t.literature||'Literature',headingLabel:'literature',count:related.works.length,items:related.works.map(w=>({kind:'work',id:w.id,record:w,name:primary(w.name,locale),sub:primary(w.creator,locale)}))})
+      if(related.inscriptions&&related.inscriptions.length)connections.push({heading:t.inscriptions||'Inscriptions',headingLabel:'inscriptions',count:related.inscriptions.length,items:related.inscriptions.map(i=>({kind:'inscription',id:i.id,record:i,name:primary(i.name,locale),sub:primary(i.placeName,locale)}))})
+      break
+    }
+    case 'person':{
+      typeLabel=t.searchKinds.person||'Person'
+      dateLabel=record.date&&record.date.from?`${record.date.from} ${t.ce}`:(record.year?`${record.year} ${t.ce}`:t.yearPrecision||'year')
+      description=primary(record.description,locale)
+      descriptionAlt=locale==='kn'&&record.description?record.description.en:null
+      summary=description?description.slice(0,160):null
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      const polity=entityById.get(record.polityId)
+      if(polity)meta.push({label:t.associatedKingdom||'Associated kingdom',value:primary(polity.name,locale),valueAlt:secondary(polity.name,locale)})
+      if(record.roles&&record.roles.length)meta.push({label:t.roles||'Roles',value:record.roles.map(role=>t.personRoleLabels[role]||role).join(', ')})
+      evidence.precision=record.date?.precision
+      if(citationItems.length)evidence.citations=citationItems
+      // Connections
+      const context=contributionContextFor(record)
+      const groups=[
+        {heading:t.historicalEvents||'Historical events',key:'events',records:context.events},
+        {heading:t.reignsAndPeriods||'Reigns and periods',key:'reigns',records:context.reigns},
+        {heading:t.literaryWorks||'Literary works',key:'works',records:context.works},
+        {heading:t.cultureAndMonuments||'Culture and monuments',key:'culture',records:context.culture}
+      ].filter(g=>g.records.length)
+      groups.forEach(g=>{
+        connections.push({heading:g.heading,headingLabel:g.key,count:g.records.length,items:g.records.map(r=>({kind:r.storyKind||'record',id:r.id,record:r,name:primary(r.name,locale),sub:`${r.date?.from??r.year} ${t.ce}`}))})
+      })
+      const succession=successionEdgesForPerson(record.id)
+      if(succession.length)connections.push({heading:t.connectionsSuccession||'Succession',headingLabel:'succession',count:succession.length,items:succession.map(edge=>{const from=personById.get(edge.fromId),to=personById.get(edge.toId);return {kind:'person',id:edge.id,record:edge,name:(from?primary(from.name,locale):edge.fromId)+(to?' → ':'')+(to?primary(to.name,locale):edge.toId),sub:`${edge.date?.from??''} ${edge.date?.era||'CE'}`}})})
+      break
+    }
+    case 'work':{
+      typeLabel=t.searchKinds.work||'Literary work'
+      dateLabel=record.date&&record.date.from?`${record.date.precision==='circa'?(locale==='kn'?'ಸು. ':'c. '):''}${record.date.from} ${t.ce}`:t.yearPrecision||'year'
+      description=primary(record.description,locale)
+      descriptionAlt=locale==='kn'&&record.description?record.description.en:null
+      summary=description?description.slice(0,160):null
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      meta.push({label:t.creator||'Creator',value:primary(record.creator,locale),valueAlt:secondary(record.creator,locale)})
+      if(record.languages&&record.languages.length)meta.push({label:t.language||'Language',value:record.languages.join(', ')})
+      if(record.date?.precision)meta.push({label:t.datePrecision||'Date precision',value:record.date.precision})
+      const polity=entityById.get(record.polityId)
+      if(polity)meta.push({label:t.associatedKingdom||'Associated kingdom',value:primary(polity.name,locale),valueAlt:secondary(polity.name,locale)})
+      evidence.precision=record.date?.precision
+      if(citationItems.length)evidence.citations=citationItems
+      if(record.externalLinks&&record.externalLinks.length)evidence.sourceLinks=record.externalLinks.map(l=>({label:l.label||l.url,url:l.url}))
+      // Connections
+      const creators=peopleRows(record.creatorIds||[],locale)
+      if(creators.length)connections.push({heading:t.people||'People',headingLabel:'people',count:creators.length,items:creators})
+      break
+    }
+    case 'inscription':{
+      typeLabel=t.searchKinds.inscription||'Inscription'
+      const place=placeById.get(record.placeId)
+      const polity=entityById.get(record.polityId)
+      const displayedDate=`${record.date.precision==='circa'?(locale==='kn'?'ಸು. ':'c. '):''}${record.date.from}${record.date.to!==record.date.from?`–${record.date.to}`:''} ${record.date.era==='BCE'?(locale==='kn'?'ಕ್ರಿ.ಪೂ.':'BCE'):(locale==='kn'?'ಕ್ರಿ.ಶ.':'CE')}`
+      dateLabel=displayedDate
+      description=primary(record.description,locale)
+      descriptionAlt=locale==='kn'&&record.description?record.description.en:null
+      summary=description?description.slice(0,160):null
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      if(place)meta.push({label:t.mappedPlace||'Mapped place',value:primary(place.name,locale),valueAlt:secondary(place.name,locale)})
+      if(place?.location?.coordinates)meta.push({label:t.coordinates||'Coordinates',value:place.location.coordinates.slice().reverse().map(v=>v.toFixed(6)).join(', ')})
+      if(record.languages&&record.languages.length)meta.push({label:t.language||'Language',value:record.languages.join(', ')})
+      if(record.scripts&&record.scripts.length)meta.push({label:t.script||'Script',value:record.scripts.join(', ')})
+      if(record.date?.precision)meta.push({label:t.datePrecision||'Date precision',value:record.date.precision})
+      if(polity)meta.push({label:t.associatedKingdom||'Associated kingdom',value:primary(polity.name,locale),valueAlt:secondary(polity.name,locale)})
+      if(place?.location?.precision)meta.push({label:t.geographicPrecision||'Geographic precision',value:place.location.precision})
+      if(record.itemEdition)meta.push({label:t.itemEdition||'Item edition',value:record.itemEdition.primary.locator,valueAlt:record.itemEdition.alternateLocators?.length?record.itemEdition.alternateLocators.join(' · '):null})
+      if(record.protection)meta.push({label:t.protectionStatus||'Protection status',value:primary(record.protection.designation,locale),valueAlt:primary(record.protection.authority,locale)})
+      if(record.presentCondition)meta.push({label:t.presentCondition||'Present condition',value:t.inscriptionConditionLabels?.[record.presentCondition.status]||record.presentCondition.status,valueAlt:primary(record.presentCondition.description,locale)})
+      evidence.precision=place?.location?.precision
+      evidence.uncertainty=record.date.precision
+      if(citationItems.length)evidence.citations=citationItems
+      break
+    }
+    case 'event':{
+      typeLabel='Event'
+      dateLabel=record.year?`${record.year} ${t.ce}`:t.yearPrecision||'year'
+      description=primary(record.summary,locale)
+      descriptionAlt=locale==='kn'&&record.summary?record.summary.en:null
+      summary=description?description.slice(0,160):null
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      if(record.type)meta.push({label:'Type',value:record.type.replaceAll('-',' ')})
+      evidence.precision=record.date?.precision
+      if(citationItems.length)evidence.citations=citationItems
+      // Connections
+      const linkedPeople=peopleRows(record.peopleIds||[],locale)
+      if(linkedPeople.length)connections.push({heading:t.people||'People',headingLabel:'people',count:linkedPeople.length,items:linkedPeople})
+      const participants=(record.participants||[]).map(p=>{const polity=entityById.get(p.polityId);return polity?{kind:'polity',id:polity.id,record:polity,name:primary(polity.name,locale),sub:secondary(polity.name,locale)}:null}).filter(Boolean)
+      if(participants.length)connections.push({heading:t.participants||'Participants',headingLabel:'participants',count:participants.length,items:participants})
+      if(record.reach){
+        const reachItems=[]
+        if(record.reach.destination){const dest=placeById.get(record.destinationPlaceId);reachItems.push({name:t.destination||'Destination',sub:dest?primary(dest.name,locale):record.destinationPlaceId})}
+        if(record.reach.modernCountries?.length)reachItems.push({name:t.modernCountries||'Present-day countries',sub:record.reach.modernCountries.join(', ')})
+        if(record.reach.territorialControl!=null)reachItems.push({name:t.territorialControl||'Territorial control',sub:record.reach.territorialControl?t.yes:t.no})
+        if(record.reach.note)reachItems.push({name:'Note',sub:primary(record.reach.note,locale)})
+        if(reachItems.length)connections.push({heading:t.overseasConnection||'Connection beyond India',headingLabel:'reach',count:reachItems.length,items:reachItems.map(r=>({kind:'event',id:record.id,record:record,name:r.name,sub:r.sub}))})
+      }
+      break
+    }
+    case 'territory':{
+      typeLabel='Territory'
+      dateLabel=record.date.from?`${record.date.from}–${record.date.to} ${t.ce}`:t.yearPrecision||'year'
+      description=primary(record.description,locale)
+      descriptionAlt=locale==='kn'&&record.description?record.description.en:null
+      summary=description?description.slice(0,160):null
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      meta.push({label:'Classification',value:t.territoryClasses?.[record.classification]||record.classification})
+      meta.push({label:t.controlLevel||'Control',value:t.controlValues?.[record.controlLevel]||record.controlLevel})
+      meta.push({label:t.duration||'Duration',value:t.durationValues?.[record.duration]||record.duration})
+      meta.push({label:t.confidence||'Confidence',value:t.confidenceValues?.[record.confidence]||record.confidence})
+      meta.push({label:t.geographicPrecision||'Geographic precision',value:record.geometry?.precision})
+      const period=reignById.get(record.reignId)
+      if(period)meta.push({label:'Research period',value:primary(period.name,locale),valueAlt:secondary(period.name,locale)})
+      evidence.precision=record.geometry?.precision
+      if(citationItems.length)evidence.citations=citationItems
+      // Connections
+      const relatedPolities=record.polityIds.map(id=>entityById.get(id)).filter(Boolean)
+      if(relatedPolities.length)connections.push({heading:t.participants||'Participants',headingLabel:'participants',count:relatedPolities.length,items:relatedPolities.map(p=>({kind:'polity',id:p.id,record:p,name:primary(p.name,locale),sub:secondary(p.name,locale)}))})
+      break
+    }
+    case 'culture':{
+      typeLabel=t.searchKinds.culture||'Culture'
+      dateLabel=record.date.from?`${record.date.from}${record.date.to!==record.date.from?`–${record.date.to}`:''} ${t.ce}`:t.yearPrecision||'year'
+      description=primary(record.description,locale)
+      descriptionAlt=locale==='kn'&&record.description?record.description.en:null
+      summary=description?description.slice(0,160):null
+      meta.push({label:t.stableId||'Stable ID',value:stableId})
+      if(t.cultureCategories&&t.cultureCategories[record.category])meta.push({label:'Category',value:t.cultureCategories[record.category]})
+      if(t.continuityValues&&t.continuityValues[record.continuity])meta.push({label:t.continuity||'Continuity',value:t.continuityValues[record.continuity]})
+      if(record.placeNames&&record.placeNames.length)meta.push({label:t.culturalPlace||'Place',value:record.placeNames.map(v=>primary(v,locale)).join(', ')})
+      if(record.traditionTags&&record.traditionTags.length)meta.push({label:'Traditions',value:record.traditionTags.join(', ')})
+      evidence.precision=record.geometry?.precision
+      if(citationItems.length)evidence.citations=citationItems
+      // Connections
+      const relatedPolities=record.polityIds.map(id=>entityById.get(id)).filter(Boolean)
+      const relatedPeople=record.peopleIds.map(id=>personById.get(id)).filter(Boolean)
+      const items=[...relatedPolities.map(p=>({kind:'polity',id:p.id,record:p,name:primary(p.name,locale),sub:secondary(p.name,locale)})),...relatedPeople.map(p=>({kind:'person',id:p.id,record:p,name:primary(p.name,locale),sub:secondary(p.name,locale)}))]
+      if(items.length)connections.push({heading:t.participants||'Participants',headingLabel:'participants',count:items.length,items})
+      break
+    }
+  }
+  const statusText=(()=>{switch(reviewStatus){case'published':return t.reviewStatusPublished||'Published · reviewed';case'reviewed':return t.reviewStatusReviewed||'Reviewed';case'verified':return t.reviewStatusVerified||'Verified';case'needs-review':return t.reviewStatusNeedsReview||'Needs review';case'research-pending':return t.reviewStatusResearchPending||'Research pending';case'identified':return t.reviewStatusIdentified||'Identified';default:return reviewStatus}})()
+  evidence.stableId=stableId
+  evidence.authorityBadge=authority
+  return {id:stableId,kind,name,nameAlt,typeLabel,dateLabel,description,descriptionAlt,summary,review:{status:reviewStatus,label:statusText},authority,stableId,meta,connections,evidence,actions:{viewFull:true,suggestCorrection:true}}
 }
 
 function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,selectedWorkPosition,selectedPersonPosition,selectedInscription,selectedSearchPlace,comparisonPositions,preserveInitialMapView=false}){
@@ -506,100 +708,6 @@ function BceResearchContext({locale,t,year,onOpenEpigraphy}){
   return <aside className="detail-panel bce-research-context"><div className="detail-accent"></div><div className="review-badge needs-review">{t.researchCandidate}</div><p className="eyebrow">{timelineYearLabel(year,locale)}</p><h2>{t.bceResearchTitle}</h2><p>{t.noPublishedPolity}</p><p className="bce-safety-note">{t.bceResearchNote}</p>{candidates.length>0&&<div className="bce-candidate-list">{candidates.map(item=><article key={item.id}><strong>{primary(item.name,locale)}</strong><span>{Math.abs(item.date.from)}–{Math.abs(item.date.to)} {t.bce}</span><small>{primary(item.district,locale)} · {item.promotionReview.completedEvidence.length}/{item.promotionReview.requiredEvidence.length}</small></article>)}</div>}<button className="return-detail" onClick={onOpenEpigraphy}>{t.openEpigraphy}</button></aside>
 }
 
-function EventDetail({event,locale,t,onClose}){
-  const citations=(event.citations||[]).map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
-  const destination=placeById.get(event.destinationPlaceId)
-  const linkedPeople=(event.peopleIds||[]).map(id=>personById.get(id)).filter(Boolean)
-  const linkedCandidates=(event.candidateIds||[]).map(id=>candidateById.get(id)).filter(Boolean)
-  return <aside className="detail-panel event-detail"><div className="detail-accent" style={{background:eventColors[event.type]||'#785f45'}}></div><div className={`review-badge ${event.review?.status||'needs-review'}`}>{event.review?.status||'needs-review'}</div>{recordAuthorityCited(event,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{eventYearLabel(event,locale)} {t.ce} · {event.type}</p><h2>{primary(event.name,locale)}</h2><p className="entity-secondary">{secondary(event.name,locale)}</p><p>{primary(event.summary,locale)}</p>{locale==='kn'&&event.summary?.en&&<p className="english-support" lang="en">{event.summary.en}</p>}{event.reach&&<div className="reach-card"><strong>{t.overseasConnection}</strong><span>{t[event.reach.direction]||event.reach.direction} · {t.reachRelations?.[event.reach.relationKind]||event.reach.relationKind}</span>{destination&&<span>{t.destination}: {primary(destination.name,locale)}</span>}<span>{t.modernCountries}: {(event.reach.modernCountries||[]).join(', ')||'—'}</span><span>{t.territorialControl}: {event.reach.territorialControl?t.yes:t.no}</span><p>{primary(event.reach.note,locale)}</p></div>}{linkedPeople.length>0&&<><h3>{t.people}</h3><div className="participant-list">{linkedPeople.map(person=><div key={person.id}><strong>{primary(person.name,locale)}</strong><span>{secondary(person.name,locale)}</span></div>)}</div></>}{linkedCandidates.length>0&&<><h3>{locale==='kn'?'ಸಂಪರ್ಕಿತ ಪರಿಶೀಲನಾ ಅಭ್ಯರ್ಥಿಗಳು':'Linked review candidates'}</h3><div className="participant-list">{linkedCandidates.map(person=><div key={person.id}><strong>{primary(person.name,locale)}</strong><span>{person.sourceEntry?.printedPageFrom?`Dictionary of Martyrs · p. ${person.sourceEntry.printedPageFrom}`:person.id}</span></div>)}</div></>}<h3>{t.participants}</h3><div className="participant-list">{(event.participants||[]).map((participant,index)=>{const entity=entityById.get(participant.polityId);return <div key={`${participant.polityId}-${index}`}><strong>{primary(entity?.name,locale)||participant.polityId}</strong><span>{participant.role} · {participant.outcome}</span></div>})}</div><h3>{t.sources}</h3><div className="citations">{citations.map(item=><p key={item.sourceId}><a href={item.source.url} target="_blank" rel="noreferrer"><strong>{primary(item.source.title,locale)}</strong></a><ProvenanceBadge tier={sourceTiers.get(item.sourceId)} locale={locale} short/><span>{item.locator}</span></p>)}</div><button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
-}
-
-function TerritoryDetail({territory,locale,t,onClose}){
-  const citations=territory.citations.map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
-  const relatedPolities=territory.polityIds.map(id=>entityById.get(id)).filter(Boolean)
-  const period=reignById.get(territory.reignId)
-  return <aside className="detail-panel territory-detail"><div className="detail-accent" style={{background:territoryColors[territory.classification]}}></div><div className={`review-badge ${territory.review.status}`}>{territory.review.status}</div>{recordAuthorityCited(territory,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{territory.date.from}–{territory.date.to} {t.ce} · {t.territoryClasses[territory.classification]}</p><h2>{primary(territory.name,locale)}</h2><p className="entity-secondary">{secondary(territory.name,locale)}</p><p>{primary(territory.description,locale)}</p>{locale==='kn'&&<p className="english-support" lang="en">{territory.description.en}</p>}{period&&<div className="reach-card"><strong>{t.researchPeriod}</strong><span>{primary(period.name,locale)}</span><span>{secondary(period.name,locale)}</span></div>}<div className="territory-metrics"><span><b>{t.controlLevel}</b>{t.controlValues[territory.controlLevel]}</span><span><b>{t.duration}</b>{t.durationValues[territory.duration]}</span><span><b>{t.confidence}</b>{t.confidenceValues[territory.confidence]}</span><span><b>{t.geographicPrecision}</b>{territory.geometry.precision}</span></div><h3>{t.participants}</h3><div className="participant-list">{relatedPolities.map(polity=><div key={polity.id}><strong>{primary(polity.name,locale)}</strong><span>{secondary(polity.name,locale)}</span></div>)}</div><h3>{t.sources}</h3><div className="citations">{citations.map(item=><p key={item.sourceId}><a href={item.source.url||undefined} target={item.source.url?'_blank':undefined} rel={item.source.url?'noreferrer':undefined}><strong>{primary(item.source.title,locale)}</strong></a><ProvenanceBadge tier={sourceTiers.get(item.sourceId)} locale={locale} short/><span>{item.locator}</span></p>)}</div><button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
-}
-
-function CultureDetail({item,locale,t,onClose}){
-  const citations=item.citations.map(citationItem=>({...citationItem,source:sourceById.get(citationItem.sourceId)})).filter(citationItem=>citationItem.source)
-  const relatedPolities=item.polityIds.map(id=>entityById.get(id)).filter(Boolean)
-  const relatedPeople=item.peopleIds.map(id=>personById.get(id)).filter(Boolean)
-  return <aside className="detail-panel culture-detail"><div className="detail-accent" style={{background:cultureColors[item.category]}}></div><div className={`review-badge ${item.review.status}`}>{item.review.status}</div>{recordAuthorityCited(item,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{item.date.from}{item.date.to!==item.date.from?`–${item.date.to}`:''} {t.ce} · {t.cultureCategories[item.category]}</p><h2>{primary(item.name,locale)}</h2><p className="entity-secondary">{secondary(item.name,locale)}</p><p>{primary(item.description,locale)}</p>{locale==='kn'&&<p className="english-support" lang="en">{item.description.en}</p>}<div className="culture-meta"><span><b>{t.continuity}</b>{t.continuityValues[item.continuity]}</span><span><b>{t.culturalPlace}</b>{item.placeNames.map(value=>primary(value,locale)).join(', ')}</span></div><div className="culture-tags">{item.traditionTags.map(tag=><span key={tag}>{tag}</span>)}</div><h3>{t.participants}</h3><div className="participant-list">{relatedPolities.map(polity=><div key={polity.id}><strong>{primary(polity.name,locale)}</strong><span>{secondary(polity.name,locale)}</span></div>)}{relatedPeople.map(person=><div key={person.id}><strong>{primary(person.name,locale)}</strong><span>{secondary(person.name,locale)}</span></div>)}</div><h3>{t.sources}</h3><div className="citations">{citations.map((citationItem,index)=><p key={`${citationItem.sourceId}-${index}`}><a href={citationItem.source.url||undefined} target={citationItem.source.url?'_blank':undefined} rel={citationItem.source.url?'noreferrer':undefined}><strong>{primary(citationItem.source.title,locale)}</strong></a><ProvenanceBadge tier={sourceTiers.get(citationItem.sourceId)} locale={locale} short/><span>{citationItem.locator}</span></p>)}</div><button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
-}
-
-function WorkDetail({work,locale,t,onClose}){
-  const citations=(work.citations||[]).map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
-  const polity=entityById.get(work.polityId)
-  const creators=(work.creatorIds||[]).map(id=>personById.get(id)).filter(Boolean)
-  return <aside className="detail-panel record-detail work-detail"><div className="detail-accent literary-accent"></div><div className={`review-badge ${work.review.status}`}>{work.review.status}</div>{recordAuthorityCited(work,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{t.literaryWork} · {work.date.precision==='circa'?(locale==='kn'?'ಸು. ':'c. '):''}{work.date.from} {t.ce}</p><h2>{primary(work.name,locale)}</h2><p className="entity-secondary">{secondary(work.name,locale)}</p>{work.description?.[locale]&&<p>{primary(work.description,locale)}</p>}{locale==='kn'&&work.description?.en&&<p className="english-support" lang="en">{work.description.en}</p>}<dl><div><dt>{t.creator}</dt><dd><strong>{primary(work.creator,locale)}</strong><small>{secondary(work.creator,locale)}</small></dd></div><div><dt>{t.language}</dt><dd>{work.languages.join(', ')}</dd></div><div><dt>{t.datePrecision}</dt><dd>{work.date.precision}</dd></div><div><dt>{t.associatedKingdom}</dt><dd><strong>{primary(polity?.name,locale)}</strong><small>{secondary(polity?.name,locale)}</small></dd></div><div><dt>{t.stableId}</dt><dd>{work.id}</dd></div></dl>{creators.length>0&&<><h3>{t.people}</h3><div className="participant-list">{creators.map(person=><div key={person.id}><strong>{primary(person.name,locale)}</strong><span>{secondary(person.name,locale)} · {person.roles.join(', ')}</span></div>)}</div></>}<h3>{t.sources}</h3>{citations.length?<div className="citations">{citations.map((item,index)=><p key={`${item.sourceId}-${index}`}><a href={item.source.url||undefined} target={item.source.url?'_blank':undefined} rel={item.source.url?'noreferrer':undefined}><strong>{primary(item.source.title,locale)}</strong></a><ProvenanceBadge tier={sourceTiers.get(item.sourceId)} locale={locale} short/><span>{item.locator}</span></p>)}</div>:<p className="muted">{t.noSources}</p>}{work.externalLinks?.length>0&&<><h3>{t.externalResources}</h3><div className="record-links">{work.externalLinks.map(link=><a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label} ↗</a>)}</div></>}<button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
-}
-
-function PersonDetail({person,locale,t,onClose,onChooseRecord}){
-  const context=contributionContextFor(person)
-  const polity=entityById.get(person.polityId)
-  const directCitations=(person.citations||[]).map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
-  const successionEdges=successionEdgesForPerson(person.id)
-  const contributionGroups=[
-    ['events',t.historicalEvents,context.events],
-    ['reigns',t.reignsAndPeriods,context.reigns],
-    ['works',t.literaryWorks,context.works],
-    ['culture',t.cultureAndMonuments,context.culture],
-  ].filter(([, ,records])=>records.length)
-  const evidenceCount=contributionGroups.reduce((total,[,,records])=>total+records.length,0)
-  return <aside className="detail-panel person-detail"><div className="detail-accent person-accent"></div><div className={`review-badge ${person.review.status}`}>{person.review.status}</div>{recordAuthorityCited(person,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{t.personProfile} · {person.roles.map(role=>t.personRoleLabels[role]||role).join(' · ')}</p><h2>{primary(person.name,locale)}</h2><p className="entity-secondary">{secondary(person.name,locale)}</p><p className="person-evidence-note">{t.personEvidenceIntro}</p><div className="person-summary"><span><b>{evidenceCount}</b>{t.linkedContributions}</span><span><b>{contributionGroups.length}</b>{t.contributionTypes}</span></div><dl><div><dt>{t.associatedKingdom}</dt><dd><strong>{primary(polity?.name,locale)}</strong><small>{secondary(polity?.name,locale)}</small></dd></div><div><dt>{t.roles}</dt><dd>{person.roles.map(role=>t.personRoleLabels[role]||role).join(', ')}</dd></div><div><dt>{t.stableId}</dt><dd>{person.id}</dd></div></dl>{successionEdges.length>0&&<SuccessionNetwork edges={successionEdges} locale={locale} selectedPersonId={person.id} onChoosePerson={target=>onChooseRecord('person',target)}/>} {contributionGroups.map(([kind,label,records])=><section className="person-contribution-group" key={kind}><h3>{label}</h3><div className="person-contribution-list">{records.map(record=><button type="button" key={record.id} onClick={()=>onChooseRecord(kind,record)}><span>{record.date?.from??record.year} {t.ce}</span><strong>{primary(record.name,locale)}</strong><small>{secondary(record.name,locale)}</small></button>)}</div></section>)}{contributionGroups.length===0&&<p className="muted">{t.noLinkedContributions}</p>}<h3>{t.personSources}</h3>{directCitations.length?<div className="citations">{directCitations.map((item,index)=><p key={`${item.sourceId}-${index}`}><a href={item.source.url||undefined} target={item.source.url?'_blank':undefined} rel={item.source.url?'noreferrer':undefined}><strong>{primary(item.source.title,locale)}</strong></a><ProvenanceBadge tier={sourceTiers.get(item.sourceId)} locale={locale} short/><span>{item.locator}</span></p>)}</div>:<p className="muted">{t.inheritedEvidenceNote}</p>}<button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
-}
-
-function InscriptionDetail({item,locale,t,onClose}){
-  const citations=(item.citations||[]).map(citationItem=>({...citationItem,source:sourceById.get(citationItem.sourceId)})).filter(citationItem=>citationItem.source)
-  const polity=entityById.get(item.polityId)
-  const place=placeById.get(item.placeId)
-  const displayedDate=`${item.date.precision==='circa'?(locale==='kn'?'ಸು. ':'c. '):''}${item.date.from}${item.date.to!==item.date.from?`–${item.date.to}`:''}`
-  return <aside className="detail-panel record-detail inscription-detail"><div className="detail-accent inscription-accent"></div><div className={`review-badge ${item.review.status}`}>{item.review.status}</div>{recordAuthorityCited(item,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{t.inscription} · {displayedDate} {t.ce}</p><h2>{primary(item.name,locale)}</h2><p className="entity-secondary">{secondary(item.name,locale)}</p><p>{primary(item.description,locale)}</p>{locale==='kn'&&item.description?.en&&<p className="english-support" lang="en">{item.description.en}</p>}<dl><div><dt>{t.mappedPlace}</dt><dd><strong>{primary(place?.name,locale)}</strong><small>{secondary(place?.name,locale)}</small></dd></div><div><dt>{t.coordinates}</dt><dd>{place?.location?.coordinates?.slice().reverse().map(value=>value.toFixed(6)).join(', ')}</dd></div><div><dt>{t.language}</dt><dd>{item.languages.join(', ')}</dd></div><div><dt>{t.script}</dt><dd>{item.scripts.join(', ')}</dd></div><div><dt>{t.datePrecision}</dt><dd>{item.date.precision}</dd></div><div><dt>{t.associatedKingdom}</dt><dd><strong>{primary(polity?.name,locale)}</strong><small>{secondary(polity?.name,locale)}</small></dd></div><div><dt>{t.geographicPrecision}</dt><dd>{place?.location?.precision||'unknown'}</dd></div>{item.itemEdition&&<div><dt>{t.itemEdition}</dt><dd><strong>{item.itemEdition.primary.locator}</strong>{item.itemEdition.alternateLocators?.length>0&&<small>{item.itemEdition.alternateLocators.join(' · ')}</small>}</dd></div>}{item.protection&&<div><dt>{t.protectionStatus}</dt><dd><strong>{primary(item.protection.designation,locale)}</strong><small>{primary(item.protection.authority,locale)}</small></dd></div>}{item.presentCondition&&<div><dt>{t.presentCondition}</dt><dd><strong>{t.inscriptionConditionLabels[item.presentCondition.status]||item.presentCondition.status}</strong><small>{primary(item.presentCondition.description,locale)}</small></dd></div>}<div><dt>{t.stableId}</dt><dd>{item.id}</dd></div></dl><h3>{t.sources}</h3>{citations.length?<div className="citations">{citations.map((citationItem,index)=><p key={`${citationItem.sourceId}-${index}`}><a href={citationItem.source.url||undefined} target={citationItem.source.url?'_blank':undefined} rel={citationItem.source.url?'noreferrer':undefined}><strong>{primary(citationItem.source.title,locale)}</strong></a><ProvenanceBadge tier={sourceTiers.get(citationItem.sourceId)} locale={locale} short/><span>{citationItem.locator}</span></p>)}</div>:<p className="muted">{t.noSources}</p>}<button className="return-detail" onClick={onClose}>{t.returnKingdom}</button></aside>
-}
-
-function LiteratureShowcase({works,year,locale,t,onChooseWork,usesNearest}){
-  return <section className="literature-showcase"><div className="literature-heading"><h3>{t.literaryTimeline}</h3><span>{year} {t.ce}</span></div><p>{usesNearest?t.nearestLiteraryMilestones:t.activeLiteraryMilestones}</p><div className="literary-work-list">{works.map(work=><article key={work.id} className={Math.abs(work.date.from-year)<=35?'near-year':''}><button onClick={()=>onChooseWork(work)}><span>{work.date.precision==='circa'?(locale==='kn'?'ಸು.':'c.') : ''} {work.date.from}</span><strong>{primary(work.name,locale)}</strong><small>{secondary(work.name,locale)}</small><b>{primary(work.creator,locale)}</b><em>{primary(work.creatorRole,locale)} · {work.languages.join(', ')}</em></button>{work.externalLinks?.[0]?.url&&<a href={work.externalLinks[0].url} target="_blank" rel="noreferrer">{t.openSanchaya}</a>}</article>)}</div></section>
-}
-
-function InscriptionShowcase({items,year,locale,t,onChooseInscription}){
-  return <section className="inscription-showcase"><div className="literature-heading"><h3>{t.inscriptionTimeline}</h3><span>{items.length}</span></div><p>{t.activeInscriptionMilestones}</p><div className="inscription-record-list">{items.map(item=><button key={item.id} className={Math.abs(item.year-year)<=35?'near-year':''} onClick={()=>onChooseInscription(item)}><span>{item.date.precision==='circa'?(locale==='kn'?'ಸು.':'c.') : ''} {item.year}</span><strong>{primary(item.name,locale)}</strong><small>{primary(item.placeName,locale)} · {item.languages.join(', ')}</small></button>)}</div></section>
-}
-
-function SuccessionNetwork({edges,locale,selectedPersonId,onChoosePerson}){
-  const title=locale==='kn'?'ಆಳ್ವಿಕೆ ಅನುಕ್ರಮ':'Succession network'
-  const note=locale==='kn'?'ಆಳ್ವಿಕೆ ಅವಧಿಗಳಿಂದ ಪಡೆದ ಪರಿಶೀಲನೆ-ಬಾಕಿ ಸಂಬಂಧಗಳು; ಕುಟುಂಬ ವಂಶವೃಕ್ಷ ಎಂದು ಓದಬೇಡಿ.':'Derived from reign periods and still needs review; this is not yet a family tree.'
-  const yearLabel=edge=>Number.isFinite(edge.date?.from)?`${edge.date.from} ${edge.date?.era||'CE'}`:(locale==='kn'?'ದಿನಾಂಕ ಬಾಕಿ':'date pending')
-  return <section className="succession-network"><h3>{title}</h3><p>{note}</p><div>{edges.map(edge=>{const from=personById.get(edge.fromId),to=personById.get(edge.toId);return <article key={edge.id} className={edge.fromId===selectedPersonId||edge.toId===selectedPersonId?'selected':''}><button type="button" onClick={()=>from&&onChoosePerson(from)} disabled={!from} className={edge.fromId===selectedPersonId?'active':''}><strong>{primary(from?.name,locale)||edge.fromId}</strong><small>{secondary(from?.name,locale)}</small></button><span aria-hidden="true">→</span><button type="button" onClick={()=>to&&onChoosePerson(to)} disabled={!to} className={edge.toId===selectedPersonId?'active':''}><strong>{primary(to?.name,locale)||edge.toId}</strong><small>{secondary(to?.name,locale)}</small></button><em>{yearLabel(edge)} · {edge.review?.status||'needs-review'}</em></article>})}</div></section>
-}
-
-function FeudatoryHierarchy({items,polityId,locale}){
-  if(!items.length)return null
-  const title=locale==='kn'?'ಸಾಮಂತ / ಅಧೀನ ಸಂಬಂಧಗಳು':'Samanta and feudatory hierarchy'
-  const note=locale==='kn'?'ಇವು ಸಂಶೋಧನಾ ಕಡತಗಳು; ನಿಖರ ಶಾಸನ ಮತ್ತು ವಂಶಾವಳಿ ಸಾಕ್ಷ್ಯ ಪರಿಶೀಲನೆಯ ನಂತರ ಮಾತ್ರ ಉನ್ನತಿಗೊಳ್ಳುತ್ತವೆ.':'Research packets only; promotion requires inscription and genealogy evidence.'
-  return <section className="research-foundation-panel"><h3>{title}</h3><p>{note}</p>{items.map(item=>{const isOverlord=item.overlordPolityId===polityId,other=entityById.get(isOverlord?item.subordinatePolityId:item.overlordPolityId),places=(item.placeIds||[]).map(id=>placeById.get(id)).filter(Boolean);return <article key={item.id}><header><strong>{primary(item.name,locale)}</strong><span>{item.confidence} · {item.review?.status}</span></header><p>{primary(item.description,locale)}</p><dl><div><dt>{isOverlord?(locale==='kn'?'ಅಧೀನ ಘಟಕ':'Subordinate'):(locale==='kn'?'ಅಧಿಪತಿ':'Overlord')}</dt><dd>{primary(other?.name,locale)||item.subordinatePolityId}</dd></div><div><dt>{locale==='kn'?'ಅವಧಿ':'Period'}</dt><dd>{evidenceDateLabel(item.date,locale)}</dd></div><div><dt>{locale==='kn'?'ಸ್ಥಳಗಳು':'Places'}</dt><dd>{places.map(place=>primary(place.name,locale)).join(', ')||'—'}</dd></div></dl></article>})}</section>
-}
-
-function AdministrativeGeography({items,locale}){
-  if(!items.length)return null
-  return <section className="research-foundation-panel"><h3>{locale==='kn'?'ಪ್ರಾಂತ / ಆಡಳಿತ ಭೂಗೋಳ':'Province and administrative geography'}</h3><p>{locale==='kn'?'ಈ ಗಡಿಗಳು ತಾತ್ಕಾಲಿಕ ಅಧ್ಯಯನ ವ್ಯಾಪ್ತಿಗಳು; ಜಿಲ್ಲೆ ಅಥವಾ ಗ್ರಾಮಮಟ್ಟದ ಅಂತಿಮ ಗಡಿಗಳಲ್ಲ.':'These are provisional study envelopes, not final district or village-level borders.'}</p>{items.map(item=>{const places=(item.placeIds||[]).map(id=>placeById.get(id)).filter(Boolean);return <article key={item.id}><header><strong>{primary(item.name,locale)}</strong><span>{item.geometry?.precision} · {item.review?.status}</span></header><p>{primary(item.description,locale)}</p><dl><div><dt>{locale==='kn'?'ಪ್ರಕಾರ':'Kind'}</dt><dd>{item.divisionKind.replaceAll('-',' ')}</dd></div><div><dt>{locale==='kn'?'ಅವಧಿ':'Period'}</dt><dd>{evidenceDateLabel(item.date,locale)}</dd></div><div><dt>{locale==='kn'?'ಕೇಂದ್ರಗಳು':'Anchors'}</dt><dd>{places.map(place=>primary(place.name,locale)).join(', ')||'—'}</dd></div></dl></article>})}</section>
-}
-
-function ScriptTimeline({items,locale}){
-  if(!items.length)return null
-  return <section className="research-foundation-panel"><h3>{locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ ಕಾಲರೇಖೆ':'Script evolution timeline'}</h3><p>{locale==='kn'?'ಶಾಸನ ಮಾದರಿ ಮತ್ತು ಆಕರ ಪರಿಶೀಲನೆಯೊಂದಿಗೆ ಬೆಳೆಸಬೇಕಾದ ಲಿಪಿ-ಇತಿಹಾಸ ಪದರ.':'A script-history layer to mature through inscription samples and source review.'}</p>{items.map(item=>{const samples=(item.sampleInscriptionIds||[]).map(id=>atlasData.inscriptions.find(record=>record.id===id)).filter(Boolean);return <article key={item.id}><header><strong>{primary(item.name,locale)}</strong><span>{item.review?.status}</span></header><p>{primary(item.description,locale)}</p><dl><div><dt>{locale==='kn'?'ಲಿಪಿ ಕುಟುಂಬ':'Script family'}</dt><dd>{item.scriptFamily}</dd></div><div><dt>{locale==='kn'?'ಅವಧಿ':'Period'}</dt><dd>{evidenceDateLabel(item.date,locale)}</dd></div><div><dt>{locale==='kn'?'ಮಾದರಿ ಶಾಸನಗಳು':'Sample inscriptions'}</dt><dd>{samples.map(record=>primary(record.name,locale)).join(', ')||'—'}</dd></div></dl></article>})}</section>
-}
-
-function KingdomDetail({chosen,locale,t,year,literatureWorks,inscriptionRecords,usesNearestLiterature,onChooseWork,onChooseInscription,onChoosePerson}){
-  const citations=chosen.citations.map(item=>({...item,source:sourceById.get(item.sourceId)})).filter(item=>item.source)
-  const polityId=chosen.governingPolityId||chosen.id
-  const successionEdges=successionEdgesForPolity(polityId)
-  const feudatories=feudatoryRelationsForPolity(polityId)
-  const divisions=administrativeDivisionsForPolity(polityId)
-  const scripts=scriptsForPolity(polityId)
-  return <aside className="detail-panel"><div className="detail-accent" style={{background:chosen.color}}></div><div className={`review-badge ${chosen.review.status}`}>{chosen.review.status}</div>{recordAuthorityCited(chosen,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}<p className="eyebrow">{chosen.start}–{chosen.end} {t.ce} · {locale==='kn'?t.yearPrecision:chosen.date.precision}</p><h2>{primary(chosen.name,locale)}</h2><p className="entity-secondary">{secondary(chosen.name,locale)}</p><p>{primary(chosen.description,locale)}</p>{locale==='kn'&&chosen.description.kn&&<p className="english-support" lang="en">{chosen.description.en}</p>}{chosen.interpretation&&<p className="governance-interpretation"><strong>{locale==='kn'?'ವ್ಯಾಪ್ತಿಯ ಸೂಚನೆ':'Scope note'}:</strong> {primary(chosen.interpretation,locale)}</p>}<dl><div><dt>{t.stableId}</dt><dd>{chosen.id}</dd></div><div><dt>{t.capital}</dt><dd><strong>{primary(chosen.capitalName,locale)}</strong><small>{secondary(chosen.capitalName,locale)}</small></dd></div><div><dt>{t.boundaryPrecision}</dt><dd>{chosen.extent.precision}</dd></div>{chosen.governanceType&&<div><dt>{locale==='kn'?'ಆಡಳಿತದ ಸ್ವರೂಪ':'Governance type'}</dt><dd>{chosen.governanceType.replaceAll('-',' ')}</dd></div>}</dl><h3>{t.rulers}</h3><div className="participant-list ruler-links">{chosen.rulers.map(person=><button type="button" key={person.id} onClick={()=>onChoosePerson(person)}><strong>{primary(person.name,locale)}</strong><span>{secondary(person.name,locale)}</span></button>)}</div>{successionEdges.length>0&&<SuccessionNetwork edges={successionEdges} locale={locale} onChoosePerson={onChoosePerson}/>}<FeudatoryHierarchy items={feudatories} polityId={polityId} locale={locale}/><AdministrativeGeography items={divisions} locale={locale}/><ScriptTimeline items={scripts} locale={locale}/><LiteratureShowcase works={literatureWorks} year={year} locale={locale} t={t} onChooseWork={onChooseWork} usesNearest={usesNearestLiterature}/><InscriptionShowcase items={inscriptionRecords} year={year} locale={locale} t={t} onChooseInscription={onChooseInscription}/><h3>{t.sources}</h3>{citations.length?<div className="citations">{citations.map(item=><p key={item.sourceId}><strong>{primary(item.source.title,locale)}</strong><ProvenanceBadge tier={sourceTiers.get(item.sourceId)} locale={locale} short/><span>{secondary(item.source.title,locale)} · {item.locator}</span></p>)}</div>:<p className="muted">{t.noSources}</p>}</aside>
-}
-
 function EvidenceChecks({verification,t}){
   const checks=verification.verificationChecks
   if(!checks)return null
@@ -654,6 +762,9 @@ function HeritageInventorySection({locale,t}){
 function ReviewCandidatePopup({item,locale,t,compact=false}){
   return <div className={`review-candidate-popup ${compact?'compact':''}`}><strong>{primary(item.name,locale)}</strong>{!compact&&secondary(item.name,locale)&&<><br/><span>{secondary(item.name,locale)}</span></>}<br/><b>{t.reviewCandidateCategory}:</b> {t.reviewCategoryLabels[item.recordKind]||item.recordKind}{!compact&&<>{item.startYear!=null&&<><br/>{timelineYearLabel(item.startYear,locale)}{item.endYear!=null&&item.endYear!==item.startYear?`–${timelineYearLabel(item.endYear,locale)}`:''}</>}{item.placeLabel&&<><br/>{primary(item.placeLabel,locale)}</>}<br/><small>{primary(item.description,locale)||t.publicReviewNote}</small>{item.sourceTitle&&<><br/>{item.sourceUrl?<SourceLink href={item.sourceUrl} label={primary(item.sourceTitle,locale)} locale={locale}/>:primary(item.sourceTitle,locale)}{item.sourceLocator&&<><br/><small>{item.sourceLocator}</small></>}{recordAuthorityCited(item,sourceTiers)&&<ProvenanceBadge tier="authority" locale={locale} short/>}</>}</>}<br/><a href="#contribute">{t.contributeReview} →</a></div>
 }
+
+const ACTIVITY_OF={atlas:'explore',trails:'explore',relations:'india',people:'explore',freedom:'explore',literature:'research',epigraphy:'research',coins:'research',scripts:'research','india-research':'india',districts:'districts','district-history':'districts',inscriptions:'districts',geography:'research',research:'project','research-tasks':'project',evidence:'project',about:'project',contact:'project',contribute:'account',profile:'account',reviews:'account',operations:'account',admin:'account'}
+const NAV_HINTS={atlas:['Map and timeline of dynasties','ರಾಜವಂಶಗಳ ನಕ್ಷೆ ಮತ್ತು ಕಾಲರೇಖೆ'],trails:['Guided story paths','ಮಾರ್ಗದರ್ಶಿತ ಕಥಾಮಾರ್ಗಗಳು'],relations:['Ties across India and the world','ಭಾರತ-ಜಗತ್ತಿನೊಂದಿಗೆ ಸಂಬಂಧ'],people:['Rulers, poets and thinkers','ದೊರೆಗಳು, ಕವಿಗಳು, ಚಿಂತಕರು'],freedom:['Fighters and movements','ಹೋರಾಟಗಾರರು, ಚಳವಳಿಗಳು'],literature:['Works and authors by era','ಯುಗಾನುಸಾರ ಕೃತಿಗಳು'],epigraphy:['Search inscriptions and texts','ಶಾಸನ, ಪಠ್ಯ ಹುಡುಕಾಟ'],coins:['Coin types, mints, rulers','ನಾಣ್ಯ, ಟಂಕಸಾಲೆ, ದೊರೆಗಳು'],scripts:['How scripts evolved','ಲಿಪಿಗಳ ವಿಕಾಸ'],'india-research':['Wider India context','ವಿಶಾಲ ಭಾರತ ಸಂದರ್ಭ'],districts:['Browse heritage by district','ಜಿಲ್ಲಾವಾರು ಪರಂಪರೆ'],'district-history':['Deep local history leads','ಸ್ಥಳೀಯ ಇತಿಹಾಸ ಸುಳಿವು'],inscriptions:['Inscriptions by district','ಜಿಲ್ಲಾವಾರು ಶಾಸನ'],geography:['Land, rivers and nature','ನೆಲ, ನದಿ, ನಿಸರ್ಗ'],research:['Sources and collaborations','ಆಕರ, ಸಹಯೋಗ'],'research-tasks':['Open tasks to help with','ನೆರವಾಗಬಹುದಾದ ಕಾರ್ಯ'],evidence:['How claims are verified','ಪರಿಶೀಲನಾ ವಿಧಾನ'],about:['The project and team','ಯೋಜನೆ, ತಂಡ'],contact:['Reach the team','ತಂಡವನ್ನು ಸಂಪರ್ಕಿಸಿ'],contribute:['Add or correct a record','ದಾಖಲೆ ಸೇರಿಸಿ/ತಿದ್ದಿ'],profile:['Your contributions','ನಿಮ್ಮ ಕೊಡುಗೆಗಳು'],reviews:['Records awaiting review','ಪರಿಶೀಲನೆ ಬಾಕಿ'],operations:['Manage members','ಸದಸ್ಯರ ನಿರ್ವಹಣೆ'],admin:['Manage datasets','ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ']}
 
 function PublicDataDepth({t}){
   const compactTotal=new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(publicDataDepth.totalRecords)
@@ -733,6 +844,8 @@ export default function App(){
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
   const [admin,setAdmin]=useState(()=>window.location.hash.slice(1)==='admin')
   const [view,setView]=useState(()=>publicViews.includes(initialHash)?initialHash:'atlas')
+  const [activity,setActivity]=useState(()=>ACTIVITY_OF[initialHash]||'explore')
+  useEffect(()=>{if(ACTIVITY_OF[view])setActivity(ACTIVITY_OF[view])},[view])
   const [locale,setLocale]=useState(getInitialLocale)
   const [year,setYear]=useState(()=>initialShareState.year??firstTimelineStory?.year??MIN_YEAR)
   const [atlasMapView]=useState(()=>initialShareState.map||{lat:14.7,lng:76.2,zoom:6.35})
@@ -765,6 +878,14 @@ export default function App(){
   const [communityUser,setCommunityUser]=useState(null)
   const [communityAuthChecked,setCommunityAuthChecked]=useState(false)
   const [mobileNavOpen,setMobileNavOpen]=useState(false)
+  const [inspectorOpen,setInspectorOpen]=useState(()=>typeof window==='undefined'||!window.matchMedia('(max-width: 1050px)').matches)
+  const lastFocusedRef=useRef(null)
+  useEffect(()=>{
+    const mq=window.matchMedia('(max-width: 1050px)')
+    const onChange=()=>setInspectorOpen(!mq.matches)
+    mq.addEventListener('change',onChange)
+    return()=>mq.removeEventListener('change',onChange)
+  },[])
   useEffect(()=>{document.documentElement.lang=locale},[locale])
   useEffect(()=>{localStorage.setItem('karnataka-atlas-map-theme',mapTheme)},[mapTheme])
   useEffect(()=>{
@@ -824,6 +945,16 @@ export default function App(){
   const activeInscriptions=inscriptionsForMap(primaryAtlasInscriptions,{year,showAll:showAllInscriptions,activePolityIds:new Set(active.flatMap(k=>[k.id,k.governingPolityId].filter(Boolean)))})
   const visibleResearchCandidates=mappedResearchCandidates.filter(item=>year>=item.startYear&&year<=item.endYear)
   const inscriptionRecords=useMemo(()=>[...activeInscriptions].sort((a,b)=>Math.abs(a.year-year)-Math.abs(b.year-year)).slice(0,6),[activeInscriptions,year])
+  const inspectorRecord=useMemo(()=>{
+    if(selectedEvent)return buildInspectorRecord(selectedEvent,'event',locale,t)
+    if(selectedTerritory)return buildInspectorRecord(selectedTerritory,'territory',locale,t)
+    if(selectedCulture)return buildInspectorRecord(selectedCulture,'culture',locale,t)
+    if(selectedPerson)return buildInspectorRecord(selectedPerson,'person',locale,t)
+    if(selectedInscription)return buildInspectorRecord(selectedInscription,'inscription',locale,t)
+    if(selectedWork)return buildInspectorRecord(selectedWork,'work',locale,t)
+    if(chosen)return buildInspectorRecord(chosen,'polity',locale,t,{works:literatureWorks,inscriptions:inscriptionRecords})
+    return null
+  },[selectedEvent,selectedTerritory,selectedCulture,selectedPerson,selectedInscription,selectedWork,chosen,literatureWorks,inscriptionRecords,locale,t])
   const activeTerritories=useMemo(()=>territoriesForYear(year),[year])
   const coreTerritories=activeTerritories.filter(item=>item.classification==='core-administered'&&item.polityIds.some(id=>visible.some(polity=>polity.id===id)))
   const highlightedKingdom=chosen
@@ -857,16 +988,17 @@ export default function App(){
   const changeLocale=()=>setLocale(current=>{const next=current==='kn'?'en':'kn';setStoredLocale(next);return next})
   const handleAuthenticated=user=>{setCommunityUser(user);window.location.hash=user.roles?.includes('administrator')?'admin':'profile'}
   const handleLoggedOut=()=>setCommunityUser(null)
-  const clearRecordDetails=()=>{setSelectedPerson(null);setSelectedWork(null);setSelectedInscription(null);setSelectedPeriodicalSite(null);setSelectedSearchPlace(null)}
+  const clearRecordDetails=()=>{setSelectedPerson(null);setSelectedWork(null);setSelectedInscription(null);setSelectedPeriodicalSite(null);setSelectedSearchPlace(null);if(window.matchMedia('(max-width: 1050px)').matches)setInspectorOpen(false)}
+  const captureFocus=()=>{lastFocusedRef.current=document.activeElement}
   const chooseMapScope=next=>{setScope(next);setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
   const enableMapLayer=key=>setLayers(value=>value[key]?value:{...value,[key]:true})
   const coordinateTimelineCategory=category=>{if(category==='unification'){setLayers(value=>({...value,events:true,boundaries:true}));return}const layerByCategory={wars:'events',freedom:'events',political:'events',connections:'events',people:'people',inscriptions:'inscriptions',temples:'temples',monuments:'culture',heritage:'heritageSites',culture:'culture',literature:'periodicals',periodicals:'periodicals',artifacts:'artifacts',reigns:'boundaries',territory:'territorialReach',externalKingdoms:'externalKingdoms'};const layer=layerByCategory[category];if(layer)enableMapLayer(layer)}
-  const chooseEvent=event=>{enableMapLayer('events');setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;const isKarnataka=isKarnatakaPoint(event.coords);const isIndia=isIndiaPoint(event.coords);if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&isIndia&&!isKarnataka)setScope('india');else if(isKarnataka&&scope==='world')setScope('karnataka')}
-  const chooseTerritory=territory=>{enableMapLayer(territory.classification==='core-administered'?'boundaries':'territorialReach');setSelectedTerritory(territory);setSelectedEvent(null);setSelectedCulture(null);clearRecordDetails();if(territory.classification!=='core-administered')setScope('india')}
-  const chooseCulture=item=>{enableMapLayer(isTempleRecord(item)?'temples':'culture');setSelectedCulture(item);setSelectedEvent(null);setSelectedTerritory(null);clearRecordDetails();if(item.coords[0]>19.5||item.coords[1]<73||item.coords[1]>81)setScope('india')}
-  const chooseWork=work=>{setYear(work.date.from);setSelected(work.polityId);setSelectedWork(work);setSelectedPerson(null);setSelectedInscription(null);setSelectedSearchPlace(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null)}
-  const chooseInscription=item=>{enableMapLayer('inscriptions');setYear(item.year);setSelected(item.polityId);setSelectedInscription(item);setSelectedPerson(null);setSelectedWork(null);setSelectedSearchPlace(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null)}
-  const choosePerson=(person,anchorYear=null)=>{const story=personStories.find(item=>item.id===person.id);const targetYear=Number.isFinite(anchorYear)?anchorYear:story?.year;if(Number.isFinite(targetYear))setYear(targetYear);if(person.polityId)setSelected(person.polityId);setSelectedPerson(person);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);setSelectedWork(null);setSelectedInscription(null);setSelectedSearchPlace(null)}
+  const chooseEvent=event=>{captureFocus();enableMapLayer('events');setSelectedEvent(event);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();const hasRoute=event.connectionPositions?.length>1;const isKarnataka=isKarnatakaPoint(event.coords);const isIndia=isIndiaPoint(event.coords);if(hasRoute&&event.reach?.scale==='overseas')setScope('world');else if(hasRoute&&isIndia&&!isKarnataka)setScope('india');else if(isKarnataka&&scope==='world')setScope('karnataka')}
+  const chooseTerritory=territory=>{captureFocus();enableMapLayer(territory.classification==='core-administered'?'boundaries':'territorialReach');setSelectedTerritory(territory);setSelectedEvent(null);setSelectedCulture(null);clearRecordDetails();if(territory.classification!=='core-administered')setScope('india')}
+  const chooseCulture=item=>{captureFocus();enableMapLayer(isTempleRecord(item)?'temples':'culture');setSelectedCulture(item);setSelectedEvent(null);setSelectedTerritory(null);clearRecordDetails();if(item.coords[0]>19.5||item.coords[1]<73||item.coords[1]>81)setScope('india')}
+  const chooseWork=work=>{captureFocus();setYear(work.date.from);setSelected(work.polityId);setSelectedWork(work);setSelectedPerson(null);setSelectedInscription(null);setSelectedSearchPlace(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null)}
+  const chooseInscription=item=>{enableMapLayer('inscriptions');captureFocus();setYear(item.year);setSelected(item.polityId);setSelectedInscription(item);setSelectedPerson(null);setSelectedWork(null);setSelectedSearchPlace(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null)}
+  const choosePerson=(person,anchorYear=null)=>{captureFocus();const story=personStories.find(item=>item.id===person.id);const targetYear=Number.isFinite(anchorYear)?anchorYear:story?.year;if(Number.isFinite(targetYear))setYear(targetYear);if(person.polityId)setSelected(person.polityId);setSelectedPerson(person);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);setSelectedWork(null);setSelectedInscription(null);setSelectedSearchPlace(null)}
   const choosePersonRecord=(kind,record)=>{if(kind==='person')return choosePerson(record);if(kind==='events')return chooseEvent(record);if(kind==='works')return chooseWork(record);if(kind==='culture')return chooseCulture(record);const ruler=(record.rulerIds||[]).map(id=>personById.get(id)).find(Boolean);if(ruler)return choosePerson(ruler,record.date.from)}
   const chooseTimelineStory=story=>{setYear(story.year);if(story.storyKind==='research-candidate'){enableMapLayer('researchCandidates');clearRecordDetails();if(story.coords)setSelectedSearchPlace({coords:story.coords,reviewCandidateId:story.id});setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);return}if(story.storyKind==='periodical'){enableMapLayer('periodicals');clearRecordDetails();setSelectedPeriodicalSite(story);setSelectedSearchPlace({coords:story.coords,periodicalSiteId:story.id});return}if(story.storyKind==='artifact'){enableMapLayer('artifacts');clearRecordDetails();setSelectedSearchPlace({coords:story.coords,artifactId:story.id});setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);return}if(story.storyKind==='external-kingdom'){enableMapLayer('externalKingdoms');setSelected(story.id);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();if(story.contextScope==='world')setScope('world');else if(scope==='karnataka')setScope('india');return}if(story.storyKind==='event')return chooseEvent(story);if(story.storyKind==='literature')return chooseWork(story);if(story.storyKind==='person')return choosePerson(story.person);if(story.storyKind==='inscription')return chooseInscription(story);if(story.storyKind==='territory')return chooseTerritory(story);if(story.storyKind==='governance'){enableMapLayer('boundaries');setSelected(story.id);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();setScope('karnataka');return}if(story.storyKind==='reign'){enableMapLayer('boundaries');const ruler=(story.rulerIds||[]).map(id=>personById.get(id)).find(Boolean);if(ruler)return choosePerson(ruler,story.year);setSelected(story.polityId);clearRecordDetails();setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);return}return chooseCulture(story)}
   const chooseSearchResult=result=>{
@@ -883,18 +1015,22 @@ export default function App(){
     if(result.year)setYear(Math.max(MIN_YEAR,Math.min(MAX_YEAR,result.year)))
     if(result.coords){setSelectedSearchPlace({coords:result.coords});if(result.coords[0]>19.5||result.coords[1]<73||result.coords[1]>81)setScope('india')}
   }
-  const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}
+  const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();requestAnimationFrame(()=>lastFocusedRef.current?.focus())}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const exploreNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement']]
-  const researchNavItems=[['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['india-research',locale==='kn'?'ಭಾರತ ಸಂಶೋಧನೆ':'India research']]
+  const exploreNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement']]
+  const researchNavItems=[['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['geography',locale==='kn'?'ಭೂಗೋಳ ಮತ್ತು ನಿಸರ್ಗ':'Geography & nature']]
+  const indiaNavItems=[['india-research',locale==='kn'?'ಭಾರತ ಸಂಶೋಧನೆ':'India research'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations']]
   const districtNavItem=['districts',locale==='kn'?'ಜಿಲ್ಲಾ ಸಮಗ್ರ ಅಟ್ಲಸ್':'District atlas']
-  const projectNavItems=[['geography',locale==='kn'?'ಭೂಗೋಳ ಮತ್ತು ನಿಸರ್ಗ':'Geography & nature'],['research',locale==='kn'?'ಆಕರಗಳು':'Resources'],['research-tasks',locale==='kn'?'ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು':'Research tasks'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence'],['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['contact',locale==='kn'?'ಸಂಪರ್ಕಿಸಿ':'Contact']]
+  const projectNavItems=[['research',locale==='kn'?'ಆಕರಗಳು':'Resources'],['research-tasks',locale==='kn'?'ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು':'Research tasks'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence'],['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['contact',locale==='kn'?'ಸಂಪರ್ಕಿಸಿ':'Contact']]
   const accountNavItems=[['contribute',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute'],...(communityUser?[['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']]:[]),...(communityUser?.roles?.some(role=>['reviewer','administrator'].includes(role))?[['reviews',locale==='kn'?'ಪರಿಶೀಲನಾ ಸರದಿ':'Review queue']]:[]),...(communityUser?.roles?.includes('administrator')?[['operations',locale==='kn'?'ಸದಸ್ಯರ ನಿರ್ವಹಣೆ':'User administration'],['admin',locale==='kn'?'ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ':'Data administration']]:[])]
-  const headerUtilityItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],communityUser?['profile',locale==='kn'?'ನನ್ನ ಪ್ರೊಫೈಲ್':'My profile']:['contribute',locale==='kn'?'ಕೊಡುಗೆ ನೀಡಿ':'Contribute']]
+  const headerUtilityItems=[['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['contact',locale==='kn'?'ಸಂಪರ್ಕಿಸಿ':'Contact']]
   const isNavActive=key=>key==='districts'?['districts','district-history','inscriptions'].includes(view):view===key
   const navLink=([key,label],className='')=><a key={key} className={`${className} ${isNavActive(key)?'active':''}`.trim()} aria-current={isNavActive(key)?'page':undefined} href={`#${key}`} onClick={event=>{setMobileNavOpen(false);event.currentTarget.closest('details')?.removeAttribute('open');if(isNavActive(key)){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}>{label}</a>
   const navGroup=(key,label,items)=><details className={`nav-group nav-group-${key} ${items.some(([itemKey])=>isNavActive(itemKey))?'active':''}`}><summary><i aria-hidden="true"></i>{label}<span aria-hidden="true">▾</span></summary><div className="nav-group-menu">{items.map(item=>navLink(item))}</div></details>
+  const kn=locale==='kn'
+  const activities=[{key:'explore',label:kn?'ಅನ್ವೇಷಣೆ':'Explore',items:exploreNavItems},{key:'research',label:kn?'ಸಂಶೋಧನೆ':'Research',items:researchNavItems},{key:'india',label:kn?'ಭಾರತ ಸಂಶೋಧನೆ':'India research',items:indiaNavItems},{key:'districts',label:kn?'ಜಿಲ್ಲಾ ಅಟ್ಲಸ್':'District Atlas',items:[['districts',kn?'ಜಿಲ್ಲೆಗಳನ್ನು ನೋಡಿ':'Browse districts'],['district-history',kn?'ಜಿಲ್ಲಾ ಇತಿಹಾಸ':'District history'],['inscriptions',kn?'ಶಾಸನಗಳು':'Inscriptions']]},{key:'project',label:kn?'ಯೋಜನೆ':'Project',items:projectNavItems.filter(([key])=>!headerUtilityItems.some(([utility])=>utility===key))},{key:'account',label:kn?'ಸಹಯೋಗ':'Contribute',items:accountNavItems}]
+  const currentActivity=activities.find(item=>item.key===activity)||activities[0]
   const renderReviewLayerNote=()=>layers.inscriptions||layers.researchCandidates?<small className="map-layer-review-note">{t.publicReviewNote}</small>:null
   const renderMapLayerControl=([key,label])=><div className={`map-layer-row map-layer-row-${key}`} key={key}><label className={key==='people'?'people-map-toggle':''}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key]}))}/><span>{label}</span></label>{key==='inscriptions'&&layers.inscriptions&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label>}{key==='researchCandidates'&&layers.researchCandidates&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllReviewCandidates} onChange={event=>setShowAllReviewCandidates(event.target.checked)}/><span>{t.showAllReviewCandidates}</span></label>}</div>
   const sidebarIconEntries=[['temple',t.timelineCategories.temples],['inscription',t.timelineCategories.inscriptions],['artifact',t.timelineCategories.artifacts],['war',t.timelineCategories.wars],['monument',t.timelineCategories.monuments],['fort',t.heritageCategoryLabels.fort],['palace',t.heritageCategoryLabels.palace],['museum',t.heritageCategoryLabels.museum],['archive',t.heritageCategoryLabels.archive],['library',t.heritageCategoryLabels.library],['park',t.heritageCategoryLabels['historic-park']],['territory',t.externalKingdoms]]
@@ -908,8 +1044,9 @@ export default function App(){
   }
 
   return <div className={`app-shell ${view==='atlas'&&mapOnlyMode?'map-only-atlas':''}`} lang={locale}>
-    <header><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.appTitle}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.digitalAtlas}</p><h1>{t.appTitle}</h1><p className="header-secondary">{t.appSubtitle} · v{ATLAS_RELEASE_VERSION}</p></div></div><div className="header-actions"><nav className="header-utility-nav" aria-label={locale==='kn'?'ಉಪಯುಕ್ತ ಕೊಂಡಿಗಳು':'Utility links'}>{headerUtilityItems.map(item=>navLink(item))}</nav><PwaControls locale={locale} t={t}/><button className="mobile-nav-toggle" aria-expanded={mobileNavOpen} aria-controls="primary-navigation" aria-label={mobileNavOpen?(locale==='kn'?'ಮೆನು ಮುಚ್ಚಿ':'Close menu'):(locale==='kn'?'ಮೆನು ತೆರೆಯಿರಿ':'Open menu')} onClick={()=>setMobileNavOpen(open=>!open)}><span aria-hidden="true">☰</span></button><button className="language-switch" aria-label={t.languageLabel} onClick={changeLocale}>{t.switchLanguage}</button></div></header>
-    <nav id="primary-navigation" className={`portal-nav ${mobileNavOpen?'open':''}`} aria-label={t.primaryNavigation}>{navGroup('explore',locale==='kn'?'ಅನ್ವೇಷಣೆ':'Explore',exploreNavItems)}{navGroup('research',locale==='kn'?'ಸಂಶೋಧನೆ':'Research',researchNavItems)}{navLink(districtNavItem,'nav-segment nav-segment-district')}{navGroup('project',locale==='kn'?'ಯೋಜನೆ':'Project',projectNavItems)}{navGroup('account',locale==='kn'?'ಸಹಯೋಗ':'Contribute',accountNavItems)}<PublicDataDepth t={t}/></nav>
+    <header><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.appTitle}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.digitalAtlas}</p><h1>{t.appTitle}</h1><p className="header-secondary">{t.appSubtitle} · v{ATLAS_RELEASE_VERSION}</p></div></div><div className="header-actions"><nav className="activity-switch" aria-label={kn?'ಚಟುವಟಿಕೆಗಳು':'Activities'}>{activities.map(item=><button key={item.key} type="button" className={`activity-${item.key} ${item.key===currentActivity.key?'picked':''} ${item.key===ACTIVITY_OF[view]?'here':''}`} aria-pressed={item.key===currentActivity.key} aria-current={item.key===ACTIVITY_OF[view]?'true':undefined} title={item.key===ACTIVITY_OF[view]?(kn?'ಈಗಿನ ಪುಟ ಇಲ್ಲಿದೆ':'Current page is here'):undefined} onClick={()=>{setActivity(item.key);if(ACTIVITY_OF[view]!==item.key)navigateView(item.items[0][0])}}><i aria-hidden="true"></i>{item.label}</button>)}</nav><nav className="header-utility-nav" aria-label={locale==='kn'?'ಉಪಯುಕ್ತ ಕೊಂಡಿಗಳು':'Utility links'}>{headerUtilityItems.map(item=>navLink(item))}</nav><PwaControls locale={locale} t={t}/><button className="mobile-nav-toggle" aria-expanded={mobileNavOpen} aria-controls="primary-navigation" aria-label={mobileNavOpen?(locale==='kn'?'ಮೆನು ಮುಚ್ಚಿ':'Close menu'):(locale==='kn'?'ಮೆನು ತೆರೆಯಿರಿ':'Open menu')} onClick={()=>setMobileNavOpen(open=>!open)}><span aria-hidden="true">☰</span></button><button className="language-switch" aria-label={t.languageLabel} onClick={changeLocale}>{t.switchLanguage}</button></div></header>
+    <nav className={`activity-bar activity-${currentActivity.key}`} aria-label={currentActivity.label}><strong className="activity-bar-title"><i aria-hidden="true"></i>{currentActivity.label}</strong><div className="activity-bar-items">{currentActivity.items.map(([key,label])=>{const active=view===key;return <a key={key} className={active?'active':''} aria-current={active?'page':undefined} href={`#${key}`} onClick={event=>{if(active){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}}}><span>{label}</span>{NAV_HINTS[key]&&<small>{NAV_HINTS[key][kn?1:0]}</small>}</a>})}</div><PublicDataDepth t={t}/></nav>
+    <nav id="primary-navigation" className={`portal-nav ${mobileNavOpen?'open':''}`} aria-label={t.primaryNavigation}>{navGroup('explore',locale==='kn'?'ಅನ್ವೇಷಣೆ':'Explore',exploreNavItems)}{navGroup('research',locale==='kn'?'ಸಂಶೋಧನೆ':'Research',researchNavItems)}{navGroup('india',locale==='kn'?'ಭಾರತ ಸಂಶೋಧನೆ':'India research',indiaNavItems)}{navLink(districtNavItem,'nav-segment nav-segment-district')}{navGroup('project',locale==='kn'?'ಯೋಜನೆ':'Project',projectNavItems)}{navGroup('account',locale==='kn'?'ಸಹಯೋಗ':'Contribute',accountNavItems)}<PublicDataDepth t={t}/></nav>
     {view==='atlas'&&<main id="atlas" className={mapOnlyMode?'atlas-map-only-main':''}>
       <aside className="sidebar"><GlobalSearch locale={locale} t={t} query={query} setQuery={setQuery} filters={searchFilters} setFilters={setSearchFilters} results={searchResults} onSelect={chooseSearchResult}/><div className="scope-switch"><span>{t.mapScope}</span><div><button className={scope==='karnataka'?'active':''} onClick={()=>chooseMapScope('karnataka')}>{t.karnatakaView}</button><button className={scope==='india'?'active':''} onClick={()=>chooseMapScope('india')}>{t.indiaView}</button><button className={scope==='world'?'active':''} onClick={()=>chooseMapScope('world')}>{t.worldView}</button></div></div><div className="section-title"><span>{t.kingdomsIn} {timelineYearLabel(year,locale)}</span><b>{visible.length}</b></div>{overlapNames&&<div className="kingdom-overlap-note"><strong>{t.overlappingKingdoms}</strong><span>{overlapNames}</span></div>}<div className="kingdom-list">{visible.map(k=><button className={highlightedKingdom?.id===k.id?'selected':''} key={k.id} onClick={()=>{setSelected(k.id);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();if(k.type==='external-context'&&k.contextScope==='world')setScope('world');else if(k.type==='external-context'&&scope==='karnataka')setScope('india')}}><i style={{background:k.color}}></i><span><strong>{primary(k.name,locale)}</strong><small>{secondary(k.name,locale)} · {k.start}–{k.end}</small></span></button>)}{!visible.length&&<p className="empty">{t.noKingdom}</p>}</div><div className="layers"><div className="section-title"><span>{t.mapLayers}</span></div>{Object.entries({boundaries:t.boundaries,territorialReach:t.territorialReach,externalKingdoms:`${t.externalKingdoms} · ${activeExternalKingdoms.length}`,districts:t.districtBoundaries,heritageSites:t.heritageCandidates,culture:t.culturalHeritage,temples:t.searchKinds.templeSites,artifacts:t.timelineCategories.artifacts,inscriptions:`${t.inscriptions} · ${activeInscriptions.length}`,researchCandidates:`${t.mapResearchCandidates} · ${visiblePublicReviewCandidates.length}`,events:t.events,people:`${t.people} · ${activePeople.length}`,modern:t.modernMap}).map(renderMapLayerControl)}{renderReviewLayerNote()}</div><details className="sidebar-object-icon-key"><summary>{locale==='kn'?'ನಕ್ಷೆ ಗುರುತುಗಳ ಸೂಚಿ':'Map icon key'}</summary><div><span><i className="legend-object-icon temple">{objectIcon('temple')}</i>{t.timelineCategories.temples}</span><span><i className="legend-object-icon inscription">{objectIcon('inscription')}</i>{t.timelineCategories.inscriptions}</span><span><i className="legend-object-icon artifact">{objectIcon('artifact')}</i>{t.timelineCategories.artifacts}</span><span><i className="legend-object-icon event">{objectIcon('war')}</i>{t.timelineCategories.wars}</span><span><i className="legend-object-icon culture">{objectIcon('monument')}</i>{t.timelineCategories.monuments}</span><span><i className="legend-object-icon external">{objectIcon('territory')}</i>{t.externalKingdoms}</span></div></details>{(layers.heritageSites||layers.districts)&&<div className="heritage-map-filters"><strong>{t.mapHeritageFilters}</strong><select aria-label={t.allDistricts} value={selectedDistrict} onChange={event=>setSelectedDistrict(event.target.value)}><option value="all">{t.allDistricts}</option>{atlasData.heritageAudits.map(audit=><option key={audit.id} value={audit.id}>{primary(audit.district,locale)}</option>)}</select><select aria-label={t.allHeritageCategories} value={heritageCategory} onChange={event=>setHeritageCategory(event.target.value)}><option value="all">{t.allHeritageCategories}</option>{Object.keys(t.heritageCategoryLabels).map(value=><option key={value} value={value}>{t.heritageCategoryLabels[value]}</option>)}</select><select aria-label={t.heritageAuthorityFilter} value={heritageAuthority} onChange={event=>setHeritageAuthority(event.target.value)}>{Object.entries(t.heritageAuthorityLabels).map(([value,label])=> <option key={value} value={value}>{label}</option>)}</select><label className="heritage-show-all"><input type="checkbox" checked={showAllHeritage} onChange={event=>setShowAllHeritage(event.target.checked)}/><span>{t.showAllHeritage}</span></label><small><b>{visibleHeritage.length}</b> {showAllHeritage?t.allHeritageShown:t.visibleThisYear} · <b>{futureHeritage.length}</b> {t.appearLater} · <b>{undatedHeritage.length}</b> {t.awaitingDate}</small></div>}</aside>
       <section className={`map-stage theme-${mapTheme} ${compareYear!=null?'compare-mode':''}`}>
@@ -953,7 +1090,29 @@ export default function App(){
         <EventRail locale={locale} t={t} year={year} stories={layers.externalKingdoms?timelineStories:timelineStories.filter(story=>story.storyCategory!=='externalKingdoms')} selectedId={selectedEvent?.id||selectedTerritory?.id||selectedPerson?.id||selectedWork?.id||selectedInscription?.id||selectedCulture?.id||selectedPeriodicalSite?.id||selectedSearchPlace?.reviewCandidateId||selectedSearchPlace?.periodicalSiteId||selectedSearchPlace?.artifactId||selected} onSelect={chooseTimelineStory} onCategoryChange={coordinateTimelineCategory}/>
         <Timeline year={year} setYear={value=>{setYear(value);clearRecordDetails();if(selectedEvent&&Math.abs(selectedEvent.year-value)>18)setSelectedEvent(null);if(selectedTerritory&&(value<selectedTerritory.date.from||value>selectedTerritory.date.to))setSelectedTerritory(null);if(selectedCulture&&!isCultureActive(selectedCulture,value))setSelectedCulture(null)}} compareYear={compareYear} setCompareYear={setCompareYear} onPreset={preset=>{setYear(preset.from);setCompareYear(preset.to);setScope('india');setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails()}} t={t} locale={locale}/>
       </section>
-      <section className="detail-panel-stack">{selectedEvent?<EventDetail event={selectedEvent} locale={locale} t={t} onClose={returnToStateView}/>:selectedTerritory?<TerritoryDetail territory={selectedTerritory} locale={locale} t={t} onClose={returnToStateView}/>:selectedCulture?<CultureDetail item={selectedCulture} locale={locale} t={t} onClose={returnToStateView}/>:selectedPerson?<PersonDetail person={selectedPerson} locale={locale} t={t} onClose={returnToStateView} onChooseRecord={choosePersonRecord}/>:selectedInscription?<InscriptionDetail item={selectedInscription} locale={locale} t={t} onClose={returnToStateView}/>:selectedWork?<WorkDetail work={selectedWork} locale={locale} t={t} onClose={returnToStateView}/>:chosen?<KingdomDetail chosen={chosen} locale={locale} t={t} year={year} literatureWorks={literatureWorks} inscriptionRecords={inscriptionRecords} usesNearestLiterature={!activeLiterature.length} onChooseWork={chooseWork} onChooseInscription={chooseInscription} onChoosePerson={choosePerson}/>:<BceResearchContext locale={locale} t={t} year={year} onOpenEpigraphy={()=>navigateView('epigraphy')}/>} {(selectedEvent||selectedTerritory||selectedCulture||selectedPerson||selectedInscription||selectedWork||chosen)&&<ContributeActions recordId={(selectedEvent||selectedTerritory||selectedCulture||selectedPerson||selectedInscription||selectedWork||chosen).id} recordType={selectedEvent?'event':selectedTerritory?'territorialExtent':selectedCulture?'culturalHeritage':selectedPerson?'person':selectedInscription?'inscription':selectedWork?'work':'polity'} name={primary((selectedEvent||selectedTerritory||selectedCulture||selectedPerson||selectedInscription||selectedWork||chosen).name,locale)} locale={locale}/>}</section>
+      <section className="detail-panel-stack">
+        {inspectorRecord?(
+          <RecordInspector
+            record={inspectorRecord}
+            locale={locale}
+            t={t}
+            open={inspectorOpen}
+            onClose={returnToStateView}
+            onSuggestCorrection={()=>navigateView('contribute')}
+            onChooseRecord={choosePersonRecord}
+          />
+        ):(
+          <BceResearchContext locale={locale} t={t} year={year} onOpenEpigraphy={()=>navigateView('epigraphy')}/>
+        )}
+        {inspectorRecord&&inspectorOpen===false&&typeof window!=='undefined'&&window.matchMedia('(max-width: 1050px)').matches&&(
+          <button className="record-inspector-trigger" type="button" onClick={()=>setInspectorOpen(true)} aria-label={t.viewDetails||'View details'} title={t.viewDetails||'View details'}>
+            {t.viewDetails||'View details'}
+          </button>
+        )}
+        {inspectorRecord&&(
+          <ContributeActions recordId={inspectorRecord.id} recordType={inspectorRecord.kind==='territory'?'territorialExtent':inspectorRecord.kind==='culture'?'culturalHeritage':inspectorRecord.kind} name={inspectorRecord.name} locale={locale}/>
+        )}
+      </section>
     </main>}
     {view==='research'&&<Suspense fallback={<PortalFallback/>}><ResourcesCollaborations locale={locale} methodCards={t.cards}/></Suspense>}
     {view==='relations'&&<Suspense fallback={<PortalFallback/>}><GlobalRelationsExplorer locale={locale} mapTheme={mapTheme} setMapTheme={setMapTheme} onOpenAtlas={item=>{if(item.kind==='event'){const event=events.find(record=>record.id===item.id);if(event)chooseEvent(event)}else{const territory=territorialExtents.find(record=>record.id===item.id);if(territory)chooseTerritory(territory)}navigateView('atlas')}}/></Suspense>}

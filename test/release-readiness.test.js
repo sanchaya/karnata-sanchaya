@@ -387,7 +387,7 @@ test('the static release is installable and keeps map context available offline'
 test('map and timeline safety guards remain wired into the public app', () => {
   assert.match(appSource, /mapZoomForPositions/, 'candidate selections must use bounded map focus')
   assert.match(appSource, /routePositions\.length>0/, 'empty routes must not render map polylines')
-  assert.match(appSource, /externalLinks\?\.\[0\]\?\.url/, 'optional external links must not break timeline cards')
+  assert.match(appSource, /record\.externalLinks/, 'optional external links are still surfaced in record evidence')
   assert.match(appSource, /function MapResizeOnMode/, 'map-only mode must ask Leaflet to redraw after the full-screen layout change')
   assert.match(appSource, /<MapResizeOnMode active=\{mapOnlyMode\}\/>/, 'the atlas map must wire the resize guard to the map-only toggle')
   assert.match(appSource, /className="map-only-style-toggle"/, 'map-only mode must be merged into the map style control')

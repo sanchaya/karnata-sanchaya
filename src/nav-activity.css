@@ -1,0 +1,34 @@
+/* Desktop navigation: activity switch in the header corner, selected activity's features in a left-aligned bar */
+.activity-switch,.activity-bar{display:none}
+.activity-explore{--nav-accent:#4361ee}.activity-research{--nav-accent:#7b4bb7}.activity-districts{--nav-accent:#28785b}.activity-india,.nav-group-india{--nav-accent:#0f7c90}.activity-project{--nav-accent:#b66a22}.activity-account{--nav-accent:#a43f67}
+@media(min-width:721px){
+  .app-shell>.portal-nav{display:none}
+  .activity-switch{display:flex;flex:0 0 auto;gap:2px;padding:3px;border:1px solid var(--sanchaya-border);border-radius:10px;background:var(--sanchaya-surface)}
+  .activity-switch button{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 11px;border:0;border-radius:8px;background:transparent;color:var(--sanchaya-muted);font-size:12px;font-weight:700;white-space:nowrap;cursor:pointer}
+  .activity-switch button i{width:8px;height:8px;border-radius:50%;background:var(--nav-accent)}
+  .activity-switch button:hover{background:var(--sanchaya-hover);color:var(--nav-accent)}
+  .activity-switch button{position:relative}
+  /* The line follows the picked activity; a small dot marks the activity that owns the open page */
+  .activity-switch button.picked{background:#fff;color:var(--nav-accent);box-shadow:var(--sanchaya-shadow),inset 0 -3px var(--nav-accent)}
+  .activity-switch button.here:not(.picked)::after{content:'';position:absolute;top:4px;right:4px;width:6px;height:6px;border-radius:50%;background:var(--nav-accent)}
+  .activity-switch button:focus-visible,.activity-bar a:focus-visible{outline:2px solid var(--sanchaya-blue);outline-offset:-2px}
+  .header-utility-nav{display:flex}
+  .header-utility-nav a{padding:6px 8px;font-size:12px}
+  .activity-bar{position:sticky;top:0;z-index:1200;display:flex;align-items:center;gap:12px;height:48px;padding:0 20px;border-bottom:1px solid var(--sanchaya-border);background:rgba(255,255,255,.97);box-shadow:0 3px 12px rgba(26,26,46,.05)}
+  .activity-bar-title{display:flex;align-items:center;gap:7px;flex:0 0 auto;padding-right:14px;border-right:1px solid var(--sanchaya-border);color:var(--nav-accent);font-size:13px}
+  .activity-bar-title i{width:8px;height:8px;border-radius:50%;background:var(--nav-accent)}
+  .activity-bar-items{display:flex;flex:0 1 auto;min-width:0;gap:4px;overflow-x:auto;scrollbar-width:none}
+  /* title + items form one centred group; auto margins keep it scrollable from the start when it overflows */
+  .activity-bar-title{margin-left:auto}
+  .activity-bar .public-data-depth{margin-left:auto}
+  .activity-bar-items::-webkit-scrollbar{display:none}
+  .activity-bar-items a{display:grid;flex:0 0 auto;gap:1px;padding:5px 12px;border-radius:8px;color:var(--sanchaya-ink);text-decoration:none;box-shadow:inset 0 -2px transparent}
+  .activity-bar-items a span{font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap}
+  .activity-bar-items a small{color:#5c5c78;font-size:10px;line-height:1.2;white-space:nowrap}
+  .activity-bar-items a:hover{background:color-mix(in srgb,var(--nav-accent) 8%,white)}
+  .activity-bar-items a.active{background:color-mix(in srgb,var(--nav-accent) 12%,white);color:var(--nav-accent);box-shadow:inset 0 -2px var(--nav-accent)}
+  .activity-bar-items a.active small{color:inherit}
+  .activity-bar .public-data-depth{flex:0 0 auto}
+  .map-only-atlas>.activity-bar{display:none}
+}
+@media(min-width:721px) and (max-width:1120px){.activity-switch button{padding:6px 8px;font-size:11px}.activity-switch button i{display:none}.sanchaya-product-brand .header-secondary{display:none}.header-utility-nav a{font-size:11px;padding:6px 5px}}
