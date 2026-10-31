@@ -10,9 +10,8 @@ const kindColors={event:'#a83e32','district-event':'#9b4b36',milestone:'#4361ee'
 const yearLabel=value=>value==null?'':`${Math.abs(value)} ${value<0?'BCE':'CE'}`
 const safeText=value=>String(value||'')
 
-export default function IndiaResearchExplorer({locale='en'}){
+export default function IndiaResearchExplorer({locale='en',dataset='history'}){
   const kn=locale==='kn'
-  const [dataset,setDataset]=useState('history')
   const [scope,setScope]=useState('india')
   const [kind,setKind]=useState('all')
   const [query,setQuery]=useState('')
@@ -32,7 +31,6 @@ export default function IndiaResearchExplorer({locale='en'}){
     })
   },[records,scope,kind,query,year])
   const mapped=useMemo(()=>filtered.filter(record=>Number.isFinite(record.lat)&&Number.isFinite(record.lng)).slice(0,700),[filtered])
-  const chooseDataset=value=>{setDataset(value);setKind('all');setLimit(PAGE_SIZE);setSelected(null)}
   const counts=indiaResearchIndex.meta
   return <main className="india-research-page">
     <section className="india-research-hero">
@@ -48,11 +46,7 @@ export default function IndiaResearchExplorer({locale='en'}){
       <span><b>{counts.whatisindia.pagesCrawled?.toLocaleString('en-IN')}</b>{kn?'ಪರಿಶೀಲಿಸಿದ ಮೂಲ ಪುಟಗಳು':'source pages crawled'}</span>
     </section>
     <nav className="india-research-tabs" aria-label={kn?'ದತ್ತಾಂಶ ವಿಭಾಗಗಳು':'Dataset sections'}>
-      <button className={dataset==='history'?'active':''} onClick={()=>chooseDataset('history')}>{kn?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'India history data'}</button>
-      <button className={dataset==='inscriptions'?'active':''} onClick={()=>chooseDataset('inscriptions')}>{kn?'ಭಾರತ ಶಾಸನ ಸೂಚಿ':'India inscription index'}</button>
-      <button className={dataset==='languages'?'active':''} onClick={()=>chooseDataset('languages')}>{kn?'ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಭೂಪಟ':'Languages & scripts map'} · {kn?'ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ':'unverified'}</button>
-      <button className={dataset==='sources'?'active':''} onClick={()=>chooseDataset('sources')}>{kn?'ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು':'Underlying source candidates'}</button>
-      <button className={dataset==='failures'?'active':''} onClick={()=>chooseDataset('failures')}>{kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು':'Source-page failures'} · {counts.failureCount}</button>
+      {[['history','#india-research',kn?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'India history data'],['inscriptions','#india-inscriptions',kn?'ಭಾರತ ಶಾಸನ ಸೂಚಿ':'India inscription index'],['languages','#india-languages',`${kn?'ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಭೂಪಟ':'Languages & scripts map'} · ${kn?'ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ':'unverified'}`],['sources','#india-sources',kn?'ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು':'Underlying source candidates'],['failures','#india-failures',`${kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು':'Source-page failures'} · ${counts.failureCount}`]].map(([key,href,label])=><a key={key} href={href} className={dataset===key?'active':''} aria-current={dataset===key?'page':undefined}>{label}</a>)}
     </nav>
     {dataset==='languages'?<LanguageTimeline locale={locale}/>:<>
     <section className="india-research-controls">
@@ -74,14 +68,17 @@ export default function IndiaResearchExplorer({locale='en'}){
         <div className="india-research-record-meta"><span>{record.kind} · {record.provider}</span><em>{record.reviewStatus}</em></div>
         <h3>{record.title}</h3>
         <p className="india-research-locator">{[record.place,record.district,record.taluk,record.publication&&`${record.publication}${record.volume?` · Vol. ${record.volume}`:''}`,record.number&&`No. ${record.number}`,record.page&&`p. ${record.page}`].filter(Boolean).join(' · ')}</p>
-        {(record.yearFrom!=null||record.yearTo!=null)&&<time>{yearLabel(record.yearFrom)}{record.yearTo!=null&&record.yearTo!==record.yearFrom?` – ${yearLabel(record.yearTo)}`:''}</time>}
+        {[record.yearFrom,record.yearTo].some(value=>value!=null&&value!==0)&&<time>{yearLabel(record.yearFrom)}{record.yearTo!=null&&record.yearTo!==record.yearFrom?` – ${yearLabel(record.yearTo)}`:''}</time>}
         {record.summary&&<p>{record.summary.slice(0,720)}</p>}
         {record.sourceClaim&&<div className="india-research-source-claim"><b>{kn?'ಆಮದು ಮಾಡಿದ ಮೂಲ ಸೂಚನೆ — ಪರಿಶೀಲಿಸಬೇಕು':'Imported source claim — verify'}</b><span>{record.sourceClaim}</span></div>}
-        <footer><code>{record.id}</code>{record.url&&<a href={record.url} target="_blank" rel="noreferrer">{kn?'ಉಲ್ಲೇಖಿತ ಮೂಲ ಪುಟ ↗':'Cited source page ↗'}</a>}</footer>
+        {record.url&&<div className="india-research-record-foot"><a href={record.url} target="_blank" rel="noreferrer">{kn?'ಉಲ್ಲೇಖಿತ ಮೂಲ ಪುಟ ↗':'Cited source page ↗'}</a></div>}
       </article>)}</div>
       {limit<filtered.length&&<button className="india-research-more" onClick={()=>setLimit(value=>value+PAGE_SIZE)}>{kn?'ಇನ್ನಷ್ಟು 80 ದಾಖಲೆಗಳನ್ನು ತೋರಿಸಿ':'Show 80 more records'}</button>}
     </section>
     </>}
-    <section className="india-research-audit-note"><strong>{kn?'ಆಮದು ಸ್ಥಿತಿ':'Import status'}</strong><span>BharatRajya: {counts.bharatrajya.retrievedAt} · WhatIsIndia: {counts.whatisindia.retrievedAt} · {counts.whatisindia.failures} {kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು ಪ್ರತ್ಯೇಕವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ':'source-page failures retained in the import manifest'}.</span></section>
+    <section className="india-research-audit-note" aria-label={kn?'ಆಮದು ಸ್ಥಿತಿ':'Import status'}>
+      <strong>{kn?'ಆಮದು ಸ್ಥಿತಿ':'Import status'}</strong>
+      <ul><li><b>BharatRajya</b><span>{counts.bharatrajya.retrievedAt}</span></li><li><b>WhatIsIndia</b><span>{counts.whatisindia.retrievedAt}</span></li><li><b>{counts.whatisindia.failures}</b><span>{kn?'ಮೂಲ ಪುಟ ದೋಷಗಳನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ':'source-page failures retained in the import manifest'}</span></li></ul>
+    </section>
   </main>
 }
