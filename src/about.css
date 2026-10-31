@@ -53,9 +53,15 @@
 .donate-button:hover{filter:brightness(1.08)}
 .donate-online-action small{color:var(--sanchaya-muted);font-size:11px;line-height:1.4}
 
-.donate-grid .donate-qr{order:5;grid-column:1/-1;display:grid;grid-template-columns:210px minmax(0,1fr);grid-template-rows:auto 1fr auto;column-gap:18px;row-gap:6px;align-items:start}
+.donate-grid .donate-qr{order:5;grid-column:1/-1;display:grid;grid-template-columns:210px minmax(0,1fr);grid-template-rows:auto auto auto 1fr;column-gap:18px;row-gap:6px;align-items:start}
 .donate-qr h4{grid-column:2}
-.donate-qr img{grid-row:1/span 3;width:210px;height:auto;border-radius:10px;border:1px solid var(--sanchaya-border)}
+.donate-qr img{grid-row:1/span 4;width:210px;height:auto;border-radius:10px;border:1px solid var(--sanchaya-border)}
 .donate-qr dl,.donate-qr small{grid-column:2}
 @media(max-width:820px){.donate-grid .donate-qr{grid-template-columns:1fr}.donate-qr h4,.donate-qr dl,.donate-qr small{grid-column:1}.donate-qr img{grid-row:auto;width:100%;max-width:230px}}
 .donate-qr small{color:var(--sanchaya-muted);font-size:11px}
+
+.donate-section .donate-receipt{grid-column:1/-1;display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border:1px solid #d9ddff;border-radius:12px;background:#fff}
+.donate-receipt>span{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:50%;background:#eef0ff;color:var(--sanchaya-blue);font-size:17px}
+.donate-receipt p{margin:2px 0 4px;font-size:13px;line-height:1.55}
+.donate-receipt a{color:var(--sanchaya-blue);font-weight:800;overflow-wrap:anywhere}
+.donate-receipt small{color:var(--sanchaya-muted);font-size:11px}
