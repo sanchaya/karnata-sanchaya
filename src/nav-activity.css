@@ -1,6 +1,6 @@
 /* Desktop navigation: activity switch in the header corner, selected activity's features in a left-aligned bar */
 .activity-switch,.activity-bar{display:none}
-.activity-explore{--nav-accent:#4361ee}.activity-research{--nav-accent:#7b4bb7}.activity-districts{--nav-accent:#28785b}.activity-india,.nav-group-india{--nav-accent:#0f7c90}.activity-project{--nav-accent:#b66a22}.activity-account{--nav-accent:#a43f67}
+.activity-explore{--nav-accent:#4361ee}.activity-research{--nav-accent:#7b4bb7}.activity-districts{--nav-accent:#28785b}.activity-india,.nav-group-india{--nav-accent:#0f7c90}.nav-group-districts{--nav-accent:#28785b}.activity-project{--nav-accent:#b66a22}.activity-account{--nav-accent:#a43f67}
 @media(min-width:721px){
   .app-shell>.portal-nav{display:none}
   .activity-switch{display:flex;flex:0 0 auto;gap:2px;padding:3px;border:1px solid var(--sanchaya-border);border-radius:10px;background:var(--sanchaya-surface)}

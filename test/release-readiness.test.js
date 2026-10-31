@@ -54,16 +54,17 @@ test('public navigation keeps the complete release route set and admin private',
   assert.match(appSource, /hash==='history'\?'district-history'/, 'legacy history links must resolve to district history')
   assert.match(appSource, /hash==='community'\?'contribute'/, 'legacy community links must resolve to the focused contribution workspace')
   for (const section of ['district-audit', 'inscription-audit', 'district-inventory']) {
-    assert.match(appSource, new RegExp(`['"]${section}['"]:\\s*['"]districts['"]`), `${section} must stay inside the District Atlas instead of falling back to the main atlas`)
+    assert.match(routeBlock, new RegExp(`['"]${section}['"]`), `${section} must be its own District Atlas menu page instead of falling back to the main atlas`)
   }
+  assert.match(appSource, /districtSectionRoutes=\{districts:'district-history',inscriptions:'inscription-audit'\}/, 'legacy #districts and #inscriptions links must resolve to the matching workspace')
 })
 
 test('navigation separates historical exploration from project utilities', () => {
   for(const group of ['exploreNavItems','researchNavItems','projectNavItems','accountNavItems'])assert.match(appSource,new RegExp(`const ${group}=`),`${group} must remain an explicit navigation segment`)
-  assert.match(appSource, /const districtNavItem=\['districts'/, 'district work must keep one visible District Atlas entry')
-  assert.doesNotMatch(appSource.match(/const districtNavItem=(.*?)\n/s)?.[1]||'', /district-history|inscriptions/, 'deep-history and inscription audits must stay folded into District Atlas')
+  const districtNav = appSource.match(/const districtNavItems=(.*?)\n/s)?.[1] || ''
+  for (const route of ['district-history', 'district-audit', 'inscription-audit', 'district-inventory']) assert.match(districtNav, new RegExp(`'${route}'`), `${route} must be a direct District Atlas menu item`)
   assert.match(appSource, /function DistrictHub/, 'the District Atlas hub must gather the district sections without dropping legacy routes')
-  assert.match(appSource, /districtWorkspaceFromHash/, 'legacy district deep links must select the matching compact workspace')
+  assert.match(appSource, /DISTRICT_SECTION=\{/, 'each district menu route must select its matching compact workspace')
   assert.match(appSource, /section==='history'&&/, 'the District Atlas must mount one selected workspace instead of every long section')
   assert.match(districtHistorySource, /district-history-view-menu/, 'district history must expose compact map, records and freedom views')
   assert.match(appSource, /className="header-utility-nav"/, 'utility routes must be available in the desktop header')

@@ -11,7 +11,7 @@ const recordByCollection=new Map()
 for(const [key,records] of Object.entries(atlasData))if(Array.isArray(records))recordByCollection.set(key,new Map(records.map(record=>[record.id,record])))
 const DEEP_LINKS={
   events:'#atlas',places:'#atlas',people:'#people',works:'#literature',inscriptions:'#epigraphy',
-  culturalHeritage:'#districts',districtHistoryResearch:'#district-history',relationships:'#relations',politicalRelations:'#relations',
+  culturalHeritage:'#district-audit',districtHistoryResearch:'#district-history',relationships:'#relations',politicalRelations:'#relations',
   polities:'#atlas',externalPolities:'#atlas',externalGovernancePhases:'#atlas',territorialExtents:'#atlas',
   feudatoryRelations:'#relations',scriptEvolution:'#scripts',templeInventoryLeads:'#districts',heritageInventoryLeads:'#districts',
 }

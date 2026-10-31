@@ -23,6 +23,7 @@ import './guided-tour.css'
 import './tablet.css'
 import './nav-activity.css'
 import './about.css'
+import './district-workspace.css'
 import { hydrateAtlasData } from './data/runtime'
 import { appendPublicAttribution } from './data/public-attribution'
 
