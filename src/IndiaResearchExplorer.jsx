@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet'
 import { indiaResearchIndex } from './data/india-research.generated.js'
+import { languageRegions } from './data/language-regions.js'
+import LanguageTimeline from './LanguageTimeline'
 import './india-research.css'
 
 const PAGE_SIZE=80
@@ -42,14 +44,17 @@ export default function IndiaResearchExplorer({locale='en'}){
       <span><b>{counts.bharatrajya.counts.territories?.toLocaleString('en-IN')}</b>{kn?'ಜಿಲ್ಲಾ-ಕಾಲ ಪ್ರದೇಶ ದಾಖಲೆಗಳು':'district-period territories'}</span>
       <span><b>{counts.bharatrajya.counts.events?.toLocaleString('en-IN')}</b>{kn?'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು':'historical events'}</span>
       <span><b>{counts.whatisindia.records?.toLocaleString('en-IN')}</b>{kn?'ಶಾಸನ ದಾಖಲೆ/ಸುಳಿವುಗಳು':'inscription records/leads'}</span>
+      <span><b>{languageRegions.length}</b>{kn?'ಭಾಷೆ/ಲಿಪಿ ಪ್ರದೇಶಗಳು (ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ)':'language/script regions (unverified)'}</span>
       <span><b>{counts.whatisindia.pagesCrawled?.toLocaleString('en-IN')}</b>{kn?'ಪರಿಶೀಲಿಸಿದ ಮೂಲ ಪುಟಗಳು':'source pages crawled'}</span>
     </section>
     <nav className="india-research-tabs" aria-label={kn?'ದತ್ತಾಂಶ ವಿಭಾಗಗಳು':'Dataset sections'}>
       <button className={dataset==='history'?'active':''} onClick={()=>chooseDataset('history')}>{kn?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'India history data'}</button>
       <button className={dataset==='inscriptions'?'active':''} onClick={()=>chooseDataset('inscriptions')}>{kn?'ಭಾರತ ಶಾಸನ ಸೂಚಿ':'India inscription index'}</button>
+      <button className={dataset==='languages'?'active':''} onClick={()=>chooseDataset('languages')}>{kn?'ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಭೂಪಟ':'Languages & scripts map'} · {kn?'ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ':'unverified'}</button>
       <button className={dataset==='sources'?'active':''} onClick={()=>chooseDataset('sources')}>{kn?'ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು':'Underlying source candidates'}</button>
       <button className={dataset==='failures'?'active':''} onClick={()=>chooseDataset('failures')}>{kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು':'Source-page failures'} · {counts.failureCount}</button>
     </nav>
+    {dataset==='languages'?<LanguageTimeline locale={locale}/>:<>
     <section className="india-research-controls">
       <label><span>{kn?'ಹುಡುಕಿ':'Search all fields'}</span><input value={query} onChange={event=>{setQuery(event.target.value);setLimit(PAGE_SIZE)}} placeholder={kn?'ಸ್ಥಳ, ರಾಜವಂಶ, ಶಾಸನ, ಘಟನೆ…':'Place, dynasty, inscription, event…'}/></label>
       <label><span>{kn?'ದಾಖಲೆ ವಿಧ':'Record type'}</span><select value={kind} onChange={event=>{setKind(event.target.value);setLimit(PAGE_SIZE)}}><option value="all">{kn?'ಎಲ್ಲ ವಿಧಗಳು':'All types'}</option>{kinds.map(value=><option value={value} key={value}>{value}</option>)}</select></label>
@@ -76,6 +81,7 @@ export default function IndiaResearchExplorer({locale='en'}){
       </article>)}</div>
       {limit<filtered.length&&<button className="india-research-more" onClick={()=>setLimit(value=>value+PAGE_SIZE)}>{kn?'ಇನ್ನಷ್ಟು 80 ದಾಖಲೆಗಳನ್ನು ತೋರಿಸಿ':'Show 80 more records'}</button>}
     </section>
+    </>}
     <section className="india-research-audit-note"><strong>{kn?'ಆಮದು ಸ್ಥಿತಿ':'Import status'}</strong><span>BharatRajya: {counts.bharatrajya.retrievedAt} · WhatIsIndia: {counts.whatisindia.retrievedAt} · {counts.whatisindia.failures} {kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು ಪ್ರತ್ಯೇಕವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ':'source-page failures retained in the import manifest'}.</span></section>
   </main>
 }

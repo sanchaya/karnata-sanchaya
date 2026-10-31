@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { calculateDatasetDepth } from '../src/data/dataset-depth.js'
+import { languageRegions, languageRegionSourceCount } from '../src/data/language-regions.js'
 import { geographyNatureHighlights, geographyNatureSources, geographyProtectedAreas } from '../src/data/geography-nature.js'
 
 test('portal depth combines canonical records and discovery corpora without double-labeling revision rows', () => {
@@ -14,6 +15,6 @@ test('portal depth combines canonical records and discovery corpora without doub
   }
   const geographyRecords=geographyNatureHighlights.length+geographyProtectedAreas.length
   assert.deepEqual(calculateDatasetDepth(dataset,{recordCount:5,failureCount:2,sourceCount:3}),{
-    totalRecords:25+geographyRecords, researchLeads:20, geographyRecords, sources:5+geographyNatureSources.length, relationships:3, inscriptions:3, karnatakaLinkedNonKannadaInscriptions:1,
+    totalRecords:25+geographyRecords+languageRegions.length, researchLeads:20, geographyRecords, languageRegions:languageRegions.length, sources:5+geographyNatureSources.length+languageRegionSourceCount, relationships:3, inscriptions:3, karnatakaLinkedNonKannadaInscriptions:1,
   })
 })

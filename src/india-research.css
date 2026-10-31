@@ -7,3 +7,28 @@
 .india-research-results>header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:12px 0}.india-research-results>header strong{font-size:20px;color:var(--sanchaya-blue)}.india-research-results>header small{color:var(--sanchaya-muted)}.india-research-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:10px}.india-research-grid article{display:flex;min-width:0;min-height:230px;flex-direction:column;border:1px solid var(--sanchaya-border);border-radius:10px;background:#fff;padding:15px;box-shadow:0 5px 18px rgba(30,38,70,.04)}.india-research-grid article.selected{border-color:var(--sanchaya-blue);box-shadow:0 0 0 2px rgba(69,91,217,.12)}.india-research-record-meta{display:flex;justify-content:space-between;gap:8px}.india-research-record-meta span,.india-research-record-meta em{border-radius:99px;background:#eef1ff;padding:4px 7px;color:var(--sanchaya-blue);font-size:8px;font-style:normal;text-transform:uppercase}.india-research-record-meta em{background:#fff1d9;color:#895b20}.india-research-grid h3{margin:10px 0 5px;font:600 17px/1.35 Georgia,"Noto Sans Kannada",serif;overflow-wrap:anywhere}.india-research-grid p{margin:4px 0;color:var(--sanchaya-muted);font-size:11px;line-height:1.55}.india-research-grid .india-research-locator{color:#5b647a;font-weight:700}.india-research-grid time{margin:3px 0;color:#9a5e24;font-size:9px;font-weight:800}.india-research-source-claim{display:grid;gap:3px;margin:8px 0;padding:8px;border-left:3px solid #b06a1f;background:#fff8e9}.india-research-source-claim b{font-size:8px;color:#82551e}.india-research-source-claim span{font-size:10px;line-height:1.45}.india-research-grid footer{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}.india-research-grid code{max-width:65%;overflow-wrap:anywhere;color:#5c6274;font-size:8px}.india-research-grid a{color:var(--sanchaya-blue);font-size:10px;font-weight:750;text-decoration:none}.india-research-more{display:block;margin:20px auto 0;border:0;border-radius:8px;background:var(--sanchaya-blue);padding:11px 18px;color:#fff;font:750 11px inherit;cursor:pointer}.india-research-audit-note{display:flex;gap:9px;margin-top:28px;border-top:1px solid var(--sanchaya-border);padding-top:15px;color:var(--sanchaya-muted);font-size:10px}.india-research-audit-note strong{color:var(--sanchaya-ink)}
 @media(max-width:900px){.india-research-hero{grid-template-columns:1fr}.india-research-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.india-research-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.india-research-page{padding:24px 12px 48px}.india-research-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.india-research-controls{grid-template-columns:1fr}.india-research-map-wrap{height:400px}.india-research-map-heading{left:48px;right:10px;max-width:none}.india-research-grid{grid-template-columns:1fr}.india-research-results>header{align-items:flex-start;flex-direction:column}.india-research-audit-note{flex-direction:column}}
+
+/* Languages and scripts through time (unverified research draft) */
+.language-timeline{display:grid;gap:12px;padding:16px clamp(16px,4vw,48px)}
+.language-timeline-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.language-timeline-head h3{margin:0}
+.language-badge{display:inline-block;padding:2px 8px;border:1px solid #d9a441;border-radius:99px;background:#fff4dc;color:#7a4d09;font-size:10px;font-weight:800;letter-spacing:.03em}
+.language-warning{margin:0;padding:8px 12px;border-left:3px solid #d9a441;background:#fffaf1;color:#5c4a1f;font-size:12px}
+.language-slider{display:grid;gap:4px;font-size:12px;font-weight:700}
+.language-slider input{width:100%}
+.language-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr);gap:14px;align-items:start}
+.language-map{height:clamp(340px,56vh,620px);border:1px solid var(--sanchaya-border);border-radius:12px;overflow:hidden}
+.language-map .leaflet-container{height:100%}
+.language-list{display:grid;gap:10px;max-height:clamp(340px,56vh,620px);overflow:auto;padding-right:4px}
+.language-list h4{margin:0}
+.language-list article{display:grid;gap:5px;padding:12px;border:1px solid #ead9c3;border-radius:10px;background:#fffdf8;font-size:12px;line-height:1.5}
+.language-list h5{margin:0;font-size:14px}
+.language-list dl{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0}
+.language-list dl div{display:flex;gap:4px}
+.language-list dt{color:var(--sanchaya-muted)}
+.language-list dd{margin:0;font-weight:700}
+.language-list p{margin:0}
+.language-sources a{display:block}
+.language-verify{color:var(--sanchaya-muted)}
+.language-note{margin:0;color:var(--sanchaya-muted);font-size:11px}
+@media(max-width:900px){.language-layout{grid-template-columns:1fr}.language-list{max-height:none}}

@@ -1,5 +1,6 @@
 import { indiaResearchMeta } from './india-research-meta.generated.js'
 import { countEpigraphiaPointers } from './epigraphia-links.js'
+import { languageRegions, languageRegionSourceCount } from './language-regions.js'
 import { geographyNatureHighlights, geographyNatureSources, geographyProtectedAreas } from './geography-nature.js'
 
 export const datasetDepthCollections = ['polities','externalPolities','places','events','people','works','inscriptions','culturalHeritage','periodicals','periodicalMapSites','artifacts','reigns','territorialExtents','politicalRelations','relationships','externalGovernancePhases','districtHistoryResearch','feudatoryRelations','genealogicalRelations','administrativeDivisions','boundaryEvidence','coinRecords','manuscriptWitnesses','inscriptionEditions','scriptEvolution','collaborations']
@@ -15,5 +16,5 @@ export function calculateDatasetDepth(dataset, discoveryMeta = indiaResearchMeta
   const relationships=length(dataset.relationships)+length(dataset.politicalRelations)+length(dataset.feudatoryRelations)+length(dataset.genealogicalRelations)+countEpigraphiaPointers(dataset.epigraphiaArchiveTexts)
   const inscriptions=length(dataset.inscriptions)
   const karnatakaLinkedNonKannadaInscriptions=(dataset.inscriptions||[]).filter(record=>record.karnatakaRelevance?.direct===true&&!(record.languages||[]).some(language=>/kannada/i.test(language))).length
-  return {totalRecords:historicalRecords+researchLeads+geographyRecords,researchLeads,geographyRecords,sources:length(dataset.sources)+(discoveryMeta.sourceCount||0)+geographyNatureSources.length,relationships,inscriptions,karnatakaLinkedNonKannadaInscriptions}
+  return {totalRecords:historicalRecords+researchLeads+geographyRecords+languageRegions.length,researchLeads,geographyRecords,languageRegions:languageRegions.length,sources:length(dataset.sources)+(discoveryMeta.sourceCount||0)+geographyNatureSources.length+languageRegionSourceCount,relationships,inscriptions,karnatakaLinkedNonKannadaInscriptions}
 }
