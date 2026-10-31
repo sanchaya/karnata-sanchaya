@@ -28,3 +28,8 @@ test('the atlas offers the dynasty areas layer, off by default', async () => {
   assert.match(app, /dynastyAreas:false/)
   assert.match(app, /<DynastyAreasLayer /)
 })
+
+test('the dynasty layer offers a way to bring the older schematic boundaries back', async () => {
+  const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
+  assert.match(app, /key==='dynastyAreas'&&layers\.dynastyAreas&&<label className="map-layer-suboption"/)
+})
