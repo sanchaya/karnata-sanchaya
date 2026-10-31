@@ -861,7 +861,9 @@ export default function App(){
   const [year,setYear]=useState(()=>initialShareState.year??firstTimelineStory?.year??MIN_YEAR)
   const [atlasMapView]=useState(()=>initialShareState.map||{lat:14.7,lng:76.2,zoom:6.35})
   const [mapZoom,setMapZoom]=useState(()=>initialShareState.map?.zoom||6.35)
-  const [mapLegendOpen,setMapLegendOpen]=useState(()=>typeof window==='undefined'||!window.matchMedia('(max-width: 1366px), (any-pointer: coarse)').matches)
+  // Little room (narrow or short window, touch device): the key starts closed and follows the window as it is resized.
+  const [mapLegendOpen,setMapLegendOpen]=useState(()=>typeof window==='undefined'||!window.matchMedia('(max-width: 1366px), (max-height: 820px), (any-pointer: coarse)').matches)
+  useEffect(()=>{const query=window.matchMedia('(max-width: 1366px), (max-height: 820px), (any-pointer: coarse)');const follow=event=>setMapLegendOpen(!event.matches);query.addEventListener('change',follow);return()=>query.removeEventListener('change',follow)},[])
   const [compareYear,setCompareYear]=useState(null)
   const [selected,setSelected]=useState(null)
   const [selectedEvent,setSelectedEvent]=useState(null)

@@ -3,7 +3,7 @@
 .map-overlay-disclosure-toggle { display: none; }
 .map-overlay-disclosure-content { display: contents; }
 
-@media (max-width: 1366px), (any-pointer: coarse) {
+@media (max-width: 1366px), (max-height: 820px), (any-pointer: coarse) {
   .map-overlay-disclosure {
     width: auto;
     max-width: none;
