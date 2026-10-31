@@ -3,6 +3,9 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+# The static GitHub Pages edition sets this; the live server must never be built with it.
+ARG VITE_STATIC_DATASET
+RUN test "$VITE_STATIC_DATASET" != "true" || (echo "VITE_STATIC_DATASET=true must not be set for the live server build" && exit 1)
 RUN npm run check
 
 FROM node:22-alpine

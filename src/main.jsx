@@ -40,9 +40,14 @@ function reloadForNewBuild(){
     if(Date.now()-last<30000)return false
     sessionStorage.setItem('chunk-reload-at',String(Date.now()))
   }catch{ /* storage blocked: reload once anyway */ }
-  window.location.reload()
+  // A plain reload can be answered from the CDN's copy of the old page, so ask for the page under a fresh query string.
+  const url=new URL(window.location.href)
+  url.searchParams.set('_r',String(Date.now()))
+  window.location.replace(url.toString())
   return true
 }
+// Drop that cache-busting marker again once the new build is running, so shared links stay clean.
+try{const url=new URL(window.location.href);if(url.searchParams.has('_r')){url.searchParams.delete('_r');window.history.replaceState(null,'',url.toString())}}catch{ /* address bar left as is */ }
 window.addEventListener('vite:preloadError',event=>{if(reloadForNewBuild())event.preventDefault()})
 window.addEventListener('unhandledrejection',event=>{
   const message=String(event.reason?.message||event.reason||'')
