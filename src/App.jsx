@@ -708,7 +708,8 @@ function Timeline({year,setYear,compareYear,setCompareYear,onPreset,t,locale}){
 function EventRail({locale,t,year,stories,selectedId,onSelect,onCategoryChange}){
   const [category,setCategory]=useState('all')
   const [query,setQuery]=useState('')
-  const [expanded,setExpanded]=useState(()=>typeof window==='undefined'||!window.matchMedia('(max-width: 720px)').matches)
+  const [expanded,setExpanded]=useState(()=>typeof window==='undefined'||!window.matchMedia('(max-width: 720px), (max-height: 820px)').matches)
+  useEffect(()=>{const query=window.matchMedia('(max-width: 720px), (max-height: 820px)');const follow=event=>setExpanded(!event.matches);query.addEventListener('change',follow);return()=>query.removeEventListener('change',follow)},[])
   const timelineCategories=['all','wars','freedom','unification','political','connections','people','literature','periodicals','artifacts','inscriptions','temples','monuments','heritage','reigns','territory','externalKingdoms','culture']
   const chooseCategory=value=>{setCategory(value);onCategoryChange?.(value)}
   const needle=query.trim().toLowerCase()
