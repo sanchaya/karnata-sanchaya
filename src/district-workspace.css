@@ -63,16 +63,7 @@
 .district-hub .district-history-page{--dh-col:max(clamp(20px,5vw,72px),calc((100% - var(--page-wide))/2));padding-inline:var(--dh-col)}
 .district-hub .district-history-page{background:#fff}
 
-/* Freedom movement view: chips are buttons, and the district map stays inside Local history */
-.district-hub .district-history-page .district-history-freedom button{display:flex;align-items:center;gap:8px;border:1px solid #e2cba9;border-radius:99px;padding:7px 10px;background:#fff;color:#7a4d09;font:inherit;font-size:10px;cursor:pointer}
-.district-hub .district-history-page .district-history-freedom button:hover,.district-hub .district-history-page .district-history-freedom button.active{border-color:#9c3d32;background:#fdeeea}
-.district-hub .district-history-page .district-history-freedom button b{color:#9c3d32}
-.district-hub .district-history-page .district-history-freedom-body{display:grid;grid-template-columns:minmax(0,1fr) clamp(280px,26vw,420px);gap:12px;min-width:0}
-.district-hub .district-history-page .district-history-freedom-map{height:clamp(380px,calc(100vh - 460px),760px);min-width:0;border:1px solid var(--sanchaya-border);border-radius:12px;overflow:hidden}
-.district-hub .district-history-page .district-history-freedom-map .leaflet-container{height:100%}
-.district-hub .district-history-page .district-history-freedom-detail{max-height:clamp(380px,calc(100vh - 460px),760px);overflow:auto;padding:14px;border:1px solid var(--sanchaya-border);border-radius:12px;background:#fff;font-size:13px}
-.district-history-freedom-detail ul{display:grid;gap:8px;margin:8px 0 12px;padding:0;list-style:none}
-.district-history-freedom-detail li{display:grid;gap:2px;padding:8px 10px;border:1px solid #ead9c3;border-radius:8px;background:#fffaf4}
-.district-history-freedom-detail small{color:var(--sanchaya-muted)}
-.district-history-freedom-detail a{color:#7a4d09;font-weight:700}
-@media(max-width:1100px){.district-hub .district-history-page .district-history-freedom-body{grid-template-columns:1fr}.district-hub .district-history-page .district-history-freedom-map{height:clamp(320px,55vh,560px)}.district-hub .district-history-page .district-history-freedom-detail{max-height:none}}
+/* Freedom movement tab embeds the full explorer: its own title and the history filters would repeat what the head and tabs already say */
+.district-hub .district-history-page.panel-freedom>.district-history-filters{display:none}
+.district-hub .freedom-embedded{width:auto;max-width:none;margin:0;padding:0}
+.district-hub .freedom-embedded .freedom-hero{display:none}
