@@ -1,0 +1,19 @@
+/* Era typefaces from fonts.sanchaya.net, subset to Kannada and basic Latin. They download only when a specimen is on screen. */
+@font-face{font-family:"Kadamba Kakusthavarman";src:url("./fonts/Kadamba-Kakusthavarman.woff") format("woff");font-display:swap}
+@font-face{font-family:"Gangga Marasimha";src:url("./fonts/Gangga-Marasimha.woff") format("woff");font-display:swap}
+@font-face{font-family:"Chalukya Vijayaditya";src:url("./fonts/Chalukya-Vijayaditya.woff") format("woff");font-display:swap}
+@font-face{font-family:"Hoysala Regular";src:url("./fonts/Hoysala-Regular.woff") format("woff");font-display:swap}
+@font-face{font-family:"Karnata F Kittel";src:url("./fonts/Karnata-F-Kittel.woff") format("woff");font-display:swap}
+@font-face{font-family:"KarnataGermanMissionPressTypeface";src:url("./fonts/KarnataGermanMissionPressTypeface.woff") format("woff");font-display:swap}
+@font-face{font-family:"KarnataWesleyanMissionPress";src:url("./fonts/KarnataWesleyanMissionPress.woff") format("woff");font-display:swap}
+.script-specimens{margin-top:18px;padding:14px;border:1px solid #e3d6c0;border-radius:12px;background:#fffaf1}
+.script-specimens-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px}
+.script-specimens h4{margin:0}
+.script-specimens-head a{font-size:12px;color:#7a4d09;font-weight:700}
+.script-specimens>p{margin:4px 0 10px;color:var(--sanchaya-muted);font-size:12px}
+.script-specimen-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.script-specimen{display:grid;gap:4px;min-width:0;padding:12px;border:1px solid #ead9c3;border-radius:10px;background:#fff}
+.script-specimen small{color:var(--sanchaya-muted);font-size:10px}
+.script-specimen-word{font-size:34px;line-height:1.25;color:var(--sanchaya-ink);overflow-wrap:anywhere}
+.script-specimen-line{font-size:18px;line-height:1.5;color:#3d3a52;overflow-wrap:anywhere}
+.script-specimen b{font-size:11px;color:#7a4d09}
