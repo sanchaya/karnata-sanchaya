@@ -63,3 +63,15 @@
   .relations-intro p:not(.eyebrow){flex:1 1 360px;margin:0;font-size:12px;line-height:1.4}
   .relations-workspace{height:calc(100vh - 142px - 80px);min-height:520px}
 }
+
+/* The map key collapses on wide desktops too (tablet.css only does it up to 1366px) */
+@media (min-width:1367px) and (any-pointer:fine){
+  .relations-legend.map-overlay-disclosure{width:auto;max-width:none;padding:0;border:0;background:transparent;box-shadow:none}
+  .relations-legend .map-overlay-disclosure-toggle{display:flex;align-items:center;gap:6px;min-height:32px;padding:6px 10px;border:1px solid var(--sanchaya-border);border-radius:8px;background:rgba(255,255,255,.97);box-shadow:var(--sanchaya-shadow);color:var(--sanchaya-blue);font:750 10px/1.15 Inter,"Noto Sans Kannada",sans-serif;cursor:pointer}
+  .relations-legend .map-overlay-disclosure-toggle::after{content:'▾';font-size:9px}
+  .relations-legend .map-overlay-disclosure-content{display:none}
+  .relations-legend.open{max-width:min(300px,calc(100% - 24px));padding:7px;border:1px solid var(--sanchaya-border);border-radius:9px;background:rgba(255,255,255,.97);box-shadow:var(--sanchaya-shadow)}
+  .relations-legend.open .map-overlay-disclosure-toggle{width:100%;justify-content:space-between;box-shadow:none}
+  .relations-legend.open .map-overlay-disclosure-toggle::after{transform:rotate(180deg)}
+  .relations-legend.open .map-overlay-disclosure-content{display:grid;gap:6px;padding:8px 3px 2px}
+}
