@@ -33,3 +33,8 @@ test('the dynasty layer offers a way to bring the older schematic boundaries bac
   const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
   assert.match(app, /key==='dynastyAreas'&&layers\.dynastyAreas&&<label className="map-layer-suboption"/)
 })
+
+test('the map toolbar has a visible dynasty areas button', async () => {
+  const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
+  assert.match(app, /className="map-only-style-toggle dynasty-toggle" aria-pressed=\{layers\.dynastyAreas\}/)
+})
