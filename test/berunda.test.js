@@ -151,3 +151,11 @@ test('the admin can switch Berunda from the Integrations tab', async () => {
   assert.match(admin, /BerundaSettings/, 'the settings card must be part of the Integrations tab')
   assert.match(admin, /name="berunda-mode"/, 'the mode choice must be a radio group')
 })
+
+test('the content security policy lets the Razorpay donate button load', async () => {
+  const source = await readFile(new URL('../server/app.js', import.meta.url), 'utf8')
+  const policy = source.match(/'Content-Security-Policy':"([^"]+)"/)[1]
+  assert.match(policy, /script-src 'self' https:\/\/checkout\.razorpay\.com/)
+  assert.match(policy, /frame-src https:\/\/api\.razorpay\.com/)
+  assert.match(policy, /form-action 'self' https:\/\/api\.razorpay\.com/)
+})
