@@ -1,0 +1,9 @@
+.app-shell main.donate-page{display:block;height:auto;min-height:calc(100vh - 142px);width:min(100%,var(--page-wide,1180px));max-width:none;margin:0 auto;padding:0 0 40px;background:#fff}
+.donate-hero{padding:24px clamp(16px,4vw,48px) 8px}
+.donate-hero .eyebrow{margin:0;color:#28785b}
+.donate-hero h2{margin:2px 0 8px;font:500 clamp(24px,2.6vw,32px)/1.25 Georgia,"Noto Sans Kannada",serif}
+.donate-hero p:not(.eyebrow){max-width:680px;margin:0;color:var(--sanchaya-muted);font-size:14px;line-height:1.6}
+.donate-page .donate-section{margin:16px clamp(16px,4vw,48px) 12px}
+.donate-alt,.donate-teaser{margin:0 clamp(16px,4vw,48px) 24px;color:var(--sanchaya-muted);font-size:13px}
+.donate-teaser{max-width:900px;margin:8px 0 24px;padding:12px 16px;border:1px solid #d9ddff;border-radius:12px;background:#f6f8ff}
+.donate-alt a,.donate-teaser a{color:var(--sanchaya-blue);font-weight:800}
