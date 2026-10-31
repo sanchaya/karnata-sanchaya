@@ -154,8 +154,8 @@ test('mobile and bilingual navigation expose accessible controls', () => {
 
 test('tablet layouts preserve maps, readable cards and non-obstructing controls', () => {
   assert.match(indexSource, /import '\.\/tablet\.css'/, 'tablet overrides must load after the component styles')
-  assert.match(stylesSource, /@media\(max-width:1366px\), \(any-pointer:coarse\)[\s\S]*\.mobile-overlay-toggle\{display:flex/, 'tablet maps must use compact overlay controls at tablet widths and on touch-first devices')
-  assert.match(tabletStylesSource, /@media \(max-width: 1366px\), \(any-pointer: coarse\)/, 'large landscape tablets must receive compact overlay controls')
+  assert.match(stylesSource, /@media\(max-width:1366px\), \(max-height:820px\), \(any-pointer:coarse\)[\s\S]*\.mobile-overlay-toggle\{display:flex/, 'tablet maps must use compact overlay controls at tablet widths and on touch-first devices')
+  assert.match(tabletStylesSource, /@media \(max-width: 1366px\), \(max-height: 820px\), \(any-pointer: coarse\)/, 'large landscape tablets must receive compact overlay controls')
   for (const source of [explorerSource,relationsSource,districtHistorySource]) assert.match(source,/map-overlay-disclosure-toggle/, 'each tablet map explorer must expose a collapsible legend')
   assert.match(tabletStylesSource, /\.explorer-grid \{ grid-template-columns: repeat\(2/, 'tablet literature and epigraphy cards must use two readable columns')
   assert.match(tabletStylesSource, /\.relations-detail \{ position: static/, 'tablet relation details must not cover the map')
