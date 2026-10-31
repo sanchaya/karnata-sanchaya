@@ -13,6 +13,7 @@ import { insertDatasetRevision, latestDataset, publicDataset, repositoryDataset 
 import { emailDeliveryConfigured, sendPasswordResetEmail } from './mailer.js'
 import { notificationSettingsSummary, saveNotificationSettings, sendPortalNotifications } from './notifications.js'
 import { PUBLIC_DATA_ATTRIBUTION } from '../src/data/public-attribution.js'
+import { buildIndex, createLimiter, runBerunda, validateAsk } from './berunda.js'
 
 config.assertProductionSecrets()
 const app=express()
@@ -24,7 +25,8 @@ app.use(express.json({limit:'12mb'}))
 const allowedOrigins=new Set([config.appOrigin])
 const publicMessageOrigins=new Set([config.appOrigin,...config.publicMessageOrigins])
 app.use('/api/public/messages',(req,res,next)=>{const origin=req.get('origin');if(origin&&!publicMessageOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});if(origin)res.set({'Access-Control-Allow-Origin':origin,Vary:'Origin','Access-Control-Allow-Headers':'Content-Type','Access-Control-Allow-Methods':'POST, OPTIONS'});if(req.method==='OPTIONS')return res.status(204).end();next()})
-app.use('/api',(req,res,next)=>{if(req.path==='/public/messages'||['GET','HEAD','OPTIONS'].includes(req.method))return next();const origin=req.get('origin');if(origin&&!allowedOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});next()})
+app.use('/api/berunda',(req,res,next)=>{const origin=req.get('origin');if(origin&&!publicMessageOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});if(origin)res.set({'Access-Control-Allow-Origin':origin,Vary:'Origin','Access-Control-Allow-Headers':'Content-Type','Access-Control-Allow-Methods':'GET, POST, OPTIONS'});if(req.method==='OPTIONS')return res.status(204).end();next()})
+app.use('/api',(req,res,next)=>{if(req.path==='/public/messages'||req.path.startsWith('/berunda/')||['GET','HEAD','OPTIONS'].includes(req.method))return next();const origin=req.get('origin');if(origin&&!allowedOrigins.has(origin))return res.status(403).json({error:'Origin is not allowed.'});next()})
 
 const attempts=new Map()
 const rateLimit=(bucket,max,windowMs)=>(req,res,next)=>{const key=`${bucket}:${req.ip}`;const now=Date.now();const entry=attempts.get(key);if(!entry||entry.until<now){attempts.set(key,{count:1,until:now+windowMs});return next()}if(entry.count>=max)return res.status(429).json({error:'Too many attempts. Please try again later.'});entry.count+=1;next()}
@@ -61,6 +63,32 @@ app.post('/api/public/messages',rateLimit('public-message',10,60*60*1000),async(
   await transaction(async db=>{await db.query(`INSERT INTO portal_messages (id,reference_code,user_id,sender_name,sender_email,category,subject,message,locale,source_deployment,page_url,record_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`,[id,referenceCode,req.user?.id||null,clean(body.name,160)||req.user?.display_name||null,senderEmail||req.user?.email||null,category,subject,message,body.locale==='en'?'en':'kn',sourceDeployment,safeUrl(body.pageUrl),clean(body.recordId,191)||null]);await audit(db,req.user?.id||null,'portal-message.created','portal-message',id,{referenceCode,category,sourceDeployment})})
   sendPortalNotifications(`Karnataka Historical Atlas\n${referenceCode} · ${category}\n${subject}\n${config.appOrigin}/#admin`,pool,config).catch(error=>console.error(error.message))
   res.status(201).json({ok:true,referenceCode})
+})
+// Berunda, the portal's question-answering guide. The search index is rebuilt only when a newer dataset revision is published.
+let berundaIndex=null
+const berundaEnabled=()=>Boolean(config.berunda.apiKey)
+const berundaAllow=createLimiter({perVisitor:config.berunda.perVisitor,daily:config.berunda.dailyLimit})
+async function berundaIndexFor(){
+  const rows=await pool.query('SELECT revision FROM dataset_snapshots ORDER BY revision DESC LIMIT 1')
+  if(!rows.length)return null
+  const revision=Number(rows[0].revision)
+  if(berundaIndex?.revision===revision)return berundaIndex.index
+  const latest=await latestDataset(pool)
+  if(!latest)return null
+  berundaIndex={revision,index:buildIndex(publicDataset(latest.dataset))}
+  return berundaIndex.index
+}
+app.get('/api/berunda/status',(req,res)=>res.set('Cache-Control','public, max-age=300').json({enabled:berundaEnabled()}))
+app.post('/api/berunda/ask',async(req,res)=>{
+  res.set('Cache-Control','no-store')
+  if(!berundaEnabled())return res.status(503).json({error:'Berunda is resting right now.',code:'disabled'})
+  const input=validateAsk(req.body)
+  const verdict=berundaAllow(req.ip)
+  if(!verdict.ok)return res.status(429).json({error:verdict.reason==='daily'?'Berunda has answered many questions today. Please come back tomorrow.':'Please wait a few minutes before asking more questions.',code:verdict.reason})
+  const index=await berundaIndexFor()
+  if(!index)return res.status(503).json({error:'The atlas dataset is not available yet.',code:'no-dataset'})
+  try{res.json(await runBerunda({...input,index,apiKey:config.berunda.apiKey,model:config.berunda.model}))}
+  catch(error){console.error('berunda:',error.message);res.status(502).json({error:'Berunda could not answer just now. Please try again.',code:'model'})}
 })
 app.get('/api/dataset',rateLimit('public-dataset',180,60*60*1000),async(req,res)=>{
   const latest=await latestDataset(pool)

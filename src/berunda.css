@@ -1,0 +1,39 @@
+/* Berunda: header launcher and chat panel. Crimson and gold echo Karnataka's Gandaberunda emblem. */
+.berunda-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.berunda-launcher{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:3px 12px 3px 8px;border:1px solid #e3c36a;border-radius:999px;background:#fff8e1;color:#7a1f1f;font:700 12px Inter,"Noto Sans Kannada",sans-serif;cursor:pointer}
+.berunda-launcher:hover{background:#ffefba}
+.berunda-launcher[aria-expanded="true"]{background:#7a1f1f;border-color:#7a1f1f;color:#fff}
+.berunda-launcher:focus-visible,.berunda-close:focus-visible,.berunda-suggestions button:focus-visible,.berunda-panel form button:focus-visible,.berunda-sources a:focus-visible,.berunda-panel input:focus-visible{outline:2px solid var(--sanchaya-blue,#4361ee);outline-offset:2px}
+.berunda-panel{position:fixed;z-index:1500;top:100px;right:16px;display:flex;flex-direction:column;width:min(400px,calc(100vw - 24px));height:min(640px,calc(100vh - 116px));border:1px solid #e3c36a;border-radius:14px;background:#fff;box-shadow:0 18px 48px rgba(26,26,46,.24);overflow:hidden}
+.berunda-panel>header{display:flex;align-items:center;justify-content:space-between;gap:8px;height:auto;min-height:0;padding:10px 12px;border-bottom:1px solid #f0e2b0;background:#fff8e1;box-shadow:none;color:#7a1f1f}
+.berunda-panel h2{display:flex;align-items:center;gap:8px;margin:0;font:700 15px Inter,"Noto Sans Kannada",sans-serif;color:#7a1f1f}
+.berunda-close{width:32px;height:32px;border:1px solid #e3c36a;border-radius:8px;background:#fff;color:#7a1f1f;font-size:20px;line-height:1;cursor:pointer}
+.berunda-log{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:12px}
+.berunda-message{display:flex;flex-direction:column;gap:6px}
+.berunda-message.user{align-items:flex-end}
+.berunda-bubble{max-width:92%;margin:0;padding:9px 12px;border-radius:12px;font-size:13.5px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.berunda-bubble.assistant{align-self:flex-start;background:#f6f7ff;color:var(--sanchaya-ink,#1a1a2e)}
+.berunda-bubble.user{background:var(--sanchaya-blue-dark,#3f37c9);color:#fff}
+.berunda-bubble.error{background:#fdecea;color:#7a1f1f}
+.berunda-thinking{color:#5c5c78}
+.berunda-suggestions{display:flex;flex-wrap:wrap;gap:6px}
+.berunda-suggestions button{padding:6px 10px;border:1px solid #c8d0ff;border-radius:999px;background:#fff;color:#2f45c4;font:600 12px Inter,"Noto Sans Kannada",sans-serif;cursor:pointer}
+.berunda-suggestions button:hover{background:#eef1ff}
+.berunda-sources{max-width:92%;padding:8px 10px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:10px;font-size:12px}
+.berunda-sources strong{display:block;margin-bottom:4px;color:#5c5c78;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.berunda-sources ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.berunda-sources a{color:#2f45c4;font-weight:650;text-decoration:underline}
+.berunda-sources small{color:#5c5c78}
+.berunda-sources mark{margin-left:6px;padding:1px 6px;border-radius:99px;background:#fff2e4;color:#8a4f0f;font-size:10px;font-weight:700}
+.berunda-panel form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--sanchaya-border,#e0e0e0)}
+.berunda-panel input{flex:1;min-width:0;min-height:40px;padding:8px 10px;border:1px solid #c8c8d8;border-radius:8px;font:13.5px Inter,"Noto Sans Kannada",sans-serif}
+.berunda-panel form button{min-height:40px;padding:0 16px;border:0;border-radius:8px;background:#7a1f1f;color:#fff;font:700 13px Inter,"Noto Sans Kannada",sans-serif;cursor:pointer}
+.berunda-panel form button:disabled{background:#b9a5a5;cursor:not-allowed}
+.berunda-note{margin:0;padding:0 12px 10px;color:#5c5c78;font-size:11px;line-height:1.5}
+@media(max-width:960px){.berunda-launcher span:not(.berunda-sr){display:none}.berunda-launcher{padding:3px 8px}}
+@media(max-width:720px){.berunda-panel{top:70px;left:8px;right:8px;width:auto;height:calc(100vh - 82px)}}
+
+.berunda-hero{align-self:center;flex:0 0 auto;border-radius:14px;box-shadow:0 2px 10px rgba(122,31,31,.18)}
+@media(max-width:1400px){.berunda-launcher span:not(.berunda-sr){display:none}.berunda-launcher{padding:3px 8px}}
+@media(prefers-reduced-motion:no-preference){.berunda-panel{animation:berunda-in .18s ease-out}@keyframes berunda-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}}
+@media(max-width:1400px){.sanchaya-product-brand .header-secondary{display:none}}
