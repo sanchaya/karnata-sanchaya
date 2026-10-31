@@ -1,7 +1,7 @@
-import {useEffect,useRef,useState} from 'react'
+import {useState} from 'react'
 import {ATLAS_RELEASE_VERSION} from './data/atlas.js'
 
-const RAZORPAY_BUTTON_ID='pl_FTB1pZqrFP6jrt'
+const DONATE_ONLINE_URL='https://sanchaya.org/support-us/'
 const BANKS=[{bank:'SBI, Channasandra Branch',account:'34546182259',ifsc:'SBIN0017780'},{bank:'HDFC Bank',account:'50200074723594',ifsc:'HDFC0004178'}]
 
 const copy={
@@ -16,7 +16,7 @@ const copy={
     stewardshipTitle:'ನಿರ್ವಹಣೆ ಮತ್ತು ಸಹಯೋಗ',stewardship:'ಸಂಚಯ ಈ ವೇದಿಕೆಯ ತಾಂತ್ರಿಕ ಮತ್ತು ಸಮುದಾಯ ನಿರ್ವಹಣೆಯನ್ನು ಮುನ್ನಡೆಸುತ್ತದೆ. ವಿಶ್ವವಿದ್ಯಾಲಯಗಳು, ಇತಿಹಾಸ ಸಂಸ್ಥೆಗಳು, ಕ್ಷೇತ್ರ ಸಂಶೋಧಕರು ಮತ್ತು ಸಾರ್ವಜನಿಕ ಜ್ಞಾನ ಯೋಜನೆಗಳ ಸಹಯೋಗವನ್ನು ಸ್ವಾಗತಿಸಲಾಗುತ್ತದೆ.',
     explore:'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗಗಳು',evidence:'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ',contribute:'ಕೊಡುಗೆ ನೀಡಿ',sanchaya:'ಸಂಚಯದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು',
     initiativeBy:'ಸಂಚಯದ ಯೋಜನೆ',inCollab:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ',copy:'ನಕಲಿಸಿ',copied:'ನಕಲಿಸಲಾಗಿದೆ',
-    donateTitle:'ಈ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ',donateIntro:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ. ಸಂಚಯದ ಯೋಜನೆಗಳು 2011 ರಿಂದ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ನಡೆಯುತ್ತಿವೆ. ಸಂಚಿ ಫೌಂಡೇಶನ್ ಮೂಲಕ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಇದೆ.',donateOnline:'ಆನ್‌ಲೈನ್ ದೇಣಿಗೆ',donateBank:'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',accountName:'ಖಾತೆ ಹೆಸರು',accountNo:'ಖಾತೆ ಸಂಖ್ಯೆ',ifsc:'IFSC',donateMore:'ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು (ಚೆಕ್ ಮತ್ತು ಇತರೆ)'
+    donateTitle:'ಈ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ',donateIntro:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ. ಸಂಚಯದ ಯೋಜನೆಗಳು 2011 ರಿಂದ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ನಡೆಯುತ್ತಿವೆ. ಸಂಚಿ ಫೌಂಡೇಶನ್ ಮೂಲಕ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಇದೆ.',donateOnline:'ಆನ್‌ಲೈನ್ ದೇಣಿಗೆ',donateNow:'ಈಗ ದೇಣಿಗೆ ನೀಡಿ',donateNowNote:'ಸಂಚಯದ ಬೆಂಬಲ ಪುಟ ಹೊಸ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ.',donateBank:'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',accountName:'ಖಾತೆ ಹೆಸರು',accountNo:'ಖಾತೆ ಸಂಖ್ಯೆ',ifsc:'IFSC',donateMore:'ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು (ಚೆಕ್ ಮತ್ತು ಇತರೆ)'
   },
   en:{
     eyebrow:'Karnataka Historical Atlas · About',
@@ -29,24 +29,14 @@ const copy={
     stewardshipTitle:'Stewardship and collaboration',stewardship:'Sanchaya leads the platform’s technical and community stewardship. Collaborations with universities, history organisations, field researchers and public-knowledge projects are welcome.',
     explore:'Resources & collaborations',evidence:'Evidence workflow',contribute:'Contribute',sanchaya:'Learn more about Sanchaya',
     initiativeBy:'A Sanchaya initiative',inCollab:'Sanchaya is now part of Sanchi Foundation',copy:'Copy',copied:'Copied',
-    donateTitle:'Support this work',donateIntro:'Sanchaya is now part of Sanchi Foundation. Sanchaya’s projects have run on volunteer effort since 2011. Donations made through Sanchi Foundation receive 80G income tax exemption.',donateOnline:'Donate online',donateBank:'Bank transfer',accountName:'Account name',accountNo:'Account number',ifsc:'IFSC',donateMore:'More ways to give (cheque and others)'
+    donateTitle:'Support this work',donateIntro:'Sanchaya is now part of Sanchi Foundation. Sanchaya’s projects have run on volunteer effort since 2011. Donations made through Sanchi Foundation receive 80G income tax exemption.',donateOnline:'Donate online',donateNow:'Donate now',donateNowNote:'Opens the Sanchaya support page in a new tab.',donateBank:'Bank transfer',accountName:'Account name',accountNo:'Account number',ifsc:'IFSC',donateMore:'More ways to give (cheque and others)'
   }
 }
 
-function RazorpayButton(){
-  const form=useRef(null)
-  useEffect(()=>{
-    const node=form.current
-    // Append once: StrictMode re-runs effects, and removing a script mid-load makes Razorpay's loader throw on a null parent.
-    if(!node||node.dataset.loaded)return
-    node.dataset.loaded='1'
-    const script=document.createElement('script')
-    script.src='https://checkout.razorpay.com/v1/payment-button.js'
-    script.async=true
-    script.dataset.payment_button_id=RAZORPAY_BUTTON_ID
-    node.appendChild(script)
-  },[])
-  return <form ref={form} className="donate-razorpay"></form>
+// Razorpay's embedded button script evaluates strings as code, which the live server's content security policy (rightly) blocks.
+// Online giving therefore opens the Sanchaya support page, where the Razorpay button lives; swap in a direct Razorpay page link here when one exists.
+function OnlineDonate({t}){
+  return <div className="donate-online-action"><a className="donate-button" href={DONATE_ONLINE_URL} target="_blank" rel="noreferrer">{t.donateNow} ↗</a><small>{t.donateNowNote}</small></div>
 }
 
 function CopyValue({value,label,t}){
@@ -61,7 +51,7 @@ export function DonateSection({locale}){
     <section className="donate-section" aria-labelledby="donate-title">
       <div className="donate-intro"><h3 id="donate-title">{t.donateTitle}</h3><p>{t.donateIntro}</p><a href="https://sanchaya.org/support-us/" target="_blank" rel="noreferrer">{t.donateMore} ↗</a></div>
       <div className="donate-grid">
-        <article className="donate-online"><h4>{t.donateOnline}</h4><RazorpayButton/></article>
+        <article className="donate-online"><h4>{t.donateOnline}</h4><OnlineDonate t={t}/></article>
         {BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}
       </div>
     </section>

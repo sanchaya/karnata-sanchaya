@@ -152,12 +152,14 @@ test('the admin can switch Berunda from the Integrations tab', async () => {
   assert.match(admin, /name="berunda-mode"/, 'the mode choice must be a radio group')
 })
 
-test('the content security policy lets the Razorpay donate button load', async () => {
+test('the content security policy stays strict and the donate page does not embed Razorpay scripts', async () => {
   const source = await readFile(new URL('../server/app.js', import.meta.url), 'utf8')
+  const about = await readFile(new URL('../src/About.jsx', import.meta.url), 'utf8')
   const policy = source.match(/'Content-Security-Policy':"([^"]+)"/)[1]
-  assert.match(policy, /script-src 'self' https:\/\/checkout\.razorpay\.com/)
-  assert.match(policy, /frame-src https:\/\/api\.razorpay\.com/)
-  assert.match(policy, /form-action 'self' https:\/\/api\.razorpay\.com/)
+  assert.equal(policy.match(/script-src ([^;]*)/)[1], "'self'")
+  assert.doesNotMatch(policy, /razorpay|unsafe-eval/i)
+  assert.doesNotMatch(about, /checkout\.razorpay\.com/, 'embedding the Razorpay script needs unsafe-eval, which the policy must not allow')
+  assert.match(about, /DONATE_ONLINE_URL/)
 })
 
 test('the signed-out session check answers 200 with no user instead of a 401', async () => {

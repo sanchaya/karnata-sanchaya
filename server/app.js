@@ -19,7 +19,7 @@ config.assertProductionSecrets()
 const app=express()
 if(config.trustProxy)app.set('trust proxy',1)
 app.disable('x-powered-by')
-app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' https://checkout.razorpay.com; connect-src 'self' https://tile.openstreetmap.org https://api.razorpay.com https://lumberjack.razorpay.com; frame-src https://api.razorpay.com https://checkout.razorpay.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.razorpay.com",'X-Robots-Tag':'noai, noimageai','X-Karnata-Origin':PUBLIC_DATA_ATTRIBUTION.canonicalUrl,'Cross-Origin-Resource-Policy':'same-site'});next()})
+app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'strict-origin-when-cross-origin','Permissions-Policy':'camera=(), microphone=(), geolocation=()','Content-Security-Policy':"default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://tile.openstreetmap.org; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",'X-Robots-Tag':'noai, noimageai','X-Karnata-Origin':PUBLIC_DATA_ATTRIBUTION.canonicalUrl,'Cross-Origin-Resource-Policy':'same-site'});next()})
 app.use(express.json({limit:'12mb'}))
 
 const allowedOrigins=new Set([config.appOrigin])
