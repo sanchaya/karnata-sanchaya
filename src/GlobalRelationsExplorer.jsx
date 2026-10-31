@@ -152,14 +152,19 @@ function RelationViewport({selected}){
   return null
 }
 
-export default function GlobalRelationsExplorer({locale='kn',mapTheme='modern',setMapTheme,onOpenAtlas}){
-  const t=copy[locale]
+const indiaCopy={
+  kn:{title:'ಭಾರತದ ಜಾಗತಿಕ ಸಂಬಂಧಗಳು',subtitle:'ಭಾರತ · ಐತಿಹಾಸಿಕ ಮಾರ್ಗಗಳು · ವಿದೇಶಿ ಸಂಪರ್ಕ'},
+  en:{title:'India’s Global Relations',subtitle:'India · historical corridors · foreign contact'}
+}
+
+export default function GlobalRelationsExplorer({locale='kn',mapTheme='modern',setMapTheme,onOpenAtlas,scope='karnataka'}){
+  const t=scope==='india'?{...copy[locale],...indiaCopy[locale]}:copy[locale]
   const [query,setQuery]=useState('')
   const [region,setRegion]=useState('all')
   const [corridor,setCorridor]=useState('all')
   const [category,setCategory]=useState('all')
   const [control,setControl]=useState('all')
-  const [focus,setFocus]=useState('karnata-rule')
+  const [focus,setFocus]=useState(scope==='india'?'all':'karnata-rule')
   const [polity,setPolity]=useState('all')
   const [century,setCentury]=useState('all')
   const [selectedId,setSelectedId]=useState('event-domingo-paes-vijayanagara')
