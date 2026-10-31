@@ -21,8 +21,15 @@ const osmTileEndpointPlugin={
   },
 }
 
+// Cloudflare's Rocket Loader rewrites and delays page scripts, which breaks ES-module apps with lazy chunks.
+// A script marked data-cfasync="false" is left alone, so the opt-out lives in the build rather than a dashboard rule.
+const cloudflareScriptOptOutPlugin={
+  name:'atlas-cloudflare-script-opt-out',
+  transformIndexHtml:{order:'post',handler:html=>html.replace(/<script(?![^>]*data-cfasync)([^>]*\ssrc=)/g,'<script data-cfasync="false"$1')},
+}
+
 export default defineConfig({
-  plugins: [react(),peopleSeedPlugin,osmTileEndpointPlugin],
+  plugins: [react(),peopleSeedPlugin,osmTileEndpointPlugin,cloudflareScriptOptOutPlugin],
   base: './',
   server: {
     host: '0.0.0.0',

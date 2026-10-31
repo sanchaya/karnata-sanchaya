@@ -566,5 +566,7 @@ test('a redeploy never leaves older tabs failing with an HTML response for a mis
   assert.match(mainSource, /vite:preloadError/, 'a failed chunk preload must trigger a one-time reload onto the new build')
   assert.match(mainSource, /chunk-reload-at/, 'the chunk reload must be rate-limited so it cannot loop')
   assert.match(mainSource, /searchParams\.set\('_r'/, 'the recovery reload must bypass a CDN-cached copy of the old page')
+  const viteConfig = await readFile(new URL('../vite.config.js', import.meta.url), 'utf8')
+  assert.match(viteConfig, /data-cfasync="false"/, 'built scripts must opt out of Cloudflare Rocket Loader')
   assert.match(workerSource, /text\/html/, 'the service worker must not cache an HTML page as a script or style response')
 })
