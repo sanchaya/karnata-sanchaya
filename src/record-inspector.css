@@ -480,3 +480,12 @@
 
 /* Header and tabs keep their natural height; only the body scrolls */
 .record-inspector-head,.record-inspector-tabs{flex-shrink:0}
+
+/* The head/foot are <header>/<footer>: neutralise the global site header/footer rules (fixed 94px height, space-between) */
+.record-inspector header.record-inspector-head{height:auto;min-height:0;display:block;box-shadow:none;background:#fff;color:var(--sanchaya-ink)}
+.record-inspector footer.record-inspector-foot{justify-content:flex-start;align-items:stretch;color:var(--sanchaya-ink);font-size:inherit}
+
+/* Keep the floating contact launcher off the inspector's action buttons (desktop, record open) */
+@media(min-width:1051px){
+  .app-shell:has(.record-inspector) .contact-chat-launcher{right:auto;left:16px;bottom:56px}
+}
