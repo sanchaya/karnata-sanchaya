@@ -2,6 +2,7 @@ import {useState} from 'react'
 import {ATLAS_RELEASE_VERSION} from './data/atlas.js'
 
 const DONATE_ONLINE_URL='https://sanchaya.org/support-us/'
+const UPI_ID='sanchifoundationr.62662878@hdfcbank'
 const BANKS=[{bank:'SBI, Channasandra Branch',account:'34546182259',ifsc:'SBIN0017780'},{bank:'HDFC Bank',account:'50200074723594',ifsc:'HDFC0004178'}]
 
 const copy={
@@ -16,7 +17,7 @@ const copy={
     stewardshipTitle:'ನಿರ್ವಹಣೆ ಮತ್ತು ಸಹಯೋಗ',stewardship:'ಸಂಚಯ ಈ ವೇದಿಕೆಯ ತಾಂತ್ರಿಕ ಮತ್ತು ಸಮುದಾಯ ನಿರ್ವಹಣೆಯನ್ನು ಮುನ್ನಡೆಸುತ್ತದೆ. ವಿಶ್ವವಿದ್ಯಾಲಯಗಳು, ಇತಿಹಾಸ ಸಂಸ್ಥೆಗಳು, ಕ್ಷೇತ್ರ ಸಂಶೋಧಕರು ಮತ್ತು ಸಾರ್ವಜನಿಕ ಜ್ಞಾನ ಯೋಜನೆಗಳ ಸಹಯೋಗವನ್ನು ಸ್ವಾಗತಿಸಲಾಗುತ್ತದೆ.',
     explore:'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗಗಳು',evidence:'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ',contribute:'ಕೊಡುಗೆ ನೀಡಿ',sanchaya:'ಸಂಚಯದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು',
     initiativeBy:'ಸಂಚಯದ ಯೋಜನೆ',inCollab:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ',copy:'ನಕಲಿಸಿ',copied:'ನಕಲಿಸಲಾಗಿದೆ',
-    donateTitle:'ಈ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ',donateIntro:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ. ಸಂಚಯದ ಯೋಜನೆಗಳು 2011 ರಿಂದ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ನಡೆಯುತ್ತಿವೆ. ಸಂಚಿ ಫೌಂಡೇಶನ್ ಮೂಲಕ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಇದೆ.',donateOnline:'ಆನ್‌ಲೈನ್ ದೇಣಿಗೆ',donateNow:'ಈಗ ದೇಣಿಗೆ ನೀಡಿ',donateNowNote:'ಸಂಚಯದ ಬೆಂಬಲ ಪುಟ ಹೊಸ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ.',donateBank:'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',accountName:'ಖಾತೆ ಹೆಸರು',accountNo:'ಖಾತೆ ಸಂಖ್ಯೆ',ifsc:'IFSC',donateMore:'ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು (ಚೆಕ್ ಮತ್ತು ಇತರೆ)'
+    donateTitle:'ಈ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ',donateIntro:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ. ಸಂಚಯದ ಯೋಜನೆಗಳು 2011 ರಿಂದ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ನಡೆಯುತ್ತಿವೆ. ಸಂಚಿ ಫೌಂಡೇಶನ್ ಮೂಲಕ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಇದೆ.',donateOnline:'ಆನ್‌ಲೈನ್ ದೇಣಿಗೆ',donateQr:'QR / UPI ಮೂಲಕ ಪಾವತಿಸಿ',donateQrAlt:'ಸಂಚಿ ಫೌಂಡೇಶನ್‌ಗೆ ಪಾವತಿಸಲು BharatQR ಕೋಡ್',donateQrNote:'ಯಾವುದೇ BharatQR ಅಥವಾ UPI ಆ್ಯಪ್‌ನಿಂದ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ.',donateNow:'ಈಗ ದೇಣಿಗೆ ನೀಡಿ',donateNowNote:'ಸಂಚಯದ ಬೆಂಬಲ ಪುಟ ಹೊಸ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ.',donateBank:'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',accountName:'ಖಾತೆ ಹೆಸರು',accountNo:'ಖಾತೆ ಸಂಖ್ಯೆ',ifsc:'IFSC',donateMore:'ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು (ಚೆಕ್ ಮತ್ತು ಇತರೆ)'
   },
   en:{
     eyebrow:'Karnataka Historical Atlas · About',
@@ -29,7 +30,7 @@ const copy={
     stewardshipTitle:'Stewardship and collaboration',stewardship:'Sanchaya leads the platform’s technical and community stewardship. Collaborations with universities, history organisations, field researchers and public-knowledge projects are welcome.',
     explore:'Resources & collaborations',evidence:'Evidence workflow',contribute:'Contribute',sanchaya:'Learn more about Sanchaya',
     initiativeBy:'A Sanchaya initiative',inCollab:'Sanchaya is now part of Sanchi Foundation',copy:'Copy',copied:'Copied',
-    donateTitle:'Support this work',donateIntro:'Sanchaya is now part of Sanchi Foundation. Sanchaya’s projects have run on volunteer effort since 2011. Donations made through Sanchi Foundation receive 80G income tax exemption.',donateOnline:'Donate online',donateNow:'Donate now',donateNowNote:'Opens the Sanchaya support page in a new tab.',donateBank:'Bank transfer',accountName:'Account name',accountNo:'Account number',ifsc:'IFSC',donateMore:'More ways to give (cheque and others)'
+    donateTitle:'Support this work',donateIntro:'Sanchaya is now part of Sanchi Foundation. Sanchaya’s projects have run on volunteer effort since 2011. Donations made through Sanchi Foundation receive 80G income tax exemption.',donateOnline:'Donate online',donateQr:'Pay by QR / UPI',donateQrAlt:'BharatQR code for paying Sanchi Foundation',donateQrNote:'Scan with any BharatQR or UPI app.',donateNow:'Donate now',donateNowNote:'Opens the Sanchaya support page in a new tab.',donateBank:'Bank transfer',accountName:'Account name',accountNo:'Account number',ifsc:'IFSC',donateMore:'More ways to give (cheque and others)'
   }
 }
 
@@ -47,11 +48,13 @@ function CopyValue({value,label,t}){
 
 export function DonateSection({locale}){
   const t=copy[locale]||copy.kn
+  const base=import.meta.env.BASE_URL
   return (
     <section className="donate-section" aria-labelledby="donate-title">
       <div className="donate-intro"><h3 id="donate-title">{t.donateTitle}</h3><p>{t.donateIntro}</p><a href="https://sanchaya.org/support-us/" target="_blank" rel="noreferrer">{t.donateMore} ↗</a></div>
       <div className="donate-grid">
         <article className="donate-online"><h4>{t.donateOnline}</h4><OnlineDonate t={t}/></article>
+        <article className="donate-qr"><h4>{t.donateQr}</h4><img src={`${base}donate-qr.jpg`} alt={t.donateQrAlt} width="705" height="1053" loading="lazy"/><dl><div><dt>UPI ID</dt><dd><CopyValue value={UPI_ID} label="UPI ID" t={t}/></dd></div></dl><small>{t.donateQrNote}</small></article>
         {BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}
       </div>
     </section>
