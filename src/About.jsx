@@ -15,8 +15,8 @@ const copy={
     languageTitle:'ಕನ್ನಡ ಮೊದಲು',language:'ಕನ್ನಡವು ಪ್ರಧಾನ ಅನುಭವ. ಇಂಗ್ಲಿಷ್ ಪೂರಕ ಸಂಶೋಧನಾ ಭಾಷೆಯಾಗಿ ಉಳಿಯುತ್ತದೆ. ಮೂಲ ಪಾಠ, ಅನುವಾದ ಮತ್ತು ಸ್ಥಳನಾಮಗಳ ಕನ್ನಡ ಗುಣಮಟ್ಟಕ್ಕೆ ಸ್ವತಂತ್ರ ವಿಮರ್ಶೆ ಅಗತ್ಯ.',
     stewardshipTitle:'ನಿರ್ವಹಣೆ ಮತ್ತು ಸಹಯೋಗ',stewardship:'ಸಂಚಯ ಈ ವೇದಿಕೆಯ ತಾಂತ್ರಿಕ ಮತ್ತು ಸಮುದಾಯ ನಿರ್ವಹಣೆಯನ್ನು ಮುನ್ನಡೆಸುತ್ತದೆ. ವಿಶ್ವವಿದ್ಯಾಲಯಗಳು, ಇತಿಹಾಸ ಸಂಸ್ಥೆಗಳು, ಕ್ಷೇತ್ರ ಸಂಶೋಧಕರು ಮತ್ತು ಸಾರ್ವಜನಿಕ ಜ್ಞಾನ ಯೋಜನೆಗಳ ಸಹಯೋಗವನ್ನು ಸ್ವಾಗತಿಸಲಾಗುತ್ತದೆ.',
     explore:'ಆಕರಗಳು ಮತ್ತು ಸಹಯೋಗಗಳು',evidence:'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ',contribute:'ಕೊಡುಗೆ ನೀಡಿ',sanchaya:'ಸಂಚಯದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು',
-    initiativeBy:'ಸಂಚಯದ ಯೋಜನೆ',inCollab:'ಸಹಯೋಗ',copy:'ನಕಲಿಸಿ',copied:'ನಕಲಿಸಲಾಗಿದೆ',
-    donateTitle:'ಈ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ',donateIntro:'ಸಂಚಯದ ಯೋಜನೆಗಳು 2011 ರಿಂದ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ನಡೆಯುತ್ತಿವೆ. ಸಂಚಿ ಫೌಂಡೇಶನ್ ಮೂಲಕ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಇದೆ.',donateOnline:'ಆನ್‌ಲೈನ್ ದೇಣಿಗೆ',donateBank:'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',accountName:'ಖಾತೆ ಹೆಸರು',accountNo:'ಖಾತೆ ಸಂಖ್ಯೆ',ifsc:'IFSC',donateMore:'ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು (ಚೆಕ್ ಮತ್ತು ಇತರೆ)'
+    initiativeBy:'ಸಂಚಯದ ಯೋಜನೆ',inCollab:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ',copy:'ನಕಲಿಸಿ',copied:'ನಕಲಿಸಲಾಗಿದೆ',
+    donateTitle:'ಈ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ',donateIntro:'ಸಂಚಯ ಈಗ ಸಂಚಿ ಫೌಂಡೇಶನ್‌ನ ಭಾಗ. ಸಂಚಯದ ಯೋಜನೆಗಳು 2011 ರಿಂದ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ನಡೆಯುತ್ತಿವೆ. ಸಂಚಿ ಫೌಂಡೇಶನ್ ಮೂಲಕ ನೀಡುವ ದೇಣಿಗೆಗಳಿಗೆ 80G ಆದಾಯ ತೆರಿಗೆ ವಿನಾಯಿತಿ ಇದೆ.',donateOnline:'ಆನ್‌ಲೈನ್ ದೇಣಿಗೆ',donateBank:'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ',accountName:'ಖಾತೆ ಹೆಸರು',accountNo:'ಖಾತೆ ಸಂಖ್ಯೆ',ifsc:'IFSC',donateMore:'ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು (ಚೆಕ್ ಮತ್ತು ಇತರೆ)'
   },
   en:{
     eyebrow:'Karnataka Historical Atlas · About',
@@ -28,8 +28,8 @@ const copy={
     languageTitle:'Kannada first',language:'Kannada is the primary experience, with English as a supporting research language. Original texts, translations and Kannada place names require independent review.',
     stewardshipTitle:'Stewardship and collaboration',stewardship:'Sanchaya leads the platform’s technical and community stewardship. Collaborations with universities, history organisations, field researchers and public-knowledge projects are welcome.',
     explore:'Resources & collaborations',evidence:'Evidence workflow',contribute:'Contribute',sanchaya:'Learn more about Sanchaya',
-    initiativeBy:'A Sanchaya initiative',inCollab:'In collaboration with',copy:'Copy',copied:'Copied',
-    donateTitle:'Support this work',donateIntro:'Sanchaya’s projects have run on volunteer effort since 2011. Donations made through Sanchi Foundation receive 80G income tax exemption.',donateOnline:'Donate online',donateBank:'Bank transfer',accountName:'Account name',accountNo:'Account number',ifsc:'IFSC',donateMore:'More ways to give (cheque and others)'
+    initiativeBy:'A Sanchaya initiative',inCollab:'Sanchaya is now part of Sanchi Foundation',copy:'Copy',copied:'Copied',
+    donateTitle:'Support this work',donateIntro:'Sanchaya is now part of Sanchi Foundation. Sanchaya’s projects have run on volunteer effort since 2011. Donations made through Sanchi Foundation receive 80G income tax exemption.',donateOnline:'Donate online',donateBank:'Bank transfer',accountName:'Account name',accountNo:'Account number',ifsc:'IFSC',donateMore:'More ways to give (cheque and others)'
   }
 }
 
