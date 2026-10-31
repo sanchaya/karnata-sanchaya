@@ -171,7 +171,8 @@ app.post('/api/auth/login',rateLimit('login',12,15*60*1000),async(req,res)=>{
   const roles=await rolesFor(pool,user.id);res.json({user:publicUser(user,roles)})
 })
 app.post('/api/auth/logout',requireUser,async(req,res)=>{const token=cookies(req).kha_session;if(token)await pool.query('DELETE FROM sessions WHERE token_hash=?',[sha256(token)]);res.clearCookie('kha_session',{path:'/'});res.json({ok:true})})
-app.get('/api/auth/me',requireUser,async(req,res)=>{const rows=await pool.query('SELECT COALESCE(SUM(points),0) karma FROM karma_ledger WHERE user_id=?',[req.user.id]);res.json({user:publicUser(req.user,req.roles,rows[0]?.karma)})})
+// A signed-out visitor is a normal state: answer 200 with no user so browsers do not log a red 401 on every page load.
+app.get('/api/auth/me',async(req,res)=>{if(!req.user)return res.json({user:null});const rows=await pool.query('SELECT COALESCE(SUM(points),0) karma FROM karma_ledger WHERE user_id=?',[req.user.id]);res.json({user:publicUser(req.user,req.roles,rows[0]?.karma)})})
 app.put('/api/auth/profile',requireUser,async(req,res)=>{
   const body=req.body||{}
   const displayName=clean(body.displayName,160),displayNameKn=clean(body.displayNameKn,160)||null,profession=clean(body.profession,80)

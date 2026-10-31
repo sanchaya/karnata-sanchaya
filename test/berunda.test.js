@@ -159,3 +159,10 @@ test('the content security policy lets the Razorpay donate button load', async (
   assert.match(policy, /frame-src https:\/\/api\.razorpay\.com/)
   assert.match(policy, /form-action 'self' https:\/\/api\.razorpay\.com/)
 })
+
+test('the signed-out session check answers 200 with no user instead of a 401', async () => {
+  const source = await readFile(new URL('../server/app.js', import.meta.url), 'utf8')
+  const route = source.match(/app\.get\('\/api\/auth\/me'[^\n]*/)[0]
+  assert.doesNotMatch(route, /requireUser/)
+  assert.match(route, /if\(!req\.user\)return res\.json\(\{user:null\}\)/)
+})

@@ -45,3 +45,15 @@
 .india-research-audit-note li{display:flex;align-items:baseline;gap:6px;padding:6px 10px;border:1px solid #e1e5f5;border-radius:99px;background:#fff}
 .india-research-audit-note li b{color:var(--sanchaya-ink)}
 .india-research-audit-note li span{color:var(--sanchaya-muted)}
+.india-research-record-foot summary{cursor:pointer;color:var(--sanchaya-blue);font-size:12px;font-weight:700}
+.india-research-record-foot ul{display:grid;gap:3px;max-height:150px;margin:6px 0 0;padding:0;overflow:auto;list-style:none;font-size:11px}
+.india-research-record-foot ul a{padding:0;border:0;background:none;font-size:11px;font-weight:500;overflow-wrap:anywhere}
+.india-research-record-foot small{color:var(--sanchaya-muted)}
+.india-research-results>header small{margin-left:4px}
+
+/* Stats on one compact line: number beside its label, wrapping only when the screen is too narrow */
+.india-research-page .india-research-stats{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:14px 0}
+.india-research-page .india-research-stats span{display:inline-flex;align-items:baseline;gap:6px;padding:5px 11px;border-radius:99px;font-size:11px;white-space:nowrap}
+.india-research-page .india-research-stats b{font-size:15px;line-height:1}
+.india-research-grid details.india-research-record-foot{display:block}
+.india-research-record-foot small{display:block;margin-top:4px}

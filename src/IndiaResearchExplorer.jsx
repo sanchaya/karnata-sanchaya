@@ -9,6 +9,8 @@ const PAGE_SIZE=80
 const kindColors={event:'#a83e32','district-event':'#9b4b36',milestone:'#4361ee',kingdom:'#26735f',ruler:'#79538f',territory:'#c27b25',monument:'#80572f',inscription:'#9a6b24','corpus-page-lead':'#657084'}
 const yearLabel=value=>value==null?'':`${Math.abs(value)} ${value<0?'BCE':'CE'}`
 const safeText=value=>String(value||'')
+// Crawled page summaries start with the source site's menu text; keep only what comes before it.
+const cleanSummary=value=>safeText(value).split(/The Indian Analyst/)[0].trim()
 
 export default function IndiaResearchExplorer({locale='en',dataset='history'}){
   const kn=locale==='kn'
@@ -30,6 +32,17 @@ export default function IndiaResearchExplorer({locale='en',dataset='history'}){
       return [record.title,record.summary,record.place,record.district,record.taluk,record.publication,record.volume,record.number,record.category,record.sourceClaim].some(value=>safeText(value).toLowerCase().includes(needle))
     })
   },[records,scope,kind,query,year])
+  // Crawled page leads repeat one collection title thousands of times; show one card per collection with its pages listed.
+  const grouped=useMemo(()=>{
+    const byTitle=new Map(),out=[]
+    for(const record of filtered){
+      if(record.kind!=='corpus-page-lead'){out.push(record);continue}
+      const group=byTitle.get(record.title)
+      if(group)group.pages.push(record)
+      else{const lead={...record,pages:[record]};byTitle.set(record.title,lead);out.push(lead)}
+    }
+    return out
+  },[filtered])
   const mapped=useMemo(()=>filtered.filter(record=>Number.isFinite(record.lat)&&Number.isFinite(record.lng)).slice(0,700),[filtered])
   const counts=indiaResearchIndex.meta
   return <main className="india-research-page">
@@ -63,17 +76,17 @@ export default function IndiaResearchExplorer({locale='en',dataset='history'}){
       </MapContainer>
     </section>}
     <section className="india-research-results">
-      <header><div><strong>{filtered.length.toLocaleString('en-IN')}</strong> {kn?'ದಾಖಲೆಗಳು ಹೊಂದಿಕೆಯಾಗಿವೆ':'matching records'}</div><small>{kn?'ಎಲ್ಲಾ ದಾಖಲೆಗಳು ಮಾನವ ಪರಿಶೀಲನೆಗಾಗಿ ಕಾಯುತ್ತಿವೆ':'All records await human review'}</small></header>
-      <div className="india-research-grid">{filtered.slice(0,limit).map(record=><article key={record.id} className={selected?.id===record.id?'selected':''}>
+      <header><div><strong>{grouped.length.toLocaleString('en-IN')}</strong> {kn?'ದಾಖಲೆಗಳು ಹೊಂದಿಕೆಯಾಗಿವೆ':'matching records'}{grouped.length!==filtered.length&&<small> · {filtered.length.toLocaleString('en-IN')} {kn?'ಮೂಲ ಪುಟಗಳು':'source pages'}</small>}</div><small>{kn?'ಎಲ್ಲಾ ದಾಖಲೆಗಳು ಮಾನವ ಪರಿಶೀಲನೆಗಾಗಿ ಕಾಯುತ್ತಿವೆ':'All records await human review'}</small></header>
+      <div className="india-research-grid">{grouped.slice(0,limit).map(record=><article key={record.id} className={selected?.id===record.id?'selected':''}>
         <div className="india-research-record-meta"><span>{record.kind} · {record.provider}</span><em>{record.reviewStatus}</em></div>
         <h3>{record.title}</h3>
         <p className="india-research-locator">{[record.place,record.district,record.taluk,record.publication&&`${record.publication}${record.volume?` · Vol. ${record.volume}`:''}`,record.number&&`No. ${record.number}`,record.page&&`p. ${record.page}`].filter(Boolean).join(' · ')}</p>
-        {[record.yearFrom,record.yearTo].some(value=>value!=null&&value!==0)&&<time>{yearLabel(record.yearFrom)}{record.yearTo!=null&&record.yearTo!==record.yearFrom?` – ${yearLabel(record.yearTo)}`:''}</time>}
-        {record.summary&&<p>{record.summary.slice(0,720)}</p>}
+        {!record.pages&&[record.yearFrom,record.yearTo].some(value=>value!=null&&value!==0)&&<time>{yearLabel(record.yearFrom)}{record.yearTo!=null&&record.yearTo!==record.yearFrom?` – ${yearLabel(record.yearTo)}`:''}</time>}
+        {record.summary&&cleanSummary(record.summary)&&<p>{cleanSummary(record.summary).slice(0,720)}</p>}
         {record.sourceClaim&&<div className="india-research-source-claim"><b>{kn?'ಆಮದು ಮಾಡಿದ ಮೂಲ ಸೂಚನೆ — ಪರಿಶೀಲಿಸಬೇಕು':'Imported source claim — verify'}</b><span>{record.sourceClaim}</span></div>}
-        {record.url&&<div className="india-research-record-foot"><a href={record.url} target="_blank" rel="noreferrer">{kn?'ಉಲ್ಲೇಖಿತ ಮೂಲ ಪುಟ ↗':'Cited source page ↗'}</a></div>}
+        {record.pages?.length>1?<details className="india-research-record-foot"><summary>{record.pages.length.toLocaleString('en-IN')} {kn?'ಮೂಲ ಪುಟಗಳು':'source pages'}</summary><ul>{record.pages.slice(0,25).map(page=><li key={page.id}><a href={page.url} target="_blank" rel="noreferrer">{page.url.replace(/^https?:\/\/(www\.)?/,'').slice(0,90)} ↗</a></li>)}</ul>{record.pages.length>25&&<small>{kn?'ಮತ್ತು':'and'} {(record.pages.length-25).toLocaleString('en-IN')} {kn?'ಇನ್ನಷ್ಟು':'more'}</small>}</details>:record.url&&<div className="india-research-record-foot"><a href={record.url} target="_blank" rel="noreferrer">{kn?'ಉಲ್ಲೇಖಿತ ಮೂಲ ಪುಟ ↗':'Cited source page ↗'}</a></div>}
       </article>)}</div>
-      {limit<filtered.length&&<button className="india-research-more" onClick={()=>setLimit(value=>value+PAGE_SIZE)}>{kn?'ಇನ್ನಷ್ಟು 80 ದಾಖಲೆಗಳನ್ನು ತೋರಿಸಿ':'Show 80 more records'}</button>}
+      {limit<grouped.length&&<button className="india-research-more" onClick={()=>setLimit(value=>value+PAGE_SIZE)}>{kn?'ಇನ್ನಷ್ಟು 80 ದಾಖಲೆಗಳನ್ನು ತೋರಿಸಿ':'Show 80 more records'}</button>}
     </section>
     </>}
     <section className="india-research-audit-note" aria-label={kn?'ಆಮದು ಸ್ಥಿತಿ':'Import status'}>
