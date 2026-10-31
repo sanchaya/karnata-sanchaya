@@ -1,0 +1,21 @@
+.app-shell main.font-page{display:block;height:auto;min-height:calc(100vh - 142px);width:min(100%,var(--page-wide,1180px));max-width:none;margin:0 auto;padding:0 clamp(16px,3vw,32px) 48px;background:#fff;color:var(--sanchaya-ink)}
+.font-hero{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 24px;padding:22px 0 16px}
+.font-hero .eyebrow{margin:0;color:#28785b}
+.font-hero h2{margin:2px 0 6px;font:500 clamp(24px,2.6vw,32px)/1.25 Georgia,"Noto Sans Kannada",serif}
+.font-hero p:not(.eyebrow){max-width:640px;margin:0;color:var(--sanchaya-muted);font-size:13px;line-height:1.55}
+.font-hero a{color:#7a4d09;font-weight:700;font-size:13px}
+.font-controls{position:sticky;top:48px;z-index:20;display:flex;flex-wrap:wrap;align-items:end;gap:10px 18px;margin-bottom:18px;padding:10px 12px;border:1px solid #e3d6c0;border-radius:12px;background:rgba(255,250,241,.97)}
+.font-controls label{display:grid;gap:3px;font-size:11px;font-weight:700;color:#7a4d09}
+.font-controls label:first-child{flex:1 1 280px}
+.font-controls input[type=text],.font-controls input:not([type]){padding:8px 10px;border:1px solid var(--sanchaya-border);border-radius:8px;font:inherit;font-size:15px;color:var(--sanchaya-ink)}
+.font-controls button{padding:8px 14px;border:1px solid var(--sanchaya-border);border-radius:8px;background:#fff;cursor:pointer}
+.font-group{margin-top:18px}
+.font-group h3{margin:0 0 10px;font-size:16px}
+.font-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
+.font-card{display:grid;gap:6px;min-width:0;padding:14px 16px;border:1px solid #ead9c3;border-radius:12px;background:#fffdf8}
+.font-card h4{margin:0;font-size:15px}
+.font-card small{color:var(--sanchaya-muted);font-size:11px}
+.font-card-sample{margin:4px 0;line-height:1.3;color:var(--sanchaya-ink);overflow-wrap:anywhere}
+.font-card-meta{display:flex;flex-wrap:wrap;gap:4px 12px;margin:0;font-size:10px;color:var(--sanchaya-muted)}
+.font-note{margin-top:22px;color:var(--sanchaya-muted);font-size:12px;line-height:1.6}
+.font-note a{color:#7a4d09;font-weight:700}
