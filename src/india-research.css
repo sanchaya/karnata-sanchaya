@@ -57,3 +57,11 @@
 .india-research-page .india-research-stats b{font-size:15px;line-height:1}
 .india-research-grid details.india-research-record-foot{display:block}
 .india-research-record-foot small{display:block;margin-top:4px}
+.language-controls{display:flex;flex-wrap:wrap;align-items:end;gap:10px 24px}
+.language-controls .language-slider{flex:1 1 320px}
+.language-toggle{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;white-space:nowrap}
+.language-legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;font-size:11px;color:var(--sanchaya-muted)}
+.language-legend span{display:inline-flex;align-items:center;gap:6px}
+.language-legend i{display:inline-block;width:12px;height:12px}
+.language-legend .dot{border:2px solid #fff;border-radius:50%;background:#9c3d32;box-shadow:0 0 0 1px #9c3d32}
+.language-legend .area{border:1.5px dashed #9c3d32;background:rgba(156,61,50,.2)}
