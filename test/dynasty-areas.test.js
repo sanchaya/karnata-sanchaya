@@ -38,3 +38,11 @@ test('the map toolbar has a visible dynasty areas button', async () => {
   const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
   assert.match(app, /className="map-only-style-toggle dynasty-toggle" aria-pressed=\{layers\.dynastyAreas\}/)
 })
+
+test('phone layout gives the atlas toolbar, key and floating buttons separate places', async () => {
+  const css = await readFile(new URL('../src/mobile-atlas.css', import.meta.url), 'utf8')
+  const main = await readFile(new URL('../src/main.jsx', import.meta.url), 'utf8')
+  assert.match(main, /mobile-atlas\.css/)
+  assert.match(css, /\.map-legend \{ top: 58px/)
+  assert.match(css, /guided-tour-launcher \{[^}]*right: 12px/)
+})

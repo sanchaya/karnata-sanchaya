@@ -1,0 +1,12 @@
+/* Main atlas on phones: the map toolbar, key and floating buttons each get their own place instead of stacking. The two round buttons sit mid-height on the right, clear of the toolbar above and the timeline below. */
+@media (max-width: 720px) {
+  .app-shell .map-theme-control { right: 10px; width: auto; max-width: calc(100% - 62px); }
+  .app-shell .map-theme-control > span { display: none; }
+  .app-shell .map-theme-control > div:first-of-type { flex: 0 1 auto; }
+  .app-shell .map-theme-control button { padding-inline: 7px; font-size: 9px; }
+  .app-shell .map-stage .map-legend { top: 58px; }
+  .app-shell .map-stage .map-legend.mobile-open { top: 94px; }
+  .app-shell .guided-tour-launcher { left: auto; right: 12px; bottom: 26vh; width: 40px; height: 40px; padding: 0; justify-content: center; gap: 0; font-size: 0; }
+  .app-shell .guided-tour-launcher span { width: 22px; height: 22px; font-size: 15px; }
+  .app-shell .contact-chat-launcher { bottom: calc(26vh + 50px); }
+}
