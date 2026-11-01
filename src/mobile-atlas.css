@@ -16,7 +16,7 @@
   .app-shell .sidebar .global-search-results { position: absolute; top: 48px; left: 0; width: calc(100vw - 24px); max-height: 60svh; }
   .app-shell .global-search-results > header { position: sticky; top: -8px; z-index: 1; display: flex; align-items: center; justify-content: space-between; margin: -8px -8px 0; padding: 4px 8px; min-height: 0; height: auto; background: #fff; border-bottom: 1px solid var(--sanchaya-border); }
   .app-shell .global-search-results > header small { font-size: 12px; }
-  .app-shell .global-search-results .global-search-close { width: 40px; height: 40px; padding: 0; border-radius: 50%; font-size: 24px; line-height: 1; text-align: center; display: block; }
+  .app-shell .global-search-results .global-search-close { width: 34px; height: 34px; min-height: 0; padding: 0; margin: 0; border-radius: 50%; font-size: 22px; line-height: 1; text-align: center; display: block; }
   .app-shell .global-search-results button strong { font-size: 14px; }
   .app-shell .global-search-results button small, .app-shell .global-search-results button span { font-size: 11px; }
 }
