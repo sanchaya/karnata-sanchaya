@@ -51,10 +51,12 @@ export function DonateSection({locale}){
   const base=import.meta.env.BASE_URL
   return (
     <section className="donate-section" aria-labelledby="donate-title">
+      <div className="donate-side">
       <div className="donate-intro"><h3 id="donate-title">{t.donateTitle}</h3><p>{t.donateIntro}</p><a href="https://sanchaya.org/support-us/" target="_blank" rel="noreferrer">{t.donateMore} ↗</a></div>
+        <article className="donate-qr"><h4>{t.donateQr}</h4><img src={`${base}donate-qr.jpg`} alt={t.donateQrAlt} width="705" height="1053" loading="lazy"/><dl><div><dt>UPI ID</dt><dd><CopyValue value={UPI_ID} label="UPI ID" t={t}/></dd></div></dl><small>{t.donateQrNote}</small></article>
+      </div>
       <div className="donate-grid">
         <article className="donate-online"><h4>{t.donateOnline}</h4><OnlineDonate t={t}/></article>
-        <article className="donate-qr"><h4>{t.donateQr}</h4><img src={`${base}donate-qr.jpg`} alt={t.donateQrAlt} width="705" height="1053" loading="lazy"/><dl><div><dt>UPI ID</dt><dd><CopyValue value={UPI_ID} label="UPI ID" t={t}/></dd></div></dl><small>{t.donateQrNote}</small></article>
         {BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}
       </div>
       <aside className="donate-receipt" aria-label={t.receiptTitle}><span aria-hidden="true">✉</span><div><strong>{t.receiptTitle}</strong><p>{t.receiptBody} <a href={`mailto:info@sanchifoundation.org?subject=${encodeURIComponent(t.receiptSubject)}`}>info@sanchifoundation.org</a></p><small>{t.receiptPrivacy}</small></div></aside>

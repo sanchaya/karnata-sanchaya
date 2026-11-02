@@ -65,3 +65,35 @@
 .donate-receipt p{margin:2px 0 4px;font-size:13px;line-height:1.55}
 .donate-receipt a{color:var(--sanchaya-blue);font-weight:800;overflow-wrap:anywhere}
 .donate-receipt small{color:var(--sanchaya-muted);font-size:11px}
+
+/* About: the hero keeps its two columns (text left, Sanchaya and Sanchi right) and the donate card is a left column with the QR and a right column with the payment details. */
+body main.about-page>.about-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,360px);gap:32px;align-items:center}
+.about-page .about-hero .about-stewards{width:100%;justify-self:end}
+.about-page .about-hero .about-stewards a{min-height:72px}
+.about-page .about-hero .about-actions{display:flex;flex-wrap:wrap;gap:8px}
+.about-page .about-hero .about-actions a{min-height:44px;display:inline-flex;align-items:center}
+.about-pillars article{display:grid;align-content:start}
+.donate-section{grid-template-columns:minmax(260px,.8fr) minmax(0,2fr);align-items:start}
+.donate-side{display:grid;gap:14px}
+.donate-side .donate-qr{display:grid;gap:8px;justify-items:center;padding:12px 14px;border:1px solid var(--sanchaya-border);border-radius:10px;background:#fff;text-align:center}
+.donate-side .donate-qr h4{margin:0}
+.donate-side .donate-qr img{width:100%;max-width:220px;height:auto;border-radius:10px;border:1px solid var(--sanchaya-border)}
+.donate-side .donate-qr dl{width:100%;text-align:left}
+.donate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.donate-grid .donate-online{grid-column:1/-1}
+.donate-value button{min-height:44px;min-width:56px}
+@media(max-width:1100px){.donate-section{grid-template-columns:1fr}.donate-side{grid-template-columns:minmax(0,1fr) minmax(0,220px);align-items:start}}
+@media(max-width:820px){body main.about-page>.about-hero{grid-template-columns:1fr}.donate-grid{grid-template-columns:1fr}.donate-side{grid-template-columns:1fr}}
+.donate-side .donate-qr{grid-template-columns:1fr;grid-template-rows:none}
+.donate-side .donate-qr h4,.donate-side .donate-qr dl,.donate-side .donate-qr small{grid-column:auto}
+.donate-side .donate-qr img{grid-row:auto}
+.donate-side .donate-qr .donate-value{flex-wrap:wrap}
+.donate-side .donate-qr .donate-value b{font-size:12px}
+.donate-section .donate-side{grid-row:1/span 2}
+.donate-section .donate-receipt{grid-column:2}
+.donate-side .donate-qr img{max-width:190px}
+@media(max-width:1100px){.donate-section .donate-side{grid-row:auto}.donate-section .donate-receipt{grid-column:1/-1}}
+.donate-section{grid-template-rows:max-content 1fr}
+.donate-section .donate-receipt{align-self:start}
+@media(max-width:1100px){.donate-section{grid-template-rows:none}}
+.donate-side .donate-qr .donate-value b{font-size:11px;letter-spacing:0}
