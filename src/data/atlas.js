@@ -1,6 +1,7 @@
 import { events, eventSources, externalPolities } from './events.js'
 import { deepChronologies, districtHistoryResearch, heritageAuditCategories, heritageAudits } from './research.js'
 import { culturalInstitutionSources } from './cultural-institutions.js'
+import { dynastyInscriptionDistrictAssignments, dynastyInscriptionPlaces, dynastyInscriptionSources, dynastyInscriptions } from './dynasty-inscriptions.js'
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
 import { politicalRelations, politicalRelationPeople, politicalRelationPolities, foreignPoliticalRelations } from './political-relations.js'
@@ -255,6 +256,8 @@ appendUniqueById(atlasData.sources, literatureEpigraphySources)
 appendUniqueById(atlasData.sources, epigraphiaArchiveSources)
 appendUniqueById(atlasData.people, literaryPeople)
 appendUniqueById(atlasData.places, inscriptionPlaces)
+appendUniqueById(atlasData.sources, dynastyInscriptionSources)
+appendUniqueById(atlasData.places, dynastyInscriptionPlaces)
 appendUniqueById(atlasData.works, additionalWorks)
 appendUniqueById(atlasData.externalPolities, politicalRelationPolities)
 appendUniqueById(atlasData.people, politicalRelationPeople)
@@ -400,6 +403,7 @@ appendUniqueById(atlasData.works, [{
   review:review('needs-review'),
 }])
 appendUniqueById(atlasData.inscriptions, additionalInscriptions)
+appendUniqueById(atlasData.inscriptions, dynastyInscriptions)
 appendUniqueById(atlasData.polities, karnatakaArchaeologyMiningPolities)
 appendUniqueById(atlasData.inscriptions, karnatakaArchaeologyMiningInscriptions)
 const sourceVolumeInscriptionDistrictAssignments={
@@ -409,7 +413,7 @@ const sourceVolumeInscriptionDistrictAssignments={
   'inscription-brahmagiri-minor-rock-edict':'audit-chitradurga',
   ...Object.fromEntries(karnatakaArchaeologyMiningInscriptions.map(record=>[record.id,record.districtAuditId])),
 }
-atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||sourceVolumeInscriptionDistrictAssignments[record.id]||null})
+atlasData.inscriptions.forEach(record=>{record.districtAuditId=inscriptionDistrictAssignments[record.id]||dynastyInscriptionDistrictAssignments[record.id]||sourceVolumeInscriptionDistrictAssignments[record.id]||null})
 // Cross-border Kannada inscription leads are kept in a synthetic research audit
 // so they enter the same evidence workflow without being misassigned to a
 // Karnataka district. They are not claims of territorial control.
