@@ -38,6 +38,7 @@ const Contact=lazy(()=>import('./Contact'))
 const TrailExplorer=lazy(()=>import('./TrailExplorer'))
 const CommunityResearchTasks=lazy(()=>import('./CommunityResearchTasks'))
 const CoinExplorer=lazy(()=>import('./CoinExplorer'))
+const DynastyMapPage=lazy(()=>import('./DynastyMapPage'))
 const ScriptEvolutionExplorer=lazy(()=>import('./ScriptEvolutionExplorer'))
 const FontShowcase=lazy(()=>import('./FontShowcase'))
 const IndiaResearchExplorer=lazy(()=>import('./IndiaResearchExplorer'))
@@ -853,7 +854,7 @@ function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInsc
 const districtSectionRoutes={districts:'district-history',inscriptions:'inscription-audit'}
 
 export default function App(){
-  const publicViews=['atlas','relations','india-relations','people','freedom','literature','epigraphy','districts','district-history','district-audit','inscription-audit','district-inventory','inscriptions','coins','scripts','fonts','donate','trails','evidence','research','research-tasks','contribute','profile','reviews','operations','about','contact','india-research','india-inscriptions','india-languages','india-sources','india-failures','geography']
+  const publicViews=['atlas','relations','india-relations','people','freedom','literature','epigraphy','districts','district-history','district-audit','inscription-audit','district-inventory','inscriptions','coins','scripts','dynasties','fonts','donate','trails','evidence','research','research-tasks','contribute','profile','reviews','operations','about','contact','india-research','india-inscriptions','india-languages','india-sources','india-failures','geography']
   const normalizeView=hash=>hash==='history'?'district-history':hash==='community'?'contribute':districtSectionRoutes[hash]||hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -880,7 +881,7 @@ export default function App(){
   const [selectedPeriodicalSite,setSelectedPeriodicalSite]=useState(null)
   const [selectedSearchPlace,setSelectedSearchPlace]=useState(()=>initialShareState.year==null&&!initialShareState.map&&firstTimelineStory?.coords?{coords:firstTimelineStory.coords,reviewCandidateId:firstTimelineStory.id,overview:true}:null)
   const [scope,setScope]=useState('karnataka')
-  const [layers,setLayers]=useState({boundaries:true,territorialReach:true,externalKingdoms:false,dynastyAreas:false,districts:true,heritageSites:true,culture:true,periodicals:true,artifacts:true,temples:true,inscriptions:true,researchCandidates:true,events:true,people:true,modern:true})
+  const [layers,setLayers]=useState({boundaries:false,territorialReach:false,externalKingdoms:false,dynastyAreas:true,districts:true,heritageSites:true,culture:true,periodicals:true,artifacts:true,temples:true,inscriptions:true,researchCandidates:true,events:true,people:true,modern:true})
   const [query,setQuery]=useState('')
   const [searchFilters,setSearchFilters]=useState({kind:'all',century:'all',polity:'all',language:'all',script:'all',district:'all',review:'all'})
   const [districtGeojson,setDistrictGeojson]=useState(null)
@@ -1035,7 +1036,7 @@ export default function App(){
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
   const exploreNavItems=[['atlas',t.atlas],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['geography',locale==='kn'?'ಭೂಗೋಳ ಮತ್ತು ನಿಸರ್ಗ':'Geography & nature'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement']]
-  const researchNavItems=[['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['fonts',locale==='kn'?'ಫಾಂಟ್ಸ್':'Fonts']]
+  const researchNavItems=[['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['dynasties',locale==='kn'?'ರಾಜವಂಶ ಭೂಪಟ':'Dynasty map'],['fonts',locale==='kn'?'ಫಾಂಟ್ಸ್':'Fonts']]
   const indiaNavItems=[['india-research',locale==='kn'?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'History data'],['india-inscriptions',locale==='kn'?'ಶಾಸನ ಸೂಚಿ':'Inscription index'],['india-languages',locale==='kn'?'ಭಾಷೆ-ಲಿಪಿ ಭೂಪಟ':'Languages map'],['india-sources',locale==='kn'?'ಮೂಲ ಆಕರಗಳು':'Source candidates'],['india-relations',locale==='kn'?'ಭಾರತದ ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'India’s global relations']]
   const districtNavItems=[['district-history',locale==='kn'?'ಸ್ಥಳೀಯ ಇತಿಹಾಸ':'Local history'],['district-audit',locale==='kn'?'ಪರಂಪರೆ ತಾಣಗಳು':'Heritage sites'],['inscription-audit',locale==='kn'?'ಶಾಸನ ಪರಿಶೀಲನೆ':'Inscription review'],['district-inventory',locale==='kn'?'ಸ್ಮಾರಕ ಪಟ್ಟಿ':'Monument inventory']]
   const projectNavItems=[['research',locale==='kn'?'ಆಕರಗಳು':'Resources'],['research-tasks',locale==='kn'?'ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು':'Research tasks'],['evidence',locale==='kn'?'ಸಾಕ್ಷ್ಯ ಕಾರ್ಯವಿಧಾನ':'Evidence'],['about',locale==='kn'?'ನಮ್ಮ ಬಗ್ಗೆ':'About'],['contact',locale==='kn'?'ಸಂಪರ್ಕಿಸಿ':'Contact']]
@@ -1142,6 +1143,7 @@ export default function App(){
     {view==='coins'&&<Suspense fallback={<PortalFallback/>}><CoinExplorer locale={locale}/></Suspense>}
     {view==='donate'&&<Suspense fallback={<PortalFallback/>}><Donate locale={locale}/></Suspense>}
     {view==='fonts'&&<Suspense fallback={<PortalFallback/>}><FontShowcase locale={locale}/></Suspense>}
+    {view==='dynasties'&&<Suspense fallback={<PortalFallback/>}><DynastyMapPage locale={locale}/></Suspense>}
     {view==='scripts'&&<Suspense fallback={<PortalFallback/>}><ScriptEvolutionExplorer locale={locale} initialSelectedId={selectedScriptId}/></Suspense>}
     {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}

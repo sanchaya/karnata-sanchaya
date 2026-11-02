@@ -4,7 +4,7 @@ import { loadDistricts } from './DynastyAreasLayer'
 
 const LNG0 = 74, LAT1 = 18.6, K = 60, COS = 0.966
 const ring = points => `M${points.map(([lng, lat]) => `${((lng - LNG0) * K * COS).toFixed(1)} ${((LAT1 - lat) * K).toFixed(1)}`).join('L')}Z`
-const pathOf = geometry => (geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates).flat().map(ring).join('')
+export const pathOf = geometry => (geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates).flat().map(ring).join('')
 
 // Every dynasty at a glance: a small district-shaped map each, named in its own era typeface where Fonts Sanchaya has one.
 export default function DynastyGallery({ locale, fontFor, isActive, onSelect, canSelect }) {

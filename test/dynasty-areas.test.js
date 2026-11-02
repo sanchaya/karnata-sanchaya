@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
+import { existsSync, readFileSync } from 'node:fs'
 import { DYNASTY_PHASES, dynastyAreasForYear } from '../src/data/dynasty-areas.js'
 
 const districts = JSON.parse(await readFile(new URL('../public/karnataka-districts.geojson', import.meta.url)))
@@ -25,7 +26,7 @@ test('a later dynasty wins an overlapping district and years outside every phase
 
 test('the atlas offers the dynasty areas layer, off by default', async () => {
   const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
-  assert.match(app, /dynastyAreas:false/)
+  assert.match(app, /dynastyAreas:true/)
   assert.match(app, /<DynastyAreasLayer /)
 })
 
@@ -45,4 +46,10 @@ test('phone layout gives the atlas toolbar, key and floating buttons separate pl
   assert.match(main, /mobile-atlas\.css/)
   assert.match(css, /\.map-legend \{ top: 58px/)
   assert.match(css, /guided-tour-launcher \{[^}]*right: 12px/)
+})
+
+test('the shareable dynasty map page is routed and ships its QR code', () => {
+  const app = readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8')
+  assert.match(app, /view==='dynasties'&&/)
+  assert.ok(existsSync(new URL('../public/karnata-qr.svg', import.meta.url)))
 })
