@@ -28,8 +28,15 @@ const cloudflareScriptOptOutPlugin={
   transformIndexHtml:{order:'post',handler:html=>html.replace(/<script(?![^>]*data-cfasync)([^>]*\ssrc=)/g,'<script data-cfasync="false"$1')},
 }
 
+// The live edition needs /api/dataset before it can render. Asking for it from the HTML head overlaps that request with the
+// bundle download instead of waiting for the bundle to start it. Static and custom-API builds skip it.
+const earlyDatasetPlugin={
+  name:'atlas-early-dataset',
+  transformIndexHtml:{order:'pre',handler:html=>process.env.VITE_STATIC_DATASET==='true'||process.env.VITE_COMMUNITY_API_URL?html:html.replace('</head>','    <script data-cfasync="false" src="/early-dataset.js"></script>\n  </head>')},
+}
+
 export default defineConfig({
-  plugins: [react(),peopleSeedPlugin,osmTileEndpointPlugin,cloudflareScriptOptOutPlugin],
+  plugins: [react(),peopleSeedPlugin,osmTileEndpointPlugin,earlyDatasetPlugin,cloudflareScriptOptOutPlugin],
   base: './',
   server: {
     host: '0.0.0.0',

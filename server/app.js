@@ -127,7 +127,7 @@ app.get('/api/dataset',rateLimit('public-dataset',180,60*60*1000),async(req,res)
   if(req.get('if-none-match')===`"${payloadSha256}"`)return res.status(304).end()
   const attribution={...PUBLIC_DATA_ATTRIBUTION,payloadSha256}
   const dataset={...publicPayload,meta:{...publicPayload.meta,attribution}}
-  res.set({'Cache-Control':'no-store',ETag:`"${payloadSha256}"`,'X-Karnata-Payload-SHA256':payloadSha256}).json({...latest,payloadSha256,attribution,dataset})
+  res.set({'Cache-Control':'no-cache',ETag:`"${payloadSha256}"`,'X-Karnata-Payload-SHA256':payloadSha256}).json({...latest,payloadSha256,attribution,dataset})
 })
 
 app.post('/api/auth/register',rateLimit('register',8,60*60*1000),async(req,res)=>{

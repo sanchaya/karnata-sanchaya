@@ -31,7 +31,8 @@ export async function hydrateAtlasData(){
     return {source:'static-published-snapshot',dataset:atlasData}
   }
   try{
-    const response=await fetch(`${API_BASE}/api/dataset`,{credentials:'same-origin',headers:{Accept:'application/json'}})
+    const early=window.__atlasDataset;window.__atlasDataset=null
+    const response=(early&&await early)||await fetch(`${API_BASE}/api/dataset`,{credentials:'same-origin',headers:{Accept:'application/json'}})
     if(!response.ok)throw new Error(`Live dataset request failed (${response.status})`)
     const body=await response.json()
     replaceAtlasData(body.dataset)
