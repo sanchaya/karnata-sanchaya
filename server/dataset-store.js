@@ -85,6 +85,13 @@ export function publicDataset(dataset){
   return value
 }
 
+// Deliberate renames of existing records. The sync is otherwise additive and never overwrites a record's fields, so a rename the project
+// has decided on would never reach a live database. A rename applies only while the live record still carries exactly the old name, so an
+// administrator's own edit is never overwritten.
+const REPOSITORY_RENAMES=[
+  {collection:'polities',id:'polity-vijayanagara',from:{en:'Vijayanagara',kn:'ವಿಜಯನಗರ'}},
+]
+
 export function mergeRepositorySeed(current){
   const baseline=repositoryDataset()
   if(!current)return {dataset:baseline,added:baseline.peopleCandidates.length,changed:true}
@@ -108,6 +115,11 @@ export function mergeRepositorySeed(current){
     const records=dataset.canonical.entities[collection]
     const byId=new Map(records.map(record=>[record?.id,record]).filter(([id])=>Boolean(id)))
     for(const record of seedRecords)if(record?.id){const existingRecord=byId.get(record.id);if(!existingRecord){records.push(clone(record));byId.set(record.id,record);added+=1}else if(mergeRepositoryAdditions(existingRecord,record))updated+=1}
+  }
+  for(const rename of REPOSITORY_RENAMES){
+    const seed=(baseline[rename.collection]||[]).find(record=>record.id===rename.id)
+    const live=(dataset[rename.collection]||[]).find(record=>record.id===rename.id)
+    if(seed&&live&&live.name?.en===rename.from.en&&live.name?.kn===rename.from.kn&&(seed.name.en!==live.name.en||seed.name.kn!==live.name.kn)){live.name={...live.name,...seed.name};updated+=1}
   }
   dataset.canonical.schema_version=baseline.canonical.schema_version
   dataset.canonical.indexes=clone(baseline.canonical.indexes)

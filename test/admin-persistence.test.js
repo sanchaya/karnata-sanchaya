@@ -98,3 +98,17 @@ test('repository sync adds canonical entities without replacing MariaDB editoria
   assert.equal(result.dataset.canonical.entities.inscriptions.find(item=>item.id===edited.id).normalized_metadata.name.en,'Reviewer-edited canonical title')
   assert.ok(result.added>0)
 })
+
+test('repository sync applies a decided rename only while the live record still has the old name', () => {
+  const renamed=atlasData.polities.find(record=>record.id==='polity-vijayanagara')
+  assert.match(renamed.name.en,/Karnataka \(Vijayanagara\) Empire/)
+  const oldLive=clone(atlasData)
+  oldLive.polities.find(record=>record.id==='polity-vijayanagara').name={en:'Vijayanagara',kn:'ವಿಜಯನಗರ'}
+  const fixed=mergeRepositorySeed(oldLive)
+  assert.equal(fixed.dataset.polities.find(record=>record.id==='polity-vijayanagara').name.kn,renamed.name.kn)
+  assert.ok(fixed.changed&&fixed.updated>0)
+  const edited=clone(atlasData)
+  edited.polities.find(record=>record.id==='polity-vijayanagara').name={en:'Vijayanagara (admin edit)',kn:'ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ'}
+  const kept=mergeRepositorySeed(edited)
+  assert.equal(kept.dataset.polities.find(record=>record.id==='polity-vijayanagara').name.en,'Vijayanagara (admin edit)')
+})

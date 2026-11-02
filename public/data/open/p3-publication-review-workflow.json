@@ -13,12 +13,13 @@
       "updatedAt": "2026-08-23"
     },
     "datasetDepth": {
-      "totalRecords": 45355,
+      "totalRecords": 45486,
       "researchLeads": 38257,
       "geographyRecords": 26,
-      "sources": 818,
-      "relationships": 2802,
-      "inscriptions": 81,
+      "languageRegions": 7,
+      "sources": 826,
+      "relationships": 2834,
+      "inscriptions": 113,
       "karnatakaLinkedNonKannadaInscriptions": 2
     },
     "attribution": {
@@ -27,7 +28,7 @@
       "credit": "Karnataka Historical Atlas · Sanchaya",
       "originToken": "kha:karnata.sanchaya.net",
       "notice": "Retain this attribution and the cited record-level sources when reusing public data.",
-      "payloadSha256": "3c8b53a462f300356c1848b3d56a63703aeaaece6279a99a6ef887ef9607a4c3"
+      "payloadSha256": "d5088deb20c6164e9738442994fd285e76c3103b277defc386dba79da5ecfe61"
     }
   },
   "catalogue": {
@@ -77,7 +78,10 @@
         "inscriptionIds": [
           "inscription-aihole",
           "inscription-parampare-badami-chamarasa-lead",
-          "inscription-kappe-arabhatta"
+          "inscription-kappe-arabhatta",
+          "inscription-sii20-135",
+          "inscription-sii20-141",
+          "inscription-sii20-150"
         ],
         "priorityCandidates": [],
         "reviewPass": null,
@@ -201,8 +205,10 @@
           "kn": "ಬೆಳಗಾವಿ"
         },
         "districtAuditId": "audit-belagavi",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-sii20-247"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-halasi-kadamba-plates",
@@ -247,13 +253,13 @@
         ],
         "reviewPass": null,
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-asi-halasi-kadamba-register",
-            "locator": "Register entries 96–105; Halasi/Halsi in Belgaum district, including a late fifth-century Kakusthavarman copper-plate record"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -2359,8 +2365,11 @@
           "kn": "ಧಾರವಾಡ"
         },
         "districtAuditId": "audit-dharwad",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-sii20-195",
+          "inscription-sii20-199"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-annigeri-bijjala-capital-records",
@@ -2416,13 +2425,13 @@
           }
         },
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-asi-annigeri-bijjala",
-            "locator": "Annigeri records describing the place as rajadhani-pattana; records discussed from 1141–42 onward"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
@@ -2445,7 +2454,13 @@
         "districtAuditId": "audit-gadag",
         "auditStatus": "seeded",
         "inscriptionIds": [
-          "inscription-lakkundi"
+          "inscription-lakkundi",
+          "inscription-sii20-137",
+          "inscription-sii20-144",
+          "inscription-sii20-145",
+          "inscription-sii20-191",
+          "inscription-sii20-193",
+          "inscription-sii20-198"
         ],
         "priorityCandidates": [],
         "reviewPass": null,
@@ -2561,7 +2576,10 @@
         "auditStatus": "seeded",
         "inscriptionIds": [
           "inscription-muktesvara-attiraja-construction",
-          "inscription-muktesvara-mailaladevi-devarasa-grants"
+          "inscription-muktesvara-mailaladevi-devarasa-grants",
+          "inscription-sii20-142",
+          "inscription-sii20-187",
+          "inscription-sii20-196"
         ],
         "priorityCandidates": [],
         "reviewPass": {
@@ -3520,8 +3538,26 @@
           "kn": "ವಿಜಯಪುರ"
         },
         "districtAuditId": "audit-vijayapura",
-        "auditStatus": "candidate-identified",
-        "inscriptionIds": [],
+        "auditStatus": "seeded",
+        "inscriptionIds": [
+          "inscription-sii20-136",
+          "inscription-sii20-138",
+          "inscription-sii20-139",
+          "inscription-sii20-140",
+          "inscription-sii20-143",
+          "inscription-sii20-146",
+          "inscription-sii20-147",
+          "inscription-sii20-148",
+          "inscription-sii20-149",
+          "inscription-sii20-186",
+          "inscription-sii20-188",
+          "inscription-sii20-190",
+          "inscription-sii20-192",
+          "inscription-sii20-194",
+          "inscription-sii20-197",
+          "inscription-sii20-170",
+          "inscription-sii20-171"
+        ],
         "priorityCandidates": [
           {
             "id": "epigraphy-candidate-yusuf-adil-jami-mosque-1517",
@@ -3566,13 +3602,13 @@
         ],
         "reviewPass": null,
         "methodologyNote": {
-          "en": "One or more source-located priority candidates are queued; they are not treated as verified inscription records until item-level evidence and coordinates are resolved.",
-          "kn": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಆಕರ-ಗುರುತಿಸಿದ ಆದ್ಯತಾ ಅಭ್ಯರ್ಥಿಗಳು ಸರದಿಯಲ್ಲಿವೆ; ಪ್ರತ್ಯೇಕ ಸಾಕ್ಷ್ಯ ಮತ್ತು ನಿರ್ದೇಶಾಂಕಗಳು ನಿರ್ಧಾರವಾಗುವವರೆಗೆ ಅವನ್ನು ಪರಿಶೀಲಿತ ಶಾಸನ ದಾಖಲೆಗಳೆಂದು ಪರಿಗಣಿಸುವುದಿಲ್ಲ."
+          "en": "Seed records are mapped, but each transcription, date and findspot still requires item-level verification.",
+          "kn": "ಆರಂಭಿಕ ದಾಖಲೆಗಳನ್ನು ನಕ್ಷೆಗೊಳಿಸಲಾಗಿದೆ; ಆದರೆ ಪ್ರತಿಯೊಂದು ಪಾಠ, ದಿನಾಂಕ ಮತ್ತು ಪತ್ತೆಸ್ಥಳವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
         },
         "citations": [
           {
-            "sourceId": "src-ei-bijapur-1962-63",
-            "locator": "Bijapur inscription of Khwaja Sumbul, dated AH 923 / 1517 CE, cited in the Arabic and Persian Supplement"
+            "sourceId": "src-ignca-epigraphia-indica-index",
+            "locator": "District audit starting point; verify against the relevant corpus volume"
           }
         ],
         "review": {
