@@ -18,6 +18,8 @@ import './resources.css'
 import './evidence-workflow.css'
 import './coins.css'
 import './scripts.css'
+import './scroll-hint.css'
+import { watchScrollHints } from './scroll-hint'
 import './admin-readiness.css'
 import './guided-tour.css'
 import './tablet.css'
@@ -37,6 +39,7 @@ import { hydrateAtlasData } from './data/runtime'
 import { appendPublicAttribution } from './data/public-attribution'
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
+watchScrollHints()
 
 // A tab still running an older build asks for chunks a newer deploy removed. Reload once to pick up the new build;
 // the sessionStorage stamp stops a reload loop if the failure is something else (offline, blocked).

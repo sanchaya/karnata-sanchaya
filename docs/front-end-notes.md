@@ -71,3 +71,11 @@ Selecting an event, territory, comparison or freedom-movement record fits the ma
 mis-geocoded point used to pull the view out to the whole world. `regionalPoints` in `src/map-focus.js` keeps only the
 points inside India when there are any, and the atlas viewport (`MapViewport` in `App.jsx`) and the freedom explorer
 fit to those. The other points keep their markers; if every point is outside India the view still fits all of them.
+
+## Sideways-scrolling menus show a fade
+
+The activity bar's page list, the mobile menu and the section tab rows scroll sideways when they do not fit, with no
+visible sign. `src/scroll-hint.js` (started from `main.jsx`) sets `data-scroll-left` / `data-scroll-right` on each
+such menu while items are hidden on that side, and `src/scroll-hint.css` fades that edge. It also scrolls the open
+page's entry into view once per page. To cover another menu, add its selector to `MENUS` in the script and to the
+`:is(...)` lists in the stylesheet.
