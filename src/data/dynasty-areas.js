@@ -19,7 +19,7 @@ export const DYNASTY_PHASES = [
   { id: 'kalachuri', polityId: 'external-polity-kalachuri-kalyani', from: 1156, to: 1184, color: '#8a4f7d', name: { en: 'Kalachuris of Kalyani', kn: 'ಕಲ್ಯಾಣದ ಕಳಚುರಿಗಳು' }, capital: { en: 'Kalyani', kn: 'ಕಲ್ಯಾಣ' } },
   { id: 'seuna', polityId: 'external-polity-seuna', from: 1187, to: 1317, color: '#b5832e', name: { en: 'Seuna (Yadavas of Devagiri)', kn: 'ಸೇವುಣರು (ದೇವಗಿರಿಯ ಯಾದವರು)' }, capital: { en: 'Devagiri', kn: 'ದೇವಗಿರಿ' } },
   { id: 'kampili', polityId: 'polity-kampili', from: 1280, to: 1327, color: '#b0507a', name: { en: 'Kampili kingdom', kn: 'ಕಂಪಿಲ ರಾಜ್ಯ' }, capital: { en: 'Kummata', kn: 'ಕುಮ್ಮಟ' } },
-  { id: 'vijayanagara', polityId: 'polity-vijayanagara', from: 1336, to: 1646, color: '#c2478f', name: { en: 'Vijayanagara Empire', kn: 'ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ' }, capital: { en: 'Hampi', kn: 'ಹಂಪಿ' } },
+  { id: 'vijayanagara', polityId: 'polity-vijayanagara', from: 1336, to: 1646, color: '#c2478f', name: { en: 'Karnataka (Vijayanagara) Empire', kn: 'ಕರ್ನಾಟಕ(ವಿಜಯನಗರ) ಸಾಮ್ರಾಜ್ಯ' }, capital: { en: 'Hampi', kn: 'ಹಂಪಿ' } },
   { id: 'bahmani', polityId: 'external-polity-bahmani', from: 1347, to: 1527, color: '#6f7f45', name: { en: 'Bahmani Sultanate', kn: 'ಬಹಮನಿ ಸುಲ್ತಾನರು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' } },
   { id: 'wodeyar-mysore', polityId: 'external-polity-wodeyar-mysore', from: 1399, to: 1761, color: '#4a6fb0', name: { en: 'Wodeyars of Mysore (before 1761)', kn: 'ಮೈಸೂರು ಒಡೆಯರು (೧೭೬೧ಕ್ಕೆ ಮೊದಲು)' }, capital: { en: 'Mysuru', kn: 'ಮೈಸೂರು' } },
   { id: 'barid-shahi', polityId: 'external-polity-barid-shahi', from: 1489, to: 1619, color: '#5f7f9a', name: { en: 'Barid Shahis of Bidar', kn: 'ಬೀದರ್‌ನ ಬರೀದ್‌ಶಾಹಿಗಳು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' } },
