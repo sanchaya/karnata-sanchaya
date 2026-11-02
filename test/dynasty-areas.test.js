@@ -83,10 +83,28 @@ test('Census atlas profiles point at real phases and the cited source is in the 
   const ids = new Set(DYNASTY_PHASES.map(phase => phase.id))
   for (const profile of CENSUS_ATLAS_PROFILES) {
     assert.ok(ids.has(profile.phaseId), `${profile.phaseId} is not a dynasty phase`)
-    assert.ok(profile.map > 0 && profile.areaKm2 > 0 && profile.capitals.length, `${profile.phaseId} profile is incomplete`)
+    assert.ok(profile.map > 0 && (profile.areaKm2 == null || profile.areaKm2 > 0) && profile.capitals.length, `${profile.phaseId} profile is incomplete`)
     assert.ok(profile.period.from == null || profile.period.from < profile.period.to, `${profile.phaseId} period is not ordered`)
   }
   assert.ok(atlasData.sources.some(source => source.id === CENSUS_ATLAS_SOURCE_ID))
   const lead = evidenceFor(DYNASTY_PHASES.find(phase => phase.id === 'rashtrakuta')).find(point => point.kind === 'lead' && point.source)
   assert.equal(lead?.source.sourceId, CENSUS_ATLAS_SOURCE_ID)
+})
+
+test('Mughals in the Deccan are a phase with sourced leads, and the atlas reference data is complete', () => {
+  const phase = DYNASTY_PHASES.find(item => item.id === 'mughal-deccan')
+  assert.ok(phase)
+  const leads = evidenceFor(phase).filter(point => point.kind === 'lead')
+  assert.ok(leads.length >= 5 && leads.every(point => point.source?.sourceId === CENSUS_ATLAS_SOURCE_ID))
+})
+
+test('the name and administrative-history reference data is complete and ordered', async () => {
+  const { ADMIN_SNAPSHOTS, NAME_ATTESTATIONS, NAME_ETYMOLOGIES, UPRISINGS } = await import('../src/data/census-historical-atlas.js')
+  assert.ok(NAME_ATTESTATIONS.length >= 10 && NAME_ATTESTATIONS.every(item => item.title.en && item.title.kn && item.citation.sourceId === CENSUS_ATLAS_SOURCE_ID))
+  assert.ok(NAME_ETYMOLOGIES.length >= 4 && ADMIN_SNAPSHOTS.length >= 8 && UPRISINGS.length >= 8)
+  const starts = ADMIN_SNAPSHOTS.map(item => item.from)
+  assert.deepEqual(starts, [...starts].sort((a, b) => a - b), 'administrative snapshots are in date order')
+  assert.ok(ADMIN_SNAPSHOTS.every(item => item.title.kn && item.facts.length && item.citation.locator.startsWith('Map ')))
+  const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8')
+  assert.match(app, /view==='karnataka-history'/)
 })

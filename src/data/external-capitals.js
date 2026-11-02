@@ -57,6 +57,7 @@ export const externalCapitalPlaces=[
   place('guttal','Guttavolal (Guttal)','ಗುತ್ತವೊಳಲು (ಗುತ್ತಲ)',75.63,14.84),
   place('periyapatna','Periyapatna','ಪಿರಿಯಾಪಟ್ಟಣ',76.10,12.34),
   place('yelahanka','Yelahanka','ಯಲಹಂಕ',77.6,13.1),
+  place('aurangabad','Aurangabad','ಔರಂಗಾಬಾದ್',75.34,19.88),
   place('ullal','Ullal','ಉಳ್ಳಾಲ',74.85,12.80,'historical-port-capital'),
 ]
 
@@ -84,6 +85,7 @@ export const externalCapitalIds={
   'external-polity-gutta':'place-guttal',
   'external-polity-chengalva-kongalva':'place-periyapatna',
   'external-polity-nadaprabhu':'place-yelahanka',
+  'external-polity-mughal-deccan':'place-aurangabad',
   'external-polity-pandya':'place-madurai',
   'external-polity-chera':'place-mahodayapuram',
   'external-polity-eastern-ganga':'place-cuttack',

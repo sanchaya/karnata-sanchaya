@@ -1,0 +1,34 @@
+main.portal-page.karnataka-history-page{display:block;height:auto;min-height:0;max-height:none;overflow:visible;max-width:1100px;margin:0 auto;padding:18px 16px 40px}
+.karnataka-history-page h3{margin:22px 0 8px}
+.kh-timeline{position:relative;display:grid;gap:12px;margin:10px 0;padding:0 0 0 0;list-style:none}
+.kh-timeline>li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;align-items:start}
+.kh-year{padding-top:10px;font:700 16px Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-blue);text-align:right;border-right:3px solid #c8d0ff;padding-right:12px}
+.kh-card{padding:10px 14px;border:1px solid var(--sanchaya-border);border-radius:12px;background:#fff}
+.kh-card h4{margin:2px 0 4px;font-size:15px;line-height:1.35}
+.kh-card h4 small{font-weight:400;color:var(--sanchaya-muted);margin-left:6px}
+.kh-card h5{margin:8px 0 2px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--sanchaya-muted)}
+.kh-card p,.kh-card li{font-size:13px;line-height:1.55}
+.kh-card ul{margin:2px 0;padding-left:18px}
+.kh-card small{display:block;color:var(--sanchaya-muted);font-size:12px}
+.kh-kind{display:inline-block;padding:1px 9px;border-radius:99px;font-size:11px;font-weight:700;background:#eef1ff;color:#2744bf}
+.kh-kind.kh-inscription{background:#fff2dc;color:#8a4b00}
+.kh-kind.kh-copper-plate{background:#e6f5ec;color:#1d6b43}
+.kh-note{margin:0 0 8px;font-size:13px;color:var(--sanchaya-muted)}
+.kh-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.kh-cards li{display:grid;gap:3px;padding:10px 12px;border:1px solid var(--sanchaya-border);border-left:4px solid #7b4bb7;border-radius:10px;background:#fff;font-size:13px}
+.kh-cards small{color:var(--sanchaya-muted);font-size:12px}
+.kh-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.kh-two ul{margin:2px 0;padding-left:18px;font-size:13px;line-height:1.55}
+.kh-units{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px 14px;margin:2px 0}
+.kh-units div{padding:4px 0;border-top:1px solid #eee}
+.kh-units dt{font-weight:700;font-size:13px}
+.kh-units dd{margin:0;font-size:12px;color:var(--sanchaya-muted)}
+.kh-jump{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0 12px;font-size:12px;color:var(--sanchaya-muted)}
+.kh-jump a{min-height:36px;display:inline-flex;align-items:center;padding:4px 12px;border:1px solid #c8d0ff;border-radius:99px;background:#fff;color:var(--sanchaya-blue);font-weight:700;text-decoration:none}
+.kh-uprisings{margin-top:10px;border-top:1px solid #eee;padding-top:6px}
+.kh-uprisings summary{cursor:pointer;min-height:36px;font-weight:700;color:var(--sanchaya-blue)}
+.kh-uprisings li small{display:block}
+.kh-source{margin:22px 0 0;font-size:12px;color:var(--sanchaya-muted)}
+.karnataka-history-page :is(button,a,summary):focus-visible{outline:3px solid #1d3fdd;outline-offset:2px}
+@media(max-width:700px){.kh-timeline>li{grid-template-columns:1fr}.kh-year{text-align:left;border-right:0;border-left:3px solid #c8d0ff;padding:0 0 0 10px}.kh-two{grid-template-columns:1fr}}
+@media print{.kh-jump,.who-tabs{display:none}[role=tabpanel][hidden]{display:block!important}.karnataka-history-page,.karnataka-history-page *{visibility:visible}}

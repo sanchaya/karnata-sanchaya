@@ -160,13 +160,33 @@ What it adds:
   time. The assumptions panel quotes this in meaning, because it is the same stance
   as our soft, overlapping washes.
 
-Not yet used: the book's maps 25–34 on the later administrative divisions (1799,
-1831–1881, 1857, 1912, 1956, 1986–1997), its "Antiquity of Karnataka" article (earliest
-attestations of the name Karnataka, for example the Kadamba Santivarman inscription
-of about 450 and the Samangad plates of 753), and the Mughals in the Deccan
-(1657–1757). They are good next candidates for `administrativeDivisions` and for
-dated inscription records. The profile text is English only; Kannada labels around it
-need native proofreading.
+Also used from the same book:
+
+- **The Mughals in the Deccan (1657 to 1757)** are a dynasty phase (capital Aurangabad,
+  the Suba of Khujistabunyad) with sourced leads for the places the book names:
+  Kalyana, Bidar, Bijapur and Raichur (taken by Aurangzeb) and Sira with Dodballapur
+  and Hoskote (the Sira province of 1687). The six Mughal subas, with their sarkar
+  and paragana counts, are in the administrative history below.
+- **`#karnataka-history` (Explore → Name and administration)**, `KarnatakaHistoryPage.jsx`,
+  two tabs. *The name Karnataka*: the earliest references to the name, from the
+  article "The Antiquity of Karnataka" that the book reprints (`NAME_ATTESTATIONS`:
+  literary works, the Kadamba Santivarman inscription of about 450, the Ganga
+  Bhuvikrama plate of 633, the Rashtrakuta Samangad plates of 753 and others, with the
+  Mahabharata line marked doubtful as the article does), the scholars' views on what
+  the name means (`NAME_ETYMOLOGIES`) and where early Karnataka lay (`EARLY_EXTENT`).
+  *Administrative history*: nine dated snapshots from maps 22 to 34 (`ADMIN_SNAPSHOTS`:
+  the Mughal subas, the partition of 1799, Mysore under Krishnaraja Odeyar III, British
+  Commission rule, the divisions of 1857, the restored Odeyars, the twenty units of 1912,
+  the unification of 1956 and the new districts of 1986 and 1997), with the atlas's map
+  numbers, and the uprisings of 1800 to 1858 (`UPRISINGS`, from map 27) folded under the
+  1800 to 1831 snapshot. The two collections are static reference modules, not
+  `atlasData` collections, so they do not change the portal statistics; each entry
+  carries a citation to the atlas source.
+
+Still open: placing the uprisings and the 1912 units on the map, linking the 1956 and
+1997 changes to the district records in the atlas, and a second reading of the OCR
+tables against the printed pages. The profile text is English only; Kannada labels around
+it need native proofreading.
 
 ## Adding or changing a dynasty
 

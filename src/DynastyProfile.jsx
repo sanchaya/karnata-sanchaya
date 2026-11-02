@@ -22,7 +22,7 @@ export default function DynastyProfile({ phase, locale }) {
     <p className="dynasty-profile-source">{t.source} · {t.map} {profile.map}</p>
     <dl>
       <div><dt>{t.period}</dt><dd>{theirs || t.unknown} <small>· {t.ours} {phase.from}–{phase.to} · <b className={matches ? 'ok' : 'check'}>{matches ? t.same : t.differs}</b></small></dd></div>
-      <div><dt>{t.area}</dt><dd>{profile.areaKm2.toLocaleString('en-IN')} {t.km}</dd></div>
+      {profile.areaKm2 && <div><dt>{t.area}</dt><dd>{profile.areaKm2.toLocaleString('en-IN')} {t.km}</dd></div>}
       {rows.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
     </dl>
     <p className="dynasty-profile-note">{t.note} <a href={CENSUS_ATLAS_MAP_URL} target="_blank" rel="noreferrer">{t.open}</a></p>
