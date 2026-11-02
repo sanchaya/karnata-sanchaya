@@ -20,7 +20,7 @@ export const nameLines = (phase, locale) => [
 ]
 
 // Evidence washes in thumbnail/poster coordinates (the same projection as the paths): one soft disc per recorded point.
-export const washOf = phase => evidenceFor(phase).map(point => ({
+export const washOf = (phase, year = Infinity) => evidenceFor(phase, year).map(point => ({
   x: (point.lng - LNG0) * K * COS, y: (LAT1 - point.lat) * K, r: (WASH_KM[point.tier] / 111) * K, alpha: WASH_ALPHA[point.tier], capital: point.kind === 'capital',
 }))
 

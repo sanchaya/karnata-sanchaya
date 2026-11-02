@@ -94,3 +94,29 @@ main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; m
 .who-timeline li.hit .who-name { font-weight: 700; }
 .who-link { display: inline-block; margin-top: 10px; font-weight: 700; }
 @media (max-width: 800px) { .who-layout { grid-template-columns: 1fr; } .who-axis, .who-timeline li { grid-template-columns: 110px 1fr; } .who-map .leaflet-container { height: 320px; } }
+
+/* Maps by era */
+.dynasty-eras { margin: 14px 0; }
+.dynasty-eras h3 { margin: 0 0 4px; }
+.dynasty-eras > p { margin: 0 0 10px; font-size: 13px; color: var(--sanchaya-muted); }
+.dynasty-eras ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.dynasty-eras li { display: grid; gap: 4px; align-content: start; padding: 8px; border: 1px solid var(--sanchaya-border); border-radius: 10px; background: #fffdf8; break-inside: avoid; }
+.dynasty-eras svg { width: 100%; height: auto; max-height: 260px; }
+.dynasty-eras li > span { display: flex; flex-wrap: wrap; gap: 3px 8px; font-size: 11px; line-height: 1.3; }
+.dynasty-eras li > span i { font-style: normal; padding-left: 10px; background: linear-gradient(var(--c), var(--c)) left center / 7px 7px no-repeat; }
+@media (max-width: 900px) { .dynasty-eras ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Print: the dynasty pages print as a clean sheet of maps, without the site chrome or the interactive map. */
+@media print {
+  body > #root > header, body > #root > footer, header, nav, footer, .berunda-launcher, .portal-fab, .dynasty-live, .dynasty-share-body > *:not(:first-child), .dynasty-map-actions, .who-controls, .who-map, .map-guide-launcher { display: none !important; }
+  /* community.css hides everything but certificates when printing; these pages opt back in. */
+  .dynasty-map-page, .dynasty-map-page *, .who-ruled-page, .who-ruled-page * { visibility: visible; }
+  main.portal-page { max-width: none !important; padding: 0 !important; }
+  .dynasty-layout { display: block !important; }
+  .dynasty-picker { position: static !important; max-height: none !important; overflow: visible !important; border: 0 !important; }
+  .dynasty-gallery { display: grid !important; grid-template-columns: repeat(4, 1fr); overflow: visible !important; }
+  .dynasty-gallery li { flex: none !important; break-inside: avoid; }
+  .dynasty-eras ol { grid-template-columns: repeat(4, 1fr); }
+  .who-layout { display: block; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

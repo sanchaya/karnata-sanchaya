@@ -5,6 +5,7 @@ import { DYNASTY_PHASES } from './data/dynasty-areas'
 import DynastyAreasControl from './DynastyAreasControl'
 import { loadDistricts, loadStates } from './DynastyAreasLayer'
 import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, washOf } from './DynastyGallery'
+import DynastyEras from './DynastyEras'
 import './script-fonts.css'
 
 const URL_TEXT = 'karnata.sanchaya.net'
@@ -127,6 +128,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
           </MapContainer>
           <p>{t.pick} {t.note}</p>
         </section>
+        <DynastyEras locale={locale} />
         <section className="dynasty-share">
           <img src={`${import.meta.env.BASE_URL}karnata-qr.svg`} alt="" width="120" height="120" />
           <div className="dynasty-share-body">
