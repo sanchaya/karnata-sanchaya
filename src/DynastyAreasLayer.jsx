@@ -46,7 +46,7 @@ export default function DynastyAreasLayer({ year, locale, districtGeojson, phase
       layer.bindTooltip(`${name} · ${phase ? phase.name[locale] : (locale === 'kn' ? 'ಈ ವರ್ಷ ಯಾವ ರಾಜವಂಶವೂ ದಾಖಲಾಗಿಲ್ಲ' : 'no dynasty mapped this year')}`, { sticky: true })
     }} />}
     {labels.map(({ phase, center }) => <Marker key={`${phase.id}-${signature}`} position={center} interactive={false} keyboard={false}
-      icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}${fontFor?.(phase) ? `;font-family:${fontFor(phase).replaceAll('"', "'")}` : ''}">${phase.name[locale]}</span>`, iconSize: [0, 0] })} />)}
+      icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}${fontFor?.(phase) ? `;font-family:${fontFor(phase).replaceAll('"', "'")}` : ''}">${fontFor && locale === 'en' ? `${phase.name.kn}<small>${phase.name.en}</small>` : phase.name[locale]}</span>`, iconSize: [0, 0] })} />)}
   </>
 }
 

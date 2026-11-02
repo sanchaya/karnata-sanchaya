@@ -18,18 +18,25 @@
 @media(max-width:980px){.script-hero{grid-template-columns:1fr;align-items:start;padding:26px 18px 20px}.script-hero h2{font-size:26px}.script-stats{width:100%}.script-workspace{grid-template-columns:1fr;min-height:0;overflow-x:hidden}.script-sidebar{border-right:0;border-bottom:1px solid var(--sanchaya-border);overflow:hidden}.script-sidebar label{margin-bottom:8px}.script-timeline{display:flex;width:100%;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;padding:2px 1px 6px;scroll-snap-type:x proximity}.script-timeline button{flex:0 0 min(260px,78vw);min-width:0;scroll-snap-align:start}.script-detail{padding:20px 18px}.script-detail-head{display:grid}.script-detail meter{width:100%;max-width:220px}.script-classification dl,.script-link-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.app-shell main.script-page{min-height:calc(100svh - 88px)}.script-hero{padding:20px 14px 16px}.script-hero h2{font-size:23px;line-height:1.18}.script-hero p{font-size:12px}.script-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.script-stats span{padding:8px 6px;font-size:8px}.script-stats b{font-size:20px}.script-sidebar{padding:12px}.script-timeline{margin-top:10px}.script-detail{gap:14px;padding:18px 14px 24px}.script-detail h3{font-size:24px}.script-classification,.script-link-grid section{padding:11px}.script-evidence-strip{display:grid;grid-template-columns:auto repeat(4,12px);align-items:center}.script-evidence-strip b{grid-column:1/-1;margin-left:0}.script-actions{display:grid;grid-template-columns:1fr}.script-actions a{text-align:center}}
 
-/* All-dynasties gallery above the script workspace */
-.dynasty-gallery { margin: 14px 0; padding: 14px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
-.dynasty-gallery h3 { margin: 0 0 10px; font-size: 15px; color: var(--sanchaya-blue); }
-.dynasty-gallery ol { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
-.dynasty-gallery button { display: grid; justify-items: center; gap: 3px; width: 100%; padding: 8px 6px; border: 1px solid var(--sanchaya-border); border-radius: 10px; background: #fffdf8; cursor: pointer; }
+/* Dynasty map page */
+.dynasty-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 14px 0; padding: 0; list-style: none; }
+.dynasty-gallery button { display: grid; justify-items: center; align-content: start; gap: 4px; width: 100%; height: 100%; padding: 12px 8px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fffdf8; text-align: center; cursor: pointer; }
 .dynasty-gallery button.active { border-color: var(--sanchaya-blue); box-shadow: 0 0 0 2px #dfe5ff; }
-.dynasty-gallery button:disabled { cursor: default; opacity: .75; }
-.dynasty-gallery svg { width: 64px; height: 96px; }
-.dynasty-gallery strong { font-size: 17px; line-height: 1.2; text-align: center; font-weight: 400; }
-.dynasty-gallery small { color: var(--sanchaya-muted); font-size: 10px; }
-
+.dynasty-gallery svg { width: 96px; height: 144px; }
+.dynasty-gallery strong { font-size: 16px; line-height: 1.3; font-weight: 700; color: var(--sanchaya-ink); }
+.dynasty-gallery strong[style] { font-size: 22px; font-weight: 400; line-height: 1.7; }
+.dynasty-gallery strong.latin { font-size: 13px; }
+.dynasty-gallery small { color: var(--sanchaya-muted); font-size: 11px; }
+.dynasty-share { display: flex; align-items: center; gap: 16px; margin: 14px 0; padding: 14px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+.dynasty-share img { flex: none; }
+.dynasty-share > div { display: grid; gap: 4px; }
+.dynasty-map-note { color: var(--sanchaya-muted); font-size: 12px; }
 .dynasty-map-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
 .dynasty-map-actions button { padding: 9px 14px; border: 1px solid var(--sanchaya-blue); border-radius: 8px; background: #fff; color: var(--sanchaya-blue); font-weight: 700; cursor: pointer; }
 .dynasty-map-actions [role=status] { color: var(--sanchaya-muted); font-size: 12px; }
-.dynasty-map-canvas { display: block; width: 100%; height: auto; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+main.portal-page.dynasty-map-page { display: block; max-width: 1100px; margin: 0 auto; padding: 18px 16px 40px; }
+
+.dynasty-live { margin: 14px 0; }
+.dynasty-live .leaflet-container { height: 460px; border: 1px solid var(--sanchaya-border); border-radius: 12px; }
+.dynasty-live p { margin: 6px 0 0; color: var(--sanchaya-muted); font-size: 12px; }
+.dynasty-live .dynasty-area-label span small { display: block; font: 700 11px Inter, sans-serif; }
