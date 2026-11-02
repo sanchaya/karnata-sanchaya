@@ -3,7 +3,6 @@ import { CircleMarker, MapContainer, Polygon, TileLayer, Tooltip, useMap } from 
 import { atlasData } from './data/atlas'
 import './script-fonts.css'
 import { ERA_FONTS, PRINT_FONTS } from './data/era-fonts'
-import DynastyAreasLayer, { loadDistricts } from './DynastyAreasLayer'
 import DynastyAreasControl from './DynastyAreasControl'
 import { DYNASTY_PHASES } from './data/dynasty-areas'
 
@@ -47,8 +46,6 @@ function FitScope({scope,shapes}){
 function ScriptMap({record,locale,t}){
   const [scope,setScope]=useState('karnataka')
   const [older,setOlder]=useState(false)
-  const [districts,setDistricts]=useState(null)
-  useEffect(()=>{let on=true;loadDistricts().then(data=>on&&setDistricts(data));return()=>{on=false}},[])
   const shapes=useMemo(()=>phaseMapShapes(record),[record])
   // Dynasties of this phase drawn on today's district shapes; phases with no mapped dynasty fall back to the older shapes.
   const phases=useMemo(()=>{const ids=new Set(record.relatedPolityIds||[]);return DYNASTY_PHASES.filter(phase=>ids.has(phase.polityId)&&phase.from<=record.date.to&&phase.to>=record.date.from)},[record])
@@ -60,8 +57,7 @@ function ScriptMap({record,locale,t}){
     <div className="script-map-frame"><MapContainer bounds={KARNATAKA_BOUNDS} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
       <FitScope scope={scope} shapes={shapes}/>
-      {!hasDynasties&&<DynastyAreasControl locale={locale} defaultYear={Math.max(300,record.date.era==='BCE'?300:Math.round((record.date.from+record.date.to)/2))}/>}
-      {hasDynasties&&<DynastyAreasLayer locale={locale} districtGeojson={districts} phases={phases} fontFor={dynastyFont}/>}
+      <DynastyAreasControl locale={locale} phases={hasDynasties?phases:undefined} fontFor={dynastyFont} defaultYear={record.date.era==='BCE'?300:Math.max(300,Math.round((record.date.from+record.date.to)/2))}/>
       {showOlder&&shapes.extents.map((extent,index)=>{const polityId=extent.polityIds[0];const firstOfPolity=shapes.extents.findIndex(item=>item.polityIds[0]===polityId)===index;const color=entityById.get(polityId)?.color||'#9c3d32';return <Polygon key={extent.id} positions={extent.geometry.coordinates.map(([lng,lat])=>[lat,lng])} pathOptions={{color,fillColor:color,fillOpacity:.14,weight:2,dashArray:extent.classification==='core-administered'?null:'5 4'}}>{firstOfPolity&&!hasDynasties&&<Tooltip permanent direction="center" className="script-map-label"><span style={fontStyle(polityId)}>{polityLabel(polityId)}</span></Tooltip>}</Polygon>})}
       {(showOlder||!hasDynasties)&&shapes.capitals.map(item=><CircleMarker key={item.id} center={item.point} radius={7} pathOptions={{color:item.polity.color||'#9c3d32',fillColor:'#fff',fillOpacity:.9,weight:3}}><Tooltip permanent direction="right" className="script-map-label"><span style={fontStyle(item.id)}>{polityLabel(item.id)}</span></Tooltip></CircleMarker>)}
     </MapContainer></div>

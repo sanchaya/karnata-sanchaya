@@ -9,8 +9,9 @@ const copy = {
   en: { label: 'Historical dynasty areas (approximate)', year: 'Year' },
 }
 
+// `phases` pins the layer to given dynasties (no year slider) instead of a chosen year.
 // A map control that adds the dynasty-areas layer to any Leaflet map: a checkbox, and a year slider once it is on.
-export default function DynastyAreasControl({ locale = 'kn', defaultYear = 1100, defaultOn = false, position = 'topright' }) {
+export default function DynastyAreasControl({ locale = 'kn', defaultYear = 1100, defaultOn = true, position = 'topright', phases, fontFor }) {
   const map = useMap()
   const t = copy[locale] || copy.kn
   const [on, setOn] = useState(defaultOn)
@@ -28,11 +29,11 @@ export default function DynastyAreasControl({ locale = 'kn', defaultYear = 1100,
   return <>
     {createPortal(<>
       <label><input type="checkbox" checked={on} onChange={event => setOn(event.target.checked)} /> <span>{t.label}</span></label>
-      {on && <>
+      {on && !phases && <>
         <label className="dynasty-map-control-year"><span>{t.year}: <b>{year}</b></span><input type="range" min="300" max="1947" step="1" value={year} onChange={event => setYear(Number(event.target.value))} /></label>
         <DynastyAreasLegend year={year} locale={locale} />
       </>}
     </>, container)}
-    {on && districts && <DynastyAreasLayer year={year} locale={locale} districtGeojson={districts} />}
+    {on && districts && <DynastyAreasLayer year={year} locale={locale} districtGeojson={districts} phases={phases} fontFor={fontFor} />}
   </>
 }
