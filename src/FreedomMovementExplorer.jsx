@@ -5,7 +5,6 @@ import { canonicalDistrictAssociation } from './data/district-normalization'
 import { buildSourceTiers, recordAuthorityCited } from './data/source-provenance'
 import ProvenanceBadge from './ProvenanceBadge'
 import SourceLink from './SourceLink'
-import DynastyAreasControl from './DynastyAreasControl'
 
 const primary=(value,locale)=>value?.[locale]||value?.en||value?.kn||''
 const secondary=(value,locale)=>value?.[locale==='kn'?'en':'kn']||''
@@ -107,7 +106,7 @@ export default function FreedomMovementExplorer({locale='kn',districtGeojson,map
     <section className="freedom-workspace">
       <section className={`freedom-map theme-${mapTheme}`}>
         <div className="freedom-map-heading"><div><strong>{t.mapTitle}</strong><small>{t.mapNote}</small></div><div><button className={mapTheme==='modern'?'active':''} onClick={()=>setMapTheme('modern')}>{t.modern}</button><button className={mapTheme==='historical'?'active':''} onClick={()=>setMapTheme('historical')}>{t.historical}</button></div></div>
-        <MapContainer center={[14.7,76.2]} zoom={6} minZoom={3} scrollWheelZoom><DynastyAreasControl locale={locale} defaultYear={1800} />
+        <MapContainer center={[14.7,76.2]} zoom={6} minZoom={3} scrollWheelZoom>
           <FreedomMapViewport points={mapped.map(person=>person.point)} selectedPoint={selected?.point}/>
           <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
           {districtGeojson&&<GeoJSON key={`${locale}-${district}`} data={districtGeojson} interactive={false} style={feature=>({color:district===feature.properties.id?'#9c3d32':'#68738b',weight:district===feature.properties.id?3:1,fillColor:'#9c3d32',fillOpacity:district===feature.properties.id ? .12 : .025,dashArray:district===feature.properties.id?null:'5 4'})}/>}

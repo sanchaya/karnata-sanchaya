@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react'
 import { CircleMarker, GeoJSON, MapContainer, TileLayer, Tooltip } from 'react-leaflet'
 import { atlasData } from './data/atlas'
 import { languageRegionBounds, languageRegions } from './data/language-regions'
-import DynastyAreasControl from './DynastyAreasControl'
 
 const copy={
   kn:{title:'ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಕಾಲರೇಖೆ',badge:'ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ',warn:'ಈ ಭೂಪಟ ಸಂಶೋಧನಾ ಹಂತದಲ್ಲಿದೆ. ಚುಕ್ಕೆಗಳು ಅಟ್ಲಸ್‌ನ ಶಾಸನ ದಾಖಲೆಗಳಿರುವ ಸ್ಥಳಗಳು; ಛಾಯೆಯ ಪ್ರದೇಶಗಳು ಊಹೆ ಮಾತ್ರ, ಇಂದಿನ ರಾಜ್ಯಗಳನ್ನು ಆಧಾರವಾಗಿ ಬಳಸಲಾಗಿದೆ.',year:'ವರ್ಷ',active:'ಈ ವರ್ಷದ ಪ್ರದೇಶಗಳು',none:'ಈ ವರ್ಷಕ್ಕೆ ದಾಖಲೆ ಇಲ್ಲ.',sources:'ಆಕರ ಸುಳಿವುಗಳು',verify:'ಪರಿಶೀಲಿಸಬೇಕಾದ ಗ್ರಂಥಗಳು',lang:'ಭಾಷೆ',script:'ಲಿಪಿ',sites:'ಅಟ್ಲಸ್‌ನ ದೃಢ ಸ್ಥಳಗಳು',records:'ದಾಖಲೆಗಳು',places:'ಸ್ಥಳಗಳು',noSites:'ಅಟ್ಲಸ್‌ನಲ್ಲಿ ಇನ್ನೂ ಶಾಸನ ದಾಖಲೆ ಇಲ್ಲ; ಊಹೆಯ ಪ್ರದೇಶ ಮಾತ್ರ.',assumedUnits:'ಊಹೆಯ ಪ್ರದೇಶ (ಇಂದಿನ ರಾಜ್ಯಗಳು)',showAssumed:'ಊಹೆಯ ಪ್ರದೇಶಗಳನ್ನು ತೋರಿಸಿ',legendSite:'ದೃಢ ಸ್ಥಳ (ಅಟ್ಲಸ್ ದಾಖಲೆ)',legendArea:'ಊಹೆಯ ಪ್ರದೇಶ',note:'ಇತರ ಭಾಷೆಗಳು (ತುಳು ಮುಂತಾದವು) ಈ ಕಾಲಾವಧಿಯಲ್ಲಿ ಶಾಸನಗಳಲ್ಲಿ ದೃಢಪಟ್ಟಿಲ್ಲವಾದ್ದರಿಂದ ಇಲ್ಲಿ ತೋರಿಸಿಲ್ಲ. ಸಮುದ್ರವನ್ನು ಯಾವ ಭಾಷೆಗೂ ಹಂಚಿಲ್ಲ.'},
@@ -56,7 +55,7 @@ export default function LanguageTimeline({locale='en'}){
       <label className="language-toggle"><input type="checkbox" checked={showAssumed} onChange={event=>setShowAssumed(event.target.checked)}/> {t.showAssumed}</label>
     </div>
     <div className="language-layout">
-      <div className="language-map"><MapContainer bounds={[[6,66],[37,98]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}><DynastyAreasControl locale={locale} defaultYear={1100} />
+      <div className="language-map"><MapContainer bounds={[[6,66],[37,98]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
         <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         {units&&<GeoJSON key="context" data={units} interactive={false} style={{color:'#8a93a8',weight:.6,fillOpacity:0}}/>}
         {showAssumed&&units&&active.map(region=>{const color=COLORS[languageRegions.indexOf(region)%COLORS.length];const features=region.units.map(id=>unitById.get(id)).filter(Boolean);return features.length?<GeoJSON key={`${region.id}-${activeKey}`} data={{type:'FeatureCollection',features}} interactive={false} style={{color,weight:1.5,dashArray:'5 4',fillColor:color,fillOpacity:.2}}/>:null})}

@@ -4,7 +4,6 @@ import { indiaResearchIndex } from './data/india-research.generated.js'
 import { languageRegions } from './data/language-regions.js'
 import LanguageTimeline from './LanguageTimeline'
 import './india-research.css'
-import DynastyAreasControl from './DynastyAreasControl'
 
 const PAGE_SIZE=80
 const kindColors={event:'#a83e32','district-event':'#9b4b36',milestone:'#4361ee',kingdom:'#26735f',ruler:'#79538f',territory:'#c27b25',monument:'#80572f',inscription:'#9a6b24','corpus-page-lead':'#657084'}
@@ -71,7 +70,7 @@ export default function IndiaResearchExplorer({locale='en',dataset='history'}){
     </section>
     {dataset==='history'&&<section className="india-research-map-wrap">
       <div className="india-research-map-heading"><strong>{kn?'ಸ್ಥಳ ನಿರ್ದಿಷ್ಟ ಘಟನೆಗಳು':'Location-specific records'}</strong><small>{mapped.length.toLocaleString('en-IN')} / {filtered.length.toLocaleString('en-IN')} · {kn?'ಒಮ್ಮೆ ಗರಿಷ್ಠ 700 ಗುರುತುಗಳು':'maximum 700 markers at once'}</small></div>
-      <MapContainer center={[22.5,79]} zoom={4.35} minZoom={3} maxZoom={13} scrollWheelZoom><DynastyAreasControl locale={locale} defaultYear={1100} />
+      <MapContainer center={[22.5,79]} zoom={4.35} minZoom={3} maxZoom={13} scrollWheelZoom>
         <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         {mapped.map(record=><CircleMarker key={record.id} center={[record.lat,record.lng]} radius={selected?.id===record.id?8:5} pathOptions={{color:'#fff',weight:1.5,fillColor:kindColors[record.kind]||'#657084',fillOpacity:.9}} eventHandlers={{click:()=>setSelected(record)}}><Popup><strong>{record.title}</strong><br/><small>{record.kind} · {yearLabel(record.yearFrom)}</small>{record.summary&&<><br/><span>{record.summary.slice(0,360)}</span></>}</Popup></CircleMarker>)}
       </MapContainer>

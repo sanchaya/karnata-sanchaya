@@ -86,9 +86,12 @@ promote it to evidence by adding a cited inscription, monument or event.
   holds the timeline of every dynasty, dimming those with nothing nearby.
   `#dynasties` has the same search box to find a dynasty by name. A record
   nearby is not proof of rule: the page says so.
-- **Other maps** use `DynastyAreasControl.jsx` / `DynastyAreasLayer.jsx` (scripts,
-  coins, relations, people, freedom, district history, literature/epigraphy,
-  India languages and research). The main atlas uses the layer with its own
+- **Other maps** use `DynastyAreasControl.jsx` / `DynastyAreasLayer.jsx` only where
+  the page holds dynasty and date information: scripts (pinned to the record's
+  own dynasties), coins and literature/epigraphy (both start with the layer
+  off). It is deliberately **not** on the freedom, relations, people, district
+  history, India languages or India research maps, where it would only add
+  clutter; `test/dynasty-areas.test.js` enforces the list. The main atlas uses the layer with its own
   toolbar button. The control takes `phases` (pin dynasties), `evidenceYear`
   and `labels`.
 - **Printing:** `@media print` in `src/scripts.css` hides navigation and the

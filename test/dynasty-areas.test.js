@@ -69,3 +69,10 @@ test('the shareable dynasty map page is routed and ships its QR code', () => {
   assert.match(app, /view==='dynasties'&&/)
   assert.ok(existsSync(new URL('../public/karnata-qr.svg', import.meta.url)))
 })
+
+test('the dynasty areas control appears only where the page holds dynasty and date information', async () => {
+  const uses = async file => /<DynastyAreasControl/.test(await readFile(new URL(`../src/${file}.jsx`, import.meta.url), 'utf8'))
+  for (const file of ['DynastyMapPage', 'ScriptEvolutionExplorer', 'CoinExplorer', 'LiteratureEpigraphyExplorer']) assert.ok(await uses(file), `${file} should offer the control`)
+  for (const file of ['FreedomMovementExplorer', 'GlobalRelationsExplorer', 'PeopleExplorer', 'DistrictHistoryExplorer', 'LanguageTimeline', 'IndiaResearchExplorer']) assert.equal(await uses(file), false, `${file} should not offer the control`)
+  for (const file of ['CoinExplorer', 'LiteratureEpigraphyExplorer']) assert.match(await readFile(new URL(`../src/${file}.jsx`, import.meta.url), 'utf8'), /defaultOn=\{false\}/, `${file} starts with the layer off`)
+})
