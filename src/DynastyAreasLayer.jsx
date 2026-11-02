@@ -14,7 +14,7 @@ const centerOf = features => {
 
 // Loaded once and only when the layer is on; the states file is ~75KB and only needed for the wider reach.
 let statesPromise
-const loadStates = () => (statesPromise ||= fetch(`${base}south-asia-states.geojson`).then(response => response.json()).catch(() => null))
+export const loadStates = () => (statesPromise ||= fetch(`${base}south-asia-states.geojson`).then(response => response.json()).catch(() => null))
 
 export const loadDistricts = () => (districtsPromise ||= fetch(`${base}karnataka-districts.geojson`).then(response => response.json()).catch(() => null))
 let districtsPromise
@@ -36,7 +36,7 @@ export default function DynastyAreasLayer({ year, locale, districtGeojson, phase
   }).filter(Boolean), [active, byDistrict, districtGeojson])
   const reachStates = states && { ...states, features: states.features.filter(feature => byState.has(feature.properties.id) && feature.properties.id !== 'in-karnataka') }
   return <>
-    {reachStates?.features.length > 0 && <GeoJSON interactive={false} key={`reach-${signature}`} data={reachStates} style={feature => ({ color: byState.get(feature.properties.id).color, weight: 1.2, dashArray: '5 4', fillColor: byState.get(feature.properties.id).color, fillOpacity: .14 })} />}
+    {reachStates?.features.length > 0 && <GeoJSON interactive={false} key={`reach-${signature}`} data={reachStates} style={feature => ({ color: byState.get(feature.properties.id).color, weight: 1.2, dashArray: '5 4', fillColor: byState.get(feature.properties.id).color, fillOpacity: .26 })} />}
     {districtGeojson && <GeoJSON key={`areas-${signature}-${locale}`} data={districtGeojson} style={feature => {
       const phase = byDistrict.get(feature.properties.id)
       return phase ? { color: '#fff', weight: 1.4, fillColor: phase.color, fillOpacity: .62 } : { color: '#a9a39a', weight: 1, dashArray: '3 4', fillColor: '#ece6d6', fillOpacity: .35 }
