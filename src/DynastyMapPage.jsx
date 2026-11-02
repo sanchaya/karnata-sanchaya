@@ -164,7 +164,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
           <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <InvalidateOnShow visible={tab === 'map'} />
           <FitEvidence phases={phases} year={year} />
-          <DynastyAreasControl locale={locale} phases={phases} evidenceYear={year} labels={phases.length <= 4} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
+          <DynastyAreasControl locale={locale} phases={phases} evidenceYear={year} labels={phases.length <= 4} />
         </MapContainer>
         <p>{t.pick} {t.note}</p>
       </section>

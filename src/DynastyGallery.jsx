@@ -12,10 +12,10 @@ export const pathOf = geometry => (geometry.type === 'Polygon' ? [geometry.coord
 
 // The era typeface only draws Kannada, so an English page keeps the Kannada name in it and adds the English name beneath.
 export const eraFamily = phase => ERA_FONTS[phase.polityId]?.family
-// Name lines, in order: Kannada, the same name in the era typeface (where Fonts Sanchaya has one), then English on the English site.
-export const nameLines = (phase, locale) => [
+// Name lines, in order: Kannada, then (only on the generated poster) the same name in the era typeface where Fonts Sanchaya has one, then English on the English site.
+export const nameLines = (phase, locale, withEraFont = true) => [
   { text: phase.name.kn, family: null },
-  ...(eraFamily(phase) ? [{ text: phase.name.kn, family: eraFamily(phase) }] : []),
+  ...(withEraFont && eraFamily(phase) ? [{ text: phase.name.kn, family: eraFamily(phase) }] : []),
   ...(locale === 'en' ? [{ text: phase.name.en, family: null, latin: true }] : []),
 ]
 
@@ -40,7 +40,7 @@ export default function DynastyGallery({ locale, selectedId, onSelect }) {
         {wash.filter(disc => !disc.lead).map((disc, index) => <circle key={index} cx={disc.x} cy={disc.y} r={disc.r} fill={`url(#wash-${phase.id})`} fillOpacity={Math.min(1, disc.alpha * 3)} />)}
         {wash.map((disc, index) => <circle key={`d${index}`} cx={disc.x} cy={disc.y} r={disc.capital ? 11 : 6} fill={disc.lead ? '#fff' : phase.color} stroke={disc.lead ? phase.color : '#fff'} strokeWidth="3" strokeDasharray={disc.lead ? '4 3' : undefined} />)}
       </svg>
-      <span>{nameLines(phase, locale).map((line, index) => <strong key={index} lang={line.latin ? 'en' : 'kn'} className={line.latin ? 'latin' : ''} style={line.family ? { fontFamily: `"${line.family}",serif` } : undefined}>{line.text}</strong>)}<small>{phase.from}–{phase.to}</small></span>
+      <span>{nameLines(phase, locale, false).map((line, index) => <strong key={index} lang={line.latin ? 'en' : 'kn'} className={line.latin ? 'latin' : ''} style={line.family ? { fontFamily: `"${line.family}",serif` } : undefined}>{line.text}</strong>)}<small>{phase.from}–{phase.to}</small></span>
     </button></li>
   })}</ol>
 }

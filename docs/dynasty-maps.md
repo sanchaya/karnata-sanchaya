@@ -75,6 +75,7 @@ promote it to evidence by adding a cited inscription, monument or event.
   - *Download & share*: link, QR code, copy and download of the poster in Kannada
     and English. Posters are drawn on an off-screen canvas; the grid grows with
     the number of dynasties.
+- **Name styling:** on the page, map labels and the dynasty list use only the modern Kannada text (plus the English name on the English site). The old-script (era font) rendering of Kadamba, Western Ganga, Badami Chalukya and Hoysala names appears only on the generated poster, which can carry Kannada, the era typeface and English together (`nameLines(phase, locale, withEraFont)` in `DynastyGallery.jsx`).
 - **`#who-ruled` (Explore → Who ruled here?)**, `src/WhoRuledPage.jsx`. Pick a
   place (search, district or map click) and a radius (50–250 km) to list the
   dynasties with recorded evidence nearby, in time order, with the nearest

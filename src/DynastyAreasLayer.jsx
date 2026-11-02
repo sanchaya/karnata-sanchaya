@@ -45,7 +45,7 @@ export default function DynastyAreasLayer({ year, locale, districtGeojson, phase
       const core = points.filter(point => point.tier !== 'influence' && point.tier !== 'lead')
       const center = centroid(core.length ? core : points)
       return center && <Marker key={`label-${phase.id}`} position={center} interactive={false} keyboard={false}
-        icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}${fontFor?.(phase) ? `;font-family:${fontFor(phase).replaceAll('"', "'")}` : ''}">${fontFor && locale === 'en' ? `${phase.name.kn}<small>${phase.name.en}</small>` : phase.name[locale]}${points.filter(point => point.kind !== 'lead').length < 3 ? `<small>${t.thin}</small>` : ''}</span>` })} />
+        icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}${fontFor?.(phase) ? `;font-family:${fontFor(phase).replaceAll('"', "'")}` : ''}">${locale === 'en' ? `${phase.name.kn}<small>${phase.name.en}</small>` : phase.name[locale]}${points.filter(point => point.kind !== 'lead').length < 3 ? `<small>${t.thin}</small>` : ''}</span>` })} />
     })}
   </>
 }
