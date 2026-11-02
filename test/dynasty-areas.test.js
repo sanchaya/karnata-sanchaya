@@ -23,6 +23,14 @@ test('every dynasty has recorded evidence points, starting with its capital', ()
   }
 })
 
+test('Cholas and Marathas show open leads that are never counted as evidence', () => {
+  for (const id of ['chola-gangavadi', 'maratha-karnataka']) {
+    const points = evidenceFor(DYNASTY_PHASES.find(phase => phase.id === id))
+    assert.ok(points.some(point => point.kind === 'lead' && point.tier === 'lead'), `${id} has no leads`)
+    assert.ok(points.some(point => point.kind === 'capital'), `${id} has no capital`)
+  }
+})
+
 test('evidence grows with the year and a dynasty keeps only its own phase', () => {
   const vijayanagara = DYNASTY_PHASES.find(phase => phase.id === 'vijayanagara')
   assert.ok(evidenceFor(vijayanagara, 1400).length < evidenceFor(vijayanagara).length)

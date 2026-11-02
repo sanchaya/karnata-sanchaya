@@ -23,8 +23,9 @@ export default function DynastyEras({ locale }) {
           <defs>{active.map(phase => <radialGradient key={phase.id} id={`era${year}-${phase.id}`}><stop offset="0" stopColor={phase.color} stopOpacity="1" /><stop offset="1" stopColor={phase.color} stopOpacity="0" /></radialGradient>)}</defs>
           {stateShapes.map(shape => <path key={shape.id} d={shape.d} fill="#f6f2e6" stroke="#ddd6c4" strokeWidth="1" />)}
           {shapes.map(shape => <path key={shape.id} d={shape.d} fill="#e6dfcc" stroke="#e6dfcc" strokeWidth=".6" />)}
-          {active.flatMap(phase => washOf(phase, year).map((disc, index) => <circle key={`${phase.id}${index}`} cx={disc.x} cy={disc.y} r={disc.r} fill={`url(#era${year}-${phase.id})`} fillOpacity={Math.min(1, disc.alpha * 3)} />))}
+          {active.flatMap(phase => washOf(phase, year).filter(disc => !disc.lead).map((disc, index) => <circle key={`${phase.id}${index}`} cx={disc.x} cy={disc.y} r={disc.r} fill={`url(#era${year}-${phase.id})`} fillOpacity={Math.min(1, disc.alpha * 3)} />))}
           {active.flatMap(phase => washOf(phase, year).filter(disc => disc.capital).map((disc, index) => <circle key={`c${phase.id}${index}`} cx={disc.x} cy={disc.y} r="9" fill={phase.color} stroke="#fff" strokeWidth="3" />))}
+          {active.flatMap(phase => washOf(phase, year).filter(disc => disc.lead).map((disc, index) => <circle key={`l${phase.id}${index}`} cx={disc.x} cy={disc.y} r="8" fill="#fff" stroke={phase.color} strokeWidth="3" strokeDasharray="4 3" />))}
         </svg>
         <b>{t.year} {year}</b>
         <span>{active.map(phase => <i key={phase.id} style={{ '--c': phase.color }}>{phase.name[locale]}</i>)}</span>

@@ -49,13 +49,17 @@ async function draw(canvas, districts, states, locale) {
     for (const feature of states?.features || []) { const path = new Path2D(pathOf(feature.geometry)); ctx.fillStyle = '#f6f2e6'; ctx.fill(path); ctx.strokeStyle = '#ddd6c4'; ctx.stroke(path) }
     for (const shape of shapes) { ctx.fillStyle = '#e6dfcc'; ctx.fill(shape.path); ctx.strokeStyle = '#e6dfcc'; ctx.lineWidth = 1; ctx.stroke(shape.path) }
     const wash = washOf(phase)
-    for (const disc of wash) {
+    for (const disc of wash.filter(item => !item.lead)) {
       const gradient = ctx.createRadialGradient(disc.x, disc.y, 0, disc.x, disc.y, disc.r)
       gradient.addColorStop(0, phase.color); gradient.addColorStop(1, `${phase.color}00`)
       ctx.globalAlpha = Math.min(1, disc.alpha * 3.2); ctx.fillStyle = gradient; ctx.beginPath(); ctx.arc(disc.x, disc.y, disc.r, 0, 7); ctx.fill()
     }
     ctx.globalAlpha = 1; ctx.lineWidth = 2.5; ctx.strokeStyle = '#fff'
-    for (const disc of wash) { ctx.fillStyle = phase.color; ctx.beginPath(); ctx.arc(disc.x, disc.y, disc.capital ? 6 : 3.5, 0, 7); ctx.fill(); ctx.stroke() }
+    for (const disc of wash) {
+      ctx.beginPath(); ctx.arc(disc.x, disc.y, disc.lead ? 6 : disc.capital ? 6 : 3.5, 0, 7)
+      if (disc.lead) { ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = phase.color; ctx.setLineDash([4, 3]); ctx.stroke(); ctx.setLineDash([]); ctx.strokeStyle = '#fff' }
+      else { ctx.fillStyle = phase.color; ctx.fill(); ctx.stroke() }
+    }
     ctx.restore()
     ctx.fillStyle = '#1b1f3b'
     let baseline = y + 372

@@ -16,7 +16,7 @@ const copy = {
     pickFirst: 'ಸ್ಥಳ ಆರಿಸಿದಾಗ ಅಲ್ಲಿ ದಾಖಲೆ ಇರುವ ರಾಜವಂಶಗಳು ಕೆಳಗಿನ ಕಾಲರೇಖೆಯಲ್ಲಿ ಗಾಢವಾಗಿ ಕಾಣುತ್ತವೆ.',
     results: 'ಈ ಸ್ಥಳದ ಹತ್ತಿರ ದಾಖಲೆ ಇರುವ ರಾಜವಂಶಗಳು', timeline: 'ಎಲ್ಲ ರಾಜವಂಶಗಳ ಕಾಲರೇಖೆ', away: 'ಕಿ.ಮೀ.', records: 'ದಾಖಲೆಗಳು', thin: 'ಆಧಾರ ಕಡಿಮೆ',
     note: 'ಅಂದಾಜು; ಪರಿಶೀಲನೆ ಬಾಕಿ. ದಾಖಲೆ ಇದ್ದ ಮಾತ್ರಕ್ಕೆ ಆ ರಾಜವಂಶ ಅಲ್ಲಿ ಆಳಿತು ಎಂದಲ್ಲ; ಅಲ್ಲಿ ಅದರ ಪ್ರಭಾವ ಅಥವಾ ಸಂಪರ್ಕ ದಾಖಲಾಗಿದೆ ಎಂದರ್ಥ.',
-    seeMap: 'ರಾಜವಂಶ ಭೂಪಟದಲ್ಲಿ ನೋಡಿ',
+    seeMap: 'ರಾಜವಂಶ ಭೂಪಟದಲ್ಲಿ ನೋಡಿ', contribute: 'ಸಹಕರಿಸಿ →',
   },
   en: {
     eyebrow: 'Karnataka Historical Atlas', title: 'Who ruled here?',
@@ -26,7 +26,7 @@ const copy = {
     pickFirst: 'Once you pick a place, the dynasties with records near it show darker on the timeline below.',
     results: 'Dynasties with records near this place', timeline: 'Timeline of all dynasties', away: 'km', records: 'records', thin: 'thin evidence',
     note: 'Approximate; awaiting review. A record nearby does not prove the dynasty ruled the place; it shows its influence or contact was recorded there.',
-    seeMap: 'See on the dynasty map',
+    seeMap: 'See on the dynasty map', contribute: 'Contribute →',
   },
 }
 
@@ -100,7 +100,7 @@ export default function WhoRuledPage({ locale = 'kn' }) {
         {spot && !matches.length && <p>{t.none}</p>}
         <ol>{matches.map(({ phase, near, points }) => <li key={phase.id} style={{ borderLeftColor: phase.color }}>
           <strong>{nameOf(phase.name)}</strong> <small>{phase.from}–{phase.to}{points.length < 3 ? ` · ${t.thin}` : ''}</small>
-          <ul>{near.slice(0, 4).map((point, index) => <li key={index}>{KIND_LABEL[locale][point.kind]}{point.label ? ` · ${nameOf(point.label)}` : ''}{point.from ? ` · ${point.from}` : ''} <small>{Math.round(point.distance)} {t.away}</small></li>)}</ul>
+          <ul>{near.slice(0, 4).map((point, index) => point.kind === 'lead' ? <li key={index} className="who-lead">{KIND_LABEL[locale].lead} · {nameOf(point.label)} <a href="#contribute">{t.contribute}</a></li> : <li key={index}>{KIND_LABEL[locale][point.kind]}{point.label ? ` · ${nameOf(point.label)}` : ''}{point.from ? ` · ${point.from}` : ''} <small>{Math.round(point.distance)} {t.away}</small></li>)}</ul>
           {near.length > 4 && <small>+{near.length - 4} {t.records}</small>}
         </li>)}</ol>
         <p className="who-note">{t.note}</p>
