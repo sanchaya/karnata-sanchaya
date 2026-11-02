@@ -49,3 +49,36 @@
 .research-task-empty{padding:16px;text-align:center;color:var(--sanchaya-muted)}
 .research-tasks-page input:focus-visible,.research-tasks-page select:focus-visible,.research-tasks-page button:focus-visible,.research-tasks-page a:focus-visible{outline:3px solid #1d3fdd;outline-offset:2px}
 @media(max-width:700px){.research-tasks-page .research-task-progress{display:none}.research-tasks-page .research-task-controls{flex-direction:column}.research-tasks-page .research-task-controls select{display:block}.research-task-heading{flex-direction:column}.research-task-total{justify-items:start}}
+
+/* #evidence: readable text sizes, a calmer overview, and the long card lists cut short with a "Show all" button. */
+.evidence-page .evidence-maturity-panel p,.evidence-page .coin-evidence-panel p,.evidence-page .boundary-evidence-panel p,.evidence-page .source-link-panel p{font-size:13px}
+.evidence-page .coin-evidence-panel>div article p,.evidence-page .boundary-evidence-panel>div article p{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.evidence-page .coin-evidence-panel>div,.evidence-page .boundary-evidence-panel>div{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.evidence-page .coin-evidence-panel article small,.evidence-page .boundary-evidence-panel article small{font-size:12px}
+.evidence-page .coin-evidence-panel article dt,.evidence-page .coin-evidence-panel article dd{font-size:12px}
+.evidence-page .coin-evidence-panel code,.evidence-page .boundary-evidence-panel code{display:block;font-size:11px;overflow-wrap:anywhere;color:var(--sanchaya-muted)}
+.evidence-show-more{display:block;margin:14px auto 0;min-height:44px;padding:8px 24px;border:1px solid var(--sanchaya-blue);border-radius:99px;background:#fff;color:var(--sanchaya-blue);font-weight:700;cursor:pointer}
+.evidence-page .evidence-section-nav button,.evidence-page .evidence-procedure a{min-height:44px;font-size:13px}
+.evidence-page :is(button,a,input,select):focus-visible{outline:3px solid #1d3fdd;outline-offset:2px}
+.evidence-page .evidence-hero{height:auto}
+
+/* The headers inside this page are <header> elements; a global header height clipped them and left blank bands. */
+.evidence-page header{height:auto;min-height:0}
+.evidence-page .evidence-procedure{max-width:none}
+.evidence-page .evidence-maturity-panel>header{margin-bottom:10px}
+.evidence-page .evidence-maturity-grid article{font-size:13px}
+.evidence-page .evidence-maturity-grid article small,.evidence-page .evidence-maturity-grid article span{font-size:12px}
+/* Work queue: columns that hold tasks get the room; empty ones shrink to a one-line chip instead of five equal tall columns that overflow. */
+.evidence-page .evidence-board{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));overflow-x:visible;contain:none;align-items:start}
+.evidence-page .evidence-column.is-empty{padding:6px 10px;min-height:0}
+.evidence-page .evidence-column.is-empty>header{display:flex;justify-content:space-between;align-items:center;margin:0;padding:6px 4px}
+.evidence-page .evidence-column.is-empty>header h3{font-size:13px;margin:0}
+.evidence-page .evidence-column>header{display:flex;justify-content:space-between;align-items:center}
+.evidence-page .evidence-task{font-size:13px}
+.evidence-page .evidence-task small{font-size:12px}
+@media(max-width:900px){.evidence-page .evidence-board{grid-template-columns:1fr}}
+.evidence-page .evidence-board{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
+.evidence-page .evidence-column:not(.is-empty){flex:1 1 100%;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;align-items:start}
+.evidence-page .evidence-column:not(.is-empty)>header{grid-column:1/-1}
+.evidence-page .evidence-column:not(.is-empty)>button,.evidence-page .evidence-column:not(.is-empty)>p{grid-column:1/-1}
+.evidence-page .evidence-column.is-empty{flex:0 1 auto;min-width:190px;order:2}
