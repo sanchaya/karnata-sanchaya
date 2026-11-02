@@ -1,3 +1,5 @@
+/* The wash pane is blurred so shading fades out instead of ending in a hard edge. */
+.dynasty-wash-pane{filter:blur(9px);pointer-events:none}
 .dynasty-area-label{pointer-events:none}
 .dynasty-area-label span{display:inline-block;transform:translate(-50%,-50%);padding:2px 7px;border:2px solid;border-radius:999px;background:rgba(255,252,243,.92);color:#2b2118;font:600 11px/1.3 system-ui,sans-serif;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 .dynasty-legend{display:grid;gap:3px;margin-top:6px;font-size:12px}

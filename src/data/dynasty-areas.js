@@ -1,54 +1,36 @@
-// Approximate dynasty areas drawn on modern district and state units, in the style of printed dynasty maps.
-// Units are assumed, not surveyed: a district or state is coloured when most of it is believed to lie in the
-// dynasty's core (`districts`) or wider reach (`reach`). Every phase is unverified until a reviewer checks it.
-const D = ids => ids.split(' ').map(id => `audit-${id}`)
-
-const NORTH = 'bidar kalaburagi yadgir raichur koppal ballari vijayanagara'
-const WEST = 'belagavi bagalkote vijayapura dharwad gadag haveri uttara-kannada'
-const MALNAD = 'shivamogga chikkamagaluru kodagu dakshina-kannada udupi'
-const OLD_MYSORE = 'mysuru chamarajanagar mandya hassan tumakuru chitradurga davanagere bengaluru-urban bengaluru-rural ramanagara kolar chikkaballapur'
-
+// Dynasty phases drawn as evidence-based washes (see dynasty-evidence.js), not as district or state fills.
+// Dates are conventional spans; every phase stays unverified until a reviewer checks it.
 export const DYNASTY_PHASES = [
-  { id: 'kadamba', polityId: 'polity-kadamba', from: 345, to: 540, color: '#4aa36c', name: { en: 'Kadambas of Banavasi', kn: 'ಬನವಾಸಿಯ ಕದಂಬರು' }, capital: { en: 'Banavasi', kn: 'ಬನವಾಸಿ' },
-    districts: D('uttara-kannada shivamogga haveri dharwad belagavi udupi dakshina-kannada chikkamagaluru gadag davanagere'), reach: ['in-goa'] },
-  { id: 'western-ganga', polityId: 'polity-western-ganga', from: 350, to: 1000, color: '#8e6bb8', name: { en: 'Western Gangas', kn: 'ಪಶ್ಚಿಮ ಗಂಗರು' }, capital: { en: 'Talakadu', kn: 'ತಲಕಾಡು' },
-    districts: D('mysuru chamarajanagar mandya hassan tumakuru bengaluru-urban bengaluru-rural ramanagara kolar chikkaballapur kodagu'), reach: ['in-tamil-nadu'] },
-  { id: 'badami-chalukya', polityId: 'polity-badami-chalukya', from: 543, to: 757, color: '#e0a526', name: { en: 'Badami Chalukyas', kn: 'ಬಾದಾಮಿ ಚಾಲುಕ್ಯರು' }, capital: { en: 'Badami', kn: 'ಬಾದಾಮಿ' },
-    districts: D(`${WEST} koppal raichur ballari vijayanagara kalaburagi yadgir davanagere chitradurga shivamogga`), reach: ['in-maharashtra', 'in-telangana', 'in-andhra-pradesh'] },
-  { id: 'rashtrakuta', polityId: 'polity-rashtrakuta', from: 753, to: 973, color: '#d1573f', name: { en: 'Rashtrakutas', kn: 'ರಾಷ್ಟ್ರಕೂಟರು' }, capital: { en: 'Manyakheta', kn: 'ಮಾನ್ಯಖೇಟ' },
-    districts: D(`${NORTH} ${WEST} davanagere chitradurga shivamogga tumakuru`), reach: ['in-maharashtra', 'in-telangana'] },
-  { id: 'kalyani-chalukya', polityId: 'polity-kalyani-chalukya', from: 973, to: 1189, color: '#e08a2b', name: { en: 'Kalyani Chalukyas', kn: 'ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರು' }, capital: { en: 'Kalyani', kn: 'ಕಲ್ಯಾಣ' },
-    districts: D(`${NORTH} ${WEST} davanagere chitradurga shivamogga`), reach: ['in-maharashtra', 'in-telangana', 'in-andhra-pradesh'] },
-  { id: 'hoysala', polityId: 'polity-hoysala', from: 1000, to: 1346, color: '#2f8fb8', name: { en: 'Hoysalas', kn: 'ಹೊಯ್ಸಳರು' }, capital: { en: 'Halebidu', kn: 'ದ್ವಾರಸಮುದ್ರ' },
-    districts: D('hassan chikkamagaluru shivamogga mysuru mandya chamarajanagar tumakuru chitradurga davanagere kodagu bengaluru-urban bengaluru-rural ramanagara kolar chikkaballapur haveri'), reach: ['in-tamil-nadu'] },
-  { id: 'shilahara', polityId: 'external-polity-shilahara', from: 940, to: 1215, color: '#5b8a72', name: { en: 'Shilaharas of Kolhapur', kn: 'ಕೊಲ್ಹಾಪುರದ ಶಿಲಾಹಾರರು' }, capital: { en: 'Kolhapur', kn: 'ಕೊಲ್ಹಾಪುರ' },
-    districts: D('belagavi'), reach: ['in-maharashtra'] },
-  { id: 'kalachuri', polityId: 'external-polity-kalachuri-kalyani', from: 1156, to: 1184, color: '#8a4f7d', name: { en: 'Kalachuris of Kalyani', kn: 'ಕಲ್ಯಾಣದ ಕಳಚುರಿಗಳು' }, capital: { en: 'Kalyani', kn: 'ಕಲ್ಯಾಣ' },
-    districts: D(`${NORTH} ${WEST}`), reach: ['in-maharashtra'] },
-  { id: 'seuna', polityId: 'external-polity-seuna', from: 1187, to: 1317, color: '#b5832e', name: { en: 'Seuna (Yadavas of Devagiri)', kn: 'ಸೇವುಣರು (ದೇವಗಿರಿಯ ಯಾದವರು)' }, capital: { en: 'Devagiri', kn: 'ದೇವಗಿರಿ' },
-    districts: D('bidar kalaburagi yadgir raichur koppal vijayapura bagalkote belagavi dharwad gadag'), reach: ['in-maharashtra'] },
-  { id: 'bahmani', polityId: 'external-polity-bahmani', from: 1347, to: 1527, color: '#6f7f45', name: { en: 'Bahmani Sultanate', kn: 'ಬಹಮನಿ ಸುಲ್ತಾನರು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' },
-    districts: D('bidar kalaburagi yadgir raichur vijayapura'), reach: ['in-telangana', 'in-maharashtra'] },
-  { id: 'vijayanagara', polityId: 'polity-vijayanagara', from: 1336, to: 1646, color: '#c2478f', name: { en: 'Vijayanagara Empire', kn: 'ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ' }, capital: { en: 'Hampi', kn: 'ಹಂಪಿ' },
-    districts: D(`${OLD_MYSORE} ${MALNAD} koppal ballari vijayanagara gadag haveri dharwad uttara-kannada belagavi`), reach: ['in-andhra-pradesh', 'in-tamil-nadu'] },
-  { id: 'adil-shahi', polityId: 'external-polity-adil-shahi', from: 1528, to: 1686, color: '#9a6b3d', name: { en: 'Adil Shahis of Bijapur', kn: 'ಆದಿಲ್‌ಶಾಹಿಗಳು' }, capital: { en: 'Bijapur', kn: 'ವಿಜಯಪುರ' },
-    districts: D('vijayapura bagalkote kalaburagi yadgir raichur belagavi dharwad gadag koppal'), reach: ['in-maharashtra', 'in-goa'] },
-  { id: 'kittur', polityId: 'external-polity-kittur', from: 1585, to: 1824, color: '#a3405f', yearLayer: false, name: { en: 'Kittur Samsthana', kn: 'ಕಿತ್ತೂರು ಸಂಸ್ಥಾನ' }, capital: { en: 'Kittur', kn: 'ಕಿತ್ತೂರು' },
-    districts: D('belagavi'), reach: [] },
-  { id: 'mysore-sultanate', polityId: 'polity-mysore', from: 1761, to: 1799, color: '#b8332f', name: { en: 'Mysore under Hyder Ali and Tipu', kn: 'ಹೈದರ್ ಆಲಿ ಮತ್ತು ಟಿಪ್ಪುವಿನ ಮೈಸೂರು' }, capital: { en: 'Srirangapatna', kn: 'ಶ್ರೀರಂಗಪಟ್ಟಣ' },
-    districts: D(`${OLD_MYSORE} ${MALNAD} ballari vijayanagara koppal gadag dharwad haveri uttara-kannada`), reach: ['in-kerala', 'in-tamil-nadu'] },
-  { id: 'mysore-princely', polityId: 'polity-mysore', from: 1800, to: 1947, color: '#3f6bd1', name: { en: 'Princely State of Mysore', kn: 'ಮೈಸೂರು ಸಂಸ್ಥಾನ' }, capital: { en: 'Mysuru', kn: 'ಮೈಸೂರು' },
-    districts: D('mysuru chamarajanagar mandya hassan tumakuru chitradurga davanagere shivamogga chikkamagaluru bengaluru-urban bengaluru-rural ramanagara kolar chikkaballapur'), reach: [] },
+  { id: 'chutu', polityId: 'external-polity-chutu', from: 100, to: 345, color: '#7a9a4a', name: { en: 'Chutu dynasty of Banavasi', kn: 'ಬನವಾಸಿಯ ಚುಟು ವಂಶ' }, capital: { en: 'Banavasi', kn: 'ಬನವಾಸಿ' } },
+  { id: 'kadamba', polityId: 'polity-kadamba', from: 345, to: 540, color: '#4aa36c', name: { en: 'Kadambas of Banavasi', kn: 'ಬನವಾಸಿಯ ಕದಂಬರು' }, capital: { en: 'Banavasi', kn: 'ಬನವಾಸಿ' } },
+  { id: 'western-ganga', polityId: 'polity-western-ganga', from: 350, to: 1000, color: '#8e6bb8', name: { en: 'Western Gangas', kn: 'ಪಶ್ಚಿಮ ಗಂಗರು' }, capital: { en: 'Talakadu', kn: 'ತಲಕಾಡು' } },
+  { id: 'badami-chalukya', polityId: 'polity-badami-chalukya', from: 543, to: 757, color: '#e0a526', name: { en: 'Badami Chalukyas', kn: 'ಬಾದಾಮಿ ಚಾಲುಕ್ಯರು' }, capital: { en: 'Badami', kn: 'ಬಾದಾಮಿ' } },
+  { id: 'nolamba', polityId: 'external-polity-nolamba', from: 750, to: 1050, color: '#6f8f7f', name: { en: 'Nolambas of Nolambavadi', kn: 'ನೊಳಂಬವಾಡಿಯ ನೊಳಂಬರು' }, capital: { en: 'Hemavati', kn: 'ಹೆಮ್ಮಾವತಿ' } },
+  { id: 'rashtrakuta', polityId: 'polity-rashtrakuta', from: 753, to: 973, color: '#d1573f', name: { en: 'Rashtrakutas', kn: 'ರಾಷ್ಟ್ರಕೂಟರು' }, capital: { en: 'Manyakheta', kn: 'ಮಾನ್ಯಖೇಟ' } },
+  { id: 'santara', polityId: 'external-polity-santara', from: 800, to: 1200, color: '#8a7a4f', name: { en: 'Santaras of Hombuchcha', kn: 'ಹೊಂಬುಚ್ಚದ ಸಾಂತರರು' }, capital: { en: 'Hombuchcha', kn: 'ಹೊಂಬುಚ್ಚ' } },
+  { id: 'ratta', polityId: 'external-polity-ratta', from: 875, to: 1250, color: '#a2664a', name: { en: 'Rattas of Saundatti', kn: 'ಸೌಂದತ್ತಿಯ ರಟ್ಟರು' }, capital: { en: 'Saundatti', kn: 'ಸೌಂದತ್ತಿ' } },
+  { id: 'shilahara', polityId: 'external-polity-shilahara', from: 940, to: 1215, color: '#5b8a72', name: { en: 'Shilaharas of Kolhapur', kn: 'ಕೊಲ್ಹಾಪುರದ ಶಿಲಾಹಾರರು' }, capital: { en: 'Kolhapur', kn: 'ಕೊಲ್ಹಾಪುರ' } },
+  { id: 'kalyani-chalukya', polityId: 'polity-kalyani-chalukya', from: 973, to: 1189, color: '#e08a2b', name: { en: 'Kalyani Chalukyas', kn: 'ಕಲ್ಯಾಣಿ ಚಾಲುಕ್ಯರು' }, capital: { en: 'Kalyani', kn: 'ಕಲ್ಯಾಣ' } },
+  { id: 'hangal-kadamba', polityId: 'external-polity-hangal-kadamba', from: 980, to: 1250, color: '#5f9a7a', name: { en: 'Kadambas of Hangal', kn: 'ಹಾನಗಲ್ ಕದಂಬರು' }, capital: { en: 'Hangal', kn: 'ಹಾನಗಲ್' } },
+  { id: 'hoysala', polityId: 'polity-hoysala', from: 1000, to: 1346, color: '#2f8fb8', name: { en: 'Hoysalas', kn: 'ಹೊಯ್ಸಳರು' }, capital: { en: 'Halebidu', kn: 'ದ್ವಾರಸಮುದ್ರ' } },
+  { id: 'sinda', polityId: 'external-polity-sinda', from: 1000, to: 1300, color: '#9a5f7a', name: { en: 'Sindas of Yelburga', kn: 'ಯಲಬುರ್ಗಾ ಸಿಂದರು' }, capital: { en: 'Erambarage (Yelburga)', kn: 'ಎರಂಬರಗೆ (ಯಲಬುರ್ಗಾ)' } },
+  { id: 'kalachuri', polityId: 'external-polity-kalachuri-kalyani', from: 1156, to: 1184, color: '#8a4f7d', name: { en: 'Kalachuris of Kalyani', kn: 'ಕಲ್ಯಾಣದ ಕಳಚುರಿಗಳು' }, capital: { en: 'Kalyani', kn: 'ಕಲ್ಯಾಣ' } },
+  { id: 'seuna', polityId: 'external-polity-seuna', from: 1187, to: 1317, color: '#b5832e', name: { en: 'Seuna (Yadavas of Devagiri)', kn: 'ಸೇವುಣರು (ದೇವಗಿರಿಯ ಯಾದವರು)' }, capital: { en: 'Devagiri', kn: 'ದೇವಗಿರಿ' } },
+  { id: 'vijayanagara', polityId: 'polity-vijayanagara', from: 1336, to: 1646, color: '#c2478f', name: { en: 'Vijayanagara Empire', kn: 'ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ' }, capital: { en: 'Hampi', kn: 'ಹಂಪಿ' } },
+  { id: 'bahmani', polityId: 'external-polity-bahmani', from: 1347, to: 1527, color: '#6f7f45', name: { en: 'Bahmani Sultanate', kn: 'ಬಹಮನಿ ಸುಲ್ತಾನರು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' } },
+  { id: 'wodeyar-mysore', polityId: 'external-polity-wodeyar-mysore', from: 1399, to: 1761, color: '#4a6fb0', name: { en: 'Wodeyars of Mysore (before 1761)', kn: 'ಮೈಸೂರು ಒಡೆಯರು (೧೭೬೧ಕ್ಕೆ ಮೊದಲು)' }, capital: { en: 'Mysuru', kn: 'ಮೈಸೂರು' } },
+  { id: 'barid-shahi', polityId: 'external-polity-barid-shahi', from: 1489, to: 1619, color: '#5f7f9a', name: { en: 'Barid Shahis of Bidar', kn: 'ಬೀದರ್‌ನ ಬರೀದ್‌ಶಾಹಿಗಳು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' } },
+  { id: 'sode-nayaka', polityId: 'external-polity-sode-nayaka', from: 1500, to: 1764, color: '#8f6f4a', name: { en: 'Sode (Sonda) Nayakas', kn: 'ಸೋದೆ (ಸೊಂದಾ) ನಾಯಕರು' }, capital: { en: 'Sonda', kn: 'ಸೋದೆ' } },
+  { id: 'adil-shahi', polityId: 'external-polity-adil-shahi', from: 1528, to: 1686, color: '#9a6b3d', name: { en: 'Adil Shahis of Bijapur', kn: 'ಆದಿಲ್‌ಶಾಹಿಗಳು' }, capital: { en: 'Bijapur', kn: 'ವಿಜಯಪುರ' } },
+  { id: 'kittur', polityId: 'external-polity-kittur', from: 1585, to: 1824, color: '#a3405f', name: { en: 'Kittur Samsthana', kn: 'ಕಿತ್ತೂರು ಸಂಸ್ಥಾನ' }, capital: { en: 'Kittur', kn: 'ಕಿತ್ತೂರು' } },
+  { id: 'haleri', polityId: 'external-polity-haleri', from: 1633, to: 1834, color: '#4f8a6a', name: { en: 'Haleri rajas of Kodagu', kn: 'ಕೊಡಗಿನ ಹಾಲೇರಿ ರಾಜರು' }, capital: { en: 'Madikeri', kn: 'ಮಡಿಕೇರಿ' } },
+  { id: 'savanur-nawab', polityId: 'external-polity-savanur-nawab', from: 1672, to: 1948, color: '#7a6a9a', name: { en: 'Nawabs of Savanur', kn: 'ಸವಣೂರು ನವಾಬರು' }, capital: { en: 'Savanur', kn: 'ಸವಣೂರು' } },
+  { id: 'surapura-nayaka', polityId: 'external-polity-surapura-nayaka', from: 1700, to: 1858, color: '#9a7a4f', name: { en: 'Surapura (Shorapur) Nayakas', kn: 'ಸುರಪುರ (ಶೋರಾಪುರ) ನಾಯಕರು' }, capital: { en: 'Shorapur', kn: 'ಶೋರಾಪುರ' } },
+  { id: 'mysore-sultanate', polityId: 'polity-mysore', from: 1761, to: 1799, color: '#b8332f', name: { en: 'Mysore under Hyder Ali and Tipu', kn: 'ಹೈದರ್ ಆಲಿ ಮತ್ತು ಟಿಪ್ಪುವಿನ ಮೈಸೂರು' }, capital: { en: 'Srirangapatna', kn: 'ಶ್ರೀರಂಗಪಟ್ಟಣ' } },
+  { id: 'mysore-princely', polityId: 'polity-mysore', from: 1800, to: 1947, color: '#3f6bd1', name: { en: 'Princely State of Mysore', kn: 'ಮೈಸೂರು ಸಂಸ್ಥಾನ' }, capital: { en: 'Mysuru', kn: 'ಮೈಸೂರು' } },
 ].map(phase => ({ ...phase, review: { status: 'needs-review' }, verification: 'unverified' }))
 
-// One ruler per district for a year: the latest-starting dynasty whose core includes it wins.
-// A small state (yearLayer: false) is shown only when picked, so it does not repaint a whole district for centuries.
-export const dynastyAreasForYear = year => dynastyAreasFor(DYNASTY_PHASES.filter(phase => phase.yearLayer !== false && year >= phase.from && year <= phase.to))
+// A dynasty is on the year layer while the year falls inside its span.
+export const dynastyAreasForYear = year => dynastyAreasFor(DYNASTY_PHASES.filter(phase => year >= phase.from && year <= phase.to))
 
-export function dynastyAreasFor(active) {
-  const byDistrict = new Map()
-  for (const phase of [...active].sort((a, b) => a.from - b.from)) for (const id of phase.districts) byDistrict.set(id, phase)
-  const byState = new Map()
-  for (const phase of [...active].sort((a, b) => a.from - b.from)) for (const id of phase.reach) byState.set(id, phase)
-  return { active, byDistrict, byState }
-}
+export const dynastyAreasFor = active => ({ active: [...active].sort((a, b) => a.from - b.from) })

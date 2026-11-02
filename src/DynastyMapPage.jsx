@@ -1,17 +1,18 @@
-import { useCallback, useMemo, useState } from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+import { evidenceFor } from './data/dynasty-evidence'
 import { DYNASTY_PHASES } from './data/dynasty-areas'
 import DynastyAreasControl from './DynastyAreasControl'
 import { loadDistricts, loadStates } from './DynastyAreasLayer'
-import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, reachFeatures } from './DynastyGallery'
+import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, washOf } from './DynastyGallery'
 import './script-fonts.css'
 
 const URL_TEXT = 'karnata.sanchaya.net'
-const W = 1700, COLS = 4, CELL_W = 400, CELL_H = 520
+const COLS = 6, CELL_W = 360, CELL_H = 520, W = COLS * CELL_W + 100
 const ROWS = Math.ceil((DYNASTY_PHASES.length + 1) / COLS), H = 360 + ROWS * CELL_H
 const copy = {
-  kn: { title: 'ಎಲ್ಲ ರಾಜವಂಶಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರದೇಶ (ಅಂದಾಜು)', intro: 'ಇಂದಿನ ಜಿಲ್ಲೆಗಳ ಆಕಾರದಲ್ಲಿ ಪ್ರತಿ ರಾಜವಂಶದ ಅಂದಾಜು ಪ್ರದೇಶ. ಹಂಚಿಕೊಳ್ಳಲು ಚಿತ್ರವನ್ನು ನಕಲಿಸಿ ಅಥವಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ; ಅದರಲ್ಲಿ ಯೋಜನೆಯ ಕೊಂಡಿ ಮತ್ತು ಕ್ಯೂಆರ್ ಇದೆ.', copyImage: 'ಚಿತ್ರ ನಕಲಿಸಿ', download: 'ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್', copyLink: 'ಕೊಂಡಿ ನಕಲಿಸಿ', copied: 'ನಕಲಿಸಲಾಗಿದೆ', failed: 'ನಕಲಿಸಲಾಗಲಿಲ್ಲ; ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ', cta: 'ಇದು ಅಂದಾಜು ಚಿತ್ರಣ. ಇದನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೊರತೆಗಳಿದ್ದರೆ ನಮ್ಮೊಂದಿಗೆ ಕೈಜೋಡಿಸಿ ತಿದ್ದಿ.', posterKn: 'ಕನ್ನಡ ಚಿತ್ರ', posterEn: 'English ಚಿತ್ರ', note: 'ಅಂದಾಜು ಪ್ರದೇಶಗಳು; ಪರಿಶೀಲನೆ ಬಾಕಿ. ತಿಳಿ ಬಣ್ಣ = ಕರ್ನಾಟಕದ ಹೊರಗಿನ ವಿಸ್ತೃತ ಪ್ರಭಾವ.', choose: 'ರಾಜವಂಶ ಆರಿಸಿ', pick: 'ಭೂಪಟವನ್ನು ಜೂಮ್ ಮಾಡಿ ಅಥವಾ ಜಿಲ್ಲೆಯ ಮೇಲೆ ಸರಿಸಿ ನೋಡಿ; ಎಡಭಾಗದಲ್ಲಿ ರಾಜವಂಶವನ್ನು ಆರಿಸಿ.', project: 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ', scan: 'ಸ್ಕ್ಯಾನ್ ಮಾಡಿ' },
-  en: { title: 'All dynasties and their areas (approximate)', intro: 'Each dynasty’s approximate area on today’s district shapes. Copy or download the shareable poster; it carries the project link and a QR code.', copyImage: 'Copy image', download: 'Download image', copyLink: 'Copy link', copied: 'Copied', failed: 'Could not copy; download the image instead', cta: 'This is an approximate draft. Review it and collaborate with us on any shortcomings.', posterKn: 'Kannada poster', posterEn: 'English poster', note: 'Approximate areas; awaiting review. Lighter shading = wider reach beyond Karnataka.', choose: 'Choose a dynasty', pick: 'Zoom the map or hover a district; choose a dynasty on the left.', project: 'Karnataka Historical Atlas', scan: 'Scan to explore' },
+  kn: { title: 'ಎಲ್ಲ ರಾಜವಂಶಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರದೇಶ (ಅಂದಾಜು)', intro: 'ಪ್ರತಿ ರಾಜವಂಶದ ಅಂದಾಜು ಪ್ರಭಾವ: ಅಟ್ಲಸ್‌ನಲ್ಲಿ ದಾಖಲಾದ ರಾಜಧಾನಿ, ಶಾಸನ, ಸ್ಮಾರಕ, ನಾಣ್ಯ ಮತ್ತು ಘಟನೆಗಳ ಸುತ್ತ ಮೃದು ಛಾಯೆಯಾಗಿ ತೋರಿಸಲಾಗಿದೆ. ಇವು ಗಡಿಗಳಲ್ಲ. ಹಂಚಿಕೊಳ್ಳಲು ಪೋಸ್ಟರ್ ನಕಲಿಸಿ ಅಥವಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ; ಅದರಲ್ಲಿ ಯೋಜನೆಯ ಕೊಂಡಿ ಮತ್ತು QR ಕೋಡ್ ಇದೆ.', copyImage: 'ಚಿತ್ರ ನಕಲಿಸಿ', download: 'ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್', copyLink: 'ಕೊಂಡಿ ನಕಲಿಸಿ', copied: 'ನಕಲಿಸಲಾಗಿದೆ', failed: 'ನಕಲಿಸಲಾಗಲಿಲ್ಲ; ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ', cta: 'ಇದು ಅಂದಾಜು ಚಿತ್ರಣ. ಇದನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೊರತೆಗಳಿದ್ದರೆ ನಮ್ಮೊಂದಿಗೆ ಕೈಜೋಡಿಸಿ ತಿದ್ದಿ.', posterKn: 'ಕನ್ನಡ ಚಿತ್ರ', posterEn: 'English ಚಿತ್ರ', note: 'ದಾಖಲಾದ ಆಧಾರಗಳ ಸುತ್ತ ಮೃದು ಛಾಯೆ, ಗಡಿಗಳಲ್ಲ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ಕಡಿಮೆ ದಾಖಲೆಗಳಿರುವ ರಾಜವಂಶಗಳಿಗೆ ರಾಜಧಾನಿ ಮಾತ್ರ ತೋರಿಸಲಾಗಿದೆ.', choose: 'ರಾಜವಂಶ ಆರಿಸಿ', pick: 'ಭೂಪಟವನ್ನು ಜೂಮ್ ಮಾಡಿ ಅಥವಾ ಜಿಲ್ಲೆಯ ಮೇಲೆ ಸರಿಸಿ ನೋಡಿ; ಎಡಭಾಗದಲ್ಲಿ ರಾಜವಂಶವನ್ನು ಆರಿಸಿ.', project: 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ', scan: 'ಸ್ಕ್ಯಾನ್ ಮಾಡಿ' },
+  en: { title: 'All dynasties and their areas (approximate)', intro: 'Each dynasty’s approximate influence, drawn as soft shading around the capitals, inscriptions, monuments, coins and events the atlas records for it. These are not borders. Copy or download the shareable poster; it carries the project link and a QR code.', copyImage: 'Copy image', download: 'Download image', copyLink: 'Copy link', copied: 'Copied', failed: 'Could not copy; download the image instead', cta: 'This is an approximate draft. Review it and collaborate with us on any shortcomings.', posterKn: 'Kannada poster', posterEn: 'English poster', note: 'Soft shading around recorded evidence, not borders; awaiting review. Dynasties with few records show a capital only.', choose: 'Choose a dynasty', pick: 'Zoom the map or hover a district; choose a dynasty on the left.', project: 'Karnataka Historical Atlas', scan: 'Scan to explore' },
 }
 
 const loadImage = src => new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = src })
@@ -39,21 +40,21 @@ async function draw(canvas, districts, states, locale) {
   const sans = '"Noto Sans Kannada", Inter, sans-serif'
   DYNASTY_PHASES.forEach((phase, index) => {
     const x = left + (index % COLS) * CELL_W, y = top + Math.floor(index / COLS) * CELL_H
-    const own = new Set(phase.districts)
     ctx.fillStyle = '#fffdf8'; ctx.strokeStyle = '#e3dfd2'; ctx.lineWidth = 2
     ctx.beginPath(); ctx.roundRect(x + 8, y + 8, CELL_W - 16, CELL_H - 16, 16); ctx.fill(); ctx.stroke()
     ctx.save(); ctx.translate(x + (CELL_W - VIEW.w * 0.55) / 2, y + 24); ctx.scale(0.55, 0.55)
     ctx.beginPath(); ctx.rect(0, 0, VIEW.w, VIEW.h); ctx.clip()
-    for (const feature of reachFeatures(phase, states)) {
-      const path = new Path2D(pathOf(feature.geometry))
-      ctx.globalAlpha = 0.28; ctx.fillStyle = phase.color; ctx.fill(path)
-      ctx.globalAlpha = 0.5; ctx.strokeStyle = phase.color; ctx.lineWidth = 1.5; ctx.setLineDash([5, 4]); ctx.stroke(path); ctx.setLineDash([])
+    ctx.lineWidth = 1.5
+    for (const feature of states?.features || []) { const path = new Path2D(pathOf(feature.geometry)); ctx.fillStyle = '#f6f2e6'; ctx.fill(path); ctx.strokeStyle = '#ddd6c4'; ctx.stroke(path) }
+    for (const shape of shapes) { ctx.fillStyle = '#e6dfcc'; ctx.fill(shape.path); ctx.strokeStyle = '#e6dfcc'; ctx.lineWidth = 1; ctx.stroke(shape.path) }
+    const wash = washOf(phase)
+    for (const disc of wash) {
+      const gradient = ctx.createRadialGradient(disc.x, disc.y, 0, disc.x, disc.y, disc.r)
+      gradient.addColorStop(0, phase.color); gradient.addColorStop(1, `${phase.color}00`)
+      ctx.globalAlpha = Math.min(1, disc.alpha * 3.2); ctx.fillStyle = gradient; ctx.beginPath(); ctx.arc(disc.x, disc.y, disc.r, 0, 7); ctx.fill()
     }
-    for (const shape of shapes) {
-      ctx.globalAlpha = own.has(shape.id) ? 0.85 : 0.6
-      ctx.fillStyle = own.has(shape.id) ? phase.color : '#ece6d6'; ctx.fill(shape.path)
-      ctx.globalAlpha = 1; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke(shape.path)
-    }
+    ctx.globalAlpha = 1; ctx.lineWidth = 2.5; ctx.strokeStyle = '#fff'
+    for (const disc of wash) { ctx.fillStyle = phase.color; ctx.beginPath(); ctx.arc(disc.x, disc.y, disc.capital ? 6 : 3.5, 0, 7); ctx.fill(); ctx.stroke() }
     ctx.restore()
     ctx.fillStyle = '#1b1f3b'
     let baseline = y + 372
@@ -88,6 +89,17 @@ const ICONS = {
 }
 const IconButton = ({ label, onClick, path }) => <button type="button" className="icon-btn" aria-label={label} title={label} onClick={onClick}><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={path} /></svg></button>
 
+// Zoom to the picked dynasty's recorded evidence (padded by its wash), or the default view when there is none.
+function FitEvidence({ phase }) {
+  const map = useMap()
+  useEffect(() => {
+    const points = evidenceFor(phase).filter(point => point.tier !== 'influence')
+    if (points.length > 1) map.fitBounds(points.map(point => [point.lat, point.lng]), { padding: [60, 60], maxZoom: 8 })
+    else if (points.length) map.setView([points[0].lat, points[0].lng], 7)
+  }, [map, phase])
+  return null
+}
+
 export default function DynastyMapPage({ locale = 'kn' }) {
   const t = copy[locale] || copy.kn
   const [status, setStatus] = useState('')
@@ -111,7 +123,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
         <section className="dynasty-live" aria-label={selected.name[locale]}>
           <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
             <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <DynastyAreasControl locale={locale} phases={phases} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
+            <FitEvidence phase={selected} /><DynastyAreasControl locale={locale} phases={phases} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
           </MapContainer>
           <p>{t.pick} {t.note}</p>
         </section>

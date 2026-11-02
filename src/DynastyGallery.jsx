@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { DYNASTY_PHASES } from './data/dynasty-areas'
 import { ERA_FONTS } from './data/era-fonts'
 import { loadDistricts, loadStates } from './DynastyAreasLayer'
+import { WASH_ALPHA, WASH_KM, evidenceFor } from './data/dynasty-evidence'
 
 // Karnataka plus the neighbouring states a dynasty may have held: lng 73.5-81, lat 8-21.
 const LNG0 = 73.5, LAT1 = 21, K = 48, COS = 0.966
@@ -18,21 +19,26 @@ export const nameLines = (phase, locale) => [
   ...(locale === 'en' ? [{ text: phase.name.en, family: null, latin: true }] : []),
 ]
 
-// One loader for both the thumbnails and the poster: district shapes, plus the lighter wider-reach states.
-export const reachFeatures = (phase, states) => (states?.features || []).filter(feature => phase.reach.includes(feature.properties.id))
+// Evidence washes in thumbnail/poster coordinates (the same projection as the paths): one soft disc per recorded point.
+export const washOf = phase => evidenceFor(phase).map(point => ({
+  x: (point.lng - LNG0) * K * COS, y: (LAT1 - point.lat) * K, r: (WASH_KM[point.tier] / 111) * K, alpha: WASH_ALPHA[point.tier], capital: point.kind === 'capital',
+}))
 
-// The dynasty picker: a thumbnail map per dynasty (core districts solid, wider reach lighter), named in its era typeface where there is one.
+// The dynasty picker: a thumbnail per dynasty (soft washes around its recorded evidence on a plain Karnataka outline), named in its era typeface where there is one.
 export default function DynastyGallery({ locale, selectedId, onSelect }) {
   const [districts, setDistricts] = useState(null)
   const [states, setStates] = useState(null)
   useEffect(() => { let on = true; loadDistricts().then(data => on && setDistricts(data)); loadStates().then(data => on && setStates(data)); return () => { on = false } }, [])
   const shapes = useMemo(() => (districts?.features || []).map(feature => ({ id: feature.properties.id, d: pathOf(feature.geometry) })), [districts])
   return <ol className="dynasty-gallery">{DYNASTY_PHASES.map(phase => {
-    const own = new Set(phase.districts)
+    const wash = washOf(phase)
     return <li key={phase.id}><button type="button" aria-pressed={selectedId === phase.id} className={selectedId === phase.id ? 'active' : ''} onClick={() => onSelect?.(phase)}>
       <svg viewBox={`0 0 ${VIEW.w} ${VIEW.h}`} role="img" aria-label={phase.name[locale]}>
-        {reachFeatures(phase, states).map(feature => <path key={feature.properties.id} d={pathOf(feature.geometry)} fill={phase.color} fillOpacity=".28" stroke={phase.color} strokeOpacity=".5" strokeWidth="1" strokeDasharray="4 3" />)}
-        {shapes.map(shape => <path key={shape.id} d={shape.d} fill={own.has(shape.id) ? phase.color : '#ece6d6'} fillOpacity={own.has(shape.id) ? .85 : .7} stroke="#fff" strokeWidth="1" />)}
+        <defs><radialGradient id={`wash-${phase.id}`}><stop offset="0" stopColor={phase.color} stopOpacity="1" /><stop offset="1" stopColor={phase.color} stopOpacity="0" /></radialGradient></defs>
+        {(states?.features || []).map(feature => <path key={feature.properties.id} d={pathOf(feature.geometry)} fill="#f6f2e6" stroke="#ddd6c4" strokeWidth="1" />)}
+        {shapes.map(shape => <path key={shape.id} d={shape.d} fill="#e6dfcc" stroke="#e6dfcc" strokeWidth=".6" />)}
+        {wash.map((disc, index) => <circle key={index} cx={disc.x} cy={disc.y} r={disc.r} fill={`url(#wash-${phase.id})`} fillOpacity={Math.min(1, disc.alpha * 3)} />)}
+        {wash.map((disc, index) => <circle key={`d${index}`} cx={disc.x} cy={disc.y} r={disc.capital ? 11 : 6} fill={phase.color} stroke="#fff" strokeWidth="3" />)}
       </svg>
       <span>{nameLines(phase, locale).map((line, index) => <strong key={index} lang={line.latin ? 'en' : 'kn'} className={line.latin ? 'latin' : ''} style={line.family ? { fontFamily: `"${line.family}",serif` } : undefined}>{line.text}</strong>)}<small>{phase.from}–{phase.to}</small></span>
     </button></li>

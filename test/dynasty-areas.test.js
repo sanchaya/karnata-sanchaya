@@ -3,25 +3,33 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { existsSync, readFileSync } from 'node:fs'
 import { DYNASTY_PHASES, dynastyAreasForYear } from '../src/data/dynasty-areas.js'
+import { evidenceFor } from '../src/data/dynasty-evidence.js'
 
-const districts = JSON.parse(await readFile(new URL('../public/karnataka-districts.geojson', import.meta.url)))
-const states = JSON.parse(await readFile(new URL('../public/south-asia-states.geojson', import.meta.url)))
 
-test('every dynasty area unit exists in the district and state files and stays unverified', () => {
-  const districtIds = new Set(districts.features.map(feature => feature.properties.id))
-  const stateIds = new Set(states.features.map(feature => feature.properties.id))
+test('dynasty phases carry no district or state units and stay unverified', () => {
   for (const phase of DYNASTY_PHASES) {
-    assert.ok(phase.districts.every(id => districtIds.has(id)), `${phase.id} districts`)
-    assert.ok(phase.reach.every(id => stateIds.has(id)), `${phase.id} reach`)
+    assert.equal(phase.districts, undefined, `${phase.id} must not claim district units`)
+    assert.equal(phase.reach, undefined, `${phase.id} must not claim state units`)
     assert.equal(phase.verification, 'unverified')
   }
 })
 
-test('a later dynasty wins an overlapping district and years outside every phase map nothing', () => {
-  const { byDistrict } = dynastyAreasForYear(1100)
-  assert.equal(byDistrict.get('audit-hassan').id, 'hoysala')
-  assert.equal(byDistrict.get('audit-kalaburagi').id, 'kalyani-chalukya')
-  assert.equal(dynastyAreasForYear(100).byDistrict.size, 0)
+test('every dynasty has recorded evidence points, starting with its capital', () => {
+  for (const phase of DYNASTY_PHASES) {
+    const points = evidenceFor(phase)
+    assert.ok(points.length >= 1, `${phase.id} has no evidence points`)
+    assert.ok(points.some(point => point.kind === 'capital'), `${phase.id} has no capital`)
+    assert.ok(points.every(point => point.lat > 5 && point.lat < 35 && point.lng > 68 && point.lng < 90), `${phase.id} has a point outside India (lat/lng order?)`)
+  }
+})
+
+test('evidence grows with the year and a dynasty keeps only its own phase', () => {
+  const vijayanagara = DYNASTY_PHASES.find(phase => phase.id === 'vijayanagara')
+  assert.ok(evidenceFor(vijayanagara, 1400).length < evidenceFor(vijayanagara).length)
+  const sultanate = DYNASTY_PHASES.find(phase => phase.id === 'mysore-sultanate')
+  assert.ok(evidenceFor(sultanate).every(point => point.from == null || (point.to ?? point.from) >= sultanate.from))
+  assert.equal(dynastyAreasForYear(100).active.some(phase => phase.id === 'kadamba'), false)
+  assert.ok(dynastyAreasForYear(1100).active.some(phase => phase.id === 'hoysala'))
 })
 
 test('the atlas offers the dynasty areas layer, off by default', async () => {
