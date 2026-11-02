@@ -1,0 +1,9 @@
+/* One page-title treatment for every menu page, matching the District Atlas heads:
+   same title size and weight, same tinted band, and the same left edge as the content column. */
+:root{--page-col:max(clamp(20px,5vw,72px),calc((100vw - var(--page-wide,1180px))/2))}
+body{overflow-x:clip}
+body :is(.trail-page>.about-hero,.people-hero,.freedom-hero,.nature-hero,.coin-hero,.script-hero,.resources-hero,.research-tasks-hero,.evidence-hero,.india-research-hero,.explorer-hero,.about-page>.about-hero,.community-hero){
+  box-sizing:border-box;width:100vw;max-width:100vw;margin:0 0 0 calc(50% - 50vw);padding:18px var(--page-col);border:0;border-bottom:1px solid var(--sanchaya-border);border-radius:0;background:linear-gradient(135deg,#f7fbf8,#fff 70%);display:block}
+body :is(.trail-page>.about-hero h2,.people-hero h2,.freedom-hero h2,.nature-hero h2,.coin-hero h2,.script-hero h2,.resources-hero h2,.research-tasks-hero h2,.evidence-hero h2,.india-research-hero h2,.explorer-hero h2,.about-page>.about-hero h2,.community-hero h2){
+  margin:2px 0 6px;font:500 clamp(24px,2.6vw,32px)/1.25 Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-ink)}
+body :is(.trail-page>.about-hero .eyebrow,.people-hero .eyebrow,.freedom-hero .eyebrow,.nature-hero .eyebrow,.coin-hero .eyebrow,.script-hero .eyebrow,.resources-hero .eyebrow,.research-tasks-hero .eyebrow,.evidence-hero .eyebrow,.india-research-hero .eyebrow,.explorer-hero .eyebrow,.about-page>.about-hero .eyebrow,.community-hero .eyebrow){margin:0;color:#28785b}

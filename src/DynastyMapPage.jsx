@@ -80,6 +80,13 @@ async function draw(canvas, districts, states, locale) {
 
 const toBlob = canvas => new Promise(resolve => canvas.toBlob(resolve, 'image/png'))
 
+const ICONS = {
+  copy: 'M9 9h10v10H9zM5 15V5h10',
+  download: 'M12 4v10m0 0-4-4m4 4 4-4M5 19h14',
+  link: 'M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1M14 10a4 4 0 0 0-5.6 0l-3 3A4 4 0 0 0 11 18.6l1-1',
+}
+const IconButton = ({ label, onClick, path }) => <button type="button" className="icon-btn" aria-label={label} title={label} onClick={onClick}><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={path} /></svg></button>
+
 export default function DynastyMapPage({ locale = 'kn' }) {
   const t = copy[locale] || copy.kn
   const [status, setStatus] = useState('')
@@ -109,9 +116,12 @@ export default function DynastyMapPage({ locale = 'kn' }) {
         </section>
         <section className="dynasty-share">
           <img src={`${import.meta.env.BASE_URL}karnata-qr.svg`} alt="" width="120" height="120" />
-          <div><strong>{URL_TEXT}</strong><span>{t.project}</span>
-            {[['kn', t.posterKn], ['en', t.posterEn]].map(([lang, label]) => <div className="dynasty-map-actions" key={lang} role="group" aria-label={label}><b>{label}</b><button type="button" onClick={() => copyImage(lang)}>{t.copyImage}</button><button type="button" onClick={() => download(lang)}>{t.download}</button></div>)}
-            <div className="dynasty-map-actions"><button type="button" onClick={copyLink}>{t.copyLink}</button><span role="status">{status}</span></div></div>
+          <div className="dynasty-share-body">
+            <div className="dynasty-share-url"><strong>{URL_TEXT}</strong><IconButton label={t.copyLink} onClick={copyLink} path={ICONS.link} /></div>
+            <span>{t.project}</span>
+            {[['kn', 'ಕನ್ನಡ', t.posterKn], ['en', 'English', t.posterEn]].map(([lang, tag, label]) => <div className="dynasty-map-actions" key={lang} role="group" aria-label={label}><b lang={lang}>{tag}</b><IconButton label={`${t.copyImage} · ${tag}`} onClick={() => copyImage(lang)} path={ICONS.copy} /><IconButton label={`${t.download} · ${tag}`} onClick={() => download(lang)} path={ICONS.download} /></div>)}
+            <span role="status" className="dynasty-share-status">{status}</span>
+          </div>
         </section>
       </div>
     </div>

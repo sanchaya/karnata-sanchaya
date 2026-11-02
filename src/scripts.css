@@ -59,3 +59,11 @@ main.portal-page.dynasty-map-page { display: block; height: auto; min-height: 0;
 .dynasty-map-actions { margin: 6px 0; }
 .dynasty-map-actions button { min-height: 44px; }
 .dynasty-live p { color: var(--sanchaya-ink); font-size: 13px; }
+
+.dynasty-share-body { display: grid; gap: 4px; }
+.dynasty-share-url { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.dynasty-map-actions { display: flex; align-items: center; gap: 8px; }
+.dynasty-map-actions b { min-width: 64px; font-size: 13px; }
+.icon-btn { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--sanchaya-blue); border-radius: 10px; background: #fff; color: var(--sanchaya-blue); cursor: pointer; }
+.icon-btn:hover, .icon-btn:focus-visible { background: var(--sanchaya-hover); }
+.dynasty-share-status { min-height: 18px; color: var(--sanchaya-muted); font-size: 12px; }
