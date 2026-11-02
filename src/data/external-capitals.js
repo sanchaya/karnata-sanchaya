@@ -44,6 +44,7 @@ export const externalCapitalPlaces=[
   place('bujang-valley','Bujang Valley / Old Kedah','ಬುಜಾಂಗ್ ಕಣಿವೆ / ಪ್ರಾಚೀನ ಕೆದಾಹ್',100.45,5.70,'historical-port-region'),
   place('temasek','Temasek / Singapore','ತೆಮಾಸೆಕ್ / ಸಿಂಗಪುರ',103.85,1.29,'historical-port'),
   place('nagapattinam','Nagapattinam maritime context centre','ನಾಗಪಟ್ಟಣಂ ಸಮುದ್ರ ಸಂದರ್ಭ ಕೇಂದ್ರ',79.84,10.77,'context-centre'),
+  place('kolhapur','Kolhapur','ಕೊಲ್ಹಾಪುರ',74.24,16.70),
   place('ullal','Ullal','ಉಳ್ಳಾಲ',74.85,12.80,'historical-port-capital'),
 ]
 
@@ -52,6 +53,8 @@ export const externalCapitalIds={
   'external-polity-pallava':'place-kanchipuram',
   'external-polity-chola':'place-thanjavur',
   'external-polity-seuna':'place-devagiri',
+  'external-polity-kalachuri-kalyani':'place-basavakalyana-community',
+  'external-polity-shilahara':'place-kolhapur',
   'external-polity-pandya':'place-madurai',
   'external-polity-chera':'place-mahodayapuram',
   'external-polity-eastern-ganga':'place-cuttack',

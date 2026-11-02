@@ -7,7 +7,8 @@ import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, reachFeatures } fro
 import './script-fonts.css'
 
 const URL_TEXT = 'karnata.sanchaya.net'
-const W = 1700, H = 1920, COLS = 4, CELL_W = 400, CELL_H = 520
+const W = 1700, COLS = 4, CELL_W = 400, CELL_H = 520
+const ROWS = Math.ceil((DYNASTY_PHASES.length + 1) / COLS), H = 360 + ROWS * CELL_H
 const copy = {
   kn: { title: 'ಎಲ್ಲ ರಾಜವಂಶಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರದೇಶ (ಅಂದಾಜು)', intro: 'ಇಂದಿನ ಜಿಲ್ಲೆಗಳ ಆಕಾರದಲ್ಲಿ ಪ್ರತಿ ರಾಜವಂಶದ ಅಂದಾಜು ಪ್ರದೇಶ. ಹಂಚಿಕೊಳ್ಳಲು ಚಿತ್ರವನ್ನು ನಕಲಿಸಿ ಅಥವಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ; ಅದರಲ್ಲಿ ಯೋಜನೆಯ ಕೊಂಡಿ ಮತ್ತು ಕ್ಯೂಆರ್ ಇದೆ.', copyImage: 'ಚಿತ್ರ ನಕಲಿಸಿ', download: 'ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್', copyLink: 'ಕೊಂಡಿ ನಕಲಿಸಿ', copied: 'ನಕಲಿಸಲಾಗಿದೆ', failed: 'ನಕಲಿಸಲಾಗಲಿಲ್ಲ; ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ', cta: 'ಇದು ಅಂದಾಜು ಚಿತ್ರಣ. ಇದನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೊರತೆಗಳಿದ್ದರೆ ನಮ್ಮೊಂದಿಗೆ ಕೈಜೋಡಿಸಿ ತಿದ್ದಿ.', posterKn: 'ಕನ್ನಡ ಚಿತ್ರ', posterEn: 'English ಚಿತ್ರ', note: 'ಅಂದಾಜು ಪ್ರದೇಶಗಳು; ಪರಿಶೀಲನೆ ಬಾಕಿ. ತಿಳಿ ಬಣ್ಣ = ಕರ್ನಾಟಕದ ಹೊರಗಿನ ವಿಸ್ತೃತ ಪ್ರಭಾವ.', choose: 'ರಾಜವಂಶ ಆರಿಸಿ', pick: 'ಭೂಪಟವನ್ನು ಜೂಮ್ ಮಾಡಿ ಅಥವಾ ಜಿಲ್ಲೆಯ ಮೇಲೆ ಸರಿಸಿ ನೋಡಿ; ಎಡಭಾಗದಲ್ಲಿ ರಾಜವಂಶವನ್ನು ಆರಿಸಿ.', project: 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ', scan: 'ಸ್ಕ್ಯಾನ್ ಮಾಡಿ' },
   en: { title: 'All dynasties and their areas (approximate)', intro: 'Each dynasty’s approximate area on today’s district shapes. Copy or download the shareable poster; it carries the project link and a QR code.', copyImage: 'Copy image', download: 'Download image', copyLink: 'Copy link', copied: 'Copied', failed: 'Could not copy; download the image instead', cta: 'This is an approximate draft. Review it and collaborate with us on any shortcomings.', posterKn: 'Kannada poster', posterEn: 'English poster', note: 'Approximate areas; awaiting review. Lighter shading = wider reach beyond Karnataka.', choose: 'Choose a dynasty', pick: 'Zoom the map or hover a district; choose a dynasty on the left.', project: 'Karnataka Historical Atlas', scan: 'Scan to explore' },
@@ -63,8 +64,8 @@ async function draw(canvas, districts, states, locale) {
     }
     ctx.fillStyle = '#6b6f8a'; ctx.font = '18px Inter, sans-serif'; ctx.fillText(`${phase.from}–${phase.to}`, x + CELL_W / 2, y + CELL_H - 24)
   })
-  // The 12th cell is the call to action: the project, its link and a QR code.
-  const x = left + (11 % COLS) * CELL_W, y = top + Math.floor(11 / COLS) * CELL_H
+  // The last cell is the call to action: the project, its link and a QR code.
+  const x = left + (DYNASTY_PHASES.length % COLS) * CELL_W, y = top + Math.floor(DYNASTY_PHASES.length / COLS) * CELL_H
   ctx.fillStyle = '#1b1f3b'; ctx.beginPath(); ctx.roundRect(x + 8, y + 8, CELL_W - 16, CELL_H - 16, 16); ctx.fill()
   if (qr) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.roundRect(x + 70, y + 40, 260, 260, 12); ctx.fill(); ctx.drawImage(qr, x + 78, y + 48, 244, 244) }
   ctx.fillStyle = '#fff'
@@ -72,9 +73,9 @@ async function draw(canvas, districts, states, locale) {
   fitText(URL_TEXT, x + CELL_W / 2, y + 396, 28, 'Inter, sans-serif', '700')
   fitText(t.project, x + CELL_W / 2, y + 440, 22, sans)
   ctx.fillStyle = '#fff4d6'; ctx.strokeStyle = '#f0c96a'; ctx.lineWidth = 2
-  ctx.beginPath(); ctx.roundRect(left + 8, top + 3 * CELL_H + 8, COLS * CELL_W - 16, 96, 16); ctx.fill(); ctx.stroke()
+  ctx.beginPath(); ctx.roundRect(left + 8, top + ROWS * CELL_H + 8, COLS * CELL_W - 16, 96, 16); ctx.fill(); ctx.stroke()
   ctx.fillStyle = '#1b1f3b'
-  fitText(t.cta, W / 2, top + 3 * CELL_H + 66, 32, sans, '700', COLS * CELL_W - 80)
+  fitText(t.cta, W / 2, top + ROWS * CELL_H + 66, 32, sans, '700', COLS * CELL_W - 80)
   ctx.fillStyle = '#6b6f8a'; ctx.font = '22px Inter, sans-serif'; ctx.textAlign = 'center'; ctx.fillText(`${t.project} · ${URL_TEXT}`, W / 2, H - 36)
 }
 
