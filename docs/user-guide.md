@@ -17,6 +17,7 @@ Never send a password or reset link to an administrator. Administrators cannot r
 
 - **Dynasty map / ರಾಜವಂಶ ಭೂಪಟ (`#dynasties`)** shows, for a chosen year, the dynasties active then and where the atlas holds evidence for them. Shading is not a border; open rings are places with no record yet, so they are good starting points for a contribution. Use *Maps by era* for snapshots and *Download & share* for the poster.
 - **Who ruled here? / ಇಲ್ಲಿ ಯಾರು ಆಳಿದರು? (`#who-ruled`)** lists the dynasties with records near a place you pick, in time order.
+- **Resources / ಆಕರಗಳು (`#research`)** lists the atlas's sources. A one-line summary and a single toolbar (search, type, tier, status and an Itihasa Darshana filter) sit above a paged list of compact rows; the source-tier explanation, the atlas citation and bibliography export, and the acknowledgement policy are folded panels. Use *Show more* to load further sources.
 - **Research tasks / ಸಂಶೋಧನಾ ಕಾರ್ಯಗಳು (`#research-tasks`)** is the public task marketplace. Search by subject, district, priority or evidence gap before choosing work.
 - **Contribute / ಕೊಡುಗೆ ನೀಡಿ (`#contribute`)** contains only contribution work: a new guided submission, your drafts/submissions and collaboration proposals.
 - **Profile / ಪ್ರೊಫೈಲ್ (`#profile`)** contains identity, affiliation, verification, notifications, contribution history and certificates.
