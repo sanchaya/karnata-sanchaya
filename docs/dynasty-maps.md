@@ -138,7 +138,7 @@ stored in the repository. It is registered as source
 
 What it adds:
 
-- **Profiles** (`CENSUS_ATLAS_PROFILES`, 19 dynasties): the book's period, approximate
+- **Profiles** (`CENSUS_ATLAS_PROFILES`, 21 entries): the book's period, approximate
   greatest extent in sq km, capital(s), origin, important rulers, languages, major
   works and monuments. The dynasty page shows the profile for the dynasty you pick
   (`DynastyProfile.jsx`) and flags where the book's period differs from our span,
