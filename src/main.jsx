@@ -26,6 +26,7 @@ import './about.css'
 import './district-workspace.css'
 import './a11y.css'
 import './wide-screens.css'
+import ErrorBoundary from './ErrorBoundary'
 import './dynasty-areas.css'
 import './research-layout.css'
 import './karnataka-history.css'
@@ -71,7 +72,7 @@ async function start(){
   try{
     await hydrateAtlasData()
     const {default:App}=await import('./App')
-    root.render(<React.StrictMode><App /></React.StrictMode>)
+    root.render(<React.StrictMode><ErrorBoundary><App /></ErrorBoundary></React.StrictMode>)
   }catch(error){
     if(/dynamically imported module|Importing a module script failed|Failed to load module script/i.test(String(error?.message))&&reloadForNewBuild())return
     root.render(<main className="portal-page"><section className="about-hero"><p className="eyebrow">Karnataka Historical Atlas</p><h2>ಲೈವ್ ದತ್ತಾಂಶ ಲಭ್ಯವಿಲ್ಲ · Live dataset unavailable</h2><p>MariaDBಯಲ್ಲಿರುವ ಪ್ರಕಟಿತ ದತ್ತಾಂಶವನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</p><p>The portal could not load its MariaDB dataset. Please try again shortly.</p><button type="button" onClick={()=>window.location.reload()}>ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ · Retry</button><small>{error.message}</small></section></main>)

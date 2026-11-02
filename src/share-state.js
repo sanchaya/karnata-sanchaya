@@ -36,4 +36,23 @@ export const updateAtlasUrlState = (state, href = '') => {
   return url
 }
 
+// Writes the shareable address while someone drags the timeline or the map. Browsers limit history.replaceState (Safari throws a
+// SecurityError after about 100 calls in 30 seconds), so quick changes are merged and written once the movement pauses, and a refused
+// write is ignored: an uncaught error here used to unmount the whole app and leave a blank page.
+export const createShareUrlWriter = (delay = 250, win = typeof window !== 'undefined' ? window : null) => {
+  let pending = {}, timer = null
+  return state => {
+    pending = { ...pending, ...state }
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      const next = pending
+      pending = {}
+      try {
+        const url = updateAtlasUrlState(next, win.location.href)
+        win.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`)
+      } catch { /* the address bar just keeps its last value */ }
+    }, delay)
+  }
+}
+
 export const atlasYearBounds = { min: YEAR_MIN, max: YEAR_MAX }

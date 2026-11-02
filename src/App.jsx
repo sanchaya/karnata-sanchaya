@@ -11,7 +11,7 @@ import GuidedTour from './GuidedTour'
 import Berunda from './Berunda'
 import DynastyAreasLayer, { DynastyAreasLegend } from './DynastyAreasLayer'
 import { isIndiaPoint, isKarnatakaPoint, mapViewForScope, mapZoomForPoint, mapZoomForPositions } from './map-focus'
-import { readAtlasUrlState, updateAtlasUrlState } from './share-state'
+import { createShareUrlWriter, readAtlasUrlState } from './share-state'
 import { inscriptionsForMap } from './map-record-visibility'
 import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from './timeline-record-visibility'
 import { compactTimelineStories } from './timeline-story-utils'
@@ -922,7 +922,7 @@ export default function App(){
     return()=>window.removeEventListener('keydown',step)
   },[mapOnlyMode])
   const lastShareYear=useRef(year)
-  const replaceShareUrl=state=>{const next=updateAtlasUrlState(state);window.history.replaceState(null,'',`${next.pathname}${next.search}${next.hash}`)}
+  const replaceShareUrl=useMemo(()=>createShareUrlWriter(),[])
   useEffect(()=>{if(lastShareYear.current===year)return;lastShareYear.current=year;if(view==='atlas')replaceShareUrl({year})},[year,view])
   // Hydrate the parent auth state once from the live session. Do not clear a
   // successful login because a transient API request fails during navigation;

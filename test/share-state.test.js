@@ -22,3 +22,23 @@ test('atlas share state serializes stable, copyable URL parameters', () => {
   const url = updateAtlasUrlState({ year: 740, map: { lat: 15.335001, lng: 76.475399, zoom: 9.876 } }, 'https://atlas.example/?ref=source#atlas')
   assert.equal(url.toString(), 'https://atlas.example/?ref=source&year=740&lat=15.335&lng=76.4754&zoom=9.88#atlas')
 })
+
+test('the share URL writer merges rapid changes into one write and survives a refused write', async t => {
+  const { createShareUrlWriter } = await import('../src/share-state.js')
+  t.mock.timers.enable({ apis: ['setTimeout'] })
+  const calls = []
+  const win = { location: { href: 'http://localhost/#atlas' }, history: { replaceState: (...args) => { calls.push(args[2]) } } }
+  const write = createShareUrlWriter(250, win)
+  for (let year = 100; year < 400; year += 1) write({ year })
+  write({ map: { lat: 14.5, lng: 76.2, zoom: 7 } })
+  t.mock.timers.tick(249)
+  assert.equal(calls.length, 0, 'nothing is written while the movement continues')
+  t.mock.timers.tick(2)
+  assert.equal(calls.length, 1, 'one write for 300 changes')
+  assert.match(calls[0], /year=399/)
+  assert.match(calls[0], /lat=14\.5/)
+  const refusing = { location: win.location, history: { replaceState: () => { throw new DOMException('too many calls', 'SecurityError') } } }
+  const guarded = createShareUrlWriter(10, refusing)
+  guarded({ year: 500 })
+  assert.doesNotThrow(() => t.mock.timers.tick(20))
+})

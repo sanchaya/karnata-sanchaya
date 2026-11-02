@@ -53,3 +53,14 @@ Practical rules learned while reworking page layouts. Check them before restylin
 The dynasty areas control (`DynastyAreasControl`) belongs only on maps whose records carry a
 dynasty and a date; `test/dynasty-areas.test.js` lists where. See
 [dynasty maps](dynasty-maps.md).
+
+## Keeping the page alive under fast input
+
+- **Never call `history.replaceState` on every input event.** Browsers rate-limit it (Safari throws a
+  `SecurityError` after about 100 calls in 30 seconds), and an uncaught error in an effect unmounts the
+  whole React app, which is a blank page. The home timeline and map movement used to do exactly that when
+  dragged quickly. `createShareUrlWriter` in `src/share-state.js` merges rapid changes, writes once the movement
+  pauses (250 ms) and swallows a refused write; `test/share-state.test.js` covers it.
+- `src/ErrorBoundary.jsx` wraps the app in `main.jsx`: if a screen ever throws while rendering, the visitor
+  gets a bilingual message and a Reload button instead of a blank page.
+
