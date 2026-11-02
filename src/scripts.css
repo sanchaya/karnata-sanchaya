@@ -67,3 +67,30 @@ main.portal-page.dynasty-map-page { display: block; height: auto; min-height: 0;
 .icon-btn { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--sanchaya-blue); border-radius: 10px; background: #fff; color: var(--sanchaya-blue); cursor: pointer; }
 .icon-btn:hover, .icon-btn:focus-visible { background: var(--sanchaya-hover); }
 .dynasty-share-status { min-height: 18px; color: var(--sanchaya-muted); font-size: 12px; }
+
+/* Who ruled here */
+main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; max-height: none; overflow: visible; max-width: 1100px; margin: 0 auto; padding: 18px 16px 40px; }
+.who-controls { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0; }
+.who-controls label { display: grid; gap: 3px; font-size: 13px; font-weight: 600; }
+.who-controls input, .who-controls select { min-height: 44px; padding: 6px 10px; border: 1px solid var(--sanchaya-border); border-radius: 8px; font: inherit; background: #fff; }
+.who-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.who-map .leaflet-container { height: 420px; border-radius: 12px; }
+.who-map p { margin: 6px 0 0; font-size: 13px; color: var(--sanchaya-muted); }
+.who-results h3, .who-timeline h3 { margin: 0 0 8px; }
+.who-results ol { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.who-results > ol > li { padding: 8px 10px; border: 1px solid var(--sanchaya-border); border-left-width: 5px; border-radius: 8px; background: #fff; }
+.who-results ul { margin: 4px 0 0; padding-left: 18px; font-size: 13px; }
+.who-results small, .who-note { color: var(--sanchaya-muted); font-size: 12px; }
+.who-timeline { margin-top: 22px; padding: 12px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+.who-axis, .who-timeline li { display: grid; grid-template-columns: minmax(120px, 210px) 1fr; align-items: center; gap: 8px; }
+.who-axis { position: relative; height: 18px; font-size: 11px; color: var(--sanchaya-muted); }
+.who-axis > div { position: relative; height: 18px; }
+.who-axis b { position: absolute; transform: translateX(-50%); font-weight: 400; }
+.who-timeline ol { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.who-name { font-size: 13px; line-height: 1.25; }
+.who-track { position: relative; height: 14px; background: linear-gradient(90deg, #f3efe4 0, #f3efe4 100%); border-radius: 7px; }
+.who-track i { position: absolute; top: 0; bottom: 0; min-width: 4px; border-radius: 7px; opacity: .85; }
+.who-timeline li.miss { opacity: .35; }
+.who-timeline li.hit .who-name { font-weight: 700; }
+.who-link { display: inline-block; margin-top: 10px; font-weight: 700; }
+@media (max-width: 800px) { .who-layout { grid-template-columns: 1fr; } .who-axis, .who-timeline li { grid-template-columns: 110px 1fr; } .who-map .leaflet-container { height: 320px; } }
