@@ -8,6 +8,7 @@ import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, washOf } from './Dy
 import DynastyEras from './DynastyEras'
 import DynastyAssumptions from './DynastyAssumptions'
 import DynastyHelpWanted from './DynastyHelpWanted'
+import SearchBox from './SearchBox'
 import './script-fonts.css'
 
 const URL_TEXT = 'karnata.sanchaya.net'
@@ -100,8 +101,8 @@ const MIN_YEAR = 100, MAX_YEAR = 1950
 // Years where a dynasty rises or the map changes sharply, in the same spirit as the home timeline's milestone buttons.
 const MILESTONES = [345, 543, 753, 973, 1156, 1336, 1565, 1761, 1800, 1947]
 const ui = {
-  kn: { tabs: { map: 'ರಾಜವಂಶ ಭೂಪಟ', eras: 'ಯುಗಗಳ ನಕ್ಷೆಗಳು', download: 'ಡೌನ್‌ಲೋಡ್ ಮತ್ತು ಹಂಚಿಕೆ' }, year: 'ವರ್ಷ', ce: 'ಕ್ರಿ.ಶ.', all: 'ಈ ವರ್ಷದ ಎಲ್ಲ ರಾಜವಂಶಗಳು', active: 'ಈ ವರ್ಷ ಸಕ್ರಿಯ ರಾಜವಂಶಗಳು', none: 'ಈ ವರ್ಷಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಿದ ರಾಜವಂಶ ಇಲ್ಲ', browse: 'ಎಲ್ಲ ರಾಜವಂಶಗಳ ಪಟ್ಟಿ', evidence: 'ದಾಖಲೆಗಳು', help: 'ಸಹಕಾರ ಬೇಕು' },
-  en: { tabs: { map: 'Dynasty map', eras: 'Maps by era', download: 'Download & share' }, year: 'Year', ce: 'CE', all: 'All dynasties this year', active: 'Dynasties active this year', none: 'No mapped dynasty for this year', browse: 'Browse all dynasties', evidence: 'records', help: 'Help wanted' },
+  kn: { tabs: { map: 'ರಾಜವಂಶ ಭೂಪಟ', eras: 'ಯುಗಗಳ ನಕ್ಷೆಗಳು', download: 'ಡೌನ್‌ಲೋಡ್ ಮತ್ತು ಹಂಚಿಕೆ' }, year: 'ವರ್ಷ', ce: 'ಕ್ರಿ.ಶ.', all: 'ಈ ವರ್ಷದ ಎಲ್ಲ ರಾಜವಂಶಗಳು', active: 'ಈ ವರ್ಷ ಸಕ್ರಿಯ ರಾಜವಂಶಗಳು', none: 'ಈ ವರ್ಷಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಿದ ರಾಜವಂಶ ಇಲ್ಲ', browse: 'ಎಲ್ಲ ರಾಜವಂಶಗಳ ಪಟ್ಟಿ', search: 'ರಾಜವಂಶ ಹುಡುಕಿ', searchHint: 'ಉದಾ: ಹೊಯ್ಸಳ, ಬಾದಾಮಿ, ಸಿಂದ', noMatch: 'ಯಾವ ರಾಜವಂಶವೂ ಸಿಗಲಿಲ್ಲ', evidence: 'ದಾಖಲೆಗಳು', help: 'ಸಹಕಾರ ಬೇಕು' },
+  en: { tabs: { map: 'Dynasty map', eras: 'Maps by era', download: 'Download & share' }, year: 'Year', ce: 'CE', all: 'All dynasties this year', active: 'Dynasties active this year', none: 'No mapped dynasty for this year', browse: 'Browse all dynasties', search: 'Find a dynasty', searchHint: 'e.g. Hoysala, Badami, Sinda', noMatch: 'No dynasty found', evidence: 'records', help: 'Help wanted' },
 }
 
 // Zoom to the recorded evidence of the dynasties on show (padded by the wash), or leave the default view when there is none.
@@ -132,6 +133,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
   const active = useMemo(() => dynastyAreasForYear(year).active, [year])
   const chosen = active.find(phase => phase.id === chosenId)
   const phases = useMemo(() => (chosen ? [chosen] : active), [chosen, active])
+  const searchItems = useMemo(() => DYNASTY_PHASES.map(phase => ({ id: phase.id, label: phase.name[locale], hint: `${phase.from}–${phase.to}`, search: `${phase.name.kn} ${phase.name.en} ${phase.capital.kn} ${phase.capital.en}` })), [locale])
   const pickFromList = phase => { setYear(current => Math.min(Math.max(current, phase.from), phase.to)); setChosenId(phase.id); setTab('map') }
   const say = message => { setStatus(message); setTimeout(() => setStatus(''), 2500) }
   // The shareable image is drawn on demand, off-screen, so the page itself stays a normal responsive layout.
@@ -148,6 +150,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
     <div className="dyn-tabs" role="tablist">{Object.entries(u.tabs).map(([key, label]) => <button key={key} type="button" role="tab" id={`dyn-tab-${key}`} aria-selected={tab === key} aria-controls={`dyn-panel-${key}`} className={tab === key ? 'active' : ''} onClick={() => setTab(key)}>{label}</button>)}</div>
 
     <section className="dyn-panel" role="tabpanel" id="dyn-panel-map" aria-labelledby="dyn-tab-map" hidden={tab !== 'map'}>
+      <SearchBox label={u.search} placeholder={u.searchHint} emptyText={u.noMatch} items={searchItems} onPick={item => pickFromList(DYNASTY_PHASES.find(phase => phase.id === item.id))} />
       <div className="dyn-timeline">
         <div className="dyn-timeline-head"><span>{u.year}</span><strong>{u.ce} {year}</strong></div>
         <input type="range" aria-label={u.year} min={MIN_YEAR} max={MAX_YEAR} value={year} onChange={event => setYear(Number(event.target.value))} />

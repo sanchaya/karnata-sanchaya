@@ -162,3 +162,36 @@ main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; m
 .dynasty-help a { font-size: 13px; font-weight: 700; }
 .dynasty-wanted li { border-left-style: dashed; }
 @media print { .dynasty-help { display: none; } }
+
+/* Who ruled here: tabs, search box and the timeline under the map. */
+.who-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 10px; }
+.who-tabs button { min-height: 44px; padding: 8px 16px; border: 1px solid #c8d0ff; border-radius: 99px; background: var(--sanchaya-hover); color: var(--sanchaya-blue); font-weight: 700; cursor: pointer; }
+.who-tabs button.active { background: var(--sanchaya-blue); color: #fff; border-color: var(--sanchaya-blue); }
+.who-tabs button:focus-visible, .search-box input:focus-visible, .who-controls select:focus-visible { outline: 3px solid #1d3fdd; outline-offset: 2px; }
+[role=tabpanel][hidden] { display: none; }
+.who-controls { align-items: end; }
+.who-controls .search-box { flex: 1 1 320px; }
+.search-box { position: relative; display: grid; gap: 3px; font-size: 13px; font-weight: 600; }
+.search-box-field { position: relative; }
+.search-box input { width: 100%; min-height: 48px; padding: 8px 40px 8px 12px; border: 2px solid #8a93d6; border-radius: 10px; font: inherit; font-size: 16px; background: #fff; }
+.search-box-clear { position: absolute; right: 4px; top: 4px; width: 40px; height: 40px; border: 0; border-radius: 8px; background: transparent; font-size: 22px; cursor: pointer; color: var(--sanchaya-muted); }
+.search-box ul { position: absolute; z-index: 1200; left: 0; right: 0; top: 100%; margin: 4px 0 0; padding: 4px; list-style: none; max-height: 320px; overflow: auto; border: 1px solid var(--sanchaya-border); border-radius: 10px; background: #fff; box-shadow: 0 8px 24px rgba(0, 0, 0, .16); }
+.search-box ul[hidden] { display: none; }
+.search-box li { display: flex; justify-content: space-between; gap: 10px; min-height: 44px; align-items: center; padding: 6px 10px; border-radius: 8px; cursor: pointer; font-weight: 400; }
+.search-box li.active { background: var(--sanchaya-hover); outline: 2px solid var(--sanchaya-blue); }
+.search-box li small { color: var(--sanchaya-muted); }
+.search-box li.empty { cursor: default; color: var(--sanchaya-muted); }
+.who-mini { margin-top: 10px; padding: 10px 12px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+.who-mini h4 { margin: 0 0 6px; font-size: 13px; }
+.who-mini ol { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.who-mini li { display: grid; grid-template-columns: minmax(110px, 190px) 1fr; gap: 8px; align-items: center; }
+.who-mini .who-track u { position: absolute; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: #fff; border: 2px solid #1b1f3b; }
+.who-mini small { color: var(--sanchaya-muted); }
+.who-name em { display: block; font-style: normal; font-size: 11px; color: var(--sanchaya-muted); }
+.who-timeline li.miss { opacity: .55; }
+@media (max-width: 800px) { .who-mini li { grid-template-columns: 100px 1fr; } }
+
+.dyn-panel > .search-box { margin: 0 0 10px; max-width: 520px; }
+
+@media (min-width: 801px) { .who-results { max-height: 780px; overflow: auto; padding-right: 4px; } }
+.who-results:focus-visible { outline: 3px solid #1d3fdd; }

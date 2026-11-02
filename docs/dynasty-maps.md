@@ -76,10 +76,15 @@ promote it to evidence by adding a cited inscription, monument or event.
     and English. Posters are drawn on an off-screen canvas; the grid grows with
     the number of dynasties.
 - **Name styling:** on the page, map labels and the dynasty list use only the modern Kannada text (plus the English name on the English site). The old-script (era font) rendering of Kadamba, Western Ganga, Badami Chalukya and Hoysala names appears only on the generated poster, which can carry Kannada, the era typeface and English together (`nameLines(phase, locale, withEraFont)` in `DynastyGallery.jsx`).
-- **`#who-ruled` (Explore → Who ruled here?)**, `src/WhoRuledPage.jsx`. Pick a
-  place (search, district or map click) and a radius (50–250 km) to list the
-  dynasties with recorded evidence nearby, in time order, with the nearest
-  records and distances; below it is a timeline of every dynasty. A record
+- **`#who-ruled` (Explore → Who ruled here?)**, `src/WhoRuledPage.jsx`. Two tabs:
+  *Place lookup* and *Timeline of all dynasties*. In the lookup, find a place with
+  the visible search box (`src/SearchBox.jsx`, a keyboard-operable combobox that
+  also finds districts), the district list or a map click, and set a radius
+  (50–250 km). The map zooms to the place; a compact timeline directly under the
+  map shows only the dynasties with records nearby (a dot per dated record), and
+  the list beside it gives the nearest records and distances. The second tab
+  holds the timeline of every dynasty, dimming those with nothing nearby.
+  `#dynasties` has the same search box to find a dynasty by name. A record
   nearby is not proof of rule: the page says so.
 - **Other maps** use `DynastyAreasControl.jsx` / `DynastyAreasLayer.jsx` (scripts,
   coins, relations, people, freedom, district history, literature/epigraphy,
