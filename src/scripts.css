@@ -120,3 +120,33 @@ main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; m
   .who-layout { display: block; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* Dynasty page: tabs, a home-timeline style year panel, and a rail of the dynasties active that year. */
+.dyn-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 10px; }
+.dyn-tabs button { min-height: 44px; padding: 8px 16px; border: 1px solid #c8d0ff; border-radius: 99px; background: var(--sanchaya-hover); color: var(--sanchaya-blue); font-weight: 700; cursor: pointer; }
+.dyn-tabs button.active { background: var(--sanchaya-blue); color: #fff; border-color: var(--sanchaya-blue); }
+.dyn-panel[hidden] { display: none; }
+.dyn-timeline { display: grid; gap: 6px; padding: 10px 14px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+.dyn-timeline-head { display: flex; align-items: baseline; justify-content: space-between; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--sanchaya-muted); }
+.dyn-timeline-head strong { font-size: 22px; letter-spacing: 0; color: var(--sanchaya-ink); }
+.dyn-timeline input[type=range] { width: 100%; }
+.dyn-ticks { display: flex; flex-wrap: wrap; gap: 4px; }
+.dyn-ticks button { min-height: 32px; padding: 4px 10px; border: 1px solid var(--sanchaya-border); border-radius: 99px; background: #fff; font-size: 12px; cursor: pointer; }
+.dyn-ticks button.active { border-color: var(--sanchaya-blue); color: var(--sanchaya-blue); font-weight: 700; }
+.dyn-rail { display: flex; gap: 8px; margin: 10px 0; padding: 2px 2px 8px; overflow-x: auto; scroll-snap-type: x proximity; }
+.dyn-rail button { flex: 0 0 auto; display: grid; gap: 2px; align-content: start; min-width: 150px; max-width: 220px; padding: 8px 12px; border: 1px solid var(--sanchaya-border); border-top: 4px solid var(--c, var(--sanchaya-blue)); border-radius: 10px; background: #fff; text-align: left; cursor: pointer; scroll-snap-align: start; }
+.dyn-rail button.active { box-shadow: 0 0 0 2px #dfe5ff; border-color: var(--sanchaya-blue); border-top-color: var(--c, var(--sanchaya-blue)); }
+.dyn-rail strong { font-size: 13px; line-height: 1.3; }
+.dyn-rail small { font-size: 11px; color: var(--sanchaya-muted); }
+.dyn-browse { margin: 14px 0; padding: 10px 12px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+.dyn-browse summary { cursor: pointer; font-weight: 700; min-height: 32px; }
+.dyn-browse .dynasty-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); overflow: visible; margin-top: 10px; }
+.dyn-browse .dynasty-gallery li { flex: none; }
+.dynasty-assumptions { margin: 14px 0; padding: 12px 14px; border: 1px solid #f0c96a; border-radius: 12px; background: #fff9e8; }
+.dynasty-assumptions h3 { margin: 0 0 6px; }
+.dynasty-assumptions > div { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.dynasty-assumptions h4 { margin: 0 0 4px; font-size: 13px; }
+.dynasty-assumptions ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; }
+.dynasty-assumptions p { margin: 8px 0 0; font-size: 13px; font-weight: 700; }
+@media (max-width: 800px) { .dynasty-assumptions > div { grid-template-columns: 1fr; } .dyn-rail button { min-width: 140px; } }
+@media print { .dyn-tabs, .dyn-timeline, .dyn-rail, .dyn-browse { display: none !important; } .dyn-panel[hidden] { display: block !important; } }

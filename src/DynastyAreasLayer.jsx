@@ -24,10 +24,10 @@ const copy = {
 
 // Each dynasty is drawn as overlapping soft washes around its recorded evidence, never as district or state fills: the kings did
 // not rule modern units and their frontiers were zones. Several dynasties can share an area. `districtGeojson` (reference outlines only) is optional.
-export default function DynastyAreasLayer({ year, locale, districtGeojson, phases, fontFor }) {
+export default function DynastyAreasLayer({ year, locale, districtGeojson, phases, evidenceYear, labels = true, fontFor }) {
   const { active } = useDynastyAreas(year, phases)
   const t = copy[locale] || copy.kn
-  const shown = useMemo(() => active.map(phase => ({ phase, points: evidenceFor(phase, phases ? Infinity : year) })).filter(item => item.points.length), [active, phases, year])
+  const shown = useMemo(() => active.map(phase => ({ phase, points: evidenceFor(phase, evidenceYear ?? (phases ? Infinity : year)) })).filter(item => item.points.length), [active, phases, year, evidenceYear])
   return <>
     {districtGeojson && <GeoJSON interactive={false} data={districtGeojson} style={{ color: '#8f877a', weight: .8, dashArray: '2 4', fill: false }} />}
     <Pane name="dynasty-wash" style={{ zIndex: 330 }} className="dynasty-wash-pane">
@@ -41,7 +41,7 @@ export default function DynastyAreasLayer({ year, locale, districtGeojson, phase
       : <CircleMarker key={`dot-${phase.id}-${index}`} center={[point.lat, point.lng]} radius={point.kind === 'capital' ? 5 : 3} pathOptions={{ color: '#fff', weight: 1, fillColor: phase.color, fillOpacity: 1 }}>
         <Tooltip>{phase.name[locale]} · {KIND_LABEL[locale]?.[point.kind] || point.kind}{point.label ? ` · ${point.label[locale] || point.label.en || ''}` : ''}{point.from ? ` · ${point.from}` : ''}</Tooltip>
       </CircleMarker>))}
-    {shown.map(({ phase, points }) => {
+    {labels && shown.map(({ phase, points }) => {
       const core = points.filter(point => point.tier !== 'influence' && point.tier !== 'lead')
       const center = centroid(core.length ? core : points)
       return center && <Marker key={`label-${phase.id}`} position={center} interactive={false} keyboard={false}

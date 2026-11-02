@@ -1,19 +1,20 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { MapContainer, TileLayer, useMap } from 'react-leaflet'
 import { evidenceFor } from './data/dynasty-evidence'
-import { DYNASTY_PHASES } from './data/dynasty-areas'
+import { DYNASTY_PHASES, dynastyAreasForYear } from './data/dynasty-areas'
 import DynastyAreasControl from './DynastyAreasControl'
 import { loadDistricts, loadStates } from './DynastyAreasLayer'
 import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, washOf } from './DynastyGallery'
 import DynastyEras from './DynastyEras'
+import DynastyAssumptions from './DynastyAssumptions'
 import './script-fonts.css'
 
 const URL_TEXT = 'karnata.sanchaya.net'
 const COLS = 6, CELL_W = 360, CELL_H = 520, W = COLS * CELL_W + 100
 const ROWS = Math.ceil((DYNASTY_PHASES.length + 1) / COLS), H = 360 + ROWS * CELL_H
 const copy = {
-  kn: { title: 'ಎಲ್ಲ ರಾಜವಂಶಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರದೇಶ (ಅಂದಾಜು)', intro: 'ಪ್ರತಿ ರಾಜವಂಶದ ಅಂದಾಜು ಪ್ರಭಾವ: ಅಟ್ಲಸ್‌ನಲ್ಲಿ ದಾಖಲಾದ ರಾಜಧಾನಿ, ಶಾಸನ, ಸ್ಮಾರಕ, ನಾಣ್ಯ ಮತ್ತು ಘಟನೆಗಳ ಸುತ್ತ ಮೃದು ಛಾಯೆಯಾಗಿ ತೋರಿಸಲಾಗಿದೆ. ಇವು ಗಡಿಗಳಲ್ಲ. ಹಂಚಿಕೊಳ್ಳಲು ಪೋಸ್ಟರ್ ನಕಲಿಸಿ ಅಥವಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ; ಅದರಲ್ಲಿ ಯೋಜನೆಯ ಕೊಂಡಿ ಮತ್ತು QR ಕೋಡ್ ಇದೆ.', copyImage: 'ಚಿತ್ರ ನಕಲಿಸಿ', download: 'ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್', copyLink: 'ಕೊಂಡಿ ನಕಲಿಸಿ', copied: 'ನಕಲಿಸಲಾಗಿದೆ', failed: 'ನಕಲಿಸಲಾಗಲಿಲ್ಲ; ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ', cta: 'ಇದು ಅಂದಾಜು ಚಿತ್ರಣ. ಇದನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೊರತೆಗಳಿದ್ದರೆ ನಮ್ಮೊಂದಿಗೆ ಕೈಜೋಡಿಸಿ ತಿದ್ದಿ.', posterKn: 'ಕನ್ನಡ ಚಿತ್ರ', posterEn: 'English ಚಿತ್ರ', note: 'ದಾಖಲಾದ ಆಧಾರಗಳ ಸುತ್ತ ಮೃದು ಛಾಯೆ, ಗಡಿಗಳಲ್ಲ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ಕಡಿಮೆ ದಾಖಲೆಗಳಿರುವ ರಾಜವಂಶಗಳಿಗೆ ರಾಜಧಾನಿ ಮಾತ್ರ ತೋರಿಸಲಾಗಿದೆ.', choose: 'ರಾಜವಂಶ ಆರಿಸಿ', pick: 'ಭೂಪಟವನ್ನು ಜೂಮ್ ಮಾಡಿ ಅಥವಾ ಜಿಲ್ಲೆಯ ಮೇಲೆ ಸರಿಸಿ ನೋಡಿ; ಎಡಭಾಗದಲ್ಲಿ ರಾಜವಂಶವನ್ನು ಆರಿಸಿ.', project: 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ', scan: 'ಸ್ಕ್ಯಾನ್ ಮಾಡಿ' },
-  en: { title: 'All dynasties and their areas (approximate)', intro: 'Each dynasty’s approximate influence, drawn as soft shading around the capitals, inscriptions, monuments, coins and events the atlas records for it. These are not borders. Copy or download the shareable poster; it carries the project link and a QR code.', copyImage: 'Copy image', download: 'Download image', copyLink: 'Copy link', copied: 'Copied', failed: 'Could not copy; download the image instead', cta: 'This is an approximate draft. Review it and collaborate with us on any shortcomings.', posterKn: 'Kannada poster', posterEn: 'English poster', note: 'Soft shading around recorded evidence, not borders; awaiting review. Dynasties with few records show a capital only.', choose: 'Choose a dynasty', pick: 'Zoom the map or hover a district; choose a dynasty on the left.', project: 'Karnataka Historical Atlas', scan: 'Scan to explore' },
+  kn: { title: 'ಎಲ್ಲ ರಾಜವಂಶಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರದೇಶ (ಅಂದಾಜು)', intro: 'ಪ್ರತಿ ರಾಜವಂಶದ ಅಂದಾಜು ಪ್ರಭಾವ: ಅಟ್ಲಸ್‌ನಲ್ಲಿ ದಾಖಲಾದ ರಾಜಧಾನಿ, ಶಾಸನ, ಸ್ಮಾರಕ, ನಾಣ್ಯ ಮತ್ತು ಘಟನೆಗಳ ಸುತ್ತ ಮೃದು ಛಾಯೆಯಾಗಿ ತೋರಿಸಲಾಗಿದೆ. ಇವು ಗಡಿಗಳಲ್ಲ. ಹಂಚಿಕೊಳ್ಳಲು ಪೋಸ್ಟರ್ ನಕಲಿಸಿ ಅಥವಾ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ; ಅದರಲ್ಲಿ ಯೋಜನೆಯ ಕೊಂಡಿ ಮತ್ತು QR ಕೋಡ್ ಇದೆ.', copyImage: 'ಚಿತ್ರ ನಕಲಿಸಿ', download: 'ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್', copyLink: 'ಕೊಂಡಿ ನಕಲಿಸಿ', copied: 'ನಕಲಿಸಲಾಗಿದೆ', failed: 'ನಕಲಿಸಲಾಗಲಿಲ್ಲ; ಚಿತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ', cta: 'ಇದು ಅಂದಾಜು ಚಿತ್ರಣ. ಇದನ್ನು ಪರಿಶೀಲಿಸಿ, ಕೊರತೆಗಳಿದ್ದರೆ ನಮ್ಮೊಂದಿಗೆ ಕೈಜೋಡಿಸಿ ತಿದ್ದಿ.', posterKn: 'ಕನ್ನಡ ಚಿತ್ರ', posterEn: 'English ಚಿತ್ರ', note: 'ದಾಖಲಾದ ಆಧಾರಗಳ ಸುತ್ತ ಮೃದು ಛಾಯೆ, ಗಡಿಗಳಲ್ಲ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ಕಡಿಮೆ ದಾಖಲೆಗಳಿರುವ ರಾಜವಂಶಗಳಿಗೆ ರಾಜಧಾನಿ ಮಾತ್ರ ತೋರಿಸಲಾಗಿದೆ.', choose: 'ರಾಜವಂಶ ಆರಿಸಿ', pick: 'ವರ್ಷವನ್ನು ಬದಲಿಸಿ, ನಂತರ ಮೇಲಿನಿಂದ ರಾಜವಂಶ ಆರಿಸಿ. ಬಿಂದುವಿನ ಮೇಲೆ ಹೋದರೆ ದಾಖಲೆ ಕಾಣುತ್ತದೆ.', project: 'ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ', scan: 'ಸ್ಕ್ಯಾನ್ ಮಾಡಿ' },
+  en: { title: 'All dynasties and their areas (approximate)', intro: 'Each dynasty’s approximate influence, drawn as soft shading around the capitals, inscriptions, monuments, coins and events the atlas records for it. These are not borders. Copy or download the shareable poster; it carries the project link and a QR code.', copyImage: 'Copy image', download: 'Download image', copyLink: 'Copy link', copied: 'Copied', failed: 'Could not copy; download the image instead', cta: 'This is an approximate draft. Review it and collaborate with us on any shortcomings.', posterKn: 'Kannada poster', posterEn: 'English poster', note: 'Soft shading around recorded evidence, not borders; awaiting review. Dynasties with few records show a capital only.', choose: 'Choose a dynasty', pick: 'Move the year, then pick a dynasty above. Hover a dot to see its record.', project: 'Karnataka Historical Atlas', scan: 'Scan to explore' },
 }
 
 const loadImage = src => new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = src })
@@ -94,22 +95,43 @@ const ICONS = {
 }
 const IconButton = ({ label, onClick, path }) => <button type="button" className="icon-btn" aria-label={label} title={label} onClick={onClick}><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={path} /></svg></button>
 
-// Zoom to the picked dynasty's recorded evidence (padded by its wash), or the default view when there is none.
-function FitEvidence({ phase }) {
+const MIN_YEAR = 100, MAX_YEAR = 1950
+// Years where a dynasty rises or the map changes sharply, in the same spirit as the home timeline's milestone buttons.
+const MILESTONES = [345, 543, 753, 973, 1156, 1336, 1565, 1761, 1800, 1947]
+const ui = {
+  kn: { tabs: { map: 'ರಾಜವಂಶ ಭೂಪಟ', eras: 'ಯುಗಗಳ ನಕ್ಷೆಗಳು', download: 'ಡೌನ್‌ಲೋಡ್ ಮತ್ತು ಹಂಚಿಕೆ' }, year: 'ವರ್ಷ', ce: 'ಕ್ರಿ.ಶ.', all: 'ಈ ವರ್ಷದ ಎಲ್ಲ ರಾಜವಂಶಗಳು', active: 'ಈ ವರ್ಷ ಸಕ್ರಿಯ ರಾಜವಂಶಗಳು', none: 'ಈ ವರ್ಷಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಿದ ರಾಜವಂಶ ಇಲ್ಲ', browse: 'ಎಲ್ಲ ರಾಜವಂಶಗಳ ಪಟ್ಟಿ', evidence: 'ದಾಖಲೆಗಳು' },
+  en: { tabs: { map: 'Dynasty map', eras: 'Maps by era', download: 'Download & share' }, year: 'Year', ce: 'CE', all: 'All dynasties this year', active: 'Dynasties active this year', none: 'No mapped dynasty for this year', browse: 'Browse all dynasties', evidence: 'records' },
+}
+
+// Zoom to the recorded evidence of the dynasties on show (padded by the wash), or leave the default view when there is none.
+function FitEvidence({ phases, year }) {
   const map = useMap()
   useEffect(() => {
-    const points = evidenceFor(phase).filter(point => point.tier !== 'influence')
+    // Only the Karnataka neighbourhood sets the view; a far capital (Thanjavur, Pune) must not zoom the map out to all of India.
+    const points = phases.flatMap(phase => evidenceFor(phase, year)).filter(point => point.tier !== 'influence' && point.lat > 8 && point.lat < 20.5 && point.lng > 72.5 && point.lng < 80.5)
     if (points.length > 1) map.fitBounds(points.map(point => [point.lat, point.lng]), { padding: [60, 60], maxZoom: 8 })
     else if (points.length) map.setView([points[0].lat, points[0].lng], 7)
-  }, [map, phase])
+  }, [map, phases, year])
+  return null
+}
+
+// The map sits in a hidden tab part of the time; Leaflet must re-measure it when the tab shows.
+function InvalidateOnShow({ visible }) {
+  const map = useMap()
+  useEffect(() => { if (visible) setTimeout(() => map.invalidateSize(), 60) }, [map, visible])
   return null
 }
 
 export default function DynastyMapPage({ locale = 'kn' }) {
-  const t = copy[locale] || copy.kn
+  const t = copy[locale] || copy.kn, u = ui[locale] || ui.kn
   const [status, setStatus] = useState('')
-  const [selected, setSelected] = useState(DYNASTY_PHASES[0])
-  const phases = useMemo(() => [selected], [selected])
+  const [tab, setTab] = useState('map')
+  const [year, setYear] = useState(1100)
+  const [chosenId, setChosenId] = useState('all')
+  const active = useMemo(() => dynastyAreasForYear(year).active, [year])
+  const chosen = active.find(phase => phase.id === chosenId)
+  const phases = useMemo(() => (chosen ? [chosen] : active), [chosen, active])
+  const pickFromList = phase => { setYear(current => Math.min(Math.max(current, phase.from), phase.to)); setChosenId(phase.id); setTab('map') }
   const say = message => { setStatus(message); setTimeout(() => setStatus(''), 2500) }
   // The shareable image is drawn on demand, off-screen, so the page itself stays a normal responsive layout.
   const render = useCallback(async lang => { const canvas = document.createElement('canvas'); await draw(canvas, await loadDistricts(), await loadStates(), lang); return toBlob(canvas) }, [])
@@ -122,27 +144,50 @@ export default function DynastyMapPage({ locale = 'kn' }) {
   const copyLink = useCallback(async () => { try { await navigator.clipboard.writeText(`https://${URL_TEXT}`); say(t.copied) } catch { say(t.failed) } }, [t])
   return <main className="portal-page dynasty-map-page" id="dynasty-map">
     <section className="script-hero"><div><p className="eyebrow">{t.project}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
-    <div className="dynasty-layout">
-      <aside className="dynasty-picker" aria-label={t.choose}><h3>{t.choose}</h3><DynastyGallery locale={locale} selectedId={selected.id} onSelect={setSelected} /></aside>
-      <div className="dynasty-main">
-        <section className="dynasty-live" aria-label={selected.name[locale]}>
-          <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
-            <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <FitEvidence phase={selected} /><DynastyAreasControl locale={locale} phases={phases} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
-          </MapContainer>
-          <p>{t.pick} {t.note}</p>
-        </section>
-        <DynastyEras locale={locale} />
-        <section className="dynasty-share">
-          <img src={`${import.meta.env.BASE_URL}karnata-qr.svg`} alt="" width="120" height="120" />
-          <div className="dynasty-share-body">
-            <div className="dynasty-share-url"><strong>{URL_TEXT}</strong><IconButton label={t.copyLink} onClick={copyLink} path={ICONS.link} /></div>
-            <span>{t.project}</span>
-            {[['kn', 'ಕನ್ನಡ', t.posterKn], ['en', 'English', t.posterEn]].map(([lang, tag, label]) => <div className="dynasty-map-actions" key={lang} role="group" aria-label={label}><b lang={lang}>{tag}</b><IconButton label={`${t.copyImage} · ${tag}`} onClick={() => copyImage(lang)} path={ICONS.copy} /><IconButton label={`${t.download} · ${tag}`} onClick={() => download(lang)} path={ICONS.download} /></div>)}
-            <span role="status" className="dynasty-share-status">{status}</span>
-          </div>
-        </section>
+    <div className="dyn-tabs" role="tablist">{Object.entries(u.tabs).map(([key, label]) => <button key={key} type="button" role="tab" id={`dyn-tab-${key}`} aria-selected={tab === key} aria-controls={`dyn-panel-${key}`} className={tab === key ? 'active' : ''} onClick={() => setTab(key)}>{label}</button>)}</div>
+
+    <section className="dyn-panel" role="tabpanel" id="dyn-panel-map" aria-labelledby="dyn-tab-map" hidden={tab !== 'map'}>
+      <div className="dyn-timeline">
+        <div className="dyn-timeline-head"><span>{u.year}</span><strong>{u.ce} {year}</strong></div>
+        <input type="range" aria-label={u.year} min={MIN_YEAR} max={MAX_YEAR} value={year} onChange={event => setYear(Number(event.target.value))} />
+        <div className="dyn-ticks">{MILESTONES.map(value => <button key={value} type="button" className={Math.abs(year - value) < 20 ? 'active' : ''} onClick={() => setYear(value)}>{value}</button>)}</div>
       </div>
-    </div>
+      <div className="dyn-rail" role="group" aria-label={u.active}>
+        <button type="button" aria-pressed={!chosen} className={!chosen ? 'active' : ''} onClick={() => setChosenId('all')}><strong>{u.all}</strong><small>{active.length}</small></button>
+        {active.map(phase => <button key={phase.id} type="button" aria-pressed={chosen?.id === phase.id} className={chosen?.id === phase.id ? 'active' : ''} style={{ '--c': phase.color }} onClick={() => setChosenId(phase.id)}>
+          <strong>{phase.name[locale]}</strong><small>{phase.from}–{phase.to} · {evidenceFor(phase, year).length} {u.evidence}</small></button>)}
+        {!active.length && <p>{u.none}</p>}
+      </div>
+      <section className="dynasty-live" aria-label={t.title}>
+        <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
+          <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <InvalidateOnShow visible={tab === 'map'} />
+          <FitEvidence phases={phases} year={year} />
+          <DynastyAreasControl locale={locale} phases={phases} evidenceYear={year} labels={phases.length <= 4} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
+        </MapContainer>
+        <p>{t.pick} {t.note}</p>
+      </section>
+      <DynastyAssumptions locale={locale} />
+      <details className="dyn-browse"><summary>{u.browse} ({DYNASTY_PHASES.length})</summary>
+        <DynastyGallery locale={locale} selectedId={chosen?.id} onSelect={pickFromList} /></details>
+    </section>
+
+    <section className="dyn-panel" role="tabpanel" id="dyn-panel-eras" aria-labelledby="dyn-tab-eras" hidden={tab !== 'eras'}>
+      <DynastyEras locale={locale} />
+      <DynastyAssumptions locale={locale} />
+    </section>
+
+    <section className="dyn-panel" role="tabpanel" id="dyn-panel-download" aria-labelledby="dyn-tab-download" hidden={tab !== 'download'}>
+      <section className="dynasty-share">
+        <img src={`${import.meta.env.BASE_URL}karnata-qr.svg`} alt="" width="120" height="120" />
+        <div className="dynasty-share-body">
+          <div className="dynasty-share-url"><strong>{URL_TEXT}</strong><IconButton label={t.copyLink} onClick={copyLink} path={ICONS.link} /></div>
+          <span>{t.project}</span>
+          {[['kn', 'ಕನ್ನಡ', t.posterKn], ['en', 'English', t.posterEn]].map(([lang, tag, label]) => <div className="dynasty-map-actions" key={lang} role="group" aria-label={label}><b lang={lang}>{tag}</b><IconButton label={`${t.copyImage} · ${tag}`} onClick={() => copyImage(lang)} path={ICONS.copy} /><IconButton label={`${t.download} · ${tag}`} onClick={() => download(lang)} path={ICONS.download} /></div>)}
+          <span role="status" className="dynasty-share-status">{status}</span>
+        </div>
+      </section>
+      <DynastyAssumptions locale={locale} />
+    </section>
   </main>
 }
