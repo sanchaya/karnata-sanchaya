@@ -34,8 +34,9 @@ export const DYNASTY_PHASES = [
 ].map(phase => ({ ...phase, review: { status: 'needs-review' }, verification: 'unverified' }))
 
 // One ruler per district for a year: the latest-starting dynasty whose core includes it wins.
-export function dynastyAreasForYear(year) {
-  const active = DYNASTY_PHASES.filter(phase => year >= phase.from && year <= phase.to)
+export const dynastyAreasForYear = year => dynastyAreasFor(DYNASTY_PHASES.filter(phase => year >= phase.from && year <= phase.to))
+
+export function dynastyAreasFor(active) {
   const byDistrict = new Map()
   for (const phase of [...active].sort((a, b) => a.from - b.from)) for (const id of phase.districts) byDistrict.set(id, phase)
   const byState = new Map()

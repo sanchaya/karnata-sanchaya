@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { GeoJSON, Marker } from 'react-leaflet'
 import { divIcon } from 'leaflet'
-import { dynastyAreasForYear } from './data/dynasty-areas'
+import { dynastyAreasFor, dynastyAreasForYear } from './data/dynasty-areas'
 
 const base = import.meta.env.BASE_URL
 const ringsOf = geometry => (geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates).flat()
@@ -16,12 +16,16 @@ const centerOf = features => {
 let statesPromise
 const loadStates = () => (statesPromise ||= fetch(`${base}south-asia-states.geojson`).then(response => response.json()).catch(() => null))
 
-export function useDynastyAreas(year) {
-  return useMemo(() => dynastyAreasForYear(year), [year])
+export const loadDistricts = () => (districtsPromise ||= fetch(`${base}karnataka-districts.geojson`).then(response => response.json()).catch(() => null))
+let districtsPromise
+
+// `phases` (an explicit list of dynasty phases) takes the place of the year when given.
+export function useDynastyAreas(year, phases) {
+  return useMemo(() => (phases ? dynastyAreasFor(phases) : dynastyAreasForYear(year)), [year, phases])
 }
 
-export default function DynastyAreasLayer({ year, locale, districtGeojson }) {
-  const { active, byDistrict, byState } = useDynastyAreas(year)
+export default function DynastyAreasLayer({ year, locale, districtGeojson, phases, fontFor }) {
+  const { active, byDistrict, byState } = useDynastyAreas(year, phases)
   const [states, setStates] = useState(null)
   useEffect(() => { let on = true; loadStates().then(data => on && setStates(data)); return () => { on = false } }, [])
   const signature = active.map(phase => phase.id).join('|')
@@ -42,7 +46,7 @@ export default function DynastyAreasLayer({ year, locale, districtGeojson }) {
       layer.bindTooltip(`${name} · ${phase ? phase.name[locale] : (locale === 'kn' ? 'ಈ ವರ್ಷ ಯಾವ ರಾಜವಂಶವೂ ದಾಖಲಾಗಿಲ್ಲ' : 'no dynasty mapped this year')}`, { sticky: true })
     }} />}
     {labels.map(({ phase, center }) => <Marker key={`${phase.id}-${signature}`} position={center} interactive={false} keyboard={false}
-      icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}">${phase.name[locale]}</span>`, iconSize: [0, 0] })} />)}
+      icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}${fontFor?.(phase) ? `;font-family:${fontFor(phase).replaceAll('"', "'")}` : ''}">${phase.name[locale]}</span>`, iconSize: [0, 0] })} />)}
   </>
 }
 
