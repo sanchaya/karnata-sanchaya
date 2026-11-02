@@ -45,3 +45,4 @@ main.portal-page.dynasty-map-page { display: block; max-width: 1100px; margin: 0
 .dynasty-live .leaflet-container { height: 520px; border: 1px solid var(--sanchaya-border); border-radius: 12px; }
 .dynasty-live p { margin: 6px 0 0; color: var(--sanchaya-muted); font-size: 12px; }
 .dynasty-live .dynasty-area-label span small { display: block; font: 700 11px Inter, sans-serif; }
+.dynasty-map-actions b { min-width: 110px; font-size: 13px; }
