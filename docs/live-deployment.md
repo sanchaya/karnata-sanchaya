@@ -38,6 +38,8 @@ For a reviewed static release, set `SNAPSHOT_PUBLISHER_ID` and run `npm run publ
 
 Public interface changes and bundled research-data changes become available on the live portal after that deployment. A release that does not add a file under `server/migrations/` needs no separate manual database command; the update script is still safe to run normally.
 
+After a release that adds records to `src/data` (for example the dynasty polities, places and inscriptions described in [dynasty maps](dynasty-maps.md)), run `npm run db:sync-dataset` so the live API serves them. The sync adds missing records and fields by id but does not overwrite fields of records that already exist, so a renamed existing record must also be edited in Admin. The live HTML starts the `/api/dataset` request early (`public/early-dataset.js`) and the endpoint is sent with `Cache-Control: no-cache` so browsers revalidate with the ETag; purge the Cloudflare cache for `/`, `/index.html` and `/sw.js` after a deploy.
+
 Existing administrator dataset snapshots are not overwritten during deployment. That separation protects edits already made on the live server: the public application uses the reviewed bundled release, while MariaDB keeps its own permanent revision history until an administrator deliberately imports, reconciles and saves a newer complete dataset revision.
 
 ### Coolify deployment and discovery synchronization

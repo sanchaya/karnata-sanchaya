@@ -131,3 +131,8 @@ The explorer submits these fields as moderated proposals. They enter the public 
 ## Export access policy
 
 Public atlas pages do not expose JSON dataset, worklist, CSL-JSON or relations-matrix exports. They retain human-readable citations and BibTeX/RIS citation tools for ordinary readers. The local `#admin` workspace is the controlled surface for MariaDB-backed dataset import/export and static handoff files; the server still enforces administrator/exporter permissions independently of the public UI.
+
+
+## Dynasty phases and evidence
+
+`DYNASTY_PHASES` (`src/data/dynasty-areas.js`) are display records, not a collection: each names a `polityId`, a conventional span and a colour, and carries no district or state units. The map evidence is derived at runtime from `inscriptions`, `coinRecords`, `culturalHeritage`, `events`, capital places and hand-kept leads (`src/data/dynasty-evidence.js`). `src/data/dynasty-inscriptions.js` adds the Kalachuri, Seuna and Ratta inscriptions with `precision: taluk-town` findspots where the village could not be checked. See [dynasty maps](dynasty-maps.md).

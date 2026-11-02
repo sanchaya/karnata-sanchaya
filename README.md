@@ -17,7 +17,9 @@ geography page maps source-backed parks, sanctuaries, Ramsar wetlands, the
 Nilgiri biosphere reserve and a reserved-forest research lead, while linking
 to the official Bhuvan viewer for statutory forest and protected-area
 boundaries. The Epigraphy Explorer separates records, review packets and
-archive/source volumes into a compact tabbed workspace.
+archive/source volumes into a compact tabbed workspace. Dynasties are drawn as
+soft washes around recorded evidence, never as district borders; see the
+`#dynasties` and `#who-ruled` pages and [dynasty maps](docs/dynasty-maps.md).
 
 ## Current release
 
@@ -86,6 +88,7 @@ edits do not appear on GitHub Pages until this approved export occurs.
 - Model and collections: [data model](docs/data-model.md)
 - EC/EI canonical ingestion: [canonical epigraphy](docs/canonical-epigraphy.md)
 - Repeatable imports and citations: [research intake](docs/research-intake.md)
+- Dynasty maps, Who ruled here and their evidence: [dynasty maps](docs/dynasty-maps.md)
 - Contributor and reviewer use: [user guide](docs/user-guide.md)
 - Evidence and governance: [community governance](docs/community-governance.md)
 - P2/P3 review packets: [corpus maturity](docs/p2-p3-corpus-maturity.md)
