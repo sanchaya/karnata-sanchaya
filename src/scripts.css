@@ -29,9 +29,14 @@
 .dynasty-gallery button > span { display: grid; gap: 1px; min-width: 0; }
 .dynasty-gallery strong { overflow-wrap: anywhere; font-size: 13px; line-height: 1.25; font-weight: 700; color: var(--sanchaya-ink); }
 .dynasty-gallery strong[style] { font-size: 16px; font-weight: 400; line-height: 1.45; }
-.dynasty-gallery strong.latin { font-size: 11px; }
-.dynasty-gallery small { color: var(--sanchaya-muted); font-size: 11px; }
-@media (max-width: 800px) { .dynasty-layout { grid-template-columns: 1fr; } .dynasty-picker { position: static; } }
+.dynasty-gallery strong.latin { font-size: 12px; }
+.dynasty-gallery small { color: var(--sanchaya-muted); font-size: 12px; }
+@media (max-width: 800px) {
+  .dynasty-layout { grid-template-columns: 1fr; }
+  .dynasty-gallery { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; }
+  .dynasty-gallery li { flex: 0 0 210px; scroll-snap-align: start; }
+  .dynasty-live .leaflet-container { height: 420px; }
+}
 .dynasty-share { display: flex; align-items: center; gap: 16px; margin: 14px 0; padding: 14px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
 .dynasty-share img { flex: none; }
 .dynasty-share > div { display: grid; gap: 4px; }
@@ -48,3 +53,9 @@ main.portal-page.dynasty-map-page { display: block; max-width: 1100px; margin: 0
 .dynasty-map-actions b { min-width: 110px; font-size: 13px; }
 
 .dynasty-layout > * { min-width: 0; }
+
+.dynasty-share { align-items: flex-start; }
+.dynasty-share > div { flex: 1; min-width: 0; }
+.dynasty-map-actions { margin: 6px 0; }
+.dynasty-map-actions button { min-height: 44px; }
+.dynasty-live p { color: var(--sanchaya-ink); font-size: 13px; }

@@ -101,11 +101,11 @@ export default function DynastyMapPage({ locale = 'kn' }) {
       <aside className="dynasty-picker" aria-label={t.choose}><h3>{t.choose}</h3><DynastyGallery locale={locale} selectedId={selected.id} onSelect={setSelected} /></aside>
       <div className="dynasty-main">
         <section className="dynasty-live" aria-label={selected.name[locale]}>
-          <MapContainer bounds={[[8, 73.5], [21, 81]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
+          <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
             <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <DynastyAreasLayer locale={locale} districtGeojson={districts} phases={[selected]} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
           </MapContainer>
-          <p>{t.pick}</p>
+          <p>{t.pick} {t.note}</p>
         </section>
         <section className="dynasty-share">
           <img src={`${import.meta.env.BASE_URL}karnata-qr.svg`} alt="" width="120" height="120" />
@@ -113,7 +113,6 @@ export default function DynastyMapPage({ locale = 'kn' }) {
             {[['kn', t.posterKn], ['en', t.posterEn]].map(([lang, label]) => <div className="dynasty-map-actions" key={lang} role="group" aria-label={label}><b>{label}</b><button type="button" onClick={() => copyImage(lang)}>{t.copyImage}</button><button type="button" onClick={() => download(lang)}>{t.download}</button></div>)}
             <div className="dynasty-map-actions"><button type="button" onClick={copyLink}>{t.copyLink}</button><span role="status">{status}</span></div></div>
         </section>
-        <p className="dynasty-map-note">{t.note}</p>
       </div>
     </div>
   </main>
