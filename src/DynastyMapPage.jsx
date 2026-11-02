@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import { DYNASTY_PHASES } from './data/dynasty-areas'
-import DynastyAreasLayer, { loadDistricts, loadStates } from './DynastyAreasLayer'
+import DynastyAreasControl from './DynastyAreasControl'
+import { loadDistricts, loadStates } from './DynastyAreasLayer'
 import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, reachFeatures } from './DynastyGallery'
 import './script-fonts.css'
 
@@ -83,8 +84,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
   const t = copy[locale] || copy.kn
   const [status, setStatus] = useState('')
   const [selected, setSelected] = useState(DYNASTY_PHASES[0])
-  const [districts, setDistricts] = useState(null)
-  useEffect(() => { let on = true; loadDistricts().then(data => on && setDistricts(data)); return () => { on = false } }, [])
+  const phases = useMemo(() => [selected], [selected])
   const say = message => { setStatus(message); setTimeout(() => setStatus(''), 2500) }
   // The shareable image is drawn on demand, off-screen, so the page itself stays a normal responsive layout.
   const render = useCallback(async lang => { const canvas = document.createElement('canvas'); await draw(canvas, await loadDistricts(), await loadStates(), lang); return toBlob(canvas) }, [])
@@ -103,7 +103,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
         <section className="dynasty-live" aria-label={selected.name[locale]}>
           <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
             <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <DynastyAreasLayer locale={locale} districtGeojson={districts} phases={[selected]} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
+            <DynastyAreasControl locale={locale} phases={phases} fontFor={phase => (eraFamily(phase) ? `"${eraFamily(phase)}",serif` : undefined)} />
           </MapContainer>
           <p>{t.pick} {t.note}</p>
         </section>
