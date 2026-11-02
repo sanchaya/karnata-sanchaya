@@ -18,8 +18,8 @@ export function useDynastyAreas(year, phases) {
 }
 
 const copy = {
-  kn: { thin: 'ಆಧಾರ ಕಡಿಮೆ', lead: 'ದಾಖಲೆ ಇನ್ನೂ ಇಲ್ಲ', leadNote: 'ಇತಿಹಾಸಕಾರರು ಈ ರಾಜವಂಶವನ್ನು ಇಲ್ಲಿ ಗುರುತಿಸುತ್ತಾರೆ; ಅಟ್ಲಸ್‌ನಲ್ಲಿ ಇನ್ನೂ ದಾಖಲೆ ಇಲ್ಲ. ಆಕರ ಸಹಿತ ದಾಖಲೆ ಸೇರಿಸಲು ಸಹಕರಿಸಿ.', contribute: 'ಸಹಕರಿಸಿ →', legend: 'ರಾಜವಂಶ ಪ್ರದೇಶಗಳು (ಅಂದಾಜು)', none: 'ಈ ವರ್ಷಕ್ಕೆ ಪ್ರದೇಶ ಚಿತ್ರಣ ಇಲ್ಲ', note: 'ಮೃದು ಛಾಯೆ = ಅಟ್ಲಸ್‌ನಲ್ಲಿ ದಾಖಲಾದ ರಾಜಧಾನಿ, ಶಾಸನ, ಸ್ಮಾರಕ, ನಾಣ್ಯ ಮತ್ತು ಘಟನೆಗಳ ಸುತ್ತಲಿನ ಅಂದಾಜು ಪ್ರಭಾವ. ಇದು ಗಡಿ ಅಲ್ಲ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ತೆರೆದ ಉಂಗುರ = ಇನ್ನೂ ದಾಖಲೆ ಇಲ್ಲದ ಸ್ಥಳ; ದಾಖಲಿಸಲು ಸಹಕರಿಸಿ.' },
-  en: { thin: 'thin evidence', lead: 'no record yet', leadNote: 'Historians place this dynasty here, but the atlas has no record yet. Help add one with a source.', contribute: 'Contribute →', legend: 'Dynasty areas (approximate)', none: 'No mapped dynasty for this year', note: 'Soft shading = estimated influence around capitals, inscriptions, monuments, coins and events recorded in the atlas. Not borders; awaiting review. Open rings = places with no record yet: help us document them.' },
+  kn: { about: 'ಈ ಪದರದ ಬಗ್ಗೆ', thin: 'ಆಧಾರ ಕಡಿಮೆ', lead: 'ದಾಖಲೆ ಇನ್ನೂ ಇಲ್ಲ', leadNote: 'ಇತಿಹಾಸಕಾರರು ಈ ರಾಜವಂಶವನ್ನು ಇಲ್ಲಿ ಗುರುತಿಸುತ್ತಾರೆ; ಅಟ್ಲಸ್‌ನಲ್ಲಿ ಇನ್ನೂ ದಾಖಲೆ ಇಲ್ಲ. ಆಕರ ಸಹಿತ ದಾಖಲೆ ಸೇರಿಸಲು ಸಹಕರಿಸಿ.', contribute: 'ಸಹಕರಿಸಿ →', legend: 'ರಾಜವಂಶ ಪ್ರದೇಶಗಳು (ಅಂದಾಜು)', none: 'ಈ ವರ್ಷಕ್ಕೆ ಪ್ರದೇಶ ಚಿತ್ರಣ ಇಲ್ಲ', note: 'ಮೃದು ಛಾಯೆ = ಅಟ್ಲಸ್‌ನಲ್ಲಿ ದಾಖಲಾದ ರಾಜಧಾನಿ, ಶಾಸನ, ಸ್ಮಾರಕ, ನಾಣ್ಯ ಮತ್ತು ಘಟನೆಗಳ ಸುತ್ತಲಿನ ಅಂದಾಜು ಪ್ರಭಾವ. ಇದು ಗಡಿ ಅಲ್ಲ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ತೆರೆದ ಉಂಗುರ = ಇನ್ನೂ ದಾಖಲೆ ಇಲ್ಲದ ಸ್ಥಳ; ದಾಖಲಿಸಲು ಸಹಕರಿಸಿ.' },
+  en: { about: 'About this layer', thin: 'thin evidence', lead: 'no record yet', leadNote: 'Historians place this dynasty here, but the atlas has no record yet. Help add one with a source.', contribute: 'Contribute →', legend: 'Dynasty areas (approximate)', none: 'No mapped dynasty for this year', note: 'Soft shading = estimated influence around capitals, inscriptions, monuments, coins and events recorded in the atlas. Not borders; awaiting review. Open rings = places with no record yet: help us document them.' },
 }
 
 // Each dynasty is drawn as overlapping soft washes around its recorded evidence, never as district or state fills: the kings did
@@ -56,6 +56,6 @@ export function DynastyAreasLegend({ year, locale }) {
   return <div className="dynasty-legend">
     <b>{t.legend}</b>
     {active.length ? active.map(phase => <span key={phase.id}><i style={{ background: phase.color }} />{phase.name[locale]} · {phase.from}–{phase.to}</span>) : <span>{t.none}</span>}
-    <small>{t.note}</small>
+    <details className="dynasty-legend-note"><summary>{t.about}</summary><small>{t.note}</small></details>
   </div>
 }

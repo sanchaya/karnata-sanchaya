@@ -12,3 +12,8 @@
 .dynasty-map-control .dynasty-map-control-year { display: grid; gap: 2px; }
 .dynasty-map-control .dynasty-legend { position: static; box-shadow: none; padding: 0; background: none; max-height: 160px; overflow: auto; }
 @media (max-width: 720px) { .dynasty-map-control { max-width: 190px; font-size: 11px; } }
+
+/* The explanatory note stays folded so the legend never covers the map; the list scrolls instead of growing. */
+.dynasty-legend{max-height:150px;overflow:auto}
+.dynasty-legend-note summary{cursor:pointer;font-size:11px;color:#3a4cc0;font-weight:600;min-height:24px}
+.dynasty-legend-note small{display:block;max-height:110px;overflow:auto;margin-top:2px;font-size:11px;line-height:1.35}
