@@ -29,3 +29,23 @@
 .res-more{display:block;margin:14px auto;min-height:44px;padding:8px 24px;border:1px solid var(--sanchaya-blue);border-radius:99px;background:#fff;color:var(--sanchaya-blue);font-weight:700;cursor:pointer}
 .res-empty{padding:20px;text-align:center;color:var(--sanchaya-muted)}
 @media(max-width:700px){.res-row{grid-template-columns:1fr}.res-badges{justify-content:flex-start}.res-toolbar select,.res-toolbar button{max-width:none;flex:1 1 45%}}
+
+/* #research-tasks: the hero was a <header>, which a global rule clipped to 94px so its text spilled over the card below. */
+.research-tasks-page .research-tasks-hero{height:auto;min-height:0;overflow:visible}
+.research-tasks-page .research-tasks-hero nav{flex-wrap:wrap;overflow:visible;margin-top:10px}
+.research-tasks-page .research-tasks-hero a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;font-size:13px}
+.research-task-total{display:grid;justify-items:end;line-height:1.1}
+.research-task-total b{font-size:2rem;color:var(--sanchaya-blue)}
+.research-task-total span{font-size:12px;color:var(--sanchaya-muted)}
+.research-tasks-page .research-task-progress{flex-wrap:wrap;overflow:visible;padding:4px 0 12px}
+.research-tasks-page .research-task-progress button{min-height:40px}
+.research-tasks-page .research-task-controls{display:flex;gap:10px}
+.research-tasks-page .research-task-controls input{flex:1 1 auto;min-height:48px;padding:8px 12px;border:2px solid #8a93d6;border-radius:10px;font:inherit}
+.research-tasks-page .research-task-controls select{display:none;min-height:48px}
+.research-tasks-page .research-task-grid article>span{text-transform:none;letter-spacing:0}
+.research-tasks-page .research-task-grid article>small{color:var(--sanchaya-muted)}
+.research-tasks-page .research-task-grid article>a{min-height:44px}
+.research-task-more{display:block;margin:16px auto 0;min-height:44px;padding:8px 24px;border:1px solid var(--sanchaya-blue);border-radius:99px;background:#fff;color:var(--sanchaya-blue);font-weight:700;cursor:pointer}
+.research-task-empty{padding:16px;text-align:center;color:var(--sanchaya-muted)}
+.research-tasks-page input:focus-visible,.research-tasks-page select:focus-visible,.research-tasks-page button:focus-visible,.research-tasks-page a:focus-visible{outline:3px solid #1d3fdd;outline-offset:2px}
+@media(max-width:700px){.research-tasks-page .research-task-progress{display:none}.research-tasks-page .research-task-controls{flex-direction:column}.research-tasks-page .research-task-controls select{display:block}.research-task-heading{flex-direction:column}.research-task-total{justify-items:start}}
