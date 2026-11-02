@@ -98,3 +98,15 @@ The public build is installable through **Install app / Add to Home Screen**. Af
 ## Museums, archives, libraries and curiosity heritage
 
 Add an institution or built-heritage candidate to the appropriate district packet in `src/data/cultural-institutions.js`. Keep its object category explicit (`museum`, `archive`, `library`, `palace`, `fort`, `historic-park`, `historic-market`, `railway-heritage`, `engineering-heritage`, `industrial-heritage`, `maritime-heritage`, `educational-heritage`, `scientific-heritage`, `cultural-venue`, `memorial-heritage` or `historic-urban-precinct`), provide bilingual names, and cite the responsible government, institutional or statutory source. Preserve establishment, renaming, adaptive-reuse and technological history only when the cited source states it; do not turn an undated historical association into a synthetic date range. A locality-derived map point must use `approximate`; only an authority-published or surveyed point may be promoted to site-level precision. Do not infer legal protection from inclusion in a tourism page or directory. Photographs, current access, managing authority, collection scope and dated present condition remain separate review gates.
+
+## Reading a scanned book from the Internet Archive (worked example)
+
+The Census 2004 *Historical Atlas of Karnataka* (item `62_36931_2001_his`) was added by hand, as a model for other scanned government or print sources:
+
+1. Read the item metadata (`https://archive.org/metadata/<id>`) for title, authors, publisher, year and the list of files, and note the rights position. This book is Government of India copyright, so only dates, names, places and figures are recorded, in our own wording, never its text or maps.
+2. Download the OCR text (`<name>_djvu.txt`, here 181 KB) into a scratch folder, not the repository; follow redirects (`curl -L`).
+3. OCR of tables is scrambled by column. Compile entries by hand and check each against the book's map number; where a row is ambiguous (the 1840 division-to-district assignment), record only what is certain.
+4. Register one source record (`needs-review`, `provenanceRole: secondary-compilation`) and cite it from every record or lead drawn from the book, with a locator such as `Map 9`.
+5. Compare against existing data and surface differences for review rather than overwriting (the dynasty page flags where the book's period differs from ours).
+6. Geocode places with care: accept a village point only when its district matches, otherwise use the taluk town and say so.
+
