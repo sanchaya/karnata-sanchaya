@@ -1,6 +1,7 @@
 import { events, eventSources, externalPolities } from './events.js'
 import { deepChronologies, districtHistoryResearch, heritageAuditCategories, heritageAudits } from './research.js'
 import { culturalInstitutionSources } from './cultural-institutions.js'
+import { censusAtlasSources } from './census-historical-atlas.js'
 import { dynastyInscriptionDistrictAssignments, dynastyInscriptionPlaces, dynastyInscriptionSources, dynastyInscriptions } from './dynasty-inscriptions.js'
 import { additionalInscriptions, additionalWorks, districtInscriptionReviewPasses, inscriptionDistrictAssignments, inscriptionPlaces, literaryPeople, literatureEpigraphySources, priorityInscriptionCandidates } from './literature-inscriptions.js'
 import { collaborations } from './collaborations.js'
@@ -257,6 +258,7 @@ appendUniqueById(atlasData.sources, epigraphiaArchiveSources)
 appendUniqueById(atlasData.people, literaryPeople)
 appendUniqueById(atlasData.places, inscriptionPlaces)
 appendUniqueById(atlasData.sources, dynastyInscriptionSources)
+appendUniqueById(atlasData.sources, censusAtlasSources)
 appendUniqueById(atlasData.places, dynastyInscriptionPlaces)
 appendUniqueById(atlasData.works, additionalWorks)
 appendUniqueById(atlasData.externalPolities, politicalRelationPolities)

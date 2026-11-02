@@ -124,6 +124,50 @@ Not covered: borders or surveyed frontiers; dynasties with few records (shown
 by capital only, "thin evidence"); some inscriptions placed at the taluk town
 instead of the village; dynasties not yet added; everything awaits review.
 
+## Reference: the Census 2004 Historical Atlas of Karnataka
+
+`src/data/census-historical-atlas.js` records facts from *A Historical Atlas of
+Karnataka* (H. Shashidhar and N. Sreenivasa Murthy, Directorate of Census
+Operations Karnataka, Census of India 2001, published 2004), read from the
+Internet Archive item <https://archive.org/details/62_36931_2001_his> (OCR text
+`census_his_djvu.txt`, 181 KB). The book is Government of India copyright, so
+**only dates, names, places and figures** are kept, in our own wording, each
+with its map number; no text, map or table is reproduced, and the raw OCR is not
+stored in the repository. It is registered as source
+`src-census-2004-historical-atlas-karnataka` (a secondary compilation, `needs-review`).
+
+What it adds:
+
+- **Profiles** (`CENSUS_ATLAS_PROFILES`, 19 dynasties): the book's period, approximate
+  greatest extent in sq km, capital(s), origin, important rulers, languages, major
+  works and monuments. The dynasty page shows the profile for the dynasty you pick
+  (`DynastyProfile.jsx`) and flags where the book's period differs from our span,
+  so spans can be reviewed rather than silently changed. Differences found: Kadamba
+  (325 vs 345), Western Ganga (325–1004 vs 350–1000), Badami Chalukya (500 vs 543),
+  Rashtrakuta (757 vs 753), Kalachuri (1167 vs 1156), Chola in Gangavadi (985–1122 vs
+  1004–1116), Seuna (1198–1312 vs 1187–1317), Vijayanagara (1336–1565 vs 1336–1646,
+  the book stops at Talikota), Adil Shahi (1489 vs 1528), Barid Shahi (1487 vs 1489),
+  Keladi (1500 vs 1499), Chitradurga (1568–1799 vs 1588–1779), Marathas (1637–1687 vs
+  1676–1818) and the later Mysore Odeyars (1881 vs 1800). Our spans are unchanged.
+- **A new dynasty:** the Nadaprabhus of Yelahanka (1420–1728, capital Yelahanka).
+- **Sourced leads:** open rings with a citation, for places the book names but that
+  we have no record for: Kolar (first Ganga capital), Elichpur and Latur (the
+  Rashtrakuta first capital and original home) and Halasi (a Kadamba provincial
+  capital). A lead carries `source: { sourceId, locator }` and its popup shows it.
+- **Method support:** the book says its maps mark each dynasty's greatest extent only
+  approximately, are drawn from published literature rather than surveys, and show
+  that different parts of Karnataka were ruled by different dynasties at the same
+  time. The assumptions panel quotes this in meaning, because it is the same stance
+  as our soft, overlapping washes.
+
+Not yet used: the book's maps 25–34 on the later administrative divisions (1799,
+1831–1881, 1857, 1912, 1956, 1986–1997), its "Antiquity of Karnataka" article (earliest
+attestations of the name Karnataka, for example the Kadamba Santivarman inscription
+of about 450 and the Samangad plates of 753), and the Mughals in the Deccan
+(1657–1757). They are good next candidates for `administrativeDivisions` and for
+dated inscription records. The profile text is English only; Kannada labels around it
+need native proofreading.
+
 ## Adding or changing a dynasty
 
 1. Add the polity (`externalPolities` list and `externalPolityContext` in

@@ -27,6 +27,7 @@ export const DYNASTY_PHASES = [
   { id: 'vijayanagara', polityId: 'polity-vijayanagara', from: 1336, to: 1646, color: '#c2478f', name: { en: 'Karnataka (Vijayanagara) Empire', kn: 'ಕರ್ನಾಟಕ(ವಿಜಯನಗರ) ಸಾಮ್ರಾಜ್ಯ' }, capital: { en: 'Hampi', kn: 'ಹಂಪಿ' } },
   { id: 'bahmani', polityId: 'external-polity-bahmani', from: 1347, to: 1527, color: '#6f7f45', name: { en: 'Bahmani Sultanate', kn: 'ಬಹಮನಿ ಸುಲ್ತಾನರು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' } },
   { id: 'wodeyar-mysore', polityId: 'external-polity-wodeyar-mysore', from: 1399, to: 1761, color: '#4a6fb0', name: { en: 'Wodeyars of Mysore (before 1761)', kn: 'ಮೈಸೂರು ಒಡೆಯರು (೧೭೬೧ಕ್ಕೆ ಮೊದಲು)' }, capital: { en: 'Mysuru', kn: 'ಮೈಸೂರು' } },
+  { id: 'nadaprabhu', polityId: 'external-polity-nadaprabhu', from: 1420, to: 1728, color: '#a85d7a', name: { en: 'Nadaprabhus of Yelahanka', kn: 'ಯಲಹಂಕದ ನಾಡಪ್ರಭುಗಳು' }, capital: { en: 'Yelahanka', kn: 'ಯಲಹಂಕ' } },
   { id: 'barid-shahi', polityId: 'external-polity-barid-shahi', from: 1489, to: 1619, color: '#5f7f9a', name: { en: 'Barid Shahis of Bidar', kn: 'ಬೀದರ್‌ನ ಬರೀದ್‌ಶಾಹಿಗಳು' }, capital: { en: 'Bidar', kn: 'ಬೀದರ್' } },
   { id: 'keladi-nayaka', polityId: 'external-polity-keladi-nayaka', from: 1499, to: 1763, color: '#9a6a3a', name: { en: 'Keladi–Ikkeri Nayakas', kn: 'ಕೆಳದಿ–ಇಕ್ಕೇರಿ ನಾಯಕರು' }, capital: { en: 'Keladi', kn: 'ಕೆಳದಿ' } },
   { id: 'sode-nayaka', polityId: 'external-polity-sode-nayaka', from: 1500, to: 1764, color: '#8f6f4a', name: { en: 'Sode (Sonda) Nayakas', kn: 'ಸೋದೆ (ಸೊಂದಾ) ನಾಯಕರು' }, capital: { en: 'Sonda', kn: 'ಸೋದೆ' } },

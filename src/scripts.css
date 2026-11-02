@@ -195,3 +195,16 @@ main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; m
 
 @media (min-width: 801px) { .who-results { max-height: 780px; overflow: auto; padding-right: 4px; } }
 .who-results:focus-visible { outline: 3px solid #1d3fdd; }
+
+.dynasty-profile { margin: 14px 0; padding: 12px 14px; border: 1px solid var(--sanchaya-border); border-left: 5px solid var(--sanchaya-blue); border-radius: 12px; background: #fff; }
+.dynasty-profile h3 { margin: 0 0 2px; }
+.dynasty-profile-source { margin: 0 0 8px; font-size: 12px; color: var(--sanchaya-muted); }
+.dynasty-profile dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 18px; margin: 0; }
+.dynasty-profile dt { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--sanchaya-muted); }
+.dynasty-profile dd { margin: 1px 0 0; font-size: 13px; line-height: 1.45; }
+.dynasty-profile small { color: var(--sanchaya-muted); }
+.dynasty-profile .ok { color: #1d6b43; }
+.dynasty-profile .check { color: #9b5a00; }
+.dynasty-profile-note { margin: 10px 0 0; font-size: 12px; color: var(--sanchaya-muted); }
+.dynasty-assumptions-source { font-weight: 400 !important; font-size: 12px !important; color: var(--sanchaya-muted); }
+@media print { .dynasty-profile { break-inside: avoid; } }

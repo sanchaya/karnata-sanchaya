@@ -10,8 +10,13 @@ let index
 
 // Places where historians place a dynasty but the atlas holds no record yet. They are drawn as open rings, never as shading,
 // so the map shows the gap and invites a contribution instead of claiming territory. Each needs a source before it becomes evidence.
-const L = (lng, lat, en, kn) => ({ lng, lat, kind: 'lead', tier: 'lead', from: null, to: null, label: { en, kn } })
+const CENSUS = 'src-census-2004-historical-atlas-karnataka'
+const L = (lng, lat, en, kn, source) => ({ lng, lat, kind: 'lead', tier: 'lead', from: null, to: null, label: { en, kn }, ...(source ? { source } : {}) })
+const fromAtlas = locator => ({ sourceId: CENSUS, locator })
 export const LEADS = {
+  'polity-western-ganga': [L(78.13, 13.14, 'Kolar (first Ganga capital)', 'ಕೋಲಾರ (ಗಂಗರ ಮೊದಲ ರಾಜಧಾನಿ)', fromAtlas('Map 7 and table: first capital Kolar'))],
+  'polity-rashtrakuta': [L(77.51, 21.26, 'Elichpur (Achalapura), first Rashtrakuta capital', 'ಎಲಿಚಪುರ (ಅಚಲಪುರ), ರಾಷ್ಟ್ರಕೂಟರ ಮೊದಲ ರಾಜಧಾನಿ', fromAtlas('Map 9 and table: first capital Elichpur')), L(76.56, 18.41, 'Latur (Lattalur), original home', 'ಲಾತೂರು (ಲಟ್ಟಲೂರು), ಮೂಲ ನೆಲೆ', fromAtlas('Map 9 and table: original home Lattalur'))],
+  'polity-kadamba': [L(74.59, 15.54, 'Halasi (provincial capital)', 'ಹಲಸಿ (ಪ್ರಾಂತೀಯ ರಾಜಧಾನಿ)', fromAtlas('Map 6 write-up: Halasi and Ucchangi were provincial capitals'))],
   'external-polity-bana': [L(77.68, 13.43, 'Nandi (Nandagiri)', 'ನಂದಿ (ನಂದಗಿರಿ)'), L(79.56, 13.64, 'Gudimallam', 'ಗುಡಿಮಲ್ಲಂ')],
   'external-polity-chengalva-kongalva': [L(76.29, 12.31, 'Hunsur', 'ಹುಣಸೂರು')],
   'external-polity-chutu': [L(75.28, 14.42, 'Malavalli (Chutu-Satakarni inscription)', 'ಮಲವಳ್ಳಿ (ಚುಟು-ಶಾತಕರ್ಣಿ ಶಾಸನ)')],

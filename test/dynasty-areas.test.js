@@ -4,6 +4,8 @@ import { readFile } from 'node:fs/promises'
 import { existsSync, readFileSync } from 'node:fs'
 import { DYNASTY_PHASES, dynastyAreasForYear } from '../src/data/dynasty-areas.js'
 import { evidenceFor } from '../src/data/dynasty-evidence.js'
+import { CENSUS_ATLAS_PROFILES, CENSUS_ATLAS_SOURCE_ID } from '../src/data/census-historical-atlas.js'
+import { atlasData } from '../src/data/atlas.js'
 
 
 test('dynasty phases carry no district or state units and stay unverified', () => {
@@ -75,4 +77,16 @@ test('the dynasty areas control appears only where the page holds dynasty and da
   for (const file of ['DynastyMapPage', 'ScriptEvolutionExplorer', 'CoinExplorer', 'LiteratureEpigraphyExplorer']) assert.ok(await uses(file), `${file} should offer the control`)
   for (const file of ['FreedomMovementExplorer', 'GlobalRelationsExplorer', 'PeopleExplorer', 'DistrictHistoryExplorer', 'LanguageTimeline', 'IndiaResearchExplorer']) assert.equal(await uses(file), false, `${file} should not offer the control`)
   for (const file of ['CoinExplorer', 'LiteratureEpigraphyExplorer']) assert.match(await readFile(new URL(`../src/${file}.jsx`, import.meta.url), 'utf8'), /defaultOn=\{false\}/, `${file} starts with the layer off`)
+})
+
+test('Census atlas profiles point at real phases and the cited source is in the dataset', () => {
+  const ids = new Set(DYNASTY_PHASES.map(phase => phase.id))
+  for (const profile of CENSUS_ATLAS_PROFILES) {
+    assert.ok(ids.has(profile.phaseId), `${profile.phaseId} is not a dynasty phase`)
+    assert.ok(profile.map > 0 && profile.areaKm2 > 0 && profile.capitals.length, `${profile.phaseId} profile is incomplete`)
+    assert.ok(profile.period.from == null || profile.period.from < profile.period.to, `${profile.phaseId} period is not ordered`)
+  }
+  assert.ok(atlasData.sources.some(source => source.id === CENSUS_ATLAS_SOURCE_ID))
+  const lead = evidenceFor(DYNASTY_PHASES.find(phase => phase.id === 'rashtrakuta')).find(point => point.kind === 'lead' && point.source)
+  assert.equal(lead?.source.sourceId, CENSUS_ATLAS_SOURCE_ID)
 })

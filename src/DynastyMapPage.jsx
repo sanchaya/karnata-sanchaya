@@ -8,6 +8,7 @@ import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, washOf } from './Dy
 import DynastyEras from './DynastyEras'
 import DynastyAssumptions from './DynastyAssumptions'
 import DynastyHelpWanted from './DynastyHelpWanted'
+import DynastyProfile from './DynastyProfile'
 import SearchBox from './SearchBox'
 import './script-fonts.css'
 
@@ -171,6 +172,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
         </MapContainer>
         <p>{t.pick} {t.note}</p>
       </section>
+      <DynastyProfile phase={chosen} locale={locale} />
       <DynastyHelpWanted locale={locale} />
       <DynastyAssumptions locale={locale} />
       <details className="dyn-browse"><summary>{u.browse} ({DYNASTY_PHASES.length})</summary>

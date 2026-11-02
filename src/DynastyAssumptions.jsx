@@ -1,3 +1,5 @@
+import { CENSUS_ATLAS_METHOD, CENSUS_ATLAS_MAP_URL } from './data/census-historical-atlas'
+
 const copy = {
   kn: {
     title: 'ಈ ನಕ್ಷೆಗಳು ಯಾವ ಊಹೆಗಳ ಮೇಲೆ ನಿಂತಿವೆ',
@@ -47,6 +49,7 @@ export default function DynastyAssumptions({ locale }) {
       <div><h4>{t.covers}</h4><ul>{t.coversList.map(line => <li key={line}>{line}</li>)}</ul></div>
       <div><h4>{t.misses}</h4><ul>{t.missesList.map(line => <li key={line}>{line}</li>)}</ul></div>
     </div>
+    <p className="dynasty-assumptions-source">{CENSUS_ATLAS_METHOD[locale] || CENSUS_ATLAS_METHOD.kn} <a href={CENSUS_ATLAS_MAP_URL} target="_blank" rel="noreferrer">↗</a></p>
     <p>{t.cta} <a href="#contribute">{t.link}</a></p>
   </section>
 }
