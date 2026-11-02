@@ -54,6 +54,8 @@ export const externalCapitalPlaces=[
   place('madikeri','Madikeri','ಮಡಿಕೇರಿ',75.74,12.42),
   place('savanur','Savanur','ಸವಣೂರು',75.33,14.97),
   place('shorapur','Shorapur (Surapura)','ಶೋರಾಪುರ (ಸುರಪುರ)',76.75,16.52),
+  place('guttal','Guttavolal (Guttal)','ಗುತ್ತವೊಳಲು (ಗುತ್ತಲ)',75.63,14.84),
+  place('periyapatna','Periyapatna','ಪಿರಿಯಾಪಟ್ಟಣ',76.10,12.34),
   place('ullal','Ullal','ಉಳ್ಳಾಲ',74.85,12.80,'historical-port-capital'),
 ]
 
@@ -76,6 +78,10 @@ export const externalCapitalIds={
   'external-polity-haleri':'place-madikeri',
   'external-polity-savanur-nawab':'place-savanur',
   'external-polity-surapura-nayaka':'place-shorapur',
+  'external-polity-sendraka':'place-banavasi',
+  'external-polity-bana':'place-kolar',
+  'external-polity-gutta':'place-guttal',
+  'external-polity-chengalva-kongalva':'place-periyapatna',
   'external-polity-pandya':'place-madurai',
   'external-polity-chera':'place-mahodayapuram',
   'external-polity-eastern-ganga':'place-cuttack',

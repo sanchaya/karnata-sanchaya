@@ -12,6 +12,8 @@ let index
 // so the map shows the gap and invites a contribution instead of claiming territory. Each needs a source before it becomes evidence.
 const L = (lng, lat, en, kn) => ({ lng, lat, kind: 'lead', tier: 'lead', from: null, to: null, label: { en, kn } })
 export const LEADS = {
+  'external-polity-bana': [L(77.68, 13.43, 'Nandi (Nandagiri)', 'ನಂದಿ (ನಂದಗಿರಿ)'), L(79.56, 13.64, 'Gudimallam', 'ಗುಡಿಮಲ್ಲಂ')],
+  'external-polity-chengalva-kongalva': [L(76.29, 12.31, 'Hunsur', 'ಹುಣಸೂರು')],
   'external-polity-chutu': [L(75.28, 14.42, 'Malavalli (Chutu-Satakarni inscription)', 'ಮಲವಳ್ಳಿ (ಚುಟು-ಶಾತಕರ್ಣಿ ಶಾಸನ)')],
   'external-polity-nolamba': [L(76.4, 14.23, 'Chitradurga', 'ಚಿತ್ರದುರ್ಗ'), L(78.13, 13.14, 'Kolar', 'ಕೋಲಾರ'), L(77.26, 13.94, 'Madakasira', 'ಮಡಕಶಿರಾ')],
   'external-polity-santara': [L(75.36, 13.24, 'Kalasa', 'ಕಳಸ'), L(75.25, 13.42, 'Sringeri', 'ಶೃಂಗೇರಿ'), L(75.24, 13.69, 'Tirthahalli', 'ತೀರ್ಥಹಳ್ಳಿ')],

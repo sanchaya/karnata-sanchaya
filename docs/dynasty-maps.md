@@ -93,10 +93,19 @@ promote it to evidence by adding a cited inscription, monument or event.
 
 The Help-wanted panel and the "Help wanted" badge on the year rail list
 dynasties with fewer than four records, with a link to `#contribute`. The panel
-also lists dynasties **not yet on the map** (Sendrakas, Banas, Guttas,
-Chengalvas and Kongalvas, the Qutb Shahis and the Nizam's northern Karnataka).
-Those are names only: no dates or places are claimed until someone brings a
-source. A dynasty needs at least a capital before it can be added as a phase.
+also lists dynasties **not yet on the map** (currently the Qutb Shahis and the
+Nizam's northern Karnataka). Those are names only: no dates or places are claimed
+until someone brings a source. A dynasty needs at least a capital before it can
+be added as a phase.
+
+The Sendrakas of Nagarkhanda, the Banas of Kolar, the Guttas of Guttavolal and
+the Chengalvas and Kongalvas are on the map with **rough seats and spans**
+(their capital names say "approximate"): published sources confirm that they
+existed and roughly where (the Banas at Kolar and Gudimallam; the Sendrakas in
+the Nagarkhanda/Banavasi province; the Chengalvas and Kongalvas as Malnad chiefs
+under the Hoysalas), but there is no dedicated reference page for the Guttas, and
+no dates were checked against a printed source. Treat all four as prompts for
+contributors, not findings.
 
 ## What the maps assume (shown to users)
 

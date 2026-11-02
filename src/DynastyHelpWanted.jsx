@@ -4,10 +4,6 @@ import { evidenceFor } from './data/dynasty-evidence'
 
 // Dynasties the atlas has not added yet. Names only: no dates or places are claimed until a contributor brings a source.
 const WANTED = [
-  { en: 'Sendrakas', kn: 'ಸೇಂದ್ರಕರು', why: { en: 'Early rulers in the Banavasi and Chikkamagaluru country, known from copper plates.', kn: 'ಬನವಾಸಿ-ಚಿಕ್ಕಮಗಳೂರು ಪ್ರದೇಶದ ಆರಂಭಿಕ ಅರಸರು; ತಾಮ್ರಶಾಸನಗಳಿಂದ ತಿಳಿದುಬರುತ್ತಾರೆ.' } },
-  { en: 'Banas of Kolar', kn: 'ಕೋಲಾರದ ಬಾಣರು', why: { en: 'Chiefs of the Kolar and Nandi region under the Pallavas and Gangas.', kn: 'ಪಲ್ಲವ-ಗಂಗರ ಅಧೀನದಲ್ಲಿ ಕೋಲಾರ-ನಂದಿ ಪ್ರದೇಶದ ಅರಸರು.' } },
-  { en: 'Guttas of Guttavolal', kn: 'ಗುತ್ತವೊಳಲಿನ ಗುತ್ತರು', why: { en: 'A Kannada chiefly line around Guttal in Haveri district.', kn: 'ಹಾವೇರಿ ಜಿಲ್ಲೆಯ ಗುತ್ತಲ ಸುತ್ತಲಿನ ಕನ್ನಡ ಅರಸು ಮನೆತನ.' } },
-  { en: 'Chengalvas and Kongalvas', kn: 'ಚಂಗಾಳ್ವರು ಮತ್ತು ಕೊಂಗಾಳ್ವರು', why: { en: 'Hoysala-era chiefs of the Hunsur and Kodagu-Hassan hills.', kn: 'ಹೊಯ್ಸಳರ ಕಾಲದ ಹುಣಸೂರು ಮತ್ತು ಕೊಡಗು-ಹಾಸನ ಬೆಟ್ಟಗಳ ಅರಸರು.' } },
   { en: 'Qutb Shahis and the Nizam’s northern Karnataka', kn: 'ಕುತುಬ್‌ಶಾಹಿಗಳು ಮತ್ತು ನಿಜಾಮರ ಉತ್ತರ ಕರ್ನಾಟಕ', why: { en: 'Eastern edges of the Deccan sultanates; the Raichur doab and Kalyana Karnataka.', kn: 'ದಖ್ಖನ್ ಸುಲ್ತಾನರ ಪೂರ್ವ ಅಂಚು; ರಾಯಚೂರು ದೋಆಬ್ ಮತ್ತು ಕಲ್ಯಾಣ ಕರ್ನಾಟಕ.' } },
 ]
 const copy = {
