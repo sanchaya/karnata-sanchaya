@@ -4,6 +4,7 @@ import { atlasData } from './data/atlas'
 import './script-fonts.css'
 import { ERA_FONTS, PRINT_FONTS } from './data/era-fonts'
 import DynastyAreasLayer, { loadDistricts } from './DynastyAreasLayer'
+import DynastyAreasControl from './DynastyAreasControl'
 import { DYNASTY_PHASES } from './data/dynasty-areas'
 
 const PRINT_PHASES=new Set(['script-modern-kannada-print-transition','script-mysore-wodeyar-print-standard-kannada'])
@@ -59,6 +60,7 @@ function ScriptMap({record,locale,t}){
     <div className="script-map-frame"><MapContainer bounds={KARNATAKA_BOUNDS} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
       <FitScope scope={scope} shapes={shapes}/>
+      {!hasDynasties&&<DynastyAreasControl locale={locale} defaultYear={Math.max(300,record.date.era==='BCE'?300:Math.round((record.date.from+record.date.to)/2))}/>}
       {hasDynasties&&<DynastyAreasLayer locale={locale} districtGeojson={districts} phases={phases} fontFor={dynastyFont}/>}
       {showOlder&&shapes.extents.map((extent,index)=>{const polityId=extent.polityIds[0];const firstOfPolity=shapes.extents.findIndex(item=>item.polityIds[0]===polityId)===index;const color=entityById.get(polityId)?.color||'#9c3d32';return <Polygon key={extent.id} positions={extent.geometry.coordinates.map(([lng,lat])=>[lat,lng])} pathOptions={{color,fillColor:color,fillOpacity:.14,weight:2,dashArray:extent.classification==='core-administered'?null:'5 4'}}>{firstOfPolity&&!hasDynasties&&<Tooltip permanent direction="center" className="script-map-label"><span style={fontStyle(polityId)}>{polityLabel(polityId)}</span></Tooltip>}</Polygon>})}
       {(showOlder||!hasDynasties)&&shapes.capitals.map(item=><CircleMarker key={item.id} center={item.point} radius={7} pathOptions={{color:item.polity.color||'#9c3d32',fillColor:'#fff',fillOpacity:.9,weight:3}}><Tooltip permanent direction="right" className="script-map-label"><span style={fontStyle(item.id)}>{polityLabel(item.id)}</span></Tooltip></CircleMarker>)}
