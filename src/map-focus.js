@@ -23,3 +23,11 @@ export function mapZoomForPositions(points) {
   const valid = (points || []).filter(isFinitePoint)
   return valid.length ? Math.min(...valid.map(mapZoomForPoint)) : 3.75
 }
+
+// Fitting a view to every point lets one overseas or mis-geocoded coordinate zoom the map out to the whole world.
+// When any point lies in India, fit to those only; the others keep their markers but do not drive the zoom.
+export function regionalPoints(points) {
+  const valid = (points || []).filter(isFinitePoint)
+  const inIndia = valid.filter(isIndiaPoint)
+  return inIndia.length ? inIndia : valid
+}

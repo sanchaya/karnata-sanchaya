@@ -64,3 +64,10 @@ dynasty and a date; `test/dynasty-areas.test.js` lists where. See
 - `src/ErrorBoundary.jsx` wraps the app in `main.jsx`: if a screen ever throws while rendering, the visitor
   gets a bilingual message and a Reload button instead of a blank page.
 
+
+## Map fitting never zooms out to the world
+
+Selecting an event, territory, comparison or freedom-movement record fits the map to its coordinates. One overseas or
+mis-geocoded point used to pull the view out to the whole world. `regionalPoints` in `src/map-focus.js` keeps only the
+points inside India when there are any, and the atlas viewport (`MapViewport` in `App.jsx`) and the freedom explorer
+fit to those. The other points keep their markers; if every point is outside India the view still fits all of them.

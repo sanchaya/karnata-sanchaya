@@ -10,7 +10,7 @@ import { buildSourceTiers, recordAuthorityCited } from './data/source-provenance
 import GuidedTour from './GuidedTour'
 import Berunda from './Berunda'
 import DynastyAreasLayer, { DynastyAreasLegend } from './DynastyAreasLayer'
-import { isIndiaPoint, isKarnatakaPoint, mapViewForScope, mapZoomForPoint, mapZoomForPositions } from './map-focus'
+import { isIndiaPoint, isKarnatakaPoint, mapViewForScope, mapZoomForPoint, mapZoomForPositions, regionalPoints } from './map-focus'
 import { createShareUrlWriter, readAtlasUrlState } from './share-state'
 import { inscriptionsForMap } from './map-record-visibility'
 import { eventsForPrimaryAtlas, inscriptionsForPrimaryAtlas } from './timeline-record-visibility'
@@ -624,18 +624,18 @@ function MapViewport({scope,selectedEvent,selectedTerritory,selectedCulture,sele
       const currentZoom=map.getZoom()
       if(!visible||currentZoom<targetZoom||currentZoom>targetZoom+1.25)map.setView(position,targetZoom,{animate:true})
     }
-    const eventPositions=selectedEvent?.connectionPositions?.length?selectedEvent.connectionPositions:(selectedEvent?.coords?[selectedEvent.coords]:[])
+    const eventPositions=regionalPoints(selectedEvent?.connectionPositions?.length?selectedEvent.connectionPositions:(selectedEvent?.coords?[selectedEvent.coords]:[]))
     const hasSelection=Boolean(selectedEvent||selectedTerritory||selectedCulture||selectedWorkPosition||selectedPersonPosition||selectedInscription||selectedSearchPlace||comparisonPositions?.length)
     if(eventPositions.length>1) map.fitBounds(eventPositions,{padding:[45,45],maxZoom:mapZoomForPositions(eventPositions)})
     else if(eventPositions.length===1) focusPosition(eventPositions[0])
-    else if(selectedTerritory?.positions.length) map.fitBounds(selectedTerritory.positions,{padding:[45,45],maxZoom:mapZoomForPositions(selectedTerritory.positions)})
+    else if(selectedTerritory?.positions.length) {const territory=regionalPoints(selectedTerritory.positions);map.fitBounds(territory,{padding:[45,45],maxZoom:mapZoomForPositions(territory)})}
     else if(selectedCulture?.coords) focusPosition(selectedCulture.coords)
     else if(selectedWorkPosition) focusPosition(selectedWorkPosition)
     else if(selectedPersonPosition) focusPosition(selectedPersonPosition)
     else if(selectedInscription?.coords) focusPosition(selectedInscription.coords)
     else if(selectedSearchPlace?.coords&&selectedSearchPlace.overview) map.setView([14.7,76.2],6.35,{animate:true})
     else if(selectedSearchPlace?.coords) focusPosition(selectedSearchPlace.coords)
-    else if(comparisonPositions?.length) map.fitBounds(comparisonPositions,{padding:[45,45],maxZoom:6})
+    else if(comparisonPositions?.length) map.fitBounds(regionalPoints(comparisonPositions),{padding:[45,45],maxZoom:6})
     // A record with incomplete coordinates must never reset a user's map to a
     // world view. Keep the current view until a researcher supplies a location.
     else if(!hasSelection){const target=mapViewForScope(scope);map.setView(target.center,target.zoom,{animate:true})}

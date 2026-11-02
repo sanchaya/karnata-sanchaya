@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { regionalPoints } from './map-focus'
 import { CircleMarker, GeoJSON, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import { atlasData } from './data/atlas'
 import { canonicalDistrictAssociation } from './data/district-normalization'
@@ -28,9 +29,10 @@ function FreedomMapViewport({points,selectedPoint}){
   const map=useMap()
   useEffect(()=>{
     if(validPoint(selectedPoint)){map.flyTo(selectedPoint,9,{duration:.5});return}
-    if(!points.length)return
-    if(points.length===1){map.setView(points[0],8);return}
-    map.fitBounds(points,{padding:[28,28],maxZoom:7})
+    const fit=regionalPoints(points)
+    if(!fit.length)return
+    if(fit.length===1){map.setView(fit[0],8);return}
+    map.fitBounds(fit,{padding:[28,28],maxZoom:7})
   },[map,points,selectedPoint])
   return null
 }
