@@ -12,6 +12,18 @@ let index
 // so the map shows the gap and invites a contribution instead of claiming territory. Each needs a source before it becomes evidence.
 const L = (lng, lat, en, kn) => ({ lng, lat, kind: 'lead', tier: 'lead', from: null, to: null, label: { en, kn } })
 export const LEADS = {
+  'external-polity-chutu': [L(75.28, 14.42, 'Malavalli (Chutu-Satakarni inscription)', 'ಮಲವಳ್ಳಿ (ಚುಟು-ಶಾತಕರ್ಣಿ ಶಾಸನ)')],
+  'external-polity-nolamba': [L(76.4, 14.23, 'Chitradurga', 'ಚಿತ್ರದುರ್ಗ'), L(78.13, 13.14, 'Kolar', 'ಕೋಲಾರ'), L(77.26, 13.94, 'Madakasira', 'ಮಡಕಶಿರಾ')],
+  'external-polity-santara': [L(75.36, 13.24, 'Kalasa', 'ಕಳಸ'), L(75.25, 13.42, 'Sringeri', 'ಶೃಂಗೇರಿ'), L(75.24, 13.69, 'Tirthahalli', 'ತೀರ್ಥಹಳ್ಳಿ')],
+  'external-polity-shilahara': [L(74.64, 16.83, 'Miraj', 'ಮಿರಜ್'), L(74.18, 17.29, 'Karad', 'ಕರಾಡ'), L(74.5, 15.85, 'Belagavi', 'ಬೆಳಗಾವಿ')],
+  'external-polity-hangal-kadamba': [L(75.01, 14.54, 'Banavasi', 'ಬನವಾಸಿ'), L(75.4, 14.79, 'Haveri', 'ಹಾವೇರಿ')],
+  'external-polity-sinda': [L(75.95, 15.49, 'Kukanur', 'ಕುಕನೂರು'), L(75.7, 16.18, 'Bagalkote', 'ಬಾಗಲಕೋಟೆ'), L(76.15, 15.35, 'Koppal', 'ಕೊಪ್ಪಳ')],
+  'external-polity-barid-shahi': [L(77.57, 17.92, 'Ashtur tombs, Bidar', 'ಅಷ್ಟೂರು ಸಮಾಧಿಗಳು, ಬೀದರ್'), L(77.2, 18.0, 'Bhalki', 'ಭಾಲ್ಕಿ'), L(76.95, 17.87, 'Basavakalyana', 'ಬಸವಕಲ್ಯಾಣ')],
+  'external-polity-wodeyar-mysore': [L(76.68, 12.42, 'Srirangapatna', 'ಶ್ರೀರಂಗಪಟ್ಟಣ'), L(76.68, 12.12, 'Nanjangud', 'ನಂಜನಗೂಡು')],
+  'external-polity-sode-nayaka': [L(74.85, 14.62, 'Sirsi', 'ಶಿರಸಿ'), L(74.71, 14.96, 'Yellapur', 'ಯಲ್ಲಾಪುರ')],
+  'external-polity-haleri': [L(75.8, 12.2, 'Virajpet', 'ವಿರಾಜಪೇಟೆ'), L(75.8, 12.45, 'Haleri (Haleri palace area)', 'ಹಾಲೇರಿ')],
+  'external-polity-savanur-nawab': [L(75.23, 14.93, 'Bankapura', 'ಬಂಕಾಪುರ'), L(75.14, 15.36, 'Hubballi', 'ಹುಬ್ಬಳ್ಳಿ')],
+  'external-polity-surapura-nayaka': [L(76.52, 16.6, 'Hunsagi', 'ಹುಣಸಗಿ'), L(77.14, 16.77, 'Yadgir', 'ಯಾದಗಿರಿ')],
   'external-polity-chola': [L(76.94, 12.18, 'Talakadu (Rajarajapura)', 'ತಲಕಾಡು (ರಾಜರಾಜಪುರ)'), L(78.13, 13.14, 'Kolar', 'ಕೋಲಾರ'), L(78.39, 13.17, 'Mulbagal (Mulabagilu)', 'ಮುಳಬಾಗಿಲು'), L(77.68, 13.43, 'Nandi (Nandidurga)', 'ನಂದಿ (ನಂದಿದುರ್ಗ)')],
   'external-polity-maratha-confederacy': [L(74.5, 15.85, 'Belagavi', 'ಬೆಳಗಾವಿ'), L(75.0, 15.46, 'Dharwad', 'ಧಾರವಾಡ'), L(77.59, 12.97, 'Bengaluru (Shahaji’s jagir)', 'ಬೆಂಗಳೂರು (ಶಹಾಜಿಯ ಜಹಗೀರು)'), L(76.15, 15.35, 'Koppal', 'ಕೊಪ್ಪಳ'), L(75.13, 15.08, 'Gajendragad', 'ಗಜೇಂದ್ರಗಡ')],
 }

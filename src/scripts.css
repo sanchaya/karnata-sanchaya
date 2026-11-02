@@ -150,3 +150,15 @@ main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; m
 .dynasty-assumptions p { margin: 8px 0 0; font-size: 13px; font-weight: 700; }
 @media (max-width: 800px) { .dynasty-assumptions > div { grid-template-columns: 1fr; } .dyn-rail button { min-width: 140px; } }
 @media print { .dyn-tabs, .dyn-timeline, .dyn-rail, .dyn-browse { display: none !important; } .dyn-panel[hidden] { display: block !important; } }
+
+.dyn-rail em { justify-self: start; margin-top: 2px; padding: 1px 7px; border-radius: 99px; background: #fff4d6; border: 1px solid #f0c96a; color: #7a5200; font-size: 10px; font-style: normal; font-weight: 700; }
+.dynasty-help { margin: 14px 0; padding: 12px 14px; border: 1px solid var(--sanchaya-border); border-radius: 12px; background: #fff; }
+.dynasty-help h3 { margin: 0 0 4px; }
+.dynasty-help h4 { margin: 14px 0 2px; }
+.dynasty-help p { margin: 0 0 8px; font-size: 13px; color: var(--sanchaya-muted); }
+.dynasty-help ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.dynasty-help li { display: grid; gap: 2px; padding: 8px 10px; border: 1px solid var(--sanchaya-border); border-left: 5px solid var(--c, #bbb); border-radius: 8px; background: #fffdf8; }
+.dynasty-help small { font-size: 12px; color: var(--sanchaya-muted); }
+.dynasty-help a { font-size: 13px; font-weight: 700; }
+.dynasty-wanted li { border-left-style: dashed; }
+@media print { .dynasty-help { display: none; } }

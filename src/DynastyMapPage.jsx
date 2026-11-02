@@ -7,6 +7,7 @@ import { loadDistricts, loadStates } from './DynastyAreasLayer'
 import DynastyGallery, { VIEW, eraFamily, nameLines, pathOf, washOf } from './DynastyGallery'
 import DynastyEras from './DynastyEras'
 import DynastyAssumptions from './DynastyAssumptions'
+import DynastyHelpWanted from './DynastyHelpWanted'
 import './script-fonts.css'
 
 const URL_TEXT = 'karnata.sanchaya.net'
@@ -99,8 +100,8 @@ const MIN_YEAR = 100, MAX_YEAR = 1950
 // Years where a dynasty rises or the map changes sharply, in the same spirit as the home timeline's milestone buttons.
 const MILESTONES = [345, 543, 753, 973, 1156, 1336, 1565, 1761, 1800, 1947]
 const ui = {
-  kn: { tabs: { map: 'ರಾಜವಂಶ ಭೂಪಟ', eras: 'ಯುಗಗಳ ನಕ್ಷೆಗಳು', download: 'ಡೌನ್‌ಲೋಡ್ ಮತ್ತು ಹಂಚಿಕೆ' }, year: 'ವರ್ಷ', ce: 'ಕ್ರಿ.ಶ.', all: 'ಈ ವರ್ಷದ ಎಲ್ಲ ರಾಜವಂಶಗಳು', active: 'ಈ ವರ್ಷ ಸಕ್ರಿಯ ರಾಜವಂಶಗಳು', none: 'ಈ ವರ್ಷಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಿದ ರಾಜವಂಶ ಇಲ್ಲ', browse: 'ಎಲ್ಲ ರಾಜವಂಶಗಳ ಪಟ್ಟಿ', evidence: 'ದಾಖಲೆಗಳು' },
-  en: { tabs: { map: 'Dynasty map', eras: 'Maps by era', download: 'Download & share' }, year: 'Year', ce: 'CE', all: 'All dynasties this year', active: 'Dynasties active this year', none: 'No mapped dynasty for this year', browse: 'Browse all dynasties', evidence: 'records' },
+  kn: { tabs: { map: 'ರಾಜವಂಶ ಭೂಪಟ', eras: 'ಯುಗಗಳ ನಕ್ಷೆಗಳು', download: 'ಡೌನ್‌ಲೋಡ್ ಮತ್ತು ಹಂಚಿಕೆ' }, year: 'ವರ್ಷ', ce: 'ಕ್ರಿ.ಶ.', all: 'ಈ ವರ್ಷದ ಎಲ್ಲ ರಾಜವಂಶಗಳು', active: 'ಈ ವರ್ಷ ಸಕ್ರಿಯ ರಾಜವಂಶಗಳು', none: 'ಈ ವರ್ಷಕ್ಕೆ ನಕ್ಷೆ ಮಾಡಿದ ರಾಜವಂಶ ಇಲ್ಲ', browse: 'ಎಲ್ಲ ರಾಜವಂಶಗಳ ಪಟ್ಟಿ', evidence: 'ದಾಖಲೆಗಳು', help: 'ಸಹಕಾರ ಬೇಕು' },
+  en: { tabs: { map: 'Dynasty map', eras: 'Maps by era', download: 'Download & share' }, year: 'Year', ce: 'CE', all: 'All dynasties this year', active: 'Dynasties active this year', none: 'No mapped dynasty for this year', browse: 'Browse all dynasties', evidence: 'records', help: 'Help wanted' },
 }
 
 // Zoom to the recorded evidence of the dynasties on show (padded by the wash), or leave the default view when there is none.
@@ -155,7 +156,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
       <div className="dyn-rail" role="group" aria-label={u.active}>
         <button type="button" aria-pressed={!chosen} className={!chosen ? 'active' : ''} onClick={() => setChosenId('all')}><strong>{u.all}</strong><small>{active.length}</small></button>
         {active.map(phase => <button key={phase.id} type="button" aria-pressed={chosen?.id === phase.id} className={chosen?.id === phase.id ? 'active' : ''} style={{ '--c': phase.color }} onClick={() => setChosenId(phase.id)}>
-          <strong>{phase.name[locale]}</strong><small>{phase.from}–{phase.to} · {evidenceFor(phase, year).length} {u.evidence}</small></button>)}
+          <strong>{phase.name[locale]}</strong><small>{phase.from}–{phase.to} · {evidenceFor(phase, year).filter(point => point.kind !== 'lead').length} {u.evidence}</small>{evidenceFor(phase, year).filter(point => point.kind !== 'lead').length < 4 && <em>{u.help}</em>}</button>)}
         {!active.length && <p>{u.none}</p>}
       </div>
       <section className="dynasty-live" aria-label={t.title}>
@@ -167,6 +168,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
         </MapContainer>
         <p>{t.pick} {t.note}</p>
       </section>
+      <DynastyHelpWanted locale={locale} />
       <DynastyAssumptions locale={locale} />
       <details className="dyn-browse"><summary>{u.browse} ({DYNASTY_PHASES.length})</summary>
         <DynastyGallery locale={locale} selectedId={chosen?.id} onSelect={pickFromList} /></details>
