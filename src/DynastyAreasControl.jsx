@@ -5,8 +5,8 @@ import L from 'leaflet'
 import DynastyAreasLayer, { DynastyAreasLegend, loadDistricts } from './DynastyAreasLayer'
 
 const copy = {
-  kn: { label: 'ಐತಿಹಾಸಿಕ ರಾಜವಂಶ ಪ್ರದೇಶಗಳು (ಅಂದಾಜು)', year: 'ವರ್ಷ', districts: 'ಇಂದಿನ ಜಿಲ್ಲೆಗಳ ರೇಖೆ (ಉಲ್ಲೇಖಕ್ಕೆ ಮಾತ್ರ)' },
-  en: { label: 'Historical dynasty areas (approximate)', year: 'Year', districts: 'Modern district outlines (reference only)' },
+  kn: { label: 'ಐತಿಹಾಸಿಕ ರಾಜವಂಶ ಪ್ರದೇಶಗಳು (ಅಂದಾಜು)', year: 'ವರ್ಷ', names: 'ರಾಜವಂಶದ ಹೆಸರುಗಳನ್ನು ತೋರಿಸಿ', districts: 'ಇಂದಿನ ಜಿಲ್ಲೆಗಳ ರೇಖೆ (ಉಲ್ಲೇಖಕ್ಕೆ ಮಾತ್ರ)' },
+  en: { label: 'Historical dynasty areas (approximate)', year: 'Year', names: 'Show dynasty names', districts: 'Modern district outlines (reference only)' },
 }
 
 // `phases` pins the layer to given dynasties (no year slider) instead of a chosen year.
@@ -17,6 +17,7 @@ export default function DynastyAreasControl({ locale = 'kn', defaultYear = 1100,
   const [on, setOn] = useState(defaultOn)
   const [year, setYear] = useState(defaultYear)
   const [outlines, setOutlines] = useState(false)
+  const [names, setNames] = useState(true)
   const [districts, setDistricts] = useState(null)
   useEffect(() => setYear(defaultYear), [defaultYear])
   useEffect(() => { if (on && outlines && !districts) loadDistricts().then(setDistricts) }, [on, outlines, districts])
@@ -30,12 +31,13 @@ export default function DynastyAreasControl({ locale = 'kn', defaultYear = 1100,
   return <>
     {createPortal(<>
       <label><input type="checkbox" checked={on} onChange={event => setOn(event.target.checked)} /> <span>{t.label}</span></label>
+      {on && labels && <label><input type="checkbox" checked={names} onChange={event => setNames(event.target.checked)} /> <span>{t.names}</span></label>}
       {on && <label><input type="checkbox" checked={outlines} onChange={event => setOutlines(event.target.checked)} /> <span>{t.districts}</span></label>}
       {on && !phases && <>
         <label className="dynasty-map-control-year"><span>{t.year}: <b>{year}</b></span><input type="range" min="300" max="1947" step="1" value={year} onChange={event => setYear(Number(event.target.value))} /></label>
         <DynastyAreasLegend year={year} locale={locale} />
       </>}
     </>, container)}
-    {on && <DynastyAreasLayer year={year} locale={locale} districtGeojson={outlines ? districts : null} phases={phases} evidenceYear={evidenceYear} labels={labels} fontFor={fontFor} />}
+    {on && <DynastyAreasLayer year={year} locale={locale} districtGeojson={outlines ? districts : null} phases={phases} evidenceYear={evidenceYear} labels={labels && names} fontFor={fontFor} />}
   </>
 }

@@ -41,12 +41,12 @@ export default function DynastyAreasLayer({ year, locale, districtGeojson, phase
       : <CircleMarker key={`dot-${phase.id}-${index}`} center={[point.lat, point.lng]} radius={point.kind === 'capital' ? 5 : 3} pathOptions={{ color: '#fff', weight: 1, fillColor: phase.color, fillOpacity: 1 }}>
         <Tooltip>{phase.name[locale]} · {KIND_LABEL[locale]?.[point.kind] || point.kind}{point.label ? ` · ${point.label[locale] || point.label.en || ''}` : ''}{point.from ? ` · ${point.from}` : ''}</Tooltip>
       </CircleMarker>))}
-    {labels && shown.map(({ phase, points }) => {
+    {labels && <Pane name="dynasty-labels" style={{ zIndex: 640 }}>{shown.map(({ phase, points }) => {
       const core = points.filter(point => point.tier !== 'influence' && point.tier !== 'lead')
       const center = centroid(core.length ? core : points)
-      return center && <Marker key={`label-${phase.id}`} position={center} interactive={false} keyboard={false}
+      return center && <Marker key={`label-${phase.id}`} pane="dynasty-labels" position={center} interactive={false} keyboard={false}
         icon={divIcon({ className: 'dynasty-area-label', html: `<span style="border-color:${phase.color}${fontFor?.(phase) ? `;font-family:${fontFor(phase).replaceAll('"', "'")}` : ''}">${locale === 'en' ? `${phase.name.kn}<small>${phase.name.en}</small>` : phase.name[locale]}${points.filter(point => point.kind !== 'lead').length < 3 ? `<small>${t.thin}</small>` : ''}</span>` })} />
-    })}
+    })}</Pane>}
   </>
 }
 
