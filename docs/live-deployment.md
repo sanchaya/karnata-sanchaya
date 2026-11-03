@@ -132,3 +132,13 @@ Password-reset delivery is implemented with one-time hashed tokens and Resend's 
 ### Account-flow smoke test
 
 After every authentication release: register a fresh address; verify its pending state; approve it from the Administration workspace; sign in and submit a draft; request a password reset; use the link once; confirm the old password and existing sessions no longer work; then suspend and reactivate the test account. Do not perform this test on a real contributor account.
+
+## Cloudflare Web Analytics and the Content Security Policy
+
+The server sends `script-src 'self'` (see `server/app.js`, pinned by `test/berunda.test.js`). If Cloudflare **Web Analytics
+automatic setup** is on for the zone, Cloudflare injects `static.cloudflareinsights.com/beacon.min.js` and a small inline
+script into the HTML at the edge. The browser blocks both and logs two "violates the following Content Security Policy
+directive" console errors. Nothing breaks, but no analytics are collected. To clear the errors, switch off automatic
+setup (Cloudflare dashboard, Analytics & Logs, Web Analytics, the site, Manage site, Disable). Allowing the beacon instead
+would mean adding `https://static.cloudflareinsights.com` to `script-src` and `https://cloudflareinsights.com` to
+`connect-src` and relaxing the test, and the inline part would still need a hash that changes with Cloudflare's snippet.
