@@ -1,6 +1,6 @@
 // Menus that scroll sideways give no sign that more items are hidden. This marks each such menu with
 // data-scroll-left / data-scroll-right while there is more to see on that side; scroll-hint.css fades those edges.
-const MENUS = '.activity-bar-items,.portal-nav,.community-section-nav,.contribution-section-nav,.evidence-section-nav,.research-tasks-hero nav,.district-history-view-menu'
+const MENUS = '.activity-bar-items,.portal-nav,.community-section-nav,.contribution-section-nav,.evidence-section-nav,.research-tasks-hero nav,.district-history-view-menu,.dyn-rail,.dyn-ticks'
 
 function mark(menu) {
   // Bring the open page's entry into view once per page, so it is never the item hidden behind the fade.

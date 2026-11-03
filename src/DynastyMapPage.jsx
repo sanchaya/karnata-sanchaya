@@ -152,24 +152,28 @@ export default function DynastyMapPage({ locale = 'kn' }) {
 
     <section className="dyn-panel" role="tabpanel" id="dyn-panel-map" aria-labelledby="dyn-tab-map" hidden={tab !== 'map'}>
       <SearchBox label={u.search} placeholder={u.searchHint} emptyText={u.noMatch} items={searchItems} onPick={item => pickFromList(DYNASTY_PHASES.find(phase => phase.id === item.id))} />
-      <div className="dyn-timeline">
-        <div className="dyn-timeline-head"><span>{u.year}</span><strong>{u.ce} {year}</strong></div>
-        <input type="range" aria-label={u.year} min={MIN_YEAR} max={MAX_YEAR} value={year} onChange={event => setYear(Number(event.target.value))} />
-        <div className="dyn-ticks">{MILESTONES.map(value => <button key={value} type="button" className={Math.abs(year - value) < 20 ? 'active' : ''} onClick={() => setYear(value)}>{value}</button>)}</div>
-      </div>
-      <div className="dyn-rail" role="group" aria-label={u.active}>
-        <button type="button" aria-pressed={!chosen} className={!chosen ? 'active' : ''} onClick={() => setChosenId('all')}><strong>{u.all}</strong><small>{active.length}</small></button>
-        {active.map(phase => <button key={phase.id} type="button" aria-pressed={chosen?.id === phase.id} className={chosen?.id === phase.id ? 'active' : ''} style={{ '--c': phase.color }} onClick={() => setChosenId(phase.id)}>
-          <strong>{phase.name[locale]}</strong><small>{phase.from}–{phase.to} · {evidenceFor(phase, year).filter(point => point.kind !== 'lead').length} {u.evidence}</small>{evidenceFor(phase, year).filter(point => point.kind !== 'lead').length < 4 && <em>{u.help}</em>}</button>)}
-        {!active.length && <p>{u.none}</p>}
-      </div>
       <section className="dynasty-live" aria-label={t.title}>
+        <div className="dyn-stage">
         <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
           <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <InvalidateOnShow visible={tab === 'map'} />
           <FitEvidence phases={phases} year={year} />
           <DynastyAreasControl locale={locale} phases={phases} evidenceYear={year} labels={phases.length <= 4} />
         </MapContainer>
+        <div className="dyn-overlay">
+          <div className="dyn-timeline">
+            <div className="dyn-timeline-head"><span>{u.year}</span><strong>{u.ce} {year}</strong></div>
+            <input type="range" aria-label={u.year} min={MIN_YEAR} max={MAX_YEAR} value={year} onChange={event => setYear(Number(event.target.value))} />
+            <div className="dyn-ticks">{MILESTONES.map(value => <button key={value} type="button" className={Math.abs(year - value) < 20 ? 'active' : ''} onClick={() => setYear(value)}>{value}</button>)}</div>
+          </div>
+          <div className="dyn-rail" role="group" aria-label={u.active}>
+            <button type="button" aria-pressed={!chosen} className={!chosen ? 'active' : ''} onClick={() => setChosenId('all')}><strong>{u.all}</strong><small>{active.length}</small></button>
+            {active.map(phase => <button key={phase.id} type="button" aria-pressed={chosen?.id === phase.id} className={chosen?.id === phase.id ? 'active' : ''} style={{ '--c': phase.color }} onClick={() => setChosenId(phase.id)}>
+              <strong>{phase.name[locale]}</strong><small>{phase.from}–{phase.to} · {evidenceFor(phase, year).filter(point => point.kind !== 'lead').length} {u.evidence}</small>{evidenceFor(phase, year).filter(point => point.kind !== 'lead').length < 4 && <em>{u.help}</em>}</button>)}
+            {!active.length && <p>{u.none}</p>}
+          </div>
+        </div>
+        </div>
         <p>{t.pick} {t.note}</p>
       </section>
       <DynastyProfile phase={chosen} locale={locale} />

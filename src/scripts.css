@@ -208,3 +208,25 @@ main.portal-page.who-ruled-page { display: block; height: auto; min-height: 0; m
 .dynasty-profile-note { margin: 10px 0 0; font-size: 12px; color: var(--sanchaya-muted); }
 .dynasty-assumptions-source { font-weight: 400 !important; font-size: 12px !important; color: var(--sanchaya-muted); }
 @media print { .dynasty-profile { break-inside: avoid; } }
+
+/* The year slider and the rail of active dynasties sit along the top of the map, between the zoom buttons and the layer control, so the map gets the page. */
+.dyn-stage { position: relative; }
+.dynasty-live .dyn-stage .leaflet-container { height: clamp(540px, calc(100vh - 90px), 860px); }
+.dyn-overlay { position: absolute; left: 56px; right: 290px; top: 10px; z-index: 1000; display: grid; gap: 6px; pointer-events: none; }
+.dyn-overlay > * { pointer-events: auto; }
+.dyn-overlay .dyn-timeline { gap: 3px; padding: 6px 12px; background: rgba(255,255,255,.94); box-shadow: 0 2px 10px rgba(26,26,46,.2); }
+.dyn-overlay .dyn-timeline-head strong { font-size: 17px; }
+.dyn-overlay .dyn-ticks { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.dyn-overlay .dyn-ticks button { flex: 0 0 auto; min-height: 26px; padding: 2px 9px; font-size: 11px; }
+.dyn-overlay .dyn-rail { margin: 0; padding: 0 0 2px; }
+.dyn-overlay .dyn-rail button { min-width: 120px; max-width: 190px; padding: 5px 10px; background: rgba(255,255,255,.94); box-shadow: 0 2px 8px rgba(26,26,46,.2); }
+.dyn-overlay .dyn-rail strong { font-size: 12px; }
+.dyn-overlay .dyn-rail em { display: none; }
+.dyn-overlay .dyn-rail > p { margin: 0; padding: 5px 10px; border-radius: 8px; background: rgba(255,255,255,.94); }
+@media (max-width: 800px) {
+  .dynasty-live .dyn-stage .leaflet-container { height: 60vh; min-height: 380px; }
+  .dyn-overlay { position: static; margin-top: 8px; }
+  .dyn-overlay .dyn-timeline { background: #fff; box-shadow: none; }
+  .dyn-overlay .dyn-rail button { box-shadow: none; }
+}
+@media print { .dyn-overlay { display: none !important; } }

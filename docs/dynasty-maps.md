@@ -75,6 +75,7 @@ promote it to evidence by adding a cited inscription, monument or event.
   - *Download & share*: link, QR code, copy and download of the poster in Kannada
     and English. Posters are drawn on an off-screen canvas; the grid grows with
     the number of dynasties.
+- **Layout:** on the map tab the year slider and the rail of dynasties active that year are drawn over the top of the map (`.dyn-overlay` in `scripts.css`, between the zoom buttons and the layer control), so the map takes most of the screen. Below 800 px wide they sit under the map instead.
 - **Name labels:** dynasty names sit in their own map pane (`dynasty-labels`, z-index 640) above the evidence dots and other markers, and the map control has a "Show dynasty names" checkbox to hide them.
 - **Name styling:** on the page, map labels and the dynasty list use only the modern Kannada text (plus the English name on the English site). The old-script (era font) rendering of Kadamba, Western Ganga, Badami Chalukya and Hoysala names appears only on the generated poster, which can carry Kannada, the era typeface and English together (`nameLines(phase, locale, withEraFont)` in `DynastyGallery.jsx`).
 - **`#who-ruled` (Explore → Who ruled here?)**, `src/WhoRuledPage.jsx`. Two tabs:
