@@ -132,9 +132,13 @@
   }
 
   .aata-game-tabs {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .4rem;
     margin: 1rem 0;
+  }
+
+  .aata-game-tabs button:last-child {
+    grid-column: 1 / -1;
   }
 
   .aata-game-tabs button {
@@ -201,7 +205,11 @@
 
   .crossword-clues {
     grid-template-columns: 1fr;
-    max-height: 420px;
+    max-height: min(52svh, 420px);
+    padding: .35rem .45rem .8rem;
+    border: 1px solid #e1dceb;
+    border-radius: 12px;
+    overscroll-behavior: contain;
   }
 
   .word-key {
@@ -211,5 +219,9 @@
 
   .word-key > strong {
     width: 100%;
+  }
+
+  .app-shell:has(.aata-paata-page) .guided-tour-launcher {
+    display: none;
   }
 }

@@ -6,9 +6,9 @@
   .app-shell .map-theme-control button { padding-inline: 7px; font-size: 9px; }
   .app-shell .map-stage .map-legend { top: 58px; }
   .app-shell .map-stage .map-legend.mobile-open { top: 94px; }
-  .app-shell .guided-tour-launcher { left: auto; right: 12px; bottom: 26vh; width: 40px; height: 40px; padding: 0; justify-content: center; gap: 0; font-size: 0; }
-  .app-shell .guided-tour-launcher span { width: 22px; height: 22px; font-size: 15px; }
-  .app-shell .contact-chat-launcher { bottom: calc(26vh + 50px); }
+  .app-shell:has(> main#atlas) .guided-tour-launcher { left: auto; right: 12px; bottom: 26vh; width: 40px; height: 40px; padding: 0; justify-content: center; gap: 0; font-size: 0; }
+  .app-shell:has(> main#atlas) .guided-tour-launcher span { width: 22px; height: 22px; font-size: 15px; }
+  .app-shell:has(> main#atlas) .contact-chat-launcher { bottom: calc(26vh + 50px); }
 }
 
 /* Search results on phones: a header that stays put with a close button, so the list never traps the page. */

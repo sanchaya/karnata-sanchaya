@@ -74,5 +74,6 @@ test('Kannada game answers use the locally bundled jquery IME integration',async
   assert.match(inputSource,/aria-pressed=\{enabled\}/)
   assert.match(layoutSource,/@media \(max-width: 560px\)/)
   assert.match(layoutSource,/\.kannada-ime-input \{\s*grid-template-columns: 1fr/)
-  assert.match(layoutSource,/\.aata-game-tabs \{\s*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/)
+  assert.match(layoutSource,/\.aata-game-tabs \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\)/)
+  assert.match(layoutSource,/\.app-shell:has\(\.aata-paata-page\) \.guided-tour-launcher \{\s*display: none/)
 })

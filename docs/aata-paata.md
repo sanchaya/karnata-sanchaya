@@ -30,9 +30,11 @@ small `kn-atlas-transliteration` rule registered by this project is MIT-licensed
 and limited to game input. Direct Kannada keyboard input continues to work when
 the IME is enabled or disabled. No CDN or external runtime request is used.
 
-On narrow screens, the game selector stays in one compact row, archive actions
-wrap into two touch-friendly columns, the IME control moves below the answer
-field and crossword clues use a bounded single-column list.
+On narrow screens, the game selector uses two roomy columns with the crossword
+on its own row, archive actions wrap into two touch-friendly columns, the IME
+control moves below the answer field and crossword clues use a bounded,
+scrollable single-column list. The floating page-guide launcher is hidden on
+this page at phone widths so it cannot cover game inputs or action buttons.
 
 These are original implementations of familiar public-domain game mechanics.
 No third-party game code, puzzle content, name or branding is bundled.
