@@ -1,0 +1,7 @@
+.app-shell main.aata-paata-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 142px);
+  overflow: visible;
+}

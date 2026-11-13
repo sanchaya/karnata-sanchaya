@@ -45,6 +45,7 @@ const ScriptEvolutionExplorer=lazy(()=>import('./ScriptEvolutionExplorer'))
 const FontShowcase=lazy(()=>import('./FontShowcase'))
 const IndiaResearchExplorer=lazy(()=>import('./IndiaResearchExplorer'))
 const GeographyNatureExplorer=lazy(()=>import('./GeographyNatureExplorer'))
+const AataPaata=lazy(()=>import('./AataPaata'))
 const PortalFallback=()=> <main className="portal-page" aria-busy="true"><p>…</p></main>
 const AdminAccessGate=({locale,staticBuild,user})=>{
   const isKannada=locale==='kn'
@@ -134,6 +135,7 @@ const comparisonPresets=[
 ]
 const seoPages={
   atlas:{kn:['ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕಾಲರೇಖೆ, ರಾಜ್ಯಗಳು, ರಾಜರು, ಯುದ್ಧಗಳು, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ವಿಸ್ತರಣೆಯ ಕನ್ನಡ-ಪ್ರಥಮ ಸಂಶೋಧನಾ ಭೂಪಟ.'],en:['Karnataka Historical Atlas','Explore Karnataka kingdoms, rulers, wars, culture and territorial change through a citation-led historical timeline and map.']},
+  'aata-paata':{kn:['ಆಟ–ಪಾಠ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಇತಿಹಾಸ, ಸಾಹಿತ್ಯ, ಶಾಸನ ಮತ್ತು ಭೂಗೋಳದ ದತ್ತಾಂಶದಿಂದ ರೂಪಿಸಿದ ಪದ, ವರ್ಷ ಮತ್ತು ಪದಜಾಲ ಆಟಗಳು.'],en:['Aata–Paata · Karnataka Historical Atlas','Play word, year-grid and crossword games generated from Karnataka history, literature, epigraphy and geography records.']},
   'india-relations':{kn:['ಭಾರತದ ಜಾಗತಿಕ ಸಂಬಂಧಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಭಾರತದ ವ್ಯಾಪಾರ, ರಾಜತಾಂತ್ರಿಕ, ಪ್ರವಾಸ ಮತ್ತು ವಿದೇಶಿ ಸಂಪರ್ಕಗಳನ್ನು ಕಾಲರೇಖೆಯಲ್ಲಿ ಅನ್ವೇಷಿಸಿ.'],en:['India’s Global Relations · Karnataka Historical Atlas','Explore India’s trade, diplomatic, travel and foreign contacts across the timeline.']},
   relations:{kn:['ಜಾಗತಿಕ ಸಂಬಂಧಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ರಾಜಕೀಯ, ವ್ಯಾಪಾರ, ರಾಜತಾಂತ್ರಿಕ ಮತ್ತು ಜ್ಞಾನ ಸಂಬಂಧಗಳನ್ನು ಭಾರತ ಮತ್ತು ವಿಶ್ವದೊಂದಿಗೆ ಅನ್ವೇಷಿಸಿ.'],en:['Global Relations · Karnataka Historical Atlas','Explore Karnataka’s political, commercial, diplomatic and knowledge connections across India and the world.']},
   literature:{kn:['ಕನ್ನಡ ಸಾಹಿತ್ಯ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕನ್ನಡ ಲೇಖಕರು, ಕವಿಗಳು, ಕೃತಿಗಳು, ಆಸ್ಥಾನಗಳು ಮತ್ತು ಅವುಗಳ ಕಾಲರೇಖೆಗಳನ್ನು ಸಂಶೋಧಿಸಿ.'],en:['Kannada Literature Explorer · Karnataka Historical Atlas','Research Kannada authors, poets, works, courts and their historical timelines.']},
@@ -234,6 +236,11 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
       tourStep('.trail-grid','ಕಥಾಮಾರ್ಗಗಳು · ನಿರೂಪಣೆ ಆರಿಸಿ','Choose a curation-backed trail that walks Karnataka\u2019s history step by step.'),
       tourStep('.trail-progress','ಹಂತಗಳ ಪ್ರಗತಿ · ಕಥೆಯಲ್ಲಿ ಚಲಿಸಿ','Jump between stops or read forward; every stop is rooted in the evidence ledger.'),
       tourStep('.trail-narrative','ನಿರೂಪಣೆ ಮತ್ತು ಸಾಕ್ಷ್ಯ · ಆಕರಗಳನ್ನು ಪರಿಶೀಲಿಸಿ','Read the narrative, then open the citations and provenance behind each stop.'),
+    ],
+    'aata-paata':[
+      tourStep('.aata-paata-hero','ಆಟ–ಪಾಠ · ಆಡಿ ಕಲಿಯಿರಿ','Play with words, years and clues generated from atlas records.'),
+      tourStep('.aata-game-tabs','ಮೂರು ಆಟಗಳು · ಆಟವನ್ನು ಆರಿಸಿ','Switch between Word Trail, Time Grid and History Crossword.'),
+      tourStep('.aata-game-stage','ಅಟ್ಲಸ್ ಆಧಾರಿತ ಆಟ · ದಾಖಲೆಗೆ ಹಿಂತಿರುಗಿ','Solve the puzzle, use its hint and open the underlying atlas record when available.'),
     ],
     evidence:[
       tourStep('.evidence-procedure','ಪರಿಶೀಲನಾ ವಿಧಾನ · ಕೆಲಸದ ಕ್ರಮ ತಿಳಿಯಿರಿ','Follow the evidence gates from assignment to transcription, translation, review and publication.'),
@@ -792,6 +799,8 @@ function ReviewCandidatePopup({item,locale,t,compact=false}){
 
 const ACTIVITY_OF={atlas:'explore',trails:'explore',relations:'explore','india-relations':'india',people:'explore',freedom:'explore',literature:'research',epigraphy:'research',coins:'research',scripts:'research',fonts:'research',donate:'account','india-research':'india','india-inscriptions':'india','india-languages':'india','india-sources':'india','india-failures':'india','district-history':'districts','district-audit':'districts','inscription-audit':'districts','district-inventory':'districts',geography:'explore',research:'project','research-tasks':'project',evidence:'project',about:'project',contact:'project',contribute:'account',profile:'account',reviews:'account',operations:'account',admin:'account'}
 const NAV_HINTS={atlas:['Map and timeline of dynasties','ರಾಜವಂಶಗಳ ನಕ್ಷೆ ಮತ್ತು ಕಾಲರೇಖೆ'],dynasties:['Every dynasty’s area, shareable','ಪ್ರತಿ ರಾಜವಂಶದ ಪ್ರದೇಶ, ಹಂಚಿಕೊಳ್ಳಬಹುದು'],'who-ruled':['Dynasties recorded near a place, in time order','ಒಂದು ಸ್ಥಳದ ಹತ್ತಿರ ದಾಖಲಾದ ರಾಜವಂಶಗಳು, ಕಾಲಕ್ರಮದಲ್ಲಿ'],'karnataka-history':['The name Karnataka and its divisions, 1657 to 1997','ಕರ್ನಾಟಕ ಹೆಸರು ಮತ್ತು ಆಡಳಿತ ವಿಭಾಗಗಳು, 1657–1997'],trails:['Guided story paths','ಮಾರ್ಗದರ್ಶಿತ ಕಥಾಮಾರ್ಗಗಳು'],relations:['Karnataka’s ties with India and the world','ಭಾರತ-ಜಗತ್ತಿನೊಂದಿಗೆ ಕರ್ನಾಟಕದ ಸಂಬಂಧ'],'india-relations':['India’s trade, diplomacy and travel','ಭಾರತದ ವ್ಯಾಪಾರ, ರಾಜತಾಂತ್ರಿಕತೆ'],people:['Rulers, poets and thinkers','ದೊರೆಗಳು, ಕವಿಗಳು, ಚಿಂತಕರು'],freedom:['Fighters and movements','ಹೋರಾಟಗಾರರು, ಚಳವಳಿಗಳು'],literature:['Works and authors by era','ಯುಗಾನುಸಾರ ಕೃತಿಗಳು'],epigraphy:['Search inscriptions and texts','ಶಾಸನ, ಪಠ್ಯ ಹುಡುಕಾಟ'],coins:['Coin types, mints, rulers','ನಾಣ್ಯ, ಟಂಕಸಾಲೆ, ದೊರೆಗಳು'],scripts:['How scripts evolved','ಲಿಪಿಗಳ ವಿಕಾಸ'],fonts:['Typefaces of the dynasties','ರಾಜವಂಶಗಳ ಫಾಂಟ್‌ಗಳು'],'india-research':['India history data and wider context','ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ ಮತ್ತು ವಿಶಾಲ ಸಂದರ್ಭ'],'india-inscriptions':['Inscription index across India','ಭಾರತದಾದ್ಯಂತ ಶಾಸನ ಸೂಚಿ'],'india-languages':['Languages and scripts through time (unverified)','ಕಾಲದಲ್ಲಿ ಭಾಷೆ-ಲಿಪಿಗಳು (ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ)'],'india-sources':['Underlying source candidates','ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು'],'district-history':['Origins and local leads by district','ಜಿಲ್ಲಾವಾರು ಮೂಲ, ಸ್ಥಳೀಯ ಸುಳಿವು'],'district-audit':['Priority heritage sites','ಆದ್ಯತೆಯ ಪರಂಪರೆ ತಾಣಗಳು'],'inscription-audit':['Inscriptions audited by district','ಜಿಲ್ಲಾವಾರು ಶಾಸನ ಪರಿಶೀಲನೆ'],'district-inventory':['Imported monument lists','ಆಮದು ಸ್ಮಾರಕ ಪಟ್ಟಿಗಳು'],geography:['Land, rivers and nature','ನೆಲ, ನದಿ, ನಿಸರ್ಗ'],research:['Sources and collaborations','ಆಕರ, ಸಹಯೋಗ'],'research-tasks':['Open tasks to help with','ನೆರವಾಗಬಹುದಾದ ಕಾರ್ಯ'],evidence:['How claims are verified','ಪರಿಶೀಲನಾ ವಿಧಾನ'],about:['The project and team','ಯೋಜನೆ, ತಂಡ'],contact:['Reach the team','ತಂಡವನ್ನು ಸಂಪರ್ಕಿಸಿ'],contribute:['Add or correct a record','ದಾಖಲೆ ಸೇರಿಸಿ/ತಿದ್ದಿ'],donate:['Support the atlas','ಅಟ್ಲಸ್ ಬೆಂಬಲಿಸಿ'],profile:['Your contributions','ನಿಮ್ಮ ಕೊಡುಗೆಗಳು'],reviews:['Records awaiting review','ಪರಿಶೀಲನೆ ಬಾಕಿ'],operations:['Manage members','ಸದಸ್ಯರ ನಿರ್ವಹಣೆ'],admin:['Manage datasets','ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ']}
+ACTIVITY_OF['aata-paata']='explore'
+NAV_HINTS['aata-paata']=['Play and learn from atlas data','ಅಟ್ಲಸ್ ದತ್ತಾಂಶದೊಂದಿಗೆ ಆಡಿ ಕಲಿ']
 
 function PublicDataDepth({t}){
   const compactTotal=new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(publicDataDepth.totalRecords)
@@ -856,7 +865,7 @@ function DistrictHub({locale,t,districtGeojson,mapTheme,setMapTheme,onChooseInsc
 const districtSectionRoutes={districts:'district-history',inscriptions:'inscription-audit'}
 
 export default function App(){
-  const publicViews=['atlas','who-ruled','karnataka-history','relations','india-relations','people','freedom','literature','epigraphy','districts','district-history','district-audit','inscription-audit','district-inventory','inscriptions','coins','scripts','dynasties','fonts','donate','trails','evidence','research','research-tasks','contribute','profile','reviews','operations','about','contact','india-research','india-inscriptions','india-languages','india-sources','india-failures','geography']
+  const publicViews=['atlas','who-ruled','karnataka-history','relations','india-relations','people','freedom','literature','epigraphy','districts','district-history','district-audit','inscription-audit','district-inventory','inscriptions','coins','scripts','dynasties','fonts','donate','trails','aata-paata','evidence','research','research-tasks','contribute','profile','reviews','operations','about','contact','india-research','india-inscriptions','india-languages','india-sources','india-failures','geography']
   const normalizeView=hash=>hash==='history'?'district-history':hash==='community'?'contribute':districtSectionRoutes[hash]||hash
   const initialHash=normalizeView(window.location.hash.slice(1))
   const [initialShareState]=useState(()=>readAtlasUrlState(window.location.search))
@@ -1037,7 +1046,7 @@ export default function App(){
   const returnToStateView=()=>{setScope('karnataka');setCompareYear(null);setSelectedEvent(null);setSelectedTerritory(null);setSelectedCulture(null);clearRecordDetails();requestAnimationFrame(()=>lastFocusedRef.current?.focus())}
   const closeAdmin=()=>{window.location.hash='atlas';window.location.reload()}
   const navigateView=next=>{setView(next);window.location.hash=next;window.scrollTo({top:0,behavior:'smooth'})}
-  const exploreNavItems=[['atlas',t.atlas],['dynasties',locale==='kn'?'ರಾಜವಂಶ ಭೂಪಟ':'Dynasty map'],['who-ruled',locale==='kn'?'ಇಲ್ಲಿ ಯಾರು ಆಳಿದರು?':'Who ruled here?'],['karnataka-history',locale==='kn'?'ಹೆಸರು ಮತ್ತು ಆಡಳಿತ':'Name and administration'],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['geography',locale==='kn'?'ಭೂಗೋಳ ಮತ್ತು ನಿಸರ್ಗ':'Geography & nature'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement']]
+  const exploreNavItems=[['atlas',t.atlas],['dynasties',locale==='kn'?'ರಾಜವಂಶ ಭೂಪಟ':'Dynasty map'],['who-ruled',locale==='kn'?'ಇಲ್ಲಿ ಯಾರು ಆಳಿದರು?':'Who ruled here?'],['karnataka-history',locale==='kn'?'ಹೆಸರು ಮತ್ತು ಆಡಳಿತ':'Name and administration'],['trails',locale==='kn'?'ಕಥಾಮಾರ್ಗ':'Trails'],['aata-paata',locale==='kn'?'ಆಟ–ಪಾಠ':'Aata–Paata'],['relations',locale==='kn'?'ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'Global relations'],['geography',locale==='kn'?'ಭೂಗೋಳ ಮತ್ತು ನಿಸರ್ಗ':'Geography & nature'],['people',locale==='kn'?'ವ್ಯಕ್ತಿಗಳು':'People'],['freedom',locale==='kn'?'ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ':'Freedom movement']]
   const researchNavItems=[['literature',locale==='kn'?'ಸಾಹಿತ್ಯ':'Literature'],['epigraphy',locale==='kn'?'ಶಾಸನ ಅನ್ವೇಷಣೆ':'Epigraphy'],['coins',locale==='kn'?'ನಾಣ್ಯಗಳು':'Coins'],['scripts',locale==='kn'?'ಲಿಪಿ ವಿಕಾಸ':'Scripts'],['fonts',locale==='kn'?'ಫಾಂಟ್ಸ್':'Fonts']]
   const indiaNavItems=[['india-research',locale==='kn'?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'History data'],['india-inscriptions',locale==='kn'?'ಶಾಸನ ಸೂಚಿ':'Inscription index'],['india-languages',locale==='kn'?'ಭಾಷೆ-ಲಿಪಿ ಭೂಪಟ':'Languages map'],['india-sources',locale==='kn'?'ಮೂಲ ಆಕರಗಳು':'Source candidates'],['india-relations',locale==='kn'?'ಭಾರತದ ಜಾಗತಿಕ ಸಂಬಂಧಗಳು':'India’s global relations']]
   const districtNavItems=[['district-history',locale==='kn'?'ಸ್ಥಳೀಯ ಇತಿಹಾಸ':'Local history'],['district-audit',locale==='kn'?'ಪರಂಪರೆ ತಾಣಗಳು':'Heritage sites'],['inscription-audit',locale==='kn'?'ಶಾಸನ ಪರಿಶೀಲನೆ':'Inscription review'],['district-inventory',locale==='kn'?'ಸ್ಮಾರಕ ಪಟ್ಟಿ':'Monument inventory']]
@@ -1150,6 +1159,7 @@ export default function App(){
     {view==='who-ruled'&&<Suspense fallback={<PortalFallback/>}><WhoRuledPage locale={locale}/></Suspense>}
     {view==='scripts'&&<Suspense fallback={<PortalFallback/>}><ScriptEvolutionExplorer locale={locale} initialSelectedId={selectedScriptId}/></Suspense>}
     {view==='trails'&&<Suspense fallback={<PortalFallback/>}><TrailExplorer locale={locale}/></Suspense>}
+    {view==='aata-paata'&&<Suspense fallback={<PortalFallback/>}><AataPaata locale={locale}/></Suspense>}
     {view==='evidence'&&<Suspense fallback={<PortalFallback/>}><EvidenceWorkflow locale={locale} communityUser={communityUser}/></Suspense>}
     {view==='research-tasks'&&<Suspense fallback={<PortalFallback/>}><CommunityResearchTasks locale={locale}/></Suspense>}
     {view==='contribute'&&<Suspense fallback={<PortalFallback/>}><Community locale={locale} section="contribute" onAuthenticated={handleAuthenticated} onLogout={handleLoggedOut}/><DonateTeaser locale={locale}/></Suspense>}
