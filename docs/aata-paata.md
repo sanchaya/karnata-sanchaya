@@ -16,6 +16,24 @@ rather than a second hand-maintained question bank.
   same word catalogue. Clues carry the record ID, type and route back to the
   relevant atlas section.
 
+## Archive and Kannada typing
+
+The archive control opens any daily puzzle from the launch date and moves
+through weekly crosswords in seven-day steps. The selected game and date are
+kept in the URL as `game` and `puzzle`, so an archived puzzle can be shared.
+Played word guesses, time-grid cells and crossword answers are stored under
+date/week-specific `atlas-aata-*` local-storage keys.
+
+Kannada answer fields include an optional phonetic IME toggle. The integration
+bundles jQuery 3.7 and the dual-licensed Wikimedia `jquery.ime` framework; the
+small `kn-atlas-transliteration` rule registered by this project is MIT-licensed
+and limited to game input. Direct Kannada keyboard input continues to work when
+the IME is enabled or disabled. No CDN or external runtime request is used.
+
+On narrow screens, the game selector stays in one compact row, archive actions
+wrap into two touch-friendly columns, the IME control moves below the answer
+field and crossword clues use a bounded single-column list.
+
 These are original implementations of familiar public-domain game mechanics.
 No third-party game code, puzzle content, name or branding is bundled.
 
@@ -55,11 +73,10 @@ status and future research corrections aligned with the atlas.
 
 ## Storage and static deployment
 
-Word-game progress is stored in `localStorage` under an
-`atlas-aata-word:*` key. It is recreational state only—not research data—and
-the games still work if storage is unavailable. No account, API or MariaDB
-connection is required. Vite includes the page in both GitHub Pages and live
-portal builds.
+Game progress is stored in date/week-specific `localStorage` keys. It is
+recreational state only—not research data—and the games still work if storage
+is unavailable. No account, API or MariaDB connection is required. Vite
+includes the page in both GitHub Pages and live portal builds.
 
 ## Accessibility
 

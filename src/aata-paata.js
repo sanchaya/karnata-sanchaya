@@ -1,5 +1,10 @@
 const segmenters=new Map()
 
+export const AATA_ARCHIVE_START='2026-11-13'
+export const archiveDateValid=(value,maxDate)=>/^\d{4}-\d{2}-\d{2}$/.test(value||'')&&value>=AATA_ARCHIVE_START&&value<=maxDate
+export const shiftArchiveDate=(value,days)=>{const date=new Date(`${value}T12:00:00Z`);date.setUTCDate(date.getUTCDate()+days);return date.toISOString().slice(0,10)}
+export const archiveWeekKey=value=>{const date=new Date(`${value}T12:00:00Z`),day=date.getUTCDay()||7;date.setUTCDate(date.getUTCDate()+4-day);const first=new Date(Date.UTC(date.getUTCFullYear(),0,1));return `${date.getUTCFullYear()}-${String(Math.ceil((((date-first)/86400000)+1)/7)).padStart(2,'0')}`}
+
 export const graphemes=(value,locale='kn')=>{
   const normalized=String(value||'').normalize('NFC').trim()
   if(typeof Intl?.Segmenter!=='function')return Array.from(normalized)

@@ -39,6 +39,8 @@
   "dependencies": {
     "@vitejs/plugin-react": "latest",
     "express": "^5.2.1",
+    "jquery": "^3.7.1",
+    "jquery.ime": "^0.2.0-2",
     "leaflet": "latest",
     "mariadb": "^3.5.3",
     "multer": "^2.2.0",

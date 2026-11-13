@@ -5,3 +5,211 @@
   min-height: calc(100vh - 142px);
   overflow: visible;
 }
+
+.aata-archive {
+  display: grid;
+  grid-template-columns: minmax(210px, .75fr) minmax(420px, 1.25fr) auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 1px solid #ded8ee;
+  border-radius: 16px;
+  background: #fbfaff;
+}
+
+.aata-archive p,
+.aata-archive strong,
+.aata-archive small {
+  display: block;
+  margin: 0;
+}
+
+.aata-archive small {
+  margin-top: .25rem;
+  line-height: 1.4;
+  color: #625d70;
+}
+
+.aata-archive time {
+  font-weight: 750;
+  color: #4d3a9d;
+  white-space: nowrap;
+}
+
+.aata-archive-controls {
+  display: flex;
+  align-items: end;
+  gap: .45rem;
+  flex-wrap: wrap;
+}
+
+.aata-archive-controls label {
+  display: grid;
+  gap: .2rem;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.aata-archive-controls input,
+.aata-archive-controls button {
+  min-height: 42px;
+  padding: .55rem .7rem;
+  border: 1px solid #bdb4d6;
+  border-radius: 9px;
+  background: #fff;
+  color: #382c68;
+  font: inherit;
+  font-weight: 700;
+}
+
+.aata-archive-controls button {
+  cursor: pointer;
+}
+
+.aata-archive-controls button.secondary {
+  border-color: #ded8ee;
+  background: #f2effa;
+}
+
+.aata-archive-controls button:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+}
+
+.kannada-ime-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .4rem;
+  align-items: center;
+}
+
+.aata-answer .kannada-ime-input input {
+  width: 100%;
+}
+
+.aata-answer .kannada-ime-input button {
+  min-width: 104px;
+  padding: .72rem .65rem;
+  border: 1px solid #9d92bd;
+  background: #f4f1fb;
+  color: #45367f;
+  font-size: .82rem;
+}
+
+.aata-answer .kannada-ime-input button.active {
+  border-color: #24785c;
+  background: #e4f4ed;
+  color: #195c45;
+}
+
+@media (max-width: 900px) {
+  .aata-archive {
+    grid-template-columns: 1fr;
+  }
+
+  .aata-archive time {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 560px) {
+  .aata-paata-page {
+    padding: .75rem .6rem 2rem;
+  }
+
+  .aata-paata-hero {
+    padding: 1rem;
+  }
+
+  .aata-paata-hero h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .aata-paata-hero p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .aata-game-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .4rem;
+    margin: 1rem 0;
+  }
+
+  .aata-game-tabs button {
+    min-width: 0;
+    min-height: 48px;
+    padding: .65rem .35rem;
+    font-size: .84rem;
+    line-height: 1.25;
+  }
+
+  .aata-archive-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .4rem;
+  }
+
+  .aata-archive {
+    gap: .75rem;
+    padding: .8rem;
+    border-radius: 13px;
+  }
+
+  .aata-archive-controls label {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .aata-archive-controls input,
+  .aata-archive-controls button {
+    width: 100%;
+    min-width: 0;
+    padding-inline: .45rem;
+    font-size: .84rem;
+  }
+
+  .aata-archive time {
+    font-size: .9rem;
+  }
+
+  .aata-game-stage {
+    padding: .9rem;
+    border-radius: 16px;
+  }
+
+  .kannada-ime-input {
+    grid-template-columns: 1fr;
+  }
+
+  .aata-answer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .aata-answer label {
+    min-width: 0;
+  }
+
+  .aata-answer > button,
+  .aata-answer .kannada-ime-input button {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+  }
+
+  .crossword-clues {
+    grid-template-columns: 1fr;
+    max-height: 420px;
+  }
+
+  .word-key {
+    justify-content: flex-start;
+    font-size: .88rem;
+  }
+
+  .word-key > strong {
+    width: 100%;
+  }
+}

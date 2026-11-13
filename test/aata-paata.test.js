@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { atlasData } from '../src/data/atlas.js'
 import { geographyNatureHighlights, geographyProtectedAreas } from '../src/data/geography-nature.js'
-import { buildCrossword, buildWordCatalog, buildYearPuzzle, graphemes, scoreGuess } from '../src/aata-paata.js'
+import { AATA_ARCHIVE_START, archiveDateValid, archiveWeekKey, buildCrossword, buildWordCatalog, buildYearPuzzle, graphemes, scoreGuess, shiftArchiveDate } from '../src/aata-paata.js'
 
 const geography={highlights:geographyNatureHighlights,protectedAreas:geographyProtectedAreas}
 const appSource=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
@@ -51,4 +51,28 @@ test('Aata-Paata is a bilingual lazy public route with no external product brand
   assert.match(pageSource,/ಆಟ–ಪಾಠ/)
   assert.match(pageSource,/Aata–Paata/)
   assert.doesNotMatch(pageSource,/sampada/i)
+})
+
+test('game archive dates, weeks and shareable parameters stay deterministic',()=>{
+  assert.equal(AATA_ARCHIVE_START,'2026-11-13')
+  assert.equal(shiftArchiveDate('2026-11-13',1),'2026-11-14')
+  assert.equal(shiftArchiveDate('2026-11-13',-1),'2026-11-12')
+  assert.equal(archiveWeekKey('2026-11-13'),'2026-46')
+  assert.equal(archiveDateValid('2026-11-13','2026-11-20'),true)
+  assert.equal(archiveDateValid('2026-11-12','2026-11-20'),false)
+  assert.match(pageSource,/searchParams\.set\('puzzle',date\)/)
+  assert.match(pageSource,/atlas-aata-crossword:/)
+})
+
+test('Kannada game answers use the locally bundled jquery IME integration',async()=>{
+  const inputSource=await readFile(new URL('../src/KannadaImeInput.jsx',import.meta.url),'utf8')
+  const imeSource=await readFile(new URL('../src/kannada-ime.js',import.meta.url),'utf8')
+  const layoutSource=await readFile(new URL('../src/aata-paata-layout.css',import.meta.url),'utf8')
+  assert.match(pageSource,/KannadaImeInput/)
+  assert.match(imeSource,/import\('jquery\.ime'\)/)
+  assert.match(imeSource,/kn-atlas-transliteration/)
+  assert.match(inputSource,/aria-pressed=\{enabled\}/)
+  assert.match(layoutSource,/@media \(max-width: 560px\)/)
+  assert.match(layoutSource,/\.kannada-ime-input \{\s*grid-template-columns: 1fr/)
+  assert.match(layoutSource,/\.aata-game-tabs \{\s*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/)
 })
