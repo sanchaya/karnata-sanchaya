@@ -83,6 +83,6 @@ export default function About({locale}){
       </aside>
     </section>
     <section className="about-pillars">{pillars.map(([title,body],index)=><article key={title} className={`pillar-${index+1}`}><span aria-hidden="true">0{index+1}</span><h3>{title}</h3><p>{body}</p></article>)}</section>
-    <DonateSection locale={locale}/>
+    <p className="about-support-line">{locale==='kn'?'ಈ ಅಟ್ಲಸ್ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ಬೆಳೆಯುತ್ತದೆ.':'This atlas grows through volunteer effort.'} <a href="#donate">{locale==='kn'?'ಬೆಂಬಲಿಸುವ ಮಾರ್ಗಗಳು →':'Ways to support →'}</a></p>
   </main>
 }

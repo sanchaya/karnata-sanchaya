@@ -87,3 +87,42 @@ confluences) shown on the `#geography` map under their own filters. Each is an a
 course or a surveyed dam wall, and carries `review.status: needs-review`. Only the dams with a stated source year show
 one. They also feed the Word Trail catalogue. Six more wildlife sanctuaries were added to `geographyProtectedAreas`.
 River courses, catchment areas and reservoir capacities are not yet modelled; add them from India-WRIS with citations.
+
+## Top menu: Nature, one Project & contribute menu, footer status
+
+The top row has six menus: Explore, Nature, Research, India research, District Atlas and **Project & contribute**.
+
+- **Nature** (ಪ್ರಕೃತಿ, `natureNavItems` in `src/App.jsx`): Geography and nature, Birds, animals and plants, Migratory birds. Explore
+  keeps the history and people pages. A green accent, and a small dot on a top menu while one of its pages is unseen
+  (`src/whats-new.js`; the secondary bar shows the word "New").
+- **Project & contribute** (ಯೋಜನೆ ಮತ್ತು ಸಹಯೋಗ, `communityNavItems`) replaces the old Project and Contribute menus. One entry each:
+  About & contact, Contribute, Support & donate, Research tasks, Resources, Evidence, plus My profile, Review queue and the
+  administration pages for people with those roles. Nothing is listed twice: About and Contact are one item with a two-tab strip
+  (`.about-contact-tabs`) above both pages; `#contact` still works, the footer links About and Support, and the floating Contact
+  button is unchanged. The About page no longer embeds the donation block, only a link to the Support page.
+- **Support.** The header's only utility link is "♥ Support" (`headerUtilityItems`), and the footer has "♥ Support the atlas". The
+  Support page (`#donate`, `src/Donate.jsx`) lists ways to help from `src/support-options.js` above the existing donation block
+  (UPI, bank, online). **Add a new way to support there**: status `live` shows an "Open" link, status `soon` shows a "Coming
+  soon" tag and a "Tell us you are interested" mail link. Do not mark something live before it works. Today the three `soon`
+  options (sponsor a topic, monthly supporters, grants and CSR) are plans, not features.
+- **Offline ready / Install app** (`PwaControls`) moved from the header to the footer. Keep new header controls to what a visitor
+  needs on every page; the header row is tight (an extra control once pushed Berunda out of view).
+
+## Geography page: landforms, grouped filters and search
+
+`src/data/geography-landforms.js` adds 26 places the page lacked: eleven peaks and hills with heights where well known
+(Mullayanagiri 1,930 m is the highest), three rock landmarks (Savandurga, Yana, Hampi boulders, Shravanabelagola's twin hills),
+four hill stations, Abbey Falls and seven coastal sites (Murudeshwar, Gokarna, Malpe, St Mary's Island, Maravanthe, Karwar,
+Panambur). Jog, Shivanasamudra and Gokak are now their own `waterfall` type instead of "river". Like the water features, every
+point is an approximate reference location awaiting review, with sources that are pointers (Wikipedia, Karnataka Tourism).
+Heights and coordinates were written from general knowledge and need checking against Survey of India or a gazetteer.
+
+`GeographyNatureExplorer.jsx` now builds one list (`ALL`) from the highlights, protected areas, water features and landforms.
+Filters are five groups (mountains and hills, water, coast and islands, forests and protected areas, climate and plains) with
+sub-filters and counts; a search box matches English and Kannada names; the list beside the map selects a place, flies the map
+to it and opens a detail card (type, height or area, districts, review note, sources). Clicking a marker does the same.
+The landforms also feed the Word Trail catalogue and the dataset counts.
+
+**Still missing, by design or lack of a source:** river courses and catchments, rainfall and soil maps, geology, caves,
+mangrove and wetland extents beyond the four Ramsar sites, and statutory forest boundaries (the page links to Bhuvan). Each
+needs a licensed or official dataset, not memory.

@@ -1,4 +1,5 @@
 import { DonateSection } from './About'
+import { SUPPORT_OPTIONS } from './support-options'
 import './donate.css'
 
 const copy={
@@ -10,7 +11,8 @@ export default function Donate({locale='kn'}){
   const t=copy[locale]||copy.kn
   return <main className="donate-page portal-page" id="donate">
     <section className="donate-hero"><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></section>
-    <DonateSection locale={locale}/>
+    <section className="support-options" aria-label={locale==='kn'?'ಬೆಂಬಲಿಸುವ ಮಾರ್ಗಗಳು':'Ways to support'}><h3>{locale==='kn'?'ಬೆಂಬಲಿಸುವ ಮಾರ್ಗಗಳು':'Ways to support'}</h3><ul>{SUPPORT_OPTIONS.map(o=>{const [title,body]=o[locale]||o.en;return <li key={o.id} className={o.status}><span aria-hidden="true">{o.icon}</span><div><h4>{title}{o.status==='soon'&&<em>{locale==='kn'?'ಶೀಘ್ರದಲ್ಲೇ':'Coming soon'}</em>}</h4><p>{body}</p>{o.status==='live'?<a href={o.href}>{locale==='kn'?'ತೆರೆಯಿರಿ →':'Open →'}</a>:<a href={`mailto:info@sanchifoundation.org?subject=${encodeURIComponent(title)}`}>{locale==='kn'?'ಆಸಕ್ತಿ ತಿಳಿಸಿ →':'Tell us you are interested →'}</a>}</div></li>})}</ul></section>
+    <div id="donate-methods"><DonateSection locale={locale}/></div>
     <p className="donate-alt">{t.other} <a href="#contribute">{t.contribute}</a></p>
   </main>
 }

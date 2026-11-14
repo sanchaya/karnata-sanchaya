@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'nature-menu',view:'geography',href:'#geography',date:'2026-11-14',
+    kn:['ಹೊಸ “ಪ್ರಕೃತಿ” ಮೆನು','ಭೂಗೋಳ, ಪಕ್ಷಿ–ಪ್ರಾಣಿ–ಸಸ್ಯ ಮತ್ತು ವಲಸೆ ಹಕ್ಕಿಗಳು ಈಗ ಒಂದೇ ಮೆನುವಿನಲ್ಲಿ, ಮೇಲಿನ ಸಾಲಿನಲ್ಲಿವೆ.'],
+    en:['New “Nature” menu','Geography, birds, animals and plants, and migratory birds now sit together in the top row.']},
   {id:'migration-page',view:'migration',href:'#migration',date:'2026-11-14',
     kn:['ವಲಸೆ ಹಕ್ಕಿಗಳ ಭೂಗೋಳ (ಹೊಸ ಪುಟ)','ಯಾವ ಹಕ್ಕಿ ಎಲ್ಲಿಂದ ಬರುತ್ತದೆ ಎಂದು ಭೂಗೋಳದ ಮೇಲೆ ಹೆಸರುಗಳೊಂದಿಗೆ ನೋಡಿ; ತಿಂಗಳು ಆರಿಸಿ, ದೇಶ ಅಥವಾ ಹಕ್ಕಿಯನ್ನು ಒತ್ತಿ.'],
     en:['Migration globe (new page)','See which bird comes from where, with names on the globe. Pick a month, then tap a country or a bird.']},

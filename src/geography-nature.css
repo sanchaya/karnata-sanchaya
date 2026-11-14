@@ -17,3 +17,14 @@
 .nature-hero .nature-facts span{font-size:.8rem;font-weight:600;line-height:1.25}
 .nature-hero .nature-facts a{font-size:.7rem}
 @media(max-width:620px){.nature-hero .nature-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Grouped filters, search, place list and detail card */
+.nature-search{width:100%;margin:6px 0 10px;padding:10px 12px;border:1px solid #cddccf;border-radius:10px;font:inherit}
+.nature-filter button small{opacity:.7;font-weight:600}
+.nature-subfilter{margin-top:6px}.nature-subfilter button{font-size:.78rem;background:#f4f8f4}
+.nature-count{margin:10px 0 4px;font-size:.82rem;color:#4b5b51}
+.nature-list{max-height:260px;margin:0 0 10px;padding:0;overflow-y:auto;list-style:none;border:1px solid #e3ece4;border-radius:12px;background:#fff}
+.nature-list li+li{border-top:1px solid #eef3ee}
+.nature-list button{display:flex;align-items:center;gap:9px;width:100%;padding:7px 10px;border:0;background:transparent;text-align:left;font:inherit;cursor:pointer}.nature-list button:hover,.nature-list button.active{background:#eef6f0}
+.nature-list i{flex:none;width:12px;height:12px;border-radius:50%}.nature-list span{display:flex;flex-direction:column;min-width:0}.nature-list strong{font-size:.9rem}.nature-list small{color:#51615a;font-size:.72rem}
+.nature-card{margin:0 0 12px;padding:12px 14px;border:1px solid #cfe1d2;border-radius:14px;background:#f5fbf6}.nature-card h4{margin:0 0 2px}.nature-card p{margin:4px 0}.nature-card-type{font-weight:700;font-size:.82rem}.nature-card-where{color:#4b5b51;font-size:.82rem}.nature-card small{display:block;color:#51615a}

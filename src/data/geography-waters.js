@@ -6,7 +6,7 @@ const t=(en,kn)=>({en,kn})
 const src=['geo-indiawris']
 const dam=(id,coords,en,kn,river,riverKn,districts,districtsKn,year)=>({id:`water-${id}`,type:'dam',coords,name:t(en,kn),detail:t(`Dam and reservoir on the ${river}${year?`, completed ${year}`:''}.`,`${riverKn} ನದಿಯ ಅಣೆಕಟ್ಟು ಮತ್ತು ಜಲಾಶಯ${year?`; ${year}ರಲ್ಲಿ ಪೂರ್ಣ`:''}.`),districts:t(districts,districtsKn),locationPrecision:'approximate',review:{status:'needs-review'},sourceIds:['geo-indiawris','geo-wiki-karnataka-dams']})
 const lake=(id,coords,en,kn,detail,detailKn,districts,districtsKn)=>({id:`water-${id}`,type:'lake',coords,name:t(en,kn),detail:t(detail,detailKn),districts:t(districts,districtsKn),locationPrecision:'approximate',review:{status:'needs-review'},sourceIds:src})
-const river=(id,coords,en,kn,detail,detailKn,districts,districtsKn)=>({id:`water-${id}`,type:'river',coords,name:t(en,kn),detail:t(detail,detailKn),districts:t(districts,districtsKn),locationPrecision:'approximate',review:{status:'needs-review'},sourceIds:src})
+const river=(id,coords,en,kn,detail,detailKn,districts,districtsKn,type='river')=>({id:`water-${id}`,type,coords,name:t(en,kn),detail:t(detail,detailKn),districts:t(districts,districtsKn),locationPrecision:'approximate',review:{status:'needs-review'},sourceIds:src})
 
 export const geographyWaterFeatures=[
   dam('krs',[12.42,76.57],'Krishnarajasagara (KRS) Dam','ಕೃಷ್ಣರಾಜಸಾಗರ (ಕೆಆರ್‌ಎಸ್) ಅಣೆಕಟ್ಟು','Kaveri','ಕಾವೇರಿ','Mandya','ಮಂಡ್ಯ',1932),
@@ -26,9 +26,9 @@ export const geographyWaterFeatures=[
   lake('kukkarahalli',[12.31,76.63],'Kukkarahalli Lake','ಕುಕ್ಕರಹಳ್ಳಿ ಕೆರೆ','A lake in Mysuru beside the university campus.','ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾನಿಲಯದ ಆವರಣದ ಬಳಿಯ ಕೆರೆ.','Mysuru','ಮೈಸೂರು'),
   lake('kamalapura',[15.33,76.46],'Kamalapura Tank (Hampi)','ಕಮಲಾಪುರ ಕೆರೆ (ಹಂಪಿ)','A tank beside the Vijayanagara capital, part of the city’s water system.','ವಿಜಯನಗರ ರಾಜಧಾನಿಯ ಬಳಿಯ ಕೆರೆ; ನಗರದ ಜಲವ್ಯವಸ್ಥೆಯ ಭಾಗ.','Vijayanagara','ವಿಜಯನಗರ'),
   lake('dorasamudra',[13.21,75.99],'Dorasamudra (Dwarasamudra) Lake, Halebidu','ದೋರಸಮುದ್ರ (ದ್ವಾರಸಮುದ್ರ) ಕೆರೆ, ಹಳೇಬೀಡು','The tank beside the Hoysala capital Dorasamudra.','ಹೊಯ್ಸಳರ ರಾಜಧಾನಿ ದೋರಸಮುದ್ರದ ಬಳಿಯ ಕೆರೆ.','Hassan','ಹಾಸನ'),
-  river('jog',[14.23,74.81],'Jog Falls (Sharavathi)','ಜೋಗ ಜಲಪಾತ (ಶರಾವತಿ)','The Sharavathi drops over the Ghats before reaching the Arabian Sea.','ಶರಾವತಿ ನದಿ ಘಟ್ಟದಿಂದ ಧುಮುಕಿ ಅರಬ್ಬಿ ಸಮುದ್ರ ಸೇರುತ್ತದೆ.','Shivamogga and Uttara Kannada','ಶಿವಮೊಗ್ಗ ಮತ್ತು ಉತ್ತರ ಕನ್ನಡ'),
-  river('shivanasamudra',[12.29,77.17],'Shivanasamudra Falls (Kaveri)','ಶಿವನಸಮುದ್ರ ಜಲಪಾತ (ಕಾವೇರಿ)','The Kaveri splits into the Gaganachukki and Bharachukki falls.','ಕಾವೇರಿ ಗಗನಚುಕ್ಕಿ ಮತ್ತು ಭರಚುಕ್ಕಿ ಜಲಪಾತಗಳಾಗಿ ಧುಮುಕುತ್ತದೆ.','Chamarajanagar and Mandya','ಚಾಮರಾಜನಗರ ಮತ್ತು ಮಂಡ್ಯ'),
-  river('gokak',[16.19,74.78],'Gokak Falls (Ghataprabha)','ಗೋಕಾಕ ಜಲಪಾತ (ಘಟಪ್ರಭಾ)','The Ghataprabha falls over a rocky gorge near Gokak.','ಗೋಕಾಕ ಬಳಿ ಘಟಪ್ರಭಾ ನದಿ ಕಲ್ಲಿನ ಕಣಿವೆಗೆ ಧುಮುಕುತ್ತದೆ.','Belagavi','ಬೆಳಗಾವಿ'),
+  river('jog',[14.23,74.81],'Jog Falls (Sharavathi)','ಜೋಗ ಜಲಪಾತ (ಶರಾವತಿ)','The Sharavathi drops over the Ghats before reaching the Arabian Sea.','ಶರಾವತಿ ನದಿ ಘಟ್ಟದಿಂದ ಧುಮುಕಿ ಅರಬ್ಬಿ ಸಮುದ್ರ ಸೇರುತ್ತದೆ.','Shivamogga and Uttara Kannada','ಶಿವಮೊಗ್ಗ ಮತ್ತು ಉತ್ತರ ಕನ್ನಡ','waterfall'),
+  river('shivanasamudra',[12.29,77.17],'Shivanasamudra Falls (Kaveri)','ಶಿವನಸಮುದ್ರ ಜಲಪಾತ (ಕಾವೇರಿ)','The Kaveri splits into the Gaganachukki and Bharachukki falls.','ಕಾವೇರಿ ಗಗನಚುಕ್ಕಿ ಮತ್ತು ಭರಚುಕ್ಕಿ ಜಲಪಾತಗಳಾಗಿ ಧುಮುಕುತ್ತದೆ.','Chamarajanagar and Mandya','ಚಾಮರಾಜನಗರ ಮತ್ತು ಮಂಡ್ಯ','waterfall'),
+  river('gokak',[16.19,74.78],'Gokak Falls (Ghataprabha)','ಗೋಕಾಕ ಜಲಪಾತ (ಘಟಪ್ರಭಾ)','The Ghataprabha falls over a rocky gorge near Gokak.','ಗೋಕಾಕ ಬಳಿ ಘಟಪ್ರಭಾ ನದಿ ಕಲ್ಲಿನ ಕಣಿವೆಗೆ ಧುಮುಕುತ್ತದೆ.','Belagavi','ಬೆಳಗಾವಿ','waterfall'),
   river('tirumakudalu',[12.21,76.9],'Tirumakudalu, confluence of Kaveri and Kabini','ತಿರುಮಕೂಡಲು, ಕಾವೇರಿ–ಕಬಿನಿ ಸಂಗಮ','A river confluence and pilgrimage site near T. Narasipura.','ಟಿ. ನರಸೀಪುರ ಬಳಿಯ ನದಿ ಸಂಗಮ ಮತ್ತು ಯಾತ್ರಾ ಸ್ಥಳ.','Mysuru','ಮೈಸೂರು'),
   river('koodli',[13.93,75.53],'Koodli, where the Tunga and Bhadra meet','ಕೂಡಲಿ, ತುಂಗಾ–ಭದ್ರಾ ಸಂಗಮ','The two rivers join to form the Tungabhadra.','ಎರಡು ನದಿಗಳು ಸೇರಿ ತುಂಗಭದ್ರಾ ಆಗುತ್ತವೆ.','Shivamogga','ಶಿವಮೊಗ್ಗ'),
   river('ganagapur',[17.33,76.97],'Ganagapur, on the Bhima','ಗಾಣಗಾಪುರ, ಭೀಮಾ ನದಿ','A pilgrimage town on the Bhima in the north-eastern plateau.','ಈಶಾನ್ಯ ಪ್ರಸ್ಥಭೂಮಿಯ ಭೀಮಾ ನದಿ ತೀರದ ಯಾತ್ರಾ ಪಟ್ಟಣ.','Kalaburagi','ಕಲಬುರಗಿ'),

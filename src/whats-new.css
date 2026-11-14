@@ -13,3 +13,6 @@
 .whats-new-panel em,.nav-new{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;background:#c0392b;color:#fff;font-size:.6rem;font-style:normal;font-weight:800;letter-spacing:.03em;vertical-align:middle;text-transform:uppercase}
 @media(max-width:700px){.whats-new-panel{left:12px;right:12px!important;width:auto}}
 .activity-bar .whats-new{flex:0 0 auto}.portal-nav>.whats-new{grid-column:1/-1;margin-bottom:6px}
+
+/* On the crowded top row a New badge is a dot, not a word. */
+.nav-new-dot{display:inline-block;width:8px;height:8px;min-width:0;margin-left:5px;padding:0;border-radius:50%;font-size:0;vertical-align:middle}

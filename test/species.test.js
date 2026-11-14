@@ -280,3 +280,36 @@ test('the Leaflet maps that can zoom out to Kashmir carry the official India bou
     assert.match(source,/<IndiaBoundary\/>/,file)
   }
 })
+
+test('the Nature menu, the merged About and contact link and the footer status are wired',async()=>{
+  const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
+  const nature=app.match(/const natureNavItems=(\[.*?\])\n/s)[1],explore=app.match(/const exploreNavItems=(\[.*?\])\n/s)[1]
+  for(const key of ['geography','species','migration']){assert.match(nature,new RegExp(`'${key}'`),key);assert.doesNotMatch(explore,new RegExp(`'${key}'`),`${key} left Explore`)}
+  assert.match(app,/geography:'nature',species:'nature',migration:'nature'/)
+  assert.match(app,/\{key:'nature',label:kn\?'ಪ್ರಕೃತಿ':'Nature',items:natureNavItems\}/)
+  assert.match(app,/navGroup\('nature'/,'the mobile menu has the Nature group')
+  assert.match(app,/const headerUtilityItems=\[\['donate'[^\]]*Support'\]\]/,'the header link is Support')
+  assert.match(app,/className="about-contact-tabs"/)
+  const header=app.slice(app.indexOf('<header><div className="sanchaya-product-brand"'),app.indexOf('<nav id="primary-navigation"'))
+  assert.doesNotMatch(header,/<PwaControls/,'Offline ready is no longer in the header')
+  assert.match(app,/<footer><PwaControls/,'it is in the footer')
+})
+
+test('Project and Contribute are one menu with no duplicates, and the Support page lists ways to help',async()=>{
+  const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
+  assert.doesNotMatch(app,/projectNavItems|accountNavItems/)
+  assert.match(app,/\{key:'community',label:kn\?'ಯೋಜನೆ ಮತ್ತು ಸಹಯೋಗ':'Project & contribute',items:communityNavItems\}/)
+  assert.doesNotMatch(app,/\{key:'(project|account)'/)
+  const items=app.match(/const communityNavItems=(\[.*?\])\n/s)[1]
+  for(const key of ['about','contribute','donate','research-tasks'])assert.equal((items.match(new RegExp(`\\['${key}'`,'g'))||[]).length,1,`${key} appears once`)
+  assert.doesNotMatch(items,/\['contact'/,'Contact is part of About & contact')
+  const nav=app.match(/const (explore|nature|research|india|district)NavItems=\[.*?\]\n/gs).join('')
+  assert.doesNotMatch(nav,/'(about|contribute|donate|contact)'/,'no other menu repeats these')
+  const about=await readFile(new URL('../src/About.jsx',import.meta.url),'utf8')
+  assert.doesNotMatch(about,/<DonateSection/,'the donation block lives on the Support page only')
+  const donate=await readFile(new URL('../src/Donate.jsx',import.meta.url),'utf8')
+  assert.match(donate,/SUPPORT_OPTIONS/);assert.match(donate,/<DonateSection/)
+  const { SUPPORT_OPTIONS }=await import('../src/support-options.js')
+  assert.ok(new Set(SUPPORT_OPTIONS.map(o=>o.id)).size===SUPPORT_OPTIONS.length&&SUPPORT_OPTIONS.some(o=>o.status==='live')&&SUPPORT_OPTIONS.some(o=>o.status==='soon'))
+  for(const o of SUPPORT_OPTIONS){assert.ok(o.kn[0]&&o.kn[1]&&o.en[0]&&o.en[1]&&o.icon,o.id);if(o.status==='live')assert.ok(o.href,`${o.id} needs a link`)}
+})

@@ -89,3 +89,23 @@ test('rivers, dams and lakes are bilingual, approximate, sourced and awaiting re
   }
   assert.match(geographyExplorer,/geographyWaterFeatures/)
 })
+
+test('mountains, hill stations, rock landmarks, waterfalls and coastal sites are bilingual, in Karnataka and awaiting review',async()=>{
+  const { geographyLandforms, geographyLandformSources } = await import('../src/data/geography-landforms.js')
+  const { geographyWaterFeatures } = await import('../src/data/geography-waters.js')
+  const ids=new Set(geographyLandformSources.map(source=>source.id))
+  for(const type of ['mountain','hill-station','landmark','waterfall','coast-site'])assert.ok(geographyLandforms.some(item=>item.type===type),`${type} is missing`)
+  assert.ok(geographyWaterFeatures.some(item=>item.type==='waterfall'),'the three big falls are waterfalls')
+  assert.equal(new Set(geographyLandforms.map(item=>item.id)).size,geographyLandforms.length)
+  for(const item of geographyLandforms){
+    assert.ok(item.name.en&&item.name.kn&&item.detail.en&&item.detail.kn&&item.districts.en&&item.districts.kn,`${item.id} needs bilingual text`)
+    const [lat,lng]=item.coords
+    assert.ok(lat>11.5&&lat<18.5&&lng>74&&lng<78.6,`${item.id} lies outside Karnataka`)
+    assert.equal(item.review.status,'needs-review');assert.equal(item.locationPrecision,'approximate')
+    if(item.elevationM)assert.ok(Number.isFinite(item.elevationM)&&item.elevationM>300&&item.elevationM<2000,`${item.id} height`)
+    for(const id of item.sourceIds)assert.ok(ids.has(id),`${item.id} has unknown source ${id}`)
+  }
+  const peaks=geographyLandforms.filter(item=>item.type==='mountain'&&item.elevationM).sort((a,b)=>b.elevationM-a.elevationM)
+  assert.equal(peaks[0].id,'land-mullayanagiri','Mullayanagiri is the highest peak')
+  assert.match(geographyExplorer,/geographyLandforms/);assert.match(geographyExplorer,/nature-search/)
+})
