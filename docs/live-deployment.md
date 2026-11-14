@@ -153,3 +153,7 @@ The species page loads recent sightings from the GBIF API in the browser, so the
 `connect-src 'self' https://tile.openstreetmap.org https://api.gbif.org`. If a CDN or proxy sets its own CSP, add
 `https://api.gbif.org` there too. The new public endpoint `GET /api/species/community` is covered by the normal
 deployment; `npm run species:export-names` (run on the server) writes approved names back to the repository file.
+
+## Visitor statistics
+
+Run `npm run db:migrate` to add migration `016_site_visits.sql`, then redeploy. See [visitor statistics](visitor-stats.md) for what is counted, what is not, and the privacy sentence to add.

@@ -1,0 +1,4 @@
+.admin-visitors{display:grid;gap:12px;margin:14px 0;padding:14px 16px;border:1px solid #d9dfe8;border-radius:14px;background:#fff}
+.admin-visitors dl{display:flex;flex-wrap:wrap;gap:8px 26px;margin:8px 0}.admin-visitors dl div{display:flex;flex-direction:column}.admin-visitors dt{font-size:.74rem;color:#5b6572}.admin-visitors dd{margin:0;font-size:1.6rem;font-weight:800;color:#233a8a}
+.admin-visitors table{border-collapse:collapse;font-size:.82rem;max-width:520px}.admin-visitors th,.admin-visitors td{padding:3px 10px;text-align:right;border-bottom:1px solid #eef1f5}.admin-visitors th:first-child,.admin-visitors td:first-child{text-align:left}
+.admin-visitors-live,.admin-visitors small{font-size:.78rem;color:#5b6572}

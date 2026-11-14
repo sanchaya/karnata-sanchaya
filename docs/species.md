@@ -138,3 +138,5 @@ The live portal has MariaDB, so species names do not wait for a redeploy:
    deploy.
 
 No schema migration is involved: it reads the existing `contributions` and `users` tables.
+
+Readers are pointed to these features by the **What's new** button in the header and "New" badges on menu items (`src/whats-new.js`; add new entries at the top, newest first). An item is marked seen when the reader opens it or visits its page, and the list is kept in `localStorage`.

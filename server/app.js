@@ -14,6 +14,7 @@ import { emailDeliveryConfigured, sendPasswordResetEmail } from './mailer.js'
 import { notificationSettingsSummary, saveNotificationSettings, sendPortalNotifications } from './notifications.js'
 import { PUBLIC_DATA_ATTRIBUTION } from '../src/data/public-attribution.js'
 import { speciesCommunity } from './species-community.js'
+import { isBot, LiveSessions, parsePing, visitorHash } from './visits.js'
 import { buildIndex, createLimiter, effectiveMode as effectiveBerundaMode, loadSettings as loadBerundaSettings, retrievalAnswer, runBerunda, saveSettings as saveBerundaSettings, validateAsk } from './berunda.js'
 
 config.assertProductionSecrets()
@@ -353,6 +354,24 @@ app.post('/api/reviews/:contributionId',requireUser,requireApproved,requireRole(
   const outcome=await transaction(async db=>{const rows=await db.query('SELECT * FROM contributions WHERE id=? FOR UPDATE',[req.params.contributionId]);const contribution=rows[0];if(!contribution||contribution.status!=='submitted')throw Object.assign(new Error('Contribution is no longer awaiting review.'),{status:409});if(contribution.contributor_id===req.user.id)throw Object.assign(new Error('Reviewers cannot decide their own contributions.'),{status:403});const normalizedContribution={...contribution,record:safeJson(contribution.proposed_record_json)};const assessment=normalizeTranslationAssessment(req.body?.assessment);const approvalIssues=translationApprovalIssues({decision,contribution:normalizedContribution,assessment});if(approvalIssues.length)throw Object.assign(new Error(approvalIssues.join(' ')),{status:422});const reviewId=randomUUID();await db.query(`INSERT INTO contribution_reviews (id,contribution_id,reviewer_id,contribution_version,decision,language_code,review_scope,public_comment,private_note,assessment_json) VALUES (?,?,?,?,?,?,?,?,?,?)`,[reviewId,contribution.id,req.user.id,contribution.version,decision,assessment.languageCode||null,assessment.reviewScope||null,publicComment,clean(req.body?.privateNote,10000)||null,contribution.action==='translation'?JSON.stringify(assessment):null]);const status=decision==='approve'?'approved':decision==='request-changes'?'changes-requested':'rejected';await db.query('UPDATE contributions SET status=?,decided_at=UTC_TIMESTAMP(3) WHERE id=?',[status,contribution.id]);if(decision==='approve'){const citations=safeJson(contribution.citations_json)||[];const contributorPoints=20+Math.min(citations.length,5)*2;await db.query(`INSERT INTO karma_ledger (id,user_id,contribution_id,points,reason,note,created_by) VALUES (?,?,?,?,?,?,?)`,[randomUUID(),contribution.contributor_id,contribution.id,contributorPoints,'approved-contribution',`Approved contribution with ${citations.length} citation(s).`,req.user.id]);await db.query(`INSERT INTO karma_ledger (id,user_id,review_id,points,reason,note,created_by) VALUES (?,?,?,?,?,?,?)`,[randomUUID(),req.user.id,reviewId,5,'approved-review','Completed an approval review.',req.user.id])}await notify(db,contribution.contributor_id,'review','Contribution review completed','ಕೊಡುಗೆ ಪರಿಶೀಲನೆ ಪೂರ್ಣಗೊಂಡಿದೆ',`Your contribution “${contribution.title}” is ${status}. ${publicComment}`,`“${contribution.title}” ಕೊಡುಗೆಯ ಸ್ಥಿತಿ: ${status}. ${publicComment}`,'contribution',contribution.id);await audit(db,req.user.id,`contribution.${status}`,'contribution',contribution.id,{reviewId,decision,reviewScope:assessment.reviewScope||null,languageCode:assessment.languageCode||null});return {status,reviewId}});res.json({ok:true,...outcome})
 })
 
+const liveVisits=new LiveSessions(),visitSecret=config.documentEncryptionKey||randomUUID()
+app.post('/api/visits/ping',rateLimit('visit-ping',240,60*1000),async(req,res)=>{
+  const ping=parsePing(req.body);if(!ping||isBot(req.get('user-agent')))return res.status(204).end()
+  const visitor=visitorHash(visitSecret,ping.v),session=visitorHash(visitSecret,`s:${ping.s}`),fresh=liveVisits.touch(session,visitor,ping.view)
+  if(ping.kind==='view')try{
+    const sessions=fresh?1:0
+    await pool.query('INSERT INTO site_visitors (visitor_hash,sessions,views) VALUES (?,?,1) ON DUPLICATE KEY UPDATE last_seen=UTC_TIMESTAMP(3),sessions=sessions+VALUES(sessions),views=views+1',[visitor,sessions])
+    await pool.query('INSERT INTO site_visitor_days (day,visitor_hash,sessions,views) VALUES (UTC_DATE(),?,?,1) ON DUPLICATE KEY UPDATE sessions=sessions+VALUES(sessions),views=views+1',[visitor,sessions])
+  }catch{/* counting must never break the page */}
+  res.status(204).end()
+})
+app.get('/api/administration/visitors',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
+  const days=Math.min(90,Math.max(1,Number(req.query.days)||30))
+  const total=(await pool.query('SELECT COUNT(*) visitors,COALESCE(SUM(sessions),0) sessions,COALESCE(SUM(views),0) views FROM site_visitors'))[0]||{}
+  const daily=await pool.query('SELECT day,COUNT(*) visitors,SUM(sessions) sessions,SUM(views) views FROM site_visitor_days WHERE day>=DATE_SUB(UTC_DATE(),INTERVAL ? DAY) GROUP BY day ORDER BY day DESC',[days-1])
+  const rows=daily.map(row=>({day:String(row.day instanceof Date?row.day.toISOString():row.day).slice(0,10),visitors:Number(row.visitors),sessions:Number(row.sessions),views:Number(row.views)}))
+  res.set('Cache-Control','no-store').json({live:liveVisits.snapshot(),total:{visitors:Number(total.visitors||0),sessions:Number(total.sessions||0),views:Number(total.views||0)},daily:rows,note:'Days are UTC. "Live" counts sessions with a heartbeat in the last 2 minutes on this server process.'})
+})
 app.get('/api/species/community',rateLimit('species-community',120,60*60*1000),async(req,res)=>{const rows=await pool.query(`SELECT c.target_record_id,c.proposed_record_json,c.decided_at,u.id user_id,u.display_name,u.display_name_kn FROM contributions c JOIN users u ON u.id=c.contributor_id WHERE c.record_type='species' AND c.status='approved' AND u.account_status='approved' ORDER BY c.decided_at ASC LIMIT 5000`);res.set('Cache-Control','public, max-age=60');res.json(speciesCommunity(rows))})
 app.get('/api/community/leaderboard',async(req,res)=>{const rows=await pool.query(`SELECT u.id,u.display_name,u.display_name_kn,u.profession,u.institution_name,u.verified_badge,COALESCE(SUM(k.points),0) karma FROM users u LEFT JOIN karma_ledger k ON k.user_id=u.id WHERE u.account_status='approved' GROUP BY u.id ORDER BY karma DESC,u.display_name ASC LIMIT 100`);res.json({people:rows.map(row=>({...row,verified_badge:Boolean(row.verified_badge),karma:Number(row.karma)}))})})
 

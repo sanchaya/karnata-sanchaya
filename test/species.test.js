@@ -156,3 +156,33 @@ test('globe helpers decode countries, project the sphere and build arcs',async()
   assert.equal(arc.length,11);assert.ok(Math.abs(arc[5][0]-45)<1e-6&&Math.abs(arc[5][1])<1e-6)
   assert.deepEqual(aggregateRoutes([{gbifKey:1},{gbifKey:2}],{1:{countries:[{id:643},{id:496}]},2:{countries:[{id:643}]}}),[{id:643,weight:2},{id:496,weight:1}])
 })
+
+test('visit tracking hashes ids, ignores bots and bad pings, and counts live sessions',async()=>{
+  const { isBot, LiveSessions, parsePing, visitorHash }=await import('../server/visits.js')
+  const id='0f8fad5b-d9cb-469f-a165-70867728950e'
+  assert.equal(visitorHash('k',id),visitorHash('k',id))
+  assert.notEqual(visitorHash('k',id),visitorHash('other',id))
+  assert.equal(visitorHash('k',id).length,32);assert.ok(!visitorHash('k',id).includes('0f8fad5b'))
+  assert.ok(isBot('Googlebot/2.1')&&isBot('')&&!isBot('Mozilla/5.0 (Macintosh) Safari/605'))
+  assert.deepEqual(parsePing({v:id,s:id,view:'species',kind:'view'}),{v:id,s:id,view:'species',kind:'view'})
+  for(const bad of [null,{},{v:'x',s:id,view:'a',kind:'view'},{v:id,s:id,view:'A B',kind:'view'},{v:id,s:id,view:'a',kind:'hack'}])assert.equal(parsePing(bad),null)
+  const live=new LiveSessions(120000),t0=1000000
+  assert.equal(live.touch('s1','v1','species',t0),true)
+  assert.equal(live.touch('s1','v1','species',t0+60000),false)
+  assert.equal(live.touch('s2','v1','atlas',t0+60000),true)
+  assert.deepEqual(live.snapshot(t0+60000),{sessions:2,visitors:1,byView:{species:1,atlas:1}})
+  assert.equal(live.snapshot(t0+400000).sessions,0)
+  assert.equal(live.touch('s1','v1','species',t0+400000),true,'a session silent for over 2 minutes starts a new visit')
+  const migration=await readFile(new URL('../server/migrations/016_site_visits.sql',import.meta.url),'utf8')
+  assert.match(migration,/site_visitors/);assert.doesNotMatch(migration,/^\s*(ip|ip_address|user_agent)\s/im,'no IP or user-agent column')
+})
+
+test("what's new items are bilingual, unique and tracked per page",async()=>{
+  const { WHATS_NEW, unseenItems, idsVisited }=await import('../src/whats-new.js')
+  assert.equal(new Set(WHATS_NEW.map(i=>i.id)).size,WHATS_NEW.length)
+  for(const item of WHATS_NEW){assert.ok(item.kn[0]&&item.kn[1]&&item.en[0]&&item.en[1]&&item.view&&item.href,item.id)}
+  assert.equal(unseenItems([]).length,WHATS_NEW.length)
+  assert.equal(unseenItems(WHATS_NEW.map(i=>i.id)).length,0)
+  assert.ok(idsVisited('species').includes('species-page')&&!idsVisited('aata-paata','').includes('bird-quiz'))
+  assert.ok(idsVisited('aata-paata','?game=bird&puzzle=2026-11-14').includes('bird-quiz'))
+})
