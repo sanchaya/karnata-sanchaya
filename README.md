@@ -119,13 +119,26 @@ Add a regression test for every new page, map layer, timeline category or
 cross-collection relationship. The public dataset must exclude private reviewer
 notes, institution IDs, unapproved drafts and moderation data.
 
-## Licence and scholarly policy
+## Licence and non-commercial use
 
-This repository includes software, structured research leads and links to
-third-party sources. Source rights and image licences remain item-specific.
-Discovery portals and OCR are pointers only; publication claims should cite
-primary editions, institutional registers, authority records or independently
-reviewed field documentation with page/item locators.
+**This project is for non-commercial use only.** The Karnataka Historical Atlas is a non-profit educational and research project of
+Sanchaya (now part of Sanchi Foundation). What the project created is offered for study, teaching, research, journalism and personal
+use with attribution, and **may not be used commercially without written permission** (info@sanchifoundation.org). The source is
+*available*, not open source in the OSI sense.
+
+- **Software:** [PolyForm Noncommercial 1.0.0](LICENSES/PolyForm-Noncommercial-1.0.0.md).
+- **Original data, text and documentation:** [CC BY-NC-SA 4.0](LICENSES/CC-BY-NC-SA-4.0.txt).
+- **Logos and artwork:** all rights reserved.
+- **Third-party data keeps its own licence** (Natural Earth, OpenStreetMap, GBIF/eBird, Wikidata, Wikimedia Commons photos and
+  others). Some of it allows commercial use on its own; follow each item's licence.
+
+**[LICENSING.md](LICENSING.md)** lists every kind of data in this project with its source, licence and what you must do, the
+dependency licences, how to cite, and the open items for the owner. **[Data we still need](docs/data-wanted.md)** lists the datasets
+we are looking for; the portal's **Data wanted** page lets anyone point us to a source.
+
+Research leads remain visibly `needs-review`. Source rights and image licences are item-specific. Discovery portals and OCR are
+pointers only; publication claims should cite primary editions, institutional registers, authority records or independently reviewed
+field documentation with page/item locators.
 
 Public JSON exports and the live dataset API carry the canonical origin
 `https://karnata.sanchaya.net`, a compact origin token and a payload

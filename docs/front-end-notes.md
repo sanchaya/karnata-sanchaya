@@ -151,3 +151,17 @@ The landforms also feed the Word Trail catalogue and the dataset counts.
 rainfall and soil as mapped layers (IMD, NBSS&LUP), geological maps (GSI), catchment polygons (HydroSHEDS or India-WRIS),
 agro-climatic zones as polygons, natural cave systems and mangrove extents. If you can supply or license one of these, it can be
 added the same way as the rivers.
+
+## Licensing and the Data wanted page
+
+- **Licensing.** `LICENSING.md` (repository root, linked from the README and from the footer's "Non-commercial use only · Licence"
+  link) states that the project is non-commercial and lists every kind of data with its source, licence and obligations, the
+  dependency licences, how to cite, and the open items for the owner. The project's own terms are PolyForm Noncommercial 1.0.0 for
+  software and CC BY-NC-SA 4.0 for original data and text (full texts in `LICENSES/`); third-party data keeps its own licence. When you
+  add a data source, add it to `LICENSING.md` §3 in the same change (`test/licensing.test.js` checks the main topics and that the
+  production dependencies are listed). The ownership and licence gaps we could not settle from the repository are in §9; they need
+  the owner's decision and legal review.
+- **Data wanted** (`#data-wanted`, Project & contribute > Data wanted; `src/DataWanted.jsx`, list in `src/data/data-wanted.js`,
+  mirrored in `docs/data-wanted.md`, kept in step by a test). Each item shows what we need and who might hold it, with an "I know a
+  source" button that opens the existing contribution form for a new source (an account is needed; the static mirror links to the main
+  site) and an email link. To close an item, record the source in `LICENSING.md` §3 and delete it from both lists.

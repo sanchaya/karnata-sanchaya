@@ -51,3 +51,7 @@ Object.assign(seoPages,{
 Object.assign(seoPages,{
   migration:{kn:['ವಲಸೆ ಹಕ್ಕಿಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕಕ್ಕೆ ಬರುವ ವಲಸೆ ಹಕ್ಕಿಗಳು ಎಲ್ಲಿಂದ ಬರುತ್ತವೆ ಎಂದು ಭೂಗೋಳದಲ್ಲಿ ನೋಡಿ; ಹಕ್ಕಿಗಳ ಹೆಸರು ಮತ್ತು ತಿಂಗಳುಗಳು.'],en:['Migratory birds · Karnataka Historical Atlas','See on a globe where Karnataka’s migratory birds come from, with their names and the months they are here.']},
 })
+
+Object.assign(seoPages,{
+  'data-wanted':{kn:['ನಮಗೆ ಬೇಕಾದ ದತ್ತಾಂಶ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಅರಣ್ಯ ಗಡಿ, ಮಳೆ, ಮಣ್ಣು, ಶಾಸನ ಪಠ್ಯ, ಕನ್ನಡ ಹೆಸರುಗಳು ಮತ್ತು ಇನ್ನಷ್ಟು: ಈ ದತ್ತಾಂಶ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ ಎಂದು ನಮಗೆ ತಿಳಿಸಿ.'],en:['Data wanted · Karnataka Historical Atlas','Forest boundaries, rainfall, soil, inscription texts, Kannada names and more: tell us where this data can be found.']},
+})

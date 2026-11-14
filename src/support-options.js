@@ -1,7 +1,8 @@
 // Ways to support the atlas, shown on the Support page (#donate). Add a new option here when it becomes real: status "live" shows
-// a link, status "soon" shows a "Coming soon" tag and a way to say you are interested. Do not list something as live before it works.
+// a link (`href` must be a real page hash such as #contribute; the app picks its page from the hash, so an in-page anchor sends
+// readers home. Use `scrollTo: '<element id>'` to scroll within the Support page), status "soon" shows a "Coming soon" tag and a way to say you are interested. Do not list something as live before it works.
 export const SUPPORT_OPTIONS=[
-  {id:'donate',status:'live',icon:'♥',href:'#donate-methods',
+  {id:'donate',status:'live',icon:'♥',href:'#donate',scrollTo:'donate-methods',
     kn:['ದೇಣಿಗೆ ನೀಡಿ','UPI, ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ ಅಥವಾ ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ; ರಸೀದಿಗೆ ಸಂಪರ್ಕಿಸಿ.'],en:['Donate','By UPI, bank transfer or online; ask us for a receipt.']},
   {id:'contribute',status:'live',icon:'✎',href:'#contribute',
     kn:['ತಿದ್ದುಪಡಿ ಅಥವಾ ಕನ್ನಡ ಹೆಸರು ಸೂಚಿಸಿ','ಉಚಿತ ಖಾತೆ ತೆರೆದು ಆಕರ ಸಹಿತ ಸೂಚಿಸಿ; ಕೊಡುಗೆದಾರರ ಪಟ್ಟಿ ಮತ್ತು ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಿರಿ.'],en:['Suggest a correction or a Kannada name','Open a free account and suggest changes with a source; earn a place on the contributors’ board and a certificate.']},

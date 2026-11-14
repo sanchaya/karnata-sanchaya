@@ -313,3 +313,15 @@ test('Project and Contribute are one menu with no duplicates, and the Support pa
   assert.ok(new Set(SUPPORT_OPTIONS.map(o=>o.id)).size===SUPPORT_OPTIONS.length&&SUPPORT_OPTIONS.some(o=>o.status==='live')&&SUPPORT_OPTIONS.some(o=>o.status==='soon'))
   for(const o of SUPPORT_OPTIONS){assert.ok(o.kn[0]&&o.kn[1]&&o.en[0]&&o.en[1]&&o.icon,o.id);if(o.status==='live')assert.ok(o.href,`${o.id} needs a link`)}
 })
+
+test('every live Support option opens a real page or scrolls within the Support page',async()=>{
+  const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
+  const views=new Set(app.match(/const publicViews=\[([^\]]*)\]/)[1].split(',').map(v=>v.trim().replace(/'/g,'')))
+  const donate=await readFile(new URL('../src/Donate.jsx',import.meta.url),'utf8')
+  const { SUPPORT_OPTIONS }=await import('../src/support-options.js')
+  for(const o of SUPPORT_OPTIONS.filter(o=>o.status==='live')){
+    assert.ok(views.has(o.href.replace(/^#/,'')),`${o.id} links to #${o.href} which is not a page`)
+    if(o.scrollTo)assert.match(donate,new RegExp(`id="${o.scrollTo}"`),`${o.id} scrolls to a missing element`)
+  }
+  assert.match(donate,/event\.preventDefault\(\);document\.getElementById\(o\.scrollTo\)/)
+})

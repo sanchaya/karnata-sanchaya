@@ -1,6 +1,7 @@
 {
   "name": "karnataka-kingdoms-atlas",
   "private": true,
+  "license": "SEE LICENSE IN LICENSING.md",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
