@@ -119,3 +119,20 @@ answer key on the last page. Print it and use it in class.
 
 **ಕನ್ನಡ:** ತಪ್ಪು ಕಂಡರೆ ತಿದ್ದುಪಡಿ ಸೂಚಿಸಿ — ಅಟ್ಲಸ್ ಎಲ್ಲರ ಸಹಭಾಗಿತ್ವದಿಂದ ಬೆಳೆಯುತ್ತದೆ. 🙏
 **English:** Spot a mistake? Suggest a correction. The atlas grows with everyone's help. 🙏
+
+---
+
+## Share images
+
+`scripts/share-cards/` makes one 1080x1080 image per post above, in Kannada and in English (16 files:
+`launch`, `word`, `year`, `crossword`, `where`, `who`, `script`, `worksheet`, each as `.kn.png` and `.en.png`).
+Edit the text and illustrations in `cards.mjs`, then:
+
+```bash
+npm i --no-save playwright && npx playwright install chromium
+node scripts/share-cards/generate.mjs output/share-cards
+```
+
+If Playwright is installed elsewhere, point `PLAYWRIGHT` at its `index.mjs`. The images are ignored by git. The
+Kannada text on them is a draft and needs proofreading before posting; the example scores, words and clues are
+illustrations, not a real day's puzzle.
