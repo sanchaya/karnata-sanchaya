@@ -239,7 +239,7 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
     ],
     'aata-paata':[
       tourStep('.aata-paata-hero','ಆಟ–ಪಾಠ · ಆಡಿ ಕಲಿಯಿರಿ','Play with words, years and clues generated from atlas records.'),
-      tourStep('.aata-game-tabs','ಮೂರು ಆಟಗಳು · ಆಟವನ್ನು ಆರಿಸಿ','Switch between Word Trail, Time Grid and History Crossword.'),
+      tourStep('.aata-game-tabs','ನಾಲ್ಕು ಆಟಗಳು · ಆಟವನ್ನು ಆರಿಸಿ','Switch between Word Trail, Time Grid, History Crossword and Where is it?.'),
       tourStep('.aata-game-stage','ಅಟ್ಲಸ್ ಆಧಾರಿತ ಆಟ · ದಾಖಲೆಗೆ ಹಿಂತಿರುಗಿ','Solve the puzzle, use its hint and open the underlying atlas record when available.'),
     ],
     evidence:[

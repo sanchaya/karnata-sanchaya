@@ -16,6 +16,26 @@ rather than a second hand-maintained question bank.
   same word catalogue. Clues carry the record ID, type and route back to the
   relevant atlas section.
 
+- **ಎಲ್ಲಿದೆ? · Where is it?:** five atlas places a day inside Karnataka
+  (`buildWhereRounds` in `src/aata-where.js`). The player drops a pin on a map;
+  the score is 1000 on the spot, falling in a straight line to 0 at 400 km. A
+  place that was a capital or holds a catalogued inscription is clued by that
+  fact. Every round ends by showing the true place, the distance and, for
+  records still awaiting review, a note saying so. Records awaiting review are
+  used on purpose; the games are meant to draw attention to them.
+
+## Learning after the game
+
+- Word Trail hints open in steps: the kind of record after two guesses, the
+  clue after three, the first letter after five. When the game ends the answer,
+  its clue, a review note and a link to the atlas page are shown.
+- Each game shows played, won, day streak and best streak
+  (`src/aata-stats.js`, stored per game under `atlas-aata-stats:<game>`). Only a
+  puzzle played on its own day moves the streak, so the archive cannot inflate
+  it; the weekly crossword keeps totals only.
+- A finished game can be shared as text. Word Trail shares the coloured grid
+  without letters, Where is it? shares the score and a coloured square per round.
+
 ## Archive and Kannada typing
 
 The archive control opens any daily puzzle from the launch date and moves

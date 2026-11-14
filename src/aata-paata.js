@@ -55,10 +55,16 @@ export const buildWordCatalog=(atlasData,geography,locale='kn')=>{
   const items=[]
   const add=(records,type,route,hint)=>records.forEach(record=>{
     const answer=singleWord(localized(record.name||record.title,locale),locale)
-    if(answer)items.push({id:record.id,answer,type,route,hint:hint(record)})
+    if(answer)items.push({id:record.id,answer,type,route,review:record.review?.status||null,hint:hint(record)})
   })
   add(atlasData.polities||[],'polity','dynasties',record=>locale==='kn'?`${yearLabel(record.date,locale)} ಅವಧಿಯ ರಾಜವಂಶ`:`A polity dated ${yearLabel(record.date,locale)}`)
-  add(atlasData.places||[],'place','atlas',record=>locale==='kn'?'ಅಟ್ಲಸ್‌ನ ಐತಿಹಾಸಿಕ ಸ್ಥಳ':'A historical place in the atlas')
+  const capitalOf=new Map((atlasData.polities||[]).filter(polity=>polity.capitalId).map(polity=>[polity.capitalId,polity])),siteOf=new Map((atlasData.inscriptions||[]).filter(record=>record.placeId).map(record=>[record.placeId,record]))
+  add(atlasData.places||[],'place','atlas',record=>{
+    const capital=capitalOf.get(record.id),site=siteOf.get(record.id)
+    if(capital)return locale==='kn'?`${localized(capital.name,locale)} ರಾಜವಂಶದ ರಾಜಧಾನಿ`:`Capital of the ${localized(capital.name,locale)}`
+    if(site)return locale==='kn'?`${localized(site.name,locale)} ಇಲ್ಲಿದೆ`:`Site of the ${localized(site.name,locale)}`
+    return locale==='kn'?'ಅಟ್ಲಸ್‌ನ ಐತಿಹಾಸಿಕ ಸ್ಥಳ':'A historical place in the atlas'
+  })
   add(atlasData.works||[],'work','literature',record=>locale==='kn'?`${localized(record.creator,locale)} ಅವರೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಕೃತಿ`:`A work associated with ${localized(record.creator,locale)}`)
   add(atlasData.inscriptions||[],'inscription','epigraphy',record=>locale==='kn'?`${yearLabel(record.date,locale)} ಕಾಲದ ಶಾಸನ`:`An inscription dated ${yearLabel(record.date,locale)}`)
   add(geography.protectedAreas||[],'nature','geography',record=>locale==='kn'?`${localized(record.districts,locale)} ಪ್ರದೇಶದ ಸಂರಕ್ಷಿತ ತಾಣ`:`A protected landscape in ${localized(record.districts,locale)}`)
