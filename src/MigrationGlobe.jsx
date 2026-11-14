@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import world from './data/species/world-110m.json'
+import world from './data/species/world-countries.json'
 import { decodeCountries, greatCircle, KARNATAKA, project } from './globe'
 
 const COUNTRIES=decodeCountries(world)

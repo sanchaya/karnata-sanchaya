@@ -11,6 +11,7 @@ import DynastyHelpWanted from './DynastyHelpWanted'
 import DynastyProfile from './DynastyProfile'
 import SearchBox from './SearchBox'
 import './script-fonts.css'
+import IndiaBoundary from './IndiaBoundary'
 
 const URL_TEXT = 'karnata.sanchaya.net'
 const COLS = 6, CELL_W = 360, CELL_H = 520, W = COLS * CELL_W + 100
@@ -154,7 +155,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
       <SearchBox label={u.search} placeholder={u.searchHint} emptyText={u.noMatch} items={searchItems} onPick={item => pickFromList(DYNASTY_PHASES.find(phase => phase.id === item.id))} />
       <section className="dynasty-live" aria-label={t.title}>
         <div className="dyn-stage">
-        <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
+        <MapContainer bounds={[[9.5, 73.5], [19.5, 80.5]]} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}><IndiaBoundary/>
           <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <InvalidateOnShow visible={tab === 'map'} />
           <FitEvidence phases={phases} year={year} />

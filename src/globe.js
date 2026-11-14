@@ -2,14 +2,13 @@
 const RAD=Math.PI/180
 export const KARNATAKA=[76.0,15.0] // [lon, lat]
 
-export function decodeCountries(topo){
-  const {scale,translate}=topo.transform
-  const arcs=topo.arcs.map(arc=>{let x=0,y=0;return arc.map(([dx,dy])=>{x+=dx;y+=dy;return [x*scale[0]+translate[0],y*scale[1]+translate[1]]})})
-  const ring=indexes=>indexes.flatMap((i,k)=>{const a=i<0?[...arcs[~i]].reverse():arcs[i];return k?a.slice(1):a})
-  return topo.objects.countries.geometries.map(g=>{
-    const polygons=(g.type==='Polygon'?[g.arcs]:g.type==='MultiPolygon'?g.arcs:[]).map(polygon=>polygon.map(ring))
+// data: src/data/species/world-countries.json, built by scripts/build-world-outline.py from Natural Earth's boundaries as seen from
+// India (the official map of India). Rings are stored as flat [lon, lat, lon, lat ...] arrays.
+export function decodeCountries(data){
+  return data.countries.map(c=>{
+    const polygons=c.polygons.map(poly=>poly.map(flat=>{const ring=[];for(let i=0;i<flat.length;i+=2)ring.push([flat[i],flat[i+1]]);return ring}))
     const outer=polygons.map(p=>p[0]).sort((a,b)=>b.length-a.length)[0]||[]
-    return {id:Number(g.id),name:g.properties?.name||'',polygons,centroid:centroidOf(outer)}
+    return {id:c.id,name:c.name,polygons,centroid:centroidOf(outer)}
   })
 }
 // Mean latitude, circular mean longitude (so Russia and Fiji, which cross 180 degrees, stay sensible).

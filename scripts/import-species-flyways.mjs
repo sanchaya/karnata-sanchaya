@@ -21,6 +21,8 @@ const getJson=async url=>{
 await mkdir(cacheDir,{recursive:true})
 const {species}=JSON.parse(await readFile(path.join(root,'src/data/species/karnataka-species.json'),'utf8'))
 const iso2ToNumeric=new Map((await getJson('https://api.gbif.org/v1/enumeration/country')).map(c=>[c.iso2,Number(c.isoNumerical)]))
+// Territories with no outline of their own on the globe are counted with their country.
+const ALIAS=new Map([[312,250],[744,578]])   // Guadeloupe -> France, Svalbard and Jan Mayen -> Norway
 const flyways={}
 const birds=species.filter(s=>s.group==='bird'&&s.seasonality?.migratory===true)
 let next=0
@@ -31,7 +33,7 @@ await Promise.all(Array.from({length:5},async()=>{while(next<birds.length){
     const data=await getJson(`https://api.gbif.org/v1/occurrence/search?datasetKey=${EBIRD}&speciesKey=${s.gbifKey}&${months}&limit=0&facet=country&facetLimit=15`)
     const counts=(data.facets?.[0]?.counts||[]).filter(c=>c.name!=='IN'&&iso2ToNumeric.has(c.name))
     const total=counts.reduce((a,c)=>a+c.count,0)
-    const countries=counts.filter(c=>c.count>=3&&c.count/total>=.03).slice(0,6).map(c=>({id:iso2ToNumeric.get(c.name),n:c.count,share:Math.round(c.count/total*100)/100}))
+    const countries=[...counts.filter(c=>c.count>=3&&c.count/total>=.03).reduce((m,c)=>{const id=ALIAS.get(iso2ToNumeric.get(c.name))??iso2ToNumeric.get(c.name);const e=m.get(id)||{id,n:0,share:0};e.n+=c.count;e.share=Math.round((e.share+c.count/total)*100)/100;return m.set(id,e)},new Map()).values()].sort((a,b)=>b.n-a.n).slice(0,6)
     // Indian states in the same months (Himalayan and northern breeders), merged case-insensitively, Karnataka left out.
     const stateData=await getJson(`https://api.gbif.org/v1/occurrence/search?datasetKey=${EBIRD}&speciesKey=${s.gbifKey}&country=IN&${months}&limit=0&facet=stateProvince&facetLimit=30`)
     const merged=new Map()

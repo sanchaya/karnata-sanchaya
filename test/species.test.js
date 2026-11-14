@@ -143,10 +143,10 @@ test('approved species contributions become live names and a leaderboard',async(
 
 test('globe helpers decode countries, project the sphere and build arcs',async()=>{
   const { decodeCountries, greatCircle, project, aggregateRoutes, KARNATAKA }=await import('../src/globe.js')
-  const topo=JSON.parse(await readFile(new URL('../src/data/species/world-110m.json',import.meta.url),'utf8'))
-  const countries=decodeCountries(topo)
+  const world=JSON.parse(await readFile(new URL('../src/data/species/world-countries.json',import.meta.url),'utf8'))
+  const countries=decodeCountries(world)
   const india=countries.find(c=>c.id===356),russia=countries.find(c=>c.id===643)
-  assert.ok(countries.length>150&&india.polygons.length>0)
+  assert.ok(countries.length>200&&india.polygons.length>0)
   assert.ok(india.centroid[0]>70&&india.centroid[0]<90&&india.centroid[1]>15&&india.centroid[1]<30,'India centroid')
   assert.ok(russia.centroid[1]>50,'Russia centroid')
   const centre=project(KARNATAKA,KARNATAKA)
@@ -155,6 +155,19 @@ test('globe helpers decode countries, project the sphere and build arcs',async()
   const arc=greatCircle([0,0],[90,0],10)
   assert.equal(arc.length,11);assert.ok(Math.abs(arc[5][0]-45)<1e-6&&Math.abs(arc[5][1])<1e-6)
   assert.deepEqual(aggregateRoutes([{gbifKey:1},{gbifKey:2}],{1:{countries:[{id:643},{id:496}]},2:{countries:[{id:643}]}}),[{id:643,weight:2},{id:496,weight:1}])
+})
+
+test("the globe draws India as on the official map of India",async()=>{
+  const { decodeCountries }=await import('../src/globe.js')
+  const world=JSON.parse(await readFile(new URL('../src/data/species/world-countries.json',import.meta.url),'utf8'))
+  const india=decodeCountries(world).find(c=>c.id===356)
+  const inside=(ring,[x,y])=>{let c=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const [xi,yi]=ring[i],[xj,yj]=ring[j];if((yi>y)!==(yj>y)&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)c=!c}return c}
+  const covers=pt=>india.polygons.some(poly=>inside(poly[0],pt)&&!poly.slice(1).some(h=>inside(h,pt)))
+  for(const [name,pt] of [['Srinagar (Jammu and Kashmir)',[74.8,34.1]],['Leh (Ladakh)',[77.6,34.2]],['Gilgit (Gilgit-Baltistan, J&K)',[74.3,35.9]],['Muzaffarabad (Pakistan-administered J&K)',[73.5,34.4]],['Aksai Chin (Ladakh)',[79.1,35.0]],['Skardu (Gilgit-Baltistan, Ladakh)',[75.6,35.3]],['Bengaluru',[77.6,12.97]],['Port Blair',[92.7,11.7]]])
+    assert.ok(covers(pt),`${name} should be inside India`)
+  assert.ok(!covers([73.0,33.7]),'Islamabad is not in India')
+  const maxLat=Math.max(...india.polygons.flatMap(p=>p[0].map(c=>c[1])))
+  assert.ok(maxLat>36.9,'India reaches the northern tip of Gilgit-Baltistan')
 })
 
 test('visit tracking hashes ids, ignores bots and bad pings, and counts live sessions',async()=>{
@@ -250,4 +263,20 @@ test('the sign-up invitation waits, respects members and snoozes',async()=>{
   assert.equal(shouldShowJoin({...base,dismissedAt:base.now-86400000*5}),false,'snoozed after "Not now"')
   assert.equal(shouldShowJoin({...base,dismissedAt:base.now-86400000*31}),true,'invites again after 30 days')
   assert.equal(joinUrl(false),'#contribute');assert.equal(joinUrl(true),'https://karnata.sanchaya.net/#contribute')
+})
+
+test('the Leaflet maps that can zoom out to Kashmir carry the official India boundary layer',async()=>{
+  const data=JSON.parse(await readFile(new URL('../public/india-official-boundary.geojson',import.meta.url),'utf8'))
+  const claimed=data.features.find(f=>f.properties.kind==='claimed'),outline=data.features.find(f=>f.properties.kind==='outline')
+  assert.ok(claimed&&outline)
+  const lats=g=>JSON.stringify(g.coordinates).match(/-?\d+\.\d+/g).map(Number)
+  const flat=JSON.stringify(claimed.geometry.coordinates).replace(/[\[\]]/g,'').split(',').map(Number)
+  const xs=flat.filter((_,i)=>i%2===0),ys=flat.filter((_,i)=>i%2===1)
+  assert.ok(Math.min(...xs)<73&&Math.max(...xs)>80&&Math.max(...ys)>37,'the claimed area spans Pakistan-administered Kashmir, Gilgit-Baltistan and Aksai Chin')
+  assert.ok(lats(outline.geometry).length>200)
+  for(const file of ['App','GlobalRelationsExplorer','DynastyMapPage','FreedomMovementExplorer','IndiaResearchExplorer','LanguageTimeline','PeopleExplorer','ScriptEvolutionExplorer','DistrictHistoryExplorer']){
+    const source=await readFile(new URL(`../src/${file}.jsx`,import.meta.url),'utf8')
+    assert.match(source,/import IndiaBoundary from '\.\/IndiaBoundary'/,file)
+    assert.match(source,/<IndiaBoundary\/>/,file)
+  }
 })

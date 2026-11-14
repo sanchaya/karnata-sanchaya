@@ -104,7 +104,7 @@ At the last run 2,276 of 2,556 species have a free photo (25 files were rejected
 - **Migration calendar:** a bar chart of migratory birds recorded in each month (`migratoryByMonth`); tap a month, or
   "Visiting now", to filter the list. Inferred from eBird month counts; needs an ornithologist's review.
 - **Migration globe:** `src/MigrationGlobe.jsx` draws an orthographic globe on a canvas (drag or arrow keys to turn it,
-  no library; outlines are Natural Earth via `world-atlas`, public domain, in `src/data/species/world-110m.json`).
+  no library; outlines are in `src/data/species/world-countries.json`).
   `scripts/import-species-flyways.mjs` records, for each migratory bird, the countries outside India where eBird records
   it in its other season (May–Aug for winter visitors and passage birds, Nov–Feb for summer visitors), keeping up to six
   countries with at least 3% of those records, into `species-flyways.json`. The page globe follows the current filters;
@@ -169,3 +169,28 @@ account to suggest Kannada names") sit in the species name drive and at the end 
 mirror the link goes to the main site's `#contribute`. It promises only what exists: suggesting corrections and names,
 the contributors' board and certificates, and approval by a moderator. Sign-up clicks show up as visits to `contribute`
 in the visitor statistics.
+
+## The map of India on the globes
+
+The globe's outlines (`src/data/species/world-countries.json`, 352 KB) are built by `scripts/build-world-outline.py` from Natural
+Earth's 10 m country boundaries **drawn from India's point of view** (`ne_10m_admin_0_countries_ind`, public domain). India is
+shown with all of Jammu and Kashmir, including Gilgit-Baltistan, and Ladakh, including Aksai Chin, as on the official map of
+India; Pakistan and China are drawn to match, so the lines do not overlap. A test (`test/species.test.js`) checks that Srinagar,
+Leh, Gilgit, Muzaffarabad, Skardu and Aksai Chin fall inside India's outline. Rings are simplified for a small globe (finer
+around India and its neighbours). To rebuild: download the GeoJSON named in the script's header and run it. Guadeloupe and
+Svalbard have no outline of their own and are counted with France and Norway in the flyway data.
+
+The OpenStreetMap tile maps elsewhere (species records map, the geography page) draw borders as OpenStreetMap does, which is
+not the official map of India. Replacing those with an India-official overlay or tile source is a separate change.
+
+### Official boundary on the tile maps
+
+`src/IndiaBoundary.jsx` puts India's official outer boundary on the Leaflet maps that can zoom out to Kashmir (the atlas map,
+global relations, dynasty maps, India research, language timeline, people, freedom movement, script evolution and district
+history). It loads `public/india-official-boundary.geojson` (48 KB, built by `scripts/build-india-boundary.py`, which needs
+shapely: `pip install shapely`). The file has an `outline` (India's official boundary as lines) and a `claimed` area (what the
+official map includes beyond the standard Natural Earth line: Pakistan-administered Kashmir, Gilgit-Baltistan, Aksai Chin),
+filled with the tile map's land colour so OpenStreetMap's own border lines do not show through; place names inside that patch
+are therefore hidden. The layer sits in its own pane above the tiles and below markers, and adds the attribution "India's
+boundary as on the official map of India (Natural Earth)". Maps limited to Karnataka are unchanged, since Kashmir cannot be
+reached on them. Add `<IndiaBoundary/>` inside any new `MapContainer` that can show the north of India.

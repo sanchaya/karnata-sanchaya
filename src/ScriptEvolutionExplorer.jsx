@@ -5,6 +5,7 @@ import './script-fonts.css'
 import { ERA_FONTS, PRINT_FONTS } from './data/era-fonts'
 import DynastyAreasControl from './DynastyAreasControl'
 import { DYNASTY_PHASES } from './data/dynasty-areas'
+import IndiaBoundary from './IndiaBoundary'
 
 const PRINT_PHASES=new Set(['script-modern-kannada-print-transition','script-mysore-wodeyar-print-standard-kannada'])
 const specimensFor=record=>PRINT_PHASES.has(record.id)?PRINT_FONTS:(record.relatedPolityIds||[]).map(id=>ERA_FONTS[id]).filter(Boolean)
@@ -54,7 +55,7 @@ function ScriptMap({record,locale,t}){
   const polityLabel=id=>text(entityById.get(id)?.name,locale)
   return <section className="script-map" aria-label={t.mapTitle}>
     <div className="script-map-head"><h4>{t.mapTitle}</h4><div role="group" aria-label={t.mapScope}>{[['karnataka',t.karnataka],['india',t.india]].map(([key,label])=><button key={key} type="button" className={scope===key?'active':''} aria-pressed={scope===key} onClick={()=>setScope(key)}>{label}</button>)}{hasDynasties&&<button type="button" className={older?'active':''} aria-pressed={older} onClick={()=>setOlder(value=>!value)}>{t.older}</button>}</div></div>
-    <div className="script-map-frame"><MapContainer bounds={KARNATAKA_BOUNDS} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}>
+    <div className="script-map-frame"><MapContainer bounds={KARNATAKA_BOUNDS} minZoom={3} zoomSnap={0.25} scrollWheelZoom={false}><IndiaBoundary/>
       <TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
       <FitScope scope={scope} shapes={shapes}/>
       <DynastyAreasControl locale={locale} phases={hasDynasties?phases:undefined} fontFor={dynastyFont} defaultYear={record.date.era==='BCE'?300:Math.max(300,Math.round((record.date.from+record.date.to)/2))}/>
