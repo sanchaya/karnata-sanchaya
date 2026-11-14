@@ -7,6 +7,7 @@
 // Kannada names found here are only candidates: every record stays needs-review and the
 // site collects corrections from readers. Usage: node scripts/import-species.mjs [--quick]
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { createHash } from 'node:crypto'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { classifySeasonality, isKannada, normalizeKannada, normalizeEnglish, pickEnglishName } from '../src/species-normalize.js'
@@ -30,7 +31,8 @@ const GROUPS=[
 ]
 const sleep=ms=>new Promise(r=>setTimeout(r,ms))
 async function getJson(url,options={}){
-  const key=Buffer.from(url+(options.body||'')).toString('base64url').slice(-120)
+  // POST bodies (Wikidata batches) end identically, so they are keyed by a hash of the whole request.
+  const key=options.body?createHash('sha1').update(url+options.body).digest('hex'):Buffer.from(url).toString('base64url').slice(-120)
   const file=path.join(cacheDir,key)
   try{return JSON.parse(await readFile(file,'utf8'))}catch{}
   for(let attempt=0;attempt<4;attempt++){
@@ -92,7 +94,7 @@ const wikidata=new Map()
 const names=[...new Set(rows.map(r=>r.scientificName))]
 for(let i=0;i<names.length;i+=80){
   const batch=names.slice(i,i+80)
-  const query=`SELECT ?name ?item ?kn ?en WHERE { VALUES ?name { ${batch.map(n=>JSON.stringify(n)).join(' ')} } ?item wdt:P225 ?name. OPTIONAL{?item rdfs:label ?kn FILTER(lang(?kn)="kn")} OPTIONAL{?item rdfs:label ?en FILTER(lang(?en)="en")} }`
+  const query=`SELECT ?name ?item ?kn ?en WHERE { VALUES ?name { ${batch.map(n=>JSON.stringify(n)).join(' ')} } ?item wdt:P225 ?name. FILTER(STRSTARTS(STR(?item),"http://www.wikidata.org/entity/Q")) OPTIONAL{?item rdfs:label ?kn FILTER(lang(?kn)="kn")} OPTIONAL{?item rdfs:label ?en FILTER(lang(?en)="en")} }`
   try{
     const data=await getJson('https://query.wikidata.org/sparql?format=json',{method:'POST',headers:{'User-Agent':UA,Accept:'application/sparql-results+json','Content-Type':'application/x-www-form-urlencoded'},body:`query=${encodeURIComponent(query)}`})
     for(const b of data.results.bindings){
@@ -127,5 +129,5 @@ const counts=Object.fromEntries(GROUPS.map(g=>[g.id,out.filter(r=>r.group===g.id
 await writeFile(outFile,JSON.stringify({generatedAt:date,groups:GROUPS.map(({id,kn,en})=>({id,kn,en})),sources:[
   {id:'gbif',title:'GBIF occurrence search, Karnataka, human observations; eBird Observation Dataset for birds (CC BY 4.0)',url:'https://www.gbif.org/dataset/4fa7b334-ce0d-4e88-aaae-2e0c138d049e'},
   {id:'wikidata',title:'Wikidata taxon labels (CC0)',url:'https://www.wikidata.org/'}],counts,species:out},null,0)+'\n')
-await writeFile(path.join(path.dirname(outFile),'species-meta.json'),JSON.stringify({speciesCount:out.length,sourceCount:2+2},null,1)+'\n') // 2 data sources + the 2 curated name lists
+await writeFile(path.join(path.dirname(outFile),'species-meta.json'),JSON.stringify({speciesCount:out.length,sourceCount:5},null,1)+'\n') // GBIF, Wikidata, the 2 curated name lists, Wikimedia Commons photos
 console.log(counts,'with Kannada candidate:',out.filter(r=>r.name.kn).length,'of',out.length)

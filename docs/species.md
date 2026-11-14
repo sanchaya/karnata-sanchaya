@@ -62,8 +62,8 @@ The "Needs a Kannada name" filter lists species that have no name or suggestion.
 - **Early Bird** (Kutuhali column): 15 species-level Kannada names with no English or scientific names. They are not
   matched to species by guesswork; they only add a second source to a name that another source already gave.
 
-Name order on a card: reviewed name, then species-level candidates by number of sources, then group names. This took
-Kannada coverage from 227 to 463 of 2,556 species (236 of them group names); 43 names have two sources.
+Name order on a card: reviewed name, then species-level candidates by number of sources, then group names. At the last
+run 754 of 2,556 species have a Kannada name suggestion, 230 of them group names.
 
 ## Statistics
 
@@ -81,3 +81,20 @@ the live server only needs the new `server/app.js` (a `species-` ID prefix). Run
 also changed seed records in the main dataset. Reviewers see species suggestions in the normal review queue and apply
 an accepted name by editing `kn-names-reviewed.json`, then redeploy. Purge the Cloudflare cache for `/` and `/sw.js`
 so browsers pick up the new bundle.
+
+## Photos
+
+`node scripts/import-species-images.mjs` takes each species' Wikidata image (P18), reads its licence and author from the
+Wikimedia Commons API and writes `src/data/species/species-images.json`. Only **CC0, public domain, CC BY and CC BY-SA**
+files are kept (`isOpenLicense` in `src/species-images.js` refuses NonCommercial, NoDerivs, GFDL-only, fair-use and
+unknown terms). The page hot-links the 480px Commons thumbnail (the CSP already allows `https:` images) and always
+prints the author, the licence (linked) and a link to the Commons file page; do not remove that caption, since CC BY
+and CC BY-SA require attribution. Species without a free photo show none. Photos come in a second step after the
+species import: run `import-species.mjs`, then `import-species-names.mjs`, then `import-species-images.mjs`, then
+`node scripts/generate-open-datasets.mjs`.
+
+Bug fixed on the way: the importer's response cache keyed POST requests on the last 120 characters, so every Wikidata
+batch returned the first batch's answer; it now hashes the whole request. That raised Wikidata matches from 198 to
+2,506 species and Kannada candidates from 227 to 524 before the curated lists.
+
+At the last run 2,276 of 2,556 species have a free photo (25 files were rejected for their licence).

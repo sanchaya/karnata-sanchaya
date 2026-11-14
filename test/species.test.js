@@ -70,3 +70,25 @@ test('species stats file matches the data',async()=>{
   const meta=JSON.parse(await readFile(new URL('../src/data/species/species-meta.json',import.meta.url),'utf8'))
   assert.equal(meta.speciesCount,data.species.length)
 })
+
+test('only openly licensed species photos are accepted',async()=>{
+  const { isOpenLicense, cleanCredit }=await import('../src/species-images.js')
+  for(const ok of ['CC BY-SA 4.0','CC BY 2.0','CC0','Public domain','CC BY-SA 3.0','PD-self'])assert.ok(isOpenLicense(ok),ok)
+  for(const bad of ['CC BY-NC 2.0','CC BY-ND 4.0','CC BY-NC-SA 3.0','GFDL','Fair use','','All rights reserved'])assert.ok(!isOpenLicense(bad),bad)
+  assert.ok(!isOpenLicense('CC BY 4.0','true'))
+  assert.equal(cleanCredit('<a href="x">Jane &amp; Co</a>'),'Jane & Co')
+})
+
+test('every species photo is openly licensed, credited and linked to its Commons page',async()=>{
+  const { isOpenLicense }=await import('../src/species-images.js')
+  const { images }=JSON.parse(await readFile(new URL('../src/data/species/species-images.json',import.meta.url),'utf8'))
+  const keys=new Set(data.species.map(s=>String(s.gbifKey)))
+  assert.ok(Object.keys(images).length>50)
+  for(const [key,image] of Object.entries(images)){
+    assert.ok(keys.has(key),`${key} is not a known species`)
+    assert.ok(isOpenLicense(image.license),`${key} licence ${image.license}`)
+    assert.match(image.thumb,/^https:\/\/(upload|thumb)\.wikimedia\.org\//)
+    assert.match(image.page,/^https:\/\/commons\.wikimedia\.org\//)
+    assert.ok(image.author,`${key} needs an author`)
+  }
+})

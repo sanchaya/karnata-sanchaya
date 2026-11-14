@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react'
 import data from './data/species/karnataka-species.json'
 import reviewed from './data/species/kn-names-reviewed.json'
+import imageData from './data/species/species-images.json'
 import nameLists from './data/species/kn-name-sources.json'
 import { applyNameSources, applyReviewedNames, filterSpecies } from './species-normalize'
 import './species.css'
 
 const species=applyReviewedNames(applyNameSources(data.species,nameLists.sources),reviewed)
+const images=imageData.images
 const PAGE=48
 const SEASON={
   resident:['Resident','ವರ್ಷವಿಡೀ ಇರುವ'],
@@ -34,6 +36,7 @@ export default function SpeciesExplorer({locale}){
     </div>
     <p className="species-count" aria-live="polite">{list.length.toLocaleString('en-IN')} {kn?'ಪ್ರಭೇದಗಳು':'species'}</p>
     <ul className="species-grid">{list.slice(0,shown).map(item=><li key={item.id} className="species-card">
+      {images[item.gbifKey]&&<figure className="species-photo"><a href={images[item.gbifKey].page} target="_blank" rel="noreferrer"><img src={images[item.gbifKey].thumb} alt={`${item.name.en||item.scientificName}`} loading="lazy" decoding="async" referrerPolicy="no-referrer"/></a><figcaption>{kn?'ಚಿತ್ರ':'Photo'}: {images[item.gbifKey].author} · {images[item.gbifKey].licenseUrl?<a href={images[item.gbifKey].licenseUrl} target="_blank" rel="noreferrer">{images[item.gbifKey].license}</a>:images[item.gbifKey].license} · <a href={images[item.gbifKey].page} target="_blank" rel="noreferrer">Wikimedia Commons</a></figcaption></figure>}
       <h3 lang="kn">{item.name.kn||<span className="species-missing">{kn?'ಕನ್ನಡ ಹೆಸರು ಬೇಕು':'Kannada name needed'}</span>}{item.knScope==='group'&&!item.knReviewed&&<small className="species-group-name">{kn?' · ಗುಂಪಿನ ಹೆಸರು':' · group name'}</small>}</h3>
       <p className="species-en">{item.name.en||'—'}</p><p className="species-sci"><i>{item.scientificName}</i>{item.family&&<> · {item.family}</>}</p>
       {item.seasonality&&item.seasonality.pattern!=='unknown'&&<div className={`species-season ${item.seasonality.pattern}`} title={kn?'eBird ತಿಂಗಳ ದಾಖಲೆಗಳಿಂದ ಊಹಿಸಿದ್ದು; ಅಧಿಕೃತವಲ್ಲ':'Inferred from eBird month counts; not authoritative'}><b>{SEASON[item.seasonality.pattern][kn?1:0]}</b><span aria-hidden="true">{MONTHS.map((m,i)=><i key={m} className={item.seasonality.months.includes(i+1)?'on':''}>{(kn?MONTHS_KN:MONTHS)[i]}</i>)}</span></div>}
@@ -42,6 +45,6 @@ export default function SpeciesExplorer({locale}){
       <p className="species-links"><a href={suggestUrl(item,kn)}>{item.name.kn?(kn?'ಹೆಸರು ತಿದ್ದಿ':'Correct the name'):(kn?'ಕನ್ನಡ ಹೆಸರು ಸೂಚಿಸಿ':'Suggest a Kannada name')} →</a><a href={`https://www.gbif.org/species/${item.gbifKey}`} target="_blank" rel="noreferrer">GBIF ↗</a>{item.wikidataId&&<a href={`https://www.wikidata.org/wiki/${item.wikidataId}`} target="_blank" rel="noreferrer">Wikidata ↗</a>}</p>
     </li>)}</ul>
     {list.length>shown&&<button type="button" className="species-more" onClick={()=>setShown(n=>n+PAGE)}>{kn?'ಇನ್ನಷ್ಟು ತೋರಿಸಿ':'Show more'}</button>}
-    <p className="species-note">{kn?'ಪ್ರಭೇದಗಳ ಪಟ್ಟಿ ಕರ್ನಾಟಕದಲ್ಲಿ ಅತಿ ಹೆಚ್ಚು ದಾಖಲಾದವು (ಸಂಪೂರ್ಣ ಪಟ್ಟಿಯಲ್ಲ). ವಲಸೆ ವಿವರ ಇಬರ್ಡ್ ತಿಂಗಳ ದಾಖಲೆಗಳಿಂದ ಊಹಿಸಲಾಗಿದೆ; ಪಕ್ಷಿ ತಜ್ಞರ ಪರಿಶೀಲನೆ ಬೇಕು.':'The list holds the most-recorded species in Karnataka, not a complete checklist. Migration patterns are inferred from eBird month counts and need an ornithologist’s review.'} {data.sources.map(s=><a key={s.id} href={s.url} target="_blank" rel="noreferrer">{s.id==='gbif'?'GBIF':'Wikidata'} ↗</a>)}</p>
+    <p className="species-note">{kn?'ಪ್ರಭೇದಗಳ ಪಟ್ಟಿ ಕರ್ನಾಟಕದಲ್ಲಿ ಅತಿ ಹೆಚ್ಚು ದಾಖಲಾದವು (ಸಂಪೂರ್ಣ ಪಟ್ಟಿಯಲ್ಲ). ವಲಸೆ ವಿವರ ಇಬರ್ಡ್ ತಿಂಗಳ ದಾಖಲೆಗಳಿಂದ ಊಹಿಸಲಾಗಿದೆ; ಪಕ್ಷಿ ತಜ್ಞರ ಪರಿಶೀಲನೆ ಬೇಕು.':'The list holds the most-recorded species in Karnataka, not a complete checklist. Migration patterns are inferred from eBird month counts and need an ornithologist’s review.'} {kn?'ಚಿತ್ರಗಳು ವಿಕಿಮೀಡಿಯಾ ಕಾಮನ್ಸ್‌ನ ಮುಕ್ತ ಪರವಾನಗಿಯವು (CC0, ಸಾರ್ವಜನಿಕ ವಲಯ, CC BY, CC BY-SA); ಪ್ರತಿ ಚಿತ್ರದ ಕೆಳಗೆ ಛಾಯಾಗ್ರಾಹಕ ಮತ್ತು ಪರವಾನಗಿ ನೀಡಲಾಗಿದೆ.':'Photos are from Wikimedia Commons under open licences (CC0, public domain, CC BY, CC BY-SA); each shows its author and licence.'} {data.sources.map(s=><a key={s.id} href={s.url} target="_blank" rel="noreferrer">{s.id==='gbif'?'GBIF':'Wikidata'} ↗</a>)}</p>
   </main>
 }
