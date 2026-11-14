@@ -1,0 +1,14 @@
+.species-page{display:block!important;width:min(1500px,100%);height:auto!important;min-height:calc(100vh - 142px);margin:auto;padding:clamp(20px,4vw,48px);background:#f7faf6;color:var(--sanchaya-ink)}
+.species-page header{height:auto;min-height:0;padding:0;border:0;background:transparent;color:inherit;box-shadow:none}
+.species-hero h2{margin:.2rem 0 .6rem;font-size:clamp(2rem,3.6vw,3.6rem)}.species-hero p{max-width:820px}
+.species-groups{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 12px}.species-groups button{padding:8px 14px;border:1px solid #cddccf;border-radius:999px;background:#fff;font-weight:700;cursor:pointer}.species-groups button.active{background:#28785b;border-color:#28785b;color:#fff}.species-groups small{opacity:.75;font-weight:600}
+.species-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.species-tools input[type=search]{flex:1 1 280px;min-width:0;padding:10px 12px;border:1px solid #cddccf;border-radius:10px}.species-tools select{padding:10px;border:1px solid #cddccf;border-radius:10px;background:#fff}.species-check{display:flex;gap:6px;align-items:center;font-weight:600}
+.species-count{margin:12px 0 8px;color:#4b5b51;font-size:.85rem}
+.species-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.species-card{display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid #d9e5da;border-radius:14px;background:#fff}.species-card h3{margin:0;font-size:1.25rem;line-height:1.3}.species-card p{margin:0}
+.species-missing{color:#8a6d1f;font-size:.95rem;font-weight:600}.species-group-name{color:#8a6d1f;font-size:.7rem;font-weight:600}.species-en{font-weight:600}.species-sci{color:#51615a;font-size:.85rem}.species-other,.species-status{font-size:.78rem;color:#51615a}
+.species-season{margin-top:4px;font-size:.78rem}.species-season>span{display:flex;gap:2px;margin-top:3px}.species-season i{flex:1;padding:1px 0;border-radius:3px;background:#e8eee9;color:#7a887f;font-size:.6rem;font-style:normal;text-align:center}.species-season i.on{background:#167f9b;color:#fff}.species-season.resident i.on{background:#28785b}.species-season.summer-visitor i.on{background:#b05f2d}
+.species-links{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:auto!important;padding-top:8px;font-size:.8rem}
+.species-more{display:block;margin:18px auto;padding:10px 22px;border:1px solid #28785b;border-radius:999px;background:#fff;color:#28785b;font-weight:700;cursor:pointer}
+.species-note{max-width:900px;margin-top:20px;font-size:.8rem;color:#51615a}
+@media(max-width:620px){.species-page{padding:18px 12px 48px}.species-grid{grid-template-columns:1fr}}

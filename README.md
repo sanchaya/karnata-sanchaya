@@ -95,6 +95,7 @@ edits do not appear on GitHub Pages until this approved export occurs.
 - Dynasty maps, Who ruled here, the name and administrative history of Karnataka (from the Census 2004 Historical Atlas of Karnataka) and their evidence: [dynasty maps](docs/dynasty-maps.md)
 - Page layout rules and pitfalls: [front-end notes](docs/front-end-notes.md)
 - Atlas learning games: [ಆಟ–ಪಾಠ](docs/aata-paata.md)
+- Birds, animals, plants and crowdsourced Kannada names: [species](docs/species.md)
 - Contributor and reviewer use: [user guide](docs/user-guide.md)
 - Evidence and governance: [community governance](docs/community-governance.md)
 - P2/P3 review packets: [corpus maturity](docs/p2-p3-corpus-maturity.md)

@@ -142,3 +142,9 @@ directive" console errors. Nothing breaks, but no analytics are collected. To cl
 setup (Cloudflare dashboard, Analytics & Logs, Web Analytics, the site, Manage site, Disable). Allowing the beacon instead
 would mean adding `https://static.cloudflareinsights.com` to `script-src` and `https://cloudflareinsights.com` to
 `connect-src` and relaxing the test, and the inline part would still need a hash that changes with Cloudflare's snippet.
+
+## Species data and Kannada names
+
+The `#species` page reads static JSON from the build, so deploying it needs no database migration and no
+`db:sync-dataset`. The server change is only the `species` record type in `server/app.js`; `contributions.record_type`
+is a free `VARCHAR(80)`. See [species](species.md) for how names are imported, reviewed and published.
