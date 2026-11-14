@@ -135,7 +135,7 @@ const comparisonPresets=[
 ]
 const seoPages={
   atlas:{kn:['ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕಾಲರೇಖೆ, ರಾಜ್ಯಗಳು, ರಾಜರು, ಯುದ್ಧಗಳು, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ವಿಸ್ತರಣೆಯ ಕನ್ನಡ-ಪ್ರಥಮ ಸಂಶೋಧನಾ ಭೂಪಟ.'],en:['Karnataka Historical Atlas','Explore Karnataka kingdoms, rulers, wars, culture and territorial change through a citation-led historical timeline and map.']},
-  'aata-paata':{kn:['ಆಟ–ಪಾಠ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಇತಿಹಾಸ, ಸಾಹಿತ್ಯ, ಶಾಸನ ಮತ್ತು ಭೂಗೋಳದ ದತ್ತಾಂಶದಿಂದ ರೂಪಿಸಿದ ಪದ, ವರ್ಷ ಮತ್ತು ಪದಜಾಲ ಆಟಗಳು.'],en:['Aata–Paata · Karnataka Historical Atlas','Play word, year-grid and crossword games generated from Karnataka history, literature, epigraphy and geography records.']},
+  'aata-paata':{kn:['ಆಟ–ಪಾಠ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ಇತಿಹಾಸ, ಸಾಹಿತ್ಯ, ಶಾಸನ ಮತ್ತು ಭೂಗೋಳದ ದತ್ತಾಂಶದಿಂದ ರೂಪಿಸಿದ ಪದ, ವರ್ಷ, ಪದಜಾಲ, ನಕ್ಷೆ, ರಾಜವಂಶ ಮತ್ತು ಲಿಪಿ ಆಟಗಳು.'],en:['Aata–Paata · Karnataka Historical Atlas','Play word, year-grid, crossword, map-pin, dynasty and script games generated from Karnataka history, literature, epigraphy and geography records.']},
   'india-relations':{kn:['ಭಾರತದ ಜಾಗತಿಕ ಸಂಬಂಧಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಭಾರತದ ವ್ಯಾಪಾರ, ರಾಜತಾಂತ್ರಿಕ, ಪ್ರವಾಸ ಮತ್ತು ವಿದೇಶಿ ಸಂಪರ್ಕಗಳನ್ನು ಕಾಲರೇಖೆಯಲ್ಲಿ ಅನ್ವೇಷಿಸಿ.'],en:['India’s Global Relations · Karnataka Historical Atlas','Explore India’s trade, diplomatic, travel and foreign contacts across the timeline.']},
   relations:{kn:['ಜಾಗತಿಕ ಸಂಬಂಧಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕದ ರಾಜಕೀಯ, ವ್ಯಾಪಾರ, ರಾಜತಾಂತ್ರಿಕ ಮತ್ತು ಜ್ಞಾನ ಸಂಬಂಧಗಳನ್ನು ಭಾರತ ಮತ್ತು ವಿಶ್ವದೊಂದಿಗೆ ಅನ್ವೇಷಿಸಿ.'],en:['Global Relations · Karnataka Historical Atlas','Explore Karnataka’s political, commercial, diplomatic and knowledge connections across India and the world.']},
   literature:{kn:['ಕನ್ನಡ ಸಾಹಿತ್ಯ ಅನ್ವೇಷಣೆ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕನ್ನಡ ಲೇಖಕರು, ಕವಿಗಳು, ಕೃತಿಗಳು, ಆಸ್ಥಾನಗಳು ಮತ್ತು ಅವುಗಳ ಕಾಲರೇಖೆಗಳನ್ನು ಸಂಶೋಧಿಸಿ.'],en:['Kannada Literature Explorer · Karnataka Historical Atlas','Research Kannada authors, poets, works, courts and their historical timelines.']},
@@ -239,7 +239,7 @@ const guidedTourSteps=(view,locale,loggedIn=false)=>{
     ],
     'aata-paata':[
       tourStep('.aata-paata-hero','ಆಟ–ಪಾಠ · ಆಡಿ ಕಲಿಯಿರಿ','Play with words, years and clues generated from atlas records.'),
-      tourStep('.aata-game-tabs','ನಾಲ್ಕು ಆಟಗಳು · ಆಟವನ್ನು ಆರಿಸಿ','Switch between Word Trail, Time Grid, History Crossword and Where is it?.'),
+      tourStep('.aata-game-tabs','ಆರು ಆಟಗಳು ಮತ್ತು ಕಾರ್ಯಪತ್ರ · ಆರಿಸಿ','Six games and a printable worksheet: Word Trail, Time Grid, History Crossword, Where is it?, Who am I? and Script Detective.'),
       tourStep('.aata-game-stage','ಅಟ್ಲಸ್ ಆಧಾರಿತ ಆಟ · ದಾಖಲೆಗೆ ಹಿಂತಿರುಗಿ','Solve the puzzle, use its hint and open the underlying atlas record when available.'),
     ],
     evidence:[

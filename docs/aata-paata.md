@@ -6,6 +6,8 @@ rather than a second hand-maintained question bank.
 
 ## Included games
 
+Six games and a worksheet, seven tabs in all.
+
 - **ಪದಯಾನ · Word Trail:** a daily word selected from names of polities, places,
   works, inscriptions and protected landscapes. It uses Unicode grapheme
   clusters so a Kannada orthographic unit occupies one tile.
@@ -57,7 +59,7 @@ which opens the same puzzle for the friend.
 The archive control opens any daily puzzle from the launch date and moves
 through weekly crosswords in seven-day steps. The selected game and date are
 kept in the URL as `game` and `puzzle`, so an archived puzzle can be shared.
-Played word guesses, time-grid cells and crossword answers are stored under
+Played word guesses, time-grid cells, crossword answers, map pins, dynasty answers and script answers are stored under
 date/week-specific `atlas-aata-*` local-storage keys.
 
 Kannada answer fields include an optional phonetic IME toggle. The integration

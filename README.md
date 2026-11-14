@@ -5,7 +5,7 @@ timelines, polities, people, inscriptions, literature, heritage, districts and
 global relations.
 
 The public Explore workspace also includes [ಆಟ–ಪಾಠ](docs/aata-paata.md):
-Kannada-first word, historical-year, crossword and map-pin games generated directly
+Kannada-first six games (word, historical-year, crossword, map-pin, dynasty and script) and a printable worksheet generated directly
 from atlas records without maintaining a separate puzzle dataset.
 
 The project has two publication surfaces:
