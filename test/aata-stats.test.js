@@ -38,3 +38,25 @@ test('distance scoring is 1000 on the spot and 0 beyond 400 km',()=>{
   assert.ok(Math.abs(haversineKm([12.97,77.59],[15.34,75.14])-373)<5)
   assert.equal(whereShareText({title:'T',date:'d',kms:[0,50,300],url:'u'}),'T d 2125/3000\n🟩🟨🟥\nu')
 })
+
+test('who-am-I rounds are stable, include the answer once among six options, and clues grow more specific',async()=>{
+  const { buildWhoRounds, whoClues, whoPoints } = await import('../src/aata-who.js')
+  const { DYNASTY_PHASES } = await import('../src/data/dynasty-areas.js')
+  const rounds=buildWhoRounds(DYNASTY_PHASES,atlasData,'en','2026-11-13')
+  assert.equal(rounds.length,5)
+  assert.deepEqual(rounds,buildWhoRounds(DYNASTY_PHASES,atlasData,'en','2026-11-13'))
+  for(const round of rounds){assert.equal(round.options.length,6);assert.equal(round.options.filter(option=>option.id===round.id).length,1);assert.equal(round.clues.length,4)}
+  assert.match(whoClues(DYNASTY_PHASES.find(phase=>phase.id==='kadamba'),atlasData,'en')[1],/Banavasi/)
+  assert.deepEqual([1,2,3,4,5].map(whoPoints),[4,3,2,1,0])
+})
+
+test('script rounds use only Kannada words and a known style',async()=>{
+  const { buildScriptRounds, SCRIPT_STYLES } = await import('../src/aata-script.js')
+  const { buildWordCatalog } = await import('../src/aata-paata.js')
+  const { geographyNatureHighlights, geographyProtectedAreas } = await import('../src/data/geography-nature.js')
+  const catalog=buildWordCatalog(atlasData,{highlights:geographyNatureHighlights,protectedAreas:geographyProtectedAreas},'kn')
+  const rounds=buildScriptRounds(catalog,'2026-11-13')
+  assert.ok(rounds.length>=3)
+  assert.ok(rounds.every(round=>/^[ಀ-೿]+$/u.test(round.word)&&SCRIPT_STYLES.some(style=>style.id===round.style.id)))
+  assert.deepEqual(rounds,buildScriptRounds(catalog,'2026-11-13'))
+})

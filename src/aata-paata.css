@@ -10,3 +10,18 @@
 .where-summary{margin-top:12px;padding:12px 16px;border-radius:12px;background:#eef1ff}.where-summary h3{margin:0 0 6px;font-size:28px;color:#2b3a8c}.where-summary ol{margin:0;padding-left:20px}.where-summary li span{color:#5c5c78}
 .aata-game-stage>header{height:auto}
 .aata-hint small{display:block;margin:4px 0;color:#7a5200}
+
+/* Who am I?, Script detective, worksheet */
+.aata-game-tabs{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.who-clues{display:grid;gap:8px;margin:12px 0;padding:0;list-style:none;counter-reset:clue}.who-clues li{counter-increment:clue;padding:10px 14px;border-left:4px solid #4361ee;border-radius:8px;background:#f7f8ff;font-size:17px}.who-clues li::before{content:counter(clue) ". ";font-weight:800;color:#4361ee}
+.who-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:12px 0}.who-options button{padding:12px;border:1px solid #c8d0ff;border-radius:10px;background:#fff;font:inherit;font-weight:700;cursor:pointer}.who-options button:disabled{opacity:.5;cursor:default}.who-options button.right{border-color:#2a9d5c;background:#e6f6ec;opacity:1}.who-options button.wrong{border-color:#c0392b;background:#fdecea;opacity:1}
+.script-word{margin:18px 0;padding:22px;border:1px solid #d8dcf5;border-radius:12px;background:#fffdf7;text-align:center;font-size:clamp(48px,10vw,96px);line-height:1.2}
+.aata-correct-link{align-self:center;font-size:13px}
+.aata-worksheet h3{margin:18px 0 6px}.aata-worksheet ol{display:grid;gap:12px;padding-left:22px}.aata-worksheet li{line-height:1.7}.script-word-small{font-size:30px}.aata-worksheet-key{margin-top:28px;padding-top:12px;border-top:2px dashed #c8d0ff}.aata-worksheet-foot{margin-top:24px;color:#5c5c78;font-size:12px}
+.aata-worksheet .aata-worksheet-head{display:flex;justify-content:space-between;gap:16px}
+@media print{
+  header,nav,footer,.activity-bar,.berunda-launcher,.portal-fab,.map-guide-launcher,.aata-paata-hero,.aata-source-note,.aata-game-tabs,.aata-archive,.aata-print{display:none!important}
+  .aata-paata-page,.aata-paata-page *{visibility:visible!important}
+  .aata-worksheet-key{break-before:page;border-top:0}
+  .aata-worksheet ol{gap:6px}.aata-worksheet li{line-height:1.45;break-inside:avoid}.aata-worksheet h3{margin:10px 0 4px}.script-word-small{font-size:24px}
+}

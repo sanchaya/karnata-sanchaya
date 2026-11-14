@@ -24,6 +24,22 @@ rather than a second hand-maintained question bank.
   records still awaiting review, a note saying so. Records awaiting review are
   used on purpose; the games are meant to draw attention to them.
 
+- **ನಾನು ಯಾರು? · Who am I?:** five dynasties a day from the 41 dynasty-map
+  phases (`src/aata-who.js`). Up to four clues open one at a time (period,
+  capital, an atlas record, first letter); a wrong option is struck out and the
+  next clue opens. Right on clue 1 scores 4, on clue 4 scores 1.
+- **ಲಿಪಿ ಪತ್ತೆದಾರ · Script Detective:** a Kannada word from the catalogue set in
+  one era typeface (Kadamba, Ganga, Chalukya, Hoysala or modern); name the style
+  (`src/aata-script.js`). The typefaces are modern recreations, so the game
+  teaches the look of each style, not a reading of an inscription.
+- **ತರಗತಿ ಕಾರ್ಯಪತ್ರ · Classroom worksheet:** a printable sheet of the day's
+  places, dynasties and scripts with blanks for answers, and an answer key on its
+  own page. Print rules in `aata-paata.css` hide the site chrome.
+
+Every reveal has a "Spotted a mistake? Suggest a correction" link to
+`#contribute`, and shared results end with a challenge line and the puzzle link,
+which opens the same puzzle for the friend.
+
 ## Learning after the game
 
 - Word Trail hints open in steps: the kind of record after two guesses, the
