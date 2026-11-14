@@ -165,3 +165,23 @@ added the same way as the rivers.
   mirrored in `docs/data-wanted.md`, kept in step by a test). Each item shows what we need and who might hold it, with an "I know a
   source" button that opens the existing contribution form for a new source (an account is needed; the static mirror links to the main
   site) and an email link. To close an item, record the source in `LICENSING.md` §3 and delete it from both lists.
+
+## Never touch localStorage or sessionStorage directly
+
+Some browsers (in-app browsers such as WhatsApp's and Instagram's, strict privacy modes, blocked cookies) **throw a `SecurityError`
+when the `localStorage` or `sessionStorage` property is merely read**, so a helper that takes the storage object as an argument
+fails before its own `try`. That crashed every page with "Something went wrong" (the language and map-theme settings, then the
+sign-up banner and visit counter). Use `safeStorage` / `session` from `src/safe-storage.js`, which read the property inside the try and
+give `null` / `false` when storage is unavailable. `test/species.test.js` simulates blocked storage and scans `src/` for storage
+use outside a `try`. The error screen now shows a short technical detail to make future crashes diagnosable.
+
+## Licences & sources page
+
+`#licenses` (Project & contribute > Licences & sources; `src/Licences.jsx`, list in `src/data/licences.js`) shows every kind of data and
+software with its source, licence, how it is used (copied, pointer or display), what a reader must do, where it lives in the
+repository and a badge for commercial use: **non-commercial only** (the project's own terms), **allowed under the source's own
+licence** (public domain, CC0, CC BY, ODbL...), **check the item** (per-item or unconfirmed) or **all rights reserved**. It opens
+with the non-commercial notice, and the footer's "Non-commercial use only · Licence" link goes to it. `ref` in each entry is the
+section of `LICENSING.md`; a test fails if a section is missing. When you add a data source, add it to `LICENSING.md` §3, to
+`licences.js`, and (if it is something we are still looking for) remove it from `data-wanted.js`. Items marked "check the item" are
+the open items for the owner; change them only when the licence is confirmed.

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { joinUrl, shouldShowJoin } from './join-prompt'
+import { safeStorage, session } from './safe-storage'
 import './join-prompt.css'
 
 const STATIC=import.meta.env.VITE_STATIC_DATASET==='true'
@@ -15,16 +16,14 @@ export function useSignedIn(){
   },[])
   return value
 }
-const read=(storage,key)=>{try{return storage.getItem(key)}catch{return null}}
-const write=(storage,key,value)=>{try{storage.setItem(key,String(value))}catch{/* private browsing */}}
 
 // A slim strip at the bottom of the page.
 export function JoinBanner({locale,view}){
   const kn=locale==='kn',signedIn=useSignedIn()
-  const [views,setViews]=useState(()=>Number(read(sessionStorage,VIEWS))||0),[dismissed,setDismissed]=useState(()=>read(localStorage,DISMISS))
-  useEffect(()=>{const next=(Number(read(sessionStorage,VIEWS))||0)+1;write(sessionStorage,VIEWS,next);setViews(next)},[view])
+  const [views,setViews]=useState(()=>Number(session.get(VIEWS))||0),[dismissed,setDismissed]=useState(()=>safeStorage.get(DISMISS))
+  useEffect(()=>{const next=(Number(session.get(VIEWS))||0)+1;session.set(VIEWS,next);setViews(next)},[view])
   if(!shouldShowJoin({views,dismissedAt:dismissed,signedIn,view}))return null
-  const dismiss=()=>{const now=Date.now();write(localStorage,DISMISS,now);setDismissed(String(now))}
+  const dismiss=()=>{const now=Date.now();safeStorage.set(DISMISS,now);setDismissed(String(now))}
   return <aside className="join-banner" role="complementary" aria-label={kn?'ಪೋರ್ಟಲ್‌ಗೆ ಸೇರಿ':'Join the portal'}>
     <p><strong>{kn?'ಕನ್ನಡ ಹೆಸರು ಗೊತ್ತೇ? ತಪ್ಪು ಕಂಡಿತೇ?':'Know a Kannada name? Spot a mistake?'}</strong> {kn?'ಉಚಿತವಾಗಿ ಸೇರಿ: ತಿದ್ದುಪಡಿ ಮತ್ತು ಹೆಸರು ಸೂಚಿಸಿ, ಕೊಡುಗೆದಾರರ ಪಟ್ಟಿಯಲ್ಲಿ ಸ್ಥಾನ ಮತ್ತು ಪ್ರಮಾಣಪತ್ರ ಪಡೆಯಿರಿ.':'Join free to suggest corrections and names, get on the contributors’ board and earn a certificate.'}</p>
     <div><a className="join-go" href={joinUrl(STATIC)}>{kn?'ಸೇರಿ':'Sign up'}</a><button type="button" onClick={dismiss}>{kn?'ಈಗ ಬೇಡ':'Not now'}</button></div>

@@ -38,8 +38,8 @@ const datasetDepthSource = await readFile(new URL('../src/data/dataset-depth.js'
 const epigraphiaLinksSource = await readFile(new URL('../src/data/epigraphia-links.js', import.meta.url), 'utf8')
 
 test('new visitors start in Kannada with the historical map theme', () => {
-  assert.match(i18nSource, /localStorage\.getItem\('karnataka-atlas-locale'\) \|\| 'kn'/)
-  assert.match(appSource, /localStorage\.getItem\('karnataka-atlas-map-theme'\)\|\|'historical'/)
+  assert.match(i18nSource, /safeStorage\.get\('karnataka-atlas-locale'\) \|\| 'kn'/)
+  assert.match(appSource, /safeStorage\.get\('karnataka-atlas-map-theme'\)\|\|'historical'/)
 })
 
 test('the loading screen offers the lightweight public fallback', () => {

@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'licenses',view:'licenses',href:'#licenses',date:'2026-11-14',
+    kn:['ಪರವಾನಗಿ ಮತ್ತು ದತ್ತಾಂಶ ಮೂಲಗಳ ಪುಟ','ಪ್ರತಿ ರೀತಿಯ ದತ್ತಾಂಶ ಎಲ್ಲಿಂದ ಬಂತು, ಯಾವ ಪರವಾನಗಿ ಮತ್ತು ವಾಣಿಜ್ಯ ಬಳಕೆ ಸಾಧ್ಯವೇ ಎಂದು ನೋಡಿ.'],
+    en:['Licences and data sources page','See where each kind of data came from, its licence, and whether commercial use is allowed.']},
   {id:'data-wanted',view:'data-wanted',href:'#data-wanted',date:'2026-11-14',
     kn:['ನಮಗೆ ಬೇಕಾದ ದತ್ತಾಂಶ: ಮೂಲ ತಿಳಿಸಿ','ಅರಣ್ಯ ಗಡಿ, ಮಳೆ, ಮಣ್ಣು, ಶಾಸನ ಪಠ್ಯ ಮುಂತಾದ ದತ್ತಾಂಶ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ ಎಂದು ತಿಳಿದಿದ್ದರೆ ನಮಗೆ ತಿಳಿಸಿ.'],
     en:['Data wanted: point us to a source','Know where forest boundaries, rainfall, soil or inscription texts can be found? Tell us.']},

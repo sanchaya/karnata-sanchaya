@@ -1,0 +1,13 @@
+.licences-page{display:block!important;width:min(1100px,100%);height:auto!important;margin:auto;padding:clamp(20px,4vw,48px);background:#fff;color:var(--sanchaya-ink)}
+.licences-page header{display:block;height:auto;min-height:0;padding:0;border:0;background:transparent;color:inherit;box-shadow:none}
+.licences-hero h2{margin:.2rem 0 .6rem;font-size:clamp(1.8rem,3vw,2.8rem)}.licences-hero p{max-width:780px}
+.licences-notice{margin:16px 0;padding:14px 18px;border:2px solid #e3b04b;border-radius:14px;background:#fff8e6;font-size:.92rem;line-height:1.55}.licences-notice strong{font-size:1.05rem}.licences-notice p{margin:6px 0 0}
+.licences-tools{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.licences-tools input{flex:1 1 260px;min-width:0;padding:10px 12px;border:1px solid #d3d8e8;border-radius:10px;font:inherit}.licences-tools select{padding:10px;border:1px solid #d3d8e8;border-radius:10px;background:#fff;font:inherit}
+.licences-filter{display:flex;flex-wrap:wrap;gap:8px}.licences-filter button{padding:7px 14px;border:1px solid #d3d8e8;border-radius:999px;background:#fff;font:inherit;font-weight:700;cursor:pointer}.licences-filter button.active{background:#4361ee;border-color:#4361ee;color:#fff}.licences-filter small{opacity:.75}
+.licences-count{margin:14px 0 8px;font-size:.84rem;color:#51615a}
+.licences-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.licences-list li{padding:14px 16px;border:1px solid var(--sanchaya-border);border-left:4px solid #9aa4c2;border-radius:14px;background:#fff}.licences-list li.c-no{border-left-color:#c0392b}.licences-list li.c-source{border-left-color:#28785b}.licences-list li.c-check{border-left-color:#d98a1f}.licences-list li.c-reserved{border-left-color:#6b4c8a}
+.licences-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.licences-head h3{margin:0;font-size:1rem;line-height:1.3}
+.licences-badge{flex:none;padding:2px 9px;border-radius:999px;font-size:.68rem;font-weight:800;background:#eef0f7;color:#33406b;white-space:nowrap}.licences-badge.c-no{background:#fdecea;color:#a32c20}.licences-badge.c-source{background:#e4f5ec;color:#1d6b46}.licences-badge.c-check{background:#fff3cf;color:#7a4a12}.licences-badge.c-reserved{background:#efe9f8;color:#523a73}
+.licences-list p{margin:5px 0;font-size:.84rem;line-height:1.5}.licences-used{color:#51615a}.licences-where{font-size:.74rem!important;color:#51615a}.licences-where code{overflow-wrap:anywhere}
+.licences-more{margin-top:26px;padding-top:6px;border-top:1px solid var(--sanchaya-border)}.licences-more code{overflow-wrap:anywhere;font-size:.82rem}.licences-disclaimer{margin-top:14px;font-size:.78rem;color:#51615a}

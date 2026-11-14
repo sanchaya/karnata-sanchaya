@@ -53,3 +53,28 @@ test('the Data wanted list is bilingual, in step with docs/data-wanted.md and wi
   assert.match(page,/mailto:/);assert.match(page,/LICENSING\.md/)
   assert.match(app,/Non-commercial use only · Licence/,'the footer shows the non-commercial notice')
 })
+
+test('the Licences page lists every kind of data, in step with LICENSING.md, and is wired into the portal',async()=>{
+  const { LICENCES, LICENCE_AREAS, COMMERCIAL_LABELS }=await import('../src/data/licences.js')
+  const doc=await read('LICENSING.md'),areas=new Set(LICENCE_AREAS.map(([id])=>id))
+  assert.ok(LICENCES.length>=25);assert.equal(new Set(LICENCES.map(i=>i.id)).size,LICENCES.length)
+  for(const item of LICENCES){
+    assert.ok(areas.has(item.area)&&COMMERCIAL_LABELS[item.commercial]&&['data','pointer','display'].includes(item.used),item.id)
+    assert.ok(item.title.en&&item.title.kn&&item.obligation.en&&item.obligation.kn&&item.licence&&item.source&&item.where,`${item.id} needs every field`)
+    assert.match(doc,/^/m);assert.ok(/^\d+$/.test(item.ref)?doc.includes(`## ${item.ref}. `):doc.includes(`### ${item.ref} `),`${item.id}: LICENSING.md has no section ${item.ref}`)
+  }
+  for(const area of areas)assert.ok(LICENCES.some(i=>i.area===area),`${area} has no entries`)
+  // The project's own terms are non-commercial; open-licence sources are allowed under their own terms.
+  assert.equal(LICENCES.find(i=>i.id==='software').commercial,'no');assert.equal(LICENCES.find(i=>i.id==='original-data').commercial,'no')
+  assert.equal(LICENCES.find(i=>i.id==='rivers').commercial,'source');assert.match(LICENCES.find(i=>i.id==='rivers').licence,/ODbL/)
+  assert.equal(LICENCES.find(i=>i.id==='logos').commercial,'reserved')
+  for(const id of ['wikidata-people','natural-earth','gbif-ebird','commons-photos'])assert.equal(LICENCES.find(i=>i.id===id).commercial,'source',id)
+  for(const id of ['fonts','states','bengaluru-kml','census-atlas'])assert.equal(LICENCES.find(i=>i.id===id).commercial,'check',`${id} stays "check" until confirmed`)
+  const app=await read('src/App.jsx')
+  assert.match(app,/const Licences=lazy/);assert.match(app,/view==='licenses'/);assert.match(app,/licenses:'community'/)
+  assert.equal((app.match(/\['licenses'/g)||[]).length,1,'one menu entry')
+  assert.match(app,/<a href="#licenses">\{locale==='kn'\?'ವಾಣಿಜ್ಯೇತರ ಬಳಕೆಗೆ ಮಾತ್ರ · ಪರವಾನಗಿ':'Non-commercial use only · Licence'\}<\/a>/,'the footer opens the portal page')
+  const { seoPages }=await import('../src/seo-pages.js');assert.ok(seoPages.licenses)
+  const page=await read('src/Licences.jsx')
+  assert.match(page,/Non-commercial use only/);assert.match(page,/info@sanchifoundation\.org/);assert.match(page,/LICENSING\.md/)
+})

@@ -16,6 +16,10 @@
 > terms below should be confirmed by the owner's legal counsel before relying on them in a dispute. Items we could not
 > confirm are listed under [Open items](#9-open-items-for-the-owner).
 
+The same information is on the portal under **Project & contribute > Licences & sources** (`src/data/licences.js`, shown by
+`src/Licences.jsx`), where each kind of data can be filtered by area and by whether commercial use is allowed. Keep the two in step;
+`test/licensing.test.js` checks it.
+
 ## 1. What you may and may not do
 
 | You may | You may not |

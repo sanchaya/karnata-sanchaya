@@ -132,7 +132,7 @@ use with attribution, and **may not be used commercially without written permiss
 - **Third-party data keeps its own licence** (Natural Earth, OpenStreetMap, GBIF/eBird, Wikidata, Wikimedia Commons photos and
   others). Some of it allows commercial use on its own; follow each item's licence.
 
-**[LICENSING.md](LICENSING.md)** lists every kind of data in this project with its source, licence and what you must do, the
+The portal shows the same list on its **Licences & sources** page. **[LICENSING.md](LICENSING.md)** lists every kind of data in this project with its source, licence and what you must do, the
 dependency licences, how to cite, and the open items for the owner. **[Data we still need](docs/data-wanted.md)** lists the datasets
 we are looking for; the portal's **Data wanted** page lets anyone point us to a source.
 

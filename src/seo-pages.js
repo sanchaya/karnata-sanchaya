@@ -55,3 +55,7 @@ Object.assign(seoPages,{
 Object.assign(seoPages,{
   'data-wanted':{kn:['ನಮಗೆ ಬೇಕಾದ ದತ್ತಾಂಶ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಅರಣ್ಯ ಗಡಿ, ಮಳೆ, ಮಣ್ಣು, ಶಾಸನ ಪಠ್ಯ, ಕನ್ನಡ ಹೆಸರುಗಳು ಮತ್ತು ಇನ್ನಷ್ಟು: ಈ ದತ್ತಾಂಶ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ ಎಂದು ನಮಗೆ ತಿಳಿಸಿ.'],en:['Data wanted · Karnataka Historical Atlas','Forest boundaries, rainfall, soil, inscription texts, Kannada names and more: tell us where this data can be found.']},
 })
+
+Object.assign(seoPages,{
+  licenses:{kn:['ಪರವಾನಗಿ ಮತ್ತು ದತ್ತಾಂಶ ಮೂಲಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಈ ಅಟ್ಲಸ್‌ನ ಪ್ರತಿ ರೀತಿಯ ದತ್ತಾಂಶದ ಮೂಲ ಮತ್ತು ಪರವಾನಗಿ; ವಾಣಿಜ್ಯೇತರ ಬಳಕೆಗೆ ಮಾತ್ರ.'],en:['Licences and data sources · Karnataka Historical Atlas','The source and licence of every kind of data in this atlas; non-commercial use only.']},
+})

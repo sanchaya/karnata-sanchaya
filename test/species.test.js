@@ -325,3 +325,39 @@ test('every live Support option opens a real page or scrolls within the Support 
   }
   assert.match(donate,/event\.preventDefault\(\);document\.getElementById\(o\.scrollTo\)/)
 })
+
+test('storage that throws (in-app browsers, strict privacy) never crashes the app',async()=>{
+  const { safeStorage, session }=await import('../src/safe-storage.js')
+  const blocked=()=>{throw new DOMException('The operation is insecure.','SecurityError')}
+  Object.defineProperty(globalThis,'localStorage',{configurable:true,get:blocked})
+  Object.defineProperty(globalThis,'sessionStorage',{configurable:true,get:blocked})
+  try{
+    assert.equal(safeStorage.get('k'),null);assert.equal(safeStorage.set('k','v'),false)
+    assert.equal(session.get('k'),null);assert.equal(session.set('k','v'),false)
+    const { getInitialLocale, setStoredLocale }=await import('../src/i18n.js')
+    assert.equal(getInitialLocale(),'kn');setStoredLocale('en')
+    const { readSeen, writeSeen }=await import('../src/whats-new.js')
+    assert.deepEqual(readSeen(),[]);writeSeen(['x'])
+    const { sendPing }=await import('../src/visit-ping.js')
+    sendPing('atlas','view')
+  }finally{delete globalThis.localStorage;delete globalThis.sessionStorage}
+  // Storage that works still works.
+  const memory=new Map()
+  Object.defineProperty(globalThis,'localStorage',{configurable:true,value:{getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,String(v))}})
+  try{assert.equal(safeStorage.set('a',1),true);assert.equal(safeStorage.get('a'),'1')}finally{delete globalThis.localStorage}
+  // No source file reads a storage property outside a try, except the guarded helpers.
+  const { readdir }=await import('node:fs/promises')
+  for(const file of (await readdir(new URL('../src/',import.meta.url))).filter(f=>/\.(js|jsx)$/.test(f)&&!['safe-storage.js','Admin.jsx'].includes(f))){
+    const source=await readFile(new URL(`../src/${file}`,import.meta.url),'utf8')
+    for(const [index,line] of source.split('\n').entries()){
+      if(!/\b(localStorage|sessionStorage)\.(getItem|setItem|removeItem)/.test(line)||line.trim().startsWith('//'))continue
+      const context=source.split('\n').slice(Math.max(0,index-4),index+1).join('\n')
+      assert.match(context,/try\s*[{(]|try\{/,`${file}:${index+1} uses storage outside a try`)
+    }
+  }
+})
+
+test('the error screen shows a short technical detail so crashes can be diagnosed',async()=>{
+  const source=await readFile(new URL('../src/ErrorBoundary.jsx',import.meta.url),'utf8')
+  assert.match(source,/getDerivedStateFromError\(error\)/);assert.match(source,/Technical details/)
+})
