@@ -25,3 +25,19 @@
   .aata-worksheet-key{break-before:page;border-top:0}
   .aata-worksheet ol{gap:6px}.aata-worksheet li{line-height:1.45;break-inside:avoid}.aata-worksheet h3{margin:10px 0 4px}.script-word-small{font-size:24px}
 }
+
+/* Keep the games above the fold: a slim banner, one row of game tabs, a compact archive bar, and the source note after the game. */
+.aata-paata-page{padding-top:1rem}
+.aata-paata-hero{padding:.9rem 1.3rem;border-radius:18px;gap:1rem}
+.aata-paata-hero .eyebrow{display:none}
+.aata-paata-hero h1{margin:0 0 .15rem;font-size:clamp(1.7rem,2.6vw,2.4rem)}
+.aata-paata-hero p{margin:0;font-size:1rem;line-height:1.45}
+.aata-hero-mark{flex:none;width:54px;height:54px;border-radius:14px;font-size:1.7rem;box-shadow:5px 5px 0 #f2bd47}
+.aata-game-tabs{margin:.8rem 0}
+.aata-game-tabs button{display:flex;flex-direction:column;align-items:center;gap:.15rem;padding:.6rem .4rem;font-size:.95rem;line-height:1.25}
+.aata-game-tabs button span{font-size:1.25rem;line-height:1}
+.aata-game-tabs button.active{box-shadow:0 8px 20px #5e43c755}
+.aata-archive{padding:.55rem 1rem}.aata-archive small{display:none}
+.aata-source-note{margin:1.2rem 0 0;font-size:.85rem}
+@media(min-width:1000px){.aata-game-tabs{grid-template-columns:repeat(7,minmax(0,1fr))}}
+.aata-game-stage>header{padding:.7rem 1rem}.aata-game-stage>header h2{margin:.1rem 0;font-size:clamp(1.5rem,2.2vw,2rem)}
