@@ -79,3 +79,11 @@ visible sign. `src/scroll-hint.js` (started from `main.jsx`) sets `data-scroll-l
 such menu while items are hidden on that side, and `src/scroll-hint.css` fades that edge. It also scrolls the open
 page's entry into view once per page. To cover another menu, add its selector to `MENUS` in the script and to the
 `:is(...)` lists in the stylesheet.
+
+## Rivers, dams and lakes
+
+`src/data/geography-waters.js` holds dams and reservoirs, lakes and tanks, and river landmarks (falls and
+confluences) shown on the `#geography` map under their own filters. Each is an approximate reference point, not a river
+course or a surveyed dam wall, and carries `review.status: needs-review`. Only the dams with a stated source year show
+one. They also feed the Word Trail catalogue. Six more wildlife sanctuaries were added to `geographyProtectedAreas`.
+River courses, catchment areas and reservoir capacities are not yet modelled; add them from India-WRIS with citations.

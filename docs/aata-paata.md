@@ -88,6 +88,7 @@ Game terms are built at runtime by `buildWordCatalog()` in
 - `atlasData.inscriptions`
 - `geographyProtectedAreas`
 - `geographyNatureHighlights`
+- `geographyWaterFeatures` (dams, lakes, rivers; `src/data/geography-waters.js`)
 
 The time grid uses `atlasData.events`. A game never promotes or alters a
 research record. Correcting an atlas name, date or relationship changes future

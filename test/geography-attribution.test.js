@@ -73,3 +73,19 @@ test('record and clipboard citations vary reproducibly while retaining the canon
   for(const citation of citations)assert.match(citation,/https:\/\/karnata\.sanchaya\.net/)
   assert.match(appendPublicAttribution('Selected historical text','page'),/^Selected historical text[\s\S]+karnata\.sanchaya\.net/)
 })
+
+test('rivers, dams and lakes are bilingual, approximate, sourced and awaiting review',async()=>{
+  const { geographyWaterFeatures, geographyWaterSources } = await import('../src/data/geography-waters.js')
+  const ids=new Set([...geographyNatureSources,...geographyWaterSources].map(source=>source.id))
+  for(const type of ['dam','lake','river'])assert.ok(geographyWaterFeatures.some(item=>item.type===type),`${type} is missing`)
+  assert.equal(new Set(geographyWaterFeatures.map(item=>item.id)).size,geographyWaterFeatures.length)
+  for(const item of geographyWaterFeatures){
+    assert.ok(item.name.en&&item.name.kn&&item.detail.en&&item.detail.kn,`${item.id} needs bilingual text`)
+    const [lat,lng]=item.coords
+    assert.ok(lat>11.5&&lat<18.5&&lng>74&&lng<78.6,`${item.id} lies outside Karnataka`)
+    assert.equal(item.locationPrecision,'approximate')
+    assert.equal(item.review.status,'needs-review')
+    for(const id of item.sourceIds)assert.ok(ids.has(id),`${item.id} has unknown source ${id}`)
+  }
+  assert.match(geographyExplorer,/geographyWaterFeatures/)
+})
