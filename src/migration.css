@@ -1,0 +1,10 @@
+.migration-tools label{display:flex;align-items:center;gap:6px;font-weight:600}.migration-tools select{padding:9px;border:1px solid #cddccf;border-radius:10px;background:#fff}
+.migration-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:18px;align-items:start;margin-top:10px}
+.migration-globe-panel{position:sticky;top:100px;padding:12px;border:1px solid #d9e5da;border-radius:16px;background:#fff}
+.migration-globe-panel .species-globe{flex:none;width:100%;max-width:none}
+.migration-origins{display:flex;flex-wrap:wrap;gap:6px 8px;margin:8px 0 0;padding:0;list-style:none}.migration-origins button{padding:3px 10px;border:1px solid #cddccf;border-radius:999px;background:#f1f6f2;font:inherit;font-size:.8rem;cursor:pointer}.migration-origins button.active{background:#167f9b;border-color:#167f9b;color:#fff}.migration-origins b{color:#167f9b}.migration-origins button.active b{color:#fff}
+.migration-list{min-width:0}.migration-detail{margin-bottom:12px;padding:12px 14px;border:1px solid #bcd9e0;border-radius:14px;background:#f3fafc}.migration-detail h3{margin:0}
+.migration-birds{display:grid;gap:8px;margin:0;padding:0;list-style:none}.migration-birds button{display:flex;align-items:center;gap:10px;width:100%;padding:8px;border:1px solid #d9e5da;border-radius:12px;background:#fff;text-align:left;font:inherit;cursor:pointer}.migration-birds button.active{border-color:#167f9b;background:#eaf6f9;box-shadow:0 0 0 2px #167f9b33}
+.migration-birds img,.migration-noimg{flex:none;width:58px;height:58px;border-radius:10px;object-fit:cover;background:#e8eee9;display:grid;place-items:center;font-size:1.5rem}
+.migration-birds span:last-child{display:flex;flex-direction:column;gap:1px;min-width:0}.migration-birds strong{font-size:1.02rem}.migration-birds small{color:#51615a;font-size:.76rem;overflow-wrap:anywhere}
+@media(max-width:900px){.migration-layout{grid-template-columns:1fr}.migration-globe-panel{position:static}}

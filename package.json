@@ -32,7 +32,7 @@
     "test": "node --test",
     "import:ec": "node scripts/build-canonical.mjs",
     "import:ei": "node scripts/build-canonical.mjs",
-    "build": "npm run research:index && npm run canonical:build && node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build",
+    "build": "npm run research:index && npm run canonical:build && node scripts/generate-seo.mjs && node scripts/generate-open-datasets.mjs && vite build && node scripts/prerender-pages.mjs",
     "preview": "vite preview",
     "validate:data": "node scripts/validate-data.mjs",
     "check": "npm run validate:data && node --test && npm run build"

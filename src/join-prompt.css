@@ -1,0 +1,6 @@
+.join-banner{position:fixed;left:50%;bottom:14px;z-index:1400;display:flex;align-items:center;gap:12px 16px;flex-wrap:wrap;width:min(640px,calc(100vw - 24px));transform:translateX(-50%);padding:10px 14px;border:1px solid #cdd6f7;border-radius:14px;background:#f4f6ff;color:#1f2a5a;box-shadow:0 10px 30px #1f2a5a33}
+.join-banner p{flex:1 1 280px;margin:0;font-size:.85rem;line-height:1.45}.join-banner div{display:flex;gap:8px;align-items:center}
+.join-banner .join-go{padding:7px 16px;border-radius:999px;background:#4361ee;color:#fff;font-weight:700;text-decoration:none;font-size:.85rem}
+.join-banner button{padding:6px 10px;border:0;background:none;color:#4a5578;font:inherit;font-size:.8rem;text-decoration:underline;cursor:pointer}
+.join-callout{margin:8px 0 0;padding:8px 12px;border-radius:10px;background:#f4f6ff;color:#1f2a5a;font-size:.82rem}.join-callout a{font-weight:700}
+@media(max-width:720px){.join-banner{bottom:8px}}

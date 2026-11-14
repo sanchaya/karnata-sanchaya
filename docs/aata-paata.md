@@ -37,7 +37,7 @@ Seven games and a worksheet, eight tabs in all.
 - **ಯಾವ ಜೀವಿ? · Name that species:** a Wikimedia Commons photo and four names from the same group, five species a day
   (`src/aata-bird.js`, `src/AataBird.jsx`). Names, photos and their credits come from the species data (see
   [species](species.md)); Kannada rounds use species-level names only, since a group name such as ಬೆಳ್ಳಕ್ಕಿ fits several
-  species. The photo's author and licence are shown with every round. The species data loads only when this tab opens.
+  species. The photo's author and licence are shown with every round. The species data loads only when this tab opens. A row of type buttons (all, bird, mammal, reptile, amphibian, insect, plant; only types with enough named photos) limits the day's five questions to one type. The title and question then use that word ("ಯಾವ ಹಕ್ಕಿ?", "ಇದು ಯಾವ ಸಸ್ಯ?", "Name that bird") instead of the generic "species"; the mixed mode asks "ಇದು ಯಾವ ಜೀವಿ?" only in the title and names each round's own type in the question. `?game=bird&quiz=plant` opens a type directly.
 - **ತರಗತಿ ಕಾರ್ಯಪತ್ರ · Classroom worksheet:** a printable sheet of the day's
   places, dynasties and scripts with blanks for answers, and an answer key on its
   own page. Print rules in `aata-paata.css` hide the site chrome.

@@ -150,3 +150,22 @@ where eBird records it in its other season, and the months it is seen in Karnata
 On the page, the globe's country buttons list the birds seen in a country ("From: Russia"). The origin is where the bird is
 *seen* in the other season, not an exact breeding site or a tracked route, and passage migrants can be seen in several
 places. Re-run the flyway import after changing the species list, then `node scripts/generate-open-datasets.mjs`.
+
+## Migration page
+
+`#migration` (Explore > Migratory birds, `src/MigrationExplorer.jsx`, logic in `src/migration.js`) is a large globe with the
+birds beside it. Pick a month (it starts on the current one, "Here now"), a type (winter visitors, summer visitors, passage
+migrants) or search a bird. **Tap a country's dot** and the names of the birds from there are written on the globe next to it
+(up to eight, then "+N"); **pick a bird** and its routes are drawn and its name appears at each origin country, with a card
+giving where it is seen in the other season and the months it is in Karnataka. The list shows photo, Kannada and English
+names, origins and months. Data: `species-flyways.json` (see "From where to where"); sightings, not tracked routes.
+
+## Inviting readers to sign up
+
+`src/JoinPrompt.jsx` and `src/join-prompt.js`: a slim, dismissible strip at the bottom of the page ("Know a Kannada name? Spot a
+mistake? Join free ...") appears after a reader has opened three pages in a session. It never shows to signed-in members,
+not on account pages (contribute, profile, reviews ...), and not for 30 days after "Not now". Inline lines ("Open a free
+account to suggest Kannada names") sit in the species name drive and at the end of a Name-that-species round. On the static
+mirror the link goes to the main site's `#contribute`. It promises only what exists: suggesting corrections and names,
+the contributors' board and certificates, and approval by a moderator. Sign-up clicks show up as visits to `contribute`
+in the visitor statistics.

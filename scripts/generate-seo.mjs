@@ -1,5 +1,7 @@
 import { unlink, writeFile } from 'node:fs/promises'
 
+// robots.txt for every build. The sitemap is written to dist/ by scripts/prerender-pages.mjs, because it lists every
+// prerendered page. Search crawlers are welcome; AI-training crawlers are not (a project decision).
 const aiCrawlerRules=`User-agent: GPTBot
 Disallow: /
 User-agent: CCBot
@@ -15,16 +17,9 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 `
-const raw=process.env.PUBLIC_SITE_URL?.trim()
-if(raw){
-  const siteUrl=new URL(raw.endsWith('/')?raw:`${raw}/`).href
-  const today=new Date().toISOString().slice(0,10)
-  const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${siteUrl}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n</urlset>\n`
-  await writeFile(new URL('../public/sitemap.xml',import.meta.url),sitemap)
-  await writeFile(new URL('../public/robots.txt',import.meta.url),`User-agent: *\nAllow: /\n\n${aiCrawlerRules}\nSitemap: ${siteUrl}sitemap.xml\n`)
-  console.log(`SEO sitemap generated for ${siteUrl}`)
-}else{
-  await unlink(new URL('../public/sitemap.xml',import.meta.url)).catch(()=>{})
-  await writeFile(new URL('../public/robots.txt',import.meta.url),`User-agent: *\nAllow: /\n\n${aiCrawlerRules}`)
-  console.log('PUBLIC_SITE_URL is not set; keeping portable canonical metadata and omitting an environment-specific sitemap.')
-}
+const mirror=process.env.VITE_STATIC_DATASET==='true'
+const site=(process.env.CANONICAL_SITE_URL||'https://karnata.sanchaya.net/').replace(/\/?$/,'/')
+// The static mirror points its canonicals at the main site and offers no sitemap of its own.
+await writeFile(new URL('../public/robots.txt',import.meta.url),`User-agent: *\nAllow: /\n\n${aiCrawlerRules}${mirror?'':`\nSitemap: ${site}sitemap.xml\n`}`)
+await unlink(new URL('../public/sitemap.xml',import.meta.url)).catch(()=>{})
+console.log(mirror?'robots.txt written (static mirror: no sitemap; canonicals point at the main site).':`robots.txt written; the sitemap for ${site} is generated after the build.`)

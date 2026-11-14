@@ -4,6 +4,8 @@ import MigrationGlobe, { countryName } from './MigrationGlobe'
 import { aggregateRoutes } from './globe'
 import { applyReviewedNames, filterSpecies, migratoryByMonth, namingDrive } from './species-normalize'
 import SpeciesDetail from './SpeciesDetail'
+import { JoinCallout } from './JoinPrompt'
+import { quizTitle } from './aata-bird'
 import './species.css'
 
 const PAGE=48
@@ -42,7 +44,7 @@ export default function SpeciesExplorer({locale}){
   const topMonth=Math.max(...migrants,1)
   return <main className="species-page portal-page" id="species">
     <header className="species-hero"><p className="eyebrow">{kn?'ಪಕ್ಷಿ · ಪ್ರಾಣಿ · ಸಸ್ಯ':'Birds · animals · plants'}</p><h2>{kn?'ಕರ್ನಾಟಕದ ಜೀವವೈವಿಧ್ಯ':'Karnataka’s wildlife and plants'}</h2>
-      <p>{kn?`ಮುಕ್ತ ದತ್ತಾಂಶದಿಂದ (GBIF, ಇಬರ್ಡ್, ವಿಕಿಡೇಟಾ) ಸಂಗ್ರಹಿಸಿದ ${species.length.toLocaleString('en-IN')} ಪ್ರಭೇದಗಳು. ಕನ್ನಡ ಹೆಸರುಗಳು ಇನ್ನೂ ಪರಿಶೀಲನೆಗೆ ಬಾಕಿ. ತಪ್ಪಿದ್ದರೆ ಅಥವಾ ಹೆಸರಿಲ್ಲದಿದ್ದರೆ ನೀವೇ ಸೂಚಿಸಿ.`:`${species.length.toLocaleString('en-IN')} species gathered from open data (GBIF, eBird, Wikidata). Kannada names are still awaiting review. Fix a wrong name or add a missing one.`} <a className="species-play" href="?game=bird#aata-paata">{kn?'ಆಟ: ಯಾವ ಜೀವಿ? →':'Play: Name that species →'}</a></p></header>
+      <p>{kn?`ಮುಕ್ತ ದತ್ತಾಂಶದಿಂದ (GBIF, ಇಬರ್ಡ್, ವಿಕಿಡೇಟಾ) ಸಂಗ್ರಹಿಸಿದ ${species.length.toLocaleString('en-IN')} ಪ್ರಭೇದಗಳು. ಕನ್ನಡ ಹೆಸರುಗಳು ಇನ್ನೂ ಪರಿಶೀಲನೆಗೆ ಬಾಕಿ. ತಪ್ಪಿದ್ದರೆ ಅಥವಾ ಹೆಸರಿಲ್ಲದಿದ್ದರೆ ನೀವೇ ಸೂಚಿಸಿ.`:`${species.length.toLocaleString('en-IN')} species gathered from open data (GBIF, eBird, Wikidata). Kannada names are still awaiting review. Fix a wrong name or add a missing one.`} <a className="species-play" href={`?game=bird${group?`&quiz=${group}`:''}#aata-paata`}>{kn?`ಆಟ: ${quizTitle(group,'kn')} →`:`Play: ${quizTitle(group,'en')} →`}</a></p></header>
     <div className="species-groups" role="group" aria-label={kn?'ಗುಂಪು':'Group'}>{GROUPS.map(g=><button type="button" key={g.id} className={!drive&&group===g.id?'active':''} aria-pressed={!drive&&group===g.id} onClick={()=>{setDrive(null);setGroup(g.id);setSeason('');setMonth(0);setFamily('');setOrigin(0);setShown(PAGE)}}>{kn?g.kn:g.en} <small>{COUNTS[g.id]?.toLocaleString('en-IN')}</small></button>)}</div>
 
     {group==='bird'&&!drive&&<section className="species-calendar" aria-label={kn?'ವಲಸೆ ಕ್ಯಾಲೆಂಡರ್':'Migration calendar'}>
@@ -51,10 +53,11 @@ export default function SpeciesExplorer({locale}){
       <button type="button" className="species-now" onClick={()=>reset(setMonth)(nowMonth)}>{kn?'ಈಗ ಬಂದಿರುವ ವಲಸೆ ಹಕ್ಕಿಗಳು':'Visiting now'}</button>
     </section>}
 
-    {routes.length>0&&<section className="species-globe-section" aria-label={kn?'ವಲಸೆ ಭೂಗೋಳ':'Migration globe'}><div><strong>{kn?'ವಲಸೆ ಭೂಗೋಳ':'Migration globe'}</strong><small>{kn?'ಈಗ ಪಟ್ಟಿಯಲ್ಲಿರುವ ಹಕ್ಕಿಗಳು ಬೇರೆ ಋತುವಿನಲ್ಲಿ ಎಲ್ಲಿ ಕಾಣುತ್ತವೆ. ತಿಂಗಳು ಅಥವಾ ಋತು ಆರಿಸಿದರೆ ಭೂಗೋಳ ಬದಲಾಗುತ್ತದೆ. ಎಳೆದು ತಿರುಗಿಸಿ.':'Where the birds in the list are seen in their other season. Pick a month or season and the globe changes. Drag to turn it.'}</small><ol>{routes.slice(0,8).map(r=><li key={r.id}><button type="button" className={origin===r.id?'active':''} aria-pressed={origin===r.id} onClick={()=>reset(setOrigin)(origin===r.id?0:r.id)}>{countryName(r.id)} <b>{r.weight}</b></button></li>)}</ol><small>{kn?'ದೇಶವನ್ನು ಒತ್ತಿದರೆ ಅಲ್ಲಿಂದ ಬರುವ ಹಕ್ಕಿಗಳು ಪಟ್ಟಿಯಲ್ಲಿ ಬರುತ್ತವೆ; ಸಂಖ್ಯೆ = ಅಲ್ಲಿ ಕಾಣುವ ಪ್ರಭೇದಗಳು. ಇವು ಕಂಡ ದಾಖಲೆಗಳು (ಇಬರ್ಡ್), ಉಪಗ್ರಹ ಮಾರ್ಗವಲ್ಲ.':'Tap a country to list the birds seen there; the number is how many listed species are seen there. These are eBird sightings, not tracked routes.'}</small></div><MigrationGlobe locale={locale} routes={routes}/></section>}
+    {routes.length>0&&<section className="species-globe-section" aria-label={kn?'ವಲಸೆ ಭೂಗೋಳ':'Migration globe'}><div><strong>{kn?'ವಲಸೆ ಭೂಗೋಳ':'Migration globe'}</strong><a className="species-play" href="#migration">{kn?'ದೊಡ್ಡ ವಲಸೆ ಭೂಗೋಳ, ಹೆಸರುಗಳೊಂದಿಗೆ →':'Open the full migration globe, with bird names →'}</a><small>{kn?'ಈಗ ಪಟ್ಟಿಯಲ್ಲಿರುವ ಹಕ್ಕಿಗಳು ಬೇರೆ ಋತುವಿನಲ್ಲಿ ಎಲ್ಲಿ ಕಾಣುತ್ತವೆ. ತಿಂಗಳು ಅಥವಾ ಋತು ಆರಿಸಿದರೆ ಭೂಗೋಳ ಬದಲಾಗುತ್ತದೆ. ಎಳೆದು ತಿರುಗಿಸಿ.':'Where the birds in the list are seen in their other season. Pick a month or season and the globe changes. Drag to turn it.'}</small><ol>{routes.slice(0,8).map(r=><li key={r.id}><button type="button" className={origin===r.id?'active':''} aria-pressed={origin===r.id} onClick={()=>reset(setOrigin)(origin===r.id?0:r.id)}>{countryName(r.id)} <b>{r.weight}</b></button></li>)}</ol><small>{kn?'ದೇಶವನ್ನು ಒತ್ತಿದರೆ ಅಲ್ಲಿಂದ ಬರುವ ಹಕ್ಕಿಗಳು ಪಟ್ಟಿಯಲ್ಲಿ ಬರುತ್ತವೆ; ಸಂಖ್ಯೆ = ಅಲ್ಲಿ ಕಾಣುವ ಪ್ರಭೇದಗಳು. ಇವು ಕಂಡ ದಾಖಲೆಗಳು (ಇಬರ್ಡ್), ಉಪಗ್ರಹ ಮಾರ್ಗವಲ್ಲ.':'Tap a country to list the birds seen there; the number is how many listed species are seen there. These are eBird sightings, not tracked routes.'}</small></div><MigrationGlobe locale={locale} routes={routes}/></section>}
 
     <section className="species-drive" aria-label={kn?'ಹೆಸರಿಡುವ ಅಭಿಯಾನ':'Naming drive'}>
       <div><strong>{kn?'ಕನ್ನಡ ಹೆಸರು ಅಭಿಯಾನ':'Kannada name drive'}</strong><progress value={named.done} max={named.all||1}></progress><small>{kn?`${(GROUPS.find(g=>g.id===group)?.kn||'')}: ${named.done.toLocaleString('en-IN')} / ${named.all.toLocaleString('en-IN')} ಪ್ರಭೇದಗಳಿಗೆ ಹೆಸರಿನ ಸಲಹೆ ಇದೆ (ಪರಿಶೀಲನೆ ಬಾಕಿ).`:`${GROUPS.find(g=>g.id===group)?.en||''}: ${named.done.toLocaleString('en-IN')} of ${named.all.toLocaleString('en-IN')} species have a suggested name (awaiting review).`}</small></div>
+      <JoinCallout locale={locale}/>
       {drive?<button type="button" onClick={()=>{setDrive(null);setShown(PAGE)}}>{kn?'ಅಭಿಯಾನ ಮುಗಿಸಿ':'End the drive'}</button>:<button type="button" className="species-now" onClick={()=>{setDrive(namingDrive(species,images,today()));setShown(PAGE)}}>{kn?'ಹತ್ತು ಜೀವಿಗಳಿಗೆ ಹೆಸರಿಡಿ':'Name ten species'}</button>}
     </section>
 

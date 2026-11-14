@@ -16,4 +16,4 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-Sitemap: https://try-karnata.sanchaya.net/sitemap.xml
+Sitemap: https://karnata.sanchaya.net/sitemap.xml

@@ -96,6 +96,7 @@ edits do not appear on GitHub Pages until this approved export occurs.
 - Page layout rules and pitfalls: [front-end notes](docs/front-end-notes.md)
 - Atlas learning games: [ಆಟ–ಪಾಠ](docs/aata-paata.md)
 - Anonymous visitor counts for administrators: [visitor statistics](docs/visitor-stats.md)
+- Search engine indexing, prerendered pages and sitemap: [SEO](docs/seo.md)
 - Birds, animals, plants and crowdsourced Kannada names: [species](docs/species.md)
 - Contributor and reviewer use: [user guide](docs/user-guide.md)
 - Evidence and governance: [community governance](docs/community-governance.md)

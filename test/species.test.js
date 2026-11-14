@@ -200,3 +200,54 @@ test('month ranges read naturally and the origin filter finds birds seen in a co
   const flyways=JSON.parse(await readFile(new URL('../src/data/species/species-flyways.json',import.meta.url),'utf8')).flyways
   for(const entry of Object.values(flyways)){assert.ok(Array.isArray(entry.countries)&&Array.isArray(entry.states));assert.ok(!entry.states.some(s=>s.name==='Karnataka'))}
 })
+
+test('migration page logic: filters, origin counts and globe labels',async()=>{
+  const { birdName, filterMigrants, globeLabels, migrants, originCounts }=await import('../src/migration.js')
+  const flyways={1:{countries:[{id:643},{id:496}]},2:{countries:[{id:643}]},3:{countries:[]}}
+  const mk=(gbifKey,en,kn,months,pattern='winter-visitor',group='bird',migratory=true)=>({gbifKey,group,name:{en,kn},scientificName:`Sp ${gbifKey}`,seasonality:{migratory,months,pattern}})
+  const all=[mk(1,'Pintail','ಬಾತು',[11,12,1]),mk(2,'Warbler','',[10,11],'passage-or-local-movement'),mk(3,'NoData','',[1]),mk(4,'Resident','',[1],'resident','bird',false),mk(5,'Tree','',[1],'winter-visitor','plant')]
+  const birds=migrants(all,flyways)
+  assert.deepEqual(birds.map(b=>b.gbifKey),[1,2])
+  assert.deepEqual(filterMigrants(birds,{month:12,flyways}).map(b=>b.gbifKey),[1])
+  assert.deepEqual(filterMigrants(birds,{pattern:'passage-or-local-movement',flyways}).map(b=>b.gbifKey),[2])
+  assert.deepEqual(filterMigrants(birds,{country:496,flyways}).map(b=>b.gbifKey),[1])
+  assert.deepEqual(filterMigrants(birds,{query:'ಬಾತು',flyways}).map(b=>b.gbifKey),[1])
+  assert.deepEqual(originCounts(birds,flyways),[{id:643,weight:2},{id:496,weight:1}])
+  const name=id=>({643:'Russia',496:'Mongolia'}[id])
+  assert.equal(birdName(birds[1],'kn'),'Warbler');assert.equal(birdName(birds[0],'kn'),'ಬಾತು');assert.equal(birdName(birds[0],'en'),'Pintail')
+  assert.deepEqual(globeLabels({birds,flyways,locale:'en',nameOfCountry:name}),{643:'Russia · 2',496:'Mongolia · 1'})
+  assert.deepEqual(globeLabels({birds,flyways,locale:'en',nameOfCountry:name,selectedCountry:643})[643],['Russia · 2','Pintail','Warbler'])
+  assert.deepEqual(globeLabels({birds,flyways,locale:'en',nameOfCountry:name,selectedBird:birds[0]}),{643:['Pintail','Russia'],496:['Pintail','Mongolia']})
+  const real=JSON.parse(await readFile(new URL('../src/data/species/species-flyways.json',import.meta.url),'utf8')).flyways
+  assert.ok(migrants(data.species,real).length>150,'most migratory birds have an origin')
+})
+
+test('the species quiz names the kind of species instead of saying "species"',async()=>{
+  const { buildBirdRounds, quizTitle, roundQuestion, SPECIES_TYPES }=await import('../src/aata-bird.js')
+  const { applyNameSources, applyReviewedNames }=await import('../src/species-normalize.js')
+  assert.equal(quizTitle('bird','kn'),'ಯಾವ ಹಕ್ಕಿ?');assert.equal(quizTitle('plant','kn'),'ಯಾವ ಸಸ್ಯ?');assert.equal(quizTitle('mammal','kn'),'ಯಾವ ಪ್ರಾಣಿ?')
+  assert.equal(quizTitle('bird','en'),'Name that bird');assert.equal(quizTitle('','en'),'Name that species');assert.equal(quizTitle('','kn'),'ಯಾವ ಜೀವಿ?')
+  assert.equal(roundQuestion('reptile','kn'),'ಇದು ಯಾವ ಸರೀಸೃಪ?');assert.equal(roundQuestion('insect','en'),'Which insect is this?')
+  for(const g of Object.keys(SPECIES_TYPES)){assert.ok(!quizTitle(g,'kn').includes('ಜೀವಿ')&&!quizTitle(g,'en').includes('species'),g)}
+  const lists=JSON.parse(await readFile(new URL('../src/data/species/kn-name-sources.json',import.meta.url),'utf8')).sources
+  const images=JSON.parse(await readFile(new URL('../src/data/species/species-images.json',import.meta.url),'utf8')).images
+  const species=applyReviewedNames(applyNameSources(data.species,lists),{})
+  for(const group of ['bird','plant']){
+    const rounds=buildBirdRounds(species,images,'en','2026-11-14',5,group)
+    assert.ok(rounds.length>=3&&rounds.every(r=>r.group===group&&r.options.length===4),group)
+  }
+  assert.ok(new Set(buildBirdRounds(species,images,'en','2026-11-14',40).map(r=>r.group)).size>1,'mixed rounds span types')
+})
+
+test('the sign-up invitation waits, respects members and snoozes',async()=>{
+  const { shouldShowJoin, joinUrl, JOIN_MIN_VIEWS }=await import('../src/join-prompt.js')
+  const base={views:JOIN_MIN_VIEWS,dismissedAt:null,signedIn:false,view:'species',now:1e12}
+  assert.equal(shouldShowJoin(base),true)
+  assert.equal(shouldShowJoin({...base,views:JOIN_MIN_VIEWS-1}),false,'not before the reader has looked around')
+  assert.equal(shouldShowJoin({...base,signedIn:true}),false,'never to members')
+  assert.equal(shouldShowJoin({...base,signedIn:null}),true,'unknown (static edition) still invites')
+  for(const view of ['contribute','profile','reviews','evidence'])assert.equal(shouldShowJoin({...base,view}),false,view)
+  assert.equal(shouldShowJoin({...base,dismissedAt:base.now-86400000*5}),false,'snoozed after "Not now"')
+  assert.equal(shouldShowJoin({...base,dismissedAt:base.now-86400000*31}),true,'invites again after 30 days')
+  assert.equal(joinUrl(false),'#contribute');assert.equal(joinUrl(true),'https://karnata.sanchaya.net/#contribute')
+})

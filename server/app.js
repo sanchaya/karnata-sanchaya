@@ -396,11 +396,13 @@ if(existsSync(config.publicDir)){
   // running an older build fail with "Expected a JavaScript module but the server responded with text/html".
   app.use('/assets',express.static(path.join(config.publicDir,'assets'),{index:false,immutable:true,maxAge:'1y'}))
   app.use('/assets',(req,res)=>res.status(404).type('text/plain').set('Cache-Control','no-store').send('Asset not found'))
-  app.use(express.static(config.publicDir,{index:false,maxAge:config.env==='production'?'1h':0,setHeaders:(res,file)=>{if(/[\\/](sw\.js|index\.html)$/.test(file))res.set('Cache-Control','no-cache')}}))
+  app.use(express.static(config.publicDir,{index:'index.html',maxAge:config.env==='production'?'1h':0,setHeaders:(res,file)=>{if(/[\\/](sw\.js|index\.html)$/.test(file))res.set('Cache-Control','no-cache')}}))
   app.use((req,res,next)=>{
     if(req.method!=='GET')return next()
     if(/\.[a-z0-9]+$/i.test(req.path)&&!req.path.endsWith('.html'))return res.status(404).type('text/plain').set('Cache-Control','no-store').send('Not found')
-    res.set('Cache-Control','no-cache').sendFile(path.join(config.publicDir,'index.html'))
+    // Only "/" and the prerendered pages (served above) are real pages. Anything else is a 404, not a 200: search engines treat
+    // a 200 for every URL as a soft 404 and may drop the site. The app shell is still sent, so a mistyped link lands in the app.
+    res.status(req.path==='/'?200:404).set('Cache-Control','no-cache').sendFile(path.join(config.publicDir,'index.html'))
   })
 }
 app.use((error,req,res,next)=>{console.error(error);if(res.headersSent)return next(error);res.status(error.status||500).json({error:error.status?error.message:'The service could not complete this request.'})})

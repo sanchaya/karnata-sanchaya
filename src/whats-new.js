@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'migration-page',view:'migration',href:'#migration',date:'2026-11-14',
+    kn:['ವಲಸೆ ಹಕ್ಕಿಗಳ ಭೂಗೋಳ (ಹೊಸ ಪುಟ)','ಯಾವ ಹಕ್ಕಿ ಎಲ್ಲಿಂದ ಬರುತ್ತದೆ ಎಂದು ಭೂಗೋಳದ ಮೇಲೆ ಹೆಸರುಗಳೊಂದಿಗೆ ನೋಡಿ; ತಿಂಗಳು ಆರಿಸಿ, ದೇಶ ಅಥವಾ ಹಕ್ಕಿಯನ್ನು ಒತ್ತಿ.'],
+    en:['Migration globe (new page)','See which bird comes from where, with names on the globe. Pick a month, then tap a country or a bird.']},
   {id:'bird-quiz',view:'aata-paata',param:'game=bird',href:'?game=bird#aata-paata',date:'2026-11-14',
     kn:['ಯಾವ ಜೀವಿ? ಹೊಸ ಆಟ','ಫೋಟೋ ನೋಡಿ ಸರಿಯಾದ ಕನ್ನಡ ಹೆಸರು ಆರಿಸಿ — ದಿನಕ್ಕೆ ಐದು ಜೀವಿಗಳು.'],
     en:['Name that species: a new game','Look at the photo and pick the right name. Five species a day.']},
