@@ -98,3 +98,43 @@ batch returned the first batch's answer; it now hashes the whole request. That r
 2,506 species and Kannada candidates from 227 to 524 before the curated lists.
 
 At the last run 2,276 of 2,556 species have a free photo (25 files were rejected for their licence).
+
+## Features on the page
+
+- **Migration calendar:** a bar chart of migratory birds recorded in each month (`migratoryByMonth`); tap a month, or
+  "Visiting now", to filter the list. Inferred from eBird month counts; needs an ornithologist's review.
+- **Migration globe:** `src/MigrationGlobe.jsx` draws an orthographic globe on a canvas (drag or arrow keys to turn it,
+  no library; outlines are Natural Earth via `world-atlas`, public domain, in `src/data/species/world-110m.json`).
+  `scripts/import-species-flyways.mjs` records, for each migratory bird, the countries outside India where eBird records
+  it in its other season (May–Aug for winter visitors and passage birds, Nov–Feb for summer visitors), keeping up to six
+  countries with at least 3% of those records, into `species-flyways.json`. The page globe follows the current filters;
+  the species view shows one bird. **These are sightings, not tracked routes**, and country names are in English only.
+- **Species view:** the photo's large version, all Kannada candidates with their sources, the monthly pattern, a map of
+  up to 300 recent Karnataka records fetched live from GBIF (`api.gbif.org`; the live server's CSP `connect-src` allows
+  it), a copyable link (`?species=ID#species`), and links to GBIF, Wikidata, IUCN (search, link out only) and Xeno-canto
+  recordings for birds.
+- **Family filter:** click a family name on a card.
+- **Culture notes:** `species-culture.json` ties some species to the atlas (state bird and animal, the boar emblem of the
+  Chalukyas and Vijayanagara, Tipu Sultan's tiger). Marked needs-review.
+- **Name drive:** a progress bar per group and "Name ten species", which lists ten species with no Kannada name,
+  photos first, in a fixed order per day.
+- **Game:** "Name that species" in Aata-Paata (`?game=bird`), see [Aata-Paata](aata-paata.md).
+
+## Contributor leaderboard and live names (live portal)
+
+The live portal has MariaDB, so species names do not wait for a redeploy:
+
+1. A signed-in, approved member opens **Suggest a Kannada name** (the guided form opens with record type *species* and
+   asks for the Kannada name, a rationale and a citation with a locator).
+2. A reviewer approves it in the normal review queue (the contributor earns karma as for any approved contribution).
+3. `GET /api/species/community` (public, rate-limited, cached 60 s; `server/species-community.js`) returns the approved
+   names (the latest approved name per species wins; only Kannada script, at most 120 characters) and a leaderboard of
+   up to 20 approved members by number of species named. It exposes display names only, as the existing community
+   leaderboard does, never ids or emails.
+4. The species page overlays those names on the static ones and marks them *reviewed*, and shows the top ten contributors.
+   The static GitHub Pages edition has no API, so it shows neither.
+5. To carry accepted names into the static edition, run `npm run species:export-names` on the live server (it needs the
+   database `.env`). It merges approved names into `src/data/species/kn-names-reviewed.json`; review the diff, commit and
+   deploy.
+
+No schema migration is involved: it reads the existing `contributions` and `users` tables.

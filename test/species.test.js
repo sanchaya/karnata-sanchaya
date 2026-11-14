@@ -92,3 +92,67 @@ test('every species photo is openly licensed, credited and linked to its Commons
     assert.ok(image.author,`${key} needs an author`)
   }
 })
+
+test('species quiz rounds are deterministic, have four distinct options and always a photo',async()=>{
+  const { buildBirdRounds }=await import('../src/aata-bird.js')
+  const { applyNameSources, applyReviewedNames, filterSpecies, migratoryByMonth, namingDrive }=await import('../src/species-normalize.js')
+  const lists=JSON.parse(await readFile(new URL('../src/data/species/kn-name-sources.json',import.meta.url),'utf8')).sources
+  const images=JSON.parse(await readFile(new URL('../src/data/species/species-images.json',import.meta.url),'utf8')).images
+  const species=applyReviewedNames(applyNameSources(data.species,lists),{})
+  for(const locale of ['kn','en']){
+    const a=buildBirdRounds(species,images,locale,'2026-11-14'),b=buildBirdRounds(species,images,locale,'2026-11-14'),c=buildBirdRounds(species,images,locale,'2026-11-15')
+    assert.equal(a.length,5)
+    assert.deepEqual(a,b)
+    assert.notDeepEqual(a.map(r=>r.id),c.map(r=>r.id))
+    for(const round of a){
+      assert.ok(images[round.gbifKey])
+      assert.equal(round.options.length,4)
+      assert.equal(new Set(round.options.map(o=>o.name)).size,4)
+      assert.ok(round.options.some(o=>o.id===round.id&&o.name===round.answer))
+    }
+  }
+  const months=migratoryByMonth(species)
+  assert.equal(months.length,12)
+  assert.ok(months[0]>0&&months[11]>0,'winter months should have visitors')
+  assert.ok(months[0]>months[6],'more migrants in January than July')
+  assert.ok(filterSpecies(species,{group:'bird',month:1}).every(s=>s.seasonality.migratory))
+  assert.equal(namingDrive(species,images,'x').length,10)
+  assert.ok(namingDrive(species,images,'x').every(id=>!species.find(s=>s.id===id).name.kn))
+  const culture=JSON.parse(await readFile(new URL('../src/data/species/species-culture.json',import.meta.url),'utf8')).notes
+  for(const note of Object.values(culture))assert.ok(note.en&&note.kn)
+})
+
+test('approved species contributions become live names and a leaderboard',async()=>{
+  const { speciesCommunity }=await import('../server/species-community.js')
+  const row=(target,kn,user,name,when)=>({target_record_id:target,proposed_record_json:JSON.stringify({id:target,name:{kn}}),decided_at:when,user_id:user,display_name:name,display_name_kn:''})
+  const out=speciesCommunity([
+    row('species-gbif-1','ನವಿಲು','u1','Asha','2026-01-02'),
+    row('species-gbif-1','ಮಯೂರ','u2','Ravi','2026-02-01'),
+    row('species-gbif-2','ಹುಲಿ','u1','Asha','2026-01-05'),
+    row('species-gbif-3','Peacock','u1','Asha','2026-01-06'),
+    row('not-a-species','ಹೆಸರು','u1','Asha','2026-01-07'),
+  ])
+  assert.deepEqual(out.names.map(n=>[n.gbifKey,n.kn]).sort(),[[1,'ಮಯೂರ'],[2,'ಹುಲಿ']],'the latest approved name wins; non-Kannada and unknown targets are ignored')
+  assert.equal(out.leaders[0].name,'Asha')
+  assert.equal(out.leaders[0].species,2)
+  assert.ok(out.leaders.every(p=>!('id' in p)&&!('email' in p)))
+  const app=await readFile(new URL('../server/app.js',import.meta.url),'utf8')
+  assert.match(app,/\/api\/species\/community/)
+  assert.match(app,/connect-src 'self' https:\/\/tile\.openstreetmap\.org https:\/\/api\.gbif\.org/)
+})
+
+test('globe helpers decode countries, project the sphere and build arcs',async()=>{
+  const { decodeCountries, greatCircle, project, aggregateRoutes, KARNATAKA }=await import('../src/globe.js')
+  const topo=JSON.parse(await readFile(new URL('../src/data/species/world-110m.json',import.meta.url),'utf8'))
+  const countries=decodeCountries(topo)
+  const india=countries.find(c=>c.id===356),russia=countries.find(c=>c.id===643)
+  assert.ok(countries.length>150&&india.polygons.length>0)
+  assert.ok(india.centroid[0]>70&&india.centroid[0]<90&&india.centroid[1]>15&&india.centroid[1]<30,'India centroid')
+  assert.ok(russia.centroid[1]>50,'Russia centroid')
+  const centre=project(KARNATAKA,KARNATAKA)
+  assert.ok(Math.abs(centre.x)<1e-9&&Math.abs(centre.y)<1e-9&&centre.visible)
+  assert.ok(!project([KARNATAKA[0]+180,-KARNATAKA[1]],KARNATAKA).visible,'the antipode is hidden')
+  const arc=greatCircle([0,0],[90,0],10)
+  assert.equal(arc.length,11);assert.ok(Math.abs(arc[5][0]-45)<1e-6&&Math.abs(arc[5][1])<1e-6)
+  assert.deepEqual(aggregateRoutes([{gbifKey:1},{gbifKey:2}],{1:{countries:[{id:643},{id:496}]},2:{countries:[{id:643}]}}),[{id:643,weight:2},{id:496,weight:1}])
+})

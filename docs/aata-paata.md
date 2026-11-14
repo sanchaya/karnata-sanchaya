@@ -6,7 +6,7 @@ rather than a second hand-maintained question bank.
 
 ## Included games
 
-Six games and a worksheet, seven tabs in all.
+Seven games and a worksheet, eight tabs in all.
 
 - **ಪದಯಾನ · Word Trail:** a daily word selected from names of polities, places,
   works, inscriptions and protected landscapes. It uses Unicode grapheme
@@ -34,6 +34,10 @@ Six games and a worksheet, seven tabs in all.
   one era typeface (Kadamba, Ganga, Chalukya, Hoysala or modern); name the style
   (`src/aata-script.js`). The typefaces are modern recreations, so the game
   teaches the look of each style, not a reading of an inscription.
+- **ಯಾವ ಜೀವಿ? · Name that species:** a Wikimedia Commons photo and four names from the same group, five species a day
+  (`src/aata-bird.js`, `src/AataBird.jsx`). Names, photos and their credits come from the species data (see
+  [species](species.md)); Kannada rounds use species-level names only, since a group name such as ಬೆಳ್ಳಕ್ಕಿ fits several
+  species. The photo's author and licence are shown with every round. The species data loads only when this tab opens.
 - **ತರಗತಿ ಕಾರ್ಯಪತ್ರ · Classroom worksheet:** a printable sheet of the day's
   places, dynasties and scripts with blanks for answers, and an answer key on its
   own page. Print rules in `aata-paata.css` hide the site chrome.

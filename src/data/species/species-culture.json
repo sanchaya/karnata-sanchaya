@@ -1,0 +1,12 @@
+{
+  "review": "needs-review",
+  "note": "Short cultural and historical links, keyed by scientific name. Each is a pointer for readers, not research; confirm with a source before relying on it.",
+  "notes": {
+    "Coracias benghalensis": {"en":"The state bird of Karnataka.","kn":"ಕರ್ನಾಟಕದ ರಾಜ್ಯ ಪಕ್ಷಿ.","route":"geography"},
+    "Elephas maximus": {"en":"The state animal of Karnataka, and the animal of the Mysuru Dasara procession.","kn":"ಕರ್ನಾಟಕದ ರಾಜ್ಯ ಪ್ರಾಣಿ; ಮೈಸೂರು ದಸರಾ ಮೆರವಣಿಗೆಯ ಆನೆ.","route":"geography"},
+    "Nelumbo nucifera": {"en":"The state flower of Karnataka.","kn":"ಕರ್ನಾಟಕದ ರಾಜ್ಯ ಹೂವು.","route":"geography"},
+    "Santalum album": {"en":"The state tree of Karnataka; Karnataka sandalwood is famed worldwide.","kn":"ಕರ್ನಾಟಕದ ರಾಜ್ಯ ಮರ; ಕರ್ನಾಟಕದ ಶ್ರೀಗಂಧ ಜಗತ್ಪ್ರಸಿದ್ಧ.","route":"geography"},
+    "Panthera tigris": {"en":"The tiger is the emblem of Tipu Sultan of Mysore.","kn":"ಹುಲಿ ಮೈಸೂರಿನ ಟಿಪ್ಪು ಸುಲ್ತಾನನ ಲಾಂಛನ.","route":"dynasties"},
+    "Sus scrofa": {"en":"The boar (Varaha) was the royal emblem of the Chalukyas of Badami and of Vijayanagara.","kn":"ವರಾಹ (ಹಂದಿ) ಬಾದಾಮಿ ಚಾಲುಕ್ಯರ ಮತ್ತು ವಿಜಯನಗರದ ರಾಜಲಾಂಛನ.","route":"dynasties"}
+  }
+}

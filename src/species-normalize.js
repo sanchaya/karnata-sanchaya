@@ -37,10 +37,13 @@ export const applyReviewedNames=(species,reviewed={})=>species.map(item=>{
   const kn=normalizeKannada(r?.kn)
   return kn&&isKannada(kn)?{...item,name:{...item.name,kn},knReviewed:true,knNote:r.note||''}:item
 })
-export const filterSpecies=(species,{group,query,seasonality,needsKannada})=>{
+export const filterSpecies=(species,{group,query,seasonality,needsKannada,month,family,ids})=>{
   const q=(query||'').normalize('NFC').trim().toLowerCase()
   return species.filter(s=>(!group||s.group===group)
     &&(!seasonality||(seasonality==='migratory'?s.seasonality?.migratory===true:s.seasonality?.pattern===seasonality))
+    &&(!month||(s.seasonality?.migratory===true&&s.seasonality.months.includes(month)))
+    &&(!family||s.family===family)
+    &&(!ids||ids.includes(s.id))
     &&(!needsKannada||!s.name.kn||(!s.knReviewed&&!s.knCandidates?.length))
     &&(!q||[s.name.en,s.name.kn,s.scientificName,s.family,...(s.knCandidates||[]).map(c=>c.value)].some(v=>(v||'').toLowerCase().includes(q))))
 }
@@ -72,4 +75,12 @@ export function applyNameSources(species,lists=[]){
     const name=item.name.kn||!top?item.name:{...item.name,kn:top.value}
     return {...item,knCandidates:candidates,name,knScope:name.kn&&candidates.find(c=>c.value===name.kn)?.scope==='group'&&!(item.knCandidates||[]).some(c=>c.value===name.kn)?'group':undefined}
   })
+}
+
+// Number of migratory birds recorded in each month (index 0 = January), for the migration calendar.
+export const migratoryByMonth=species=>Array.from({length:12},(_,i)=>species.filter(s=>s.seasonality?.migratory===true&&s.seasonality.months.includes(i+1)).length)
+// Species still without any Kannada name, photo first, in a fixed order per seed, for the "name ten species" drive.
+export const namingDrive=(species,images,seed,count=10)=>{
+  const rank=id=>{let h=2166136261;for(const ch of `${seed}:${id}`){h^=ch.codePointAt(0);h=Math.imul(h,16777619)}return h>>>0}
+  return species.filter(s=>!s.name.kn).sort((a,b)=>(!!images[b.gbifKey]-!!images[a.gbifKey])||rank(a.id)-rank(b.id)).slice(0,count).map(s=>s.id)
 }

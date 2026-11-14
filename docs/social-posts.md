@@ -17,12 +17,12 @@ Suggested hashtags: #ಕರ್ನಾಟಕ #ಕನ್ನಡ #ಇತಿಹಾಸ 
 
 **ಕನ್ನಡ**
 ಆಡಿ ಕಲಿಯಿರಿ! 🎮 ಕರ್ನಾಟಕದ ಇತಿಹಾಸವನ್ನು ಈಗ ಆಟಗಳ ಮೂಲಕ ತಿಳಿಯಿರಿ.
-ಪದಯಾನ, ಕಾಲಚೌಕ, ಇತಿಹಾಸ ಪದಜಾಲ, ಎಲ್ಲಿದೆ?, ನಾನು ಯಾರು?, ಲಿಪಿ ಪತ್ತೆದಾರ — ಪ್ರತಿದಿನ ಹೊಸ ಒಗಟು.
+ಪದಯಾನ, ಕಾಲಚೌಕ, ಇತಿಹಾಸ ಪದಜಾಲ, ಎಲ್ಲಿದೆ?, ನಾನು ಯಾರು?, ಲಿಪಿ ಪತ್ತೆದಾರ, ಯಾವ ಜೀವಿ? — ಪ್ರತಿದಿನ ಹೊಸ ಒಗಟು.
 ಪ್ರತಿ ಉತ್ತರದ ಹಿಂದೆ ಅಟ್ಲಸ್‌ನ ದಾಖಲೆ ಇದೆ. 👉 karnata.sanchaya.net/#aata-paata
 
 **English**
-Learn by playing! 🎮 Six daily games built from Karnataka's historical atlas: Word Trail, Time Grid, History Crossword,
-Where is it?, Who am I? and Script Detective. Every answer links back to a record in the atlas.
+Learn by playing! 🎮 Seven daily games built from Karnataka's historical atlas: Word Trail, Time Grid, History Crossword,
+Where is it?, Who am I?, Script Detective and Name that species. Every answer links back to a record in the atlas.
 👉 karnata.sanchaya.net/#aata-paata
 
 ---
@@ -102,6 +102,24 @@ Which era's lettering is this? 🔍 The same Kannada word in Kadamba, Ganga, Cha
 them apart? (These are modern typefaces that recall each period's lettering, not readings of an inscription.)
 
 ---
+
+## 6b. ಯಾವ ಜೀವಿ? · Name that species (`?game=bird`)
+
+**ಕನ್ನಡ**
+ಈ ಹಕ್ಕಿ ಯಾವುದು? 🦜 ಫೋಟೋ ನೋಡಿ, ಸರಿಯಾದ ಕನ್ನಡ ಹೆಸರು ಆರಿಸಿ — ದಿನಕ್ಕೆ ಐದು ಜೀವಿಗಳು. ಕನ್ನಡ ಹೆಸರು ತಪ್ಪಿದ್ದರೆ ನೀವೇ ತಿದ್ದಿ, ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಸೇರಿಸಿ!
+
+**English**
+Name that bird! 🦜 One photo, four names, five species a day, with open-licensed photos from Wikimedia Commons. Spot a
+wrong Kannada name? Correct it and get on the contributors' board.
+
+## 6c. ವಲಸೆ ಭೂಗೋಳ · Migration globe (`#species`)
+
+**ಕನ್ನಡ**
+ಈ ಚಳಿಗಾಲದಲ್ಲಿ ಕರ್ನಾಟಕಕ್ಕೆ ಯಾವ ಹಕ್ಕಿಗಳು ಬಂದಿವೆ? 🌍 ಭೂಗೋಳವನ್ನು ತಿರುಗಿಸಿ, ಅವು ಎಲ್ಲಿಂದ ಬರುತ್ತವೆ ಎಂದು ನೋಡಿ. (ಇವು ಇಬರ್ಡ್ ದಾಖಲೆಗಳು, ಉಪಗ್ರಹ ಮಾರ್ಗಗಳಲ್ಲ.)
+
+**English**
+Which birds have flown to Karnataka this winter? 🌍 Spin the globe and see where they are recorded in the other season.
+(eBird sightings, not tracked routes.)
 
 ## 7. ತರಗತಿ ಕಾರ್ಯಪತ್ರ · Classroom worksheet (`?game=worksheet`)
 

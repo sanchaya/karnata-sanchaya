@@ -8,7 +8,7 @@ const eraNames = { kn: ['ಕದಂಬ', 'ಗಂಗ', 'ಚಾಲುಕ್ಯ', '�
 export const cards = [
   { id: 'launch', color: ['#4361ee', '#7b4bb7'], emoji: '🎮',
     title: { kn: 'ಆಡಿ ಕಲಿಯಿರಿ', en: 'Learn by playing' },
-    line: { kn: 'ಕರ್ನಾಟಕದ ಇತಿಹಾಸ — ಪ್ರತಿದಿನ ಆರು ಹೊಸ ಒಗಟುಗಳು', en: 'Karnataka’s history in six daily games' },
+    line: { kn: 'ಕರ್ನಾಟಕದ ಇತಿಹಾಸ — ಪ್ರತಿದಿನ ಏಳು ಹೊಸ ಒಗಟುಗಳು', en: 'Karnataka’s history in seven daily games' },
     visual: () => `<div class="chips">${['ಪದಯಾನ', 'ಕಾಲಚೌಕ', 'ಪದಜಾಲ', 'ಎಲ್ಲಿದೆ?', 'ನಾನು ಯಾರು?', 'ಲಿಪಿ ಪತ್ತೆದಾರ'].map(x => `<b>${x}</b>`).join('')}</div><div class="chips en">${['Word Trail', 'Time Grid', 'Crossword', 'Where is it?', 'Who am I?', 'Script Detective'].map(x => `<b>${x}</b>`).join('')}</div>` },
   { id: 'word', color: ['#2a9d5c', '#1d6b4a'], emoji: '🟩',
     title: { kn: 'ಪದಯಾನ', en: 'Word Trail' },

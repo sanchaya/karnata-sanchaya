@@ -148,3 +148,8 @@ would mean adding `https://static.cloudflareinsights.com` to `script-src` and `h
 The `#species` page reads static JSON from the build, so deploying it needs no database migration and no
 `db:sync-dataset`. The server change is only the `species` record type in `server/app.js`; `contributions.record_type`
 is a free `VARCHAR(80)`. See [species](species.md) for how names are imported, reviewed and published.
+
+The species page loads recent sightings from the GBIF API in the browser, so the server CSP now allows
+`connect-src 'self' https://tile.openstreetmap.org https://api.gbif.org`. If a CDN or proxy sets its own CSP, add
+`https://api.gbif.org` there too. The new public endpoint `GET /api/species/community` is covered by the normal
+deployment; `npm run species:export-names` (run on the server) writes approved names back to the repository file.

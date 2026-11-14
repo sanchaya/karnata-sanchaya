@@ -12,3 +12,25 @@
 .species-more{display:block;margin:18px auto;padding:10px 22px;border:1px solid #28785b;border-radius:999px;background:#fff;color:#28785b;font-weight:700;cursor:pointer}
 .species-note{max-width:900px;margin-top:20px;font-size:.8rem;color:#51615a}
 @media(max-width:620px){.species-page{padding:18px 12px 48px}.species-grid{grid-template-columns:1fr}}
+.species-play{margin-left:.4rem;font-weight:700;white-space:nowrap}
+.species-calendar,.species-drive{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin:12px 0;padding:12px 14px;border:1px solid #d9e5da;border-radius:14px;background:#fff}
+.species-calendar>div:first-child,.species-drive>div{display:flex;flex-direction:column;gap:3px;flex:1 1 260px}.species-calendar small,.species-drive small{color:#51615a;font-size:.78rem}
+.species-bars{display:flex;align-items:flex-end;gap:4px}.species-bars button{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;width:34px;padding:2px 0 3px;border:0;border-radius:6px;background:transparent;cursor:pointer;font-size:.65rem}
+.species-bars i{display:block;width:70%;border-radius:3px 3px 0 0;background:#9fc8d3}.species-bars button.active i{background:#167f9b}.species-bars button.active{background:#e6f2f5}.species-bars b{font-weight:600;color:#51615a}
+.species-now,.species-drive button{padding:8px 14px;border:1px solid #28785b;border-radius:999px;background:#fff;color:#28785b;font-weight:700;cursor:pointer}.species-now{background:#28785b;color:#fff}
+.species-drive progress{width:100%;height:8px;accent-color:#28785b}
+.species-globe-section{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:12px 0;padding:12px 14px;border:1px solid #d9e5da;border-radius:14px;background:#fff}.species-globe-section>div:first-child{display:flex;flex-direction:column;gap:6px;flex:1 1 260px}.species-globe-section ol{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0;padding:0;list-style:none}.species-globe-section li b{color:#167f9b}.species-globe-section small{color:#51615a;font-size:.78rem}
+.species-globe{flex:0 1 420px;max-width:100%;margin:0 auto}.species-globe canvas{display:block;margin:0 auto;border-radius:50%;cursor:grab;touch-action:none;max-width:100%}.species-globe canvas:active{cursor:grabbing}.species-globe canvas:focus-visible{outline:3px solid #167f9b;outline-offset:3px}.species-globe-tools{display:flex;justify-content:center;gap:6px;margin-top:6px}.species-globe-tools button{padding:4px 10px;border:1px solid #cddccf;border-radius:999px;background:#f1f6f2;font-size:.75rem;cursor:pointer}
+.species-leaders{margin:12px 0;padding:12px 14px;border:1px solid #d9e5da;border-radius:14px;background:#fff}.species-leaders ol{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0;padding:0;list-style:none}.species-leaders li{display:flex;align-items:baseline;gap:5px}.species-leaders li b{color:#28785b}.species-leaders small{color:#51615a}
+.species-chip{padding:6px 10px;border:1px solid #cddccf;border-radius:999px;background:#f1f6f2;cursor:pointer;font-weight:600}
+.species-family,.species-links button{padding:0;border:0;background:none;color:#0b6a8c;text-decoration:underline;cursor:pointer;font:inherit}
+.species-culture{font-size:.82rem;color:#7a4a12;background:#fbf3e4;padding:4px 8px;border-radius:8px}
+.species-photo button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.species-backdrop{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:16px;background:#101a1499;overflow-y:auto}
+.species-detail{position:relative;width:min(640px,100%);max-height:calc(100vh - 32px);overflow-y:auto;padding:0 0 18px;border-radius:18px;background:#fff;box-shadow:0 24px 70px #0006}
+.species-detail>*:not(.species-photo){margin-left:18px;margin-right:18px}.species-detail .species-photo{margin:0 0 10px;border-radius:18px 18px 0 0}.species-detail .species-photo img{aspect-ratio:auto;max-height:340px;object-fit:contain;background:#e8eee9}
+.species-detail h3{margin-top:4px}.species-detail h4{margin-top:14px;margin-bottom:6px}
+.species-close{position:absolute;top:8px;right:10px;z-index:2;width:36px;height:36px;border:0;border-radius:50%;background:#fffd;font-size:1.5rem;line-height:1;cursor:pointer}
+.species-candidates{margin:6px 18px;padding-left:18px;font-size:.85rem}.species-candidates small{color:#51615a}
+.species-map{height:300px;border-radius:12px;overflow:hidden;background:#e8eee9}.species-map .leaflet-container{height:100%}.species-map-note{margin-top:4px;font-size:.78rem;color:#51615a}
+@media(max-width:620px){.species-bars button{width:26px}.species-backdrop{padding:0}.species-detail{max-height:100vh;border-radius:0}}
