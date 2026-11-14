@@ -140,3 +140,13 @@ The live portal has MariaDB, so species names do not wait for a redeploy:
 No schema migration is involved: it reads the existing `contributions` and `users` tables.
 
 Readers are pointed to these features by the **What's new** button in the header and "New" badges on menu items (`src/whats-new.js`; add new entries at the top, newest first). An item is marked seen when the reader opens it or visits its page, and the list is kept in `localStorage`.
+
+## From where to where
+
+For each migratory bird the species view shows **From → To**: the countries (up to four) and Indian states (up to three,
+for birds that breed in the Himalaya or the north, such as Uttarakhand, Himachal Pradesh, Jammu and Kashmir, Ladakh)
+where eBird records it in its other season, and the months it is seen in Karnataka (for example "Oct–Mar").
+`import-species-flyways.mjs` gathers the countries and states (Karnataka excluded; states merged case-insensitively).
+On the page, the globe's country buttons list the birds seen in a country ("From: Russia"). The origin is where the bird is
+*seen* in the other season, not an exact breeding site or a tracked route, and passage migrants can be seen in several
+places. Re-run the flyway import after changing the species list, then `node scripts/generate-open-datasets.mjs`.

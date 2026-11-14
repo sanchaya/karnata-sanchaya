@@ -186,3 +186,17 @@ test("what's new items are bilingual, unique and tracked per page",async()=>{
   assert.ok(idsVisited('species').includes('species-page')&&!idsVisited('aata-paata','').includes('bird-quiz'))
   assert.ok(idsVisited('aata-paata','?game=bird&puzzle=2026-11-14').includes('bird-quiz'))
 })
+
+test('month ranges read naturally and the origin filter finds birds seen in a country',async()=>{
+  const { filterSpecies, monthRange }=await import('../src/species-normalize.js')
+  const names=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+  assert.equal(monthRange([10,11,12,1,2,3],names),'Oct–Mar')
+  assert.equal(monthRange([3,4,9,10],names),'Mar–Apr, Sep–Oct')
+  assert.equal(monthRange([5],names),'May')
+  assert.equal(monthRange([],names),'')
+  const fly={1:{countries:[{id:643}]},2:{countries:[{id:496}]}}
+  const list=[{gbifKey:1,id:'a',name:{},group:'bird'},{gbifKey:2,id:'b',name:{},group:'bird'}]
+  assert.deepEqual(filterSpecies(list,{origin:643,flyways:fly}).map(s=>s.id),['a'])
+  const flyways=JSON.parse(await readFile(new URL('../src/data/species/species-flyways.json',import.meta.url),'utf8')).flyways
+  for(const entry of Object.values(flyways)){assert.ok(Array.isArray(entry.countries)&&Array.isArray(entry.states));assert.ok(!entry.states.some(s=>s.name==='Karnataka'))}
+})

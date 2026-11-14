@@ -13,12 +13,13 @@ export function useWhatsNew(view){
 }
 
 export default function WhatsNew({locale,state}){
-  const kn=locale==='kn',[open,setOpen]=useState(false),box=useRef(null)
+  const kn=locale==='kn',[open,setOpen]=useState(false),[pos,setPos]=useState({top:0,right:12}),box=useRef(null)
+  const toggle=()=>{const rect=box.current?.getBoundingClientRect();if(rect)setPos({top:Math.round(rect.bottom+8),right:Math.max(12,Math.round(window.innerWidth-rect.right))});setOpen(value=>!value)}
   useEffect(()=>{if(!open)return;const out=event=>{if(!box.current?.contains(event.target))setOpen(false)},esc=event=>event.key==='Escape'&&setOpen(false);document.addEventListener('pointerdown',out);document.addEventListener('keydown',esc);return()=>{document.removeEventListener('pointerdown',out);document.removeEventListener('keydown',esc)}},[open])
   const count=state.unseen.length
   return <div className="whats-new" ref={box}>
-    <button type="button" className={count?'has-new':''} aria-expanded={open} aria-haspopup="dialog" onClick={()=>setOpen(value=>!value)}><span aria-hidden="true">✨</span> {kn?'ಹೊಸದೇನು':'What’s new'}{count>0&&<b aria-label={kn?`${count} ಹೊಸ ವಿಷಯಗಳು`:`${count} new`}>{count}</b>}</button>
-    {open&&<div className="whats-new-panel" role="dialog" aria-label={kn?'ಹೊಸದೇನು':'What’s new'}>
+    <button type="button" className={count?'has-new':''} aria-expanded={open} aria-haspopup="dialog" onClick={toggle}><span aria-hidden="true">✨</span> {kn?'ಹೊಸದೇನು':'What’s new'}{count>0&&<b aria-label={kn?`${count} ಹೊಸ ವಿಷಯಗಳು`:`${count} new`}>{count}</b>}</button>
+    {open&&<div className="whats-new-panel" style={{top:pos.top,right:pos.right}} role="dialog" aria-label={kn?'ಹೊಸದೇನು':'What’s new'}>
       <header><strong>{kn?'ಹೊಸದಾಗಿ ಸೇರಿದ್ದು':'Recently added'}</strong>{count>0&&<button type="button" onClick={()=>state.markSeen(WHATS_NEW.map(item=>item.id))}>{kn?'ಎಲ್ಲವನ್ನೂ ನೋಡಿದ್ದೇನೆ':'Mark all as seen'}</button>}</header>
       <ul>{WHATS_NEW.map(item=>{const isNew=state.unseen.includes(item)
         return <li key={item.id} className={isNew?'new':''}><h4>{item[locale]?.[0]||item.en[0]}{isNew&&<em>{kn?'ಹೊಸದು':'New'}</em>}</h4><p>{item[locale]?.[1]||item.en[1]}</p><a href={item.href} onClick={()=>{state.markSeen([item.id]);setOpen(false)}}>{kn?'ನೋಡಿ':'Try it'} →</a></li>})}</ul>

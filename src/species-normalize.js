@@ -37,12 +37,13 @@ export const applyReviewedNames=(species,reviewed={})=>species.map(item=>{
   const kn=normalizeKannada(r?.kn)
   return kn&&isKannada(kn)?{...item,name:{...item.name,kn},knReviewed:true,knNote:r.note||''}:item
 })
-export const filterSpecies=(species,{group,query,seasonality,needsKannada,month,family,ids})=>{
+export const filterSpecies=(species,{group,query,seasonality,needsKannada,month,family,ids,origin,flyways})=>{
   const q=(query||'').normalize('NFC').trim().toLowerCase()
   return species.filter(s=>(!group||s.group===group)
     &&(!seasonality||(seasonality==='migratory'?s.seasonality?.migratory===true:s.seasonality?.pattern===seasonality))
     &&(!month||(s.seasonality?.migratory===true&&s.seasonality.months.includes(month)))
     &&(!family||s.family===family)
+    &&(!origin||(flyways?.[s.gbifKey]?.countries||[]).some(c=>c.id===origin))
     &&(!ids||ids.includes(s.id))
     &&(!needsKannada||!s.name.kn||(!s.knReviewed&&!s.knCandidates?.length))
     &&(!q||[s.name.en,s.name.kn,s.scientificName,s.family,...(s.knCandidates||[]).map(c=>c.value)].some(v=>(v||'').toLowerCase().includes(q))))
@@ -83,4 +84,15 @@ export const migratoryByMonth=species=>Array.from({length:12},(_,i)=>species.fil
 export const namingDrive=(species,images,seed,count=10)=>{
   const rank=id=>{let h=2166136261;for(const ch of `${seed}:${id}`){h^=ch.codePointAt(0);h=Math.imul(h,16777619)}return h>>>0}
   return species.filter(s=>!s.name.kn).sort((a,b)=>(!!images[b.gbifKey]-!!images[a.gbifKey])||rank(a.id)-rank(b.id)).slice(0,count).map(s=>s.id)
+}
+
+// [10,11,12,1,2,3] -> "Oct–Mar"; wraps over the new year; gaps are listed as separate ranges ("Mar–Apr, Sep–Oct").
+export function monthRange(months,names){
+  const set=new Set(months)
+  if(!set.size)return ''
+  if(set.size===12)return `${names[0]}–${names[11]}`
+  const runs=[]
+  const next=m=>m===12?1:m+1
+  for(let m=1;m<=12;m++)if(set.has(m)&&!set.has(m===1?12:m-1)){let end=m,len=1;while(len<12&&set.has(next(end))){end=next(end);len++}runs.push([m,end])}
+  return runs.map(([a,b])=>a===b?names[a-1]:`${names[a-1]}–${names[b-1]}`).join(', ')
 }

@@ -32,7 +32,13 @@ await Promise.all(Array.from({length:5},async()=>{while(next<birds.length){
     const counts=(data.facets?.[0]?.counts||[]).filter(c=>c.name!=='IN'&&iso2ToNumeric.has(c.name))
     const total=counts.reduce((a,c)=>a+c.count,0)
     const countries=counts.filter(c=>c.count>=3&&c.count/total>=.03).slice(0,6).map(c=>({id:iso2ToNumeric.get(c.name),n:c.count,share:Math.round(c.count/total*100)/100}))
-    if(countries.length)flyways[s.gbifKey]={season:summer?'winter-range':'summer-range',countries}
+    // Indian states in the same months (Himalayan and northern breeders), merged case-insensitively, Karnataka left out.
+    const stateData=await getJson(`https://api.gbif.org/v1/occurrence/search?datasetKey=${EBIRD}&speciesKey=${s.gbifKey}&country=IN&${months}&limit=0&facet=stateProvince&facetLimit=30`)
+    const merged=new Map()
+    for(const c of stateData.facets?.[0]?.counts||[]){const name=c.name.trim().toLowerCase().replace(/\b\w/g,l=>l.toUpperCase()).replace(/ And /g,' and ');if(!name||name==='Karnataka'||name.length>40)continue;merged.set(name,(merged.get(name)||0)+c.count)}
+    const stateTotal=[...merged.values()].reduce((a,b)=>a+b,0)
+    const states=[...merged].filter(([,n])=>n>=3&&n/Math.max(stateTotal+total,1)>=.05).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([name,n])=>({name,n,share:Math.round(n/Math.max(stateTotal+total,1)*100)/100}))
+    if(countries.length||states.length)flyways[s.gbifKey]={season:summer?'winter-range':'summer-range',countries,states}
   }catch(error){console.warn('skip',s.gbifKey,error.message)}
 }}))
 await writeFile(outFile,JSON.stringify({generatedAt:new Date().toISOString().slice(0,10),note:'Countries outside India where eBird records each migratory bird in its other season (via GBIF). Sightings, not tracked routes.',flyways})+'\n')
