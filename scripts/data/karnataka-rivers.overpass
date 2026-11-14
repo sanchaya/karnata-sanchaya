@@ -1,0 +1,6 @@
+[out:json][timeout:180];
+(
+  way["waterway"="river"]["name"~"^(Kaveri|Cauvery|Krishna|Tungabhadra|Tunga|Bhadra|Bhima|Malaprabha|Ghataprabha|Sharavathi|Sharavati|Netravati|Nethravathi|Kali|Kali River|Hemavathi|Hemavati|Kabini|Shimsha|Arkavathi|Vedavathi|Hagari|Pennar|Penna|Pinakini|Palar|Manjira|Aghanashini|Bedti|Gangavalli|Varahi|Gurupura|Phalguni|Swarna|Sita|Lakshmanatirtha|Harangi|Yagachi|Bennehalla|Dudhganga|Doodhganga|Vedaganga|Hiranyakeshi|Bennihalla|Kagina|Mullamari|Amravati|Suvarnavathi|Simsha|Honnuhole|Shambavi|Shambhavi|Kumaradhara|Payaswini|Chakra|Souparnika|Haladi|Yettinahole|Kapila|Gundar|Nugu|Lokapavani|Kolar|Ghatprabha|Malprabha|Hemavati River|Cauvery River|Krishna River|Tungabhadra River|Bhima River)( River)?$"](10.5,73.5,19.0,79.8);
+  way["waterway"="river"]["name:en"~"^(Kaveri|Cauvery|Krishna|Tungabhadra|Tunga|Bhadra|Bhima|Malaprabha|Ghataprabha|Sharavathi|Netravati|Kali|Hemavathi|Kabini|Shimsha|Arkavathi|Vedavathi|Pennar|Palar|Manjira|Aghanashini|Gangavalli|Varahi|Gurupura|Swarna|Lakshmanatirtha|Harangi|Dudhganga|Hiranyakeshi|Kumaradhara|Shambhavi|Souparnika|Haladi)( River)?$"](10.5,73.5,19.0,79.8);
+);
+out geom;

@@ -123,6 +123,31 @@ sub-filters and counts; a search box matches English and Kannada names; the list
 to it and opens a detail card (type, height or area, districts, review note, sources). Clicking a marker does the same.
 The landforms also feed the Word Trail catalogue and the dataset counts.
 
-**Still missing, by design or lack of a source:** river courses and catchments, rainfall and soil maps, geology, caves,
-mangrove and wetland extents beyond the four Ramsar sites, and statutory forest boundaries (the page links to Bhuvan). Each
-needs a licensed or official dataset, not memory.
+### River courses, rock, caves, estuaries, rainfall and soil
+
+- **River courses.** `public/karnataka-rivers.geojson` (42 KB, 36 rivers) is drawn as lines on the map, coloured by basin (Krishna,
+  Kaveri, Godavari/Manjira, Pennar and Palar, west-flowing), with a "Show river courses" switch and a hover tooltip. The data is from
+  **OpenStreetMap (© OpenStreetMap contributors, ODbL)**, so the file is a derived database that stays under the ODbL and the map
+  names that licence. Rebuild it with `scripts/build-karnataka-rivers.py` (needs shapely; the Overpass query is in
+  `scripts/data/karnataka-rivers.overpass`): it merges each river's segments by name, clips them to Karnataka plus a 0.25 degree
+  margin, simplifies them and adds the draft Kannada name and basin. Lines are simplified, not survey-grade, and some rivers (Swarna and
+  smaller streams) are missing or short. Natural Earth was checked first and only has seven rivers here.
+- **Rock and mines.** Eleven `geology` points tie the stone to the history: Hoysala chloritic schist (Halebidu), Chalukya sandstone
+  (Pattadakal, Aihole), Lakkundi schist, Deccan basalt (Vijayapura), Bidar laterite, Shahabad limestone, Chitradurga granite,
+  and the Kolar, Hutti, Sandur and Kudremukh mines. Source pointers: Wikipedia, Karnataka Tourism, Geological Survey of India.
+- **Caves.** Three rock-cut `cave` sites (Badami, Aihole, Gavi Gangadhareshwara). Karnataka's natural limestone caves are not
+  mapped.
+- **Estuaries.** Three `estuary` points (Sharavathi at Honnavar, Netravati–Gurupura at Mangaluru, Kali at Karwar). Mangrove extents
+  are not mapped; the Aghanashini estuary is one of the Ramsar sites already shown.
+- **Rainfall, soil and rock** appear on each of the four region cards as broad bands (`facts` in `geographyNatureRegions`), not as
+  maps: coast above about 3,000 mm, Malnad 3,000 mm and more on the windward Ghats, the north-interior 500–750 mm, the
+  south-interior 700–900 mm; laterite, red, black (regur) and coastal alluvial soils; and the main rocks. These are textbook
+  bands to be checked against IMD and the Karnataka soil survey before they are cited. A "Rivers and basins" card describes the basins.
+- All new point features are approximate reference locations marked `needs-review`; coordinates were written from general
+  knowledge and need checking.
+
+**Still not covered, because it needs an official or licensed dataset:** statutory reserved-forest and protected-area boundaries
+(Karnataka Forest Department / Bhuvan; the page links out, and OpenStreetMap's version is neither official nor complete),
+rainfall and soil as mapped layers (IMD, NBSS&LUP), geological maps (GSI), catchment polygons (HydroSHEDS or India-WRIS),
+agro-climatic zones as polygons, natural cave systems and mangrove extents. If you can supply or license one of these, it can be
+added the same way as the rivers.

@@ -94,7 +94,7 @@ test('mountains, hill stations, rock landmarks, waterfalls and coastal sites are
   const { geographyLandforms, geographyLandformSources } = await import('../src/data/geography-landforms.js')
   const { geographyWaterFeatures } = await import('../src/data/geography-waters.js')
   const ids=new Set(geographyLandformSources.map(source=>source.id))
-  for(const type of ['mountain','hill-station','landmark','waterfall','coast-site'])assert.ok(geographyLandforms.some(item=>item.type===type),`${type} is missing`)
+  for(const type of ['mountain','hill-station','landmark','waterfall','coast-site','geology','cave','estuary'])assert.ok(geographyLandforms.some(item=>item.type===type),`${type} is missing`)
   assert.ok(geographyWaterFeatures.some(item=>item.type==='waterfall'),'the three big falls are waterfalls')
   assert.equal(new Set(geographyLandforms.map(item=>item.id)).size,geographyLandforms.length)
   for(const item of geographyLandforms){
@@ -108,4 +108,23 @@ test('mountains, hill stations, rock landmarks, waterfalls and coastal sites are
   const peaks=geographyLandforms.filter(item=>item.type==='mountain'&&item.elevationM).sort((a,b)=>b.elevationM-a.elevationM)
   assert.equal(peaks[0].id,'land-mullayanagiri','Mullayanagiri is the highest peak')
   assert.match(geographyExplorer,/geographyLandforms/);assert.match(geographyExplorer,/nature-search/)
+})
+
+test('river courses, basins and the rainfall, soil and rock facts are in place',async()=>{
+  const rivers=JSON.parse(await readFile(new URL('../public/karnataka-rivers.geojson',import.meta.url),'utf8'))
+  const basins=new Set(['krishna','kaveri','godavari','pennar-palar','west'])
+  assert.match(rivers.attribution,/OpenStreetMap/);assert.ok(rivers.features.length>=30)
+  const names=new Set(rivers.features.map(f=>f.properties.name))
+  for(const river of ['Kaveri','Krishna','Tungabhadra','Bhima','Sharavathi','Netravati','Kali','Hemavathi','Kabini','Malaprabha'])assert.ok(names.has(river),`${river} missing`)
+  assert.equal(names.size,rivers.features.length)
+  for(const f of rivers.features){
+    assert.ok(basins.has(f.properties.basin)&&f.properties.kn,f.properties.name)
+    assert.equal(f.geometry.type,'MultiLineString')
+    for(const line of f.geometry.coordinates)for(const [lng,lat] of line)assert.ok(lat>10&&lat<20&&lng>73&&lng<80,`${f.properties.name} point outside the region`)
+  }
+  for(const region of geographyNatureRegions){
+    for(const key of ['rainfall','soil','rock'])assert.ok(region.facts?.[key]?.en&&region.facts[key].kn,`${region.id} ${key}`)
+  }
+  assert.ok(geographyNatureThemes.some(theme=>theme.id==='rivers'))
+  assert.match(geographyExplorer,/karnataka-rivers\.geojson/);assert.match(geographyExplorer,/OpenStreetMap contributors \(ODbL\)/)
 })

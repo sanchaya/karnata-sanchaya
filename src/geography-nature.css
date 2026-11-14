@@ -28,3 +28,7 @@
 .nature-list button{display:flex;align-items:center;gap:9px;width:100%;padding:7px 10px;border:0;background:transparent;text-align:left;font:inherit;cursor:pointer}.nature-list button:hover,.nature-list button.active{background:#eef6f0}
 .nature-list i{flex:none;width:12px;height:12px;border-radius:50%}.nature-list span{display:flex;flex-direction:column;min-width:0}.nature-list strong{font-size:.9rem}.nature-list small{color:#51615a;font-size:.72rem}
 .nature-card{margin:0 0 12px;padding:12px 14px;border:1px solid #cfe1d2;border-radius:14px;background:#f5fbf6}.nature-card h4{margin:0 0 2px}.nature-card p{margin:4px 0}.nature-card-type{font-weight:700;font-size:.82rem}.nature-card-where{color:#4b5b51;font-size:.82rem}.nature-card small{display:block;color:#51615a}
+
+.nature-rivers-toggle{display:flex;align-items:center;gap:8px;margin:8px 0 4px;font-weight:600;font-size:.88rem}
+.nature-basins i{display:inline-block;vertical-align:middle}.nature-osm-note{display:block;margin:4px 0 8px;color:#51615a;font-size:.72rem}
+.nature-region-facts{display:grid;gap:6px;margin:10px 0 4px;padding:10px 12px;border-radius:10px;background:#f3f8f3}.nature-region-facts div{display:grid;grid-template-columns:70px 1fr;gap:6px}.nature-region-facts dt{font-weight:700;font-size:.74rem;color:#3e5a46;text-transform:uppercase;letter-spacing:.03em}.nature-region-facts dd{margin:0;font-size:.82rem;line-height:1.4}
