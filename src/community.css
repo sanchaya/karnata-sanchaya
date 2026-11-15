@@ -21,3 +21,9 @@
 .community-about legend{padding:0 6px;font-size:12px;font-weight:800;color:#7a4d09}
 @media(max-width:760px){.community-gateway{grid-template-columns:minmax(0,1fr)}.community-gate-new{order:-1}}
 .account-dates{display:block;color:var(--sanchaya-muted)}.account-history{margin-top:4px;font-size:.8rem}.account-history ul{margin:4px 0 0;padding-left:18px}
+
+/* Contribute: the role guide and policy notes are one collapsed "How does this work?" so the sign-in / first action comes first. */
+.community-how{margin:0 0 16px;border:1px solid var(--sanchaya-border,#dfe3f0);border-radius:12px;background:#fff}
+.community-how>summary{padding:12px 16px;font-weight:800;cursor:pointer}
+.community-how[open]>summary{border-bottom:1px solid var(--sanchaya-border,#dfe3f0)}
+.community-how .community-principles{margin:12px 16px 16px}
