@@ -185,3 +185,7 @@ with the non-commercial notice, and the footer's "Non-commercial use only · Lic
 section of `LICENSING.md`; a test fails if a section is missing. When you add a data source, add it to `LICENSING.md` §3, to
 `licences.js`, and (if it is something we are still looking for) remove it from `data-wanted.js`. Items marked "check the item" are
 the open items for the owner; change them only when the licence is confirmed.
+
+## Language switch must not shift the page
+
+Switching Kannada/English changes text widths. `page-consistency.css` clips horizontal overflow on `html` and `body`, keeps the language button a fixed minimum width and stops the header actions from wrapping or growing on phones.

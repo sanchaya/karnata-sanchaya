@@ -7,3 +7,10 @@ body :is(.trail-page>.about-hero,.people-hero,.freedom-hero,.nature-hero,.coin-h
 body :is(.trail-page>.about-hero h2,.people-hero h2,.freedom-hero h2,.nature-hero h2,.coin-hero h2,.script-hero h2,.resources-hero h2,.research-tasks-hero h2,.evidence-hero h2,.india-research-hero h2,.explorer-hero h2,.about-page>.about-hero h2,.community-hero h2){
   margin:2px 0 6px;font:500 clamp(24px,2.6vw,32px)/1.25 Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-ink)}
 body :is(.trail-page>.about-hero .eyebrow,.people-hero .eyebrow,.freedom-hero .eyebrow,.nature-hero .eyebrow,.coin-hero .eyebrow,.script-hero .eyebrow,.resources-hero .eyebrow,.research-tasks-hero .eyebrow,.evidence-hero .eyebrow,.india-research-hero .eyebrow,.explorer-hero .eyebrow,.about-page>.about-hero .eyebrow,.community-hero .eyebrow){margin:0;color:#28785b}
+
+/* Switching language changes text widths; never let that widen or pan the page. */
+html{overflow-x:clip;max-width:100%}
+body{max-width:100%}
+.header-actions{min-width:0;max-width:100%}
+.language-switch{flex:none;min-width:5.5em;white-space:nowrap;text-align:center}
+@media(max-width:720px){header .header-actions{flex-wrap:nowrap;overflow:hidden}.language-switch{min-width:4.5em;padding-inline:8px!important}}
