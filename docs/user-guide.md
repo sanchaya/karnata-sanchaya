@@ -94,3 +94,7 @@ Messages are stored in the live MariaDB inbox even when submitted from GitHub Pa
 - **Reviewer/admin tab absent:** the approved account has not been appointed to that role. An administrator must assign it.
 
 See [community governance](community-governance.md), [community operations](community-operations.md) and [live deployment](live-deployment.md) for policy and operator procedures.
+
+## Signed-in menu
+
+The bar under your name shows **Contribute** and **Profile** for everyone, **Review** for reviewers, and **Accounts & approvals** plus **Dataset records** (`#admin`) for administrators. Institution verification for a badge is optional and sits in a collapsed section of the Profile page.
