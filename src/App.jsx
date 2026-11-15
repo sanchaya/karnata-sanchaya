@@ -8,7 +8,7 @@ import SourceLink from './SourceLink'
 import ProvenanceBadge from './ProvenanceBadge'
 import { buildSourceTiers, recordAuthorityCited } from './data/source-provenance'
 import GuidedTour from './GuidedTour'
-import { seoPages } from './seo-pages'
+import { seoPages, pageTitle } from './seo-pages'
 import WhatsNew, { useWhatsNew } from './WhatsNew'
 import { sendPing } from './visit-ping'
 import { safeStorage } from './safe-storage'
@@ -920,7 +920,7 @@ export default function App(){
   useEffect(()=>{const url=new URL(window.location.href);let changed=false;for(const [param,views] of Object.entries(PAGE_PARAMS)){if(url.searchParams.has(param)&&!views.includes(view)){url.searchParams.delete(param);changed=true}}if(changed)window.history.replaceState(null,'',url)},[view])
   useEffect(()=>{const syncHash=()=>{const rawHash=window.location.hash.slice(1);const hash=normalizeView(rawHash);setAdmin(rawHash==='admin');if(rawHash==='history')window.history.replaceState(null,'','#district-history');if(publicViews.includes(hash))setView(hash);else if(hash!=='admin')setView('atlas')};if(window.location.hash.slice(1)==='history')window.history.replaceState(null,'','#district-history');window.addEventListener('hashchange',syncHash);return()=>window.removeEventListener('hashchange',syncHash)},[])
   useEffect(()=>{setMobileNavOpen(false)},[view])
-  useEffect(()=>{const [title,description]=seoPages[view]?.[locale]||seoPages.atlas[locale];document.documentElement.lang=locale;document.title=title;const descriptionMeta=document.querySelector('meta[name="description"]');if(descriptionMeta)descriptionMeta.setAttribute('content',description);const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.setAttribute('content',title);const ogDescription=document.querySelector('meta[property="og:description"]');if(ogDescription)ogDescription.setAttribute('content',description);let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.append(canonical)}canonical.href=`${window.location.origin}${window.location.pathname}`},[view,locale])
+  useEffect(()=>{const [,description]=seoPages[view]?.[locale]||seoPages.atlas[locale];const title=pageTitle(view);document.documentElement.lang=locale;document.title=title;const descriptionMeta=document.querySelector('meta[name="description"]');if(descriptionMeta)descriptionMeta.setAttribute('content',description);const ogTitle=document.querySelector('meta[property="og:title"]');if(ogTitle)ogTitle.setAttribute('content',title);const ogDescription=document.querySelector('meta[property="og:description"]');if(ogDescription)ogDescription.setAttribute('content',description);let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.append(canonical)}canonical.href=`${window.location.origin}${window.location.pathname}`},[view,locale])
   const t=messages[locale]
   useEffect(()=>{let active=true;fetch(`${import.meta.env.BASE_URL}karnataka-districts.geojson`).then(response=>response.json()).then(data=>{if(active)setDistrictGeojson(data)}).catch(()=>{if(active)setDistrictGeojson(null)});return()=>{active=false}},[])
   const searchIndex=useMemo(()=>[

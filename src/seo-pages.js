@@ -60,3 +60,7 @@ Object.assign(seoPages,{
 Object.assign(seoPages,{
   licenses:{kn:['ಪರವಾನಗಿ ಮತ್ತು ದತ್ತಾಂಶ ಮೂಲಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಈ ಅಟ್ಲಸ್‌ನ ಪ್ರತಿ ರೀತಿಯ ದತ್ತಾಂಶದ ಮೂಲ ಮತ್ತು ಪರವಾನಗಿ; ವಾಣಿಜ್ಯೇತರ ಬಳಕೆಗೆ ಮಾತ್ರ.'],en:['Licences and data sources · Karnataka Historical Atlas','The source and licence of every kind of data in this atlas; non-commercial use only.']},
 })
+
+// English first, then Kannada: tabs and search results truncate long titles, and a device without a Kannada font shows boxes or
+// question marks for the Kannada part, so the readable part must come first.
+export const pageTitle=view=>{const page=seoPages[view]||seoPages.atlas;const kn=page.kn[0].split(' · ')[0];return page.en[0].includes(kn)?page.en[0]:`${page.en[0]} · ${kn}`}

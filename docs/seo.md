@@ -90,3 +90,8 @@ A test (`test/seo.test.js`) fails if a view in `publicViews` (`src/App.jsx`) has
 ## Query parameters
 
 Parameters such as `?person=`, `?game=` and `?species=` belong to one page. `PAGE_PARAMS` in `src/App.jsx` lists the owning pages and the parameter is removed when the reader moves elsewhere, so a shared link never drags old state into other pages. A test fails if code reads a parameter that is not listed.
+
+## Titles and icons
+
+- Page titles are English first, then Kannada (`pageTitle` in `src/seo-pages.js`). Tabs and search results cut long titles, and a device with no Kannada font shows question marks for the Kannada part, so the readable part comes first.
+- Icons are made from the round Sanchaya logo: `favicon.ico`, `favicon-32.png`, `icon-192.png`, `icon-512.png` (transparent circle) and `apple-touch-icon.png` (white square for iOS). The share image `og-image.png` is 1200×630 and kept small (about 40 KB; WhatsApp ignores previews over about 300 KB). Rebuild the icons from `public/sanchaya-logo.png` if the logo changes.

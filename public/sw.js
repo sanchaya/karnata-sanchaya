@@ -1,7 +1,7 @@
-const SHELL_CACHE = 'karnataka-atlas-shell-v5'
+const SHELL_CACHE = 'karnataka-atlas-shell-v6'
 const TILE_CACHE = 'karnataka-atlas-tiles-v2'
 const DATA_CACHE = 'karnataka-atlas-readonly-data-v3'
-const SHELL_ASSETS = ['./', './index.html', './site.webmanifest', './sanchaya-logo.png', './karnataka-districts.geojson']
+const SHELL_ASSETS = ['./', './index.html', './site.webmanifest', './sanchaya-logo.png', './favicon-32.png', './icon-192.png', './karnataka-districts.geojson']
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(SHELL_CACHE).then(cache => cache.addAll(SHELL_ASSETS)).then(() => self.skipWaiting()))

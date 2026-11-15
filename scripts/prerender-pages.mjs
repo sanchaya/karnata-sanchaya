@@ -10,7 +10,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { seoPages } from '../src/seo-pages.js'
+import { seoPages, pageTitle } from '../src/seo-pages.js'
 import { applyNameSources, applyReviewedNames, monthRange } from '../src/species-normalize.js'
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
@@ -44,6 +44,7 @@ export function renderPage(template,page,ctx){
   for(const [attr,key,value] of [['property','og:title',page.title],['property','og:description',page.ogDescription||page.description],['name','twitter:title',page.title],['name','twitter:description',page.ogDescription||page.description]])
     html=set(html,new RegExp(`<meta ${attr}="${key}" content="[^"]*"\\s*/?>`),`<meta ${attr}="${key}" content="${escapeHtml(value)}" />`)
   html=set(html,/<meta property="og:image" content="[^"]*"\s*\/?>/,`<meta property="og:image" content="${escapeHtml(page.image||`${site}og-image.png`)}" />\n    <meta property="og:url" content="${escapeHtml(url)}" />`)
+  html=set(html,/<meta name="twitter:image" content="[^"]*"\s*\/?>/,`<meta name="twitter:image" content="${escapeHtml(page.image||`${site}og-image.png`)}" />`)
   html=html.replace('<meta charset="UTF-8" />',`<meta charset="UTF-8" />\n    <link rel="canonical" href="${escapeHtml(url)}" />${verification}`)
   if(page.path==='')html=html.replace(/"(@id|url)":"\.\//g,`"$1":"${site}`)   // the home page's JSON-LD uses relative ids
   if(page.ld)html=html.replace('</head>',`    ${ldBlock(page.ld)}\n  </head>`)
@@ -64,11 +65,11 @@ export function buildSite({template,species,images={},site,date,verification='',
   const sections=Object.keys(seoPages).filter(view=>view!=='atlas'&&!PRIVATE.has(view)).map(view=>({view,path:`${view}/`,kn:seoPages[view].kn[0].split(' · ')[0],en:seoPages[view].en[0].split(' · ')[0]}))
   const out=[],urls=[{loc:site,priority:'1.0',changefreq:'weekly'}]
   const bread=(items)=>({'@type':'BreadcrumbList',itemListElement:items.map(([name,path],i)=>({'@type':'ListItem',position:i+1,name,item:`${site}${path}`}))})
-  out.push({path:'',html:renderPage(template,{path:'',title:seoPages.atlas.kn[0],description:seoPages.atlas.kn[1]+' '+seoPages.atlas.en[1],body:'',view:'atlas'},{site,verification})})
+  out.push({path:'',html:renderPage(template,{path:'',title:pageTitle('atlas'),description:seoPages.atlas.kn[1]+' '+seoPages.atlas.en[1],body:'',view:'atlas'},{site,verification})})
   for(const s of sections){
     const meta=seoPages[s.view],top=s.view==='species'?species.filter(x=>x.name.en||x.name.kn).slice(0,300):[]
     const body=`<article class="seo-static" lang="kn"><h1>${escapeHtml(meta.kn[0])}</h1><p>${escapeHtml(meta.kn[1])}</p><p lang="en">${escapeHtml(meta.en[1])}</p><p><a href="/#${s.view}">Open the interactive page · ಸಂವಾದಾತ್ಮಕ ಪುಟ ತೆರೆಯಿರಿ</a></p>${top.length?`<h2>Most recorded species · ಹೆಚ್ಚು ದಾಖಲಾದ ಪ್ರಭೇದಗಳು</h2><ul>${top.map(x=>`<li><a href="/species/${slugs.get(x.gbifKey)}/">${escapeHtml([x.name.kn,x.name.en].filter(Boolean).join(' · '))} (<i>${escapeHtml(x.scientificName)}</i>)</a></li>`).join('')}</ul>`:''}${navLinks(site,sections)}</article>`
-    out.push({path:s.path,html:renderPage(template,{path:s.path,view:s.view,title:meta.kn[0],description:`${meta.kn[1]} ${meta.en[1]}`,ogDescription:meta.en[1],body,
+    out.push({path:s.path,html:renderPage(template,{path:s.path,view:s.view,title:pageTitle(s.view),description:`${meta.kn[1]} ${meta.en[1]}`,ogDescription:meta.en[1],body,
       ld:{'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':`${site}${s.path}#page`,url:`${site}${s.path}`,name:meta.en[0],description:meta.en[1],inLanguage:['kn','en'],isPartOf:{'@id':`${site}#website`}},bread([['Karnataka Historical Atlas',''],[s.en,s.path]])]}},{site,verification})})
     urls.push({loc:`${site}${s.path}`,priority:s.view==='species'||s.view==='aata-paata'||s.view==='geography'?'0.8':'0.6',changefreq:'monthly'})
   }
@@ -79,7 +80,7 @@ export function buildSite({template,species,images={},site,date,verification='',
     const season=x.seasonality&&SEASON[x.seasonality.pattern]?`In Karnataka it is ${SEASON[x.seasonality.pattern]}${months?` (recorded ${months})`:''}.`:''
     const knNote=kn?`Kannada name: ${kn}${x.knReviewed?'':' (suggested; awaiting review)'}.`:'No Kannada name has been confirmed yet.'
     const description=trim(`${[kn,en].filter(Boolean).join(' · ')} (${x.scientificName}) — a ${GROUP_EN[x.group]||'species'} recorded in Karnataka${x.family?`, family ${x.family}`:''}. ${season} ${knNote}`,300)
-    const title=`${kn?`${kn} · `:''}${en} (${x.scientificName}) · ಕರ್ನಾಟಕದ ಜೀವವೈವಿಧ್ಯ`
+    const title=`${en||kn} (${x.scientificName})${en&&kn?` · ${kn}`:''} · Karnataka biodiversity`
     const body=`<article class="seo-static" lang="kn"><h1>${escapeHtml(kn||en)}</h1><p lang="en">${escapeHtml(en)} · <i>${escapeHtml(x.scientificName)}</i>${x.family?` · ${escapeHtml(x.family)}`:''}</p>${img?`<figure><img src="${escapeHtml(img.thumb)}" alt="${escapeHtml(en)}" width="480" loading="lazy" /><figcaption>Photo: ${escapeHtml(img.author)} · ${escapeHtml(img.license)} · <a href="${escapeHtml(img.page)}">Wikimedia Commons</a></figcaption></figure>`:''}<p lang="en">${escapeHtml(`${season} ${knNote}`.trim())}</p><p><a href="/?species=${encodeURIComponent(x.id)}#species">Open in the atlas: map of records, names and sources · ಅಟ್ಲಸ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ</a></p><p><a href="/species/">All species · ಎಲ್ಲ ಪ್ರಭೇದಗಳು</a></p></article>`
     out.push({path:p,html:renderPage(template,{path:p,view:'species',query:`species=${x.id}`,title,description,ogDescription:description,image:img?.thumb,body,
       ld:{'@context':'https://schema.org','@graph':[{'@type':'Taxon','@id':`${site}${p}#taxon`,name:x.scientificName,alternateName:[en,kn].filter(Boolean),taxonRank:'species',...(x.family?{parentTaxon:{'@type':'Taxon',name:x.family,taxonRank:'family'}}:{}),...(img?{image:img.thumb}:{}),sameAs:[`https://www.gbif.org/species/${x.gbifKey}`,...(x.wikidataId?[`https://www.wikidata.org/wiki/${x.wikidataId}`]:[])]},bread([['Karnataka Historical Atlas',''],['Species','species/'],[en,p]])]}},{site,verification})})
