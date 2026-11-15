@@ -20,7 +20,14 @@ let urls=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1])
 if(process.argv.includes('--only-root'))urls=[site]
 console.log(`${urls.length} URL(s) for ${new URL(site).host}, key file ${site}${key}.txt`)
 if(!process.argv.includes('--yes')){console.log('Dry run. Add --yes to submit to api.indexnow.org.');process.exit(0)}
-for(let i=0;i<urls.length;i+=10000){
-  const res=await fetch('https://api.indexnow.org/indexnow',{method:'POST',headers:{'Content-Type':'application/json; charset=utf-8'},body:JSON.stringify({host:new URL(site).host,key,keyLocation:`${site}${key}.txt`,urlList:urls.slice(i,i+10000)})})
-  console.log(`batch ${i/10000+1}: HTTP ${res.status}`)
+// Same submission to any participating endpoint; if one refuses, try the next (a 403 from one network path is not final).
+const ENDPOINTS=['https://api.indexnow.org/indexnow','https://www.bing.com/indexnow','https://yandex.com/indexnow']
+for(let i=0;i<urls.length;i+=1000){
+  const body=JSON.stringify({host:new URL(site).host,key,keyLocation:`${site}${key}.txt`,urlList:urls.slice(i,i+1000)})
+  for(const endpoint of ENDPOINTS){
+    const res=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json; charset=utf-8'},body}).catch(error=>({status:`error ${error.message}`,text:async()=>''}))
+    const note=(await res.text().catch(()=>'')).slice(0,200)
+    console.log(`batch ${i/1000+1} via ${new URL(endpoint).host}: HTTP ${res.status}${note?` ${note}`:''}`)
+    if(res.status===200||res.status===202)break
+  }
 }
