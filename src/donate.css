@@ -15,3 +15,12 @@
 .support-options h4{margin:0 0 4px;font-size:1rem}.support-options h4 em{margin-left:8px;padding:1px 8px;border-radius:999px;background:#fff3cf;color:#7a4a12;font-size:.68rem;font-style:normal;font-weight:800}
 .support-options p{margin:0 0 6px;font-size:.85rem;line-height:1.45;color:#4b5563}.support-options a{font-size:.85rem;font-weight:700}
 #donate-methods{scroll-margin-top:170px}
+
+/* Support page: the donation comes first; the other ways to help are a compact row beneath it. */
+.donate-banks{grid-column:1/-1;border:1px solid var(--sanchaya-border);border-radius:10px;background:#fff}
+.donate-banks>summary{padding:12px 14px;font-size:13px;font-weight:800;cursor:pointer}
+.donate-bank-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;padding:0 14px 14px}
+.support-options{margin:8px clamp(16px,4vw,48px) 20px;max-width:none}
+.support-options ul{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.support-options li{padding:10px 12px;border-radius:12px}.support-options li p{margin:0;font-size:.8rem}.support-options h4{margin:0 0 2px;font-size:.92rem}
+.support-soon{margin:10px 0 0;color:var(--sanchaya-muted);font-size:13px}.support-soon a{font-weight:800}

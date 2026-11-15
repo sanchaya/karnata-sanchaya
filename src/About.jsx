@@ -58,7 +58,7 @@ export function DonateSection({locale}){
       </div>
       <div className="donate-grid">
         <article className="donate-online"><h4>{t.donateOnline}</h4><OnlineDonate t={t}/></article>
-        {BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}
+        <details className="donate-banks"><summary>{locale==='kn'?'ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ ವಿವರಗಳು':'Pay by bank transfer'}</summary><div className="donate-bank-list">{BANKS.map(item=><article key={item.ifsc}><h4>{t.donateBank} · {item.bank}</h4><dl><div><dt>{t.accountName}</dt><dd>Sanchi Foundation ®</dd></div><div><dt>{t.accountNo}</dt><dd><CopyValue value={item.account} label={t.accountNo} t={t}/></dd></div><div><dt>{t.ifsc}</dt><dd><CopyValue value={item.ifsc} label={t.ifsc} t={t}/></dd></div></dl></article>)}</div></details>
       </div>
       <aside className="donate-receipt" aria-label={t.receiptTitle}><span aria-hidden="true">✉</span><div><strong>{t.receiptTitle}</strong><p>{t.receiptBody} <a href={`mailto:info@sanchifoundation.org?subject=${encodeURIComponent(t.receiptSubject)}`}>info@sanchifoundation.org</a></p><small>{t.receiptPrivacy}</small></div></aside>
     </section>

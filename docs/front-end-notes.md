@@ -101,9 +101,9 @@ The top row has six menus: Explore, Nature, Research, India research, District A
   (`.about-contact-tabs`) above both pages; `#contact` still works, the footer links About and Support, and the floating Contact
   button is unchanged. The About page no longer embeds the donation block, only a link to the Support page.
 - **Support.** The header's only utility link is "♥ Support" (`headerUtilityItems`), and the footer has "♥ Support the atlas". The
-  Support page (`#donate`, `src/Donate.jsx`) lists ways to help from `src/support-options.js` above the existing donation block
-  (UPI, bank, online). **Add a new way to support there**: status `live` shows an "Open" link, status `soon` shows a "Coming
-  soon" tag and a "Tell us you are interested" mail link. Do not mark something live before it works. Today the three `soon`
+  Support page (`#donate`, `src/Donate.jsx`) opens with the donation block (QR/UPI, online button, receipt note; bank details are
+  collapsed under "Pay by bank transfer") and lists the other ways to help from `src/support-options.js` beneath it as a compact row. **Add a new way to support there**: status `live` shows a titled link, status `soon` is named in one "Coming soon" line with a single
+  "Tell us you are interested" mail link. Do not mark something live before it works. Today the three `soon`
   options (sponsor a topic, monthly supporters, grants and CSR) are plans, not features.
 - **Offline ready / Install app** (`PwaControls`) moved from the header to the footer. Keep new header controls to what a visitor
   needs on every page; the header row is tight (an extra control once pushed Berunda out of view).
