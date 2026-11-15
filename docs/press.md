@@ -2,7 +2,7 @@
 
 Source: the Patrika Sanchaya catalogue (`atlasData.periodicals`, 3,715 rows; see [data import](data-import-and-deployment.md)).
 
-- **Press page** (`src/PressExplorer.jsx`): a map of publication places (marker size = number of titles, magenta = a place with a woman editor), a year filter, men/women/other bars for editors and publishers, and editorships by decade. Titles with no place are counted, not mapped.
+- **Press page** (`src/PressExplorer.jsx`): a map of publication places (blue circle = number of titles, magenta inner circle = titles with a woman editor), a year filter, men/women/other bars for editors and publishers, and editorships by decade. Titles with no place are counted, not mapped.
 - **People page**: the same editors and publishers are listed at the bottom of `#people` (`PressPeople`), searchable by role and gender.
 - **Logic** (`src/periodicals.js`, test `test/periodicals.test.js`): joint names split on `/ , ; &`; one entry per distinct name.
 
