@@ -1,3 +1,4 @@
+import { pressCoverage } from './data/press-coverage'
 import {useState} from 'react'
 import {ATLAS_RELEASE_VERSION} from './data/atlas.js'
 
@@ -83,6 +84,7 @@ export default function About({locale}){
       </aside>
     </section>
     <section className="about-pillars">{pillars.map(([title,body],index)=><article key={title} className={`pillar-${index+1}`}><span aria-hidden="true">0{index+1}</span><h3>{title}</h3><p>{body}</p></article>)}</section>
+    <section className="about-press" aria-labelledby="about-press-title"><h3 id="about-press-title">{locale==='kn'?'ಮಾಧ್ಯಮದಲ್ಲಿ':'In the media'}</h3><ul>{pressCoverage.map(item=><li key={item.url}><a href={item.url} target="_blank" rel="noreferrer" lang={item.lang}>{item.title} ↗</a><small>{item.outlet}{item.date?` · ${item.date}`:''}</small></li>)}</ul><p><small>{locale==='kn'?'ಇತರ ವರದಿಗಳಿದ್ದರೆ ಸಂಪರ್ಕ ಪುಟದ ಮೂಲಕ ತಿಳಿಸಿ.':'Know of other coverage? Tell us through the Contact page.'}</small></p></section>
     <p className="about-support-line">{locale==='kn'?'ಈ ಅಟ್ಲಸ್ ಸ್ವಯಂಸೇವಕರ ಶ್ರಮದಿಂದ ಬೆಳೆಯುತ್ತದೆ.':'This atlas grows through volunteer effort.'} <a href="#donate">{locale==='kn'?'ಬೆಂಬಲಿಸುವ ಮಾರ್ಗಗಳು →':'Ways to support →'}</a></p>
   </main>
 }

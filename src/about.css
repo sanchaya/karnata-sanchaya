@@ -97,3 +97,4 @@ body main.about-page>.about-hero{display:grid;grid-template-columns:minmax(0,1fr
 .donate-section .donate-receipt{align-self:start}
 @media(max-width:1100px){.donate-section{grid-template-rows:none}}
 .donate-side .donate-qr .donate-value b{font-size:11px;letter-spacing:0}
+.about-press{max-width:1100px;margin:24px auto;padding:0 16px}.about-press ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}.about-press li{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--sanchaya-border);border-radius:12px;background:#fff}.about-press small{color:var(--sanchaya-muted)}

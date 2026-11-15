@@ -189,3 +189,7 @@ the open items for the owner; change them only when the licence is confirmed.
 ## Language switch must not shift the page
 
 Switching Kannada/English changes text widths. `page-consistency.css` clips horizontal overflow on `html` and `body`, keeps the language button a fixed minimum width and stops the header actions from wrapping or growing on phones.
+
+## Press coverage
+
+The About page lists news coverage of the atlas ("In the media") from `src/data/press-coverage.js`: headline, outlet, date and link only. Add new items at the top of that file.
