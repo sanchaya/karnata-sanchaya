@@ -82,3 +82,11 @@ Verification tokens are read at build time from `GOOGLE_SITE_VERIFICATION`, `BIN
   affect Google or Bing search ranking.
 - **Measure:** watch *Pages* and *Sitemaps* in Search Console, and the visitor statistics (`docs/visitor-stats.md`) for
   landing-page visits (`view` = species, migration ...).
+
+## Adding a page without losing indexing
+
+A test (`test/seo.test.js`) fails if a view in `publicViews` (`src/App.jsx`) has no entry in `src/seo-pages.js`, if two pages share a title, or if a description is thin. Adding the entry is what puts the page in the prerendered HTML and the sitemap. After a deploy that adds pages, resubmit the sitemap and, with the owner's go-ahead, run `node scripts/indexnow.mjs --yes`.
+
+## Query parameters
+
+Parameters such as `?person=`, `?game=` and `?species=` belong to one page. `PAGE_PARAMS` in `src/App.jsx` lists the owning pages and the parameter is removed when the reader moves elsewhere, so a shared link never drags old state into other pages. A test fails if code reads a parameter that is not listed.

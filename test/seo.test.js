@@ -94,3 +94,27 @@ test('robots, boot script, preview image and the IndexNow key file are in place'
   const server=await readFile(new URL('../server/app.js',import.meta.url),'utf8')
   assert.match(server,/req\.path==='\/'\?200:404/,'unknown paths are 404, not soft 404s')
 })
+
+test('every public page has search metadata, so a new page cannot ship unindexed',async()=>{
+  const { readFile } = await import('node:fs/promises')
+  const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
+  const views=app.match(/const publicViews=\[([^\]]*)\]/)[1].match(/'[^']+'/g).map(v=>v.slice(1,-1))
+  const missing=views.filter(v=>!seoPages[v])
+  assert.deepEqual(missing,[],`add these to src/seo-pages.js (and docs/seo.md): ${missing}`)
+  const titles=Object.values(seoPages).map(p=>p.en[0])
+  assert.equal(new Set(titles).size,titles.length,'page titles must be unique')
+  for(const [view,page] of Object.entries(seoPages))assert.ok(page.kn[1].length>30&&page.en[1].length>30,`${view} needs real descriptions`)
+})
+
+test('every query parameter the app reads is owned by a page, so it is cleared when the reader leaves',async()=>{
+  const { readFile, readdir } = await import('node:fs/promises')
+  const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
+  const owned=Object.keys(eval('('+app.match(/const PAGE_PARAMS=(\{[^\n]*\})/)[1]+')'))
+  const shared=new Set(['year','zoom','lat','lng','record','resetToken'])
+  const files=(await readdir(new URL('../src/',import.meta.url))).filter(f=>/\.jsx?$/.test(f))
+  for(const f of files){
+    const text=await readFile(new URL(`../src/${f}`,import.meta.url),'utf8')
+    for(const m of text.matchAll(/(?:searchParams|params|URLSearchParams\([^)]*\))\.get\('([A-Za-z]+)'\)/g))
+      assert.ok(owned.includes(m[1])||shared.has(m[1]),`${f} reads ?${m[1]}: add it to PAGE_PARAMS in App.jsx (or to the shared list here)`)
+  }
+})

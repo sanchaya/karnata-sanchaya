@@ -36,7 +36,7 @@ Object.assign(seoPages,{
   'india-inscriptions':{kn:['ಭಾರತ ಶಾಸನ ಸೂಚಿ · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಭಾರತದಾದ್ಯಂತ ಶಾಸನ ದಾಖಲೆಗಳು ಮತ್ತು ಸುಳಿವುಗಳ ಪರಿಶೀಲನಾ ಸೂಚಿ.'],en:['India inscription index · Karnataka Historical Atlas','Review index of inscription records and leads across India.']},
   'india-languages':{kn:['ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಭೂಪಟ (ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ) · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕಾಲಕ್ರಮದಲ್ಲಿ ಭಾರತದ ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಪ್ರದೇಶಗಳ ಸಂಶೋಧನಾ ಕರಡು.'],en:['Languages and scripts map (unverified) · Karnataka Historical Atlas','Research draft of language and script regions across India through time.']},
   'india-sources':{kn:['ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಭಾರತ ಸಂಶೋಧನಾ ಆಮದಿನ ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು.'],en:['Underlying source candidates · Karnataka Historical Atlas','Source candidates behind the India research imports.']},
-  'india-failures':{kn:['ಮೂಲ ಪುಟ ದೋಷಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಆಮದಿನಲ್ಲಿ ಓದಲಾಗದ ಮೂಲ ಪುಟಗಳು.'],en:['Source-page failures · Karnataka Historical Atlas','Source pages that could not be read during import.']},
+  'india-failures':{kn:['ಮೂಲ ಪುಟ ದೋಷಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ ಆಮದಿನಲ್ಲಿ ಓದಲಾಗದ ಮೂಲ ಪುಟಗಳ ಪಟ್ಟಿ; ಯಾವ ಆಕರಗಳನ್ನು ಮತ್ತೆ ಪರಿಶೀಲಿಸಬೇಕು ಎಂದು ನೋಡಿ.'],en:['Source-page failures · Karnataka Historical Atlas','The list of source pages that could not be read while importing India history data, so reviewers know which sources to check again.']},
 })
 
 // Pages that had no entry of their own and fell back to the home description (draft Kannada, needs proofreading).
