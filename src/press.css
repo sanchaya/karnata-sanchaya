@@ -1,0 +1,18 @@
+.press-page{padding:clamp(16px,3vw,40px);max-width:1500px;margin:auto}
+.press-hero h2{margin:.2rem 0 .5rem}
+.press-stats{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.press-stats span{display:flex;flex-direction:column;padding:10px 14px;border:1px solid var(--sanchaya-border);border-radius:12px;background:#fff;font-size:.8rem}.press-stats b{font-size:1.5rem}
+.press-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}.press-filters input[type=number]{width:6em}.press-filters input[type=search]{flex:1 1 220px;min-width:0}.press-filters input,.press-filters select,.press-filters button{padding:8px 10px;border:1px solid var(--sanchaya-border);border-radius:10px;background:#fff}
+.press-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:16px;align-items:start}
+.press-map{min-width:0}.press-map .leaflet-container{height:min(66vh,620px);min-height:420px;border-radius:14px;border:1px solid var(--sanchaya-border)}
+.press-side{display:grid;gap:14px}
+.press-bar{display:flex;height:16px;border-radius:99px;overflow:hidden;background:#eee;margin:6px 0}.press-bar i{display:block;height:100%}
+.press-bars ul{display:flex;flex-wrap:wrap;gap:4px 12px;margin:0;padding:0;list-style:none;font-size:.82rem}.press-bars li i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}
+.press-decades ul{margin:6px 0;padding-left:18px;font-size:.82rem}
+.press-note{color:var(--sanchaya-muted);font-size:.8rem;line-height:1.5}
+.press-pop{margin:6px 0 0;padding-left:16px;max-width:260px}
+.press-people{margin-top:26px}
+.press-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.press-list li{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid var(--sanchaya-border);border-radius:12px;background:#fff}.press-list small{color:var(--sanchaya-muted)}
+.press-tag{align-self:flex-start;padding:1px 8px;border-radius:99px;font-size:.7rem;background:#eee}.press-tag.g-woman{background:#f6dbe9}.press-tag.g-man{background:#dbe6f6}
+.press-more{display:block;margin:14px auto;padding:9px 20px;border:1px solid var(--sanchaya-blue);border-radius:99px;background:#fff;color:var(--sanchaya-blue);font-weight:700;cursor:pointer}
+@media(max-width:900px){.press-layout{grid-template-columns:1fr}}

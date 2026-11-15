@@ -49,6 +49,7 @@ Object.assign(seoPages,{
 })
 
 Object.assign(seoPages,{
+  press:{kn:['ಪತ್ರಿಕೆಗಳು ಮತ್ತು ನಿಯತಕಾಲಿಕೆಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕನ್ನಡ ಪತ್ರಿಕೆಗಳು ಎಲ್ಲಿ ಪ್ರಕಟವಾದವು, ಸಂಪಾದಕರು ಮತ್ತು ಪ್ರಕಾಶಕರು ಯಾರು ಎಂದು ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ.'],en:['Newspapers and magazines · Karnataka Historical Atlas','See on a map where Kannada newspapers and magazines were published, and who edited and published them, with women and men editors.']},
   migration:{kn:['ವಲಸೆ ಹಕ್ಕಿಗಳು · ಕರ್ನಾಟಕ ಇತಿಹಾಸ ಭೂಪಟ','ಕರ್ನಾಟಕಕ್ಕೆ ಬರುವ ವಲಸೆ ಹಕ್ಕಿಗಳು ಎಲ್ಲಿಂದ ಬರುತ್ತವೆ ಎಂದು ಭೂಗೋಳದಲ್ಲಿ ನೋಡಿ; ಹಕ್ಕಿಗಳ ಹೆಸರು ಮತ್ತು ತಿಂಗಳುಗಳು.'],en:['Migratory birds · Karnataka Historical Atlas','See on a globe where Karnataka’s migratory birds come from, with their names and the months they are here.']},
 })
 

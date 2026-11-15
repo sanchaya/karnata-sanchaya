@@ -7,6 +7,7 @@ import { buildSourceTiers, recordAuthorityCited } from './data/source-provenance
 import ProvenanceBadge from './ProvenanceBadge'
 import { epigraphiaRecordsForTargets } from './data/epigraphia-links'
 import IndiaBoundary from './IndiaBoundary'
+import { PressPeople } from './PressExplorer'
 
 const primary=(value,locale)=>value?.[locale]||value?.en||value?.kn||''
 const secondary=(value,locale)=>value?.[locale==='kn'?'en':'kn']||''
@@ -168,5 +169,6 @@ export default function PeopleExplorer({locale='kn',districtGeojson,mapTheme='mo
 {!selected.isCandidate&&<button className="people-open-atlas" type="button" onClick={()=>onOpenAtlas(selected)}>{t.openAtlas}</button>}</aside>}
     </section>
     <section className="people-timeline"><div><strong>{t.timeline}</strong><small>{visibleFiltered.filter(person=>Number.isFinite(person.timelineYear)).length} / {filtered.filter(person=>Number.isFinite(person.timelineYear)).length}</small></div><div ref={timelineRef} onKeyDown={onTimelineKeyDown}>{visibleFiltered.filter(person=>Number.isFinite(person.timelineYear)).map(person=><button type="button" key={person.id} className={selected?.id===person.id?'selected':''} onClick={()=>choosePerson(person)}><time>{dateLabel(person.timelineDate,locale)}</time><strong>{primary(person.name,locale)}</strong><small>{person.roles.slice(0,2).map(value=>roleLabelFor(person,value,locale)).join(' · ')}</small></button>)}</div></section>
+    <PressPeople locale={locale}/>
   </main>
 }
