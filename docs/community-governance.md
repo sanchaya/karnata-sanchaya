@@ -2,7 +2,7 @@
 
 ## Roles and review path
 
-1. A visitor registers with a name, profession, affiliation and institution details. Every new account remains `pending` until Sanchaya approves it.
+1. A visitor registers with a name, email and password and ticks one box accepting the terms and privacy policy. Profession, affiliation, institution and a Kannada name are optional and are added later in the profile (the server stores `other` when no profession is sent). Every new account remains `pending` until Sanchaya approves it.
    Registration requires explicit terms and privacy consent. Password recovery uses a short-lived, one-time token stored only as a hash; completing a reset invalidates all active sessions. The generic recovery response never confirms whether an email is registered.
 2. An approved account receives the contributor role. Contributors create proposals; they never write directly to the published atlas.
 3. Sanchaya administrators may appoint qualified people or institutional nominees as reviewers and verification officers.

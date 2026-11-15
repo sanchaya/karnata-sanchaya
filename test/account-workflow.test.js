@@ -30,8 +30,9 @@ test('configured password recovery sends a plain-text bilingual-safe email',asyn
 test('signup, recovery and administrator approval contracts stay wired',async()=>{
   const [server,community,migration]=await Promise.all([read('server/app.js'),read('src/Community.jsx'),read('server/migrations/012_password_reset.sql')])
   assert.match(server,/acceptTerms!==true\|\|body\.acceptPrivacy!==true/)
-  assert.match(community,/name="terms" type="checkbox" required/)
-  assert.match(community,/name="privacy" type="checkbox" required/)
+  assert.match(community,/name="consent" type="checkbox" required/,'one consent box covers terms and privacy')
+  assert.match(community,/acceptTerms:form\.get\('consent'\)==='on',acceptPrivacy:form\.get\('consent'\)==='on'/)
+  assert.doesNotMatch(community,/name="profession"|name="nameKn"/,'sign-up asks only name, email, password and consent')
   assert.match(community,/student:'ವಿದ್ಯಾರ್ಥಿ'/)
   assert.match(community,/'research-institute':'ಸಂಶೋಧನಾ ಸಂಸ್ಥೆ'/)
   assert.match(community,/>\{t\.forgot\}</)

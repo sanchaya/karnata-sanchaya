@@ -6,7 +6,7 @@ The public atlas is readable without an account. An account is needed only to su
 
 ## ಖಾತೆ ತೆರೆಯುವುದು / Create an account
 
-1. Open **Contribute / ಕೊಡುಗೆ ನೀಡಿ**, choose **Register**, and provide your name, email, profession and affiliation.
+1. Open **Contribute / ಕೊಡುಗೆ ನೀಡಿ**, choose **Register**, and provide your name, email and a password, and accept the terms. Add your profession and institution later under **Profile**.
 2. Choose a password of at least 12 characters and explicitly accept the community and privacy policies.
 3. Sanchaya reviews the request. A pending account may sign in and complete its profile, but cannot submit research until approved.
 4. If you forget the password, choose **Forgot password?**. The one-time link expires after the configured interval and invalidates existing sessions when used.

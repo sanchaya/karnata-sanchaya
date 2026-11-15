@@ -135,8 +135,8 @@ app.get('/api/dataset',rateLimit('public-dataset',180,60*60*1000),async(req,res)
 })
 
 app.post('/api/auth/register',rateLimit('register',8,60*60*1000),async(req,res)=>{
-  const body=req.body||{};const userEmail=email(body.email);const displayName=clean(body.displayName,160);const profession=clean(body.profession,80)
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)||!displayName||!profession)return res.status(400).json({error:'A valid email, name and profession are required.'})
+  const body=req.body||{};const userEmail=email(body.email);const displayName=clean(body.displayName,160);const profession=clean(body.profession,80)||'other'
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)||!displayName)return res.status(400).json({error:'A valid email and name are required.'})
   if(typeof body.password!=='string'||body.password.length<12||body.password.length>200)return res.status(400).json({error:'Password must contain 12–200 characters.'})
   if(body.acceptTerms!==true||body.acceptPrivacy!==true)return res.status(400).json({error:'Terms and privacy consent are required.'})
   const passwordHash=await hashPassword(body.password);const id=randomUUID();const now=new Date()
