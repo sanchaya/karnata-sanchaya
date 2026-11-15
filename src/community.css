@@ -20,3 +20,4 @@
 .community-about{display:grid;gap:12px;margin:0;padding:12px;border:1px solid var(--sanchaya-border);border-radius:12px}
 .community-about legend{padding:0 6px;font-size:12px;font-weight:800;color:#7a4d09}
 @media(max-width:760px){.community-gateway{grid-template-columns:minmax(0,1fr)}.community-gate-new{order:-1}}
+.account-dates{display:block;color:var(--sanchaya-muted)}.account-history{margin-top:4px;font-size:.8rem}.account-history ul{margin:4px 0 0;padding-left:18px}

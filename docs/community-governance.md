@@ -31,3 +31,7 @@
 ## Publication rule
 
 `npm run export:approved` writes only approved proposal content, public contributor/reviewer names, badge state, citations and the public structured review decision to `public/data/approved-community.json`. It refuses to export an approved Kannada translation without its complete scholarly assessment. It excludes email addresses, identity documents, private review notes, sessions and private audit metadata. GitHub Pages continues to deploy a read-only Vite build.
+
+## Account history for administrators
+
+The Operations account list shows when each account was registered, when and by whom it was approved, any rejection reason, and a History list of every approve, reject and suspend decision (from the audit log). Account decisions are checked against the stored status before the page says they worked, and administrator, review and account API responses are sent with `Cache-Control: no-store`.
