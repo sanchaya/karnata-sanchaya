@@ -62,7 +62,7 @@ The "Needs a Kannada name" filter lists species that have no name or suggestion.
 - **Early Bird** (Kutuhali column): 15 species-level Kannada names with no English or scientific names. They are not
   matched to species by guesswork; they only add a second source to a name that another source already gave.
 
-- **Hakkipukka** (hakkipukka.com, `node scripts/import-hakkipukka-names.mjs`): about 250 species-level Kannada names with English names taken from each post's link text or web address, and a link back. It reads the site's category pages at one request a second and keeps no text or photos. A name is applied only when the English name matches a species exactly (161 species matched, 43 of them newly named at the last run). The site states no licence; permission was requested, see `LICENSING.md`.
+- **Hakkipukka** (hakkipukka.com, `node scripts/import-hakkipukka-names.mjs`): about 250 species-level Kannada names with English names taken from each post's link text or web address, and a link back. It reads the site's category pages at one request a second and keeps no text or photos. A name is applied only when the English name matches a species exactly (161 species matched, 43 of them newly named at the last run). **On hold:** the source carries `hold: true` in `kn-name-sources.json`, so `applyNameSources` skips it and none of these names or links appear publicly. Delete that flag once the owners agree to publication and a link to their portal. The site states no licence; see `LICENSING.md`.
 
 Name order on a card: reviewed name, then species-level candidates by number of sources, then group names. At the last
 run 754 of 2,556 species have a Kannada name suggestion, 230 of them group names.

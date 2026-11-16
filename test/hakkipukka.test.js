@@ -18,3 +18,8 @@ test('a species-scope name matches the exact English name only', () => {
   const [hit,miss]=applyNameSources([{name:{en:'Little Egret'}},{name:{en:'Great Egret'}}],lists)
   assert.equal(hit.name.kn,'ಸಣ್ಣ ಬೆಳ್ಳಕ್ಕಿ');assert.equal(miss.name.kn,undefined)
 })
+
+test('a list on hold is stored but not applied', () => {
+  const lists=[{id:'hakkipukka',scope:'species',hold:true,entries:[{kn:'ಸಣ್ಣ ಬೆಳ್ಳಕ್ಕಿ',english:'Little Egret'}]}]
+  assert.equal(applyNameSources([{name:{en:'Little Egret'}}],lists)[0].name.kn,undefined)
+})

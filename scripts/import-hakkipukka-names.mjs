@@ -2,7 +2,7 @@
 // Adds Kannada bird names from hakkipukka.com to src/data/species/kn-name-sources.json.
 // Only the Kannada name, the English name (from the post's link text or web address) and a link back are kept; none of the
 // site's text or photos. Polite: one request a second, all category pages (about 85, a couple of minutes). The site's owners were
-// asked for permission; keep the source link visible. Run: node scripts/import-hakkipukka-names.mjs
+// asked for permission; keep the source link visible. The source is written with `hold: true` (not shown publicly) until the owners agree; delete that flag to publish. Run: node scripts/import-hakkipukka-names.mjs
 import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -45,7 +45,7 @@ if(process.argv[1]===fileURLToPath(import.meta.url)){
   for(const url of orders){for(const e of parsePosts(await get(url)))if(!seen.has(e.url))seen.set(e.url,e);console.log(url,seen.size)}
   const data=JSON.parse(await readFile(file,'utf8'))
   data.sources=data.sources.filter(s=>s.id!=='hakkipukka')
-  data.sources.push({id:'hakkipukka',title:'ಹಕ್ಕಿಪುಕ್ಕ · Hakkipukka (Kannada bird names)',url:SITE+'/',scope:'species',entries:[...seen.values()].sort((a,b)=>a.english.localeCompare(b.english))})
+  data.sources.push({id:'hakkipukka',title:'ಹಕ್ಕಿಪುಕ್ಕ · Hakkipukka (Kannada bird names)',url:SITE+'/',scope:'species',hold:true,entries:[...seen.values()].sort((a,b)=>a.english.localeCompare(b.english))})
   data.generatedAt=new Date().toISOString().slice(0,10)
   await writeFile(file,JSON.stringify(data,null,1)+'\n')
   console.log('hakkipukka',seen.size)

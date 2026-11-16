@@ -60,7 +60,9 @@ const addCandidate=(candidates,value,source,extra)=>{
 // lists: kn-name-sources.json "sources". A list with scope "group" (English group word, no scientific name) names every
 // species of that group and is marked scope "group"; a list with no English words only corroborates a name that already
 // exists. Species-specific candidates stay first.
-export function applyNameSources(species,lists=[]){
+// A list marked `hold: true` stays in the data file but is not applied, so it is not public until permission is in.
+export function applyNameSources(species,allLists=[]){
+  const lists=allLists.filter(list=>!list.hold)
   return species.map(item=>{
     const candidates=(item.knCandidates||[]).map(c=>({...c,sources:[...c.sources]}))
     const english=String(item.name.en||'').toLowerCase().replace(/-/g,' ')
