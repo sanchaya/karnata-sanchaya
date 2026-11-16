@@ -122,8 +122,8 @@ The Census 2004 *Historical Atlas of Karnataka* (item `62_36931_2001_his`) was a
   Nellore, Travancore, Tibetan and other corpora, which stay out.
 - Items whose identifier starts `isb.` or `iisb.` (the Epigraphia Carnatica scans from the Indian Statistical Institute copy) answer the text download with **401**;
   their entries are catalogue pointers with no OCR hints. The same volumes from the Mysore University copy (`epigraphia_carnatica_volN_myso`) download freely.
-- The November 2026 refresh grew the catalogue from 279 to 504 volumes (mostly Mysore/Karnataka archaeology reports and further Epigraphia Carnatica scans) and the
-  volumes with OCR place or dynasty hints from 55 to 220.
+- The November 2026 refresh grew the catalogue from 279 to 593 volumes (Mysore/Karnataka archaeology reports, further Epigraphia Carnatica scans and 88 more Epigraphia Indica volumes) and the
+  volumes with OCR place or dynasty hints from 55 to 378.
 - Catalogue entries are pointers (identifier, title, archive link, locator hints) marked needs-review; none of the books' text is copied.
 
 ### Pilot: structured records from OCR (not adopted)
