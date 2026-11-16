@@ -68,6 +68,7 @@ export function applyNameSources(species,lists=[]){
       const kn=normalizeKannada(e.kn)
       if(!kn||!isKannada(kn))continue
       if(!e.english){if(candidates.some(c=>c.value===kn))addCandidate(candidates,kn,list.id);continue}
+      if(list.scope==='species'){if(english===String(e.english).toLowerCase().replace(/-/g,' ').trim())addCandidate(candidates,kn,list.id,{scope:'species'});continue}
       const key=groupKey(e.english),multi=key.includes(' ')
       if(multi?english.includes(key):lastWord(item.name.en)===key)addCandidate(candidates,kn,list.id,{scope:list.scope||'group',group:e.english})
     }

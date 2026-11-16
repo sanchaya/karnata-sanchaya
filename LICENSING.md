@@ -125,7 +125,7 @@ compilation under §2; the periodical's articles are not reproduced.
 - **Wikidata** taxon labels (CC0): used as **data**.
 - **Photos:** see §3.5.
 - **Kannada names:** from GBIF vernacular names and Wikidata, plus two published lists used as **names only** with source
-  links: *Vismaya Jagattu* (blog, 2013) and *Early Bird* (Kutuhali column, 2025). The pages' prose is not reproduced. Every
+  links: *Vismaya Jagattu* (blog, 2013), *Early Bird* (Kutuhali column, 2025) and *Hakkipukka* (hakkipukka.com, about 250 Kannada–English bird name pairs). The pages' prose and photos are not reproduced. **Open item:** Hakkipukka states no licence and its photos are credited to individual photographers (not used); the owners were asked for permission in November 2026. Record their answer here, and remove `hakkipukka` from `kn-name-sources.json` if they decline. Every
   Kannada name is **awaiting review** and may be wrong.
 - **Migration origins** are where birds are *seen* in the other season, not tracked routes.
 - **IUCN, Xeno-canto, eBird, GBIF, Wikidata pages:** **links only**. Their data and recordings keep their own terms.
