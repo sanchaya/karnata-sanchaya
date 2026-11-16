@@ -35,7 +35,7 @@ const locatorTargets = [
   { id: 'archive-hint-ratta-savadatti', label: n('Ratta rulers of Savadatti lead', 'ಸವದತ್ತಿಯ ರಟ್ಟ ಅರಸರ ದಾರಿ'), terms: ['ratta', 'rattas', 'savadatti', 'saundatti'], anchorTerms: ['ratta', 'rattas', 'savadatti', 'saundatti'], targetRecordIds: ['audit-belagavi'] },
   { id: 'archive-hint-adil-shahi-rulers', label: n('Adil Shahi rulers and Vijayapura inscriptions lead', 'ಆದಿಲ್ ಶಾಹಿ ಅರಸರು ಮತ್ತು ವಿಜಯಪುರ ಶಾಸನಗಳ ದಾರಿ'), terms: ['adil shahi', 'adillshahi', 'ibrahim adil', 'ali adil', 'bijapur', 'vijayapura'], anchorTerms: ['adil shahi', 'adillshahi', 'ibrahim adil', 'ali adil'], targetRecordIds: ['external-polity-adil-shahi', 'place-vijayapura'] },
   { id: 'archive-hint-keladi-ikkeri-rulers', label: n('Keladi–Ikkeri rulers lead', 'ಕೆಳದಿ–ಇಕ್ಕೇರಿ ಅರಸರ ದಾರಿ'), terms: ['keladi', 'ikkeri', 'shivappa nayaka', 'keladi chennamma'], anchorTerms: ['keladi', 'ikkeri'], targetRecordIds: ['external-polity-keladi-nayaka', 'place-keladi', 'place-ikkeri', 'event-keladi-nayaka-governance'] },
-  { id: 'archive-hint-chitradurga-nayaka-rulers', label: n('Chitradurga Nayaka rulers lead', 'ಚಿತ್ರದುರ್ಗ ನಾಯಕ ಅರಸರ ದಾರಿ'), terms: ['chitradurga nayaka', 'madakari nayaka', 'palegar of chitradurga'], anchorTerms: ['chitradurga nayaka', 'madakari nayaka'], targetRecordIds: ['polity-chitradurga-nayaka', 'place-chitradurga'] },
+  { id: 'archive-hint-chitradurga-nayaka-rulers', label: n('Chitradurga Nayaka rulers lead', 'ಚಿತ್ರದುರ್ಗ ನಾಯಕ ಅರಸರ ದಾರಿ'), terms: ['chitradurga nayaka', 'madakari nayaka', 'palegar of chitradurga'], anchorTerms: ['chitradurga nayaka', 'madakari nayaka'], targetRecordIds: ['audit-chitradurga'] },
   { id: 'archive-hint-mysore-wodeyar-rulers', label: n('Mysore Wodeyar rulers and inscriptions lead', 'ಮೈಸೂರು ಒಡೆಯರು ಮತ್ತು ಶಾಸನಗಳ ದಾರಿ'), terms: ['wodeyar', 'wadiyar', 'kanthirava', 'chikka devaraja', 'srirangapatna', 'seringapatam'], anchorTerms: ['wodeyar', 'wadiyar', 'kanthirava', 'chikka devaraja'], targetRecordIds: ['polity-mysore', 'place-mysuru', 'place-srirangapatna'] },
 ]
 const locatorTargetReplacements = {
@@ -45,6 +45,8 @@ const locatorTargetReplacements = {
   'polity-keladi': ['external-polity-keladi-nayaka'],
   'person-shivappa-nayaka': ['place-keladi'],
   'person-keladi-chennamma': ['place-ikkeri', 'event-keladi-nayaka-governance'],
+  'polity-chitradurga-nayaka': ['audit-chitradurga'],
+  'place-chitradurga': [],
 }
 const normalizeLocatorTargets = record => ({ ...record, locatorCandidates: (record.locatorCandidates || []).map(candidate => ({ ...candidate, targetRecordIds: [...new Set(candidate.targetRecordIds.flatMap(id => locatorTargetReplacements[id] ?? [id]))] })) })
 
@@ -115,6 +117,7 @@ const administrativeCoverage = (title, text) => {
     if (!mentions.some(item => item.key === key)) mentions.push({ key, name: cleaned, level, basis, status: 'needs-review' })
   }
   const titlePatterns = [
+    [/\bInscriptions?\s+(?:In|Of)\s+(?:The\s+)?([A-Za-z]+(?:\s+[A-Za-z]+)?)\s+District\b/i, 'district'],
     [/^Epigraphia Carnatica\s+Inscriptions? In (.+?) District\b/i, 'district'],
     [/^Inscriptions? (?:In|Of) (?:The )?(.+?) District\b/i, 'district'],
     [/^Karnataka Shasanagalu.*?([A-Za-z]+) Jilleya\b/i, 'district'],
@@ -277,7 +280,13 @@ async function discover() {
       review,
     })
   }
-  return [...new Map([...previousRecords, ...localRecords, ...records].map(record => [record.archiveIdentifier, record])).values()]
+  // A re-run that does not re-read a volume's OCR keeps the signals and locator hints already sampled for it.
+  const sampledBefore = new Map(previousRecords.filter(record => record.ocrSignalStatus !== 'not-sampled').map(record => [record.archiveIdentifier, record]))
+  // New volumes join the catalogue only when the title names Karnataka, a Karnataka place or dynasty, or the OCR sample matched an atlas locator;
+  // the collection also holds Nellore, Travancore, Tibetan and other corpora outside this atlas.
+  const inScope = record => karnatakaTitlePattern.test(record.title) || record.locatorCandidates.length > 0
+  const merged = records.filter(record => sampledBefore.has(record.archiveIdentifier) || previousRecords.some(item => item.archiveIdentifier === record.archiveIdentifier) || inScope(record)).map(record => record.ocrSignalStatus === 'not-sampled' && sampledBefore.has(record.archiveIdentifier) ? sampledBefore.get(record.archiveIdentifier) : record)
+  return [...new Map([...previousRecords, ...localRecords, ...merged].map(record => [record.archiveIdentifier, record])).values()]
     .sort((a, b) => a.series.localeCompare(b.series) || String(a.volume || '').localeCompare(String(b.volume || '')) || a.title.localeCompare(b.title))
 }
 

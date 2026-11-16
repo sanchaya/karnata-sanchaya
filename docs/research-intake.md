@@ -110,3 +110,26 @@ The Census 2004 *Historical Atlas of Karnataka* (item `62_36931_2001_his`) was a
 5. Compare against existing data and surface differences for review rather than overwriting (the dynasty page flags where the book's period differs from ours).
 6. Geocode places with care: accept a village point only when its district matches, otherwise use the taluk town and say so.
 
+
+## Refreshing the Epigraphy archive catalogue (ServantsOfKnowledge, JaiGyan)
+
+`node scripts/import-epigraphia-archive.mjs` lists inscription volumes from the two Internet Archive collections and reads the OCR of the first
+`EPIGRAPHIA_ARCHIVE_TEXT_SAMPLE_ROWS` (default 80) for place and dynasty hints. For a refresh after new uploads use
+`EPIGRAPHIA_ARCHIVE_ROWS=1500 EPIGRAPHIA_ARCHIVE_TEXT_SAMPLE_ROWS=250` (about ten minutes; a few slow text files time out and are skipped).
+
+- A re-run keeps the signals and locator hints already sampled for a volume that is not re-read, so a smaller sample never wipes earlier work.
+- A new volume is added only when its title names Karnataka, a Karnataka place or a dynasty, or its OCR matched an atlas locator. The collections also hold
+  Nellore, Travancore, Tibetan and other corpora, which stay out.
+- Items whose identifier starts `isb.` or `iisb.` (the Epigraphia Carnatica scans from the Indian Statistical Institute copy) answer the text download with **401**;
+  their entries are catalogue pointers with no OCR hints. The same volumes from the Mysore University copy (`epigraphia_carnatica_volN_myso`) download freely.
+- The November 2026 refresh grew the catalogue from 279 to 504 volumes (mostly Mysore/Karnataka archaeology reports and further Epigraphia Carnatica scans) and the
+  volumes with OCR place or dynasty hints from 55 to 220.
+- Catalogue entries are pointers (identifier, title, archive link, locator hints) marked needs-review; none of the books' text is copied.
+
+### Pilot: structured records from OCR (not adopted)
+
+A pilot on *Epigraphia Carnatica* vol. VII (Shimoga, `epigraphia_carnatica_vol7_myso`, 4.2 MB OCR) tried to read each inscription's number, findspot and Saka year.
+It found 377 numbered entries, 88 with a readable Saka year. Many headings are back-references ("At the same place"), the inscription text is in Kannada
+script that the OCR garbles, and a volume holds well over a thousand entries. Recall is too low and place and ruler cannot be read reliably, so no inscription
+records were created from OCR. A modern book (*Suttur Inscriptions*, 2012, publisher's copyright) has a garbled concordance table, so it is a pointer only.
+Records from these volumes should come from the printed page images with a reader's check, as the SII XX records did, one taluk at a time.
