@@ -133,3 +133,12 @@ It found 377 numbered entries, 88 with a readable Saka year. Many headings are b
 script that the OCR garbles, and a volume holds well over a thousand entries. Recall is too low and place and ruler cannot be read reliably, so no inscription
 records were created from OCR. A modern book (*Suttur Inscriptions*, 2012, publisher's copyright) has a garbled concordance table, so it is a pointer only.
 Records from these volumes should come from the printed page images with a reader's check, as the SII XX records did, one taluk at a time.
+
+### Suttur Inscriptions: re-reading the scan ourselves
+
+The Archive's OCR of *Suttur Inscriptions* (`damh.sutturinscriptio0000hmn`) lost the concordance's EC 3 (Revised) column. We downloaded the PDF, rendered it at 300 dpi
+(`pdftoppm -r 300 -gray -png`) and ran `tesseract -l eng+kan --psm 4` on its 114 pages (30 seconds on four cores). That reads the numbered headings of Appendix I well.
+`node scripts/extract-suttur-inscriptions.mjs ocr.txt` writes `data/imports/suttur-inscriptions.json`: 26 of the 28 records with serial, EC 3 (Revised) Nanjangud
+number, findspot words and any Saka year the OCR read (10 records). Records 27 and 28 have no heading in the OCR, record 4's reference is missing, and several
+Saka digits are misread (the OCR gives 4690 for what is a 1500s year), so every row is needs-review against the page image. Only numbers, references and findspot words are
+kept, not the book's text or translations. The book carries a publisher's copyright (© JSS Granthamale, 2012), so it stays a source pointer; no atlas inscription record has been created from it yet.

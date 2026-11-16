@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs'
 import { readdir, readFile, stat, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
+const indiaVolumes = new URL('../data/imports/archive-inscription-volumes.json', import.meta.url)
 const output = new URL('../src/data/epigraphia-archive.generated.js', import.meta.url)
 const rows = Number(process.env.EPIGRAPHIA_ARCHIVE_ROWS || process.argv[2] || 640)
 const textSampleRows = Number(process.env.EPIGRAPHIA_ARCHIVE_TEXT_SAMPLE_ROWS || 80)
@@ -236,7 +237,11 @@ async function discover() {
     }
   })
   const textRows = metadataRows.filter(item => item.metadata)
-  const sampledTexts = new Map(await mapLimit(textRows.slice(0, textSampleRows), concurrency, async ({ candidate, metadata }) => {
+  // Read OCR only for volumes not sampled before, and only those that can enter the catalogue (Karnataka titles, or Epigraphia Indica, whose
+  // Karnataka grants are found by the OCR hints).
+  const alreadySampled = new Set(previousRecords.filter(record => record.ocrSignalStatus !== 'not-sampled').map(record => record.archiveIdentifier))
+  const toSample = textRows.filter(({ candidate, metadata }) => !alreadySampled.has(candidate.identifier) && (karnatakaTitlePattern.test(metadata.metadata?.title || candidate.title || '') || /epigraphia indica/i.test(metadata.metadata?.title || candidate.title || ''))).slice(0, textSampleRows)
+  const sampledTexts = new Map(await mapLimit(toSample, concurrency, async ({ candidate, metadata }) => {
     const textFile = preferredTextFile(metadata)
     if (!textFile) return [candidate.identifier, '']
     const text = await fetch(fileUrl(candidate.identifier, textFile.name), { signal: AbortSignal.timeout(10000) }).then(response => response.ok ? response.text() : '').catch(error => { console.warn(`OCR text fetch failed for ${candidate.identifier} (continuing without a sample): ${error.message}`); return '' })
@@ -248,7 +253,7 @@ async function discover() {
     if (!epigraphyPattern.test(title) || excludePattern.test(title)) continue
     const textFile = preferredTextFile(metadata)
     if (!textFile) continue
-    const shouldSampleText = textSampleRows > 0 && index < textSampleRows
+    const shouldSampleText = sampledTexts.has(candidate.identifier)
     const text = shouldSampleText ? sampledTexts.get(candidate.identifier) || '' : ''
     const ocrSignals = signalCounts(text)
     const sourceCollections = normaliseArray(metadata.metadata?.collection || candidate.collection).filter(value => collections.includes(value))
@@ -285,7 +290,10 @@ async function discover() {
   // New volumes join the catalogue only when the title names Karnataka, a Karnataka place or dynasty, or the OCR sample matched an atlas locator;
   // the collection also holds Nellore, Travancore, Tibetan and other corpora outside this atlas.
   const inScope = record => karnatakaTitlePattern.test(record.title) || record.locatorCandidates.length > 0
-  const merged = records.filter(record => sampledBefore.has(record.archiveIdentifier) || previousRecords.some(item => item.archiveIdentifier === record.archiveIdentifier) || inScope(record)).map(record => record.ocrSignalStatus === 'not-sampled' && sampledBefore.has(record.archiveIdentifier) ? sampledBefore.get(record.archiveIdentifier) : record)
+  const kept = record => previousRecords.some(item => item.archiveIdentifier === record.archiveIdentifier) || inScope(record)
+  // Volumes outside the atlas go to the India research index as source pointers (scripts/build-india-research-index.mjs), with any OCR signals read.
+  await writeFile(indiaVolumes, JSON.stringify({ generatedAt: new Date().toISOString().slice(0, 10), volumes: records.filter(record => !kept(record)).map(({ archiveIdentifier, title, creators, year, series, volume, sourceCollections, itemUrl, textFile, ocrSignals, ocrSignalStatus }) => ({ archiveIdentifier, title, creators, year, series, volume, sourceCollections, itemUrl, textUrl: textFile.url, ocrSignals, ocrSignalStatus })) }, null, 1) + '\n')
+  const merged = records.filter(kept).map(record => record.ocrSignalStatus === 'not-sampled' && sampledBefore.has(record.archiveIdentifier) ? sampledBefore.get(record.archiveIdentifier) : record)
   return [...new Map([...previousRecords, ...localRecords, ...merged].map(record => [record.archiveIdentifier, record])).values()]
     .sort((a, b) => a.series.localeCompare(b.series) || String(a.volume || '').localeCompare(String(b.volume || '')) || a.title.localeCompare(b.title))
 }

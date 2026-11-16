@@ -76,11 +76,18 @@ Object.entries(monumentKingdoms).forEach(([kingdom,value])=>(value.items||[]).fo
   dateCertainty:item['Date certainty']||'unknown',locationPrecision:item['Location precision']||'unknown',
 }))
 
-const sources=(raw.sources||[]).map((item,index)=>({
+const archiveVolumesPath=path.join(root,'data/imports/archive-inscription-volumes.json')
+const archiveVolumes=fs.existsSync(archiveVolumesPath)?readJson(archiveVolumesPath).volumes:[]
+const archiveSources=archiveVolumes.map(item=>({
+  id:`ia:${slug(item.archiveIdentifier)}`,provider:'Internet Archive',dataset:'sources',kind:'digitised-inscription-volume',scope:'india-catalogue',title:item.title,
+  summary:[item.series,item.volume&&`volume ${item.volume}`,item.ocrSignalStatus==='sampled'&&Object.keys(item.ocrSignals||{}).length?`OCR mentions: ${Object.entries(item.ocrSignals).map(([k,v])=>`${k} ${v}`).join(', ')}`:''].filter(Boolean).join(' · '),
+  yearFrom:finite(item.year),yearTo:null,place:'',category:item.series,publication:(item.creators||[]).join('; '),volume:item.volume||'',url:item.itemUrl,reviewStatus:'needs-review',
+}))
+const sources=[...(raw.sources||[]).map((item,index)=>({
   id:item.id||recordId('br:source',item.title,index),provider:'BharatRajya source catalogue',dataset:'sources',kind:item.type||'source',scope:'india-catalogue',
   title:item.title||'Source',summary:item.notes||item.coverage||'',yearFrom:finite(item.year),yearTo:null,place:item.coverage||'',category:item.type||'',
   publication:item.publisher||'',volume:item.volume||'',url:item.url||item.library?.flatMap(entry=>entry.links||[]).find(link=>link.url)?.url||'',reviewStatus:'needs-review',
-}))
+})),...archiveSources]
 
 const failures=(whatisindia.import_manifest?.failures||[]).map((item,index)=>({
   id:recordId('wii:failure',item.url,index),provider:'WhatIsIndia',dataset:'failures',kind:'source-fetch-failure',scope:'india',

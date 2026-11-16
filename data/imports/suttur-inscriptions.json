@@ -1,0 +1,214 @@
+{
+ "source": {
+  "title": "Suttur Inscriptions",
+  "author": "H. M. Nagaraja Rao",
+  "publisher": "JSS Granthamale, Mysuru, 2012",
+  "archiveItem": "https://archive.org/details/damh.sutturinscriptio0000hmn",
+  "section": "Appendix I (texts and translations)"
+ },
+ "status": "needs-review",
+ "rows": [
+  {
+   "serial": 1,
+   "ecReference": "EC 3 (Revised), Nanjangud 219",
+   "findspot": "Fragmentary stone standing to the north of the",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 2,
+   "ecReference": "EC 3 (Revised), Nanjangud 222",
+   "findspot": "Another fragmentary stone at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 3,
+   "ecReference": "EC 3 (Revised), Nanjangud 213",
+   "findspot": "Stone in front of the Sivaratrisvara-Math",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 4,
+   "ecReference": null,
+   "findspot": "Second stone at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": "Heading not read by OCR; reference to be taken from the page image"
+  },
+  {
+   "serial": 5,
+   "ecReference": "EC 3 (Revised), Nanjangud 235",
+   "findspot": "On the southern wall behind the Narayana Svamy",
+   "sakaYearCandidates": [
+    1091
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 6,
+   "ecReference": "EC 3 (Revised), Nanjangud 220",
+   "findspot": "On a hero-stone standing near the northern wall",
+   "sakaYearCandidates": [
+    1118
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 7,
+   "ecReference": "EC 3 (Revised), Nanjangud 234",
+   "findspot": "On the south wall behind the Narayanasvami temple",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 8,
+   "ecReference": "EC 3 (Revised), Nanjangud 224",
+   "findspot": "On the first pillar in the first mantapa of the",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 9,
+   "ecReference": "EC 3 (Revised), Nanjangud 228",
+   "findspot": "On the second pillar in the same mantapa",
+   "sakaYearCandidates": [
+    1186
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 10,
+   "ecReference": "EC 3 (Revised), Nanjangud 226",
+   "findspot": "On the third pillar at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 11,
+   "ecReference": "EC 3 (Revised), Nanjangud 227",
+   "findspot": "Suttir ;",
+   "sakaYearCandidates": [
+    1186
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 12,
+   "ecReference": "EC 3 (Revised), Nanjangud 229",
+   "findspot": "On the fifth pillar at the same place",
+   "sakaYearCandidates": [
+    1186
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 13,
+   "ecReference": "EC 3 (Revised), Nanjangud 230",
+   "findspot": "On the sixth pillar at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 14,
+   "ecReference": "EC 3 (Revised), Nanjangud 231",
+   "findspot": "On the seventh pillar at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 15,
+   "ecReference": "EC 3 (Revised), Nanjangud 232",
+   "findspot": "Sutttr",
+   "sakaYearCandidates": [
+    1186
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 16,
+   "ecReference": "EC 3 (Revised), Nanjangud 228",
+   "findspot": "On the eighth pillar in the first mantapa of the",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 17,
+   "ecReference": "EC 3 (Revised), Nanjangud 223",
+   "findspot": "On a pillar in the second mukha-mantapa of the",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 18,
+   "ecReference": "EC 3 (Revised), Nanjangud 221",
+   "findspot": "On second hero-stone standing near the northern",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 19,
+   "ecReference": "EC 3 (Revised), Nanjangud 236",
+   "findspot": "On the pedestal of the Nandi image of the gaddige",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 20,
+   "ecReference": "EC 3 (Revised), Nanjangud 401",
+   "findspot": "Third stone in front of the Sivaratrisvara-Math",
+   "sakaYearCandidates": [
+    1436
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 21,
+   "ecReference": "EC 3 (Revised), Nanjangud 217",
+   "findspot": "Fourth stone at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 22,
+   "ecReference": "EC 3 (Revised), Nanjangud 214",
+   "findspot": "Sutttr",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 23,
+   "ecReference": "EC 3 (Revised), Nanjangud 218",
+   "findspot": "Sutttr",
+   "sakaYearCandidates": [
+    1515
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 24,
+   "ecReference": "EC 3 (Revised), Nanjangud 216",
+   "findspot": "Seventh stone at the same place",
+   "sakaYearCandidates": [],
+   "ocrNote": ""
+  },
+  {
+   "serial": 25,
+   "ecReference": "EC 3 (Revised), Nanjangud 233",
+   "findspot": "On the second pillar to the west of Dépayyana",
+   "sakaYearCandidates": [
+    1593
+   ],
+   "ocrNote": ""
+  },
+  {
+   "serial": 26,
+   "ecReference": "EC 3 (Revised), Nanjangud 237",
+   "findspot": "Sutttr",
+   "sakaYearCandidates": [
+    1693
+   ],
+   "ocrNote": ""
+  }
+ ]
+}
