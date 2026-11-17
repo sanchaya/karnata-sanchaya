@@ -97,6 +97,7 @@ edits do not appear on GitHub Pages until this approved export occurs.
 - Atlas learning games: [ಆಟ–ಪಾಠ](docs/aata-paata.md)
 - Newspapers, magazines, editors and publishers on a map: [press](docs/press.md)
 - Anonymous visitor counts for administrators: [visitor statistics](docs/visitor-stats.md)
+- Instagram support campaign (plan, captions, creatives): [instagram campaign](docs/instagram-campaign.md)
 - Search engine indexing, prerendered pages and sitemap: [SEO](docs/seo.md)
 - Birds, animals, plants and crowdsourced Kannada names: [species](docs/species.md)
 - Contributor and reviewer use: [user guide](docs/user-guide.md)
