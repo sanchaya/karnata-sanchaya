@@ -197,3 +197,7 @@ The About page lists news coverage of the atlas ("In the media") from `src/data/
 ## Marking new pages and features as new
 
 Every new page or reader-facing feature gets an entry at the top of `WHATS_NEW` in `src/whats-new.js` in the same change (`view` is the page hash, `date` the day it shipped). A first-time visitor has an empty seen-list, so every entry shows as new: the "What's new" count in the header and a dot on that page's menu item. An entry stops counting once the reader opens its page (or the `param` the entry names) or taps it. `test/species.test.js` checks the entries are well formed; it cannot tell that you forgot one, so check the list when you add a page.
+
+## Page heroes
+
+Every Explore page, and Fonts, Species, Migration, Data wanted, Licences, Contact and Donate, carries `explore-hero` on its hero section (`src/explore-hero.css`): a full-width gradient band with the eyebrow, title and one-line purpose in one `<div>`, plus any stats beside it. The older section pages (Literature, Coins, Scripts, Nature, India research, Evidence, Research tasks, Resources) use their own hero classes that were measured to match; About keeps its richer hero with the stewards panel. New pages should use `explore-hero` and wrap the text in one `<div>`.

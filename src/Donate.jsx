@@ -10,7 +10,7 @@ const copy={
 export default function Donate({locale='kn'}){
   const t=copy[locale]||copy.kn,soon=SUPPORT_OPTIONS.filter(o=>o.status==='soon')
   return <main className="donate-page portal-page" id="donate">
-    <section className="donate-hero"><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></section>
+    <section className="donate-hero explore-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
     <div id="donate-methods"><DonateSection locale={locale}/></div>
     <section className="support-options" aria-label={locale==='kn'?'ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಬೆಂಬಲಿಸಿ':'Other ways to help'}><h3>{locale==='kn'?'ಹಣವಿಲ್ಲದೆಯೂ ಬೆಂಬಲಿಸಬಹುದು':'You can also help without money'}</h3><ul>{SUPPORT_OPTIONS.filter(o=>o.status==='live'&&o.id!=='donate').map(o=>{const [title,body]=o[locale]||o.en;return <li key={o.id}><span aria-hidden="true">{o.icon}</span><div><h4><a href={o.href} onClick={o.scrollTo?event=>{event.preventDefault();document.getElementById(o.scrollTo)?.scrollIntoView({behavior:'smooth',block:'start'})}:undefined}>{title} →</a></h4><p>{body}</p></div></li>})}</ul>
     {soon.length>0&&<p className="support-soon">{locale==='kn'?'ಶೀಘ್ರದಲ್ಲೇ: ':'Coming soon: '}{soon.map(o=>(o[locale]||o.en)[0]).join(' · ')}. <a href={`mailto:info@sanchifoundation.org?subject=${encodeURIComponent(locale==='kn'?'ಬೆಂಬಲ ಆಸಕ್ತಿ':'Interested in supporting')}`}>{locale==='kn'?'ಆಸಕ್ತಿ ತಿಳಿಸಿ':'Tell us you are interested'}</a></p>}</section>

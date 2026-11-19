@@ -14,8 +14,8 @@ export default function DataWanted({locale}){
   const [area,setArea]=useState('')
   const list=useMemo(()=>DATA_WANTED.filter(item=>!area||item.area===area),[area])
   return <main className="data-wanted-page portal-page" id="data-wanted">
-    <header className="data-wanted-hero"><p className="eyebrow">{kn?'ಸಹಯೋಗ · ದತ್ತಾಂಶ':'Contribute · Data'}</p><h2>{kn?'ನಮಗೆ ಬೇಕಾದ ದತ್ತಾಂಶ':'Data we are looking for'}</h2>
-      <p>{kn?'ಈ ಅಟ್ಲಸ್ ತನ್ನ ಆಕರಗಳಷ್ಟೇ ಉತ್ತಮ. ಕೆಳಗಿನ ದತ್ತಾಂಶ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ ಎಂದು ನಿಮಗೆ ಗೊತ್ತಿದ್ದರೆ ತಿಳಿಸಿ: ಇಲಾಖೆ, ವಿಶ್ವವಿದ್ಯಾಲಯ, ವಸ್ತುಸಂಗ್ರಹಾಲಯ, ಸಂಶೋಧಕರು ಅಥವಾ ಹವ್ಯಾಸಿಗಳು.':'The atlas is only as good as its sources. If you know where any of the data below can be found, tell us: a department, a university, a museum, a researcher or a hobbyist.'}</p></header>
+    <header className="data-wanted-hero explore-hero"><div><p className="eyebrow">{kn?'ಸಹಯೋಗ · ದತ್ತಾಂಶ':'Contribute · Data'}</p><h2>{kn?'ನಮಗೆ ಬೇಕಾದ ದತ್ತಾಂಶ':'Data we are looking for'}</h2>
+      <p>{kn?'ಈ ಅಟ್ಲಸ್ ತನ್ನ ಆಕರಗಳಷ್ಟೇ ಉತ್ತಮ. ಕೆಳಗಿನ ದತ್ತಾಂಶ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ ಎಂದು ನಿಮಗೆ ಗೊತ್ತಿದ್ದರೆ ತಿಳಿಸಿ: ಇಲಾಖೆ, ವಿಶ್ವವಿದ್ಯಾಲಯ, ವಸ್ತುಸಂಗ್ರಹಾಲಯ, ಸಂಶೋಧಕರು ಅಥವಾ ಹವ್ಯಾಸಿಗಳು.':'The atlas is only as good as its sources. If you know where any of the data below can be found, tell us: a department, a university, a museum, a researcher or a hobbyist.'}</p></div></header>
     <aside className="data-wanted-rules" aria-label={kn?'ನಾವು ಬಳಸಬಹುದಾದದ್ದು':'What we can use'}>
       <strong>{kn?'ನಾವು ಏನನ್ನು ಬಳಸಬಹುದು?':'What can we use?'}</strong>
       <p>{kn?'ಸಾರ್ವಜನಿಕ ವಲಯದ, ಮುಕ್ತ ಪರವಾನಗಿಯ (CC0, CC BY, ODbL, NDSAP ಅಥವಾ GODL-India) ಅಥವಾ ಮಾಲೀಕರು ವಾಣಿಜ್ಯೇತರ ಹಂಚಿಕೆಗೆ ಲಿಖಿತ ಅನುಮತಿ ನೀಡಿದ ದತ್ತಾಂಶ. ಈ ಯೋಜನೆ ವಾಣಿಜ್ಯೇತರ. ಹಂಚಿಕೊಳ್ಳುವ ಹಕ್ಕಿಲ್ಲದ್ದನ್ನು ಕಳುಹಿಸಬೇಡಿ; ಪರವಾನಗಿ ಮತ್ತು ಮೂಲವನ್ನು ತಿಳಿಸಿ.':'Data that is public domain, openly licensed (CC0, CC BY, ODbL, NDSAP or GODL-India), or whose owner agrees in writing to non-commercial sharing. This project is non-commercial. Please do not send anything you have no right to share, and tell us the licence and where it came from.'} <a href={LICENCE_URL} target="_blank" rel="noreferrer">{kn?'ಪರವಾನಗಿ ವಿವರ ↗':'Licensing details ↗'}</a></p>

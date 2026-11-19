@@ -23,7 +23,7 @@ export default function FontShowcase({locale='kn',onOpenScripts}){
     <p className="font-card-meta"><span>{font.family}</span>{font.credit&&<span>{t.credit}: {font.credit}</span>}</p>
   </article>
   return <main className="font-page portal-page" id="fonts">
-    <section className="font-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div><a href="https://fonts.sanchaya.net/kingdom-showcase" target="_blank" rel="noreferrer">{t.more} ↗</a></section>
+    <section className="font-hero explore-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div><a href="https://fonts.sanchaya.net/kingdom-showcase" target="_blank" rel="noreferrer">{t.more} ↗</a></section>
     <section className="font-controls" aria-label={t.label}>
       <label><span>{t.label}</span><input value={sample} onChange={event=>setSample(event.target.value)} placeholder={t.sample} maxLength={80} lang="kn"/></label>
       <label><span>{t.size} · {size}px</span><input type="range" min="20" max="88" value={size} onChange={event=>setSize(Number(event.target.value))}/></label>

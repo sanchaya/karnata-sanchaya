@@ -33,8 +33,8 @@ export default function MigrationExplorer({locale}){
   const flyway=selected&&FLYWAYS[selected.gbifKey]
   const fromText=b=>[...FLYWAYS[b.gbifKey].countries.slice(0,3).map(c=>countryName(c.id)),...(FLYWAYS[b.gbifKey].states||[]).slice(0,2).map(s=>s.name)].join(', ')
   return <main className="species-page migration-page portal-page" id="migration">
-    <header className="species-hero"><p className="eyebrow">{kn?'ಪಕ್ಷಿ ವಲಸೆ':'Bird migration'}</p><h2>{kn?'ವಲಸೆ ಹಕ್ಕಿಗಳು ಎಲ್ಲಿಂದ ಬರುತ್ತವೆ?':'Where do Karnataka’s migratory birds come from?'}</h2>
-      <p>{kn?'ಭೂಗೋಳವನ್ನು ತಿರುಗಿಸಿ. ದೇಶವನ್ನು ಒತ್ತಿದರೆ ಅಲ್ಲಿಂದ ಬರುವ ಹಕ್ಕಿಗಳ ಹೆಸರು ಭೂಗೋಳದ ಮೇಲೆ ಕಾಣುತ್ತದೆ; ಹಕ್ಕಿಯನ್ನು ಆರಿಸಿದರೆ ಅದರ ಮಾರ್ಗ ಮತ್ತು ಹೆಸರು ತೋರುತ್ತದೆ. ಇವು ಇಬರ್ಡ್‌ನಲ್ಲಿ ಕಂಡ ದಾಖಲೆಗಳು, ಉಪಗ್ರಹ ಮಾರ್ಗಗಳಲ್ಲ.':'Turn the globe. Tap a country to see the names of the birds that come from there, or pick a bird to see its route and name on the globe. These are eBird sightings, not tracked routes.'}</p></header>
+    <header className="species-hero explore-hero"><div><p className="eyebrow">{kn?'ಪಕ್ಷಿ ವಲಸೆ':'Bird migration'}</p><h2>{kn?'ವಲಸೆ ಹಕ್ಕಿಗಳು ಎಲ್ಲಿಂದ ಬರುತ್ತವೆ?':'Where do Karnataka’s migratory birds come from?'}</h2>
+      <p>{kn?'ಭೂಗೋಳವನ್ನು ತಿರುಗಿಸಿ. ದೇಶವನ್ನು ಒತ್ತಿದರೆ ಅಲ್ಲಿಂದ ಬರುವ ಹಕ್ಕಿಗಳ ಹೆಸರು ಭೂಗೋಳದ ಮೇಲೆ ಕಾಣುತ್ತದೆ; ಹಕ್ಕಿಯನ್ನು ಆರಿಸಿದರೆ ಅದರ ಮಾರ್ಗ ಮತ್ತು ಹೆಸರು ತೋರುತ್ತದೆ. ಇವು ಇಬರ್ಡ್‌ನಲ್ಲಿ ಕಂಡ ದಾಖಲೆಗಳು, ಉಪಗ್ರಹ ಮಾರ್ಗಗಳಲ್ಲ.':'Turn the globe. Tap a country to see the names of the birds that come from there, or pick a bird to see its route and name on the globe. These are eBird sightings, not tracked routes.'}</p></div></header>
     <div className="species-tools migration-tools">
       <label>{kn?'ತಿಂಗಳು':'Month'} <select value={month} onChange={event=>reset(setMonth)(Number(event.target.value))}><option value={0}>{kn?'ಎಲ್ಲ ತಿಂಗಳು':'Any month'}</option>{MONTHS.map((m,i)=><option key={m} value={i+1}>{kn?MONTHS_KN[i]:m}</option>)}</select></label>
       <button type="button" className="species-now" onClick={()=>reset(setMonth)(new Date().getMonth()+1)}>{kn?'ಈಗ ಇರುವ ಹಕ್ಕಿಗಳು':'Here now'}</button>
