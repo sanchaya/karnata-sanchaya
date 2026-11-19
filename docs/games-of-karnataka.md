@@ -88,6 +88,39 @@ Villages: the atlas links a record to a canonical place, so each village needs a
 
 `village` · `taluk` · `district` · `game name in the village` (Kannada and Latin script) · `other names` · `how it is played` (short, in the collector's own words) · `who plays` (age group, community only if the group wants it named) · `season or festival` · `materials` · `how long it has been played here, as told` · `informant age` · `informant consent given (yes/no), a parent or guardian's consent if under 18, and whether they may be named` · `collector` · `date` · `photo licence` · `published sources that mention it`.
 
+## Sources found on archive.org (ServantsOfKnowledge), November 2026
+
+Found with the Internet Archive search API (`collection:ServantsOfKnowledge`, Kannada and English title queries). All items below are open (not restricted) and have OCR text, so they can be read and cited by page. Most are Kannada University, Hampi theses and books: copyright rests with the authors and the university, so they stay source pointers. Only facts, names and page numbers go into records, in our own words. The OCR of Kannada script is imperfect; check every name against the page image. Item link: `https://archive.org/details/<identifier>`.
+
+**Folk and traditional games, by place**
+
+| Identifier | Title | Author, year | What it covers |
+|---|---|---|---|
+| `kuh.mphil.248.vad.129884` and `kuh.mphil.293.vad.129930` | ಬೀದರ ಜಿಲ್ಲೆಯ ಜನಪದ ಆಟಗಳು (Folk games of Bidar district) | Mahadevi Arjun Vadagaonve, 2009 and 2006 | Two M.Phil. versions on Bidar. Compare them |
+| `kuh.752.nir.132328` | ಚಿತ್ರದುರ್ಗ ಜಿಲ್ಲೆಯ ಜನಪದ ಕ್ರೀಡೆಗಳು (Folk sports of Chitradurga district) | Niranjanamurthy T., 2017 | 710 pages; the largest district study found |
+| `kuh.mphil.108.gan.129749` | ಬಳ್ಳಾರಿ ಜಿಲ್ಲೆ ಬೇಡರ ಸಮುದಾಯದ ಕ್ರೀಡೆಗಳು (Games of the Beda community, Ballari) | Gangadhar T., 2004 | A community, not a district |
+| `kuh.135.mal.049030` | ಹೊಸಪೇಟೆ ತಾಲೂಕಿನ ಗರಡಿ ಸಂಪ್ರದಾಯ (Garadi tradition, Hosapete taluk) | Mallikarjun U., 2004 | Gymnasium and wrestling culture near Hampi |
+
+**Games and recreation in the past**
+
+| Identifier | Title | Author, year | What it covers |
+|---|---|---|---|
+| `kuh.703.man.132040` | ವಿಜಯನಗರ ಕಾಲದ ಕ್ರೀಡೆ ಮತ್ತು ವಿನೋದಾವಳಿ (Sport and recreation of the Vijayanagara period) | P. B. Manjanna, 2016 | 622 pages; probably cites the Hampi boards and travellers |
+| `crmn.kannadakavigaluk0000drks` | Kannada Kavigalu Kanda Kreedegalu (Sports seen by Kannada poets) | Dr K. Srikantayya, 1989 | Sports and games in Kannada literature; dates for literary mentions |
+| `kuh.72.vir.043129` | ಮಧ್ಯಕಾಲೀನ ಕನ್ನಡ ಕಾವ್ಯಗಳಲ್ಲಿ ಬೇಟೆ ಮತ್ತು ಬೇಡರ ಸಂದರ್ಭಗಳು (Hunting and the Beda in medieval Kannada kavyas) | 2000 | Hunting as recreation in literature |
+| `damh.ganjifa0000mlsh` | Ganjifa | M. L. Shivashankara, Dept of Archaeology and Museums, 1996 | 60 pages; the Mysuru Ganjifa lead to verify |
+| `jnanagangothrivo0000nira_c4q9` | ಜ್ಞಾನ ಗಂಗೋತ್ರಿ ಸಂಪುಟ ೬: ಕ್ರೀಡೆ, ಮನೋಲ್ಲಾಸ (Children's encyclopedia, vol. 6) | Niranjana, 1973 | Sports and recreation as a Kannada reference |
+
+**Village and local folklore studies (the village layer)**
+`kuh.593.kri.049484` Soraturu village (2024) · `kuh.mphil.548.130184` Bairapura (2007) · `kuh.mphil.614.pad.130250` Yalandur (2009) · `kuh.850.soo.136964` Bidar taluk (2018) · `kuh.351.kri.049244` Gangamatha folklore, Mandya (2010). Each may list local games and customs.
+
+**Folk art (performance, craft, festival)**
+`kla.janapadachitraka0000drsc` ಜನಪದ ಕಲೆ (S. C. Patil, 1995) · `kuh.152.nag.049047` music of folk theatre arts · `kuh.62.ban.049721` Karnataka folk sculpture (2002) · `kuh.283.lak.049176` folk sculpture of South Karnataka (2009) · `kuh.913.mud.138316` Sannata texts (2018) · `kuh.214.049108` and `kuh.mphil.39.vis.052051` Yakshagana make-up and costume · `tribal.killekyathanomad0000sgmo` The Killekyatha nomadic folk artists of northern Mysore (S. G. Morab, 1977) · `kuh.mphil.297.ran.129934` the plays of Gondaliga Devendrappa (2007) · `karavalijanapada0000drpu` ಕರಾವಳಿ ಜಾನಪದ (Purushottama Bilimale, 1990) · `kvh.mylaranajatre0000sshi` the Mylara fair (1994) · `kvh.chowdammanajatre0000ggir` the Chowdamma fair (1994) · the journal ಜನಪದ ವಿಚಾರ (several issues).
+
+Not relevant, despite matching "play" or "games": the many `apu.anuvadasampada.*` items are Azim Premji University articles on play-based learning.
+
+Next step: read the district studies first (Bidar, Chitradurga, Ballari-Beda). Pull the game names, local names and places with page numbers into `src/data/old-games.js` as sourced entries. Do the same with the Vijayanagara study for the carved boards.
+
 ## How to turn this into the atlas
 
 1. Use section 1 first. For each row, read the source and record its title, page or abstract locator, and the fact it supports, in our own words. Schmidt-Madsen 2022 is open access and should be read in full first.
