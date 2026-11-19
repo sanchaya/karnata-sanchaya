@@ -54,3 +54,5 @@
 .recreation-play{margin:12px 0;padding:10px 14px;gap:10px 16px}.recreation-play strong{font-size:14px}.recreation-play p{margin:2px 0 0;font-size:12px}.recreation-play-logo{width:48px;height:48px}
 .recreation-foot{margin:26px 0 0;font-size:12px;text-align:center}
 .recreation-map-box{height:min(60vh,460px)}
+.rec-mapbox{margin:10px 0 4px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:12px;background:#fff}.rec-mapbox>summary{padding:9px 14px;cursor:pointer;font-weight:700}
+.recreation-map.compact{margin:0;padding:0 12px 12px}.recreation-map.compact .recreation-map-box{height:260px}.recreation-map.compact .recreation-note{margin:0 0 8px;font-size:12px}.recreation-map.compact .recreation-map-list{margin-top:8px;padding:8px 12px}

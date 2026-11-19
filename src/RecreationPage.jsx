@@ -32,14 +32,14 @@ const FESTIVAL_ERAS=cultural.filter(item=>['celebration','religious-tradition'].
 const MODERN_ERAS=cultural.filter(item=>['culture-colonial-bengaluru-sports','culture-modern-karnataka-indigenous-games'].includes(item.id))
 
 const KIND_COLOR={study:'#4361ee',fair:'#a43f67',craft:'#b9801a',club:'#28785b'}
-function GamesMap({t,locale}){
+function GamesMap({t,locale,compact=false}){
   const [districts,setDistricts]=useState(null),[pick,setPick]=useState('')
   useEffect(()=>{let live=true;loadDistricts().then(data=>{if(live)setDistricts(data)});return()=>{live=false}},[])
   const byDistrict=new Map(gamePlaces.map(place=>[place.district,place]))
   const chosen=byDistrict.get(pick)
   const style=feature=>{const has=byDistrict.has(feature.properties.district);return {color:has?'#3f37c9':'#9aa0b4',weight:feature.properties.district===pick?3:1,fillColor:has?'#4361ee':'#e8eaf2',fillOpacity:has?.35:.15}}
   const onEach=(feature,layer)=>{const name=feature.properties.districtName?.[locale]||feature.properties.district;layer.bindTooltip(name);layer.on('click',()=>byDistrict.has(feature.properties.district)&&setPick(feature.properties.district))}
-  return <section className="recreation-map"><h2>{t.mapTitle}</h2><p className="recreation-note">{t.mapNote}</p>
+  return <section className={`recreation-map${compact?' compact':''}`}>{compact?null:<h2>{t.mapTitle}</h2>}<p className="recreation-note">{t.mapNote}</p>
     <div className="recreation-map-box"><MapContainer bounds={[[11.5,74],[18.5,78.6]]} scrollWheelZoom={false} zoomSnap={0.25} style={{height:'100%',width:'100%'}}><TileLayer attribution="&copy; OpenStreetMap contributors" url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>{districts&&<GeoJSON key={pick} data={districts} style={style} onEachFeature={onEach}/>}</MapContainer></div>
     <div className="recreation-map-list" aria-live="polite">{chosen?<><h3>{(districts?.features.find(f=>f.properties.district===pick)?.properties.districtName?.[locale])||pick}</h3><ul>{chosen.items.map(item=><li key={item.title}><i style={{background:KIND_COLOR[item.kind]}}/>{item.title}<small> · {item.src}</small></li>)}</ul></>:<p>{t.pick}</p>}</div></section>
 }
@@ -95,6 +95,7 @@ export default function RecreationPage({locale='kn'}){
     <nav className="recreation-tabs" role="tablist" aria-label={t.title}>{Object.entries(t.tabs).map(([key,label])=><button key={key} type="button" role="tab" aria-selected={tab===key} className={tab===key?'active':''} onClick={()=>go(key)}>{label}{counts[key]!==undefined&&<b>{counts[key]}</b>}</button>)}</nav>
     {tabGroups[tab]&&<>
       {tab==='games'&&<PlayBanner t={t}/>}
+      {tab==='games'&&<details className="rec-mapbox" open><summary>{t.mapTitle}</summary><GamesMap t={t} locale={locale} compact/></details>}
       <Toolbar t={t} query={query} setQuery={setQuery} status={status} setStatus={setStatus} kinds={tab==='games'?gameKinds:null} kind={kind} setKind={setKind} shown={list.length} total={pool.length}/>
       {list.length?<div className="rec-list">{list.map(game=><Row key={game.id} game={game} t={t} locale={locale}/>)}</div>:<p className="recreation-note">{t.none}</p>}
       <EraRecords t={t} locale={locale} eras={eras}/>
