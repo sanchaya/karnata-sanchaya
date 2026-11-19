@@ -193,3 +193,7 @@ Switching Kannada/English changes text widths. `page-consistency.css` clips hori
 ## Press coverage
 
 The About page lists news coverage of the atlas ("In the media") from `src/data/press-coverage.js`: headline, outlet, date and link only. Add new items at the top of that file.
+
+## Marking new pages and features as new
+
+Every new page or reader-facing feature gets an entry at the top of `WHATS_NEW` in `src/whats-new.js` in the same change (`view` is the page hash, `date` the day it shipped). A first-time visitor has an empty seen-list, so every entry shows as new: the "What's new" count in the header and a dot on that page's menu item. An entry stops counting once the reader opens its page (or the `param` the entry names) or taps it. `test/species.test.js` checks the entries are well formed; it cannot tell that you forgot one, so check the list when you add a page.

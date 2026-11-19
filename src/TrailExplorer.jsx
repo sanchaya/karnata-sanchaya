@@ -122,7 +122,7 @@ export default function TrailExplorer({locale='kn'}){
     const record=recordByCollection.get(stop.kind)?.get(stop.recordId)
     const step=stopIndex+1
     return <main className="portal-page trail-page" id="trails">
-      <section className="about-hero"><p className="eyebrow">{t.trailList}</p><h2>{text(selected.title,locale)}</h2><p className="entity-secondary">{selected.title[locale==='kn'?'en':'kn']}</p><p>{text(selected.summary,locale)}</p></section>
+      <section className="about-hero explore-hero"><div><p className="eyebrow">{t.trailList}</p><h2>{text(selected.title,locale)}</h2><p className="entity-secondary">{selected.title[locale==='kn'?'en':'kn']}</p><p>{text(selected.summary,locale)}</p></div></section>
       <button className="trail-back" onClick={()=>setSelectedId(null)}>← {t.back}</button>
       <nav className="trail-progress" aria-label={locale==='kn'?'ಪ್ರಗತಿ':'Progress'}>
         {selected.stops.map((item,step)=>(
@@ -145,7 +145,7 @@ export default function TrailExplorer({locale='kn'}){
     </main>
   }
   return <main className="portal-page trail-page" id="trails">
-    <section className="about-hero"><p className="eyebrow">{t.trailList}</p><h2>{locale==='kn'?'ಕಥೆಯ ರೂಪದಲ್ಲಿ ಕರ್ನಾಟಕ':'Karnataka as story'}</h2><p>{t.trailIntro}</p></section>
+    <section className="about-hero explore-hero"><div><p className="eyebrow">{t.trailList}</p><h2>{locale==='kn'?'ಕಥೆಯ ರೂಪದಲ್ಲಿ ಕರ್ನಾಟಕ':'Karnataka as story'}</h2><p>{t.trailIntro}</p></div></section>
     <section className="trail-directory-tools" aria-label={t.search}>
       <label htmlFor="trail-search">{t.search}</label>
       <div><input id="trail-search" type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.searchPlaceholder}/><span>{t.trailCount}</span></div>

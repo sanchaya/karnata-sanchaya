@@ -19,6 +19,7 @@ export default function AdminVisitors({locale}){
     <div><p className="eyebrow">{kn?'ಭೇಟಿ ಅಂಕಿಅಂಶ (ಅನಾಮಧೇಯ)':'Visitor statistics (anonymous)'}</p>
       <dl><div><dt>{kn?'ಈಗ ಇರುವವರು':'Live now'}</dt><dd>{fmt(data.live.visitors)}</dd></div><div><dt>{kn?'ಇಂದಿನ ಭೇಟಿದಾರರು':'Visitors today'}</dt><dd>{fmt(today.visitors)}</dd></div><div><dt>{kn?'ಒಟ್ಟು ಭೇಟಿದಾರರು':'Total visitors'}</dt><dd>{fmt(data.total.visitors)}</dd></div><div><dt>{kn?'ಒಟ್ಟು ಪುಟ ವೀಕ್ಷಣೆ':'Total page views'}</dt><dd>{fmt(data.total.views)}</dd></div></dl>
       {top.length>0&&<p className="admin-visitors-live">{kn?'ಈಗ ನೋಡುತ್ತಿರುವ ಪುಟಗಳು':'Live on'}: {top.map(([view,n])=>`${view} (${n})`).join(' · ')}</p>}</div>
+    {data.outbound?.length>0&&<p className="admin-visitors-live">{kn?'ಪಾಲುದಾರ ತಾಣಗಳಿಗೆ ಕ್ಲಿಕ್ಗಳು (೧೪ ದಿನ)':'Clicks to partner sites (14 days)'}: {data.outbound.map(item=>`${item.target} (${item.clicks})`).join(' · ')}</p>}
     <table><thead><tr><th>{kn?'ದಿನ (UTC)':'Day (UTC)'}</th><th>{kn?'ಭೇಟಿದಾರರು':'Visitors'}</th><th>{kn?'ಭೇಟಿಗಳು':'Visits'}</th><th>{kn?'ವೀಕ್ಷಣೆ':'Views'}</th></tr></thead><tbody>{data.daily.map(row=><tr key={row.day}><td>{row.day}</td><td>{fmt(row.visitors)}</td><td>{fmt(row.sessions)}</td><td>{fmt(row.views)}</td></tr>)}</tbody></table>
     <small>{kn?'ಕುಕಿ, ಐಪಿ ವಿಳಾಸ ಅಥವಾ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಇಲ್ಲ. “ಈಗ ಇರುವವರು” = ಕಳೆದ 2 ನಿಮಿಷಗಳಲ್ಲಿ ಸಕ್ರಿಯ.':'No cookies, IP addresses or personal data. “Live now” = active in the last 2 minutes.'}</small>
   </section>

@@ -30,7 +30,7 @@ export default function KarnatakaHistoryPage({ locale = 'kn' }) {
   const [tab, setTab] = useState('name')
   const attestations = [...NAME_ATTESTATIONS].sort((a, b) => (a.from ?? -1) - (b.from ?? -1))
   return <main className="portal-page karnataka-history-page" id="karnataka-history">
-    <section className="script-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
+    <section className="script-hero explore-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
     <div className="who-tabs" role="tablist">{Object.entries(t.tabs).map(([key, text]) => <button key={key} type="button" role="tab" id={`kh-tab-${key}`} aria-selected={tab === key} aria-controls={`kh-panel-${key}`} className={tab === key ? 'active' : ''} onClick={() => setTab(key)}>{text}</button>)}</div>
 
     <section role="tabpanel" id="kh-panel-name" aria-labelledby="kh-tab-name" hidden={tab !== 'name'}>

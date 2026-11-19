@@ -14,7 +14,7 @@ import { emailDeliveryConfigured, sendPasswordResetEmail } from './mailer.js'
 import { notificationSettingsSummary, saveNotificationSettings, sendPortalNotifications } from './notifications.js'
 import { PUBLIC_DATA_ATTRIBUTION } from '../src/data/public-attribution.js'
 import { speciesCommunity } from './species-community.js'
-import { isBot, LiveSessions, parsePing, visitorHash } from './visits.js'
+import { isBot, LiveSessions, parseOutbound, parsePing, visitorHash } from './visits.js'
 import { buildIndex, createLimiter, effectiveMode as effectiveBerundaMode, loadSettings as loadBerundaSettings, retrievalAnswer, runBerunda, saveSettings as saveBerundaSettings, validateAsk } from './berunda.js'
 
 config.assertProductionSecrets()
@@ -372,12 +372,18 @@ app.post('/api/visits/ping',rateLimit('visit-ping',240,60*1000),async(req,res)=>
   }catch{/* counting must never break the page */}
   res.status(204).end()
 })
+app.post('/api/visits/outbound',rateLimit('visit-outbound',60,60*1000),async(req,res)=>{
+  const click=parseOutbound(req.body);if(!click||isBot(req.get('user-agent')))return res.status(204).end()
+  try{await pool.query('INSERT INTO outbound_clicks (day,target,source_view,clicks) VALUES (UTC_DATE(),?,?,1) ON DUPLICATE KEY UPDATE clicks=clicks+1',[click.target,click.view])}catch{/* counting must never break the page */}
+  res.status(204).end()
+})
 app.get('/api/administration/visitors',requireUser,requireApproved,requireRole('administrator'),async(req,res)=>{
   const days=Math.min(90,Math.max(1,Number(req.query.days)||30))
   const total=(await pool.query('SELECT COUNT(*) visitors,COALESCE(SUM(sessions),0) sessions,COALESCE(SUM(views),0) views FROM site_visitors'))[0]||{}
   const daily=await pool.query('SELECT day,COUNT(*) visitors,SUM(sessions) sessions,SUM(views) views FROM site_visitor_days WHERE day>=DATE_SUB(UTC_DATE(),INTERVAL ? DAY) GROUP BY day ORDER BY day DESC',[days-1])
   const rows=daily.map(row=>({day:String(row.day instanceof Date?row.day.toISOString():row.day).slice(0,10),visitors:Number(row.visitors),sessions:Number(row.sessions),views:Number(row.views)}))
-  res.set('Cache-Control','no-store').json({live:liveVisits.snapshot(),total:{visitors:Number(total.visitors||0),sessions:Number(total.sessions||0),views:Number(total.views||0)},daily:rows,note:'Days are UTC. "Live" counts sessions with a heartbeat in the last 2 minutes on this server process.'})
+  const outbound=await pool.query('SELECT target,SUM(clicks) clicks,COUNT(DISTINCT day) days FROM outbound_clicks WHERE day>=DATE_SUB(UTC_DATE(),INTERVAL ? DAY) GROUP BY target',[days-1]).then(rows=>rows.map(row=>({target:row.target,clicks:Number(row.clicks),days:Number(row.days)}))).catch(()=>[])
+  res.set('Cache-Control','no-store').json({outbound,live:liveVisits.snapshot(),total:{visitors:Number(total.visitors||0),sessions:Number(total.sessions||0),views:Number(total.views||0)},daily:rows,note:'Days are UTC. "Live" counts sessions with a heartbeat in the last 2 minutes on this server process.'})
 })
 app.get('/api/species/community',rateLimit('species-community',120,60*60*1000),async(req,res)=>{const rows=await pool.query(`SELECT c.target_record_id,c.proposed_record_json,c.decided_at,u.id user_id,u.display_name,u.display_name_kn FROM contributions c JOIN users u ON u.id=c.contributor_id WHERE c.record_type='species' AND c.status='approved' AND u.account_status='approved' ORDER BY c.decided_at ASC LIMIT 5000`);res.set('Cache-Control','public, max-age=60');res.json(speciesCommunity(rows))})
 app.get('/api/community/leaderboard',async(req,res)=>{const rows=await pool.query(`SELECT u.id,u.display_name,u.display_name_kn,u.profession,u.institution_name,u.verified_badge,COALESCE(SUM(k.points),0) karma FROM users u LEFT JOIN karma_ledger k ON k.user_id=u.id WHERE u.account_status='approved' GROUP BY u.id ORDER BY karma DESC,u.display_name ASC LIMIT 100`);res.json({people:rows.map(row=>({...row,verified_badge:Boolean(row.verified_badge),karma:Number(row.karma)}))})})

@@ -100,7 +100,7 @@ export default function WhoRuledPage({ locale = 'kn' }) {
   ], [places, districts, locale])
 
   return <main className="portal-page who-ruled-page" id="who-ruled">
-    <section className="script-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
+    <section className="script-hero explore-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
     <div className="who-tabs" role="tablist">{[['place', t.tabPlace], ['timeline', t.tabTimeline]].map(([key, label]) => <button key={key} type="button" role="tab" id={`who-tab-${key}`} aria-selected={tab === key} aria-controls={`who-panel-${key}`} className={tab === key ? 'active' : ''} onClick={() => setTab(key)}>{label}</button>)}</div>
     <section role="tabpanel" id="who-panel-place" aria-labelledby="who-tab-place" hidden={tab !== 'place'}>
     <div className="who-controls">

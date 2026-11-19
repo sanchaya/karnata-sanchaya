@@ -28,3 +28,13 @@ export class LiveSessions{
     return {sessions:live.length,visitors:new Set(live.map(entry=>entry.visitor)).size,byView}
   }
 }
+
+// Partner links we count clicks on. Add a partner here before its link can be counted.
+export const OUTBOUND_TARGETS=['tollugatti']
+// Returns {target,view} for a valid outbound-click body, else null.
+export function parseOutbound(body){
+  if(!body||typeof body!=='object')return null
+  const {target,view}=body
+  if(!OUTBOUND_TARGETS.includes(target)||!VIEW.test(view||''))return null
+  return {target,view}
+}

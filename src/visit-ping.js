@@ -12,3 +12,9 @@ export function sendPing(view,kind){
   if(!v||!s)return
   fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/visits/ping`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({v,s,view:String(view||'atlas').replace(/[^a-z0-9-]/gi,'').slice(0,40)||'atlas',kind}),keepalive:true}).catch(()=>{})
 }
+
+// Counts a click on a partner link (server/visits.js OUTBOUND_TARGETS). Counts only: no visitor id is sent.
+export function sendOutbound(target,view){
+  if(!trackingAllowed())return
+  fetch(`${import.meta.env.VITE_COMMUNITY_API_URL||''}/api/visits/outbound`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({target,view:String(view||'recreation').replace(/[^a-z0-9-]/gi,'').slice(0,40)||'recreation'}),keepalive:true}).catch(()=>{})
+}

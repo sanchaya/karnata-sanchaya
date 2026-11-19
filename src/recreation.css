@@ -29,3 +29,4 @@
 .recreation-cat{margin:0 0 10px;padding:10px 14px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:12px;background:#fff}.recreation-cat summary{cursor:pointer;font-weight:700}.recreation-cat h3{margin:12px 0 4px;font-size:13px;color:var(--sanchaya-muted,#4a4a68)}
 .recreation-chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.recreation-chips span{padding:3px 10px;border:1px solid #c8d0ff;border-radius:999px;background:var(--sanchaya-hover,rgba(67,97,238,.08));font-size:12px}
 .recreation-eras small{display:block;margin-top:4px;color:var(--sanchaya-muted,#4a4a68)}
+.recreation-play{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:18px 0;padding:16px 18px;border:1px solid #e3c36a;border-radius:14px;background:#fff8e1}.recreation-play h2{margin:0 0 4px;font-size:17px}.recreation-play p{margin:0 0 4px;max-width:70ch;font-size:13px}.recreation-play small{color:var(--sanchaya-muted,#4a4a68)}

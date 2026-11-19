@@ -41,8 +41,8 @@ export default function PressExplorer({locale}){
   const decades=Object.keys(stats.byDecade).map(Number).sort((a,b)=>a-b)
   const pickYear=(setter,v)=>setter(Number(v))
   return <main className="portal-page press-page" id="press">
-    <section className="press-hero"><p className="eyebrow">{kn?'ಪತ್ರಿಕಾ ಸಂಚಯ':'Patrika Sanchaya'}</p><h2>{kn?'ಪತ್ರಿಕೆಗಳು ಮತ್ತು ನಿಯತಕಾಲಿಕೆಗಳು':'Newspapers and magazines'}</h2>
-      <p>{kn?'ಕನ್ನಡ ಪತ್ರಿಕೆಗಳು ಎಲ್ಲಿ ಪ್ರಕಟವಾದವು, ಯಾರು ಸಂಪಾದಿಸಿದರು ಮತ್ತು ಪ್ರಕಟಿಸಿದರು. ಸ್ಥಳಗಳು ಪ್ರಕಟಣಾ ಊರಿನ ಅಂದಾಜು ಗುರುತುಗಳು (ಪರಿಶೀಲನೆ ಬಾಕಿ).':'Where Kannada newspapers and magazines were published, and who edited and published them. Places are approximate anchors for the town or district of publication (needs review).'}</p>
+    <section className="press-hero explore-hero"><div><p className="eyebrow">{kn?'ಪತ್ರಿಕಾ ಸಂಚಯ':'Patrika Sanchaya'}</p><h2>{kn?'ಪತ್ರಿಕೆಗಳು ಮತ್ತು ನಿಯತಕಾಲಿಕೆಗಳು':'Newspapers and magazines'}</h2>
+      <p>{kn?'ಕನ್ನಡ ಪತ್ರಿಕೆಗಳು ಎಲ್ಲಿ ಪ್ರಕಟವಾದವು, ಯಾರು ಸಂಪಾದಿಸಿದರು ಮತ್ತು ಪ್ರಕಟಿಸಿದರು. ಸ್ಥಳಗಳು ಪ್ರಕಟಣಾ ಊರಿನ ಅಂದಾಜು ಗುರುತುಗಳು (ಪರಿಶೀಲನೆ ಬಾಕಿ).':'Where Kannada newspapers and magazines were published, and who edited and published them. Places are approximate anchors for the town or district of publication (needs review).'}</p></div>
       <div className="press-stats"><span><b>{inRange.length}</b>{kn?'ಪತ್ರಿಕೆಗಳು':'titles'}</span><span><b>{groups.length}</b>{kn?'ಪ್ರಕಟಣಾ ಸ್ಥಳಗಳು':'places'}</span><span><b>{stats.editors.woman}</b>{kn?'ಮಹಿಳಾ ಸಂಪಾದಕರು (ಅಂದಾಜು)':'women editors (inferred)'}</span><span><b>{stats.publishers.woman}</b>{kn?'ಮಹಿಳಾ ಪ್ರಕಾಶಕರು (ಅಂದಾಜು)':'women publishers (inferred)'}</span></div></section>
     <section className="press-filters"><label>{kn?'ವರ್ಷ':'From'} <input type="number" min={MIN} max={to} value={from} onChange={e=>pickYear(setFrom,e.target.value)}/></label><label>{kn?'ವರೆಗೆ':'to'} <input type="number" min={from} max={MAX} value={to} onChange={e=>pickYear(setTo,e.target.value)}/></label>
       <input type="range" min={MIN} max={MAX} value={to} onChange={e=>setTo(Math.max(from,Number(e.target.value)))} aria-label={kn?'ವರ್ಷದ ಮಿತಿ':'Last year'}/>

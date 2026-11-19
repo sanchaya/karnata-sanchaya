@@ -148,7 +148,7 @@ export default function DynastyMapPage({ locale = 'kn' }) {
   }, [render])
   const copyLink = useCallback(async () => { try { await navigator.clipboard.writeText(`https://${URL_TEXT}`); say(t.copied) } catch { say(t.failed) } }, [t])
   return <main className="portal-page dynasty-map-page" id="dynasty-map">
-    <section className="script-hero"><div><p className="eyebrow">{t.project}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
+    <section className="script-hero explore-hero"><div><p className="eyebrow">{t.project}</p><h2>{t.title}</h2><p>{t.intro}</p></div></section>
     <div className="dyn-tabs" role="tablist">{Object.entries(u.tabs).map(([key, label]) => <button key={key} type="button" role="tab" id={`dyn-tab-${key}`} aria-selected={tab === key} aria-controls={`dyn-panel-${key}`} className={tab === key ? 'active' : ''} onClick={() => setTab(key)}>{label}</button>)}</div>
 
     <section className="dyn-panel" role="tabpanel" id="dyn-panel-map" aria-labelledby="dyn-tab-map" hidden={tab !== 'map'}>

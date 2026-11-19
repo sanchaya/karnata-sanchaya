@@ -36,3 +36,7 @@ DELETE FROM site_visitor_days WHERE day < DATE_SUB(UTC_DATE(), INTERVAL 400 DAY)
 
 Add one sentence to the public privacy text before turning this on in production: the portal counts anonymous visits
 (a random browser id, hashed on the server) to understand usage, and honours Do Not Track.
+
+## Clicks to partner sites
+
+Pages that link to a partner's site (the Recreation page links to TolluGatti, a Mysuru platform that recreates these games online) count each click with `sendOutbound` (`src/visit-ping.js`). The server (`POST /api/visits/outbound`, table `outbound_clicks`, migration 017) stores only the day, the partner and the page the link was on: no visitor id, no IP address, no user agent. It is off on the static edition and when the browser sends Do Not Track or Global Privacy Control, and bots are ignored. The administrator visitor panel shows the 14-day total per partner. Only partners listed in `OUTBOUND_TARGETS` (`server/visits.js`) can be counted. The outbound link also carries `utm_source=karnata.sanchaya.net`, so the partner can see arrivals from us in their own analytics. Counts are clicks on our link, not visits to their site. Run `npm run db:migrate` after deploying.

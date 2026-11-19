@@ -1,6 +1,18 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'play-tollugatti',view:'recreation',href:'#recreation',date:'2026-11-19',
+    kn:['ಹಳೆಯ ಆಟಗಳನ್ನು ಆನ್‌ಲೈನ್ ಆಡಿ','ಅಳಿಗುಳಿಮನೆ, ಆಡು-ಹುಲಿ, ಚೌಕಾಬಾರ ಮುಂತಾದ ಆಟಗಳನ್ನು ಮೈಸೂರಿನ ತೊಲ್ಲುಗಟ್ಟಿಯಲ್ಲಿ ಆಡಬಹುದು.'],
+    en:['Play the old games online','Ali Guli Mane, Aadu Huli, Chowka Bara and more can be played at TolluGatti, a Mysuru venture.']},
+  {id:'recreation-page',view:'recreation',href:'#recreation',date:'2026-11-19',
+    kn:['ಹಳೆಯ ಆಟ ಮತ್ತು ವಿನೋದ (ಹೊಸ ಪುಟ)','ಕರ್ನಾಟಕದ ಹಳೆಯ ಆಟ, ಜಾತ್ರೆ-ಹಬ್ಬ ಮತ್ತು ವಿನೋದ; ಜಿಲ್ಲಾ ನಕ್ಷೆ ಮತ್ತು ಪ್ರತಿ ಸಾಲಿನ ಆಕರದ ಸ್ಥಿತಿಯೊಂದಿಗೆ.'],
+    en:['Old games and recreation (new page)','Karnataka’s old games, fairs, festivals and leisure, with a district map and the source status of every row.']},
+  {id:'embed-games',view:'aata-paata',href:'#aata-paata',date:'2026-11-19',
+    kn:['ಆಟಗಳನ್ನು ನಿಮ್ಮ ತಾಣದಲ್ಲಿ ಸೇರಿಸಿ','ಆಟ–ಪಾಠ ಪುಟದ ಮೇಲ್ಭಾಗದಲ್ಲಿ ಯಾವುದೇ ಆಟದ ಸೇರಿಸುವ ಕೋಡ್ ನಕಲಿಸಿ, ಮುನ್ನೋಟ ನೋಡಿ.'],
+    en:['Embed the games on your site','On the Aata–Paata page, copy the embed code for any game and preview it.']},
+  {id:'oral-testimony',view:'contribute',href:'#contribute',date:'2026-11-19',
+    kn:['ಮೌಖಿಕ ಮಾಹಿತಿಯನ್ನೂ ಆಕರವಾಗಿ ಸೇರಿಸಿ','ಹಳ್ಳಿಯ ಆಟ, ಆಚರಣೆ ಹೇಳಿದವರ ಒಪ್ಪಿಗೆ ಮತ್ತು ವಯಸ್ಸಿನೊಂದಿಗೆ ಕೊಡುಗೆಯಾಗಿ ಸೇರಿಸಬಹುದು.'],
+    en:['Add oral testimony as a source','Record a village game or custom as a contribution, with the teller’s consent and age.']},
   {id:'licenses',view:'licenses',href:'#licenses',date:'2026-11-14',
     kn:['ಪರವಾನಗಿ ಮತ್ತು ದತ್ತಾಂಶ ಮೂಲಗಳ ಪುಟ','ಪ್ರತಿ ರೀತಿಯ ದತ್ತಾಂಶ ಎಲ್ಲಿಂದ ಬಂತು, ಯಾವ ಪರವಾನಗಿ ಮತ್ತು ವಾಣಿಜ್ಯ ಬಳಕೆ ಸಾಧ್ಯವೇ ಎಂದು ನೋಡಿ.'],
     en:['Licences and data sources page','See where each kind of data came from, its licence, and whether commercial use is allowed.']},
