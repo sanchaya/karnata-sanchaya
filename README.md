@@ -100,6 +100,7 @@ edits do not appear on GitHub Pages until this approved export occurs.
 - Instagram support campaign (plan, captions, creatives): [instagram campaign](docs/instagram-campaign.md)
 - [Embedding the games on other portals](docs/embedding-games.md)
 - [Games played in Karnataka (working list)](docs/games-of-karnataka.md)
+- [Food culture of Karnataka (working list and page)](docs/food-culture.md)
 - Search engine indexing, prerendered pages and sitemap: [SEO](docs/seo.md)
 - Birds, animals, plants and crowdsourced Kannada names: [species](docs/species.md)
 - Contributor and reviewer use: [user guide](docs/user-guide.md)

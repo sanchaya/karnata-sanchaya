@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'food-culture',view:'food',href:'#food',date:'2026-11-19',
+    kn:['ಆಹಾರ ಸಂಸ್ಕೃತಿ (ಹೊಸ ಪುಟ)','ಕಲ್ಯಾಣದ ೧೨ನೇ ಶತಮಾನದ ಅಡುಗೆ ಪಾಠದಿಂದ ರಾಗಿ ಮುದ್ದೆ, ಹಬ್ಬದ ಊಟ, ಕಾಡಿನ ಆಹಾರದವರೆಗೆ.'],
+    en:['Food culture (new page)','From a twelfth-century cookery text at Kalyani to ragi mudde, festival meals and forest foods.']},
   {id:'play-tollugatti',view:'recreation',href:'#recreation',date:'2026-11-19',
     kn:['ಹಳೆಯ ಆಟಗಳನ್ನು ಆನ್‌ಲೈನ್ ಆಡಿ','ಅಳಿಗುಳಿಮನೆ, ಆಡು-ಹುಲಿ, ಚೌಕಾಬಾರ ಮುಂತಾದ ಆಟಗಳನ್ನು ಮೈಸೂರಿನ ಟೊಳ್ಳುಗಟ್ಟಿಯಲ್ಲಿ ಆಡಬಹುದು.'],
     en:['Play the old games online','Ali Guli Mane, Aadu Huli, Chowka Bara and more can be played at TolluGatti, a Mysuru venture.']},

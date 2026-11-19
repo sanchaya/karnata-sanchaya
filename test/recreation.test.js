@@ -23,3 +23,15 @@ test('outbound partner clicks are counted anonymously and only for listed partne
   const migration=await readFile(new URL('../server/migrations/017_outbound_clicks.sql',import.meta.url),'utf8')
   assert.ok(!/visitor_hash/.test(migration),'outbound counts keep no visitor id')
 })
+
+test('food culture entries are well formed and never claim a source that was not read',async()=>{
+  const { foodEntries, foodPlaces, FOOD_KINDS }=await import('../src/data/food-culture.js')
+  assert.equal(new Set(foodEntries.map(e=>e.id)).size,foodEntries.length)
+  for(const e of foodEntries){
+    assert.ok(e.name.en&&e.name.kn&&e.note.en&&e.note.kn,`${e.id} needs both languages`)
+    assert.ok(FOOD_KINDS.includes(e.kind),e.id)
+    if(e.status==='read')assert.ok(e.evidence.some(x=>x.status==='read'),`${e.id} is marked read but cites nothing read`)
+    assert.ok(!/OCR/.test(JSON.stringify(e)),`${e.id} must not mention OCR to readers`)
+  }
+  assert.ok(foodPlaces.every(p=>p.items.length))
+})

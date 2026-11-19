@@ -8,7 +8,7 @@ import { oldGames, bookFacts, bedaNames, gamePlaces } from './data/old-games'
 import { folkCatalogueNames } from './data/folk-game-catalogues.generated'
 import './recreation.css'
 
-const copy={
+export const copy={
   kn:{eyebrow:'ಅನ್ವೇಷಣೆ · ಆಟ ಮತ್ತು ವಿನೋದ',title:'ಕರ್ನಾಟಕದ ಹಳೆಯ ಆಟಗಳು ಮತ್ತು ವಿನೋದ',intro:'ಆಸ್ಥಾನದ ಚದುರಂಗದಿಂದ ಹಳ್ಳಿಯ ಚಿನ್ನಿದಾಂಡುವರೆಗೆ, ಜಾತ್ರೆಯ ಸ್ಪರ್ಧೆಗಳಿಂದ ಇಂದಿನ ಮೈದಾನದವರೆಗೆ. ಇಲ್ಲಿರುವುದು ಸಂಶೋಧನೆಯ ಆರಂಭದ ಪಟ್ಟಿ: ಪ್ರತಿ ಸಾಲಿನಲ್ಲಿ ಆಕರವನ್ನು ಓದಲಾಗಿದೆಯೇ ಇಲ್ಲವೇ ಎಂದು ತೋರಿಸಿದ್ದೇವೆ.',
     tabs:{games:'ಆಟಗಳು',festivals:'ಜಾತ್ರೆ, ಹಬ್ಬ',modern:'ಇಂದಿನ ಮತ್ತು ಕ್ಲಬ್',map:'ನಕ್ಷೆ',names:'ಹೆಸರುಗಳು',books:'ಪುಸ್ತಕಗಳಿಂದ'},search:'ಹುಡುಕಿ: ಆಟದ ಹೆಸರು, ಊರು…',allChip:'ಎಲ್ಲಾ',showing:'ತೋರಿಸಲಾಗಿದೆ',of:'/',none:'ಯಾವುದೂ ಸಿಗಲಿಲ್ಲ',more:'ವಿವರ',factKinds:{people:'ವ್ಯಕ್ತಿಗಳು',heritage:'ಪರಂಪರೆ',history:'ಇತಿಹಾಸ',culture:'ಸಂಸ್ಕೃತಿ'},mapTitle:'ದಾಖಲಾದ ಸ್ಥಳಗಳು',mapNote:'ಬಣ್ಣದ ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಒಂದು ಅಧ್ಯಯನ, ಜಾತ್ರೆ ಅಥವಾ ಸಂಗ್ರಹ ದಾಖಲಾಗಿದೆ. ಆ ಆಟ ಅಲ್ಲಿ ಮಾತ್ರ ಇತ್ತು ಎಂದಲ್ಲ.',pick:'ಒಂದು ಜಿಲ್ಲೆ ಆರಿಸಿ',catTitle:'ಜಿಲ್ಲಾ ಅಧ್ಯಯನಗಳಲ್ಲಿ ದಾಖಲಾದ ಆಟಗಳ ಹೆಸರುಗಳು',catNote:'ಅಧ್ಯಯನಗಳಲ್ಲಿ ಮುದ್ರಿತ ಹೆಸರುಗಳು; ಕೆಲವು ಕಾಗುಣಿತಗಳಲ್ಲಿ ತಪ್ಪುಗಳಿರಬಹುದು.',factsTitle:'ಪುಸ್ತಕಗಳಲ್ಲಿ ಹೆಸರಿಸಿದ ವ್ಯಕ್ತಿ, ಪರಂಪರೆ, ಇತಿಹಾಸ',groups:{'strength-outdoor':'ಹೊರಾಂಗಣ, ದೈಹಿಕ ಸಾಮರ್ಥ್ಯ','mind-indoor':'ಒಳಾಂಗಣ, ಬುದ್ಧಿ ಮತ್ತು ಸೂಕ್ಷ್ಮತೆ','festival-tradition':'ಹಬ್ಬ-ಹರಿದಿನ, ಸಂಪ್ರದಾಯ','animal-bird':'ಪ್ರಾಣಿ-ಪಕ್ಷಿ','fun-contests':'ಮೋಜಿನ ಸ್ಪರ್ಧೆಗಳು'},studies:{chitradurga:'ಚಿತ್ರದುರ್ಗ ಜಿಲ್ಲೆ (೨೦೧೭)',bidar:'ಬೀದರ ಜಿಲ್ಲೆ (೨೦೦೬, ೨೦೦೯)',beda:'ಬಳ್ಳಾರಿ ಬೇಡ ಸಮುದಾಯ (೨೦೦೪)'},
     status:{read:'ಆಕರ ಓದಲಾಗಿದೆ',lead:'ಸುಳಿವು · ಇನ್ನೂ ದೃಢಪಟ್ಟಿಲ್ಲ',oral:'ಮೌಖಿಕ ಪರಂಪರೆ · ಸಾಕ್ಷ್ಯ ಬೇಕು'},
@@ -24,18 +24,18 @@ const copy={
     where:'Where',when:'When',source:'Source',review:'Kannada text awaits a native proofread.',
     playTitle:'Play these games',playText:'Ali Guli Mane, Aadu Huli, Chowka Bara, Navakankari and more can be played on mobile and web at TolluGatti, run by Trita Infotainment LLP in Mysuru. A small gesture of support for a local venture.',playButton:'Play on TolluGatti',helpTitle:'Do you know a game from your village?',help:'Add a game your grandparents played: its name in your village, the rules, where. We ask the person’s consent and age, and nothing appears until it is reviewed.',add:'Add a game',all:'Full working list'}
 }
-const text=(value,locale)=>value?.[locale]||value?.en||value?.kn||''
+export const text=(value,locale)=>value?.[locale]||value?.en||value?.kn||''
 const years=date=>date?`${date.precision==='circa'?'c. ':''}${date.from}${date.to&&date.to!==date.from?`–${date.to}`:''} ${date.era||'CE'}`:''
 const cultural=atlasData.culturalHeritage||[]
 const GAME_ERAS=cultural.filter(item=>item.category==='games-sports'&&!['culture-mysuru-dasara-equestrian','culture-colonial-bengaluru-sports','culture-modern-karnataka-indigenous-games'].includes(item.id))
 const FESTIVAL_ERAS=cultural.filter(item=>['celebration','religious-tradition'].includes(item.category)||item.id==='culture-mysuru-dasara-equestrian')
 const MODERN_ERAS=cultural.filter(item=>['culture-colonial-bengaluru-sports','culture-modern-karnataka-indigenous-games'].includes(item.id))
 
-const KIND_COLOR={study:'#4361ee',fair:'#a43f67',craft:'#b9801a',club:'#28785b'}
-function GamesMap({t,locale,compact=false}){
+export const KIND_COLOR={study:'#4361ee',fair:'#a43f67',craft:'#b9801a',club:'#28785b'}
+export function GamesMap({t,locale,compact=false,places=gamePlaces}){
   const [districts,setDistricts]=useState(null),[pick,setPick]=useState('')
   useEffect(()=>{let live=true;loadDistricts().then(data=>{if(live)setDistricts(data)});return()=>{live=false}},[])
-  const byDistrict=new Map(gamePlaces.map(place=>[place.district,place]))
+  const byDistrict=new Map(places.map(place=>[place.district,place]))
   const chosen=byDistrict.get(pick)
   const style=feature=>{const has=byDistrict.has(feature.properties.district);return {color:has?'#3f37c9':'#9aa0b4',weight:feature.properties.district===pick?3:1,fillColor:has?'#4361ee':'#e8eaf2',fillOpacity:has?.35:.15}}
   const onEach=(feature,layer)=>{const name=feature.properties.districtName?.[locale]||feature.properties.district;layer.bindTooltip(name);layer.on('click',()=>byDistrict.has(feature.properties.district)&&setPick(feature.properties.district))}
@@ -56,20 +56,20 @@ function Catalogues({t}){
 const STATUSES=['read','lead','oral']
 const searchable=game=>[game.name.en,game.name.kn,game.places?.en,game.places?.kn,game.note?.en].join(' ').toLowerCase()
 
-function Row({game,t,locale}){
+export function Row({game,t,locale}){
   return <details className={`rec-row status-${game.status}`}><summary><span className="rec-name">{text(game.name,locale)}</span><span className="rec-badge">{t.status[game.status]}</span><span className="rec-place">{text(game.places,locale)}</span></summary>
     <div className="rec-body"><p>{text(game.note,locale)}</p><dl><div><dt>{t.when}</dt><dd>{text(game.period,locale)}</dd></div><div><dt>{t.where}</dt><dd>{text(game.places,locale)}</dd></div></dl>
       {game.evidence.length>0&&<><h4>{t.source}</h4><ul>{game.evidence.map(item=><li key={item.title}>{item.title}<small> · {item.locator}</small></li>)}</ul></>}</div></details>
 }
 
-function Toolbar({t,query,setQuery,status,setStatus,kinds,kind,setKind,shown,total}){
+export function Toolbar({t,query,setQuery,status,setStatus,kinds,kind,setKind,shown,total}){
   return <div className="rec-toolbar"><input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder={t.search} aria-label={t.search}/>
     <div className="rec-chips" role="group" aria-label="status">{['all',...STATUSES].map(key=><button key={key} type="button" className={status===key?'on':''} aria-pressed={status===key} onClick={()=>setStatus(key)}>{key==='all'?t.allChip:t.status[key].split('·')[0].trim()}</button>)}</div>
     {kinds&&<div className="rec-chips" role="group" aria-label="kind">{['all',...kinds].map(key=><button key={key} type="button" className={kind===key?'on':''} aria-pressed={kind===key} onClick={()=>setKind(key)}>{key==='all'?t.allChip:t.kinds[key]}</button>)}</div>}
     <span className="rec-count">{t.showing} {shown} {t.of} {total}</span></div>
 }
 
-function EraRecords({t,locale,eras}){
+export function EraRecords({t,locale,eras}){
   if(!eras.length)return null
   return <details className="rec-eras"><summary>{t.eras} · {eras.length}</summary><p className="recreation-note">{t.erasNote}</p><ul className="recreation-eras">{eras.map(item=><li key={item.id}><strong>{text(item.name,locale)}</strong><span>{years(item.date)}</span><p>{text(item.description,locale)||text(item.summary,locale)}</p></li>)}</ul></details>
 }
