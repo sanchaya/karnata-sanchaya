@@ -35,3 +35,9 @@ test('food culture entries are well formed and never claim a source that was not
   }
   assert.ok(foodPlaces.every(p=>p.items.length))
 })
+
+test('each district appears once in the map lists, so no row overwrites another',async()=>{
+  const { gamePlaces }=await import('../src/data/old-games.js')
+  const { foodPlaces }=await import('../src/data/food-culture.js')
+  for(const list of [gamePlaces,foodPlaces]){const names=list.map(p=>p.district);assert.equal(new Set(names).size,names.length,names.join(','))}
+})

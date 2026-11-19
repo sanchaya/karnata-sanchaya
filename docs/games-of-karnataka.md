@@ -132,7 +132,7 @@ Read in this pass, from the Internet Archive OCR text. Only facts, names and loc
 | Vadagaonve, Bidar folk games (2006, 2009) | Contents and headings of both versions (46 names in both) | same |
 | Gangadhar T., Beda games, Ballari (2004) | Contents and headings (35 names) | `bedaNames` |
 | Manjanna, Vijayanagara sport and recreation (2016) | Contents and introduction, plus keyword passages: board games and Devaraya II (p. 16), pagade and Pampa (p. 37), ball game (pp. 40, 47-48), wrestling and women at Mahanavami (p. 16), animal contests (p. 105), kites (p. 116), hunting festival (pp. 187-188), reliefs (p. 10), chariot festivals (pp. 145-146). Most of the 622 pages are **not** read page by page | attestations, the chendaata, kite and hunting-festival entries, five facts |
-| Mallikarjun U., garadi of Hosapete taluk (2004) | Contents, the word-origin passage and the garadi names (pp. 23, 55). Chapters 3 to 11 are **not** read | `wrestling` note |
+| Mallikarjun U., garadi of Hosapete taluk (2004) | Contents and chapter summaries, the word-origin passage, the garadi names (pp. 23, 55) and chapter 8.1, the wrestler's diet (also on the food page). Chapters 3, 4, 6, 7, 9 and 10 are **not** read | `wrestling` note, two facts, food entry |
 | Madannavar, Soraturu village, Gadag (2024); Padma, Yalandur (2009); Sure, Bidar taluk (2018); Krishnegowda, Gangamatha, Mandya (2010) | Contents and the opening of each game section, for local terms | four facts; the district map |
 | Hunting and the Beda in medieval poetry (2000) | Contents, abstract and three passages | `hunting-poetry` entry |
 | Ranganatha, Gondaliga Devendrappa's plays (2007) | Contents and cover | `sannata-devendrappa` entry |
