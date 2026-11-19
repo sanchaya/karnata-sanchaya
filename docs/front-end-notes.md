@@ -201,3 +201,7 @@ Every new page or reader-facing feature gets an entry at the top of `WHATS_NEW` 
 ## Page heroes
 
 Every Explore page, and Fonts, Species, Migration, Data wanted, Licences, Contact and Donate, carries `explore-hero` on its hero section (`src/explore-hero.css`): a full-width gradient band with the eyebrow, title and one-line purpose in one `<div>`, plus any stats beside it. The older section pages (Literature, Coins, Scripts, Nature, India research, Evidence, Research tasks, Resources) use their own hero classes that were measured to match; About keeps its richer hero with the stewards panel. New pages should use `explore-hero` and wrap the text in one `<div>`.
+
+## Experience menu
+
+Aata-Paata (games), Old games and recreation, Food culture and Trails live under a top-level **Experience** menu next to Explore, as Nature was split out before. The group is `experienceNavItems` in `src/App.jsx`, with `ACTIVITY_OF` entries of `'experience'` and an accent colour in `src/nav-activity.css`. Define any value a nav list uses before the list (`kn` is only defined further down; use `locale==='kn'`). The tests read source text and cannot catch such an error, so open the page in a browser after editing the menu.

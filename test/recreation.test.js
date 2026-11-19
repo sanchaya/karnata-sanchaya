@@ -41,3 +41,13 @@ test('each district appears once in the map lists, so no row overwrites another'
   const { foodPlaces }=await import('../src/data/food-culture.js')
   for(const list of [gamePlaces,foodPlaces]){const names=list.map(p=>p.district);assert.equal(new Set(names).size,names.length,names.join(','))}
 })
+
+test('the Experience menu holds games, recreation, food and trails, and Explore no longer lists them',async()=>{
+  const { readFile }=await import('node:fs/promises')
+  const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
+  const experience=app.match(/const experienceNavItems=(\[.*?\])\n/s)[1],explore=app.match(/const exploreNavItems=(\[.*?\])\n/s)[1]
+  for(const key of ['aata-paata','recreation','food','trails']){assert.match(experience,new RegExp(`'${key}'`),key);assert.doesNotMatch(explore,new RegExp(`'${key}'`),`${key} left Explore`)}
+  assert.match(app,/\{key:'experience',label:kn\?'ಅನುಭವ':'Experience',items:experienceNavItems\}/)
+  assert.match(app,/navGroup\('experience'/,'the mobile menu has the Experience group')
+  assert.match(app,/recreation:'experience',food:'experience'/)
+})
