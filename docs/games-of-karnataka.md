@@ -138,6 +138,11 @@ Read in this pass, from the Internet Archive OCR text. Only facts, names and loc
 | Ranganatha, Gondaliga Devendrappa's plays (2007) | Contents and cover | `sannata-devendrappa` entry |
 | Hiremath, Mylara fair; Girija, Chowdamma fair (1994) | Opening of the first, cover of the second | fairs entries |
 | Srikantayya, *Kannada Kavigalu Kanda Kreedegalu* (1989) | A few pages (the OCR is poor; re-OCR from the PDF would help) | `animal-contests` lead |
+| Chitradurga study, board-game descriptions (alugulimani, huli-mane, chowka-bara, pagade) | Rules, names and materials read for these four | notes on the four entries |
+| Garadi study, field chapter on garadis | Arena, soil, Hanuman niche and the Ramdas report | two facts |
+| Morab, *The Killekyatha* (Anthropological Survey of India, 1977) | The opening chapters on the name, the togalu gombe aata, the gazetteer counts and the study village | one fact; Bagalkote map point. Copyright restricts copying; facts only |
+| Bilimale, *Karavali Janapada* (1990) | The essay on kambula (pp. 40-44) and its word-origin discussion | `kambala` entry and fact. The other essays (Siddhavesha, Uragalu, Jogigalu, Myalaru) are not read |
+| S. C. Patil, *Janapada Chitrakale* (1995) | The togalu gombe section | one fact |
 | Children's encyclopedia vol. 6 (1973), Bairapura study, about 20 folk-art titles (Yakshagana costume, Sannata texts, folk sculpture, the Killekyatha artists and others) | Not read | Next pass |
 
 `scripts/extract-folk-game-catalogues.py` regenerates the catalogue JSON and JS module from the OCR text. Item numbers are the studies' own numbers; four Chitradurga outdoor numbers (39, 44, 49, 59) are missing where the OCR dropped them, and a few names carry OCR slips. Check names against the page images before quoting them.
