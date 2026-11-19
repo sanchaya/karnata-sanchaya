@@ -10,7 +10,7 @@ Any Aata-Paata game can be shown inside another site with an iframe. Open the ga
 
 | Parameter | Values | Effect |
 |---|---|---|
-| `embed=1` | required | Shows only the game: no site header, menu, hero or footer, and a "more games" link back to the atlas. The frame is marked `noindex`. |
+| `embed=1` | required | Shows only the game: a slim Sanchaya header (logo, title, subtitle, **Contact us** link to the atlas contact page) instead of the site menu, plus a "more games" link under the game. The frame is marked `noindex`. |
 | `game` | `word`, `year`, `crossword`, `where`, `who`, `script`, `bird`, `worksheet` | Pins one game and hides the game tabs. Leave it out to let players switch between games. |
 | `lang` | `kn`, `en` | Language of the frame (default: the visitor's saved choice, else Kannada). |
 | `puzzle` | `YYYY-MM-DD` | Opens that day's puzzle from the archive. |
