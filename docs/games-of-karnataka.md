@@ -84,13 +84,13 @@ Villages: the atlas links a record to a canonical place, so each village needs a
 
 ### Field-collection template (one row per game and village)
 
-`village` · `taluk` · `district` · `game name in the village` (Kannada and Latin script) · `other names` · `how it is played` (short, in the collector's own words) · `who plays` (age group, community only if the group wants it named) · `season or festival` · `materials` · `how long it has been played here, as told` · `informant consent given (yes/no) and whether they may be named` · `collector` · `date` · `photo licence` · `published sources that mention it`.
+`village` · `taluk` · `district` · `game name in the village` (Kannada and Latin script) · `other names` · `how it is played` (short, in the collector's own words) · `who plays` (age group, community only if the group wants it named) · `season or festival` · `materials` · `how long it has been played here, as told` · `informant age` · `informant consent given (yes/no), a parent or guardian's consent if under 18, and whether they may be named` · `collector` · `date` · `photo licence` · `published sources that mention it`.
 
 ## How to turn this into the atlas
 
 1. Use section 1 first. For each row, read the source and record its title, page or abstract locator, and the fact it supports, in our own words. Schmidt-Madsen 2022 is open access and should be read in full first.
 2. Create one `culture` record per game, category `games-sports`, with bilingual names, a date range only where a source gives one, the place, tradition tags, and `review.status: needs-review`. Link it to the era-level record above it.
-3. Oral and village games have no URL source. The Community contribution form currently requires an HTTP(S) citation with a locator, so village collection needs a rule for an "oral testimony" citation (collector, date, village, consent). That rule is a decision for the owners; until it exists, collected rows stay in this document or a private collection sheet and are not published.
+3. Oral and village games have no URL source, so the contribution form has an **Oral testimony** source type (see `docs/research-intake.md`): village, date collected, collector, the informant's age and consent. Collected rows go through it and are reviewed like any other contribution.
 4. Run `npm run validate:data`, `npm test` and `npm run build` as for any data change.
 5. Add public text for an "Old games of Karnataka" page once enough rows are cited.
 

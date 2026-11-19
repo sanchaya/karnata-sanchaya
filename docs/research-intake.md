@@ -63,6 +63,10 @@ automatically publish or merge those rows. Photographs are not part of this
 contribution form yet; introduce them only with an explicit licence, consent,
 retention and moderation policy.
 
+### Oral testimony as a source
+
+Village games, customs and local names often have no printed source. In step 3 of the contribution form choose source type **oral-testimony**. Instead of a URL and page number it asks for the village, the date collected (YYYY-MM-DD), the collector's name, the age of the person who told it, and that person's consent to publication. For anyone under 18 a parent or guardian must also agree. The server accepts such a citation only on a contribution, only when consent is ticked, and stores the age and consent flags with the citation (`mayNameInformant` records whether the person may be named; if it is off, no name is written anywhere). The citation title and locator are built from the village, date and collector so reviewers and later records show who, where and when. Reviewers should treat it as testimony, not as proof of age or origin, and publish an age band, not the exact age. Evidence-task and discovery citations still require an HTTP(S) URL.
+
 ## Social update links
 
 Set only the handles that actually exist in the live/static build environment. Blank values remain hidden:

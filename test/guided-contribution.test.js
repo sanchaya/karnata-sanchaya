@@ -41,3 +41,15 @@ test('atlas detail selections hand off correction and source context',async()=>{
   assert.match(actions,/Suggest correction/)
   assert.match(actions,/Add source/)
 })
+
+test('oral testimony citations need consent, village, date, collector and the informant age, and a guardian under 18',async()=>{
+  const { readFile } = await import('node:fs/promises')
+  const server=await readFile(new URL('../server/app.js',import.meta.url),'utf8')
+  const form=await readFile(new URL('../src/GuidedContributionForm.jsx',import.meta.url),'utf8')
+  assert.match(server,/isOralCitation=item=>item\?\.sourceType==='oral-testimony'&&item\.consent===true/)
+  assert.match(server,/normalizeCitationList\(body\.citations,20,true\)/)
+  assert.match(server,/informantAge<18&&!item\.guardianConsent/)
+  assert.doesNotMatch(server.match(/const citations=normalizeCitationList\(req\.body\?\.citations,50\)/)?.[0]||'',/,true\)/)
+  assert.match(form,/oral-testimony/)
+  assert.match(form,/guardianConsent/)
+})
