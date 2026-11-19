@@ -143,7 +143,9 @@ Read in this pass, from the Internet Archive OCR text. Only facts, names and loc
 | Morab, *The Killekyatha* (Anthropological Survey of India, 1977) | The opening chapters on the name, the togalu gombe aata, the gazetteer counts and the study village | one fact; Bagalkote map point. Copyright restricts copying; facts only |
 | Bilimale, *Karavali Janapada* (1990) | The essay on kambula (pp. 40-44) and its word-origin discussion | `kambala` entry and fact. The other essays (Siddhavesha, Uragalu, Jogigalu, Myalaru) are not read |
 | S. C. Patil, *Janapada Chitrakale* (1995) | The togalu gombe section | one fact |
-| Children's encyclopedia vol. 6 (1973), Bairapura study, about 20 folk-art titles (Yakshagana costume, Sannata texts, folk sculpture, the Killekyatha artists and others) | Not read | Next pass |
+| Meghanatha, Bairapura (Molakalmuru taluk, Chitradurga), 2007 | The festivals and games passage (p. 73) | Kara Hunnime fact; map point |
+| Madrekar, Sannata texts (2018); Vishwanatha, coastal Yakshagana make-up and costume (2007); Bantanura (2002) and Lakshmipati (2009) on folk sculpture | Introductions and chapter outlines only | three facts |
+| Children's encyclopedia vol. 6 (1973); the other folk-art and folklore titles listed above (Janapada Vicharas issues, Gangamatha and Yalandur beyond their game sections, Tulu folk titles) | **Not read** | Next pass |
 
 `scripts/extract-folk-game-catalogues.py` regenerates the catalogue JSON and JS module from the OCR text. Item numbers are the studies' own numbers; four Chitradurga outdoor numbers (39, 44, 49, 59) are missing where the OCR dropped them, and a few names carry OCR slips. Check names against the page images before quoting them.
 
