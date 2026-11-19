@@ -1,5 +1,7 @@
 # Games played in Karnataka, from the earliest records to today (working list)
 
+**On the site:** the page `#recreation` (Explore → Old games & recreation) shows these rows from `src/data/old-games.js`, with a badge for each: *source read*, *lead* or *oral tradition*. Its second and third tabs show the festival, performance and modern-leisure records already in the atlas (`culturalHeritage`). To add or upgrade a game, edit `old-games.js`: set `status: 'read'` only when the cited page or abstract has been opened, and put the book, page and what it says in `evidence`. `npm test` checks that a game marked *read* cites something read and that oral games do not claim a printed source.
+
 Status: **draft for research, nothing here is published as an atlas record yet.** Every row is a lead. No row may become a record until it has an item-level citation (book and page, inscription number, article or catalogue entry), as in `docs/research-intake.md`. Kannada names are the common spellings and need a native proofread. "Oral" means the game is known from living practice and has no dated source found yet; do not invent a date for those.
 
 Existing atlas records at era level (`category: 'games-sports'` in `src/data/atlas.js`): Kadamba hunting and archery, Western Ganga wrestling, Badami Chalukya equestrian display, Rashtrakuta courtly and board games, Hoysala wrestling, Vijayanagara athletic court, Mysuru Dasara equestrian and martial display, colonial Bengaluru sports, modern indigenous games. The list below is the game-by-game layer under them.

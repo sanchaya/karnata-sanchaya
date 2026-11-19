@@ -1,0 +1,25 @@
+.app-shell main.recreation-page{display:block;height:auto;min-height:calc(100vh - 142px);width:min(100%,1100px);max-width:none;margin:0 auto;padding:18px clamp(16px,3vw,32px) 48px}
+.recreation-hero{padding:22px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:14px;background:linear-gradient(135deg,#fff8e1,#f3f5ff)}
+.recreation-hero h1{margin:4px 0 8px;font:700 28px Georgia,"Noto Sans Kannada",serif;color:var(--sanchaya-ink,#1a1a2e)}
+.recreation-hero p{margin:0 0 6px;max-width:70ch;color:var(--sanchaya-muted,#4a4a68)}
+.recreation-hero small{color:#7a5b00}
+.recreation-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0}
+.recreation-tabs button{padding:8px 14px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:999px;background:#fff;font-weight:700;cursor:pointer}
+.recreation-tabs button.active{background:var(--sanchaya-blue,#4361ee);border-color:var(--sanchaya-blue,#4361ee);color:#fff}
+.recreation-group{margin:22px 0}
+.recreation-group h2{margin:0 0 10px;font-size:18px}
+.recreation-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.recreation-card{padding:14px;border:1px solid var(--sanchaya-border,#e0e0e0);border-left:4px solid #c8d0ff;border-radius:12px;background:#fff}
+.recreation-card.status-read{border-left-color:#22804a}.recreation-card.status-lead{border-left-color:#b9801a}.recreation-card.status-oral{border-left-color:#a43f67}
+.recreation-card h3{margin:0 0 4px;font-size:16px}
+.recreation-status{margin:0 0 8px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--sanchaya-muted,#4a4a68)}
+.recreation-card p{margin:0 0 8px;font-size:13px}
+.recreation-card dl{display:grid;gap:4px;margin:0 0 6px;font-size:12px}.recreation-card dl div{display:flex;gap:8px}.recreation-card dt{flex:none;min-width:3.5em;font-weight:700}.recreation-card dd{margin:0}
+.recreation-card details{font-size:12px}.recreation-card summary{cursor:pointer;font-weight:700}.recreation-card ul{margin:6px 0 0;padding-left:18px}
+.recreation-note{margin:0 0 10px;font-size:13px;color:var(--sanchaya-muted,#4a4a68)}
+.recreation-eras{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.recreation-eras li{padding:12px 14px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:12px;background:#fff}
+.recreation-eras span{margin-left:10px;font-size:12px;color:var(--sanchaya-muted,#4a4a68)}.recreation-eras p{margin:6px 0 0;font-size:13px}
+.recreation-help{margin:26px 0 0;padding:18px;border:1px solid #c8d0ff;border-radius:14px;background:var(--sanchaya-hover,rgba(67,97,238,.08))}
+.recreation-help h2{margin:0 0 6px;font-size:18px}.recreation-help p{margin:0 0 10px;font-size:14px}
+.recreation-button{display:inline-block;margin-right:12px;padding:8px 16px;border-radius:999px;background:var(--sanchaya-blue,#4361ee);color:#fff;font-weight:700;text-decoration:none}
