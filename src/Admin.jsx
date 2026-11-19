@@ -6,6 +6,7 @@ import { translationGlossary } from './data/translation-glossary'
 import { alternateRecordTitle, localizedRecordTitle, missingKannadaTranslation, recordMatchesAdminSearch } from './admin-search'
 import { formatValidationIssues, prepareDatasetSave } from './admin-persistence'
 import GuidedTour from './GuidedTour'
+import Berunda from './Berunda'
 import AdminDiscoveryQueue from './AdminDiscoveryQueue'
 import AdminInbox from './AdminInbox'
 import AdminIntegrations from './AdminIntegrations'
@@ -209,7 +210,7 @@ export default function Admin({ onClose, locale='kn', onLocaleChange }) {
   }
 
   return <div className="admin-shell" lang={locale}>
-    <header className="admin-header"><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.back} onClick={event=>{event.preventDefault();onClose()}}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.workspace}</p><h1>{t.title}</h1><p className="admin-subtitle">{t.subtitle}</p></div></div><div className="admin-header-actions"><button className="secondary language-switch" onClick={onLocaleChange}>{locale==='kn'?'English':'ಕನ್ನಡ'}</button><button className="secondary" onClick={()=>{window.location.hash='operations'}}>{locale==='kn'?'ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ':'User operations'}</button><button className="secondary" onClick={()=>{window.location.hash='reviews'}}>{locale==='kn'?'ಪರಿಶೀಲನಾ ಸರದಿ':'Review queue'}</button><button className="secondary" onClick={()=>{window.location.hash='profile'}}>{t.profile}</button><button className="secondary" onClick={onClose}>{t.back}</button></div></header>
+    <header className="admin-header"><div className="sanchaya-product-brand"><a className="sanchaya-mark" href="#atlas" aria-label={t.back} onClick={event=>{event.preventDefault();onClose()}}><img src={`${import.meta.env.BASE_URL}sanchaya-logo.png`} alt="Sanchaya"/></a><div><p className="eyebrow">{t.workspace}</p><h1>{t.title}</h1><p className="admin-subtitle">{t.subtitle}</p></div></div><div className="admin-header-actions"><Berunda locale={locale}/><button className="secondary language-switch" onClick={onLocaleChange}>{locale==='kn'?'English':'ಕನ್ನಡ'}</button><button className="secondary" onClick={()=>{window.location.hash='operations'}}>{locale==='kn'?'ಬಳಕೆದಾರ ನಿರ್ವಹಣೆ':'User operations'}</button><button className="secondary" onClick={()=>{window.location.hash='reviews'}}>{locale==='kn'?'ಪರಿಶೀಲನಾ ಸರದಿ':'Review queue'}</button><button className="secondary" onClick={()=>{window.location.hash='profile'}}>{t.profile}</button><button className="secondary" onClick={onClose}>{t.back}</button></div></header>
     <div className="admin-warning"><strong>{locale==='kn'?'ಸ್ಥಿರ-ಮೊದಲ ವಿನ್ಯಾಸ:':'Static-first:'}</strong> {t.warning}</div>
     <nav className="admin-workspace-tabs" aria-label={t.adminSections} role="tablist">{Object.entries(t.adminTabs).map(([key,label])=><button key={key} type="button" role="tab" aria-selected={workspaceTab===key} className={workspaceTab===key?'active':''} onClick={()=>setWorkspaceTab(key)}>{label}</button>)}</nav>
     {workspaceTab==='data'&&<div className="admin-toolbar" role="tabpanel">

@@ -31,3 +31,7 @@ The mode, the daily AI limit and the per-visitor limit are stored in the `portal
 - Per-visitor and daily limits are in memory, so a restart resets them (the limit values themselves are saved). Record searches have their own generous per-visitor limit.
 - Answers are not stored. Nothing about accounts, contributions or review notes is in the index; it is built from the public dataset only.
 - Watch the first weeks of real questions and fix the prompt in `systemPrompt()` where answers drift.
+
+## Tablet and laptop widths, and Admin
+
+Between 721 and about 1280 px the header used to be wider than the screen (the activity switch and utility links would not shrink), which pushed the Berunda launcher off the right edge. In `page-consistency.css` the activity switch now shrinks and scrolls inside itself, the utility links are hidden up to 1280 px, and the launcher and language button never shrink. The Admin workspace header now carries the launcher too, and its action buttons wrap instead of running off-screen. Berunda only appears when `/api/berunda/status` answers `enabled`, so it is absent in the static edition and in a local build with no API.

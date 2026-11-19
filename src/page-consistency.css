@@ -14,3 +14,22 @@ body{max-width:100%}
 .header-actions{min-width:0;max-width:100%}
 .language-switch{flex:none;min-width:5.5em;white-space:nowrap;text-align:center}
 @media(max-width:720px){header .header-actions{flex-wrap:nowrap;overflow:hidden}.language-switch{min-width:4.5em;padding-inline:8px!important}}
+
+/* Tablet/laptop header: the activity switch shrinks and scrolls inside itself so the Berunda launcher and language switch stay on screen */
+@media(min-width:721px){
+  .header-actions{flex:1 1 0;justify-content:flex-end}
+  .activity-switch{flex:0 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none}
+  .activity-switch::-webkit-scrollbar{display:none}
+  .berunda-launcher,.language-switch,.header-utility-nav{flex:none}
+  .sanchaya-product-brand{flex:0 0 auto}
+}
+@media(min-width:721px) and (max-width:1280px){.header-utility-nav{display:none}}
+
+/* Admin workspace: same header rhythm as the app, actions wrap instead of running off-screen, stat cards fill the row */
+.admin-header{height:auto;min-height:94px;gap:10px 14px;flex-wrap:wrap}
+.admin-header .sanchaya-product-brand{flex:1 1 280px;min-width:0}
+.admin-header .admin-header-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px;flex:0 1 auto;min-width:0;max-width:100%}
+.admin-header-actions .secondary{white-space:nowrap}
+.admin-stat-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.admin-progress-table{max-width:none}
+@media(max-width:720px){.admin-header .admin-header-actions{display:flex;justify-content:flex-start}.admin-stat-grid{grid-template-columns:repeat(2,minmax(120px,1fr))}}
