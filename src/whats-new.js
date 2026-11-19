@@ -2,7 +2,7 @@
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
   {id:'play-tollugatti',view:'recreation',href:'#recreation',date:'2026-11-19',
-    kn:['ಹಳೆಯ ಆಟಗಳನ್ನು ಆನ್‌ಲೈನ್ ಆಡಿ','ಅಳಿಗುಳಿಮನೆ, ಆಡು-ಹುಲಿ, ಚೌಕಾಬಾರ ಮುಂತಾದ ಆಟಗಳನ್ನು ಮೈಸೂರಿನ ತೊಲ್ಲುಗಟ್ಟಿಯಲ್ಲಿ ಆಡಬಹುದು.'],
+    kn:['ಹಳೆಯ ಆಟಗಳನ್ನು ಆನ್‌ಲೈನ್ ಆಡಿ','ಅಳಿಗುಳಿಮನೆ, ಆಡು-ಹುಲಿ, ಚೌಕಾಬಾರ ಮುಂತಾದ ಆಟಗಳನ್ನು ಮೈಸೂರಿನ ಟೊಳ್ಳುಗಟ್ಟಿಯಲ್ಲಿ ಆಡಬಹುದು.'],
     en:['Play the old games online','Ali Guli Mane, Aadu Huli, Chowka Bara and more can be played at TolluGatti, a Mysuru venture.']},
   {id:'recreation-page',view:'recreation',href:'#recreation',date:'2026-11-19',
     kn:['ಹಳೆಯ ಆಟ ಮತ್ತು ವಿನೋದ (ಹೊಸ ಪುಟ)','ಕರ್ನಾಟಕದ ಹಳೆಯ ಆಟ, ಜಾತ್ರೆ-ಹಬ್ಬ ಮತ್ತು ವಿನೋದ; ಜಿಲ್ಲಾ ನಕ್ಷೆ ಮತ್ತು ಪ್ರತಿ ಸಾಲಿನ ಆಕರದ ಸ್ಥಿತಿಯೊಂದಿಗೆ.'],
