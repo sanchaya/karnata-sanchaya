@@ -121,6 +121,26 @@ Not relevant, despite matching "play" or "games": the many `apu.anuvadasampada.*
 
 Next step: read the district studies first (Bidar, Chitradurga, Ballari-Beda). Pull the game names, local names and places with page numbers into `src/data/old-games.js` as sourced entries. Do the same with the Vijayanagara study for the carved boards.
 
+## What was read from the books (November 2026)
+
+Read in this pass, from the Internet Archive OCR text. Only facts, names and locators were taken, in our own words; the books stay pointers.
+
+| Book | What was read | Where it went |
+|---|---|---|
+| Shivashankara, *Ganjifa* (1996) | The whole main text (60 pages) | `ganjifa` entry and four facts (people, heritage, culture) in `src/data/old-games.js` |
+| Niranjanamurthy, Chitradurga folk sports (2017) | The numbered catalogue of 131 games in five groups, and the contents | `data/imports/folk-game-catalogues.json`, the catalogue panel and many game attestations |
+| Vadagaonve, Bidar folk games (2006, 2009) | Contents and the game headings of both versions; only names present in both are kept (46) | same |
+| Gangadhar T., Beda community games, Ballari (2004) | Contents and headings (35 names, hand curated) | `bedaNames` |
+| Manjanna, Vijayanagara sport and recreation (2016) | The contents, introduction and the passage on chariot festivals (pp. 145-146) | Attestations and the festivals entry. The 622-page body is **not** read |
+| Mallikarjun U., garadi tradition of Hosapete taluk (2004) | The contents only | `wrestling` evidence. Body **not** read |
+| Hiremath, Mylara fair; Girija, Chowdamma fair (1994) | Opening pages of the first; cover of the second | `fairs` entries |
+| Srikantayya, *Kannada Kavigalu Kanda Kreedegalu* (1989) | Cover and a few pages (OCR noisy) | `animal-contests` lead only |
+| Hunting and the Beda in medieval Kannada poetry (2000), Gondaliga plays (2007), the children's encyclopedia vol. 6 (1973), village folklore studies | Not read yet | Next pass |
+
+`scripts/extract-folk-game-catalogues.py` regenerates the catalogue JSON and JS module from the OCR text. Item numbers are the studies' own numbers; four Chitradurga outdoor numbers (39, 44, 49, 59) are missing where the OCR dropped them, and a few names carry OCR slips. Check names against the page images before quoting them.
+
+**Map.** The recreation page has a district map. A shaded district means a study, fair or collection is on record there; it does not mean the game was played only there. Village-level points need the village studies read first.
+
 ## How to turn this into the atlas
 
 1. Use section 1 first. For each row, read the source and record its title, page or abstract locator, and the fact it supports, in our own words. Schmidt-Madsen 2022 is open access and should be read in full first.
