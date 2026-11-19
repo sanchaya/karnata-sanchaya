@@ -1,6 +1,6 @@
 # Embedding the games on other portals
 
-Any Aata-Paata game can be shown inside another site with an iframe. Open the games page, pick a game, and use **Embed this game on your site** under it: it gives a ready iframe and a copy button. Free for non-commercial use; the credit link under the game must stay.
+Any Aata-Paata game can be shown inside another site with an iframe. Open the games page and use **Embed these games on your site** under the page heading: choose a game and language, copy the iframe code, and check the live preview. Free for non-commercial use; the credit link under the game must stay.
 
 ```html
 <iframe src="https://karnata.sanchaya.net/?embed=1&lang=en&game=word#aata-paata"
@@ -10,7 +10,7 @@ Any Aata-Paata game can be shown inside another site with an iframe. Open the ga
 
 | Parameter | Values | Effect |
 |---|---|---|
-| `embed=1` | required | Shows only the game: a slim Sanchaya header (logo, title, subtitle, **Contact us** link to the atlas contact page) instead of the site menu, plus a "more games" link under the game. The frame is marked `noindex`. |
+| `embed=1` | required | Shows only the game: no site menu or hero. A slim Sanchaya row under the game carries the logo, title, subtitle, a "More games" link and a **Contact us** link to the atlas contact page. The frame is marked `noindex`. |
 | `game` | `word`, `year`, `crossword`, `where`, `who`, `script`, `bird`, `worksheet` | Pins one game and hides the game tabs. Leave it out to let players switch between games. |
 | `lang` | `kn`, `en` | Language of the frame (default: the visitor's saved choice, else Kannada). |
 | `puzzle` | `YYYY-MM-DD` | Opens that day's puzzle from the archive. |

@@ -228,19 +228,19 @@
 
 /* Embedding: compact frame for other portals, and the embed-code builder on the games page */
 .aata-embedded{padding-top:10px}
-.aata-embed-credit{margin:10px 0 0;text-align:center;font-size:12px}
-.aata-embed-credit a{color:var(--sanchaya-blue,#4361ee);font-weight:700}
 .aata-embed{margin:18px 0 0;padding:12px 14px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:10px;background:#fff}
 .aata-embed summary{cursor:pointer;font-weight:700;color:var(--sanchaya-ink,#1a1a2e)}
 .aata-embed p{margin:8px 0;font-size:13px;color:var(--sanchaya-muted,#4a4a68)}
 .aata-embed-options{display:flex;flex-wrap:wrap;gap:6px 18px;margin:6px 0;font-size:13px}
 .aata-embed textarea{width:100%;font:12px ui-monospace,Menlo,monospace;padding:8px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:8px;resize:vertical}
 .aata-embed button{margin-top:8px;padding:7px 14px;border:1px solid #c8d0ff;border-radius:8px;background:var(--sanchaya-hover,rgba(67,97,238,.08));color:var(--sanchaya-blue,#4361ee);font-weight:700;cursor:pointer}
-.aata-embed-brand{display:flex;align-items:center;gap:12px;margin:0 0 12px;padding:8px 12px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:12px;background:#fff}
+.aata-embed-brand{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:12px 0 0;padding:8px 12px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:12px;background:#fff}
 .aata-embed-logo{flex:none;display:block;line-height:0}
-.aata-embed-logo img{border-radius:10px}
-.aata-embed-brand div{flex:1 1 auto;min-width:0;display:grid;gap:1px}
-.aata-embed-brand strong{font-size:16px;color:var(--sanchaya-ink,#1a1a2e);line-height:1.25}
-.aata-embed-brand span{font-size:11px;color:var(--sanchaya-muted,#4a4a68)}
-.aata-embed-contact{flex:none;padding:6px 12px;border:1px solid #c8d0ff;border-radius:999px;background:var(--sanchaya-hover,rgba(67,97,238,.08));color:var(--sanchaya-blue,#4361ee);font-size:12px;font-weight:700;text-decoration:none}
-@media(max-width:420px){.aata-embed-brand span{display:none}}
+.aata-embed-logo img{border-radius:8px}
+.aata-embed-brand div{flex:1 1 180px;min-width:0;display:grid;gap:1px}
+.aata-embed-brand strong{font-size:13px;color:var(--sanchaya-ink,#1a1a2e);line-height:1.25}
+.aata-embed-brand span{font-size:10.5px;color:var(--sanchaya-muted,#4a4a68)}
+.aata-embed-brand>a:not(.aata-embed-logo){flex:none;font-size:12px;font-weight:700;color:var(--sanchaya-blue,#4361ee);text-decoration:none}
+.aata-embed-contact{padding:5px 12px;border:1px solid #c8d0ff;border-radius:999px;background:var(--sanchaya-hover,rgba(67,97,238,.08))}
+.aata-embed-preview-title{font-weight:700;margin:12px 0 4px!important}
+.aata-embed-preview{display:block;width:100%;height:560px;border:1px solid var(--sanchaya-border,#e0e0e0);border-radius:10px}
