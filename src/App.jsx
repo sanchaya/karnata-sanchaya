@@ -852,7 +852,9 @@ export default function App(){
   useEffect(()=>{sendPing(view,'view');const timer=window.setInterval(()=>{if(document.visibilityState==='visible')sendPing(view,'beat')},60000);return()=>window.clearInterval(timer)},[view])
   const [activity,setActivity]=useState(()=>ACTIVITY_OF[initialHash]||'explore')
   useEffect(()=>{if(ACTIVITY_OF[view])setActivity(ACTIVITY_OF[view])},[view])
-  const [locale,setLocale]=useState(getInitialLocale)
+  // ?embed=1 shows only the games, for other portals to frame (docs/embedding-games.md)
+  const [embedGame]=useState(()=>{const q=new URLSearchParams(window.location.search);return q.get('embed')==='1'})
+  const [locale,setLocale]=useState(()=>{const lang=new URLSearchParams(window.location.search).get('lang');return lang==='kn'||lang==='en'?lang:getInitialLocale()})
   const [year,setYear]=useState(()=>initialShareState.year??firstTimelineStory?.year??MIN_YEAR)
   const [atlasMapView]=useState(()=>initialShareState.map||{lat:14.7,lng:76.2,zoom:6.35})
   const [mapZoom,setMapZoom]=useState(()=>initialShareState.map?.zoom||6.35)
@@ -1046,6 +1048,7 @@ export default function App(){
   const renderMapLayerControl=([key,label])=><div className={`map-layer-row map-layer-row-${key}`} key={key}><label className={key==='people'?'people-map-toggle':''}><input type="checkbox" checked={layers[key]} onChange={()=>setLayers(value=>({...value,[key]:!value[key],...(key==='dynastyAreas'?{boundaries:value.dynastyAreas,territorialReach:value.dynastyAreas}:{})}))}/><span>{label}</span></label>{key==='dynastyAreas'&&layers.dynastyAreas&&<label className="map-layer-suboption"><input type="checkbox" checked={layers.boundaries&&layers.territorialReach} onChange={event=>setLayers(value=>({...value,boundaries:event.target.checked,territorialReach:event.target.checked}))}/><span>{locale==='kn'?'ಹಳೆಯ ಯೋಜನಾ ಗಡಿಗಳನ್ನೂ ತೋರಿಸಿ':'Also show the older schematic boundaries'}</span></label>}{key==='inscriptions'&&layers.inscriptions&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllInscriptions} onChange={event=>setShowAllInscriptions(event.target.checked)}/><span>{t.showAllInscriptions}</span></label>}{key==='researchCandidates'&&layers.researchCandidates&&<label className="map-layer-suboption"><input type="checkbox" checked={showAllReviewCandidates} onChange={event=>setShowAllReviewCandidates(event.target.checked)}/><span>{t.showAllReviewCandidates}</span></label>}</div>
   const sidebarIconEntries=[['temple',t.timelineCategories.temples],['inscription',t.timelineCategories.inscriptions],['artifact',t.timelineCategories.artifacts],['war',t.timelineCategories.wars],['monument',t.timelineCategories.monuments],['fort',t.heritageCategoryLabels.fort],['palace',t.heritageCategoryLabels.palace],['museum',t.heritageCategoryLabels.museum],['archive',t.heritageCategoryLabels.archive],['library',t.heritageCategoryLabels.library],['park',t.heritageCategoryLabels['historic-park']],['territory',t.externalKingdoms]]
   const renderObjectIconKey=()=> <div className="map-object-icon-key"><strong className="map-object-icon-key-title">{locale==='kn'?'ನಕ್ಷೆ ಗುರುತುಗಳ ಸೂಚಿ':'Map icon key'}</strong>{sidebarIconEntries.map(([kind,label])=><span key={kind}><i className={`legend-object-icon ${kind}`}>{objectIcon(kind)}</i>{label}</span>)}</div>
+  if(embedGame)return <Suspense fallback={<PortalFallback/>}><AataPaata locale={locale} embed/></Suspense>
   if(admin){
     const staticBuild=import.meta.env.VITE_STATIC_DATASET==='true'
     if(staticBuild)return <AdminAccessGate locale={locale} staticBuild/>

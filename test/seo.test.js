@@ -110,7 +110,7 @@ test('every query parameter the app reads is owned by a page, so it is cleared w
   const { readFile, readdir } = await import('node:fs/promises')
   const app=await readFile(new URL('../src/App.jsx',import.meta.url),'utf8')
   const owned=Object.keys(eval('('+app.match(/const PAGE_PARAMS=(\{[^\n]*\})/)[1]+')'))
-  const shared=new Set(['year','zoom','lat','lng','record','resetToken'])
+  const shared=new Set(['year','zoom','lat','lng','record','resetToken','embed','lang'])
   const files=(await readdir(new URL('../src/',import.meta.url))).filter(f=>/\.jsx?$/.test(f))
   for(const f of files){
     const text=await readFile(new URL(`../src/${f}`,import.meta.url),'utf8')
