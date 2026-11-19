@@ -127,15 +127,18 @@ Read in this pass, from the Internet Archive OCR text. Only facts, names and loc
 
 | Book | What was read | Where it went |
 |---|---|---|
-| Shivashankara, *Ganjifa* (1996) | The whole main text (60 pages) | `ganjifa` entry and four facts (people, heritage, culture) in `src/data/old-games.js` |
-| Niranjanamurthy, Chitradurga folk sports (2017) | The numbered catalogue of 131 games in five groups, and the contents | `data/imports/folk-game-catalogues.json`, the catalogue panel and many game attestations |
-| Vadagaonve, Bidar folk games (2006, 2009) | Contents and the game headings of both versions; only names present in both are kept (46) | same |
-| Gangadhar T., Beda community games, Ballari (2004) | Contents and headings (35 names, hand curated) | `bedaNames` |
-| Manjanna, Vijayanagara sport and recreation (2016) | The contents, introduction and the passage on chariot festivals (pp. 145-146) | Attestations and the festivals entry. The 622-page body is **not** read |
-| Mallikarjun U., garadi tradition of Hosapete taluk (2004) | The contents only | `wrestling` evidence. Body **not** read |
-| Hiremath, Mylara fair; Girija, Chowdamma fair (1994) | Opening pages of the first; cover of the second | `fairs` entries |
-| Srikantayya, *Kannada Kavigalu Kanda Kreedegalu* (1989) | Cover and a few pages (OCR noisy) | `animal-contests` lead only |
-| Hunting and the Beda in medieval Kannada poetry (2000), Gondaliga plays (2007), the children's encyclopedia vol. 6 (1973), village folklore studies | Not read yet | Next pass |
+| Shivashankara, *Ganjifa* (1996) | The whole main text (60 pages) | `ganjifa` entry and four facts |
+| Niranjanamurthy, Chitradurga folk sports (2017) | The numbered catalogue of 131 games in five groups, and the contents. The descriptions and the 35-question survey are **not** read | catalogue JSON, the catalogue panel, many attestations |
+| Vadagaonve, Bidar folk games (2006, 2009) | Contents and headings of both versions (46 names in both) | same |
+| Gangadhar T., Beda games, Ballari (2004) | Contents and headings (35 names) | `bedaNames` |
+| Manjanna, Vijayanagara sport and recreation (2016) | Contents and introduction, plus keyword passages: board games and Devaraya II (p. 16), pagade and Pampa (p. 37), ball game (pp. 40, 47-48), wrestling and women at Mahanavami (p. 16), animal contests (p. 105), kites (p. 116), hunting festival (pp. 187-188), reliefs (p. 10), chariot festivals (pp. 145-146). Most of the 622 pages are **not** read page by page | attestations, the chendaata, kite and hunting-festival entries, five facts |
+| Mallikarjun U., garadi of Hosapete taluk (2004) | Contents, the word-origin passage and the garadi names (pp. 23, 55). Chapters 3 to 11 are **not** read | `wrestling` note |
+| Madannavar, Soraturu village, Gadag (2024); Padma, Yalandur (2009); Sure, Bidar taluk (2018); Krishnegowda, Gangamatha, Mandya (2010) | Contents and the opening of each game section, for local terms | four facts; the district map |
+| Hunting and the Beda in medieval poetry (2000) | Contents, abstract and three passages | `hunting-poetry` entry |
+| Ranganatha, Gondaliga Devendrappa's plays (2007) | Contents and cover | `sannata-devendrappa` entry |
+| Hiremath, Mylara fair; Girija, Chowdamma fair (1994) | Opening of the first, cover of the second | fairs entries |
+| Srikantayya, *Kannada Kavigalu Kanda Kreedegalu* (1989) | A few pages (the OCR is poor; re-OCR from the PDF would help) | `animal-contests` lead |
+| Children's encyclopedia vol. 6 (1973), Bairapura study, about 20 folk-art titles (Yakshagana costume, Sannata texts, folk sculpture, the Killekyatha artists and others) | Not read | Next pass |
 
 `scripts/extract-folk-game-catalogues.py` regenerates the catalogue JSON and JS module from the OCR text. Item numbers are the studies' own numbers; four Chitradurga outdoor numbers (39, 44, 49, 59) are missing where the OCR dropped them, and a few names carry OCR slips. Check names against the page images before quoting them.
 
