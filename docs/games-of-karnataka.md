@@ -160,3 +160,7 @@ Read in this pass, from the Internet Archive OCR text. Only facts, names and loc
 5. Add public text for an "Old games of Karnataka" page once enough rows are cited.
 
 Photos need a clear licence before use; nothing is copied from the books, only facts and pointers.
+
+## Folk performing arts tab
+
+The Recreation page has a **Folk performing arts** tab (`kind: 'perform'`, the `ARTS` list in `src/data/old-games.js`). Nine rows are read from Mahadevakumar's 2011 Chamarajanagar study (archive.org `kuh.mphil.920.kum.048729`), cited by chapter 3 section number because the page numbers were not checked: Gorava kunita, kamsale, tamburi neelagara, Veerabhadra kunita, veeragase, nandi dhwaja, tamate, mari kunita and garudi gombe. Two rows are leads, not yet read: Karantha's *Yakshagana Bayalata* (1983, `yakshaganabayala0000drks`) and the Kamsale artist study by Vatsala Mohan (`kuh.429.vas.049321`). The study lists 22 arts; the other 13 (for example sobane songs, tatvapada singers, kolata, Lambani dance) are not yet entered. The Kannada notes need a native proofreader.
