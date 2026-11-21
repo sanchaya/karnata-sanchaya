@@ -205,3 +205,7 @@ Every Explore page, and Fonts, Species, Migration, Data wanted, Licences, Contac
 ## Experience menu
 
 Aata-Paata (games), Old games and recreation, Folk arts (`kale`, the arts page; crafts, music and dance can become tabs there when sources are read), Food culture and Trails live under a top-level **Experience** menu next to Explore, as Nature was split out before. The group is `experienceNavItems` in `src/App.jsx`, with `ACTIVITY_OF` entries of `'experience'` and an accent colour in `src/nav-activity.css`. Define any value a nav list uses before the list (`kn` is only defined further down; use `locale==='kn'`). The tests read source text and cannot catch such an error, so open the page in a browser after editing the menu.
+
+## Hero alignment
+
+Every `.explore-hero` band is full width and its text starts at the shared page column, `--page-col` from `src/page-consistency.css` (the 1180px column, 130px from the edge on a 1440px screen), so the heading sits at the same place on every page. `src/explore-hero.css` used a fixed 55px inset before, which put the text at the screen's left edge on pages such as Food, Recreation, Press, Species and Relations. Use `var(--page-col)` for any new full-width band rather than a fixed inset.
