@@ -209,3 +209,5 @@ Aata-Paata (games), Old games and recreation, Folk arts (`kale`, the arts page; 
 ## Hero alignment
 
 Every `.explore-hero` band is full width and its text starts at the shared page column, `--page-col` from `src/page-consistency.css` (the 1180px column, 130px from the edge on a 1440px screen), so the heading sits at the same place on every page. `src/explore-hero.css` used a fixed 55px inset before, which put the text at the screen's left edge on pages such as Food, Recreation, Press, Species and Relations. Use `var(--page-col)` for any new full-width band rather than a fixed inset.
+
+A page whose first child is an `.explore-hero` gets `padding-top:0` (`main:has(>.explore-hero:first-child)`), so the band sits flush under the second-level nav instead of leaving the page's own 18 to 48px top padding as a white gap. Put the hero first in the page for this to apply.

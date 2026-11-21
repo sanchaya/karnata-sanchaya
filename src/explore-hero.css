@@ -10,3 +10,5 @@
 .app-shell .explore-hero>:not(div:first-child){justify-self:end}
 .app-shell .explore-hero .aata-hero-mark{display:none}
 @media(max-width:720px){.app-shell .explore-hero{grid-template-columns:1fr;padding:14px 16px}.app-shell .explore-hero>:not(div:first-child){justify-self:start}}
+/* The band is full width, so a page's own top padding only shows as a white gap under the second-level nav: sit the band flush. */
+.app-shell main:has(>.explore-hero:first-child){padding-top:0}
