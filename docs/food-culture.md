@@ -20,6 +20,10 @@ Searched the ServantsOfKnowledge collection with Kannada, English and transliter
 
 Looked at and left out: *Karnatakada Mudde Kambararu* (a study of a folk-healer community, not food), *Mudde Gantu* (short stories), and the Udupi vegetable-market theses (market economics, not food culture).
 
+## Vijayanagara-era food (Koli 2019)
+
+Vittal Koli's Hampi doctoral thesis *ವಿಜಯನಗರ ಕಾಲದ ಆಹಾರಪದ್ಧತಿ* (archive.org `kuh.967.kol.141171`, 2019) has chapters on crops, customs, vegetarian and meat dishes, drinks and betel, community and festival food, and cooks and kitchens. Read so far: the sweets passage of chapter 4, giving two entries, **holige and the five bhakshyas** (pp. 81, 84–86) and **mandige** (pp. 101–102). Still to read: crops (ch. 2), meal customs (ch. 3), savoury dishes and meat, drinks (ch. 5), community and festival food (ch. 6), cooks and kitchen tools (ch. 7). The thesis also quotes the Supashastra, which is still not in the collection. Other Kannada University items found for later: the Soliga traditional food study (`kuh.618.uma.049508`), the Tulunadu freshwater-fish study (`kuh.mphil.1387.gir.138162`) and the riddles book *Ogatugalu mattu kathegalu* (`kuh.ag.1355.014466`), plus children's literature theses for rhymes.
+
 ## Gaps and next steps
 
 - The Kannada cookery text *Sūpaśāstra* (Mangarasa, 1508) is not in the collection; find a source elsewhere.
