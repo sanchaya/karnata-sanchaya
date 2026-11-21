@@ -223,3 +223,7 @@ Hero audit (all public views): Coins, Scripts and the five India research pages 
 Clicking a timeline card for an event now selects the polity named in its first `participants[].polityId`, so the left-hand kingdom list highlights that dynasty (for example Badami Chalukya for the Pulakeshin I card). Before, the list fell back to its first entry (Western Ganga). Events with no polity participant leave the selection as it was.
 
 The atlas right-hand record panel is now 290–330px wide (was 360–400px) so the map gets the room; set in the `.app-shell main` grid in `src/styles.css`.
+
+## Compare two years (hidden)
+
+The atlas "Compare two years" button is hidden because it is little used. The feature is intact: set `SHOW_YEAR_COMPARE=true` above `Timeline` in `src/App.jsx` to show it again. Its pieces are `compareYear` state, `comparisonTerritories`/`comparisonChanges`, the `comparison-legend` and `comparisonPresets`, so it can be reused on another page.
