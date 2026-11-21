@@ -217,3 +217,7 @@ Stats in a hero: put them in a second child of the `.explore-hero` (class ending
 Geography, Literature and Epigraphy heroes now carry the `explore-hero` class too, so they sit flush under the nav with stats beside the text. The flush-top rule covers `section.portal-page` as well as `main`. Geography's source-linked facts are a compact wrapping row (`.nature-facts`, max 600px).
 
 Hero audit (all public views): Coins, Scripts and the five India research pages now use `explore-hero` too (stats beside the text; on India research the evidence-policy note moved to a slim line under the hero). Evidence, Research (resources) and Research tasks keep their own hero markup, but the flush-top rule (`:has(>.evidence-hero …)`) removes the 34 to 48px gap. About and Contact keep a 50px offset because their About/Contact tab row sits above the hero. Re-run the audit after adding a page: the hero should be the first child of the page and the gap under the second-level nav should be 0.
+
+## Atlas left bar follows the clicked event
+
+Clicking a timeline card for an event now selects the polity named in its first `participants[].polityId`, so the left-hand kingdom list highlights that dynasty (for example Badami Chalukya for the Pulakeshin I card). Before, the list fell back to its first entry (Western Ganga). Events with no polity participant leave the selection as it was.
