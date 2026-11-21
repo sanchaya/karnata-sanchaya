@@ -227,3 +227,7 @@ The atlas right-hand record panel is now 290–330px wide (was 360–400px) so t
 ## Compare two years (hidden)
 
 The atlas "Compare two years" button is hidden because it is little used. The feature is intact: set `SHOW_YEAR_COMPARE=true` above `Timeline` in `src/App.jsx` to show it again. Its pieces are `compareYear` state, `comparisonTerritories`/`comparisonChanges`, the `comparison-legend` and `comparisonPresets`, so it can be reused on another page.
+
+## Timeline stories: category dropdown instead of chips
+
+The atlas timeline-stories panel no longer shows the row of category chips; the category is picked from a dropdown in the panel's title row, next to the search box (about 40px saved). The chip markup is still rendered but hidden (`.timeline-filters{display:none}` in `src/styles.css`), so it can be restored or reused.
