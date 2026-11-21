@@ -11,7 +11,7 @@
 .nature-regions .nature-source-links,.nature-themes .nature-source-links{display:grid;gap:6px;margin-top:12px;padding-top:12px;border-top:1px solid #e3ece4;font-size:.8rem;line-height:1.4}.nature-regions .nature-source-links a,.nature-themes .nature-source-links a{color:#28785b;overflow-wrap:anywhere}
 
 /* A compact stats strip, so the map is not pushed down the page. */
-.nature-hero .nature-facts{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:12px}
+.app-shell .nature-hero.explore-hero{align-items:center}.nature-hero .nature-facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;max-width:600px}.nature-hero .nature-facts article{flex:1 1 105px}
 .nature-hero .nature-facts article{gap:1px;padding:8px 12px;border-radius:10px;align-content:start}
 .nature-hero .nature-facts b{font-size:1.15rem;line-height:1.2}
 .nature-hero .nature-facts span{font-size:.8rem;font-weight:600;line-height:1.25}

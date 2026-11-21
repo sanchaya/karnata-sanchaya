@@ -213,3 +213,5 @@ Every `.explore-hero` band is full width and its text starts at the shared page 
 A page whose first child is an `.explore-hero` gets `padding-top:0` (`main:has(>.explore-hero:first-child)`), so the band sits flush under the second-level nav instead of leaving the page's own 18 to 48px top padding as a white gap. Put the hero first in the page for this to apply.
 
 Stats in a hero: put them in a second child of the `.explore-hero` (class ending `-stats`, like Press) and they sit beside the text. `page-consistency.css` sets `display:block` on several heroes with a more specific selector, which used to push the stats onto a second row (Freedom, People); `explore-hero.css` now restores the grid with `body .app-shell .explore-hero`. On a phone the stats go below and wrap. Freedom went from 193px to 146px tall and People from 221px to 149px.
+
+Geography, Literature and Epigraphy heroes now carry the `explore-hero` class too, so they sit flush under the nav with stats beside the text. The flush-top rule covers `section.portal-page` as well as `main`. Geography's source-linked facts are a compact wrapping row (`.nature-facts`, max 600px).
