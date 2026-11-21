@@ -11,7 +11,7 @@
 .app-shell .explore-hero .aata-hero-mark{display:none}
 @media(max-width:720px){.app-shell .explore-hero{grid-template-columns:1fr;padding:14px 16px}.app-shell .explore-hero>:not(div:first-child){justify-self:start}}
 /* The band is full width, so a page's own top padding only shows as a white gap under the second-level nav: sit the band flush. */
-.app-shell :is(main,section.portal-page):has(>.explore-hero:first-child){padding-top:0}
+.app-shell :is(main,section.portal-page):has(>:is(.explore-hero,.evidence-hero,.resources-hero,.research-tasks-hero,.india-research-hero):first-child){padding-top:0}
 /* page-consistency.css sets display:block on several heroes with a more specific selector; keep the text/stats grid so stats sit beside the text like Press. */
 body .app-shell .explore-hero{display:grid}
 .app-shell .explore-hero>[class$="-stats"]{margin:0;align-self:center}

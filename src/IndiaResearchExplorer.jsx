@@ -47,18 +47,18 @@ export default function IndiaResearchExplorer({locale='en',dataset='history'}){
   const mapped=useMemo(()=>filtered.filter(record=>Number.isFinite(record.lat)&&Number.isFinite(record.lng)).slice(0,700),[filtered])
   const counts=indiaResearchIndex.meta
   return <main className="india-research-page">
-    <section className="india-research-hero">
+    <section className="india-research-hero explore-hero">
       <div><p className="eyebrow">{kn?'ಭಾರತವ್ಯಾಪಿ ಸಂಶೋಧನಾ ಕಾರ್ಯಸ್ಥಳ':'India-wide research workspace'}</p><h2>{kn?'ಭಾರತ ಇತಿಹಾಸ ಅನ್ವೇಷಣಾ ಸೂಚಿ':'India Historical Discovery Index'}</h2><p>{kn?'ಭಾರತವ್ಯಾಪಿ ಸಂಶೋಧನಾ ಸುಳಿವುಗಳನ್ನು ಪರಿಶೀಲನೆಗಾಗಿ ಇಲ್ಲಿ ಒಟ್ಟುಗೂಡಿಸಲಾಗಿದೆ; ಇವು ಪ್ರಕಟಿತ ಅಥವಾ ಸ್ವತಂತ್ರವಾಗಿ ದೃಢೀಕರಿಸಿದ ಹೇಳಿಕೆಗಳಲ್ಲ.':'This workspace brings together India-wide research leads for review. These are not published or independently verified historical claims.'}</p></div>
-      <aside><strong>{kn?'ಸಾಕ್ಷ್ಯ ನೀತಿ':'Evidence policy'}</strong><p>{kn?'ಪ್ರತಿ ದಾಖಲೆಯಲ್ಲೇ ಅದರ ಅನ್ವೇಷಣಾ ಮೂಲವನ್ನು ಉಲ್ಲೇಖಿಸಲಾಗಿದೆ. ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ಮುನ್ನ ಹೇಳಿಕೆಯನ್ನು ಮೂಲ ಪ್ರಾಥಮಿಕ ಅಥವಾ ವಿದ್ವತ್ ಆಕರದೊಂದಿಗೆ ವಸ್ತುಮಟ್ಟದಲ್ಲಿ ಹೊಂದಿಸಿ ಪರಿಶೀಲಿಸಬೇಕು.':'Each record carries its discovery-source attribution. Before public promotion, its claim must be matched at item level to the underlying primary or scholarly source.'}</p></aside>
-    </section>
-    <section className="india-research-stats" aria-label={kn?'ಆಮದು ಅಂಕಿಅಂಶಗಳು':'Import statistics'}>
+    <div className="india-research-stats" aria-label={kn?'ಆಮದು ಅಂಕಿಅಂಶಗಳು':'Import statistics'}>
       <span><b>{counts.bharatrajya.counts.kingdoms?.toLocaleString('en-IN')}</b>{kn?'ರಾಜ್ಯ/ರಾಜವಂಶ ದಾಖಲೆಗಳು':'polity records'}</span>
       <span><b>{counts.bharatrajya.counts.territories?.toLocaleString('en-IN')}</b>{kn?'ಜಿಲ್ಲಾ-ಕಾಲ ಪ್ರದೇಶ ದಾಖಲೆಗಳು':'district-period territories'}</span>
       <span><b>{counts.bharatrajya.counts.events?.toLocaleString('en-IN')}</b>{kn?'ಐತಿಹಾಸಿಕ ಘಟನೆಗಳು':'historical events'}</span>
       <span><b>{counts.whatisindia.records?.toLocaleString('en-IN')}</b>{kn?'ಶಾಸನ ದಾಖಲೆ/ಸುಳಿವುಗಳು':'inscription records/leads'}</span>
       <span><b>{languageRegions.length}</b>{kn?'ಭಾಷೆ/ಲಿಪಿ ಪ್ರದೇಶಗಳು (ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ)':'language/script regions (unverified)'}</span>
       <span><b>{counts.whatisindia.pagesCrawled?.toLocaleString('en-IN')}</b>{kn?'ಪರಿಶೀಲಿಸಿದ ಮೂಲ ಪುಟಗಳು':'source pages crawled'}</span>
+    </div>
     </section>
+    <aside className="india-research-policy"><strong>{kn?'ಸಾಕ್ಷ್ಯ ನೀತಿ':'Evidence policy'}</strong><p>{kn?'ಪ್ರತಿ ದಾಖಲೆಯಲ್ಲೇ ಅದರ ಅನ್ವೇಷಣಾ ಮೂಲವನ್ನು ಉಲ್ಲೇಖಿಸಲಾಗಿದೆ. ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ಮುನ್ನ ಹೇಳಿಕೆಯನ್ನು ಮೂಲ ಪ್ರಾಥಮಿಕ ಅಥವಾ ವಿದ್ವತ್ ಆಕರದೊಂದಿಗೆ ವಸ್ತುಮಟ್ಟದಲ್ಲಿ ಹೊಂದಿಸಿ ಪರಿಶೀಲಿಸಬೇಕು.':'Each record carries its discovery-source attribution. Before public promotion, its claim must be matched at item level to the underlying primary or scholarly source.'}</p></aside>
     <nav className="india-research-tabs" aria-label={kn?'ದತ್ತಾಂಶ ವಿಭಾಗಗಳು':'Dataset sections'}>
       {[['history','#india-research',kn?'ಭಾರತ ಇತಿಹಾಸ ದತ್ತಾಂಶ':'India history data'],['inscriptions','#india-inscriptions',kn?'ಭಾರತ ಶಾಸನ ಸೂಚಿ':'India inscription index'],['languages','#india-languages',`${kn?'ಭಾಷೆ ಮತ್ತು ಲಿಪಿ ಭೂಪಟ':'Languages & scripts map'} · ${kn?'ಪರಿಶೀಲನೆ ಆಗಿಲ್ಲ':'unverified'}`],['sources','#india-sources',kn?'ಮೂಲ ಆಕರ ಅಭ್ಯರ್ಥಿಗಳು':'Underlying source candidates'],['failures','#india-failures',`${kn?'ಮೂಲ ಪುಟ ದೋಷಗಳು':'Source-page failures'} · ${counts.failureCount}`]].map(([key,href,label])=><a key={key} href={href} className={dataset===key?'active':''} aria-current={dataset===key?'page':undefined}>{label}</a>)}
     </nav>
