@@ -228,6 +228,6 @@ The atlas right-hand record panel is now 290–330px wide (was 360–400px) so t
 
 The atlas "Compare two years" button is hidden because it is little used. The feature is intact: set `SHOW_YEAR_COMPARE=true` above `Timeline` in `src/App.jsx` to show it again. Its pieces are `compareYear` state, `comparisonTerritories`/`comparisonChanges`, the `comparison-legend` and `comparisonPresets`, so it can be reused on another page.
 
-## Timeline cards: no category line
+## Timeline cards: category under the year
 
-Each timeline story card no longer prints its category at the bottom (the category chips above the cards already filter by it). A grouped card still shows its "+N" count. Cards are about 20px shorter.
+Each timeline story card shows year, then its category (with a "+N" count for grouped cards), then the title; the colour bar spans all three lines. Research-candidate cards show no category line ("research candidate, not yet published") to save space; the card's colour and the map layer already mark them.
