@@ -123,7 +123,7 @@ contributors, not findings.
 Covered: shading around recorded capitals, inscriptions, monuments, coins and
 events; records up to the chosen year; conventional dynasty spans; overlaps.
 Not covered: borders or surveyed frontiers; dynasties with few records (shown
-by capital only, "thin evidence"); some inscriptions placed at the taluk town
+by capital only; the map label no longer carries a "thin evidence" tag, though the Who ruled page still does); some inscriptions placed at the taluk town
 instead of the village; dynasties not yet added; everything awaits review.
 
 ## Reference: the Census 2004 Historical Atlas of Karnataka
