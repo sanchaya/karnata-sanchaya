@@ -43,3 +43,4 @@
 .bird-photo{margin:0 auto;max-width:520px}.bird-photo img{display:block;width:100%;max-height:360px;object-fit:contain;border-radius:14px;background:#efeaf9}.bird-photo figcaption{margin-top:4px;font-size:.72rem;color:#5a5578;text-align:center;overflow-wrap:anywhere}
 @media(min-width:1000px){.aata-game-tabs{grid-template-columns:repeat(8,minmax(0,1fr))}}
 .aata-game-stage>header{padding:.7rem 1rem}.aata-game-stage>header h2{margin:.1rem 0;font-size:clamp(1.5rem,2.2vw,2rem)}
+.aata-hint-button{margin-top:10px;padding:6px 12px;border:1px solid #c8d0ff;border-radius:99px;background:#fff;color:#2b3a8c;font-weight:700;cursor:pointer}.aata-hint-button:hover{background:#eef0ff}

@@ -49,7 +49,9 @@ which opens the same puzzle for the friend.
 ## Learning after the game
 
 - Word Trail hints open in steps: the kind of record after two guesses, the
-  clue after three, the first letter after five. When the game ends the answer,
+  clue after three, the first letter after five. A "Hint (n/3)" button opens
+  the next step at any time (kind, then clue, then first letter); the count is
+  saved per day and hints do not change the shared result. When the game ends the answer,
   its clue, a review note and a link to the atlas page are shown.
 - Each game shows played, won, day streak and best streak
   (`src/aata-stats.js`, stored per game under `atlas-aata-stats:<game>`). Only a
