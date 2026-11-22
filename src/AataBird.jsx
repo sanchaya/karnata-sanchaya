@@ -34,7 +34,7 @@ function BirdGame({data,group,locale,t,date,c}){
   const [state,setState]=useProgress(`atlas-aata-bird:${locale}:${date}${group?`:${group}`:''}`,{picks:[]}),[review,setReview]=useState(null)
   const rounds=useMemo(()=>buildBirdRounds(data.SPECIES,data.IMAGES,locale,date,5,group),[data,locale,date,group])
   if(!rounds.length)return <section className="aata-game-stage bird-game"><p className="aata-status">{c.few}</p></section>
-  const total=rounds.length,picks=state.picks,done=picks.length>=total,index=Math.min(picks.length,total-1),round=rounds[index]
+  const total=rounds.length,picks=state.picks,done=picks.length>=total,index=review?picks.length-1:Math.min(picks.length,total-1),round=rounds[index]
   const image=data.IMAGES[round.gbifKey],score=picks.filter((id,i)=>id===rounds[i]?.id).length
   const choose=id=>{if(review||done)return;setState({picks:[...picks,id]});setReview({correct:id===round.id})}
   return <section className="aata-game-stage bird-game">

@@ -62,7 +62,7 @@ export const CorrectionLink=({t})=><a className="aata-correct-link" href="#contr
 export function WhoAmI({locale,t,date}){
   const rounds=buildWhoRounds(DYNASTY_PHASES,atlasData,locale,date),total=rounds.length
   const [state,setState]=useProgress(`atlas-aata-who:${locale}:${date}`,{points:[],wrong:[]}),[review,setReview]=useState(null)
-  const done=state.points.length>=total,index=Math.min(state.points.length,total-1),round=rounds[index],score=state.points.reduce((sum,value)=>sum+value,0)
+  const done=state.points.length>=total,index=review?state.points.length-1:Math.min(state.points.length,total-1),round=rounds[index],score=state.points.reduce((sum,value)=>sum+value,0)
   const shown=review?round.clues.length:Math.min(round.clues.length,state.wrong.length+1)
   const choose=id=>{
     if(review||done)return

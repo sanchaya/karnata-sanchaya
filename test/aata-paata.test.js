@@ -77,3 +77,10 @@ test('Kannada game answers use the locally bundled jquery IME integration',async
   assert.match(layoutSource,/\.aata-game-tabs \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\)/)
   assert.match(layoutSource,/\.app-shell:has\(\.aata-paata-page\) \.guided-tour-launcher \{\s*display: none/)
 })
+
+test('question games keep showing the answered round while its answer is reviewed',async()=>{
+  const extras=await readFile(new URL('../src/AataExtras.jsx',import.meta.url),'utf8')
+  const bird=await readFile(new URL('../src/AataBird.jsx',import.meta.url),'utf8')
+  assert.match(extras,/index=review\?state\.points\.length-1:/)
+  assert.match(bird,/index=review\?picks\.length-1:/)
+})
