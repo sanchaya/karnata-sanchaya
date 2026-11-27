@@ -39,3 +39,4 @@ public/data/published-atlas.json.tmp
 /var/import-cache/
 
 /.playwright-mcp/
+dist-app

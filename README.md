@@ -87,6 +87,10 @@ npm run publish:static
 Commit the generated publication artifacts before the Pages build. Live Admin
 edits do not appear on GitHub Pages until this approved export occurs.
 
+## Mobile apps
+
+The static edition is wrapped with Capacitor for Google Play and the Apple App Store (`android/`, `ios/`, `capacitor.config.json`). Build and release steps, and what is still to do, are in `docs/mobile-app.md`.
+
 ## Data and research workflow
 
 - Model and collections: [data model](docs/data-model.md)

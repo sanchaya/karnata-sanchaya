@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Karnataka Atlas</string>
+    <string name="title_activity_main">Karnataka Atlas</string>
+    <string name="package_name">net.sanchaya.karnata</string>
+    <string name="custom_url_scheme">net.sanchaya.karnata</string>
+</resources>

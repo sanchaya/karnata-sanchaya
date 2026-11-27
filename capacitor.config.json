@@ -1,0 +1,7 @@
+{
+  "appId": "net.sanchaya.karnata",
+  "appName": "Karnataka Atlas",
+  "webDir": "dist-app",
+  "ios": { "contentInset": "automatic" },
+  "android": { "allowMixedContent": false }
+}
