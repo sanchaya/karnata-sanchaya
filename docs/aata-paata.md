@@ -143,3 +143,7 @@ Three playable traditional board games sit beside the daily games, played agains
 - **Chowka-bara:** 5×5 board, four pawns each, you at the bottom and the computer at the top. Four cowrie shells: mouths up is the move, none up is eight; four and eight give another throw. A pawn runs the 16 outer squares, then the 8 inner squares, and needs an exact throw to reach the centre. Landing on a lone or stacked opponent on a non-✕ square sends it to the start and earns another throw; ✕ squares (corners, edge centres and the centre) are safe. Simplifications: no "first capture needed to enter the inner ring" rule and no blocking by paired pawns. The computer prefers finishing, then capturing, then safe squares. Pagade (the dice version) is not built separately.
 - **Rules are the commonly played versions.** No Karnataka rulebook has been read yet (the atlas entries on these games are a Wikipedia page and a lead), so the page says rules vary by village and links to Old games and recreation. Replace with a sourced rule set when one is found. The Kannada text on the page needs a native proofread.
 - **Not built yet:** more than two players, Pagade, Chenne-mane variants, Nine Men's Morris, Phañjikā.
+
+## TolluGatti block
+
+A "Play these games" block linking to TolluGatti (a Mysuru venture that hosts these old games online) sits under the games on the Aata-Paata page, as it does on Old games and recreation. It is one component (`src/PlayBanner.jsx`) used by both pages, is hidden in embedded mode, and counts clicks anonymously per page (`docs/visitor-stats.md`).

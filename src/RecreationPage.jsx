@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { GeoJSON, MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { loadDistricts } from './DynastyAreasLayer'
-import { sendOutbound } from './visit-ping'
+import PlayBanner from './PlayBanner'
 import { atlasData } from './data/atlas'
 import { oldGames, bookFacts, bedaNames, gamePlaces } from './data/old-games'
 import { folkCatalogueNames } from './data/folk-game-catalogues.generated'
@@ -15,14 +15,14 @@ export const copy={
     kinds:{perform:'ಜನಪದ ಪ್ರದರ್ಶನ ಕಲೆಗಳು',club:'ವಸಾಹತು ಕಾಲದ ಕ್ಲಬ್ ಮತ್ತು ಆಮದು ಕ್ರೀಡೆಗಳು',fair:'ಜಾತ್ರೆ ಮತ್ತು ಹಬ್ಬ',board:'ಹಲಗೆ, ದಾಳ, ಎಲೆ ಆಟಗಳು',village:'ಹಳ್ಳಿ ಮತ್ತು ಮಕ್ಕಳ ಆಟಗಳು',strength:'ಶಕ್ತಿ ಮತ್ತು ಗ್ರಾಮೀಣ ಕ್ರೀಡೆ',field:'ಮೈದಾನದ ಆಟಗಳು'},
     eras:'ಯುಗದ ದಾಖಲೆಗಳು',erasNote:'ಅಟ್ಲಸ್‌ನಲ್ಲಿ ಈಗಾಗಲೇ ಇರುವ ಸಂಶೋಧನಾ ಸುಳಿವುಗಳು (ಪರಿಶೀಲನೆ ಬಾಕಿ).',few:'ಈ ವಿಭಾಗದಲ್ಲಿ ಇನ್ನೂ ಕಡಿಮೆ ದಾಖಲೆಗಳಿವೆ. ನೀವು ಸೇರಿಸಬಹುದು.',
     where:'ಎಲ್ಲಿ',when:'ಕಾಲ',source:'ಆಕರ',review:'ಕನ್ನಡ ಪಠ್ಯ ಸ್ಥಳೀಯ ಪರಿಶೀಲನೆ ಬಾಕಿ.',
-    playTitle:'ಈ ಆಟಗಳನ್ನು ಆಡಿ ನೋಡಿ',playText:'ಅಳಿಗುಳಿಮನೆ, ಆಡು-ಹುಲಿ, ಚೌಕಾಬಾರ, ನವಕಂಕರಿ ಮುಂತಾದ ಆಟಗಳನ್ನು ಮೈಸೂರಿನ ಟ್ರಿಟಾ ಇನ್ಫೋಟೈನ್‌ಮೆಂಟ್ ಎಲ್‌ಎಲ್‌ಪಿ ನಡೆಸುವ ‘ಟೊಳ್ಳುಗಟ್ಟಿ’ಯಲ್ಲಿ ಮೊಬೈಲ್ ಮತ್ತು ವೆಬ್‌ನಲ್ಲಿ ಆಡಬಹುದು. ಸ್ಥಳೀಯ ಉದ್ಯಮಕ್ಕೆ ನಮ್ಮ ಬೆಂಬಲದ ಸೂಚನೆ.',playButton:'ಟೊಳ್ಳುಗಟ್ಟಿಯಲ್ಲಿ ಆಡಿ',helpTitle:'ನಿಮ್ಮ ಊರಿನ ಆಟ ನಿಮಗೆ ಗೊತ್ತೇ?',help:'ಅಜ್ಜ-ಅಜ್ಜಿ ಹೇಳಿದ ಆಟ, ನಿಮ್ಮ ಹಳ್ಳಿಯ ಹೆಸರು, ನಿಯಮಗಳನ್ನು ಸೇರಿಸಿ. ಹೇಳಿದವರ ಒಪ್ಪಿಗೆ ಮತ್ತು ವಯಸ್ಸು ಕೇಳುತ್ತೇವೆ; ಪರಿಶೀಲನೆಯ ನಂತರವೇ ಪ್ರಕಟವಾಗುತ್ತದೆ.',add:'ಆಟವನ್ನು ಸೇರಿಸಿ',all:'ಎಲ್ಲಾ ಆಟಗಳ ಮೂಲ ಪಟ್ಟಿ'},
+    helpTitle:'ನಿಮ್ಮ ಊರಿನ ಆಟ ನಿಮಗೆ ಗೊತ್ತೇ?',help:'ಅಜ್ಜ-ಅಜ್ಜಿ ಹೇಳಿದ ಆಟ, ನಿಮ್ಮ ಹಳ್ಳಿಯ ಹೆಸರು, ನಿಯಮಗಳನ್ನು ಸೇರಿಸಿ. ಹೇಳಿದವರ ಒಪ್ಪಿಗೆ ಮತ್ತು ವಯಸ್ಸು ಕೇಳುತ್ತೇವೆ; ಪರಿಶೀಲನೆಯ ನಂತರವೇ ಪ್ರಕಟವಾಗುತ್ತದೆ.',add:'ಆಟವನ್ನು ಸೇರಿಸಿ',all:'ಎಲ್ಲಾ ಆಟಗಳ ಮೂಲ ಪಟ್ಟಿ'},
   en:{eyebrow:'Explore · Games and recreation',title:'Old games and recreation of Karnataka',intro:'From the court’s chess to the village’s chinni-daandu, from fair-day contests to today’s grounds. This is an early research list: every row says whether its source has actually been read.',
     tabs:{games:'Games',festivals:'Fairs & festivals',modern:'Modern & clubs',map:'Map',names:'Names',books:'From the books'},search:'Search: game, place…',allChip:'All',showing:'Showing',of:'of',none:'Nothing matches',more:'Details',factKinds:{people:'People',heritage:'Heritage',history:'History',culture:'Culture'},mapTitle:'Where it is recorded',mapNote:'Shaded districts have a study, fair or collection on record. It does not mean the game was played only there.',pick:'Pick a district',catTitle:'Game names recorded in the district studies',catNote:'Names as printed in the studies; a few spellings may contain slips.',factsTitle:'People, heritage and history named in the books',groups:{'strength-outdoor':'Outdoor, physical strength','mind-indoor':'Indoor, mind and skill','festival-tradition':'Festival and tradition','animal-bird':'Animal and bird','fun-contests':'Fun contests'},studies:{chitradurga:'Chitradurga district (2017)',bidar:'Bidar district (2006, 2009)',beda:'Ballari Beda community (2004)'},
     status:{read:'Source read',lead:'Lead · not yet verified',oral:'Oral tradition · testimony wanted'},
     kinds:{perform:'Folk performing arts',club:'Colonial clubs and imported sports',fair:'Fairs (jātre) and festivals',board:'Board, dice and card games',village:'Village and children’s games',strength:'Strength and rural sport',field:'Field and team sport'},
     eras:'Records by era',erasNote:'Research leads already in the atlas (review pending).',few:'Few records here so far. You can add one.',
     where:'Where',when:'When',source:'Source',review:'Kannada text awaits a native proofread.',
-    playTitle:'Play these games',playText:'Ali Guli Mane, Aadu Huli, Chowka Bara, Navakankari and more can be played on mobile and web at TolluGatti, run by Trita Infotainment LLP in Mysuru. A small gesture of support for a local venture.',playButton:'Play on TolluGatti',helpTitle:'Do you know a game from your village?',help:'Add a game your grandparents played: its name in your village, the rules, where. We ask the person’s consent and age, and nothing appears until it is reviewed.',add:'Add a game',all:'Full working list'}
+    helpTitle:'Do you know a game from your village?',help:'Add a game your grandparents played: its name in your village, the rules, where. We ask the person’s consent and age, and nothing appears until it is reviewed.',add:'Add a game',all:'Full working list'}
 }
 export const text=(value,locale)=>value?.[locale]||value?.en||value?.kn||''
 const years=date=>date?`${date.precision==='circa'?'c. ':''}${date.from}${date.to&&date.to!==date.from?`–${date.to}`:''} ${date.era||'CE'}`:''
@@ -74,10 +74,6 @@ export function EraRecords({t,locale,eras}){
   return <details className="rec-eras"><summary>{t.eras} · {eras.length}</summary><p className="recreation-note">{t.erasNote}</p><ul className="recreation-eras">{eras.map(item=><li key={item.id}><strong>{text(item.name,locale)}</strong><span>{years(item.date)}</span><p>{text(item.description,locale)||text(item.summary,locale)}</p></li>)}</ul></details>
 }
 
-function PlayBanner({t}){
-  return <section className="recreation-play"><img className="recreation-play-logo" src={`${import.meta.env.BASE_URL}partners/tollugatti.png`} alt="TolluGatti" width="48" height="48" loading="lazy"/><div><strong>{t.playTitle}</strong><p>{t.playText}</p></div><a className="recreation-button" href="https://www.tollugatti.com/games?utm_source=karnata.sanchaya.net&utm_medium=referral&utm_campaign=old-games" target="_blank" rel="noopener" onClick={()=>sendOutbound('tollugatti','recreation')}>{t.playButton} ↗</a></section>
-}
-
 export default function RecreationPage({locale='kn'}){
   const t=copy[locale]||copy.kn,[tab,setTab]=useState('games'),[query,setQuery]=useState(''),[status,setStatus]=useState('all'),[kind,setKind]=useState('all'),[factKind,setFactKind]=useState('all')
   const tabGroups={games:g=>!['field','fair','club','perform'].includes(g.kind),festivals:g=>g.kind==='fair',modern:g=>['field','club'].includes(g.kind)}
@@ -94,7 +90,7 @@ export default function RecreationPage({locale='kn'}){
     <section className="recreation-hero explore-hero"><div><p className="eyebrow">{t.eyebrow}</p><h1>{t.title}</h1><p>{t.intro}</p>{locale==='kn'&&<small>{t.review}</small>}</div><a className="recreation-button" href={contribute}>{t.add}</a></section>
     <nav className="recreation-tabs" role="tablist" aria-label={t.title}>{Object.entries(t.tabs).map(([key,label])=><button key={key} type="button" role="tab" aria-selected={tab===key} className={tab===key?'active':''} onClick={()=>go(key)}>{label}{counts[key]!==undefined&&<b>{counts[key]}</b>}</button>)}</nav>
     {tabGroups[tab]&&<>
-      {tab==='games'&&<PlayBanner t={t}/>}
+      {tab==='games'&&<PlayBanner locale={locale} source="recreation"/>}
       {tab==='games'&&<details className="rec-mapbox" open><summary>{t.mapTitle}</summary><GamesMap t={t} locale={locale} compact/></details>}
       <Toolbar t={t} query={query} setQuery={setQuery} status={status} setStatus={setStatus} kinds={tab==='games'?gameKinds:null} kind={kind} setKind={setKind} shown={list.length} total={pool.length}/>
       {list.length?<div className="rec-list">{list.map(game=><Row key={game.id} game={game} t={t} locale={locale}/>)}</div>:<p className="recreation-note">{t.none}</p>}
