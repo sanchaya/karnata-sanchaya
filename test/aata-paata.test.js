@@ -84,3 +84,22 @@ test('question games keep showing the answered round while its answer is reviewe
   assert.match(extras,/index=review\?state\.points\.length-1:/)
   assert.match(bird,/index=review\?picks\.length-1:/)
 })
+
+test('board games: Aadu-Huli moves and Ali Guli Mane sowing follow the rules',async()=>{
+  const b=await import('../src/aata-board.js')
+  const s=b.newHuli()
+  assert.equal(b.tigerMoves(s).length,12,'each corner tiger has two straight steps and one diagonal step')
+  assert.equal(b.goatMoves(s).length,21,'21 empty points to place a goat on')
+  // a goat next to a tiger with an empty point behind it can be jumped
+  const jump={...s,board:s.board.map((c,i)=>i===1?'G':c)}
+  assert.ok(b.tigerMoves(jump).some(m=>m.from===0&&m.to===2&&m.jump===1))
+  assert.equal(b.applyHuli(jump,{from:0,to:2,jump:1}).captured,1)
+  assert.equal(b.huliWinner({...s,captured:5}),'T')
+  // sowing never loses seeds
+  let m=b.newMane()
+  for(let i=0;i<40&&!m.over;i++){
+    const move=m.turn===0?b.maneMoves(m)[0]:b.maneReply(m,()=>0)
+    m=b.applyMane(m,move)
+    assert.equal(m.pits.reduce((a,v)=>a+v,0)+m.store[0]+m.store[1],56)
+  }
+})

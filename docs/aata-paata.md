@@ -133,3 +133,12 @@ includes the page in both GitHub Pages and live portal builds.
 - Kannada length and crossword placement use `Intl.Segmenter` grapheme
   clusters with a standards-based fallback.
 - Mobile layouts stack controls and clues without hiding puzzle content.
+
+## Board games (Aadu-Huli, Ali Guli Mane)
+
+Two playable traditional board games sit beside the daily games, played against the computer (`src/AataBoard.jsx`, rules in `src/aata-board.js`, tested in `test/aata-paata.test.js`). They are not daily puzzles, so the archive date picker is hidden for them; both can be embedded with `?game=huli` or `?game=mane`.
+
+- **Aadu-Huli (goats and tigers):** 5×5 points with the usual diagonals, four tigers (computer), twenty goats (you). Goats are placed one at a time, then moved; tigers step or jump a goat. Goats win by leaving the tigers no move; tigers win by capturing five goats. The computer takes a capture when it has one, otherwise the step that keeps the most moves open.
+- **Ali Guli Mane:** two rows of seven pits, four seeds each, sowing and capture. After the last seed, a non-empty next pit is lifted and sowing continues; an empty one wins the pit after it. The game ends when a side has no seeds to play; each side keeps its own remaining seeds. The computer picks the move with the best seed difference one move ahead.
+- **Rules are the commonly played versions.** No Karnataka rulebook has been read yet (the atlas entries on these games are a Wikipedia page and a lead), so the page says rules vary by village and links to Old games and recreation. Replace with a sourced rule set when one is found. The Kannada text on the page needs a native proofread.
+- **Not built yet:** Chowka-bara and Pagade (dice games with more players and house rules), Chenne-mane variants, Nine Men's Morris, Phañjikā.

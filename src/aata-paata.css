@@ -44,3 +44,20 @@
 @media(min-width:1000px){.aata-game-tabs{grid-template-columns:repeat(8,minmax(0,1fr))}}
 .aata-game-stage>header{padding:.7rem 1rem}.aata-game-stage>header h2{margin:.1rem 0;font-size:clamp(1.5rem,2.2vw,2rem)}
 .aata-hint-button{margin-top:10px;padding:6px 12px;border:1px solid #c8d0ff;border-radius:99px;background:#fff;color:#2b3a8c;font-weight:700;cursor:pointer}.aata-hint-button:hover{background:#eef0ff}
+
+/* Board games (Aadu-Huli, Ali Guli Mane) */
+.board-stats{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0;color:var(--sanchaya-muted,#4a4a68)}
+.huli-board{display:block;width:min(100%,420px);margin:6px auto;background:#fbf4e4;border:1px solid #d6c9a8;border-radius:10px}
+.huli-board line{stroke:#7a5b30;stroke-width:.04}
+.huli-point{cursor:pointer;outline:none}
+.huli-point .hit{fill:#fff;stroke:#7a5b30;stroke-width:.03}
+.huli-point text{font-size:.46px;pointer-events:none}
+.huli-point.target .hit{fill:#dff3e5;stroke:#28785b;stroke-width:.06}
+.huli-point.picked .hit{fill:#fff3c4;stroke:#b06a1f;stroke-width:.07}
+.huli-point:focus-visible .hit{stroke:#4361ee;stroke-width:.08}
+.mane-board{display:grid;gap:8px;margin:10px 0;padding:12px;background:#8a5a2b;border-radius:14px}
+.mane-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.mane-pit{display:grid;place-items:center;aspect-ratio:1;padding:2px;border:2px solid #5a3a1b;border-radius:50%;background:#3b2412;color:#fff;font-weight:700;cursor:default;overflow:hidden}
+.mane-pit span{font-size:15px}.mane-pit i{font-style:normal;font-size:7px;line-height:1;letter-spacing:-1px;color:#e8c27a;max-width:100%;word-break:break-all}
+.mane-pit.playable{border-color:#f3d28a;cursor:pointer}.mane-pit.playable:hover:not(:disabled){background:#5a3a1b}
+.board-rules{margin-top:14px;font-size:12px;color:var(--sanchaya-muted,#4a4a68)}
