@@ -150,6 +150,7 @@ Production dependencies and their licences (from `package.json`; transitive depe
 | **react-leaflet 5** | **Hippocratic License 2.1** | an "ethical source" licence with human-rights conditions; read it before redistributing |
 | express 5, multer 2, vite 8, @vitejs/plugin-react | MIT | |
 | jquery 3.7 | MIT | |
+| @capacitor/core, @capacitor/android, @capacitor/ios 8 | MIT | wraps the static edition as the Android and iOS apps (see `docs/mobile-app.md`); the Android and iOS runtimes are MIT |
 | **jquery.ime 0.2** (Wikimedia) | **GPL-2.0-or-later OR MIT** | used under the MIT option; the project's Kannada transliteration rule for it is MIT |
 | mariadb (Node connector) | LGPL-2.1-or-later | server only, used as an unmodified library |
 
