@@ -103,3 +103,21 @@ test('board games: Aadu-Huli moves and Ali Guli Mane sowing follow the rules',as
     assert.equal(m.pits.reduce((a,v)=>a+v,0)+m.store[0]+m.store[1],56)
   }
 })
+
+test('board games: Chowka-bara paths, safe squares, captures and finishing',async()=>{
+  const b=await import('../src/aata-board.js')
+  assert.equal(b.CHOWKA_PATH.length,25)
+  assert.deepEqual(b.cellOf(0,0),[4,2]);assert.deepEqual(b.cellOf(1,0),[0,2],'the computer starts at the top centre')
+  assert.deepEqual(b.cellOf(0,24),[2,2]);assert.equal(new Set(b.CHOWKA_PATH.map(String)).size,25,'no square repeats on the path')
+  assert.ok(b.chowkaSafe([0,0])&&b.chowkaSafe([2,0])&&!b.chowkaSafe([4,1]))
+  // an exact throw is needed to finish
+  assert.equal(b.chowkaMoves({pawns:[[23,0,0,0],[0,0,0,0]],turn:0},2).some(m=>m.pos===23),false)
+  // landing on a lone opponent pawn on an unsafe square sends it back and earns another turn
+  const hit=b.applyChowka({pawns:[[0,0,0,0],[0,0,0,0]],turn:0},0,1) // to (4,3), unsafe, nobody there
+  assert.equal(hit.captured,0);assert.equal(hit.turn,1)
+  const mine=b.cellOf(0,1) // [4,3]
+  let other=-1;for(let p=0;p<25;p++){const c=b.cellOf(1,p);if(c[0]===mine[0]&&c[1]===mine[1])other=p}
+  const cap=b.applyChowka({pawns:[[0,0,0,0],[other,0,0,0]],turn:0},0,1)
+  assert.equal(cap.captured,1);assert.equal(cap.pawns[1][0],0);assert.equal(cap.turn,0)
+  assert.ok([1,2,3,4,8].includes(b.throwShells(()=>0.9)))
+})

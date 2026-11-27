@@ -134,11 +134,12 @@ includes the page in both GitHub Pages and live portal builds.
   clusters with a standards-based fallback.
 - Mobile layouts stack controls and clues without hiding puzzle content.
 
-## Board games (Aadu-Huli, Ali Guli Mane)
+## Board games (Aadu-Huli, Ali Guli Mane, Chowka-bara)
 
-Two playable traditional board games sit beside the daily games, played against the computer (`src/AataBoard.jsx`, rules in `src/aata-board.js`, tested in `test/aata-paata.test.js`). They are not daily puzzles, so the archive date picker is hidden for them; both can be embedded with `?game=huli` or `?game=mane`.
+Three playable traditional board games sit beside the daily games, played against the computer (`src/AataBoard.jsx`, rules in `src/aata-board.js`, tested in `test/aata-paata.test.js`). They are not daily puzzles, so the archive date picker is hidden for them; each can be embedded with `?game=huli`, `?game=mane` or `?game=chowka`.
 
 - **Aadu-Huli (goats and tigers):** 5×5 points with the usual diagonals, four tigers (computer), twenty goats (you). Goats are placed one at a time, then moved; tigers step or jump a goat. Goats win by leaving the tigers no move; tigers win by capturing five goats. The computer takes a capture when it has one, otherwise the step that keeps the most moves open.
 - **Ali Guli Mane:** two rows of seven pits, four seeds each, sowing and capture. After the last seed, a non-empty next pit is lifted and sowing continues; an empty one wins the pit after it. The game ends when a side has no seeds to play; each side keeps its own remaining seeds. The computer picks the move with the best seed difference one move ahead.
+- **Chowka-bara:** 5×5 board, four pawns each, you at the bottom and the computer at the top. Four cowrie shells: mouths up is the move, none up is eight; four and eight give another throw. A pawn runs the 16 outer squares, then the 8 inner squares, and needs an exact throw to reach the centre. Landing on a lone or stacked opponent on a non-✕ square sends it to the start and earns another throw; ✕ squares (corners, edge centres and the centre) are safe. Simplifications: no "first capture needed to enter the inner ring" rule and no blocking by paired pawns. The computer prefers finishing, then capturing, then safe squares. Pagade (the dice version) is not built separately.
 - **Rules are the commonly played versions.** No Karnataka rulebook has been read yet (the atlas entries on these games are a Wikipedia page and a lead), so the page says rules vary by village and links to Old games and recreation. Replace with a sourced rule set when one is found. The Kannada text on the page needs a native proofread.
-- **Not built yet:** Chowka-bara and Pagade (dice games with more players and house rules), Chenne-mane variants, Nine Men's Morris, Phañjikā.
+- **Not built yet:** more than two players, Pagade, Chenne-mane variants, Nine Men's Morris, Phañjikā.

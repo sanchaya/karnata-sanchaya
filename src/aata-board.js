@@ -89,3 +89,44 @@ export const maneReply=(s,random=Math.random)=>{
   moves.forEach(m=>{const after=applyMane(s,m),score=after.store[1]-after.store[0];if(score>top){top=score;best=[m]}else if(score===top)best.push(m)})
   return best[Math.floor(random()*best.length)]
 }
+
+// ---- Chowka-bara: 5x5 board, four pawns each, four cowrie shells. Two players; you start at the bottom, the computer at the top.
+// Each pawn runs 16 squares round the outer ring (path 0-15), 8 round the inner ring (16-23) and ends in the centre (24).
+// Commonly played simplification: no "first capture needed" rule to enter the inner ring; an exact throw is needed to reach the centre.
+const OUTER=[[4,2],[4,3],[4,4],[3,4],[2,4],[1,4],[0,4],[0,3],[0,2],[0,1],[0,0],[1,0],[2,0],[3,0],[4,0],[4,1]]
+const INNER=[[3,1],[3,2],[3,3],[2,3],[1,3],[1,2],[1,1],[2,1],[2,2]]
+export const CHOWKA_PATH=[...OUTER,...INNER]
+export const CHOWKA_END=24
+export const cellOf=(player,pos)=>{const [r,c]=CHOWKA_PATH[pos];return player===0?[r,c]:[4-r,4-c]}
+export const chowkaSafe=([r,c])=>(r%2===0&&c%2===0)||(r===2&&c===2)
+export const newChowka=()=>({pawns:[[0,0,0,0],[0,0,0,0]],turn:0})
+// four shells: the number of mouths up is the throw; none up counts 8. 4 and 8 give another throw.
+export const throwShells=(random=Math.random)=>{let up=0;for(let i=0;i<4;i++)if(random()<.5)up++;return up===0?8:up}
+export const chowkaMoves=(s,roll)=>{
+  const seen=new Set()
+  return s.pawns[s.turn].map((pos,i)=>({i,pos})).filter(({pos})=>pos+roll<=CHOWKA_END&&!seen.has(pos)&&seen.add(pos))
+}
+export const applyChowka=(s,pos,roll)=>{
+  const me=s.turn,other=1-me,pawns=[[...s.pawns[0]],[...s.pawns[1]]]
+  const from=pawns[me].indexOf(pos),to=pos+roll
+  pawns[me][from]=to
+  let captured=0
+  const cell=cellOf(me,to)
+  if(to!==CHOWKA_END&&!chowkaSafe(cell)){
+    pawns[other]=pawns[other].map(p=>{const c=cellOf(other,p);if(p!==CHOWKA_END&&c[0]===cell[0]&&c[1]===cell[1]){captured++;return 0}return p})
+  }
+  const extra=roll===4||roll===8||captured>0||to===CHOWKA_END
+  return {pawns,turn:extra?me:other,captured,finished:to===CHOWKA_END}
+}
+export const chowkaWinner=s=>s.pawns[0].every(p=>p===CHOWKA_END)?0:s.pawns[1].every(p=>p===CHOWKA_END)?1:null
+export const chowkaReply=(s,roll,random=Math.random)=>{
+  const moves=chowkaMoves(s,roll)
+  if(!moves.length)return null
+  let best=[],top=-Infinity
+  moves.forEach(({pos})=>{
+    const after=applyChowka(s,pos,roll)
+    const score=(after.finished?50:0)+after.captured*30+(chowkaSafe(cellOf(s.turn,pos+roll))?4:0)+(pos+roll)/10-(pos===0?0:0)
+    if(score>top){top=score;best=[pos]}else if(score===top)best.push(pos)
+  })
+  return best[Math.floor(random()*best.length)]
+}
