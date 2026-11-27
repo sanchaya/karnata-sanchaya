@@ -30,6 +30,12 @@ Vittal Koli's Hampi doctoral thesis *ವಿಜಯನಗರ ಕಾಲದ ಆಹ�
 - **Giriyappa, *ತುಳುನಾಡಿನ ಸಿಹಿನೀರು ಮೀನು ಬೇಟೆಗಾರಿಕೆ ಜಾನಪದೀಯ ಅಧ್ಯಯನ*** (M.Phil, Hampi, 2018; `kuh.mphil.1387.gir.138162`). One entry, **malejji and snake-fish curry** (chapter 2; page numbers are not reliable in the scan text, so the locator names the chapter and section). The fishing methods, traps and fish in Tulu folk literature are not yet entered.
 - Health sayings in these studies (what bamboo shoots, tubers, drinks or fish "cure") are recorded as the community's or author's belief and are not medical advice.
 
+## Riddles and rhymes (sources checked)
+
+- **Ogatugalu mattu kathegalu** (ed. L. R. Hegde, Siddapur; `kuh.ag.1355.014466`): has food riddles, but the scanned text separates each riddle from its answer and garbles the words, so no riddle is entered from it; one pointer entry records it. Read it from page images. Riddles are short and traditional, but the collection is a publisher's work, so quote only a few with page numbers.
+- **Children's literature theses** (`kuh.777.sho.134776`, Shoba J., 2017; `kuh.709.bas.132005`, A. Basavesha, 2016): these are analyses of children's literature and language, not collections of rhymes or riddles; they cite poets whose work is in copyright. Nothing entered. If a rhymes section is built, take folk rhymes and lullabies from oral collection (the oral-testimony source type) or from collections with a clear licence.
+- **Lambani crafts study** (`kuh.505.rav.049397`) and the remaining food sections of the studies already held are still unread.
+
 ## Gaps and next steps
 
 - The Kannada cookery text *Sūpaśāstra* (Mangarasa, 1508) is not in the collection; find a source elsewhere.
