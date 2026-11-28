@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'kannada-authors',view:'authors',href:'#authors',date:'2026-11-28',
+    kn:['ಕನ್ನಡದ ಕವಿ–ಲೇಖಕರು (ಹೊಸ ಪುಟ)','ಲೇಖಕ–ಲೇಖಕಿಯರು, ಅವರ ಕೃತಿಗಳು ಮತ್ತು ಜನ್ಮಸ್ಥಳಗಳು ನಕ್ಷೆಯಲ್ಲಿ; ಮಹಿಳಾ ಬರಹಗಾರರು ಎದ್ದು ಕಾಣುತ್ತಾರೆ.'],
+    en:['Kannada poets and writers (new page)','Men and women writers, their works and birthplaces on a map; women writers are highlighted.']},
   {id:'printing-history',view:'press',href:'#press',date:'2026-11-28',
     kn:['ಮುದ್ರಣ ಮತ್ತು ಮುದ್ರಣಾಲಯಗಳ ಇತಿಹಾಸ','ಕನ್ನಡ ಅಚ್ಚು, ಮಿಷನ್ ಮುದ್ರಣಾಲಯಗಳು, ಮೊದಲ ಪತ್ರಿಕೆ ಮತ್ತು ಬೆಂಗಳೂರು ಪ್ರೆಸ್: ಆಕರ ಮತ್ತು ಭಿನ್ನ ಮಾಹಿತಿಯೊಂದಿಗೆ.'],
     en:['History of printing and presses','Kannada type, the mission presses, the first newspaper and The Bangalore Press, with sources and where they disagree.']},
