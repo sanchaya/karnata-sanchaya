@@ -10,7 +10,7 @@ const w=(en,kn,year)=>({en,...(kn?{kn}:{}),...(year?{year}:{})})
 const a=(id,q,gender,en,kn,born,died,role,birth,works,evidence,note,extra)=>({id,q,gender,name:{en,kn},born,died,role,birth,works,evidence,note:note||null,...(extra||{}),review:{status:'needs-review'}})
 const at=(place,district,lat,lng,precision,doubt)=>({place,district,lat,lng,precision,...(doubt?{doubt}:{})})
 export const AUTHOR_ROLES={poet:P('Poet','ಕವಿ'),novelist:P('Novelist','ಕಾದಂಬರಿಕಾರ'),playwright:P('Playwright','ನಾಟಕಕಾರ'),story:P('Short-story writer','ಕಥೆಗಾರ'),vachana:P('Vachana poet','ವಚನಕಾರ'),haridasa:P('Haridasa poet-composer','ಹರಿದಾಸ ಕವಿ'),critic:P('Critic and scholar','ವಿಮರ್ಶಕ'),humour:P('Humorist','ಹಾಸ್ಯ ಲೇಖಕ'),yakshagana:P('Yakshagana poet','ಯಕ್ಷಗಾನ ಕವಿ')}
-export const kannadaAuthors=[
+const RAW=[
   a('pampa','Q1611385','male','Pampa','ಪಂಪ',902,975,['poet'],at(P('Annigeri','ಅಣ್ಣಿಗೇರಿ'),P('Dharwad region','ಧಾರವಾಡ ಪ್ರದೇಶ'),15.43,75.43,'disputed',P('One Wikipedia page puts his birth in the Vengi region (now Andhra Pradesh); the scholar Hampa Nagarajaiah places it at Annigeri. Annigeri is shown.','ವೆಂಗಿ ಪ್ರದೇಶದಲ್ಲಿ (ಈಗಿನ ಆಂಧ್ರಪ್ರದೇಶ) ಜನನ ಎಂದು ಒಂದು ವಿಕಿಪೀಡಿಯಾ ಪುಟ ಹೇಳುತ್ತದೆ; ವಿದ್ವಾಂಸ ಹಂ.ಪ. ನಾಗರಾಜಯ್ಯ ಅಣ್ಣಿಗೇರಿ ಎನ್ನುತ್ತಾರೆ. ಇಲ್ಲಿ ಅಣ್ಣಿಗೇರಿ ತೋರಿಸಲಾಗಿದೆ.')),
     [w('Adipurana','ಆದಿಪುರಾಣ',941),w('Vikramarjuna Vijaya (Pampa Bharata)','ವಿಕ್ರಮಾರ್ಜುನ ವಿಜಯ (ಪಂಪಭಾರತ)')],[WP('Adikavi Pampa','lead and birth section'),WD('Q1611385')],
     P('Dates are traditional estimates.','ವರ್ಷಗಳು ಸಾಂಪ್ರದಾಯಿಕ ಅಂದಾಜು.')),
@@ -92,3 +92,27 @@ export const kannadaAuthors=[
   a('banu-mushtaq','Q15719655','female','Banu Mushtaq','ಬಾನು ಮುಷ್ತಾಕ್',1948,null,['story','novelist'],at(P('Hassan','ಹಾಸನ'),P('Hassan','ಹಾಸನ'),13.005,76.1028,'place'),
     [w('Heart Lamp: Selected Stories (tr. Deepa Bhasthi; International Booker Prize 2025)',null,2025)],[WP('Banu Mushtaq','lead'),WD('Q15719655')],P('Six story collections, a novel, an essay collection and a poetry collection.','ಆರು ಕಥಾಸಂಕಲನ, ಒಂದು ಕಾದಂಬರಿ, ಒಂದು ಪ್ರಬಂಧ ಸಂಕಲನ ಮತ್ತು ಒಂದು ಕವನ ಸಂಕಲನ.')),
 ]
+
+// Links to the atlas's own records, by id: the person record and the work records that are the same work as one named above.
+// A writer or work is linked only when the atlas record is clearly the same one; the test checks that every id exists.
+const LINKS={
+  pampa:{person:'person-pampa',works:{'Adipurana':'work-adipurana','Vikramarjuna Vijaya (Pampa Bharata)':'work-vikramarjuna-vijaya'}},
+  ranna:{person:'person-ranna',works:{'Sahasabhima Vijaya (Gadayuddha)':'work-gadayuddha','Ajitha Purana':'work-ajitapurana'}},
+  basavanna:{person:'person-basavanna',works:{}},
+  'allama-prabhu':{person:'person-allama-prabhu',works:{'Vachanas (Vachana Sahitya)':'work-allama-prabhu-vachanas'}},
+  'akka-mahadevi':{person:'person-akka-mahadevi',works:{'430 vachanas':'work-akka-mahadevi-vachanas'}},
+  'kanaka-dasa':{person:'person-kanakadasa',works:{'Mohanatarangini':'work-mohana-tarangini'}},
+  dvg:{person:'person-dvg',works:{'Mankuthimmana Kagga':'work-mankuthimmana-kagga'}},
+  bendre:{person:'person-ff-18',works:{}},
+  karanth:{person:'person-ff-19',works:{}},
+}
+// Basavanna's vachanas are one atlas work for the whole collection.
+LINKS.basavanna.works[RAW.find(x=>x.id==='basavanna').works[0].en]='work-basavanna-vachanas'
+export const kannadaAuthors=RAW.map(x=>{
+  const link=LINKS[x.id]
+  if(!link)return x
+  return {...x,personId:link.person,works:x.works.map(work=>link.works[work.en]?{...work,workId:link.works[work.en]}:work)}
+})
+export const authorByPersonId=Object.fromEntries(kannadaAuthors.filter(x=>x.personId).map(x=>[x.personId,x]))
+// People records get a reviewed-by-source gender from the matching writer: Wikidata says so; it is not an inference from the name.
+export const writerGender=personId=>{const g=authorByPersonId[personId]?.gender;return g==='female'?'woman':g==='male'?'man':null}

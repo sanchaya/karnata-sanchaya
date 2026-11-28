@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+import { atlasData } from './data/atlas'
 import { AUTHOR_ROLES, kannadaAuthors } from './data/kannada-authors'
 import './authors.css'
 
@@ -15,6 +16,8 @@ const copy={
     none:'ಈ ಆಯ್ಕೆಗೆ ಯಾರೂ ಸಿಗಲಿಲ್ಲ.',
     note:'ಇದು ಪ್ರಾರಂಭಿಕ ಆಯ್ದ ಪಟ್ಟಿ, ಎಲ್ಲರ ಪಟ್ಟಿ ಅಲ್ಲ; ಮಹಿಳೆಯರ ಸಂಖ್ಯೆ ಕಡಿಮೆ ಇರುವುದು ಲೇಖಕಿಯರ ಕೊರತೆಯಿಂದಲ್ಲ, ಆಕರಗಳು ಸಿಕ್ಕ ಹೆಸರುಗಳಷ್ಟೇ ಇಲ್ಲಿವೆ. ಕೃತಿಗಳು ಆಕರ ಪುಟಗಳಲ್ಲಿ ಹೆಸರಿಸಿದವು, ಪೂರ್ಣ ಪಟ್ಟಿ ಅಲ್ಲ. ವಿಕಿಪೀಡಿಯಾ ಮತ್ತು ವಿಕಿಡೇಟಾ ಆಧಾರ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ಕನ್ನಡ ಪಠ್ಯ ಸ್ಥಳೀಯ ಪರಿಶೀಲನೆ ಬಾಕಿ.',
     add:'ಬಿಟ್ಟುಹೋದ ಲೇಖಕರನ್ನು ಸೂಚಿಸಿ',
+    person:'ವ್ಯಕ್ತಿ ದಾಖಲೆ ತೆರೆಯಿರಿ',openWork:'ಕೃತಿ ದಾಖಲೆ',inAtlas:'ಅಟ್ಲಸ್‌ನಲ್ಲಿ',atlasDates:'ಅಟ್ಲಸ್‌ನ ವ್ಯಕ್ತಿ ದಾಖಲೆ ಈ ವ್ಯಕ್ತಿಯನ್ನು {a} ರಿಂದ ಎಂದು ದಿನಾಂಕಿಸಿದೆ; ವಿಕಿಪೀಡಿಯಾ ಮತ್ತು ವಿಕಿಡೇಟಾ {b} ಎನ್ನುತ್ತವೆ. ಯಾವುದನ್ನು ಬಳಸಬೇಕು ಎಂದು ಪರಿಶೀಲನೆ ಬೇಕು.',
+    others:'ಅಟ್ಲಸ್‌ನ ವ್ಯಕ್ತಿಗಳ ಪಟ್ಟಿಯಲ್ಲಿರುವ ಇತರ ಕವಿಗಳು (ಜನ್ಮಸ್ಥಳ ಇನ್ನೂ ಇಲ್ಲ)',
   },
   en:{
     eyebrow:'Literature',title:'Kannada poets and writers: their works and birthplaces',
@@ -26,11 +29,18 @@ const copy={
     none:'Nobody matches this choice.',
     note:'This is a first, selected list, not a complete one. Women are fewer here because the list holds the names with a source found so far, not because there are fewer women writers. Works are those named on the cited pages, not full bibliographies. Based on Wikipedia and Wikidata and not yet reviewed. The Kannada text needs a native proofread.',
     add:'Suggest a writer we missed',
+    person:'Open the person record',openWork:'Work record',inAtlas:'In the atlas',atlasDates:'The atlas person record dates this writer from {a}; Wikipedia and Wikidata say {b}. Needs checking before either is used.',
+    others:'Other poets already in the atlas people list (no birthplace yet)',
   },
 }
 const text=(value,locale)=>value?.[locale]||value?.kn||value?.en||''
 const years=(a)=>a.born||a.died?`${a.born||'?'}–${a.died||''}`:''
 const COLOR={female:'#a43d72',male:'#2f5f9e'}
+const peopleById=new Map((atlasData.people||[]).map(person=>[person.id,person]))
+const workById=new Map((atlasData.works||[]).map(work=>[work.id,work]))
+const linkedIds=new Set(kannadaAuthors.map(a=>a.personId).filter(Boolean))
+// Poets already in the atlas people list that this page does not have a birthplace for yet.
+const otherPoets=(atlasData.people||[]).filter(person=>!linkedIds.has(person.id)&&person.roles?.some(role=>role==='poet'||role==='vachana-poet')).sort((a,b)=>(a.date?.from??0)-(b.date?.from??0))
 
 function Focus({target}){
   const map=useMap()
@@ -40,7 +50,7 @@ function Focus({target}){
 
 export default function AuthorsPage({locale='kn'}){
   const t=copy[locale]||copy.kn,kn=locale==='kn'
-  const [gender,setGender]=useState('all'),[era,setEra]=useState('all'),[query,setQuery]=useState(''),[focusId,setFocusId]=useState(null)
+  const [gender,setGender]=useState('all'),[era,setEra]=useState('all'),[query,setQuery]=useState(''),[focusId,setFocusId]=useState(()=>{const id=new URLSearchParams(window.location.search).get('writer');return kannadaAuthors.some(a=>a.id===id)?id:null})
   const rows=useMemo(()=>{
     const needle=query.trim().toLowerCase()
     return kannadaAuthors.filter(a=>(gender==='all'||a.gender===(gender==='women'?'female':'male'))
@@ -70,12 +80,14 @@ export default function AuthorsPage({locale='kn'}){
         <p className="author-meta">{a.role.map(r=>text(AUTHOR_ROLES[r],locale)).join(' · ')}{years(a)&&` · ${years(a)}`}</p>
         <p className="author-born"><b>{t.born}:</b> {text(a.birth.place,locale)}, {text(a.birth.district,locale)} <span className={`author-prec ${a.birth.precision}`}>{t.precision[a.birth.precision]}</span></p>
         {a.birth.doubt&&<p className="author-doubt">{text(a.birth.doubt,locale)}</p>}
-        <p className="author-works"><b>{t.works}:</b> {a.works.map((x,i)=><span key={i}>{(kn&&x.kn)||x.en}{x.year?` (${x.year})`:''}{i<a.works.length-1?' · ':''}</span>)}</p>
+        <p className="author-works"><b>{t.works}:</b> {a.works.map((x,i)=><span key={i}>{x.workId?<a href={`?work=${x.workId}#literature`} title={`${t.openWork}: ${workById.get(x.workId)?.name?.en}`}>{(kn&&x.kn)||x.en}</a>:((kn&&x.kn)||x.en)}{x.year?` (${x.year})`:''}{i<a.works.length-1?' · ':''}</span>)}</p>
+        {a.personId&&peopleById.get(a.personId)&&<p className="author-atlas"><b>{t.inAtlas}:</b> <a href={`?person=${a.personId}#people`}>{t.person} →</a>{(()=>{const from=peopleById.get(a.personId).date?.from;return Number.isFinite(from)&&a.born&&Math.abs(from-a.born)>5?<span className="author-doubt">{t.atlasDates.replace('{a}',from).replace('{b}',a.born)}</span>:null})()}</p>}
         {a.note&&<p className="author-note">{text(a.note,locale)}</p>}
         <div className="author-actions"><button type="button" onClick={()=>setFocusId(a.id)}>📍 {t.showMap}</button>
           <details><summary>{t.sources}</summary><ul>{a.evidence.map((e,i)=><li key={i}>{e.title} · <em>{e.locator}</em></li>)}</ul></details></div>
       </li>)}</ol>
     </section>
+    {otherPoets.length>0&&<details className="authors-others"><summary>{t.others} · {otherPoets.length}</summary><ul>{otherPoets.map(person=><li key={person.id}><a href={`?person=${person.id}#people`}>{text(person.name,locale)}</a>{Number.isFinite(person.date?.from)&&<small> · {person.date.from}</small>}</li>)}</ul></details>}
     <p className="press-note authors-foot">{t.note} <a href="#contribute">{t.add} →</a></p>
   </main>
 }

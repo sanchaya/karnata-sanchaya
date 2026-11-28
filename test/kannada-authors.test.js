@@ -30,3 +30,28 @@ test('Kannada authors: women and men are both well represented and the page is w
   assert.match(app,/authors:'research'/);assert.match(app,/<AuthorsPage locale=\{locale\}\/>/)
   assert.match(app,/\['authors',locale==='kn'/)
 })
+
+test('Kannada authors: links point at real atlas people and works that are the same ones',async()=>{
+  const { atlasData } = await import('../src/data/atlas.js')
+  const { authorByPersonId, writerGender } = await import('../src/data/kannada-authors.js')
+  const norm=value=>String(value||'').toLowerCase().replace(/[^a-z]/g,'')
+  const linked=kannadaAuthors.filter(a=>a.personId)
+  assert.ok(linked.length>=9)
+  for(const a of linked){
+    const person=atlasData.people.find(p=>p.id===a.personId)
+    assert.ok(person,`${a.id}: no atlas person ${a.personId}`)
+    // the two records must share a name token, so a wrong id cannot slip through
+    const tokens=norm(a.name.en).match(/.{4}/g)||[]
+    assert.ok(tokens.some(token=>norm(person.name.en).includes(token)),`${a.id} and ${person.id} do not look like the same person`)
+    for(const w of a.works.filter(x=>x.workId)){
+      const work=atlasData.works.find(x=>x.id===w.workId)
+      assert.ok(work,`${a.id}: no atlas work ${w.workId}`)
+      const same=norm(work.name.en).slice(0,6)
+      assert.ok(norm(w.en).includes(same)||norm(work.creatorDisplay).includes(norm(a.name.en).slice(0,5))||work.creatorIds?.includes(a.personId),`${a.id}: ${w.en} is not ${work.name.en}`)
+    }
+  }
+  assert.equal(writerGender('person-akka-mahadevi'),'woman')
+  assert.equal(writerGender('person-pampa'),'man')
+  assert.equal(writerGender('person-unknown'),null)
+  assert.equal(authorByPersonId['person-basavanna'].works.some(w=>w.workId==='work-basavanna-vachanas'),true)
+})

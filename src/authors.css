@@ -31,3 +31,6 @@
 .authors-empty{padding:18px;color:var(--sanchaya-muted)}
 .authors-foot{margin-top:16px}
 @media(max-width:900px){.authors-layout{grid-template-columns:1fr}.authors-map{position:static}.authors-list{max-height:none}}
+.author-atlas a,.author-works a{color:#2b3a8c;font-weight:600}
+.author-atlas{font-size:13px!important}
+.authors-others{margin:14px 0;font-size:14px}.authors-others ul{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;padding:8px 0 0;margin:0}
