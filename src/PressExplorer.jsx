@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet'
 import { atlasData } from './data/atlas'
 import { genderStats, placeGroups, pressPeople } from './periodicals'
+import PrintingHistory from './PrintingHistory'
 import './press.css'
 
 const GENDERS=[['woman','ಮಹಿಳೆ','Women','#a43d72'],['man','ಪುರುಷ','Men','#2f5f9e'],['unknown','ಗುರುತಿಸಲಾಗಿಲ್ಲ','Not told by the name','#9a8f80'],['organisation','ಸಂಸ್ಥೆ','Organisations','#6b7a3a']]
@@ -54,6 +55,7 @@ export default function PressExplorer({locale}){
       <aside className="press-side"><Bars data={stats.editors} kn={kn} title={kn?'ಸಂಪಾದಕರು (ವ್ಯಕ್ತಿಗಳು)':'Editors (people)'}/><Bars data={stats.publishers} kn={kn} title={kn?'ಪ್ರಕಾಶಕರು (ವ್ಯಕ್ತಿ/ಸಂಸ್ಥೆ)':'Publishers (people and bodies)'}/>
         {decades.length>0&&<div className="press-decades"><strong>{kn?'ದಶಕವಾರು ಸಂಪಾದಕತ್ವ':'Editorships by decade'}</strong><ul>{decades.filter(d=>stats.byDecade[d].woman).map(d=><li key={d}>{d}s <b>{stats.byDecade[d].woman}</b> {kn?'ಮಹಿಳೆ':'women'} / {stats.byDecade[d].man} {kn?'ಪುರುಷ':'men'}</li>)}</ul><small>{kn?'ಮಹಿಳಾ ಸಂಪಾದಕರಿರುವ ದಶಕಗಳು ಮಾತ್ರ.':'Only decades with a woman editor are listed.'}</small></div>}
         <p className="press-note">{kn?'ಅಂದಾಜು: ಪಟ್ಟಿಯಲ್ಲಿ ಲಿಂಗ ಇಲ್ಲ. ಹೆಸರಿನಿಂದ ಊಹಿಸಲಾಗಿದೆ; ಸಾಕಷ್ಟು ಹೆಸರುಗಳು "ಗುರುತಿಸಲಾಗಿಲ್ಲ". ತಪ್ಪುಗಳನ್ನು ತಿದ್ದಲು ಸಹಾಯ ಮಾಡಿ.':'The catalogue has no gender field, so these are guesses from names; many names stay “not told”. Please help correct them.'} <a href="#contribute">{kn?'ತಿದ್ದುಪಡಿ ಸೂಚಿಸಿ':'Suggest a correction'}</a></p></aside></section>
+    <PrintingHistory locale={locale} periodicals={ALL}/>
     <PressPeople locale={locale} showLink={false}/>
   </main>
 }

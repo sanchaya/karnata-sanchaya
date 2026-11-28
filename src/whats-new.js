@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'printing-history',view:'press',href:'#press',date:'2026-11-28',
+    kn:['ಮುದ್ರಣ ಮತ್ತು ಮುದ್ರಣಾಲಯಗಳ ಇತಿಹಾಸ','ಕನ್ನಡ ಅಚ್ಚು, ಮಿಷನ್ ಮುದ್ರಣಾಲಯಗಳು, ಮೊದಲ ಪತ್ರಿಕೆ ಮತ್ತು ಬೆಂಗಳೂರು ಪ್ರೆಸ್: ಆಕರ ಮತ್ತು ಭಿನ್ನ ಮಾಹಿತಿಯೊಂದಿಗೆ.'],
+    en:['History of printing and presses','Kannada type, the mission presses, the first newspaper and The Bangalore Press, with sources and where they disagree.']},
   {id:'food-culture',view:'food',href:'#food',date:'2026-11-19',
     kn:['ಆಹಾರ ಸಂಸ್ಕೃತಿ (ಹೊಸ ಪುಟ)','ಕಲ್ಯಾಣದ ೧೨ನೇ ಶತಮಾನದ ಅಡುಗೆ ಪಾಠದಿಂದ ರಾಗಿ ಮುದ್ದೆ, ಹಬ್ಬದ ಊಟ, ಕಾಡಿನ ಆಹಾರದವರೆಗೆ.'],
     en:['Food culture (new page)','From a twelfth-century cookery text at Kalyani to ragi mudde, festival meals and forest foods.']},

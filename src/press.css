@@ -17,3 +17,22 @@
 .press-tag{align-self:flex-start;padding:1px 8px;border-radius:99px;font-size:.7rem;background:#eee}.press-tag.g-woman{background:#f6dbe9}.press-tag.g-man{background:#dbe6f6}
 .press-more{display:block;margin:14px auto;padding:9px 20px;border:1px solid var(--sanchaya-blue);border-radius:99px;background:#fff;color:var(--sanchaya-blue);font-weight:700;cursor:pointer}
 @media(max-width:900px){.press-layout{grid-template-columns:1fr}}
+.printing-history{margin:28px 0 8px;padding-top:18px;border-top:1px solid var(--sanchaya-border)}
+.printing-history>h3{margin:0 0 6px;font-size:22px;color:var(--sanchaya-ink)}
+.printing-history .rec-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.printing-history .rec-chips button{border:1px solid var(--sanchaya-border);border-radius:99px;background:#fff;padding:5px 12px;cursor:pointer;color:var(--sanchaya-muted);font-size:13px}
+.printing-history .rec-chips button.on{border-color:#c8d0ff;background:var(--sanchaya-active);color:var(--sanchaya-blue);font-weight:700}
+.printing-list{list-style:none;margin:10px 0;padding:0;border-left:3px solid #e0d6c3}
+.printing-row{display:grid;grid-template-columns:76px 1fr;gap:10px;padding:10px 0 10px 12px;position:relative}
+.printing-row:before{content:"";position:absolute;left:-8px;top:18px;width:13px;height:13px;border-radius:50%;background:#2a7f62;border:2px solid #fff}
+.printing-row.lead:before{background:#d9a441}
+.printing-year{font-weight:800;color:#8a5a2b;font-size:18px}
+.printing-row p{margin:4px 0 0;font-size:14px;line-height:1.55;color:var(--sanchaya-muted)}
+.printing-place{display:block;color:#7a6f5d;margin-top:2px}
+.printing-status{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700;background:#e3f3ec;color:#1d6b4a}
+.printing-status.lead{background:#fff2d6;color:#8a5a00}
+.printing-doubt{background:#fff7e6;border-left:3px solid #d9a441;padding:6px 10px;border-radius:0 8px 8px 0}
+.printing-row details{margin-top:6px;font-size:13px}.printing-row details ul{margin:6px 0 0;padding-left:18px;color:var(--sanchaya-muted)}
+.printing-earliest{margin:14px 0;padding:12px 14px;background:#f7f3ea;border-radius:12px}
+.printing-earliest ul{display:flex;flex-wrap:wrap;gap:6px 14px;list-style:none;margin:8px 0 0;padding:0;font-size:13px}
+@media(max-width:560px){.printing-row{grid-template-columns:1fr}}
