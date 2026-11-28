@@ -1,0 +1,20 @@
+.climate-page{display:block!important;width:min(1500px,100%);height:auto!important;margin:auto;padding:clamp(16px,3vw,40px);background:#fff}
+.climate-page>section{width:100%;min-width:0}
+.climate-controls{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:12px 0}
+.climate-controls label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--sanchaya-muted)}
+.climate-controls select{padding:7px 10px;border:1px solid var(--sanchaya-border);border-radius:10px;background:#fff;font-size:14px}
+.climate-year{flex:1 1 280px}.climate-year input{flex:1;min-width:120px}.climate-year b{min-width:3em;color:var(--sanchaya-ink)}
+.climate-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:16px;align-items:start}
+.climate-map .leaflet-container{height:min(66vh,600px);min-height:380px;border-radius:14px;border:1px solid var(--sanchaya-border)}
+.climate-legend{display:flex;align-items:center;gap:0;margin-top:6px}.climate-legend span{width:26px;height:12px}.climate-legend small{margin-left:10px;color:var(--sanchaya-muted);font-size:12px}
+.climate-side h3{margin:0 0 8px;font-size:20px}
+.climate-seasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.climate-seasons article{border:1px solid var(--sanchaya-border);border-radius:12px;padding:10px 12px;display:grid;gap:3px}
+.climate-seasons article.big{grid-column:1/-1;background:#f3f8ff;border-color:#c8d9f2}
+.climate-seasons strong{font-size:13px;color:var(--sanchaya-muted)}.climate-seasons b{font-size:24px}.climate-seasons b small{font-size:13px;font-weight:600}
+.climate-seasons span{font-size:12px;color:var(--sanchaya-muted)}
+.climate-seasons i{justify-self:start;font-style:normal;color:#fff;font-size:12px;font-weight:700;border-radius:99px;padding:2px 10px}
+.climate-temps{font-size:14px;line-height:1.55;margin:10px 0}
+.climate-chart{margin-top:6px}.climate-chart strong{font-size:14px}.climate-chart svg{display:block;width:100%;height:150px;margin:6px 0 2px;background:#fafafa;border-radius:8px}.climate-chart rect{cursor:pointer}.climate-chart small{color:var(--sanchaya-muted);font-size:12px}
+.climate-note{margin-top:12px}
+@media(max-width:900px){.climate-layout{grid-template-columns:1fr}}

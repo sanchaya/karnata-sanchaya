@@ -160,6 +160,10 @@ PolyForm Noncommercial applies to the project's own code, not to these packages,
 Anonymous counts (a hashed random browser id, no IP address or account link) are for the administrators and are not published.
 See `docs/visitor-stats.md`.
 
+### 3.14 Climate (NASA POWER)
+
+District rainfall and temperature on the Rain and climate page (`public/data/climate/karnataka-districts.json`, made by `scripts/import-nasa-power.mjs`) come from NASA's POWER Project (Prediction Of Worldwide Energy Resources, https://power.larc.nasa.gov), monthly point data, API version v2.10.1, accessed 28 November 2026. NASA data are openly available; POWER asks that any work using them credit the project ("These data were obtained from the NASA Langley Research Center (LaRC) POWER Project funded through the NASA Earth Science/Applied Science Program"), name the service, version and date accessed, and **kindly asks** to be told about published uses and when data are passed on to others. Owner action: send POWER a short note about this use and about the derived file. The values are modelled, on a grid about 0.5 degrees wide, not rain-gauge records.
+
 ## 4. How to cite
 
 > Karnataka Historical Atlas (Sanchaya, Sanchi Foundation). *<record or page title>*. https://karnata.sanchaya.net/<page>.

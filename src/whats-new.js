@@ -1,6 +1,9 @@
 // Features worth pointing readers to. Add the newest first; an item is "seen" once the reader opens it or visits its page.
 // `view` is the page hash, `href` where "Try it" goes, `param` (optional) a query string the visit must carry to count.
 export const WHATS_NEW=[
+  {id:'rain-climate',view:'climate',href:'#climate',date:'2026-11-28',
+    kn:['ಮಳೆ ಮತ್ತು ಹವಾಮಾನ (ಹೊಸ ಪುಟ)','ಜಿಲ್ಲೆವಾರು ಮಳೆ ಮತ್ತು ತಾಪಮಾನ, ೧೯೮೧ರಿಂದ: ವರ್ಷ ಆರಿಸಿ, ಸಾಮಾನ್ಯಕ್ಕಿಂತ ಎಷ್ಟು ಹೆಚ್ಚು ಅಥವಾ ಕಡಿಮೆ ಎಂದು ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ.'],
+    en:['Rain and climate (new page)','District rainfall and temperature since 1981: pick a year and see on the map how far above or below normal it was.']},
   {id:'kannada-authors',view:'authors',href:'#authors',date:'2026-11-28',
     kn:['ಕನ್ನಡದ ಕವಿ–ಲೇಖಕರು (ಹೊಸ ಪುಟ)','ಲೇಖಕ–ಲೇಖಕಿಯರು, ಅವರ ಕೃತಿಗಳು ಮತ್ತು ಜನ್ಮಸ್ಥಳಗಳು ನಕ್ಷೆಯಲ್ಲಿ; ಮಹಿಳಾ ಬರಹಗಾರರು ಎದ್ದು ಕಾಣುತ್ತಾರೆ.'],
     en:['Kannada poets and writers (new page)','Men and women writers, their works and birthplaces on a map; women writers are highlighted.']},

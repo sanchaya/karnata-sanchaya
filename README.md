@@ -87,6 +87,10 @@ npm run publish:static
 Commit the generated publication artifacts before the Pages build. Live Admin
 edits do not appear on GitHub Pages until this approved export occurs.
 
+## Rain and climate
+
+`#climate` shows district rainfall and temperature since 1981 against the 1991–2020 normal, from NASA POWER (modelled, not gauge data). See `docs/land-climate.md` for sources, the crop-data plan and what is still needed.
+
 ## Kannada poets and writers
 
 `#authors` maps 39 Kannada writers (11 women, 28 men) with their works and birthplaces, women highlighted. See `docs/kannada-authors.md` for sources and the doubts shown on the page.
