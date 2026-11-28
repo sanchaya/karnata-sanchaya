@@ -164,6 +164,10 @@ See `docs/visitor-stats.md`.
 
 District rainfall and temperature on the Rain and climate page (`public/data/climate/karnataka-districts.json`, made by `scripts/import-nasa-power.mjs`) come from NASA's POWER Project (Prediction Of Worldwide Energy Resources, https://power.larc.nasa.gov), monthly point data, API version v2.10.1, accessed 28 November 2026. NASA data are openly available; POWER asks that any work using them credit the project ("These data were obtained from the NASA Langley Research Center (LaRC) POWER Project funded through the NASA Earth Science/Applied Science Program"), name the service, version and date accessed, and **kindly asks** to be told about published uses and when data are passed on to others. Owner action: send POWER a short note about this use and about the derived file. The values are modelled, on a grid about 0.5 degrees wide, not rain-gauge records.
 
+### 3.15 Sahitya Akademi awards for Kannada
+
+The list of Kannada award winners (1955 to 2025: main award, translation, Bhasha Samman, Bala Sahitya Puraskar and Yuva Puraskar) on the Sahitya Akademi awards tab comes from a CSV supplied by the owner (`src/data/imports/sahitya-akademi-kannada.csv`, read by `scripts/import-sahitya-akademi.mjs`). Winner names, years and work titles are plain facts about public awards, recorded in our own table. The file's festival columns (whether a winner was matched by name to the speaker lists of five literature festivals) are the file author's own analysis and are shown as such. **Owner action:** record where the list was compiled from, confirm that the festival analysis may be published, and spell out the festival codes (BLF, BPF, KLF) the file uses.
+
 ## 4. How to cite
 
 > Karnataka Historical Atlas (Sanchaya, Sanchi Foundation). *<record or page title>*. https://karnata.sanchaya.net/<page>.

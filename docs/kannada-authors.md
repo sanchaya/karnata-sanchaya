@@ -25,6 +25,16 @@ Nine writers are tied to the atlas's own records by id (`personId`, and `workId`
 - **Other poets already in the atlas people list** (Ponna, Chavundaraya, Harihara, Keshiraja, Lakshmisha, Kumaravyasa, Kumara Valmiki, Durgasimha, Shivakotiacharya and others, 16 in all) are listed under the cards with links to their person records, until their birthplaces are sourced.
 - Query parameters `writer` and `work` belong to the Authors and Literature pages and are cleared when the reader leaves (`PAGE_PARAMS` in `src/App.jsx`).
 
+## Sahitya Akademi awards tab
+
+The Authors page has a second tab, **Sahitya Akademi awards** (`src/SahityaAwards.jsx`, data `src/data/sahitya-akademi-kannada.js`, test `test/sahitya-akademi.test.js`): the 133 Kannada awards from 1955 to 2025 in a table that can be filtered by award (main award 69, translation 31, Bhasha Samman 8, Bala Sahitya Puraskar 13, Yuva Puraskar 12), by decade and by name or work. A winner who has a writer card links to it, and that card carries a "Sahitya Akademi" line with the year and work (19 writers).
+
+- **Source:** a CSV supplied by the owner, kept at `src/data/imports/sahitya-akademi-kannada.csv`; `node scripts/import-sahitya-akademi.mjs` turns it into `src/data/sahitya-akademi-kannada.generated.js` (never edit that by hand). Replace the CSV and rerun to update.
+- **Festival column:** the file records whether each winner was matched, by name, to the speaker lists of five literature festivals (BLF, BPF, KLF, Book Brahma, Mysuru), with a confidence (certain or probable) and flags for before the award, after it, and the award year or the next. It is the file's own analysis, shown as such, and 23 winners carry a match. The codes are shown exactly as in the file; they are not expanded because the file does not say what they stand for.
+- **Links to writers are made by hand** (`AUTHOR_OF` in the data file) only where the person is clearly the same one; the test checks that each link names a real card. Winners without a card (most of the 133) show no link yet.
+- **Not in the data:** the file has no gender, birthplace or ids, so none is added here. Spelling varies in the file (Kirthinath and Kirtinath Kurtakoti are one person) and is kept as given.
+- **Owner to confirm:** where the list was compiled from, that the festival analysis may be published, and what the festival codes stand for (see `LICENSING.md` 3.15).
+
 ## Next steps
 
 - Add the other atlas poets above to the writer list once a birthplace is sourced, and link them the same way (add them to `LINKS` in `src/data/kannada-authors.js`).

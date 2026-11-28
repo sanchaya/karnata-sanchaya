@@ -3,6 +3,8 @@ import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaf
 import 'leaflet/dist/leaflet.css'
 import { atlasData } from './data/atlas'
 import { AUTHOR_ROLES, kannadaAuthors } from './data/kannada-authors'
+import { awardsByAuthorId } from './data/sahitya-akademi-kannada'
+import SahityaAwards from './SahityaAwards'
 import './authors.css'
 
 const copy={
@@ -16,6 +18,7 @@ const copy={
     none:'ಈ ಆಯ್ಕೆಗೆ ಯಾರೂ ಸಿಗಲಿಲ್ಲ.',
     note:'ಇದು ಪ್ರಾರಂಭಿಕ ಆಯ್ದ ಪಟ್ಟಿ, ಎಲ್ಲರ ಪಟ್ಟಿ ಅಲ್ಲ; ಮಹಿಳೆಯರ ಸಂಖ್ಯೆ ಕಡಿಮೆ ಇರುವುದು ಲೇಖಕಿಯರ ಕೊರತೆಯಿಂದಲ್ಲ, ಆಕರಗಳು ಸಿಕ್ಕ ಹೆಸರುಗಳಷ್ಟೇ ಇಲ್ಲಿವೆ. ಕೃತಿಗಳು ಆಕರ ಪುಟಗಳಲ್ಲಿ ಹೆಸರಿಸಿದವು, ಪೂರ್ಣ ಪಟ್ಟಿ ಅಲ್ಲ. ವಿಕಿಪೀಡಿಯಾ ಮತ್ತು ವಿಕಿಡೇಟಾ ಆಧಾರ; ಪರಿಶೀಲನೆ ಬಾಕಿ. ಕನ್ನಡ ಪಠ್ಯ ಸ್ಥಳೀಯ ಪರಿಶೀಲನೆ ಬಾಕಿ.',
     add:'ಬಿಟ್ಟುಹೋದ ಲೇಖಕರನ್ನು ಸೂಚಿಸಿ',
+    tabWriters:'ಕವಿ–ಲೇಖಕರು',tabAwards:'ಸಾಹಿತ್ಯ ಅಕಾಡೆಮಿ ಪ್ರಶಸ್ತಿಗಳು',awardsLabel:'ಸಾಹಿತ್ಯ ಅಕಾಡೆಮಿ ಪ್ರಶಸ್ತಿ',
     person:'ವ್ಯಕ್ತಿ ದಾಖಲೆ ತೆರೆಯಿರಿ',openWork:'ಕೃತಿ ದಾಖಲೆ',inAtlas:'ಅಟ್ಲಸ್‌ನಲ್ಲಿ',atlasDates:'ಅಟ್ಲಸ್‌ನ ವ್ಯಕ್ತಿ ದಾಖಲೆ ಈ ವ್ಯಕ್ತಿಯನ್ನು {a} ರಿಂದ ಎಂದು ದಿನಾಂಕಿಸಿದೆ; ವಿಕಿಪೀಡಿಯಾ ಮತ್ತು ವಿಕಿಡೇಟಾ {b} ಎನ್ನುತ್ತವೆ. ಯಾವುದನ್ನು ಬಳಸಬೇಕು ಎಂದು ಪರಿಶೀಲನೆ ಬೇಕು.',
     others:'ಅಟ್ಲಸ್‌ನ ವ್ಯಕ್ತಿಗಳ ಪಟ್ಟಿಯಲ್ಲಿರುವ ಇತರ ಕವಿಗಳು (ಜನ್ಮಸ್ಥಳ ಇನ್ನೂ ಇಲ್ಲ)',
   },
@@ -29,6 +32,7 @@ const copy={
     none:'Nobody matches this choice.',
     note:'This is a first, selected list, not a complete one. Women are fewer here because the list holds the names with a source found so far, not because there are fewer women writers. Works are those named on the cited pages, not full bibliographies. Based on Wikipedia and Wikidata and not yet reviewed. The Kannada text needs a native proofread.',
     add:'Suggest a writer we missed',
+    tabWriters:'Poets and writers',tabAwards:'Sahitya Akademi awards',awardsLabel:'Sahitya Akademi',
     person:'Open the person record',openWork:'Work record',inAtlas:'In the atlas',atlasDates:'The atlas person record dates this writer from {a}; Wikipedia and Wikidata say {b}. Needs checking before either is used.',
     others:'Other poets already in the atlas people list (no birthplace yet)',
   },
@@ -50,7 +54,7 @@ function Focus({target}){
 
 export default function AuthorsPage({locale='kn'}){
   const t=copy[locale]||copy.kn,kn=locale==='kn'
-  const [gender,setGender]=useState('all'),[era,setEra]=useState('all'),[query,setQuery]=useState(''),[focusId,setFocusId]=useState(()=>{const id=new URLSearchParams(window.location.search).get('writer');return kannadaAuthors.some(a=>a.id===id)?id:null})
+  const [gender,setGender]=useState('all'),[era,setEra]=useState('all'),[query,setQuery]=useState(''),[tab,setTab]=useState('writers'),[focusId,setFocusId]=useState(()=>{const id=new URLSearchParams(window.location.search).get('writer');return kannadaAuthors.some(a=>a.id===id)?id:null})
   const rows=useMemo(()=>{
     const needle=query.trim().toLowerCase()
     return kannadaAuthors.filter(a=>(gender==='all'||a.gender===(gender==='women'?'female':'male'))
@@ -63,6 +67,9 @@ export default function AuthorsPage({locale='kn'}){
   return <main className="portal-page authors-page" id="authors">
     <section className="authors-hero explore-hero"><div><p className="eyebrow">{t.eyebrow}</p><h2>{t.title}</h2><p>{t.intro}</p></div>
       <div className="authors-stats"><span><b>{kannadaAuthors.length}</b>{t.authors}</span><span className="w"><b>{womenN}</b>{t.womenCount}</span><span><b>{menN}</b>{t.menCount}</span></div></section>
+    <nav className="authors-tabs" aria-label={t.title}><button type="button" className={tab==='writers'?'on':''} aria-pressed={tab==='writers'} onClick={()=>setTab('writers')}>{t.tabWriters}</button><button type="button" className={tab==='awards'?'on':''} aria-pressed={tab==='awards'} onClick={()=>setTab('awards')}>{t.tabAwards}</button></nav>
+    {tab==='awards'&&<SahityaAwards locale={locale} onShowWriter={id=>{setFocusId(id);setGender('all');setEra('all');setQuery('');setTab('writers')}}/>}
+    {tab==='writers'&&<>
     <section className="authors-filters">
       <div className="authors-chips" role="group" aria-label={t.all}>{[['all',t.all],['women',t.women],['men',t.men]].map(([key,label])=><button key={key} type="button" className={`${gender===key?'on':''} ${key==='women'?'women':''}`} aria-pressed={gender===key} onClick={()=>setGender(key)}>{label}{key==='women'&&' ♀'}</button>)}</div>
       <div className="authors-chips" role="group" aria-label={t.eraAll}>{[['all',t.eraAll],['medieval',t.medieval],['modern',t.modern]].map(([key,label])=><button key={key} type="button" className={era===key?'on':''} aria-pressed={era===key} onClick={()=>setEra(key)}>{label}</button>)}</div>
@@ -82,12 +89,14 @@ export default function AuthorsPage({locale='kn'}){
         {a.birth.doubt&&<p className="author-doubt">{text(a.birth.doubt,locale)}</p>}
         <p className="author-works"><b>{t.works}:</b> {a.works.map((x,i)=><span key={i}>{x.workId?<a href={`?work=${x.workId}#literature`} title={`${t.openWork}: ${workById.get(x.workId)?.name?.en}`}>{(kn&&x.kn)||x.en}</a>:((kn&&x.kn)||x.en)}{x.year?` (${x.year})`:''}{i<a.works.length-1?' · ':''}</span>)}</p>
         {a.personId&&peopleById.get(a.personId)&&<p className="author-atlas"><b>{t.inAtlas}:</b> <a href={`?person=${a.personId}#people`}>{t.person} →</a>{(()=>{const from=peopleById.get(a.personId).date?.from;return Number.isFinite(from)&&a.born&&Math.abs(from-a.born)>5?<span className="author-doubt">{t.atlasDates.replace('{a}',from).replace('{b}',a.born)}</span>:null})()}</p>}
+        {awardsByAuthorId[a.id]&&<p className="author-awards"><b>{t.awardsLabel}:</b> {awardsByAuthorId[a.id].map(x=>`${x.year} · ${x.work}`).join('; ')}</p>}
         {a.note&&<p className="author-note">{text(a.note,locale)}</p>}
         <div className="author-actions"><button type="button" onClick={()=>setFocusId(a.id)}>📍 {t.showMap}</button>
           <details><summary>{t.sources}</summary><ul>{a.evidence.map((e,i)=><li key={i}>{e.title} · <em>{e.locator}</em></li>)}</ul></details></div>
       </li>)}</ol>
     </section>
-    {otherPoets.length>0&&<details className="authors-others"><summary>{t.others} · {otherPoets.length}</summary><ul>{otherPoets.map(person=><li key={person.id}><a href={`?person=${person.id}#people`}>{text(person.name,locale)}</a>{Number.isFinite(person.date?.from)&&<small> · {person.date.from}</small>}</li>)}</ul></details>}
+    </>}
+    {tab==='writers'&&otherPoets.length>0&&<details className="authors-others"><summary>{t.others} · {otherPoets.length}</summary><ul>{otherPoets.map(person=><li key={person.id}><a href={`?person=${person.id}#people`}>{text(person.name,locale)}</a>{Number.isFinite(person.date?.from)&&<small> · {person.date.from}</small>}</li>)}</ul></details>}
     <p className="press-note authors-foot">{t.note} <a href="#contribute">{t.add} →</a></p>
   </main>
 }

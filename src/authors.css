@@ -34,3 +34,16 @@
 .author-atlas a,.author-works a{color:#2b3a8c;font-weight:600}
 .author-atlas{font-size:13px!important}
 .authors-others{margin:14px 0;font-size:14px}.authors-others ul{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;padding:8px 0 0;margin:0}
+.authors-tabs{display:flex;gap:6px;margin:10px 0 4px;border-bottom:2px solid var(--sanchaya-border)}
+.authors-tabs button{border:0;background:transparent;padding:9px 18px;font-size:15px;cursor:pointer;color:var(--sanchaya-muted);border-bottom:3px solid transparent;margin-bottom:-2px}
+.authors-tabs button.on{color:var(--sanchaya-blue);font-weight:800;border-bottom-color:var(--sanchaya-blue)}
+.awards-section h3{margin:10px 0 4px;font-size:22px}.awards-stats{margin:10px 0}
+.awards-table-wrap{overflow-x:auto;margin:8px 0}
+.awards-table{width:100%;border-collapse:collapse;font-size:14px}
+.awards-table th{text-align:left;padding:8px 10px;background:#f5f5fa;border-bottom:2px solid var(--sanchaya-border);white-space:nowrap}
+.awards-table td{padding:8px 10px;border-bottom:1px solid #eee;vertical-align:top}
+.award-kind{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12px;font-weight:700;background:#e8eefb;color:#2f5f9e;white-space:nowrap}
+.award-kind.k-translation{background:#e3f3ec;color:#1d6b4a}.award-kind.k-bhasha{background:#fff2d6;color:#8a5a00}.award-kind.k-bala{background:#fde7e2;color:#9c3b22}.award-kind.k-yuva{background:#f1e8fb;color:#6a3d9a}
+.award-writer{border:1px solid #c8d0ff;border-radius:99px;background:#fff;color:#2b3a8c;padding:1px 9px;font-size:12px;cursor:pointer}
+.award-fest b{font-size:13px}.award-fest i{font-style:normal;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px;margin-left:4px;background:#e3f3ec;color:#1d6b4a}.award-fest i.probable{background:#fff2d6;color:#8a5a00}.award-fest small{display:block;color:var(--sanchaya-muted);font-size:12px}
+.author-awards{font-size:13px!important}.author-awards b{color:#8a5a00}
