@@ -44,6 +44,13 @@ Existing administrator dataset snapshots are not overwritten during deployment. 
 
 ### Coolify deployment and discovery synchronization
 
+**Automatic deploys and migrations.** Pushing to `main` can deploy and migrate the live server with no manual step, in either of two ways:
+
+1. In Coolify, open the application, enable automatic deployment from the Git source (webhook) and save. Nothing in the repository is needed.
+2. Or use `.github/workflows/deploy-live.yml`: on every push to `main` it runs `npm test` and then calls Coolify's deploy webhook, so a failing test blocks the deploy. It stays idle until you add two repository secrets, `COOLIFY_DEPLOY_URL` (the webhook URL from the application's Webhooks page) and `COOLIFY_TOKEN` (an API token allowed to deploy). Use one way, not both, or every push deploys twice.
+
+Either way the migration runs by itself: the container's start command is `npm run db:migrate && npm run db:sync-dataset && npm start`. If a migration fails the new container exits and Coolify keeps serving the previous one only when the application has a health check configured, so set one (the app's `/api/health` route) and read the deployment log after the first automatic run. Write migrations so they can be run twice (`CREATE TABLE IF NOT EXISTS`, guarded `ALTER`), because a restart reruns the command. The larger `db:sync-research-discovery` step below is still run by hand.
+
 Coolify builds the commit available on its configured remote branch. It cannot deploy local commits or uncommitted files that have not been pushed. Enable Coolify's Git webhook/automatic deployment if every push to `main` should create a new deployment; otherwise use **Redeploy** after pushing.
 
 The container startup command applies MariaDB migrations, merges the committed

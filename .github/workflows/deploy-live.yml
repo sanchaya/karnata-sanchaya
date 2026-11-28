@@ -1,0 +1,46 @@
+name: Deploy live server (Coolify)
+
+# Runs the tests, then asks Coolify to rebuild and redeploy the live server. The container's start command
+# (Dockerfile) applies pending MariaDB migrations and merges the public dataset before the app starts,
+# so a deploy is also a migration. It does nothing until the two repository secrets below exist.
+#   COOLIFY_DEPLOY_URL  the deploy webhook URL from the application's Webhooks page in Coolify
+#   COOLIFY_TOKEN       a Coolify API token that may deploy
+# Add them under GitHub > Settings > Secrets and variables > Actions. The GitHub Pages deploy is a separate workflow.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-live
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      COOLIFY_DEPLOY_URL: ${{ secrets.COOLIFY_DEPLOY_URL }}
+      COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
+    steps:
+      - name: Skip when the secrets are not set
+        id: gate
+        run: |
+          if [ -z "$COOLIFY_DEPLOY_URL" ] || [ -z "$COOLIFY_TOKEN" ]; then echo "Coolify secrets not set; nothing to deploy."; echo "go=false" >> "$GITHUB_OUTPUT"; else echo "go=true" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'true'
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - name: Test before deploying
+        if: steps.gate.outputs.go == 'true'
+        run: npm ci && npm test
+      - name: Trigger the Coolify deploy
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          curl --fail --silent --show-error --max-time 60 -H "Authorization: Bearer $COOLIFY_TOKEN" "$COOLIFY_DEPLOY_URL"
